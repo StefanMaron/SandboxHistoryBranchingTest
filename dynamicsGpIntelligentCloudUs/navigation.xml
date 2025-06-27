@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Dynamics GP Intelligent Cloud - US" ControlGUID="{dcf4e8e5-d5f4-425c-9c98-ef05238685d7}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="41000" DepartmentCategory="Administration" RunObjectSrcTable="41102" ControlGUID="{52838a74-1777-4b2e-8a95-a6ff9f4b4a7a}" Name="GP 1099 Migration Log" CaptionML="ENU=GP 1099 Migration Log" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1714006218 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1714006218 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="4050" TargetType="Page" />
+    <ActionChange TargetID="4051" TargetType="Page" />
+    <ActionChange TargetID="4003" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>

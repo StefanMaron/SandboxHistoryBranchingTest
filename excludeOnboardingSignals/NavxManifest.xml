@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="672777d5-ab26-4369-b334-6f04256efffd" Name="_Exclude_Onboarding Signals" Publisher="Microsoft" Brief="Adding first party Onboarding Signals" Description="Adding Microsoft Onboarding Signals and Providing an example how Onboarding Signals can be added." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2219800" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2219800" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="20370" MaxObjectId="20379" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="b0189501-269d-460e-bf1d-38a7bc5e5deb" Name="_Exclude_Onboarding Signals Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+    <Feature>NOIMPLICITWITH</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:23:34.0075380Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>b696b4c9-637c-49d1-a806-763ff8f0a20e</id>
+        <name>IRS Forms</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Create Form Docs">
+            <summary>
+            The interface to create 1099 form documents
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Create Form Docs.CreateFormDocs(IRS 1099 Vend# Form Box Buffer@,IRS 1099 Calc# Params)">
+            <summary>
+            Creates 1099 form documents
+            </summary>
+            <param name="TempVendFormBoxBuffer">The calculated buffer with 1099 form box amounts</param>
+            <param name="IRS1099CalcParameters">The calculated parameters</param>
+        </member>
+        <member name="O:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Form Box Calc#">
+            <summary>
+            The interface to calculate the amount for a specific box on the IRS 1099 form.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Form Box Calc#.GetVendorFormBoxAmount(IRS 1099 Vend# Form Box Buffer@,IRS 1099 Calc# Params)">
+            <summary>
+            Calculates the amount for a specific box on the IRS 1099 form according to the calculated parameters.
+            </summary>
+            <param name="TempVendFormBoxBuffer">The calculated buffer</param>
+            <param name="IRS1099CalcParameters">The calculated parameters</param>
+        </member>
+        <member name="O:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Printing">
+            <summary>
+            The interface to print 1099 form documents.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Printing.SaveContentForDocument(IRS 1099 Form Doc# Header@,IRS 1099 Print Params,Boolean)">
+            <summary>
+            Saves the content of the printed form document
+            </summary>
+            <param name="IRS1099FormDocHeader">The current form document</param>
+            <param name="IRS1099PrintParams">Printing parameters</param>
+            <param name="ReplaceIfExists">Replace the existing saved printed form document</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#IRS 1099 Printing.PrintContent(IRS 1099 Form Doc# Header)">
+            <summary>
+            Prints the form document
+            </summary>
+            <param name="IRS1099FormDocHeader">The current form document</param>
+        </member>
+    </members>
+</doc>
