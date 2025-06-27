@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>40860557-a18d-42ad-aecb-22b7dd80dc80</id>
+        <name>Permissions Mock</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock">
+            <summary>
+            "Permissions Mock" provides functions that let you simulate any permission set assignment for the current user.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.Start">
+            <summary>
+            Start mocking Permission Sets.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.Stop">
+            <summary>
+            Stop mocking Permission Sets.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.ClearAssignments">
+            <summary>
+            Clears all already assigned Permission Sets from the test user.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.Assign(Code[20])">
+            <summary>
+            Assigns the given permission set to the test user.
+            </summary>
+            <param name="RoleID">The Permission Set to set.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.Set(Code[20])">
+            <summary>
+            Clears all already assigned Permission Sets and Sets the given Permission Set
+            along side with the All Objects Permission Set that provides execute access to all objects.
+            </summary>
+            <param name="RoleID">The Permission Set to set.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.SetExactPermissionSet(Code[20])">
+            <summary>
+            Clears all already assigned Permission Sets and Sets the given Permission Set
+            No additional permissions are provided, even test execution permissions have to be handled manually.
+            </summary>
+            <param name="RoleID">The Permission Set to set.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Security#AccessControl#Permissions Mock.IsStarted:Boolean">
+            <summary>
+            Get whether permission sets mocking is started
+            </summary>
+            <returns>True if permission sets mocking is started.</returns>
+        </member>
+    </members>
+</doc>
