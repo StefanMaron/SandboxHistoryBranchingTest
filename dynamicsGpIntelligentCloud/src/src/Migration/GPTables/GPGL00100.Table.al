@@ -75,6 +75,10 @@ table 40127 "GP GL00100"
         {
             DataClassification = CustomerContent;
         }
+        field(36; Clear_Balance; Boolean)
+        {
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {
