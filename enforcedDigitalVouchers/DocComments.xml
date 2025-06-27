@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>e2ae191d-8829-44c3-a373-3749a2742d4e</id>
+        <name>Enforced Digital Vouchers</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#EServices#EDocument#Digital Voucher Check.CheckVoucherIsAttachedToDocument(Codeunit::System#Utilities#Error Message Management@,Enum::Microsoft#EServices#EDocument#Digital Voucher Entry Type,RecordRef)">
+            <summary>
+            Checks if the voucher is attached to the document.
+            </summary>
+            <param name="ErrorMessageMgt">An instance of the Error Message Mgt. codeunit to add error if voucher is not attached.</param>
+            <param name="DigitalVoucherEntryType">A type entry associated with the document.</param>
+            <param name="RecRef">A record reference of the document.</param>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#EDocument#Digital Voucher Check.GenerateDigitalVoucherForPostedDocument(Enum::Microsoft#EServices#EDocument#Digital Voucher Entry Type,RecordRef)">
+            <summary>
+            Generate voucher and attach to the posted document.
+            </summary>
+            <param name="DigitalVoucherEntryType">A type entry associated with the document.</param>
+            <param name="RecRef">A record reference of the posted document.</param>
+        </member>
+    </members>
+</doc>
