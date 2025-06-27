@@ -1,18 +1,18 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="717b10c1-7ae3-44f4-b7f9-dbd4a3771caa" Name="Contoso Coffee Demo Dataset (IN)" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="26.0.30643.35936" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2187180" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="717b10c1-7ae3-44f4-b7f9-dbd4a3771caa" Name="Contoso Coffee Demo Dataset (IN)" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="26.1.33404.35908" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2187180" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="19000" MaxObjectId="19079" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="eae5779e-7797-4c4c-977e-7516652b7a65" Name="India TDS" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="f1d9b696-156b-4251-b542-34e549fa80e9" Name="India Voucher Interface" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="eddcf82e-482c-49d1-836b-ad0284f2c5b0" Name="India TCS" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="2dc39818-e0f0-42b6-99eb-ba29dc5f4102" Name="India Gate Entry" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="1150dd8d-51da-485a-bd4a-1ee98d78c21a" Name="Fixed Asset Depreciation for India" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="eae5779e-7797-4c4c-977e-7516652b7a65" Name="India TDS" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="f1d9b696-156b-4251-b542-34e549fa80e9" Name="India Voucher Interface" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="eddcf82e-482c-49d1-836b-ad0284f2c5b0" Name="India TCS" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="2dc39818-e0f0-42b6-99eb-ba29dc5f4102" Name="India Gate Entry" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="1150dd8d-51da-485a-bd4a-1ee98d78c21a" Name="Fixed Asset Depreciation for India" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -26,6 +26,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T04:17:51.1027010Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-25T20:40:15.0444071Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
