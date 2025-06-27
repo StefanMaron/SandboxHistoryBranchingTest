@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" Brief="Provides features for calculating tax based on use cases. Intended for use only in India." Description="The Tax Engine extension calculates tax based on use cases that can be attached to a predefined business event. If the event meets the conditions of the rules, the Tax Engine runs the use case." Version="25.0.23364.35922" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139719" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139719" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" Brief="Provides features for calculating tax based on use cases. Intended for use only in India." Description="The Tax Engine extension calculates tax based on use cases that can be attached to a predefined business event. If the event meets the conditions of the rules, the Tax Engine runs the use case." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139719" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139719" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="20130" MaxObjectId="20399" />
   </IdRanges>
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T23:17:19.0856204Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T23:40:58.1148940Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>

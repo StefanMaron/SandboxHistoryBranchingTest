@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India Charge Group" ControlGUID="{da036deb-d451-4fd8-8724-944e6c8bbc6c}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18508" DepartmentCategory="Lists" RunObjectSrcTable="18510" ControlGUID="{9a0e7333-88d9-4e01-9a3a-85d6525f5568}" Name="Charge Group List" CaptionML="ENU=Charge Groups" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 338844321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 338844321 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India Charge Group" ControlGUID="{bebe44a0-0324-4305-bb58-da457f98dea0}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18508" DepartmentCategory="Lists" RunObjectSrcTable="18510" ControlGUID="{c17ea816-ff2c-4f63-a3e2-dd190e1d2c94}" Name="Charge Group List" CaptionML="ENU=Charge Groups" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 338844321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 338844321 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="510" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="97" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="508" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="6641" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="95" TargetType="Page" />
-    <ActionChange TargetID="49" TargetType="Page" />
-    <ActionChange TargetID="507" TargetType="Page" />
-    <ActionChange TargetID="6640" TargetType="Page" />
-    <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
-    <ActionChange TargetID="96" TargetType="Page" />
     <ActionChange TargetID="509" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="98" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="95" TargetType="Page" />
     <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="49" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="96" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="6640" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="508" TargetType="Page" />
+    <ActionChange TargetID="507" TargetType="Page" />
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="6641" TargetType="Page" />
+    <ActionChange TargetID="97" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="510" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
