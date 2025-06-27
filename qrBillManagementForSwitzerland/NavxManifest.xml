@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="98860128-1333-4598-a3da-0590804648b7" Name="QR-Bill Management for Switzerland" Publisher="Microsoft" Brief="Easily generate, send, and import QR-bills in Dynamics 365 Business Central" Description="QR-bills enable easier processing and payment of received invoices from vendors. The QR-Bill Management app for Switzerland allows you to generate QR-bills that are compliant with the Swiss standard to receive QR-bills either via file import or direct input scan. All received QR-bills are handled via the Incoming Documents feature from where purchase journals can be created directly from the imported QR-bills. Finally, this app ensures that all payment references from  QR-bill are carried through SEPA files to and from the bank and back to the issuer of the QR-bill for easy reconciliation. With this app, you can easily comply with the Swiss requirements for the QR-bills." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2194212" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2194212" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="11500" MaxObjectId="11520" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="9076c230-cd86-4e51-883b-7fee710cb7f6" Name="QR-Bill Management for Switzerland Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T00:53:37.6944577Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>68e13fa3-217a-4be0-9141-99e5bf0ca818</id>
+        <name>Email - SMTP Connector</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Page::System#Email#SMTP Account">
+            <summary>
+            Displays an account that was registered via the SMTP connector.
+            </summary>
+        </member>
+        <member name="O:Table::System#Email#SMTP Account">
+            <summary>
+            Holds the information for all e-mail accounts that are registered via the SMTP connector
+            </summary>
+        </member>
+        <member name="O:Page::System#Email#SMTP Account Wizard">
+            <summary>
+            Displays an account that is being registered via the SMTP connector.
+            </summary>
+        </member>
+        <member name="O:EnumExtension::System#Email#SMTP Connector">
+            <summary>
+            Enum extension to register the SMTP connector.
+            </summary>
+        </member>
+        <member name="E:EnumExtension::System#Email#SMTP Connector.SMTP">
+            <summary>
+            The SMTP connector.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.GetAccounts(Email Account@)">
+            <summary>
+            Gets the registered accounts for the SMTP connector.
+            </summary>
+            <param name="Accounts">Out parameter holding all the registered accounts for the SMTP connector.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.ShowAccountInformation(Guid)">
+            <summary>
+            Shows accounts information.
+            </summary>
+            <param name="AccountId">The ID of the account to show.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.RegisterAccount(Email Account@):Boolean">
+            <summary>
+            Register an e-mail account for the SMTP connector.
+            </summary>
+            <param name="Account">Out parameter holding details of the registered account.</param>
+            <returns>True if the registration was successful; false - otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.DeleteAccount(Guid):Boolean">
+            <summary>
+            Deletes an e-mail account for the SMTP connector.
+            </summary>
+            <param name="AccountId">The ID of the e-mail account</param>
+            <returns>True if an account was deleted.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.Send(Codeunit::System#Email#Email Message,Guid)">
+            <summary>
+            Sends an e-mail via the SMTP connector.
+            </summary>
+            <param name="Message">The e-mail message to send.</param>
+            <param name="AccountId">The ID of the account to be used for sending.</param>
+            <error>SMTP connector failed to connect to server.</error>
+            <error>SMTP connector failed to authenticate against server.</error>
+            <error>SMTP connector failed to send the email.</error>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.GetDescription:Text[250]">
+            <summary>
+            Gets a description of the SMTP connector.
+            </summary>
+            <returns>A short description of the SMTP connector.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.GetLogoAsBase64:Text">
+            <summary>
+            Gets the SMTP connector logo.
+            </summary>
+            <returns>A base64-formatted image to be used as logo.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Connector Impl#.Initialize(SMTP Account)">
+            <summary>
+            Initializes variables for creating an SMTP email.
+            </summary>
+        </member>
+        <member name="O:Enum::System#Email#SMTP Connector Sender Type">
+            <summary>
+            Types of senders available for the SMTP Connector.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#OAuth2 SMTP Authentication.GetOAuth2Credentials(Text@,SecretText@)">
+            <summary>
+            Provide the credentials to authenticate using OAuth 2.0 for Exchange Online mailboxes.
+            </summary>
+            <param name="UserName">Authentication user name for SMTP client. Email address of the user who is attempting to authenticate.</param>
+            <param name="AccessToken">Acquired access token for SMTP client.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#OAuth2 SMTP Authentication.AuthenticateWithOAuth2">
+            <summary>
+            Authenticate the current user.
+            Disregard the token cache and show the authentication dialog.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#OAuth2 SMTP Authentication.CheckOAuth2Authentication">
+            <summary>
+            Verify if the current user is successfully authenticated.
+            If there is token cache, it will be used. Otherwise, the authentication dialog will be shown.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#OAuth2 SMTP Authentication.GetUserName(SecretText,Text@):Boolean">
+            <summary>
+            Get user's email address by the access token.
+            </summary>
+            <param name="AccessToken">The access token for outlook.office.com</param>
+            <param name="UserName">The email address of the user for whom the access token got acquired.</param>
+        </member>
+        <member name="O:Enum::System#Email#SMTP Authentication">
+            <summary>
+            The SMTP authentication types
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication.Anonymous">
+            <summary>
+            Anonymous SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication.Basic">
+            <summary>
+            Basic SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication.OAuth 2#0">
+            <summary>
+            OAuth 2.0 SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication.NTLM">
+            <summary>
+            NTLM SMTP authentication.
+            </summary>
+        </member>
+        <member name="O:Interface::System#Email#SMTP Authentication">
+            <summary>
+            Functions to be implemented by every SMTP authentication type
+            </summary>
+        </member>
+        <member name="M:Interface::System#Email#SMTP Authentication.Validate(SMTP Account@)">
+            <summary>
+            Validate SMTP account.
+            </summary>
+            <param name="SMTPAccount">SMTP account to validate.</param>
+        </member>
+        <member name="M:Interface::System#Email#SMTP Authentication.Authenticate(DotNetTypeDeclaration::System#SmtpClient,SMTP Account)">
+            <summary>
+            Authenticate the SMTP client with the SMTP account.
+            </summary>
+            <param name="SmtpClient">SMTP client to authenticate.</param>
+            <param name="SMTPAccount">The account to use for authenticating the SMTP client.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>8fc50dfb-d338-4fd9-9499-5e44cc8cbf50</id>
+        <name>Email - SMTP API</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Interface::System#Email#iSMTP Client">
+            <summary>
+            Interface to allow usage of different clients.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#MailKit Client.TrySendMessage(Codeunit::System#Email#SMTP Message):Boolean">
+            <summary>
+            Tries to send the email.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#MailKit Client.TryConnect(Text,Integer,Boolean):Boolean">
+            <summary>
+            Tries to connect to the SMTP server.
+            </summary>
+            <returns>True if there are no exceptions.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#MailKit Client.TryAuthenticate(Enum::System#Email#SMTP Authentication Types,Codeunit::System#Email#SMTP Authentication):Boolean">
+            <summary>
+            Tries to authenticate to the SMTP server.
+            </summary>
+            <returns>True if there are no exceptions.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Client.Connect(Text,Integer,Boolean):Boolean">
+            <summary>
+            Connect to the specified SMTP server and port.
+            </summary>
+            <param name="Host">Server url or ip</param>
+            <param name="Port">Server port number</param>
+            <param name="SecureConnection">Boolean on whether to connect securely</param>
+            <returns>True if connected successfully.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Client.Authenticate(Enum::System#Email#SMTP Authentication Types,Codeunit::System#Email#SMTP Authentication@):Boolean">
+            <summary>
+            Authenticate to connected server.
+            </summary>
+            <param name="AuthenticationType">Authentication type to authenticate with.</param>
+            <param name="SMTPAuthentication">Authentication details for authentication.</param>
+            <returns>True if authenticated successfully.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Client.Send(Codeunit::System#Email#SMTP Message):Boolean">
+            <summary>
+            Sends the email.
+            </summary>
+            <param name="SMTPMessage">The message with details of the email to be sent.</param>
+            <returns>True if sent successfully.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Client.Disconnect">
+            <summary>
+            Disconnect from the host.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.AddFrom(Text,Text)">
+            <summary>
+            Add the name and email address the message is being sent from.
+            </summary>
+            <param name="Name">The name of the sender</param>
+            <param name="Address">The email address the message is sent from.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetToRecipients(List of [Text])">
+            <summary>
+            Adds the recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The direct recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetCCRecipients(List of [Text])">
+            <summary>
+            Adds the cc recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The cc recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetBCCRecipients(List of [Text])">
+            <summary>
+            Adds the bcc recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The bcc recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetSubject(Text)">
+            <summary>
+            Adds the subject of this email.
+            </summary>
+            <param name="Subject">The subject</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetBody(Text)">
+            <summary>
+            The body of the email. The body is expected to be HTML formatted.
+            </summary>
+            <param name="Body">The HTML body text</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.SetBody(Text,Boolean)">
+            <summary>
+            Sets the body of the email.
+            </summary>
+            <param name="Body">The body text</param>
+            <param name="HTMLFormatted">Boolean of whether the text is HTML formatted</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.AddAttachment(InStream,Text):Boolean">
+            <summary>
+            Adds an attachment to the email.
+            </summary>
+            <param name="AttachmentInStream"></param>
+            <param name="AttachmentName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message.OnBeforeAddFrom(Text@,Text@)">
+            <summary>
+            Allows switching of From name and address when sending the email.
+            The email used to connect to the server is still the same and the from address needs to have permission to Send As.
+            </summary>
+            <param name="FromName">New from name</param>
+            <param name="FromAddress">new from address</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.AddFrom(Text,Text):Boolean">
+            <summary>
+            Adds the mailbox that this email is being sent from.
+            </summary>
+            <param name="FromName">The name of the email sender</param>
+            <param name="FromAddress">The address of the default sender or, when using the Send As or Send on Behalf functionality, the address of the substitute sender</param>
+            <remarks>
+            See https://aka.ms/EmailSetupHelp to learn about the Send As functionality.
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.SetToRecipients(List of [Text])">
+            <summary>
+            Adds the recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.SetCCRecipients(List of [Text])">
+            <summary>
+            Adds the cc recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The cc recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.SetBCCRecipients(List of [Text])">
+            <summary>
+            Adds the bcc recipients that this email is being sent to.
+            </summary>
+            <param name="Recipients">The bcc recipient(s)</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.SetSubject(Text)">
+            <summary>
+            Adds the subject of this email.
+            </summary>
+            <param name="Subject">The subject</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.TryAddAttachment(Text,InStream,DotNetTypeDeclaration::System#MimeBodyBuilder@):Boolean">
+            <summary>
+            Try function for adding an attachment
+            </summary>
+            <remarks>
+            Possible exceptions are ArgumentNullException and ArgumentException.
+            For more information, see the Mimekit documentation.
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.TryParseInternetAddressList(DotNetTypeDeclaration::System#InternetAddressList,List of [Text]):Boolean">
+            <summary>
+            Tries to parse the given addresses into InternetAddressList.
+            </summary>
+            <param name="InternetAddressList">The list of addresses output</param>
+            <param name="Addresses">The list of addresses to parse</param>
+            <returns>True if no errors occurred during parsing.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.ConvertBase64ImagesToContentId:Boolean">
+            <summary>
+            Searches the body of the email for <c>img</c> elements with a base64-encoded source and transforms these into inline attachments using ContentID. The body will be replaced.
+            </summary>
+            <returns>True if all images which look like they are base64-encoded have been successfully coverted, false if one or more fail.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.TryAddLinkedResources(Text,Text,DotNetTypeDeclaration::System#MimeContentType,DotNetTypeDeclaration::System#MimeEntity@):Boolean">
+            <summary>
+            Tries to add the base64 image to linked resources.
+            </summary>
+            <returns>True if there is no error.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Message Impl.FormatListToString(List of [Text],Boolean):Text">
+            <summary>
+            Formats a list into a semicolon separated string.
+            </summary>
+            <param name="List">List of email addresses.</param>
+            <param name="Obfuscate">Obfuscate the email addresses.</param>
+            <returns>Semicolon separated string of list of texts.</returns>
+        </member>
+        <member name="O:Interface::System#Email#SMTP Auth">
+            <summary>
+            Functions to be implemented by every SMTP authentication type
+            </summary>
+        </member>
+        <member name="M:Interface::System#Email#SMTP Auth.Authenticate(DotNetTypeDeclaration::System#SmtpClient,Codeunit::System#Email#SMTP Authentication@)">
+            <summary>
+            Authenticate the SMTP client with the SMTP account.
+            </summary>
+            <param name="SmtpClient">SMTP client to authenticate.</param>
+            <param name="SMTPAuth">The authentication information to use for authenticating the SMTP client.</param>
+        </member>
+        <member name="O:Codeunit::System#Email#SMTP Authentication">
+            <summary>
+            Authentication details for authentication to SMTP server.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.SetServer(Text)">
+            <summary>
+            Set the server url.
+            </summary>
+            <param name="Url">Server url or ip</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.SetBasicAuthInfo(Text,Text)">
+            <summary>
+            Set the username and password for authentication
+            </summary>
+            <param name="User">Username</param>
+            <param name="Pass">Password</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.SetOAuth2AuthInfo(Text[250],Text)">
+            <summary>
+            Set the OAuth information for authentication
+            </summary>
+            <param name="User">User</param>
+            <param name="Token">Token</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.SetBasicAuthInfo(Text,SecretText)">
+            <summary>
+            Set the username and password for authentication
+            </summary>
+            <param name="User">Username</param>
+            <param name="Pass">Password</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.SetOAuth2AuthInfo(Text[250],SecretText)">
+            <summary>
+            Set the OAuth information for authentication
+            </summary>
+            <param name="User">User</param>
+            <param name="Token">Token</param>
+        </member>
+        <member name="M:Codeunit::System#Email#SMTP Authentication.OnSMTPOAuth2Authenticate(Boolean@,Codeunit::System#Email#SMTP Authentication@,Text)">
+            <summary>
+            Provide the credentials for SMTP Setup to authenticate using OAuth 2.0.
+            </summary>
+            <param name="Handled">To be set true if credentials are provided for OAuth 2.0</param>
+            <param name="UserName">Authentication user name for SMTP client. Email address of the user who is attempting to authenticate.</param>
+            <param name="AccessToken">Acquired access token for SMTP client.</param>
+            <param name="SMTPServer">The SMTP server of the SMTP setup.</param>
+        </member>
+        <member name="O:Enum::System#Email#SMTP Authentication Types">
+            <summary>
+            The SMTP authentication types
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication Types.Anonymous">
+            <summary>
+            Anonymous SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication Types.Basic">
+            <summary>
+            Basic SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication Types.OAuth 2#0">
+            <summary>
+            OAuth 2.0 SMTP authentication.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Email#SMTP Authentication Types.NTLM">
+            <summary>
+            NTLM SMTP authentication.
+            </summary>
+        </member>
+    </members>
+</doc>
