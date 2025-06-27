@@ -10,6 +10,7 @@ using System.Azure.Identity;
 using System.Utilities;
 using System.Azure.KeyVault;
 using System.RestClient;
+using System.Environment;
 
 /// <summary>
 /// Library for managing AppSource product retrieval and usage.
@@ -153,7 +154,7 @@ codeunit 2515 "AppSource Product Manager"
     begin
         AppSourceProductManagerDependencies.GetUserSettings(Database.UserSecurityID(), TempUserSettings);
         LanguageID := TempUserSettings."Language ID";
-        if (LanguageID = 0) then
+        if ((LanguageID = 0) and AppSourceProductManagerDependencies.IsSaas()) then
             LanguageID := Language.GetLanguageIdFromCultureName(AppSourceProductManagerDependencies.GetPreferredLanguage());
         if (LanguageID = 0) then
             LanguageID := 1033; // Default to EN-US
@@ -167,12 +168,13 @@ codeunit 2515 "AppSource Product Manager"
     begin
         AppSourceProductManagerDependencies.GetUserSettings(Database.UserSecurityID(), TempUserSettings);
         LanguageID := TempUserSettings."Language ID";
-        if (LanguageID = 0) then
+        if ((LanguageID = 0) and AppSourceProductManagerDependencies.IsSaas()) then
             LanguageID := Language.GetLanguageIdFromCultureName(AppSourceProductManagerDependencies.GetPreferredLanguage());
         if (LanguageID = 0) then
             LanguageID := 1033; // Default to EN-US
 
-        LocaleID := AppSourceProductManagerDependencies.GetCountryLetterCode();
+        if (AppSourceProductManagerDependencies.IsSaas()) then
+            LocaleID := AppSourceProductManagerDependencies.GetCountryLetterCode();
     end;
 
     /// <summary>
@@ -380,5 +382,11 @@ codeunit 2515 "AppSource Product Manager"
     begin
         AppSourceProductManagerDependencies := AppSourceProductManagerDependencyProvider;
         IsDependenciesInterfaceSet := true;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"System Action Triggers", OpenAppSourceMarket, '', false, false)]
+    local procedure OpenAppSourceMarket()
+    begin
+        Page.Run(Page::"AppSource Product List");
     end;
 }
