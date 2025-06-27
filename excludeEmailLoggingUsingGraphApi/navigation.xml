@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="_Exclude_Email Logging Using Graph API" ControlGUID="{9535f57b-63f1-48d7-9cc0-86437f42f9cf}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1680" DepartmentCategory="Administration" RunObjectSrcTable="1680" ControlGUID="{107b32d8-2049-4258-938a-e20a4e422533}" Name="Email Logging Setup" CaptionML="CSY=Protokolování emailů;DAN=Maillogføring;DEA=E-Mail-Protokollierung;DES=E-Mail-Protokollierung;DEU=E-Mail-Protokollierung;ENA=Email Logging;ENC=Email Logging;ENG=Email Logging;ENU=Email Logging;ENZ=Email Logging;ESM=Registro de correo electrónico;ESN=Registro de correo electrónico;FIN=Sähköpostin lokiinkirjaus;FRA=Connexion à la messagerie;FRB=Connexion à la messagerie;FRC=Connexion à la messagerie;FRS=Connexion à la messagerie;ISL=Tölvupóstsskráning;ITA=Log delle e-mail;ITS=Log delle e-mail;NLB=E-maillogboekregistratie;NLD=E-maillogboekregistratie;NOR=Loggføring av e-post;RUS=Регистрация электронной почты;SVE=E-postloggning" ApplicationArea="#RelationshipMgmt" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3925836548 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3925836548 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="2612" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>
