@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.0.23364.35922</version>
+        <version>25.1.25873.35923</version>
     </application>
     <members>
         <member name="O:Codeunit::System#Azure#Functions#Azure Functions">
@@ -14025,7 +14025,13 @@
             <summary>
             Changes the active page of the report
             </summary>
-            <param name="pageName">The name of the new page to set as active</param>
+            <param name="PageName">The name of the new page to set as active</param>
+        </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetLocale(Text)">
+            <summary>
+            Changes the locale used to render the embedded element. If not specified, it will use the default Power BI language.
+            </summary>
+            <param name="NewLocale">The locale to use, for example "en-us".</param>
         </member>
         <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetSettings(Boolean,Boolean,Boolean,Boolean,Boolean,Boolean,Boolean)">
              <summary>
@@ -17743,6 +17749,12 @@
             <summary>
             If true, indicates that user is applying the retention policies manually.
             If false, the retention policies are applied by a scheduled task.
+            </summary>
+        </member>
+        <member name="F:Table::System#DataAdministration#Reten# Pol# Deleting Param.Record Count Before Delete">
+            <summary>
+            The number of records in the table before the deletion.
+            The count is calculated once before passing this table to the deletion implementation and is used to limit the number of records to be deleted as well as record the number of records actually deleted.
             </summary>
         </member>
         <member name="O:Enum::System#DataAdministration#Reten# Pol# Filtering">
@@ -23622,6 +23634,15 @@
             </summary>
             <param name="CopilotCapability">The copilot capability to check.</param>
             <param name="Silent">If true, no error message will be shown if API is not enabled.</param>
+            <returns>True if API and capability is enabled for environment.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#Azure OpenAI.IsEnabled(Enum::System#AI#Copilot Capability,Boolean,Guid):Boolean">
+            <summary>
+            Checks if the Azure OpenAI API is enabled for the environment and if the capability is active on the environment.
+            </summary>
+            <param name="CopilotCapability">The copilot capability to check.</param>
+            <param name="Silent">If true, no error message will be shown if API is not enabled.</param>
+            <param name="AppId">The id of the app, which registered the copilot capability.</param>
             <returns>True if API and capability is enabled for environment.</returns>
         </member>
         <member name="M:Codeunit::System#AI#Azure OpenAI.IsAuthorizationConfigured(Enum::System#AI#AOAI Model Type):Boolean">
