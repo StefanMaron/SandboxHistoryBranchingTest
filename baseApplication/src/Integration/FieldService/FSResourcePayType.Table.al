@@ -1,3 +1,4 @@
+#if not CLEANSCHEMA28 
 namespace Microsoft.Integration.FieldService;
 
 using Microsoft.Integration.D365Sales;
@@ -262,4 +263,5 @@ table 6206 "FS Resource Pay Type"
         {
         }
     }
-}
+} 
+#endif
