@@ -1,78 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Advance Payments Localization for Czech" ControlGUID="{50eadb37-828a-4366-8abb-633dd287cd26}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31025" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{893a5644-953a-48e3-847a-44e0ccf997ce}" Name="Purch. Advance Letters VAT CZZ" CaptionML="CSY=Nákupní zálohové faktury DPH;ENU=Purchase Advance Letters VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 329971639 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 329971639 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31018" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c84d8465-7196-43ab-a327-87f9603ab3d6}" Name="Sales - Invoice with Adv. CZZ" CaptionML="CSY=Prodej – faktura se zálohou;ENU=Sales - Invoice with Advance" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 485202580 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 485202580 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31027" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c8afe238-5d26-4567-b58a-27c943b6ec1f}" Name="Purch. Adv. Letters Recap. CZZ" CaptionML="CSY=Rekapitulace nákupních zálohových faktur;ENU=Purch. Advance Letters Recapitulation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 387165142 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 387165142 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31180" DepartmentCategory="Lists" RunObjectSrcTable="31008" ControlGUID="{d9dfef9e-16ca-44ab-9619-1f6863a8400d}" Name="Purch. Advance Letters CZZ" CaptionML="CSY=Nákupní zálohové faktury;ENU=Purchase Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2936817786 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2936817786 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31028" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{1e1dc1ce-102b-45f2-9504-d60b9a49d3f8}" Name="Purchase-Invoice with Adv. CZZ" CaptionML="CSY=Nákup – faktura se zálohou;ENU=Purchase - Invoice with Advance" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1812518133 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1812518133 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31023" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c9b97f9e-7b39-4c05-8e68-842935055e94}" Name="Sales Advance Letters VAT CZZ" CaptionML="CSY=Prodejní zálohy DPH;ENU=Sales Advance Letters VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 290321289 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 290321289 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31212" DepartmentCategory="Lists" RunObjectSrcTable="31011" ControlGUID="{552dda7b-feca-4155-946b-8576b7fcf157}" Name="Purch. Adv. Letter Lines CZZ" CaptionML="CSY=Řádky nákupní zálohové faktury;ENU=Purchase Advance Letter Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2335272073 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2335272073 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31019" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8d33a443-8a6d-4597-b625-21da0dc1f457}" Name="Sales Advance Letters CZZ" CaptionML="CSY=Prodejní zálohové faktury;ENU=Sales Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2081690216 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2081690216 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31024" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{63d424a8-2bec-4e20-ac55-c70fdc8d6e5d}" Name="Purch. Advance Letters CZZ" CaptionML="CSY=Nákupní zálohové faktury;ENU=Purchase Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2936817786 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2936817786 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31026" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a630a3da-1769-4c7d-a75d-b2a90850b938}" Name="Sales Adv. Letters Recap. CZZ" CaptionML="CSY=Rekapitulace prodejních zálohových faktur;ENU=Sales Advance Letters Recapitulation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 595115396 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 595115396 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31178" DepartmentCategory="Lists" RunObjectSrcTable="31007" ControlGUID="{194aea77-7f13-4933-92e6-9ddedd42e454}" Name="Suggested Usage CZZ" CaptionML="CSY=Propojené doklady;ENU=Suggested Usage" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1846531013 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1846531013 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31179" DepartmentCategory="Administration" RunObjectSrcTable="31003" ControlGUID="{a0b7f39e-c34a-45ac-a183-9cee89d7e91d}" Name="Advance Letter Templates CZZ" CaptionML="CSY=Šablony záloh;ENU=Advance Letter Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3922338256 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3922338256 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31013" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{3f55d6ba-9f91-4be5-af24-c7ba67d2d622}" Name="Adjust Adv. Exch. Rates CZZ" CaptionML="CSY=Upravit směnné kurzy záloh;ENU=Adjust Advance Letter Exchange Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3786084054 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3786084054 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31213" DepartmentCategory="Lists" RunObjectSrcTable="31005" ControlGUID="{db2594a1-db58-4f7f-878c-16b85f30aae4}" Name="Sales Adv. Letter Lines CZZ" CaptionML="CSY=Řádky prodejní zálohové faktury;ENU=Sales Advance Letter Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1599406615 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1599406615 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31170" DepartmentCategory="Lists" RunObjectSrcTable="31004" ControlGUID="{e2f0bbab-0612-4d98-8572-a030695e0146}" Name="Sales Advance Letters CZZ" CaptionML="CSY=Prodejní zálohové faktury;ENU=Sales Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2081690216 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2081690216 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Advance Payments Localization for Czech" ControlGUID="{6ab49fec-523a-4236-9b73-6925823769d0}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31025" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{18423587-5bf7-4ced-8fda-af012fa64823}" Name="Purch. Advance Letters VAT CZZ" CaptionML="CSY=Nákupní zálohové faktury DPH;ENU=Purchase Advance Letters VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 329971639 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 329971639 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31013" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{5e50d024-3a6b-4bf2-8bd4-fcafe87074aa}" Name="Adjust Adv. Exch. Rates CZZ" CaptionML="CSY=Upravit směnné kurzy záloh;ENU=Adjust Advance Letter Exchange Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3786084054 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3786084054 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31212" DepartmentCategory="Lists" RunObjectSrcTable="31011" ControlGUID="{c5620bcb-011e-4bb8-95ff-edd4b7c8280d}" Name="Purch. Adv. Letter Lines CZZ" CaptionML="CSY=Řádky nákupní zálohové faktury;ENU=Purchase Advance Letter Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2335272073 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2335272073 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31170" DepartmentCategory="Lists" RunObjectSrcTable="31004" ControlGUID="{369bbc5f-3475-49be-8745-278b44bc263b}" Name="Sales Advance Letters CZZ" CaptionML="CSY=Prodejní zálohové faktury;ENU=Sales Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2081690216 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2081690216 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31178" DepartmentCategory="Lists" RunObjectSrcTable="31007" ControlGUID="{f7480ef5-fc61-40ca-98d8-50939199ab7c}" Name="Suggested Usage CZZ" CaptionML="CSY=Propojené doklady;ENU=Suggested Usage" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1846531013 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1846531013 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31179" DepartmentCategory="Administration" RunObjectSrcTable="31003" ControlGUID="{dd7bd63d-5744-401e-8851-bc62351feaf5}" Name="Advance Letter Templates CZZ" CaptionML="CSY=Šablony záloh;ENU=Advance Letter Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3922338256 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3922338256 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31026" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{0da81b57-48ef-4055-a248-1fb5f8cf5658}" Name="Sales Adv. Letters Recap. CZZ" CaptionML="CSY=Rekapitulace prodejních zálohových faktur;ENU=Sales Advance Letters Recapitulation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 595115396 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 595115396 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31019" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{bf8fdfd1-54f5-4889-bb5a-52a6d023f935}" Name="Sales Advance Letters CZZ" CaptionML="CSY=Prodejní zálohové faktury;ENU=Sales Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2081690216 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2081690216 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31024" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{fec55b8f-09c1-4e81-9ae5-95bbfc52acef}" Name="Purch. Advance Letters CZZ" CaptionML="CSY=Nákupní zálohové faktury;ENU=Purchase Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2936817786 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2936817786 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31028" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{1b71de97-b1d2-4e20-aac3-642a61fb00cb}" Name="Purchase-Invoice with Adv. CZZ" CaptionML="CSY=Nákup – faktura se zálohou;ENU=Purchase - Invoice with Advance" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1812518133 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1812518133 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31027" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{006633b2-06df-408d-85e8-a29cb165b769}" Name="Purch. Adv. Letters Recap. CZZ" CaptionML="CSY=Rekapitulace nákupních zálohových faktur;ENU=Purch. Advance Letters Recapitulation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 387165142 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 387165142 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31213" DepartmentCategory="Lists" RunObjectSrcTable="31005" ControlGUID="{55511ced-77be-415d-b8f6-9e0f01cdffbe}" Name="Sales Adv. Letter Lines CZZ" CaptionML="CSY=Řádky prodejní zálohové faktury;ENU=Sales Advance Letter Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1599406615 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1599406615 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31023" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c3573662-5575-4dd7-8509-7f081ad72fcc}" Name="Sales Advance Letters VAT CZZ" CaptionML="CSY=Prodejní zálohy DPH;ENU=Sales Advance Letters VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 290321289 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 290321289 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31180" DepartmentCategory="Lists" RunObjectSrcTable="31008" ControlGUID="{051ad1e5-87b9-4519-8cca-670059063dec}" Name="Purch. Advance Letters CZZ" CaptionML="CSY=Nákupní zálohové faktury;ENU=Purchase Advance Letters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2936817786 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2936817786 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31018" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{5c2603dd-4dec-4497-8599-f8ff0017f397}" Name="Sales - Invoice with Adv. CZZ" CaptionML="CSY=Prodej – faktura se zálohou;ENU=Sales - Invoice with Advance" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 485202580 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 485202580 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="30" TargetType="Page" />
-    <ActionChange TargetID="22" TargetType="Page" />
-    <ActionChange TargetID="403" TargetType="Page" />
-    <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="472" TargetType="Page" />
-    <ActionChange TargetID="146" TargetType="Page" />
-    <ActionChange TargetID="118" TargetType="Page" />
-    <ActionChange TargetID="31" TargetType="Page" />
-    <ActionChange TargetID="25" TargetType="Page" />
-    <ActionChange TargetID="31210" TargetType="Page" />
-    <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="31166" TargetType="Page" />
-    <ActionChange TargetID="402" TargetType="Page" />
-    <ActionChange TargetID="9082" TargetType="Page" />
-    <ActionChange TargetID="1001" TargetType="Page" />
-    <ActionChange TargetID="27" TargetType="Page" />
-    <ActionChange TargetID="868" TargetType="Page" />
-    <ActionChange TargetID="473" TargetType="Page" />
-    <ActionChange TargetID="866" TargetType="Page" />
-    <ActionChange TargetID="9081" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="8901" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="9080" TargetType="Page" />
-    <ActionChange TargetID="31201" TargetType="Page" />
-    <ActionChange TargetID="9095" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="9096" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
-    <ActionChange TargetID="1003" TargetType="Page" />
     <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="29" TargetType="Page" />
-    <ActionChange TargetID="315" TargetType="Page" />
-    <ActionChange TargetID="460" TargetType="Page" />
-    <ActionChange TargetID="88" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="31263" TargetType="Page" />
-    <ActionChange TargetID="459" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="187" TargetType="Page" />
-    <ActionChange TargetID="9094" TargetType="Page" />
-    <ActionChange TargetID="31267" TargetType="Page" />
-    <ActionChange TargetID="9307" TargetType="Page" />
-    <ActionChange TargetID="9305" TargetType="Page" />
-    <ActionChange TargetID="841" TargetType="Page" />
-    <ActionChange TargetID="31161" TargetType="Page" />
-    <ActionChange TargetID="9006" TargetType="Page" />
-    <ActionChange TargetID="840" TargetType="Page" />
-    <ActionChange TargetID="143" TargetType="Page" />
+    <ActionChange TargetID="31166" TargetType="Page" />
+    <ActionChange TargetID="8901" TargetType="Page" />
+    <ActionChange TargetID="866" TargetType="Page" />
     <ActionChange TargetID="26" TargetType="Page" />
     <ActionChange TargetID="846" TargetType="Page" />
+    <ActionChange TargetID="31210" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="9094" TargetType="Page" />
+    <ActionChange TargetID="31267" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="31161" TargetType="Page" />
+    <ActionChange TargetID="27" TargetType="Page" />
+    <ActionChange TargetID="1003" TargetType="Page" />
+    <ActionChange TargetID="472" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="138" TargetType="Page" />
+    <ActionChange TargetID="143" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+    <ActionChange TargetID="88" TargetType="Page" />
+    <ActionChange TargetID="402" TargetType="Page" />
+    <ActionChange TargetID="315" TargetType="Page" />
+    <ActionChange TargetID="22" TargetType="Page" />
+    <ActionChange TargetID="187" TargetType="Page" />
+    <ActionChange TargetID="473" TargetType="Page" />
+    <ActionChange TargetID="1001" TargetType="Page" />
+    <ActionChange TargetID="403" TargetType="Page" />
+    <ActionChange TargetID="9095" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="459" TargetType="Page" />
+    <ActionChange TargetID="30" TargetType="Page" />
+    <ActionChange TargetID="9096" TargetType="Page" />
+    <ActionChange TargetID="840" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="9305" TargetType="Page" />
+    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="460" TargetType="Page" />
+    <ActionChange TargetID="31263" TargetType="Page" />
+    <ActionChange TargetID="868" TargetType="Page" />
+    <ActionChange TargetID="9082" TargetType="Page" />
+    <ActionChange TargetID="31201" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="841" TargetType="Page" />
+    <ActionChange TargetID="146" TargetType="Page" />
+    <ActionChange TargetID="9081" TargetType="Page" />
+    <ActionChange TargetID="9307" TargetType="Page" />
+    <ActionChange TargetID="9080" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="31" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>

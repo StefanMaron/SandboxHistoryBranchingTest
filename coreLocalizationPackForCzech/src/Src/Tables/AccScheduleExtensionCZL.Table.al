@@ -97,16 +97,6 @@ table 31092 "Acc. Schedule Extension CZL"
             OptionCaption = ' ,Purchase,Sale';
             OptionMembers = " ",Purchase,Sale;
         }
-        field(17; Prepayment; Option)
-        {
-            Caption = 'Prepayment';
-            DataClassification = CustomerContent;
-            OptionCaption = ' ,Yes,No';
-            OptionMembers = " ",Yes,No;
-            ObsoleteState = Removed;
-            ObsoleteTag = '23.0';
-            ObsoleteReason = 'Replaced by Advance Payments field in Advance Payments Localization for Czech app';
-        }
         field(18; "Reverse Sign"; Boolean)
         {
             Caption = 'Reverse Sign';

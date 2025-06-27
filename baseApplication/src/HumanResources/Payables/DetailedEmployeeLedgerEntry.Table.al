@@ -167,14 +167,6 @@ table 5223 "Detailed Employee Ledger Entry"
             Editable = false;
             TableRelation = "Exch. Rate Adjmt. Reg.";
         }
-        field(11768; "Employee Posting Group"; Code[20])
-        {
-            Caption = 'Employee Posting Group';
-            TableRelation = "Employee Posting Group";
-            ObsoleteState = Removed;
-            ObsoleteReason = 'Moved to Core Localization Pack for Czech.';
-            ObsoleteTag = '21.0';
-        }
     }
 
     keys
