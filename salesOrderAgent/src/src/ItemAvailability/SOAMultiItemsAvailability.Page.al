@@ -545,17 +545,14 @@ page 4410 "SOA Multi Items Availability"
         DummyQtyAvailable: Decimal;
     begin
         Item.Copy(Rec);
-        if Item.Type = Item.Type::Inventory then begin
-            Item.SetFilter("Date Filter", DateFilter);
-            Item.SetFilter("Location Filter", LocationFilter);
-            Item.SetRange("Drop Shipment Filter", false);
-            Item.SetRange("Variant Filter", '');
+        Item.SetFilter("Date Filter", DateFilter);
+        Item.SetFilter("Location Filter", LocationFilter);
+        Item.SetRange("Drop Shipment Filter", false);
+        Item.SetRange("Variant Filter", '');
 
-            ItemAvailFormsMgt.CalcAvailQuantities(Item, AnalysisAmountType = AnalysisAmountType::"Balance at Date", GrossRequirement2, PlannedOrderRcpt2, ScheduledRcpt2,
-                PlannedOrderReleases2, ProjAvailableBalance2, ExpectedInventory2, DummyQtyAvailable, AvailableInventory);
-            Available := (ProjAvailableBalance2 > 0) and (ProjAvailableBalance2 >= QuantityFilter);
-        end else
-            Available := true;
+        ItemAvailFormsMgt.CalcAvailQuantities(Item, AnalysisAmountType = AnalysisAmountType::"Balance at Date", GrossRequirement2, PlannedOrderRcpt2, ScheduledRcpt2,
+            PlannedOrderReleases2, ProjAvailableBalance2, ExpectedInventory2, DummyQtyAvailable, AvailableInventory);
+        Available := (ProjAvailableBalance2 > 0) and (ProjAvailableBalance2 >= QuantityFilter);
     end;
 
     local procedure FindPeriod(SearchText: Text[3])

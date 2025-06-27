@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{72eedcfe-b03e-499b-8721-a647fa30ec31}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4402" DepartmentCategory="Administration" RunObjectSrcTable="2000000260" ControlGUID="{d0f29636-59e2-4c5a-9024-4d39d212c3a5}" Name="SOA KPI" CaptionML="ENU=Sales Order Agent" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 957140161 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 957140161 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4400" DepartmentCategory="Administration" RunObjectSrcTable="2000000260" ControlGUID="{da9b0548-ebd5-4703-a767-f0801597f263}" Name="SOA Setup" CaptionML="ENU=Configure Sales Order Agent" ApplicationArea="#All" AdditionalSearchTermsML="ENU=Sales order agent, Copilot agent, Agent, SOA" CaptionTranslationKey="Page 928798206 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 928798206 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{a014fdf3-43f4-414b-a8e1-e4050461c572}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4402" DepartmentCategory="Administration" RunObjectSrcTable="2000000260" ControlGUID="{abe16f53-bd09-40f9-b89b-466400e5968e}" Name="SOA KPI" CaptionML="ENU=Sales Order Agent" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 957140161 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 957140161 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4400" DepartmentCategory="Administration" RunObjectSrcTable="2000000260" ControlGUID="{9b935d29-096d-4738-95e2-c49845306aab}" Name="SOA Setup" CaptionML="ENU=Configure Sales Order Agent" ApplicationArea="#All" AdditionalSearchTermsML="ENU=Sales order agent, Copilot agent, Agent, SOA" CaptionTranslationKey="Page 928798206 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 928798206 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
