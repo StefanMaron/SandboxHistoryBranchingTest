@@ -855,8 +855,7 @@ table 11732 "Cash Document Header CZP"
             Modify();
 
         if OldDimSetID <> "Dimension Set ID" then begin
-            if not IsNullGuid(Rec.SystemId) then
-                Modify();
+            Modify();
             if CashDocLinesExist() then
                 UpdateAllLineDim("Dimension Set ID", OldDimSetID);
         end;

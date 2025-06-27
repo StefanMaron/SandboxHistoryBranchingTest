@@ -47,8 +47,8 @@ codeunit 11738 "Service Handler CZP"
         end;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Serv-Documents Mgt.", 'OnAfterFinalize', '', false, false)]
-    local procedure CreateCashDocumentOnAfterPostServiceDoc(var ServiceHeader: Record "Service Header")
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Service-Post", 'OnAfterPostServiceDoc', '', false, false)]
+    local procedure CreateCashDocumentOnAfterPostServiceDoc(var ServiceHeader: Record "Service Header"; ServInvoiceNo: Code[20]; ServCrMemoNo: Code[20])
     var
         ServiceInvoiceHeader: Record "Service Invoice Header";
         ServiceCrMemoHeader: Record "Service Cr.Memo Header";
@@ -57,10 +57,10 @@ codeunit 11738 "Service Handler CZP"
             exit;
 
         if ServiceHeader."Document Type" in [ServiceHeader."Document Type"::Order, ServiceHeader."Document Type"::Invoice] then begin
-            ServiceInvoiceHeader.Get(ServiceHeader."Last Posting No.");
+            ServiceInvoiceHeader.Get(ServInvoiceNo);
             CashDeskManagementCZP.CreateCashDocumentFromServiceInvoice(ServiceInvoiceHeader);
         end else begin
-            ServiceCrMemoHeader.Get(ServiceHeader."Last Posting No.");
+            ServiceCrMemoHeader.Get(ServCrMemoNo);
             CashDeskManagementCZP.CreateCashDocumentFromServiceCrMemo(ServiceCrMemoHeader);
         end;
     end;

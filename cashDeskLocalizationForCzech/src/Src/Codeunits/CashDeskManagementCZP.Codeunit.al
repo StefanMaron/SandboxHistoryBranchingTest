@@ -726,7 +726,6 @@ codeunit 11724 "Cash Desk Management CZP"
                 CashDesksFilter += '|' + TempCashDeskCZP."No.";
             until TempCashDeskCZP.Next() = 0;
         CashDesksFilter := CopyStr(CashDesksFilter, 2);
-        OnAfterGetCashDesksFilterFromBuffer(TempCashDeskCZP, CashDesksFilter);
     end;
 
     procedure IsEntityBlocked(AccountType: Enum "Cash Document Account Type CZP"; AccountNo: Code[20]): Boolean
@@ -819,11 +818,6 @@ codeunit 11724 "Cash Desk Management CZP"
 
     [IntegrationEvent(false, false)]
     local procedure OnBeforeCheckResponsibilityCenter(RespCenter: Code[10]; UserCode: Code[50]; var IsHandled: Boolean; var Result: Boolean)
-    begin
-    end;
-
-    [IntegrationEvent(true, false)]
-    local procedure OnAfterGetCashDesksFilterFromBuffer(var TempCashDeskCZP: Record "Cash Desk CZP" temporary; var CashDesksFilter: Text)
     begin
     end;
 }
