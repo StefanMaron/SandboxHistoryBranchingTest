@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" Brief="Sustainability module will enable users to collect and report on their sustainability activities. Solution is the foundation that will be used for being compliant with some of ESG standards." Description="Sustainability module will enable users to collect and report on their sustainability activities. Solution is the foundation that will be used for being compliant with some of ESG standards." Version="25.3.28755.35989" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139719" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139719" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.3.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" Brief="Sustainability module will enable users to collect and report on their sustainability activities. Solution is the foundation that will be used for being compliant with some of ESG standards." Description="Sustainability module will enable users to collect and report on their sustainability activities. Solution is the foundation that will be used for being compliant with some of ESG standards." Version="25.4.29661.35902" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139719" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139719" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="6210" MaxObjectId="6300" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="6723f320-28a1-40cc-bf4d-d4dce362cb39" Name="Sustainability Tests" Publisher="Microsoft" />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:29:55.7984689Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T19:51:59.0671213Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
