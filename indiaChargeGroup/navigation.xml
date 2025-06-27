@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India Charge Group" ControlGUID="{e635df6a-27da-4a9b-af52-0ecdea760ee8}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18508" DepartmentCategory="Lists" RunObjectSrcTable="18510" ControlGUID="{8ee084a6-b62c-4ad5-b9ed-bc32c69504d1}" Name="Charge Group List" CaptionML="ENU=Charge Groups" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 338844321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 338844321 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India Charge Group" ControlGUID="{8fc5519a-5199-4725-8e8f-8e19fc4a3a43}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18508" DepartmentCategory="Lists" RunObjectSrcTable="18510" ControlGUID="{4194216e-e651-407d-84fc-4abb49f46a17}" Name="Charge Group List" CaptionML="ENU=Charge Groups" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 338844321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 338844321 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
