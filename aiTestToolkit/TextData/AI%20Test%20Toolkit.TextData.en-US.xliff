@@ -16,14 +16,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines - Action LogEntries - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1055193460 - Action 3577097913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Compare results of the line to a base version.</source>
-          <target>Compare results of the line to a base version.</target>
+          <source>View the run history of the suite, for the selected line.</source>
+          <target>View the run history of the suite, for the selected line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines - Action Compare - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1055193460 - Action 3577097913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Compare Versions</source>
-          <target>Compare Versions</target>
+          <source>View Runs</source>
+          <target>View Runs</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines - Action Compare - Property Caption</note>
         </trans-unit>
@@ -105,6 +105,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 131212350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Method Lines</source>
+          <target>Test Method Lines</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines Lookup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1843238723 - Control 487194160 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of iterations to run.</source>
+          <target>Specifies the number of iterations to run.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Batch Run Dialog - Control Iterations - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1843238723 - Control 487194160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number of iterations</source>
+          <target>Number of iterations</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Batch Run Dialog - Control Iterations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1843238723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Batch Run</source>
+          <target>Batch Run</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Batch Run Dialog - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2144688602 - Action 1194047236 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Exports the AI Test Suite configuration.</source>
           <target>Exports the AI Test Suite configuration.</target>
@@ -165,6 +189,216 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite List - Property AdditionalSearchTerms</note>
         </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1024532392 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests that failed for the tag.</source>
+          <target>Specifies the number of tests that failed for the tag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Failed - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1024532392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Failed</source>
+          <target>No. of Tests Failed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Failed - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1056030270 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Total Duration of the tests for the base version.</source>
+          <target>Specifies Total Duration of the tests for the base version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Duration - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1056030270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Duration - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1161711431 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the test suite to view results for.</source>
+          <target>Specifies the code of the test suite to view results for.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Test Suite Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1161711431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Suite Code</source>
+          <target>Test Suite Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Test Suite Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1518380832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests that failed in the version.</source>
+          <target>Specifies the number of tests that failed in the version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Failed - By Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1518380832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Failed</source>
+          <target>No. of Tests Failed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Failed - By Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1535521168 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tokens - By Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1535521168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tokens - By Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1755780730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Line Filter</source>
+          <target>Test Line Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Line Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1931960145 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests in the version.</source>
+          <target>Specifies the number of tests in the version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests - By Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 1931960145 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests</source>
+          <target>No. of Tests</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests - By Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 2353878472 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to filter results to a specific line or see results of the suite as a whole.</source>
+          <target>Specifies whether to filter results to a specific line or see results of the suite as a whole.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Apply Filter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 2353878472 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Filter</source>
+          <target>Apply Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Apply Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 237762718 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the version.</source>
+          <target>Specifies the version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target>General</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 2801749846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tag of the version.</source>
+          <target>Specifies the tag of the version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 2801749846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tag</source>
+          <target>Tag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line to filter to.</source>
+          <target>Specifies the line to filter to.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Line</source>
+          <target>Test Line</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 408744344 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tokens - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 408744344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Tokens - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 42180337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests passed in the version.</source>
+          <target>Specifies the number of tests passed in the version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Passed - By Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 42180337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Passed - By Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 630586518 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Total Duration of the tests for the base version.</source>
+          <target>Specifies Total Duration of the tests for the base version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Duration - By Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 630586518 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control Duration - By Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 637914410 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to view results by tag or version.</source>
+          <target>Specifies whether to view results by tag or version.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control View By - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 637914410 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View By</source>
+          <target>View By</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control View By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 862464025 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests for the tag.</source>
+          <target>Specifies the number of tests for the tag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 862464025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests</source>
+          <target>No. of Tests</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 867889081 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests passed for the tag.</source>
+          <target>Specifies the number of tests passed for the tag.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Passed - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Control 867889081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Control No. of Tests Passed - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2280826089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Suite Run History</source>
+          <target>AI Test Suite Run History</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Run History - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2545575774 - Action 1913276151 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Download the test output.</source>
           <target>Download the test output.</target>
@@ -188,6 +422,18 @@
           <target>Show sensitive data</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entries - Action Show Sensitive Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2545575774 - Action 2316262341 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View Test Data.</source>
+          <target>View Test Data.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entries - Action View Test Data - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2545575774 - Action 2316262341 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View Test Data</source>
+          <target>View Test Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entries - Action View Test Data - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2545575774 - Action 3780442291 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Clears the filter on errors.</source>
@@ -465,6 +711,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite Compare - Control Version Comparison - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2705049997 - Control 3642950356 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite Compare - Control TokensConsumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2705049997 - Control 3642950356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite Compare - Control TokensConsumed - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2705049997 - Control 3742967028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests that failed in the current version.</source>
           <target>Specifies the number of tests that failed in the current version.</target>
@@ -524,6 +782,12 @@
           <target>Function Name</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control procedureName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2739397112 - Control 1463272794 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Line Description</source>
+          <target>Test Line Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control testLineDescription - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2739397112 - Control 1494719153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Output Data</source>
@@ -585,6 +849,12 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control codeunitName - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2739397112 - Control 4182983668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control tokensConsumed - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2739397112 - Control 43755559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Start Time</source>
           <target>Start Time</target>
@@ -602,6 +872,12 @@
           <target>End Time</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control endTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2739397112 - Control 704491172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suite Description</source>
+          <target>Suite Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Control suiteDescription - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2739397112 - Control 928535615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
@@ -645,9 +921,165 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Log Entry API - Property EntitySetCaption</note>
         </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 1227697385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input Data</source>
+          <target>Input Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Data Output - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 176562519 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what is shown from the input.</source>
+          <target>Specifies what is shown from the input.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control View - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 176562519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input View</source>
+          <target>Input View</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control View - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 269736430 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies what is shown from the output.</source>
+          <target>Specifies what is shown from the output.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Output View - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 269736430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output View</source>
+          <target>Output View</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Output View - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 2925265002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output Data</source>
+          <target>Output Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Data Input - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 3567459362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input</source>
+          <target>Input</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Input - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Control 3961040049 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output</source>
+          <target>Output</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Control Output - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3269245903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Data</source>
+          <target>AI Test Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data Compare - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 1010080291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Suite Code</source>
+          <target>Test Suite Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control aitCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 213715588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Duration (ms)</source>
+          <target>Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control durationMs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 2570578246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dataset</source>
+          <target>Dataset</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control dataset - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 3133292714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed</source>
+          <target>No. of Tests Executed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control noOfTestsExecuted - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 3211512818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Failed</source>
+          <target>No. of Tests Failed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control noOfTestsFailed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 3345260546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit ID</source>
+          <target>Codeunit ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control codeunitID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 3443720964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Description</source>
+          <target>Test Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control testDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 4048172647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control noOfTestsPassed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 4088109112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit Name</source>
+          <target>Codeunit Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control codeunitName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 4182983668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control tokensConsumed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 928535615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Line No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control lineNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 942171326 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Control status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Method Lines</source>
+          <target>AI Test Method Lines</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Method Line</source>
+          <target>AI Test Method Line</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3307553996 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Method Lines</source>
+          <target>AI Test Method Lines</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines API - Property EntitySetCaption</note>
+        </trans-unit>
         <trans-unit id="Page 3542303411 - Action 2726000903 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resets the test method lines status to run them again.</source>
-          <target>Resets the test method lines status to run them again.</target>
+          <source>Resets the test method lines status to run them again. This action ignores the line number filter and resets all the test lines in the suite.</source>
+          <target>Resets the test method lines status to run them again. This action ignores the line number filter and resets all the test lines in the suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Action ResetTestSuite - Property ToolTip</note>
         </trans-unit>
@@ -658,8 +1090,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Action ResetTestSuite - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Action 2740126548 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Starts running the next test in the AI test suite.</source>
-          <target>Starts running the next test in the AI test suite.</target>
+          <source>Starts running the next test from the Test Method Lines for the given suite.</source>
+          <target>Starts running the next test from the Test Method Lines for the given suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Action RunNextTest - Property ToolTip</note>
         </trans-unit>
@@ -670,8 +1102,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Action RunNextTest - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Action 571246385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Starts running the AI test suite.</source>
-          <target>Starts running the AI test suite.</target>
+          <source>Starts running the AI test suite. This action ignores the line number filter and runs all the test lines in the suite.</source>
+          <target>Starts running the AI test suite. This action ignores the line number filter and runs all the test lines in the suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Action RunSuite - Property ToolTip</note>
         </trans-unit>
@@ -700,8 +1132,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Input Dataset Filename - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Control 1498311807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Input Dataset Filename</source>
-          <target>Input Dataset Filename</target>
+          <source>Import Input Dataset Filename</source>
+          <target>Import Input Dataset Filename</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Input Dataset Filename - Property Caption</note>
         </trans-unit>
@@ -717,11 +1149,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control No. of Pending Tests - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 1937024816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suite Definition</source>
+          <target>Suite Definition</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control SuiteDefinitionGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 2008052175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Inputs</source>
+          <target>Test Inputs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control DatasetGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 2301147933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Method Lines</source>
+          <target>Test Method Lines</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Test Method Lines Group - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3542303411 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <target>General</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 268179435 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number to filter the test method lines.</source>
+          <target>Specifies the line number to filter the test method lines.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Line No. Filter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 268179435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No. Filter</source>
+          <target>Line No. Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Line No. Filter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Control 3247533813 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the suite definition to import.</source>
@@ -730,10 +1192,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Suite Definition - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Control 3247533813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Suite Definition</source>
-          <target>Suite Definition</target>
+          <source>Import Suite Definition</source>
+          <target>Import Suite Definition</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Suite Definition - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 3742967028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of failed tests for the test line.</source>
+          <target>Specifies the number of failed tests for the test line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control No. of Tests Failed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3542303411 - Control 3742967028 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Failed</source>
+          <target>No. of Tests Failed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control No. of Tests Failed - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Control 3904546728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the input dataset to import for running the test suite.</source>
@@ -742,8 +1216,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Input Dataset - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Control 3904546728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Input Dataset</source>
-          <target>Input Dataset</target>
+          <source>Import Input Dataset</source>
+          <target>Import Input Dataset</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control Input Dataset - Property Caption</note>
         </trans-unit>
@@ -760,8 +1234,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Control AIT Suite Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3542303411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AI Test CommandLine Runner</source>
-          <target>AI Test CommandLine Runner</target>
+          <source>AI Test Command Line Runner</source>
+          <target>AI Test Command Line Runner</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT CommandLine Card - Property Caption</note>
         </trans-unit>
@@ -778,14 +1252,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action ExportAIT - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3812009960 - Action 1461570459 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reset the status.</source>
-          <target>Reset the status.</target>
+          <source>Cancels the run and marks the run as Cancelled.</source>
+          <target>Cancels the run and marks the run as Cancelled.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action ResetStatus - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3812009960 - Action 1461570459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reset Status</source>
-          <target>Reset Status</target>
+          <source>Cancel</source>
+          <target>Cancel</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action ResetStatus - Property Caption</note>
         </trans-unit>
@@ -826,16 +1300,28 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action Datasets - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3812009960 - Action 3577097913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Compare results of the suite to a base version.</source>
-          <target>Compare results of the suite to a base version.</target>
+          <source>View the run history of the suite.</source>
+          <target>View the run history of the suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action Compare - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3812009960 - Action 3577097913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Compare Versions</source>
-          <target>Compare Versions</target>
+          <source>View Runs</source>
+          <target>View Runs</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action Compare - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3812009960 - Action 4148811896 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starts running the AI Test Suite, the specified number of times.</source>
+          <target>Starts running the AI Test Suite, the specified number of times.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action StartBatch - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3812009960 - Action 4148811896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Batch</source>
+          <target>Start Batch</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Action StartBatch - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3812009960 - Action 620325036 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Starts running the AI Test Suite.</source>
@@ -915,11 +1401,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Control Latest Run - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3812009960 - Control 846493901 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the average number of tokens consumed by the tests in the last run.</source>
+          <target>Specifies the average number of tokens consumed by the tests in the last run.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Control Average Tokens Consumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3812009960 - Control 846493901 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Average Tokens Consumed</source>
+          <target>Average Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Control Average Tokens Consumed - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3812009960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>AI Test Suite</source>
           <target>AI Test Suite</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Suite - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4293261014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Data</source>
+          <target>AI Test Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Data - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 781235729 - Control 112269947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Latest Version</source>
@@ -1029,6 +1533,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines Compare - Control Version Comparison - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 781235729 - Control 3642950356 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines Compare - Control TokensConsumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 781235729 - Control 3642950356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page AIT Test Method Lines Compare - Control TokensConsumed - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 781235729 - Control 3742967028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests that failed in the current version.</source>
           <target>Specifies the number of tests that failed in the current version.</target>
@@ -1077,11 +1593,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Test Suite Code - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 1161711431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Suite Code</source>
+          <target>Test Suite Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Test Suite Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 1586149972 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of operations executed including "Run Procedure" operation for the test line.</source>
           <target>Specifies the number of operations executed including "Run Procedure" operation for the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Operations - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 1586149972 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Operations</source>
+          <target>No. of Operations</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Operations - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 1692330285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests passed for the test line.</source>
@@ -1089,11 +1617,53 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Passed - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 1692330285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Passed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 1785038057 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base Version Filter</source>
+          <target>Base Version Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Base Version Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2041992620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Tokens Consumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2041992620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Tokens Consumed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2354943580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tokens consumed by the test in the base version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the number of tokens consumed by the test in the base version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Tokens Consumed - Base - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2354943580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tokens Consumed - Base</source>
+          <target>Tokens Consumed - Base</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Tokens Consumed - Base - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 2426551468 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests executed for the test line.</source>
           <target>Specifies the number of tests executed for the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Executed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2426551468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed</source>
+          <target>No. of Tests Executed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Executed - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 2967582120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the name of the codeunit for the test line.</source>
@@ -1101,11 +1671,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Codeunit Name - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 2967582120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit Name</source>
+          <target>Codeunit Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Codeunit Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the line number for the test line.</source>
           <target>Specifies the line number for the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Line No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Line No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the description for the test line.</source>
@@ -1113,11 +1695,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Description - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 348910206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version Filter</source>
+          <target>Version Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Version Filter - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 3904546728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a dataset that overrides the default dataset for the suite.</source>
           <target>Specifies a dataset that overrides the default dataset for the suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Input Dataset - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 3904546728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input Dataset</source>
+          <target>Input Dataset</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Input Dataset - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 4166520997 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests passed for the base version of the test line.</source>
@@ -1125,11 +1725,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Passed - Base - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 4166520997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed - Base</source>
+          <target>No. of Tests Passed - Base</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Passed - Base - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 433940389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the time taken to execute the test line.</source>
           <target>Specifies the time taken to execute the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Total Duration (ms) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 433940389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Total Duration (ms) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 466518607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AL Test Suite</source>
+          <target>AL Test Suite</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field AL Test Suite - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the status for the test line.</source>
@@ -1137,11 +1755,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Status - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Status - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 579000468 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of operations executed including "Run Procedure" operation for the base version of the test line.</source>
           <target>Specifies the number of operations executed including "Run Procedure" operation for the base version of the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Operations - Base - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 579000468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Operations - Base</source>
+          <target>No. of Operations - Base</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Operations - Base - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 634611205 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the time taken to execute the base version of the test line.</source>
@@ -1149,11 +1779,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Total Duration - Base (ms) - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 634611205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration - Base (ms)</source>
+          <target>Total Duration - Base (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Total Duration - Base (ms) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1363750237 - Field 758719836 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests executed for the base version of the test line.</source>
           <target>Specifies the number of tests executed for the base version of the test line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Executed - Base - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 758719836 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed - Base</source>
+          <target>No. of Tests Executed - Base</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field No. of Tests Executed - Base - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1363750237 - Field 893385458 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the codeunit id to run for the test line.</source>
@@ -1161,11 +1803,185 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Codeunit ID - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 1363750237 - Field 893385458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit ID</source>
+          <target>Codeunit ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Field Codeunit ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1363750237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Method Line</source>
+          <target>AI Test Method Line</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Method Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1161711431 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Code for the test suite.</source>
+          <target>Specifies the Code for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Test Suite Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1161711431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Test Suite Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1692330285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests passed for the test suite.</source>
+          <target>Specifies the number of tests passed for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Passed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1692330285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Passed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1800796768 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests executed for the test suite.</source>
+          <target>Specifies the number of tests executed for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Executed - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 1800796768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed</source>
+          <target>No. of Tests Executed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Executed - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2041992620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tokens Consumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2041992620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tokens Consumed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 237762718 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the version for the test suite.</source>
+          <target>Specifies the version for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Version - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2426551468 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests executed for the test suite.</source>
+          <target>Specifies the number of tests executed for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Executed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2426551468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed</source>
+          <target>No. of Tests Executed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Executed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 268179435 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line to filter results to.</source>
+          <target>Specifies the line to filter results to.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Line No. Filter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 268179435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No. Filter</source>
+          <target>Line No. Filter</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Line No. Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2801749846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tag for the test suite.</source>
+          <target>Specifies the tag for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 2801749846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tag</source>
+          <target>Tag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 3777850705 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the time taken for executing the tests in the test suite.</source>
+          <target>Specifies the time taken for executing the tests in the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Total Duration (ms) - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 3777850705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Total Duration (ms) - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 433940389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the time taken for executing the tests in the test suite.</source>
+          <target>Specifies the time taken for executing the tests in the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Total Duration (ms) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 433940389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Total Duration (ms) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 546339680 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tokens Consumed - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 546339680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field Tokens Consumed - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 867889081 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of tests passed for the test suite.</source>
+          <target>Specifies the number of tests passed for the test suite.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Passed - By Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Field 867889081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Field No. of Tests Passed - By Tag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2280826089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Run History</source>
+          <target>AI Run History</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Run History - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 1161711431 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Test Suite Code.</source>
           <target>Specifies the Test Suite Code.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Suite Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 1161711431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Suite Code</source>
+          <target>Test Suite Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Suite Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 1520980000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sensitive</source>
+          <target>Sensitive</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Sensitive - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 1870863607 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the original status of the test if any event subscribers modifies the status of the test</source>
@@ -1173,11 +1989,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Status - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 1870863607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Status</source>
+          <target>Original Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Status - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 1945699244 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies if any event subscribers has modified the log entry</source>
           <target>Specifies if any event subscribers has modified the log entry</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Log was Modified - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 1945699244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log was Modified</source>
+          <target>Log was Modified</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Log was Modified - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2041992620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Tokens Consumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2041992620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Tokens Consumed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2169532623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Time</source>
+          <target>Start Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Start Time - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2258364847 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Line No. of the dataset.</source>
@@ -1185,11 +2031,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Code - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2258364847 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Input Code</source>
+          <target>Test Input Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2283203248 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the original operation.</source>
           <target>Specifies the original operation.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Operation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2283203248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Operation</source>
+          <target>Original Operation</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Operation - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 237762718 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Version No. of the test run.</source>
@@ -1197,11 +2055,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Version - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Version - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2565378072 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Run ID.</source>
           <target>Specifies the Run ID.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Run ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2565378072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run ID</source>
+          <target>Run ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Run ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2632799558 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the dataset that is used by the test.</source>
@@ -1209,11 +2079,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Group Code - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2632799558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Input Group Code</source>
+          <target>Test Input Group Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Group Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2801749846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Tag that we entered in the AI Test Suite.</source>
           <target>Specifies the Tag that we entered in the AI Test Suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Tag - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2801749846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tag</source>
+          <target>Tag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Tag - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2827763166 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the original message of the test if any event subscribers modifies the message of the test</source>
@@ -1221,11 +2103,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Message - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2827763166 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Message</source>
+          <target>Original Message</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Original Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2952618810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input Data</source>
+          <target>Input Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Input Data - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 2967582120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the test codeunit name.</source>
           <target>Specifies the test codeunit name.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Codeunit Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 2967582120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit Name</source>
+          <target>Codeunit Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Codeunit Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 3108107879 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the operation.</source>
@@ -1233,11 +2133,35 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Operation - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3108107879 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Operation</source>
+          <target>Operation</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Operation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3446276168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Call Stack</source>
+          <target>Error Call Stack</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Error Call Stack - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3686646978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Message</source>
+          <target>Message</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Message Text - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 3711156646 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the name of the procedure being executed.</source>
           <target>Specifies the name of the procedure being executed.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Procedure Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3711156646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Procedure Name</source>
+          <target>Procedure Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Procedure Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 3714053412 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Test Method Line No.</source>
@@ -1245,11 +2169,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Method Line No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3714053412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Line No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Method Line No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 3845459586 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the description of the input dataset.</source>
           <target>Specifies the description of the input dataset.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3845459586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Input Description</source>
+          <target>Test Input Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Test Input Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 3940500769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output Data</source>
+          <target>Output Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Output Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 4240670190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Time</source>
+          <target>End Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field End Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 495089811 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DurationInMs (ms)</source>
+          <target>DurationInMs (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Duration (ms) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the status of the iteration.</source>
@@ -1257,11 +2211,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Status - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Status - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3546231616 - Field 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Log Entry No..</source>
           <target>Specifies the Log Entry No..</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Entry No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3546231616 - Field 893385458 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the test codeunit id.</source>
@@ -1269,11 +2235,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Codeunit ID - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3546231616 - Field 893385458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit ID</source>
+          <target>Codeunit ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Field Codeunit ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546231616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Log Entry</source>
+          <target>AI Log Entry</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Log Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 1054702095 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the MD5 hash of the XML file from which the test suite was imported.</source>
+          <target>Specifies the MD5 hash of the XML file from which the test suite was imported.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Imported XML's MD5 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 1054702095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imported XML's MD5</source>
+          <target>Imported XML's MD5</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Imported XML's MD5 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 1240570181 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the end time of the test suite execution.</source>
           <target>Specifies the end time of the test suite execution.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Ended at - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 1240570181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ended at</source>
+          <target>Ended at</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Ended at - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 1272713864 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests running in the test suite.</source>
@@ -1281,11 +2277,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Running - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 1272713864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of tests running</source>
+          <target>No. of tests running</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Running - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 1586149972 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of operations executed including "Run Procedure" operation for the test suite.</source>
           <target>Specifies the number of operations executed including "Run Procedure" operation for the test suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Operations - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 1586149972 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Operations</source>
+          <target>No. of Operations</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Operations - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 1692330285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests passed for the test suite.</source>
@@ -1293,11 +2301,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Passed - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Table 3812009960 - Field 1979202957 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the time taken for executing the tests for the base version of the test suite.</source>
-          <target>Specifies the time taken for executing the tests for the base version of the test suite.</target>
+        <trans-unit id="Table 3812009960 - Field 1692330285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Passed</source>
+          <target>No. of Tests Passed</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Total Duration (ms) - Base - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Passed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 2041992620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</source>
+          <target>Specifies the aggregated number of tokens consumed by the test in the current version. This is applicable only when using Microsoft AI Module.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Tokens Consumed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 2041992620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tokens Consumed</source>
+          <target>Total Tokens Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Tokens Consumed - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 237762718 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the version of the current test run. It is used for comparing the results of the current test run with the results of the previous test run. The version will be stored in the Log entries.</source>
@@ -1305,11 +2325,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Version - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Version - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 2426551468 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of tests executed for the test suite.</source>
           <target>Specifies the number of tests executed for the test suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Executed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 2426551468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Tests Executed</source>
+          <target>No. of Tests Executed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Executed - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 2801749846 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the tag for a test run. The Tag will be transferred to the log entries and enables easier comparison between the tests.</source>
@@ -1317,11 +2349,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Tag - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 2801749846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tag</source>
+          <target>Tag</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Tag - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Code for the test suite.</source>
           <target>Specifies the Code for the test suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 3058980257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base Version</source>
+          <target>Base Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Base Version - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the description for the test suite.</source>
@@ -1329,17 +2379,41 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Description - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Description - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 3904546728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the dataset to be used by the test suite.</source>
           <target>Specifies the dataset to be used by the test suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Input Dataset - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Table 3812009960 - Field 4166520997 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of tests passed for the base version of the test suite.</source>
-          <target>Specifies the number of tests passed for the base version of the test suite.</target>
+        <trans-unit id="Table 3812009960 - Field 3904546728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Input Dataset</source>
+          <target>Input Dataset</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Passed - Base - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Input Dataset - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 4018684269 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Runner Id</source>
+          <target>Test Runner Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Test Runner Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 4038833013 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the application id from which the test suite was created.</source>
+          <target>Specifies the application id from which the test suite was created.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Imported by AppId - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 4038833013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imported from AppId</source>
+          <target>Imported from AppId</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Imported by AppId - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 4244803688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies when the test suite was started.</source>
@@ -1347,11 +2421,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Started at - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 4244803688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Started at</source>
+          <target>Started at</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Started at - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3812009960 - Field 433940389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the time taken for executing the tests in the test suite.</source>
           <target>Specifies the time taken for executing the tests in the test suite.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Total Duration (ms) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Field 433940389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Duration (ms)</source>
+          <target>Total Duration (ms)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Total Duration (ms) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3812009960 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the status of the test suite.</source>
@@ -1359,17 +2445,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Status - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Table 3812009960 - Field 579000468 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of operations executed including "Run Procedure" operation for the base version of the test suite.</source>
-          <target>Specifies the number of operations executed including "Run Procedure" operation for the base version of the test suite.</target>
+        <trans-unit id="Table 3812009960 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Operations - Base - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field Status - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3812009960 - Field 758719836 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of tests executed for the base version of the test suite.</source>
-          <target>Specifies the number of tests executed for the base version of the test suite.</target>
+        <trans-unit id="Table 3812009960 - Field 623112344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unique RunID</source>
+          <target>Unique RunID</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field No. of Tests Executed - Base - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Field RunID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3812009960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AI Test Suite</source>
+          <target>AI Test Suite</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table AIT Test Suite - Property Caption</note>
         </trans-unit>
       </group>
     </body>
