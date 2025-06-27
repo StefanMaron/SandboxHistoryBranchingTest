@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="64977288-facd-4b48-abaa-bb0e288edfb3" Name="Electronic VAT Declaration for Denmark" Publisher="Microsoft" Brief="This extension provides functionality to export VAT Returns to Skat.dk electronically." Description="The extension offers the functionality to utilize the electronic API provided by the Danish tax authority (Skat.dk). This allows users to retrieve VAT Return periods, submit VAT Returns to the tax authority, and monitor the status of the submitted VAT Return." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?LinkId=724011" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="64977288-facd-4b48-abaa-bb0e288edfb3" Name="Electronic VAT Declaration for Denmark" Publisher="Microsoft" Brief="This extension provides functionality to export VAT Returns to Skat.dk electronically." Description="The extension offers the functionality to utilize the electronic API provided by the Danish tax authority (Skat.dk). This allows users to retrieve VAT Return periods, submit VAT Returns to the tax authority, and monitor the status of the submitted VAT Return." Version="24.5.23489.35932" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?LinkId=724011" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="13604" MaxObjectId="13607" />
     <IdRange MinObjectId="13610" MaxObjectId="13620" />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T00:56:17.3174631Z" CompilerVersion="13.1.23.59381" />
+  <Build Timestamp="2025-06-26T01:34:30.1095701Z" CompilerVersion="13.1.23.59381" />
   <AlternateIds />
 </Package>
