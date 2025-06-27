@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="8228f99b-cce5-4b9c-b247-9ee1145b7470" Name="E-Document format for OIOUBL" Publisher="Microsoft" Brief="E-Document format for OIOUBL." Description=": OIOUBL is a customization for Danish business requirements of the international UBL standard. This app supports OIOUBL 3.0 format for working with E-documents app." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2194213" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="13910" MaxObjectId="13913" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="ac762be1-e90f-4a72-b519-612a5e3ddc2e" Name="OIOUBL" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:13:33.6166874Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

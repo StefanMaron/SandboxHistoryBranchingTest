@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>3ef6b9df-8622-4b1f-8949-6a5c544fb224</id>
+        <name>Nemhandel Notification in Denmark</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#EServices#Http Client Nemhandel Status.SendGetRequest(Text,HttpRequestMessage@,Interface::Microsoft#EServices#Http Response Msg Nemhandel@):Boolean">
+            <summary>
+            Sends a GET request to the Nemhandelregisteret service to check if a company is registered in the service.
+            </summary>
+            <param name="RequestURI">The URI to send the request to.</param>
+            <param name="RequestMessage">The request message to send.</param>
+            <param name="ResponseMessage">The response message wrapped in the interface.</param>
+            <returns>True if the request was successful, false otherwise.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Client Nemhandel Status.GetRequestURI(Text):Text">
+            <summary>
+            Returns the URI from the Nemhandelregisteret API which is used to check if a company is registered in the service.
+            </summary>
+            <param name="CVRNumber">The CVR number of a company.</param>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.IsBlockedByEnvironment:Boolean">
+            <summary>
+            Returns a value that indicates if the HTTP response is the result of the environment blocking an outgoing HTTP request.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.IsSuccessStatusCode:Boolean">
+            <summary>
+            Returns a value that indicates if the HTTP response was successful.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.HttpStatusCode:Integer">
+            <summary>
+            Returns the status code of the HTTP response.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.ReasonPhrase:Text">
+            <summary>
+            Returns the reason phrase which typically is sent by servers together with the status code.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.GetResponseBody:JsonObject">
+            <summary>
+            Returns the contents of the HTTP response as a Json object.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#EServices#Http Response Msg Nemhandel.GetResponseBodyAsText:Text">
+            <summary>
+            Returns the contents of the HTTP response as text.
+            </summary>
+        </member>
+    </members>
+</doc>

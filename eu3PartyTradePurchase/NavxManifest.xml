@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="0a9a9ce1-6f98-4cf0-82e2-0b3e7cabb32a" Name="EU 3-Party Trade Purchase" Publisher="Microsoft" Brief="The app is used to provide support for the EU 3-Party trade purchase transactions." Description="When receiving a purchase invoice from a customer in one EU country/region and the products are sent to a different EU country/region without entering country/region, then that transaction amount can be identified and reported separately." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2235119" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="4880" MaxObjectId="4900" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="3df4eddc-d735-46f7-9645-3c027296d54f" Name="EU 3-Party Trade Purchase Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T00:50:50.3016465Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

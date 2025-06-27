@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="SAF-T Modification DK" ControlGUID="{12bfe59f-33ed-45fc-ae68-8e6215e153f0}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="13687" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{6f7b8d40-8f87-4bc5-a0b5-c24c851955ff}" Name="RB Accounting File" CaptionML="DAN=RB-regnskabsfil;ENU=RB Accounting File" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1969317913 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1969317913 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="13688" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="13687" ControlGUID="{b39a4c41-945b-4ad6-96df-2f4bc47a59b8}" Name="Imported SAF-T Files DK" CaptionML="DAN=Indlæs SAF-T-filer;ENU=Import SAF-T Files" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1998412429 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1998412429 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+</NavigationDefinition>

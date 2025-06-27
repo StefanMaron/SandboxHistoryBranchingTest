@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>fed2a629-3c57-4250-b2b7-f3c7a9c53cd5</id>
+        <name>SAF-T Modification DK</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Regnskab Basis Export.Initialize(Date,Date,G/L Account Mapping Header,Char,Enum::Microsoft#Foundation#Enums#Analysis Amount Type,Enum::Microsoft#Foundation#Enums#Analysis Amount Type)">
+            <summary>
+            Initializes the codeunit with the starting and ending dates, the G/L Account Mapping Header and the CSV separator.
+            </summary>
+            <param name="NewStartingDate"></param>
+            <param name="NewEndingDate"></param>
+            <param name="NewGLAccountMappingHeader"></param>
+            <param name="NewCSVSeparator"></param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Regnskab Basis Export.InitializeDefault(G/L Account Mapping Header)">
+            <summary>
+            Simpler initialization method that uses the default CSV separator, default dates and default amount calculation methods.
+            </summary>
+            <param name="NewGLAccountMappingHeader"></param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Regnskab Basis Export.GenerateFileToBlob(Codeunit::System#Utilities#Temp Blob@):Boolean">
+            <summary>
+            Generates the Regnskab Basis Accounting file to a blob.
+            </summary>
+            <param name="TempBlob"></param>
+            <returns>True if the file was written to Blob; False if there were errors or file is empty.</returns>
+        </member>
+    </members>
+</doc>

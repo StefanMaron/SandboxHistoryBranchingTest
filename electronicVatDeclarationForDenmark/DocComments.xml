@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>64977288-facd-4b48-abaa-bb0e288edfb3</id>
+        <name>Electronic VAT Declaration for Denmark</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Communication.SendMessage(InStream,Text):Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response">
+            <summary>
+            Sends a message contained in EnvelopeInStream to the specified endpoint and returns the response as an interface.
+            </summary>
+            <param name="EnvelopeInStream">Soap envelope as a stream to send.</param>
+            <param name="Endpoint">URL for endpoint where to send the message.</param>
+            <returns>Response from the endpoint, wrapped in an interface.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.IsBlockedByEnvironment:Boolean">
+            <summary>
+            Returns a value that indicates if the HTTP response is the result of the environment blocking an outgoing HTTP request.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.IsSuccessStatusCode:Boolean">
+            <summary>
+            Returns a value that indicates if the HTTP response was successful.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.HttpStatusCode:Integer">
+            <summary>
+            Returns the status code of the HTTP response.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.ReasonPhrase:Text">
+            <summary>
+            Returns the reason phrase which typically is sent by servers together with the status code.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.GetResponseStream:InStream">
+            <summary>
+            Returns the contents of the HTTP response as an InStream.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Response.GetResponseBodyAsText:Text">
+            <summary>
+            Returns the contents of the HTTP response as text.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#Elec# VAT Decl# Payload Builder.BuildPayload(Elec# VAT Decl# Parameters,XmlNode@,List of [Text]@,Code[100]@)">
+            <summary>
+            Builds the payload (XML Body node) for the request to the skat services according to type of the request
+            </summary>
+            <param name="ElecVATDeclParameters">Parameters for the request, could include dates, VAT Return No. or Transaction ID, depending on the request type.</param>
+            <param name="Body">Resulting body of the request as an XmlNode.</param>
+            <param name="ReferenceList">List of text references that will be used for signing of this returned body.</param>
+            <param name="TransactionID">Transaction ID generated for this request.</param>
+        </member>
+    </members>
+</doc>
