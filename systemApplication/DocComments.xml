@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
         <member name="O:Codeunit::System#Azure#Functions#Azure Functions">
@@ -3195,6 +3195,34 @@
             <param name="ABSOptionalParameters">Optional parameters to pass.</param>
             <returns>An operation response object</returns>
         </member>
+        <member name="M:Codeunit::System#Azure#Storage#ABS Blob Client.GetBlobMetadata(Text,Dictionary of [Text,Text]@):Codeunit::System#Azure#Storage#ABS Operation Response">
+            <summary>
+            The GetBlobMetadata operation gets user-defined Metadata for the specified blob as one or more key-value pairs.
+            see: https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-metadata?tabs=microsoft-entra-id
+            </summary>
+            <param name="BlobName">The name of the blob.</param>
+            <param name="Metadata">The result Dictionary of [Text, Text] with blob metadata.</param>
+            <returns>An operation response object</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#ABS Blob Client.GetBlobMetaData(Text,Dictionary of [Text,Text]@,Codeunit::System#Azure#Storage#ABS Optional Parameters):Codeunit::System#Azure#Storage#ABS Operation Response">
+            <summary>
+            The GetBlobMetadata operation gets user-defined Metadata for the specified blob as one or more key-value pairs.
+            see: https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-metadata?tabs=microsoft-entra-id
+            </summary>
+            <param name="BlobName">The name of the blob.</param>
+            <param name="Metadata">The result Dictionary of [Text, Text] with blob metadata.</param>
+            <param name="OptionalParameters">Optional parameters to pass.</param>
+            <returns>An operation response object</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#ABS Blob Client.SetBlobMetadata(Text,Dictionary of [Text,Text]):Codeunit::System#Azure#Storage#ABS Operation Response">
+            <summary>
+            The SetBlobMetadata operation sets user-defined Metadata for the specified blob as one or more key-value pairs.
+            see: https://learn.microsoft.com/en-us/rest/api/storageservices/set-blob-metadata?tabs=microsoft-entra-id
+            </summary>
+            <param name="BlobName">The name of the blob.</param>
+            <param name="Metadata">The result Dictionary of [Text, Text] with blob metadata.</param>
+            <returns>An operation response object</returns>
+        </member>
         <member name="O:Table::System#Azure#Storage#ABS Container">
             <summary>
             Holds information about containers in a storage account.
@@ -3529,7 +3557,32 @@
             <param name="SignedServices">Specifies the signed services accessible with the account SAS.</param>
             <param name="SignedPermissions">Specifies the signed permissions for the account SAS. Permissions are only valid if they match the specified signed resource type; otherwise they are ignored.</param>
             <param name="SignedExpiry">The time at which the shared access signature becomes invalid.</param>
-            <param name="OptionalParams">See table "Stor. Serv. SAS Parameters".</param>
+            <param name="OptionalSASParameters">See table "Stor. Serv. SAS Parameters".</param>
+            <returns>An account SAS authorization.</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#Storage Service Authorization.CreateAccountSAS(SecretText,Enum::System#Azure#Storage#Storage Service API Version,List of [SAS Service Type],List of [SAS Resource Type],List of [SAS Permission],DateTime):Interface::System#Azure#Storage#Storage Service Authorization">
+            <summary>
+            Creates an account SAS (Shared Access Signature) for authorizing HTTP request to Azure Storage Services.
+            see: https://go.microsoft.com/fwlink/?linkid=2210398
+            </summary>
+            <param name="SigningKey">The signing key to use.</param>
+            <param name="SignedVersion">Specifies the signed storage service version to use to authorize requests made with this account SAS. Must be set to version 2015-04-05 or later.</param>
+            <param name="SignedServices">Specifies the signed services accessible with the account SAS.</param>
+            <param name="SignedPermissions">Specifies the signed permissions for the account SAS. Permissions are only valid if they match the specified signed resource type; otherwise they are ignored.</param>
+            <param name="SignedExpiry">The time at which the shared access signature becomes invalid.</param>
+            <returns>An account SAS authorization.</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#Storage Service Authorization.CreateAccountSAS(SecretText,Enum::System#Azure#Storage#Storage Service API Version,List of [SAS Service Type],List of [SAS Resource Type],List of [SAS Permission],DateTime,SAS Parameters):Interface::System#Azure#Storage#Storage Service Authorization">
+            <summary>
+            Creates an account SAS (Shared Access Signature) for authorizing HTTP request to Azure Storage Services.
+            see: https://go.microsoft.com/fwlink/?linkid=2210398
+            </summary>
+            <param name="SigningKey">The signing key to use.</param>
+            <param name="SignedVersion">Specifies the signed storage service version to use to authorize requests made with this account SAS. Must be set to version 2015-04-05 or later.</param>
+            <param name="SignedServices">Specifies the signed services accessible with the account SAS.</param>
+            <param name="SignedPermissions">Specifies the signed permissions for the account SAS. Permissions are only valid if they match the specified signed resource type; otherwise they are ignored.</param>
+            <param name="SignedExpiry">The time at which the shared access signature becomes invalid.</param>
+            <param name="OptionalSASParameters">See table "Stor. Serv. SAS Parameters".</param>
             <returns>An account SAS authorization.</returns>
         </member>
         <member name="M:Codeunit::System#Azure#Storage#Storage Service Authorization.CreateSharedKey(Text):Interface::System#Azure#Storage#Storage Service Authorization">
@@ -3567,6 +3620,14 @@
             <returns>A Shared Key authorization.</returns>
         </member>
         <member name="M:Codeunit::System#Azure#Storage#Storage Service Authorization.UseReadySAS(Text):Interface::System#Azure#Storage#Storage Service Authorization">
+            <summary>
+            Uses a pre-generated account SAS (Shared Access Signature) for authorizing HTTP request to Azure Storage Services.
+            see: https://go.microsoft.com/fwlink/?linkid=2210398
+            </summary>
+            <param name="SASToken">A pre-generated SAS token.</param>
+            <returns>An account SAS authorization.</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#Storage Service Authorization.UseReadySAS(SecretText):Interface::System#Azure#Storage#Storage Service Authorization">
             <summary>
             Uses a pre-generated account SAS (Shared Access Signature) for authorizing HTTP request to Azure Storage Services.
             see: https://go.microsoft.com/fwlink/?linkid=2210398
@@ -4184,6 +4245,12 @@
             </summary>
             <returns>The old password typed on the page.</returns>
         </member>
+        <member name="M:Page::System#Security#AccessControl#Password Dialog.SetCurrentPasswordToCompareSecretValue(SecretText)">
+            <summary>
+            Set the old password value to compare with typed on the page.
+            </summary>
+            <param name="OldPasswordSecret">Old password to compare.</param>
+        </member>
         <member name="M:Page::System#Security#AccessControl#Password Dialog.EnableChangePassword">
             <summary>
             Enables the Change password mode, it makes the old password field on the page visible.
@@ -4236,6 +4303,14 @@
             <param name="OldPassword">Out parameter, the old password user typed on the dialog.</param>
             <param name="Password">Out parameter, the new password user typed on the dialog.</param>
         </member>
+        <member name="M:Codeunit::System#Security#AccessControl#Password Dialog Management.OpenChangePasswordDialog(SecretText@,SecretText@)">
+            <summary>
+            Opens a dialog for the user to change a password and returns the old and new typed passwords if there is no validation error,
+            otherwise an empty text are returned.
+            </summary>
+            <param name="OldPassword">Out parameter, the old password user typed on the dialog.</param>
+            <param name="Password">Out parameter, the new password user typed on the dialog.</param>
+        </member>
         <member name="M:Codeunit::System#Security#AccessControl#Password Dialog Management.OpenSecretPasswordDialog(Boolean,Boolean):SecretText">
             <summary>
             Opens a dialog for the user to enter a password and returns the typed password if there is no validation error,
@@ -4260,13 +4335,13 @@
             </summary>
             <returns>The typed password, or empty text if the password validations fail.</returns>
         </member>
-        <member name="M:Codeunit::System#Security#AccessControl#Password Dialog Management.OpenChangePasswordDialog(SecretText@,SecretText@)">
+        <member name="M:Codeunit::System#Security#AccessControl#Password Dialog Management.OpenPasswordChangeDialog(SecretText,SecretText@)">
             <summary>
-            Opens a dialog for the user to change a password and returns the old and new typed passwords if there is no validation error,
+            Opens a dialog for the user to change a password and returns the new typed password if there is no validation error,
             otherwise an empty text are returned.
             </summary>
-            <param name="OldPassword">Out parameter, the old password user typed on the dialog.</param>
-            <param name="Password">Out parameter, the new password user typed on the dialog.</param>
+            <param name="CurrentPassword">In parameter, the current password to compare with the password user typed on the dialog.</param>
+            <param name="NewPassword">Out parameter, the new password user typed on the dialog.</param>
         </member>
         <member name="M:Codeunit::System#Security#AccessControl#Password Dialog Management.OnSetMinPasswordLength(Integer@)">
             <summary>
@@ -6203,6 +6278,16 @@
             <param name="HashAlgorithm">The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.</param>
             <param name="SignatureOutStream">The stream to write the signature for the specified input data.</param>
         </member>
+        <member name="M:Codeunit::System#Security#Encryption#Cryptography Management.SignData(Text,SecretText,Enum::System#Security#Encryption#Hash Algorithm,Enum::System#Security#Encryption#RSA Signature Padding,OutStream)">
+            <summary>
+            Computes the hash value of the specified string and signs it.
+            </summary>
+            <param name="InputString">Input string for signing.</param>
+            <param name="XmlString">The private key to use in the hash algorithm.</param>
+            <param name="HashAlgorithm">The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.</param>
+            <param name="RSASignaturePadding">The padding mode to use for the RSA signature.</param>
+            <param name="SignatureOutStream">The stream to write the signature for the specified string.</param>
+        </member>
         <member name="M:Codeunit::System#Security#Encryption#Cryptography Management.VerifyData(Text,Text,Enum::System#Security#Encryption#Hash Algorithm,InStream):Boolean">
             <summary>
             Verifies that a digital signature is valid.
@@ -6594,6 +6679,63 @@
             <param name="CryptedText">The value to decrypt.</param>
             <returns>Plain text.</returns>
         </member>
+        <member name="O:Codeunit::System#Security#Encryption#RSA">
+            <summary>
+            Performs asymmetric encryption and digital signature using the implementation of the RSA class.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.InitializeRSA(Integer)">
+            <summary>
+            Initializes a new instance of RSA with the specified key size.
+            </summary>
+            <param name="KeySize">The size of the key in bits.</param>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.ToSecretXmlString(Boolean):SecretText">
+            <summary>
+            Creates and returns an XML string containing the key of the current RSA object.
+            </summary>
+            <param name="IncludePrivateParameters">true to include a public and private RSA key; false to include only the public key.</param>
+            <returns>An XML string containing the key of the current RSA object.</returns>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.SignData(SecretText,InStream,Enum::System#Security#Encryption#Hash Algorithm,Enum::System#Security#Encryption#RSA Signature Padding,OutStream)">
+            <summary>
+            Computes the hash value of the specified data and signs it.
+            </summary>
+            <param name="XmlString">The XML string containing RSA key information.</param>
+            <param name="DataInStream">The input stream to hash and sign.</param>
+            <param name="HashAlgorithm">The hash algorithm to use to create the hash value.</param>
+            <param name="RSASignaturePadding">The padding mode to use for the RSA signature.</param>
+            <param name="SignatureOutStream">The RSA signature stream for the specified data.</param>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.VerifyData(SecretText,InStream,Enum::System#Security#Encryption#Hash Algorithm,Enum::System#Security#Encryption#RSA Signature Padding,InStream):Boolean">
+            <summary>
+            Verifies that a digital signature is valid by determining the hash value in the signature using the provided public key and comparing it to the hash value of the provided data.
+            </summary>
+            <param name="XmlString">The XML string containing RSA key information.</param>
+            <param name="DataInStream">The input stream of data that was signed.</param>
+            <param name="HashAlgorithm">The name of the hash algorithm used to create the hash value of the data.</param>
+            <param name="RSASignaturePadding">The padding mode to use for the RSA signature.</param>
+            <param name="SignatureInStream">The stream of signature data to be verified.</param>
+            <returns>True if the signature is valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.Encrypt(SecretText,InStream,Boolean,OutStream)">
+            <summary>
+            Encrypts the specified text with the RSA algorithm.
+            </summary>
+            <param name="XmlString">The XML string containing RSA key information.</param>
+            <param name="PlainTextInStream">The input stream to encrypt.</param>
+            <param name="OaepPadding">True to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.</param>
+            <param name="EncryptedTextOutStream">The RSA encryption stream for the specified text.</param>
+        </member>
+        <member name="M:Codeunit::System#Security#Encryption#RSA.Decrypt(SecretText,InStream,Boolean,OutStream)">
+            <summary>
+            Decrypts the specified text that was previously encrypted with the RSA algorithm.
+            </summary>
+            <param name="XmlString">The XML string containing RSA key information.</param>
+            <param name="EncryptedTextInStream">The input stream to decrypt.</param>
+            <param name="OaepPadding">true to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.</param>
+            <param name="DecryptedTextOutStream">The RSA decryption stream for the specified text.</param>
+        </member>
         <member name="O:Codeunit::System#Security#Encryption#RSACryptoServiceProvider">
             <summary>
             Performs asymmetric encryption and decryption using the implementation of the RSA algorithm provided by the cryptographic service provider (CSP).
@@ -6737,6 +6879,11 @@
         <member name="E:Enum::System#Security#Encryption#SignatureAlgorithm.DSA">
             <summary>
             Specifies the DSA algorithm implemented by DSACryptoServiceProvider
+            </summary>
+        </member>
+        <member name="E:Enum::System#Security#Encryption#SignatureAlgorithm.RSASSA-PSS">
+            <summary>
+            Specifies the RSASSA-PSS algorithm implemented by RSA
             </summary>
         </member>
         <member name="O:Codeunit::System#Security#Encryption#Signature Key">
@@ -8332,7 +8479,7 @@
             Gets the settings for the given user.
             </summary>
             <param name="UserSecurityID">The user security id of the user.</param>
-            <param name="UserSettings">The return Record with the settings od the User.</param>
+            <param name="UserSettings">The return Record with the settings of the User.</param>
         </member>
         <member name="M:Codeunit::System#Environment#Configuration#User Settings.DisableTeachingTips(Guid)">
             <summary>
@@ -10001,6 +10148,13 @@
             <param name="String">The string to convert.</param>
             <returns>The string representation, in base-64, of the input string.</returns>
         </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64(SecretText):SecretText">
+            <summary>
+            Converts the value of the input secret string to its equivalent secret string representation that is encoded with base-64 digits.
+            </summary>
+            <param name="SecretString">The secret string to convert.</param>
+            <returns>The secret string representation, in base-64, of the input secret string.</returns>
+        </member>
         <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64(Text,TextEncoding):Text">
             <summary>
             Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
@@ -10062,6 +10216,16 @@
             <returns>Regular string that is equivalent to the input base-64 string.</returns>
             <error>The length of Base64String, ignoring white-space characters, is not zero or a multiple of 4.</error>
             <error>The format of Base64String is invalid. Base64String contains a non-base-64 character, more than two padding characters,
+            or a non-white space-character among the padding characters.</error>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.FromBase64(SecretText):SecretText">
+            <summary>
+            Converts the specified secret string, which encodes binary data as base-64 digits, to an equivalent regular secret string.
+            </summary>
+            <param name="Base64SecretString">The secret string to convert.</param>
+            <returns>Regular secret string that is equivalent to the input base-64 secret string.</returns>
+            <error>The length of Base64SecretString, ignoring white-space characters, is not zero or a multiple of 4.</error>
+            <error>The format of Base64SecretString is invalid. Base64String contains a non-base-64 character, more than two padding characters,
             or a non-white space-character among the padding characters.</error>
         </member>
         <member name="M:Codeunit::System#Text#Base64 Convert.FromBase64(Text,TextEncoding):Text">
@@ -14109,6 +14273,44 @@
             </summary>
             <returns>The number of filters</returns>
         </member>
+        <member name="O:Interface::System#Integration#Excel#Edit in Excel Field Filter v2">
+            <summary>
+            This codeunit provides an interface to create a filter for a specific field for Edit in Excel.
+            </summary>
+        </member>
+        <member name="M:Interface::System#Integration#Excel#Edit in Excel Field Filter v2.AddFilterValueV2(Enum::System#Integration#Excel#Edit in Excel Filter Type,Text):Interface::System#Integration#Excel#Edit in Excel Field Filter v2">
+            <summary>
+            Add a filter value
+            </summary>
+            <param name="EditInExcelFilterType">The filter type, such as Equal, Greater than.</param>
+            <param name="FilterValue">The value which the field should be Equal to, Greater than etc.</param>
+        </member>
+        <member name="M:Interface::System#Integration#Excel#Edit in Excel Field Filter v2.Get(Integer,Enum::System#Integration#Excel#Edit in Excel Filter Type@,Text@)">
+            <summary>
+            Get a specific filter
+            </summary>
+            <param name="Index">The index of the filter.</param>
+            <param name="EditInExcelFilterType">The filter type, such as Equal, Greater than.</param>
+            <param name="FilterValue">The value which the field should be Equal to, Greater than etc.</param>
+        </member>
+        <member name="M:Interface::System#Integration#Excel#Edit in Excel Field Filter v2.GetCollectionType:Enum::System#Integration#Excel#Edit in Excel Filter Collection Type">
+            <summary>
+            Get the filter collection type
+            </summary>
+            <returns>The collection type of the filter</returns>
+        </member>
+        <member name="M:Interface::System#Integration#Excel#Edit in Excel Field Filter v2.Remove(Integer)">
+            <summary>
+            Remove a specific filter
+            </summary>
+            <param name="Index">The index of the filter.</param>
+        </member>
+        <member name="M:Interface::System#Integration#Excel#Edit in Excel Field Filter v2.Count:Integer">
+            <summary>
+            Counts the number of filters
+            </summary>
+            <returns>The number of filters</returns>
+        </member>
         <member name="O:Enum::System#Integration#Excel#Edit in Excel Filter Collection Type">
             <summary>
             This enum specifies whether filters for the given field are connected or disconnected
@@ -14127,7 +14329,22 @@
             <param name="ODataFieldName">The OData name of the field referenced.</param>
             <param name="EditInExcelEdmType">The Edm type of the OData field as specified in the $metadata document.</param>
         </member>
+        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.AddFieldV2(Text,Enum::System#Integration#Excel#Edit in Excel Edm Type):Interface::System#Integration#Excel#Edit in Excel Field Filter v2">
+            <summary>
+            Add the specified field using 'and' collection type.
+            </summary>
+            <param name="ODataFieldName">The OData name of the field referenced.</param>
+            <param name="EditInExcelEdmType">The Edm type of the OData field as specified in the $metadata document.</param>
+        </member>
         <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.AddField(Text,Enum::System#Integration#Excel#Edit in Excel Filter Collection Type,Enum::System#Integration#Excel#Edit in Excel Edm Type):Interface::System#Integration#Excel#Edit in Excel Field Filter">
+            <summary>
+            Add the specified field with a specified collection type.
+            </summary>
+            <param name="ODataFieldName">The OData name of the field referenced.</param>
+            <param name="EditInExcelFilterOperatorType">Specifies whether filters for this field have 'and' or 'or', such as Field1 = a|b|c (or operator) or Field1 = &lt;a&amp;>b&gt;amp;>c (and operator). Both operators for the same field is currently not supported.</param>
+            <param name="EditInExcelEdmType">The Edm type of the OData field as specified in the $metadata document.</param>
+        </member>
+        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.AddFieldV2(Text,Enum::System#Integration#Excel#Edit in Excel Filter Collection Type,Enum::System#Integration#Excel#Edit in Excel Edm Type):Interface::System#Integration#Excel#Edit in Excel Field Filter v2">
             <summary>
             Add the specified field with a specified collection type.
             </summary>
@@ -14145,7 +14362,24 @@
             <param name="FilterValue">The value which the field should be Equal to, Greater than etc.</param>
             <param name="EditInExcelEdmType">The Edm type of the OData field as specified in the $metadata document.</param>
         </member>
+        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.AddFieldV2(Text,Enum::System#Integration#Excel#Edit in Excel Filter Type,Text,Enum::System#Integration#Excel#Edit in Excel Edm Type)">
+            <summary>
+            Add the specified field with an initial value using 'and' collection type.
+            This is mainly intended for fields that only filter on a single value.
+            </summary>
+            <param name="ODataFieldName">The OData name of the field referenced.</param>
+            <param name="EditInExcelFilterType">The filter type, such as Equal, Greater than etc.</param>
+            <param name="FilterValue">The value which the field should be Equal to, Greater than etc.</param>
+            <param name="EditInExcelEdmType">The Edm type of the OData field as specified in the $metadata document.</param>
+        </member>
         <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.Get(Text):Interface::System#Integration#Excel#Edit in Excel Field Filter">
+            <summary>
+            Get the field filters for the specified field.
+            </summary>
+            <param name="ODataFieldName">The OData name of the field referenced.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel Filters.GetV2(Text):Interface::System#Integration#Excel#Edit in Excel Field Filter v2">
             <summary>
             Get the field filters for the specified field.
             </summary>
@@ -14202,7 +14436,29 @@
             </summary>
             <param name="AadTenantId">Azure Active Directory tenant ID</param>
             <param name="ClientId">The Application (client) ID that the Azure portal - App registrations experience assigned to your app.</param>        
-            <param name="ClientSecret">The Application (client) secret configured in the "Azure Portal - Certificates &amp; Secrets".</param>    
+            <param name="ClientSecret">The Application (client) secret configured in the "Azure Portal - Certificates &amp; Secrets".</param>
+            <param name="Scopes">A list of scopes that you want the user to consent to.</param>
+            <returns>Codeunit instance implementing authorization interface</returns>
+        </member>
+        <member name="M:Codeunit::System#Integration#Graph#Authorization#Graph Authorization.CreateAuthorizationWithClientCredentials(Text,Text,SecretText,SecretText,Text):Interface::System#Integration#Graph#Authorization#Graph Authorization">
+            <summary>
+            Creates an authorization mechanism with authentication code.
+            </summary>
+            <param name="AadTenantId">Azure Active Directory tenant ID</param>
+            <param name="ClientId">The Application (client) ID that the Azure portal - App registrations experience assigned to your app.</param>
+            <param name="Certificate">The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</param>
+            <param name="CertificatePassword">Password for the certificate.</param>  
+            <param name="Scope">A scope that you want the user to consent to.</param>
+            <returns>Codeunit instance implementing authorization interface</returns>
+        </member>
+        <member name="M:Codeunit::System#Integration#Graph#Authorization#Graph Authorization.CreateAuthorizationWithClientCredentials(Text,Text,SecretText,SecretText,List of [Text]):Interface::System#Integration#Graph#Authorization#Graph Authorization">
+            <summary>
+            Creates an authorization mechanism with authentication code.
+            </summary>
+            <param name="AadTenantId">Azure Active Directory tenant ID</param>
+            <param name="ClientId">The Application (client) ID that the Azure portal - App registrations experience assigned to your app.</param>
+            <param name="Certificate">The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</param>
+            <param name="CertificatePassword">Password for the certificate.</param>  
             <param name="Scopes">A list of scopes that you want the user to consent to.</param>
             <returns>Codeunit instance implementing authorization interface</returns>
         </member>
@@ -16090,6 +16346,12 @@
             Implements functionality to get action data for a given page.
             </summary>
         </member>
+        <member name="M:Table::System#Integration#Page Summary Parameters.FromJson(Text)">
+            <summary>
+            Initializes the page summary parameters record from JSON.
+            </summary>
+            <param name="PageSummaryParameterJson">Page summary parameters in JSON format</param>
+        </member>
         <member name="O:Codeunit::System#Integration#Page Summary Provider">
             <summary>
             Exposes functionality that gets page summary for a selected page.
@@ -16105,12 +16367,25 @@
                "pageType":"Card",
                "summaryType":"Brick",
                "cardPageId": "0",
+               "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
                "fields":[
-                  {"caption":"No.","fieldValue":"01445544","type":"Code"},
-                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","type":"Text"},
-                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","type":"Text"},
-                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","type":"Decimal"}]
-               }
+                  {"caption":"No.","fieldValue":"01445544","fieldType":"Code", "tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","fieldType":"Text", "tooltip":"Specifies the name of the person you regularly contact when you do business with this customer."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales."}],
+               "recordFields":[
+                  {"caption":"No.","fieldValue":"01121212","fieldType":"Code","tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Spotsmeyer's Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Balance (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies payments from the customer that are overdue per today's date."},
+                  {"caption":"Credit Limit (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued."},
+                  {"caption":"Blocked","fieldValue":" ","fieldType":"Option","tooltip":"Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent."},
+                  {"caption":"Privacy Blocked","fieldValue":"No","fieldType":"Boolean","tooltip":"Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review."},
+                  {"caption":"Salesperson Code","fieldValue":"JR","fieldType":"Code","tooltip":"Specifies a code for the salesperson who normally handles this customer's account."},
+                  {"caption":"Service Zone Code","fieldValue":"X","fieldType":"Code","tooltip":"Specifies the code for the service zone that is assigned to the customer."},
+                  {"caption":"Address","fieldValue":"612 South Sunset Drive","fieldType":"Text","tooltip":"Specifies the customer's address. This address will appear on all sales documents for the customer."}
+                  {"caption":"Payments This Year","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the sum of payments received from the customer in the current fiscal year."},
+                  {"caption":"Last Date Modified","fieldValue":"08/02/24","fieldType":"Date","tooltip":"Specifies when the customer card was last modified."}]
              }
             
              In case of an error:
@@ -16137,11 +16412,23 @@
                "cardPageId": "0",
                "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
                "fields":[
-                  {"caption":"No.","fieldValue":"01445544","type":"Code"},
-                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","type":"Text"},
-                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","type":"Text"},
-                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","type":"Decimal"}]
-               }
+                  {"caption":"No.","fieldValue":"01445544","fieldType":"Code", "tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","fieldType":"Text", "tooltip":"Specifies the name of the person you regularly contact when you do business with this customer."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales."}],
+               "recordFields":[
+                  {"caption":"No.","fieldValue":"01121212","fieldType":"Code","tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Spotsmeyer's Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Balance (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies payments from the customer that are overdue per today's date."},
+                  {"caption":"Credit Limit (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued."},
+                  {"caption":"Blocked","fieldValue":" ","fieldType":"Option","tooltip":"Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent."},
+                  {"caption":"Privacy Blocked","fieldValue":"No","fieldType":"Boolean","tooltip":"Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review."},
+                  {"caption":"Salesperson Code","fieldValue":"JR","fieldType":"Code","tooltip":"Specifies a code for the salesperson who normally handles this customer's account."},
+                  {"caption":"Service Zone Code","fieldValue":"X","fieldType":"Code","tooltip":"Specifies the code for the service zone that is assigned to the customer."},
+                  {"caption":"Address","fieldValue":"612 South Sunset Drive","fieldType":"Text","tooltip":"Specifies the customer's address. This address will appear on all sales documents for the customer."}
+                  {"caption":"Payments This Year","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the sum of payments received from the customer in the current fiscal year."},
+                  {"caption":"Last Date Modified","fieldValue":"08/02/24","fieldType":"Date","tooltip":"Specifies when the customer card was last modified."}]
              }
             
              In case of an error:
@@ -16180,6 +16467,49 @@
              }
              </example>
         </member>
+        <member name="M:Codeunit::System#Integration#Page Summary Provider.GetPageSummary(Text):Text">
+             <returns>Text value for the page summary in JSON format.</returns>
+             <example>
+             {
+               "version":"1.1",
+               "pageCaption":"Customer Card",
+               "pageType":"Card",
+               "summaryType":"Brick",
+               "cardPageId": "0",
+               "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
+               "fields":[
+                  {"caption":"No.","fieldValue":"01445544","fieldType":"Code", "tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","fieldType":"Text", "tooltip":"Specifies the name of the person you regularly contact when you do business with this customer."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales."}],
+               "recordFields":[
+                  {"caption":"No.","fieldValue":"01121212","fieldType":"Code","tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Spotsmeyer's Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Balance (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies payments from the customer that are overdue per today's date."},
+                  {"caption":"Credit Limit (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued."},
+                  {"caption":"Blocked","fieldValue":" ","fieldType":"Option","tooltip":"Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent."},
+                  {"caption":"Privacy Blocked","fieldValue":"No","fieldType":"Boolean","tooltip":"Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review."},
+                  {"caption":"Salesperson Code","fieldValue":"JR","fieldType":"Code","tooltip":"Specifies a code for the salesperson who normally handles this customer's account."},
+                  {"caption":"Service Zone Code","fieldValue":"X","fieldType":"Code","tooltip":"Specifies the code for the service zone that is assigned to the customer."},
+                  {"caption":"Address","fieldValue":"612 South Sunset Drive","fieldType":"Text","tooltip":"Specifies the customer's address. This address will appear on all sales documents for the customer."}
+                  {"caption":"Payments This Year","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the sum of payments received from the customer in the current fiscal year."},
+                  {"caption":"Last Date Modified","fieldValue":"08/02/24","fieldType":"Date","tooltip":"Specifies when the customer card was last modified."}]
+             }
+            
+             In case of an error:
+             {
+               "version":"1.1",
+               "pageCaption":"Customer Card",
+               "pageType":"Card",
+               "summaryType":"Caption",
+               "error":[
+                 "code":"InvalidSystemId"
+                 "message":"The system id is invalid."
+               ]
+             }
+             </example>
+        </member>
         <member name="M:Codeunit::System#Integration#Page Summary Provider.GetPageUrlBySystemID(Integer,Guid):Text">
              <returns>Text value for the page url info in JSON format.</returns>
              <example>
@@ -16203,6 +16533,49 @@
             Gets the current version of the Page Summary Provider.
             </summary>
             <returns>Text value for the current version of Page Summary Provider.</returns>
+        </member>
+        <member name="M:Codeunit::System#Integration#Page Summary Provider.GetPageSummary(Page Summary Parameters):Text">
+             <returns>Text value for the page summary in JSON format.</returns>
+             <example>
+             {
+               "version":"1.1",
+               "pageCaption":"Customer Card",
+               "pageType":"Card",
+               "summaryType":"Brick",
+               "cardPageId": "0",
+               "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
+               "fields":[
+                  {"caption":"No.","fieldValue":"01445544","fieldType":"Code", "tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Progressive Home Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","fieldType":"Text", "tooltip":"Specifies the name of the person you regularly contact when you do business with this customer."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales."}],
+               "recordFields":[
+                  {"caption":"No.","fieldValue":"01121212","fieldType":"Code","tooltip":"Specifies the number of the customer."},
+                  {"caption":"Name","fieldValue":"Spotsmeyer's Furnishings","fieldType":"Text","tooltip":"Specifies the customer's name. This name will appear on all sales documents for the customer."},
+                  {"caption":"Balance (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance."},
+                  {"caption":"Balance Due (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies payments from the customer that are overdue per today's date."},
+                  {"caption":"Credit Limit (LCY)","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued."},
+                  {"caption":"Blocked","fieldValue":" ","fieldType":"Option","tooltip":"Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent."},
+                  {"caption":"Privacy Blocked","fieldValue":"No","fieldType":"Boolean","tooltip":"Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review."},
+                  {"caption":"Salesperson Code","fieldValue":"JR","fieldType":"Code","tooltip":"Specifies a code for the salesperson who normally handles this customer's account."},
+                  {"caption":"Service Zone Code","fieldValue":"X","fieldType":"Code","tooltip":"Specifies the code for the service zone that is assigned to the customer."},
+                  {"caption":"Address","fieldValue":"612 South Sunset Drive","fieldType":"Text","tooltip":"Specifies the customer's address. This address will appear on all sales documents for the customer."}
+                  {"caption":"Payments This Year","fieldValue":"0","fieldType":"Decimal","tooltip":"Specifies the sum of payments received from the customer in the current fiscal year."},
+                  {"caption":"Last Date Modified","fieldValue":"08/02/24","fieldType":"Date","tooltip":"Specifies when the customer card was last modified."}]
+             }
+            
+             In case of an error:
+             {
+               "version":"1.1",
+               "pageCaption":"Customer Card",
+               "pageType":"Card",
+               "summaryType":"Caption",
+               "error":[
+                 "code":"InvalidSystemId"
+                 "message":"The system id is invalid."
+               ]
+             }
+             </example>
         </member>
         <member name="M:Codeunit::System#Integration#Page Summary Provider.OnBeforeGetPageSummary(Integer,RecordId,JsonArray@,Boolean@)">
             <summary>
@@ -16266,6 +16639,32 @@
             <summary>
             Specifies the type that represents fields defined in a brick fieldgroup
             </summary>
+        </member>
+        <member name="O:Codeunit::System#Integration#VS Code Integration">
+            <summary>
+            Provides functionality to embed hyperlinks that send requests to VS Code to navigate to an object's definition in source code
+            and to open the source code of an extension from Git.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.OpenExtensionSourceInVSCode(Published Application@)">
+            <summary>
+            Opens an URL that sends a request to VS Code to retrieve and open the source code of the provided extension from Git.
+            </summary>
+            <param name="PublishedApplication">The extension to open in VS Code.</param>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.NavigateToPageDefinitionInVSCode(Page Info And Fields@,NAV App Installed App@)">
+            <summary>
+            Opens an URL that sends a request to VS Code to navigate to the source definition of the given page and to download the dependent symbols.
+            </summary>
+            <param name="PageInfoAndFields">The page to navigate to.</param>
+            <param name="NavAppInstalledApp">The dependency extensions for the page.</param>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.NavigateFieldDefinitionInVSCode(Page Info And Fields@,NAV App Installed App@)">
+            <summary>
+            Opens an URL that sends a request to VS Code to navigate to the source definition of the given table field and to download the dependent symbols.
+            </summary>
+            <param name="PageInfoAndFields">The table field to navigate to.</param>
+            <param name="NavAppInstalledApp">The dependency extensions for the table.</param>
         </member>
         <member name="O:Enum::System#Integration#Client Type">
             <summary>
@@ -17855,6 +18254,14 @@
             <param name="RetPeriodCalc">Specifies the retention period length date formula for which the retention period record should be found or created.</param>
             <returns>The retention period code for the retention period record.</returns>
         </member>
+        <member name="M:Codeunit::System#DataAdministration#Retention Policy Setup.FindOrCreateRetentionPeriod(Code[20],Enum::System#DataAdministration#Retention Period Enum,DateFormula):Code[20]">
+            <summary>
+            Finds or creates a new retention period record for the provided retention period.
+            </summary>
+            <param name="RetentionPeriodEnum">Specifies the retention period length enum value for which the retention period record should be found or created.</param>
+            <param name="RetPeriodCalc">Specifies the retention period length date formula for which the retention period record should be found or created.</param>
+            <returns>The retention period code for the retention period record.</returns>
+        </member>
         <member name="O:Table::System#DataAdministration#Retention Policy Setup">
             <summary>
             This table stores the retention policy setup records.
@@ -18517,6 +18924,39 @@
             <param name="TimeZoneId">The ID of the time zone against which you want to check the datetime.</param>
             <returns>A boolean indicating whether the requested datetime falls within the daylight saving time period for the indicated time zone. If the time zone does not observe daylight saving time, this will always return false.</returns>
         </member>
+        <member name="M:Codeunit::System#DateTime#Unix Timestamp.CreateTimestampSeconds:BigInteger">
+            <summary>
+            Create a Unix timestamp in seconds for the current date and time
+            </summary>
+            <returns>A Unix timestamp in seconds representing the current date and time</returns>
+        </member>
+        <member name="M:Codeunit::System#DateTime#Unix Timestamp.CreateTimestampSeconds(DateTime):BigInteger">
+            <summary>
+            Create a Unix timestamp in seconds for the specified date and time
+            </summary>
+            <param name="DateTimeFrom">The DateTime that should be used to create the Unix timestamp</param>
+            <returns>A Unix timestamp in seconds representing the specified date and time</returns>
+        </member>
+        <member name="M:Codeunit::System#DateTime#Unix Timestamp.CreateTimestampMilliseconds:BigInteger">
+            <summary>
+            Create a Unix timestamp in milliseconds for the current date and time
+            </summary>
+            <returns>A Unix timestamp in milliseconds representing the current date and time</returns>
+        </member>
+        <member name="M:Codeunit::System#DateTime#Unix Timestamp.CreateTimestampMilliseconds(DateTime):BigInteger">
+            <summary>
+            Create a Unix timestamp in milliseconds for the specified date and time
+            </summary>
+            <param name="DateTimeFrom">The DateTime that should be used to create the Unix timestamp</param>
+            <returns>A Unix timestamp in milliseconds representing the specified date and time</returns>
+        </member>
+        <member name="M:Codeunit::System#DateTime#Unix Timestamp.EvaluateTimestamp(BigInteger):DateTime">
+            <summary>
+            Evaluate a Unix timestamp to a DateTime
+            </summary>
+            <param name="Timestamp">The Unix timestamp that should be evaluated to a DateTime</param>
+            <returns>The evaluated DateTime</returns>
+        </member>
         <member name="O:Page::System#DateTime#Date-Time Dialog">
             <summary>
             Dialog for entering Date or DateTime values.
@@ -19028,9 +19468,20 @@
             Enables the lookup mode on the page.
             </summary>
         </member>
+        <member name="M:Page::System#Email#Email Accounts.FilterConnectorV2Accounts(Boolean)">
+            <summary>
+            Filters the email accounts to only show accounts that are using the Email Connector v2.
+            </summary>
+            <param name="Filter">True to filter the email accounts, false to show all email accounts</param>
+        </member>
         <member name="O:Page::System#Email#Email Account Wizard">
             <summary>
             Step by step guide for adding a new email account in Business Central
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#Email#Default Email Connector v2">
+            <summary>
+            This is the default implementation of the Email Connector v2 interface which adds the reply, retrievial of emails and marking them as read functionalities.
             </summary>
         </member>
         <member name="O:Interface::System#Email#Default Email Rate Limit">
@@ -19101,6 +19552,32 @@
             Provides a more detailed description of the connector.
             </summary>
             <returns>A more detailed desctiption of the connector.</returns>
+        </member>
+        <member name="O:Interface::System#Email#Email Connector v2">
+            <summary>
+            An e-mail connector interface enhances the "Email Connector" with reading, replying to e-mails and marking emails as read.
+            </summary>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v2.Reply(Codeunit::System#Email#Email Message@,Guid)">
+            <summary>
+            Reply to an e-mail using the provided account.
+            </summary>
+            <param name="EmailMessage">The email message that is to be sent out.</param>
+            <param name="AccountId">The email account ID which is used to send out the email.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v2.RetrieveEmails(Guid,Email Inbox@)">
+            <summary>
+            Read e-mails from the provided account.
+            </summary>
+            <param name="AccountId">The email account ID which is used to send out the email.</param>
+            <param name="EmailInbox">The email inbox record that will store the emails.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v2.MarkAsRead(Guid,Text)">
+            <summary>
+            Mark an e-mail as read in the provided account.
+            </summary>
+            <param name="AccountId">The email account ID.</param>
+            <param name="ExternalId">The external ID of the email.</param>
         </member>
         <member name="O:Codeunit::System#Email#Email">
             <summary>
@@ -19233,6 +19710,62 @@
             <returns>True if the email was successfully sent; otherwise - false</returns>
             <error>The email message has already been queued.</error>
             <error>The email message has already been sent.</error>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.Reply(Codeunit::System#Email#Email Message,Text,Guid,Enum::System#Email#Email Connector):Boolean">
+            <summary>
+            Sends a reply to an external message id in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="ExternalId">The external message id that is used to correlate and send the reply.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <returns>True if sent</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.ReplyAll(Codeunit::System#Email#Email Message,Text,Guid,Enum::System#Email#Email Connector):Boolean">
+            <summary>
+            Sends a reply to an external message id to all recipients on that email in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="ExternalId">The external message id that is used to correlate and send the reply.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <returns>True if sent</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.EnqueueReply(Codeunit::System#Email#Email Message,Text,Guid,Enum::System#Email#Email Connector,Email Outbox@)">
+            <summary>
+            Sends a reply to an external message id in the background.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="ExternalId">The external message id that is used to correlate and send the reply.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailOutbox">The email outbox which is set up for sending in the background.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.EnqueueReplyAll(Codeunit::System#Email#Email Message,Text,Guid,Enum::System#Email#Email Connector,Email Outbox@)">
+            <summary>
+            Sends a reply to an external message id to all recipients on that email in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="ExternalId">The external message id that is used to correlate and send the reply.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailOutbox">The email outbox which is set up for sending in the background.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.RetrieveEmails(Guid,Enum::System#Email#Email Connector,Email Inbox@)">
+            <summary>
+            Retrieves emails from the email account.
+            </summary>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailInbox">The return record of all new emails that were retrieved.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.MarkAsRead(Guid,Enum::System#Email#Email Connector,Text)">
+            <summary>
+            Marks the specified email as read.
+            </summary>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="ExternalId">The external message id that is used to correlate and mark as read.</param>
         </member>
         <member name="M:Codeunit::System#Email#Email.OpenInEditor(Codeunit::System#Email#Email Message)">
             <summary>
@@ -19444,6 +19977,12 @@
             </summary>
             <param name="MessageId">The ID of the email that has been queued</param>
         </member>
+        <member name="M:Codeunit::System#Email#Email.OnEnqueuedReplyInOutbox(Guid)">
+            <summary>
+            Integration event to implement additional validation after the email message has been enqueued in the email outbox.
+            </summary>
+            <param name="MessageId">The ID of the email that has been queued</param>
+        </member>
         <member name="M:Codeunit::System#Email#Email.OnAfterEmailSent(Sent Email)">
             <summary>
             Integration event that notifies senders when the email has been sent successfully. This event is isolated.
@@ -19466,6 +20005,12 @@
         <member name="M:Codeunit::System#Email#Email.OnBeforeSendEmail(Codeunit::System#Email#Email Message@)">
             <summary>
             Integration event that allows updating of the email message before the email is queued for sending.
+            </summary>
+            <param name="EmailMessage">Email message codeunit which is linked to the current email.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.OnBeforeReplyEmail(Codeunit::System#Email#Email Message@)">
+            <summary>
+            Integration event that allows updating of the email message before the email is queued for replying.
             </summary>
             <param name="EmailMessage">Email message codeunit which is linked to the current email.</param>
         </member>
@@ -19640,6 +20185,47 @@
             <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
             <param name="CCRecipients">The CC recipient(s) of the email. A list of email addresses that will be listed as CC.</param>
             <param name="BCCRecipients">TThe BCC recipient(s) of the email. A list of email addresses that will be listed as BCC.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email Message.CreateReply(Text,Text,Text,Boolean,Text)">
+            <summary>
+            Creates the email reply with recipients, subject, and body.
+            </summary>
+            <param name="ToRecipients">The recipient(s) of the email. A string containing the email addresses of the recipients separated by semicolon.</param>
+            <param name="Subject">The subject of the email.</param>
+            <param name="Body">The body of the email.</param>
+            <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+            <param name="ExternalId">The external message id to reply to.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email Message.CreateReply(List of [Text],Text,Text,Boolean,Text)">
+            <summary>
+            Creates the email reply with recipients, subject, and body.
+            </summary>
+            <param name="ToRecipients">The recipient(s) of the email. A list of email addresses the email will be send directly to.</param>
+            <param name="Subject">The subject of the email.</param>
+            <param name="Body">The body of the email.</param>
+            <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+            <param name="ExternalId">The external message id to reply to.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email Message.CreateReply(List of [Text],Text,Text,Boolean,Text,List of [Text],List of [Text])">
+            <summary>
+            Creates the email reply with recipients, subject, and body.
+            </summary>
+            <param name="ToRecipients">The recipient(s) of the email. A list of email addresses the email will be send directly to.</param>
+            <param name="Subject">The subject of the email.</param>
+            <param name="Body">The body of the email.</param>
+            <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+            <param name="ExternalId">The external message id to reply to.</param>
+            <param name="CCRecipients">The CC recipient(s) of the email. A list of email addresses that will be listed as CC.</param>
+            <param name="BCCRecipients">TThe BCC recipient(s) of the email. A list of email addresses that will be listed as BCC.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email Message.CreateReplyAll(Text,Text,Boolean,Text)">
+            <summary>
+            Creates the email replying to all existing recipents on the mail thread, subject, and body.
+            </summary>
+            <param name="Subject">The subject of the email.</param>
+            <param name="Body">The body of the email.</param>
+            <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+            <param name="ExternalId">The external message id to reply to.</param>
         </member>
         <member name="M:Codeunit::System#Email#Email Message.Get(Guid):Boolean">
             <summary>
@@ -20064,6 +20650,9 @@
             <summary>
             Page is used to set the attachments for the scenario.
             </summary>
+        </member>
+        <member name="O:Table::System#Email#Email Inbox">
+            <summary>Holds information about emails retrieved from an inbox.</summary>
         </member>
         <member name="O:Enum::System#Email#Email Action">
             <summary>
@@ -21179,9 +21768,44 @@
             </summary>
             <param name="CaptionText">The caption to set.</param>
         </member>
+        <member name="O:Page::System#Tooling#Performance Profile List">
+            <summary>
+            List for performance profiles generated by profile schedules
+            </summary>
+        </member>
         <member name="O:Page::System#Tooling#Performance Profiler">
             <summary>
             Sampling-based in-client performance profiler
+            </summary>
+        </member>
+        <member name="O:Enum::System#Tooling#Perf# Profile Activity Type">
+            <summary>
+            The supported activity types for creating scheduled based sampling profiles
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#Perf# Profile Activity Type.Web Client">
+            <summary>
+            The web client activity type
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#Perf# Profile Activity Type.Background">
+            <summary>
+            The background activity type
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#Perf# Profile Activity Type.Web API Client">
+            <summary>
+            The web api activity type
+            </summary>
+        </member>
+        <member name="O:Page::System#Tooling#Perf# Profiler Schedule Card">
+            <summary>
+            Card page for schedule based sampling profilers
+            </summary>
+        </member>
+        <member name="O:Page::System#Tooling#Perf# Profiler Schedules List">
+            <summary>
+            List for schedule based sampling profilers
             </summary>
         </member>
         <member name="O:Enum::System#Tooling#Profiling Aggregation Type">
@@ -21391,6 +22015,106 @@
             <param name="ProfilingNode">The call tree from performance profiling.</param>
             <error>If there is no performance profiling data.</error>
             <remarks>CPU nodes with multiple parents will be copied for each parent.</remarks>
+        </member>
+        <member name="O:Codeunit::System#Tooling#Scheduled Perf# Profiler">
+            <summary>
+            Provides implementation details for working on the Perf. Profiler Schedules list and card pages.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidatePerformanceProfileSchedulerDates(Performance Profile Scheduler,Duration)">
+            <summary>
+            Validate dates for the "Performance Profile Scheduler" record with all validations.
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record</param>
+            <param name="MaxRetentionPeriod">The maximum retention period</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidatePerformanceProfileSchedulerDatesRelation(Performance Profile Scheduler)">
+            <summary>
+            Validate the relation between the dates for the "Performance Profile Scheduler" record.
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record</param>
+            <param name="MaxRetentionPeriod">The maximum retention period</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidatePerformanceProfileEndTime(Performance Profile Scheduler)">
+            <summary>
+            Validates the end time of a schedule.
+            </summary>
+            <param name="PerformanceProfileScheduler">The record.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.MapActivityTypeToRecord(Performance Profile Scheduler@,Enum::System#Tooling#Perf# Profile Activity Type)">
+            <summary>
+            Maps an activity type to a session type.
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record </param>
+            <param name="ActivityType">The activity enum type</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.MapRecordToActivityType(Performance Profile Scheduler,Enum::System#Tooling#Perf# Profile Activity Type@)">
+            <summary>
+            Maps a session type to an activity type.
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record </param>
+            <param name="ActivityType">The activity enum type</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.FilterUsers(Performance Profile Scheduler@,Guid)">
+            <summary>
+            Filters the record with the users that are allowed to view the Performance Profile Scheduler page
+            </summary>
+            <param name="PerformanceProfileScheduler">The record</param>
+            <param name="SecurityID">The security ID to filter the opening of the page</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.FilterUsers(Performance Profile Scheduler@,Guid,Boolean)">
+            <summary>
+            Filters the record with the users that are allowed to view the Performance Profile Scheduler page
+            </summary>
+            <param name="PerformanceProfileScheduler">The record</param>
+            <param name="SecurityID">The security ID to filter the opening of the page</param>
+            <param name="ForceFilterToUser">Filter to the passed in user even if the user is an admin.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidateScheduleCreationPermissions(Guid,Guid)">
+            <summary>
+            Returns true if the user can make schedules for other users.
+            </summary>
+            <param name="UserID">The current user ID.</param>
+            <param name="ScheduleUserId">The schedule user ID.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.MapRecordToUserName(Performance Profile Scheduler):Text">
+             <summary>
+             Maps a session type to an activity type.
+             </summary>
+             <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record </param>
+            <returns>The user name if found, else empty</returns>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.InitializeFields(Performance Profile Scheduler@,Enum::System#Tooling#Perf# Profile Activity Type@)">
+            <summary>
+            Initalizes the fields for the "Performance Profile Scheduler" record
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record </param>
+            <param name="ActivityType">>The activity enum type</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidatePerformanceProfileSchedulerRecord(Performance Profile Scheduler,Enum::System#Tooling#Perf# Profile Activity Type)">
+            <summary>
+            Validates the consistency of the "Performance Profile Scheduler" record
+            </summary>
+            <param name="PerformanceProfileScheduler">The "Performance Profile Scheduler" record</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.GetRetentionPeriod:Code[20]">
+            <summary>
+            Gets the retention period for performance profiles
+            </summary>
+            <returns>The retention period</returns>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.ValidateThreshold(Performance Profile Scheduler@)">
+            <summary>
+             Validates the threshold field
+            </summary>
+            <param name="PerformanceProfileScheduler"></param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#Scheduled Perf# Profiler.IsProfilingEnabled(Guid@):Boolean">
+            <summary>
+            Returns true if profiling is enabled for the session.
+            </summary>
+            <param name="ScheduleID">The schedule ID that triggers the profiling.</param>
+            <returns>True if profiling is enabled, false otherwise.</returns>
         </member>
         <member name="O:Table::System#Tooling#Query Navigation Validation">
             <summary>
@@ -22012,6 +22736,16 @@
             <param name="ClientSecret">The ClientSecret to use for authentication</param>
             <param name="Scopes">The Scopes to use for authentication</param>
         </member>
+        <member name="M:Codeunit::System#RestClient#HttpAuthOAuthClientCredentials.Initialize(Text,Text,SecretText,SecretText,List of [Text])">
+            <summary>
+            Initializes the authentication object with the given AuthorityUrl, ClientId, Certificate, Certifacte Password  and Scopes
+            </summary>
+            <param name="OAuthAuthorityUrl">The OAuthAuthorityUrl to use for authentication</param>
+            <param name="ClientId">The ClientId to use for authentication</param>
+            <param name="Certificate">The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</param>
+            <param name="CertificatePassword">Password for the certificate.</param>
+            <param name="Scopes">The Scopes to use for authentication</param>
+        </member>
         <member name="M:Codeunit::System#RestClient#HttpAuthOAuthClientCredentials.IsAuthenticationRequired:Boolean">
             <summary>Checks if authentication is required for the request</summary>
             <returns>Returns true because authentication is required</returns>
@@ -22074,7 +22808,25 @@
             <param name="FeatureName">The name of the feature.</param>
             <param name="EventName">The name of the event.</param>
             <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
-            <remarks>Custom dimensions often contain infromation translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            TranslationHelper.SetGlobalLanguageToDefault();
+            CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
+            CustomDimensions.Add('JobQueueObjectId', Format(JobQueueEntry."Object ID to Run"));
+            FeatureTelemetry.LogUsage('0000XYZ', 'Job Queue', 'Job executed', CustomDimensions);
+            TranslationHelper.RestoreGlobalLanguage();
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about feature usage (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
             <example>
             TranslationHelper.SetGlobalLanguageToDefault();
             CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
@@ -22121,6 +22873,27 @@
             <param name="ErrorCallStack">The error call stack.</param>
             <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
             <remarks>Custom dimensions often contain infromation translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            if not Success then begin
+                TranslationHelper.SetGlobalLanguageToDefault();
+                CustomDimensions.Add('UpdateEntity', Format(AzureADUserUpdateBuffer."Update Entity"));
+                FeatureTelemetry.LogError('0000XYZ', 'User management', 'Syncing users with M365', GetLastErrorText(true), GetLastErrorCallStack(), CustomDimensions);
+                TranslationHelper.RestoreGlobalLanguage();
+            end;
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about errors happening during feature usage (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique ID of the error.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ErrorText">The text of the error.</param>
+            <param name="ErrorCallStack">The error call stack.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
             <example>
             if not Success then begin
                 TranslationHelper.SetGlobalLanguageToDefault();
@@ -22221,6 +22994,12 @@
             <remarks>We will only ever wait when feature uptake states a registered for the first time, so there is no persistent performance penalty to this.</remarks>
             <remarks>It is not hard requirement to actually wait for the session to finish, we only need to wait long enough, so that it calls FeatureUptake.LockTable().</remarks>
         </member>
+        <member name="O:Enum::System#Telemetry#AL Telemetry Scope">
+            <summary>
+            Represents the emission scope of the telemetry signal.
+            An wrapper in AL to provide the capability to send Telemetries to ISVs.
+            </summary>
+        </member>
         <member name="O:Codeunit::System#Telemetry#Telemetry">
              <summary>
              A wrapper on top of Session.LogMessage that allows for having additional common custom dimensions emitted with every message.
@@ -22281,6 +23060,17 @@
             <param name="Verbosity">The verbosity of the telemetry message.</param>
             <param name="DataClassification">The data classification of the telemetry message.</param>
         </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Logs a telemetry message (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
+        </member>
         <member name="O:Interface::System#Telemetry#Telemetry Logger">
              <summary>
              The interface that allows 3d party extensions to emit telemetry to their own telemetry stores when the Telemetry codeunit is used.
@@ -22333,6 +23123,16 @@
                 Sender.Register(MyTelemetryLogger);
             end;
             </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetTelemetryLogger(Text,Interface::System#Telemetry#Telemetry Logger@):Boolean">
+            <summary>
+            Get the telemetry logger from publisher. If there are multiple telemetry loggers registered for the current publisher, a warning is logged.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetRelevantTelemetryLoggers(Text):List of [Telemetry Logger]">
+            <summary>
+            Gets the relevant telemetry loggers based on the CallerCallStack, doesn't include the ExcludePublisher's logger.
+            </summary>
         </member>
         <member name="O:Codeunit::System#Upgrade#Upgrade Tag">
             <summary>
@@ -22705,6 +23505,30 @@
             </summary>
             <returns>The deployment name.</returns>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Deployments.GetGPT4oLatest:Text">
+            <summary>
+            Returns the name of the latest AOAI deployment model of GPT4o.
+            </summary>
+            <returns>The deployment name.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Deployments.GetGPT4oPreview:Text">
+            <summary>
+            Returns the name of preview AOAI deployment model of GPT4o.
+            </summary>
+            <returns>The deployment name.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Deployments.GetGPT4oMiniLatest:Text">
+            <summary>
+            Returns the name of the latest AOAI deployment model of GPT4o-Mini.
+            </summary>
+            <returns>The deployment name.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Deployments.GetGPT4oMiniPreview:Text">
+            <summary>
+            Returns the name of preview AOAI deployment model of GPT4o-Mini.
+            </summary>
+            <returns>The deployment name.</returns>
+        </member>
         <member name="O:Enum::System#AI#AOAI Model Type">
             <summary>
             The supported model types for Azure OpenAI.
@@ -23064,6 +23888,11 @@
             The Copilot is inactive.
             </summary>
         </member>
+        <member name="O:Codeunit::System#AI#Copilot Telemetry">
+            <summary>
+            This codeunit is called from Platform.
+            </summary>
+        </member>
         <member name="O:Codeunit::System#AI#AOAI Chat Completion Params">
             <summary>
             Represents the Chat Completion parameters used by the API.
@@ -23189,6 +24018,12 @@
             </summary>
             <param name="NewMessage">The message to add.</param>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Chat Messages.AddToolCalls(JsonArray)">
+            <summary>
+            Adds a assistant message containing the tool calls returned from the model to the chat messages history.
+            </summary>
+            <param name="ToolCalls">The tool calls to add.</param>
+        </member>
         <member name="M:Codeunit::System#AI#AOAI Chat Messages.AddToolMessage(Text,Text,Text)">
             <summary>
             Adds a tool result to the chat messages history.
@@ -23249,6 +24084,12 @@
             Gets the last chat message name.
             </summary>
             <returns>The last chat message name.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Chat Messages.GetLastToolCalls:JsonArray">
+            <summary>
+            Gets a copy of the last chat message tool calls array.
+            </summary>
+            <returns>The last tool calls array.</returns>
         </member>
         <member name="M:Codeunit::System#AI#AOAI Chat Messages.SetHistoryLength(Integer)">
             <summary>
@@ -23370,6 +24211,17 @@
             </summary>
             <returns>The Tool choice parameter.</returns>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Chat Messages.SetToolInvokePreference(Enum::System#AI#AOAI Tool Invoke Preference)">
+            <summary>
+            Sets the tool invocation preference, controls how a tool calls response should be handled.
+            </summary>
+            <remarks>The default behavior is to execute the tools and append the results to the chat history.</remarks>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Chat Messages.GetToolInvokePreference:Enum::System#AI#AOAI Tool Invoke Preference">
+            <summary>
+            Gets the tool invocation preference, controls how a tool calls response should be handled.
+            </summary>
+        </member>
         <member name="M:Codeunit::System#AI#AOAI Chat Messages.AssembleTools:JsonArray">
             <summary>
             Prepares the Tools to be sent to the deployment model.
@@ -23402,6 +24254,30 @@
             Tool chat role messages provides the results of tool calling to the model.
             </summary>
         </member>
+        <member name="O:Enum::System#AI#AOAI Tool Invoke Preference">
+            <summary>
+            The tool invocation preference for tool call responses.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Tool Invoke Preference.Invoke Tools Only">
+            <summary>
+            Only invoke the tool calls returned from the LLM, do not send the results back to the LLM.
+            Appends the tool results to the chat history.
+            </summary>
+            <remarks>This is the default preference.</remarks>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Tool Invoke Preference.Manual">
+            <summary>
+            Require manual invocation of the tool calls (i.e. the Copilot toolkit will not invoke the tools).
+            Does not append the tool results to the chat history.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Tool Invoke Preference.Automatic">
+            <summary>
+            Invoke the tool calls returned from the LLM, and send them back to the LLM until no more tool calls are returned.
+            Appends all the tool results to the chat history.
+            </summary>
+        </member>
         <member name="O:Codeunit::System#AI#AOAI Function Response">
             <summary>
             The status and result of an functions.
@@ -23413,11 +24289,23 @@
             </summary>
             <returns>True if the call was successful, false otherwise.</returns>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Function Response.GetStatus:Enum::System#AI#AOAI Function Response Status">
+            <summary>
+            Gets the function response status.
+            </summary>
+            <returns>The function response status</returns>
+        </member>
         <member name="M:Codeunit::System#AI#AOAI Function Response.GetResult:Variant">
             <summary>
             Get the return value of the function that was called.
             </summary>
             <returns>The return value from the function</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Function Response.GetArguments:JsonObject">
+            <summary>
+            Get the arguments for the function call.
+            </summary>
+            <returns>The arguments for the function</returns>
         </member>
         <member name="M:Codeunit::System#AI#AOAI Function Response.GetError:Text">
             <summary>
@@ -23441,6 +24329,42 @@
             Get the error call stack from the function that was called.
             </summary>
             <returns>The error call stack from the function.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Function Response.AppendResultToChatMessages(Codeunit::System#AI#AOAI Chat Messages@)">
+            <summary>
+            Appends the function result to the provided AOAIChatMessages instance.
+            </summary>
+            <param name="AOAIChatMessages">The chat messages instance to append the result to.</param>
+        </member>
+        <member name="O:Enum::System#AI#AOAI Function Response Status">
+            <summary>
+            The status of the function response.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Function Response Status.Not Invoked">
+            <summary>
+            The function has not been invoked.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Function Response Status.Invoke Success">
+            <summary>
+            The function was invoked and completed without error.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Function Response Status.Invoke Error">
+            <summary>
+            The function was invoked and completed with error.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Function Response Status.Function Not Found">
+            <summary>
+            The requested function could not be found.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#AOAI Function Response Status.Function Invalid">
+            <summary>
+            The requested function was invalid.
+            </summary>
         </member>
         <member name="O:Codeunit::System#AI#AOAI Operation Response">
             <summary>
@@ -23477,11 +24401,33 @@
             </summary>
             <returns>True if it was a function call, false otherwise.</returns>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Operation Response.HasFunctionResponsesByName(Text):Boolean">
+            <summary>
+            Get whether there are any function responses for a given function name.
+            </summary>
+            <param name="FunctionName">The case sensitive function name to search for.</param>
+            <returns>True if any function responses were found</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Operation Response.TryGetFunctionReponsesByName(Text,List of [AOAI Function Response]@):Boolean">
+            <summary>
+            Get all the function responses for a specified function name.
+            </summary>
+            <param name="FunctionName">The case sensitive function name to search for.</param>
+            <param name="MatchedAOAIFunctionResponses">The function responses that match the given function name</param>
+            <returns>True if any function responses were found</returns>
+        </member>
         <member name="M:Codeunit::System#AI#AOAI Operation Response.GetFunctionResponse:Codeunit::System#AI#AOAI Function Response">
             <summary>
             Get the function response codeunit which contains the response details.
             </summary>
             <returns>The codeunit which contains response details for the function call.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#AOAI Operation Response.AppendFunctionResponsesToChatMessages(Codeunit::System#AI#AOAI Chat Messages@)">
+            <summary>
+            Appends all of the successful function results to the provided AOAIChatMessages instance.
+            </summary>
+            <remarks>The last chat message in the history must contain the tool calls from this operation.</remarks>
+            <param name="AOAIChatMessages">The chat messages instance to append the result to.</param>
         </member>
         <member name="O:Codeunit::System#AI#AOAI Text Completion Params">
             <summary>
