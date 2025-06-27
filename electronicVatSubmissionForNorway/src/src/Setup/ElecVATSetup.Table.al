@@ -4,7 +4,6 @@
 // ------------------------------------------------------------------------------------------------
 namespace Microsoft.Finance.VAT.Reporting;
 
-using System;
 using System.Privacy;
 
 table 10686 "Elec. VAT Setup"
@@ -23,15 +22,12 @@ table 10686 "Elec. VAT Setup"
             trigger OnValidate()
             var
                 CustomerConsentMgt: Codeunit "Customer Consent Mgt.";
-                MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                MyALAuditCategory: DotNet ALAuditCategory;
                 ElectVATSetupConsentProvidedLbl: Label 'NO Elect. VAT Setup - consent provided by UserSecurityId %1.', Locked = true;
             begin
                 if Enabled then
                     Enabled := CustomerConsentMgt.ConfirmUserConsent();
                 if Enabled then
-                    MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(ElectVATSetupConsentProvidedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 4, 0);
+                    Session.LogAuditMessage(StrSubstNo(ElectVATSetupConsentProvidedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 4, 0);
             end;
         }
         field(3; "OAuth Feature GUID"; GUID)

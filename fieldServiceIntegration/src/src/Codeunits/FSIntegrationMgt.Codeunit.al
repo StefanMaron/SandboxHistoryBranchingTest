@@ -30,8 +30,7 @@ codeunit 6615 "FS Integration Mgt."
         NoPermissionsTxt: Label 'No permissions.', Locked = true;
 
     [TryFunction]
-    [NonDebuggable]
-    internal procedure ImportFSSolution(ServerAddress: Text; IntegrationUserEmail: Text; AdminUserEmail: Text; AdminUserPassword: Text; AccessToken: SecretText; AdminADDomain: Text; ProxyVersion: Integer; ForceRedeploy: Boolean; ImportSolutionFailed: Boolean)
+    internal procedure ImportFSSolution(ServerAddress: Text; IntegrationUserEmail: Text; AdminUserEmail: Text; AdminUserPassword: SecretText; AccessToken: SecretText; AdminADDomain: Text; ProxyVersion: Integer; ForceRedeploy: Boolean; ImportSolutionFailed: Boolean)
     var
         CDSConnectionSetup: Record "CDS Connection Setup";
         CRMRole: Record "CRM Role";
@@ -80,7 +79,7 @@ codeunit 6615 "FS Integration Mgt."
 
         SolutionInstalled := CRMHelper.CheckSolutionPresence(MicrosoftDynamicsFSIntegrationTxt);
         if SolutionInstalled then
-            SolutionOutdated := CRMIntegrationManagement.IsSolutionOutdated(TempConnectionStringWithPlaceholders, MicrosoftDynamicsFSIntegrationTxt);
+            SolutionOutdated := CRMIntegrationManagement.IsSolutionOutdated(TempConnectionString, MicrosoftDynamicsFSIntegrationTxt);
 
         if ForceRedeploy then
             ImportSolution := (not SolutionInstalled) or SolutionOutdated
