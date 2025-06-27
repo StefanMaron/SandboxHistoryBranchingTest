@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="de0dddf3-9917-430d-8d20-6e7679a08500" Name="E-Document Core Demo Data" Publisher="Microsoft" Brief="The Dynamics 365 Business Central E-Documents module enables different models of electronic invoicing, available for additional localizations." Description="Business Central's E-Documents module is the foundation layer for all e-invoicing standards covering most common processes, but it can be used for other electronic documents. The module is easily extendable with the country-based e-invoicing apps. The E-Documents app covers both sales and purchase processes and can have different lifecycles from standard invoices in Business Central." Version="24.5.23489.35993" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="de0dddf3-9917-430d-8d20-6e7679a08500" Name="E-Document Core Demo Data" Publisher="Microsoft" Brief="The Dynamics 365 Business Central E-Documents module enables different models of electronic invoicing, available for additional localizations." Description="Business Central's E-Documents module is the foundation layer for all e-invoicing standards covering most common processes, but it can be used for other electronic documents. The module is easily extendable with the country-based e-invoicing apps. The E-Documents app covers both sales and purchase processes and can have different lifecycles from standard invoices in Business Central." Version="25.0.23364.35903" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.0.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="5370" MaxObjectId="5380" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="25.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:17:07.3250138Z" CompilerVersion="13.1.23.59381" />
+  <Build Timestamp="2025-06-25T20:06:33.8387166Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>

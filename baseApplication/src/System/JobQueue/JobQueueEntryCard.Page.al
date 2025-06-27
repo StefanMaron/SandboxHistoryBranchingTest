@@ -1,6 +1,5 @@
 namespace System.Threading;
 
-using System;
 using System.Automation;
 using System.Azure.Identity;
 
@@ -260,9 +259,6 @@ page 673 "Job Queue Entry Card"
 
                     trigger OnAction()
                     var
-                        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                        MyALAuditCategory: DotNet ALAuditCategory;
                         SetStatustoReadyActivatedLbl: Label 'UserSecurityId %1 set the Status of the job queue entry %2 to Ready.', Locked = true;
                     begin
                         if IsUserDelegated then begin
@@ -270,7 +266,7 @@ page 673 "Job Queue Entry Card"
                             CurrPage.Update(false);
                         end else begin
                             Rec.SetStatus(Rec.Status::Ready);
-                            MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(SetStatustoReadyActivatedLbl, UserSecurityId(), Rec."Entry No."), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+                            Session.LogAuditMessage(StrSubstNo(SetStatustoReadyActivatedLbl, UserSecurityId(), Rec."Entry No."), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
                         end;
                     end;
                 }
@@ -495,7 +491,7 @@ page 673 "Job Queue Entry Card"
         JobQueueManagement: Codeunit "Job Queue Management";
         ChooseSetOnHoldMsg: Label 'To edit the job queue entry, you must first choose the Set On Hold action.';
         SetOnHoldLbl: Label 'Set On Hold';
-        ModifyOnlyWhenReadOnlyNotificationIdTxt: Label '509FD112-31EC-4CDC-AEBF-19B8FEBA526F', Locked = true;
+        ModifyOnlyWhenReadOnlyNotificationIdTxt: Label 'dfc885c0-9960-411a-b96f-5deeedc712dc', Locked = true;
         IsUserDelegated: Boolean;
         IsPendingApproval: Boolean;
 
