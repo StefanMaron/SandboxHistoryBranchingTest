@@ -1,0 +1,56 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="437dbf0e-84ff-417a-965d-ed2bb9650972" Name="Base Application" Publisher="Microsoft" Brief="Base Application (NZ)" Description="Provides business processes that are typical for small and mid-sized companies, such as sales and purchasing, and customer and vendor management, plus complex processes, such as assembly, manufacturing, service, and directed warehouse management. https://go.microsoft.com/fwlink/?LinkId=2205496" Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" PropagateDependencies="True" />
+  <IdRanges>
+    <IdRange MinObjectId="1" MaxObjectId="49999" />
+    <IdRange MinObjectId="104000" MaxObjectId="104999" />
+    <IdRange MinObjectId="130400" MaxObjectId="130419" />
+    <IdRange MinObjectId="2000000" MaxObjectId="2000059" />
+    <IdRange MinObjectId="3005000" MaxObjectId="3011499" />
+    <IdRange MinObjectId="5000000" MaxObjectId="5005399" />
+    <IdRange MinObjectId="5055250" MaxObjectId="5055999" />
+    <IdRange MinObjectId="7000000" MaxObjectId="7000099" />
+    <IdRange MinObjectId="11000000" MaxObjectId="11000499" />
+    <IdRange MinObjectId="15000000" MaxObjectId="15000499" />
+    <IdRange MinObjectId="32000000" MaxObjectId="32000199" />
+    <IdRange MinObjectId="99000700" MaxObjectId="99009000" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="f3552374-a1f2-4356-848e-196002525837" Name="Business Foundation" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo>
+    <Module Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" />
+    <Module Id="5d86850b-0d76-4eca-bd7b-951ad998e997" Name="Tests-TestLibraries" Publisher="Microsoft" />
+    <Module Id="c49d9d39-1c94-46d2-8bf7-3cce15ba54dc" Name="Tests-SMTP" Publisher="Microsoft" />
+    <Module Id="7fe10be7-575f-4cce-957b-bcd0df8f9bd7" Name="Tests-Rapid Start" Publisher="Microsoft" />
+    <Module Id="4564dd2f-e8b2-41ff-9905-9d7a950475a5" Name="Tests-Misc" Publisher="Microsoft" />
+    <Module Id="8c9fc75f-dc51-40de-a6fa-55e7bbe0c0c2" Name="Tests-What's New Notifier Test" Publisher="Microsoft" />
+    <Module Id="74e323c4-70a3-49ce-b18e-fe9ccaff01d3" Name="Tests-Marketing" Publisher="Microsoft" />
+    <Module Id="c49d9d12-1c94-4362-8bf7-3cce15be54dc" Name="Tests-Monitor Sensitive Fields" Publisher="Microsoft" />
+    <Module Id="fa3e2564-a39e-417f-9be6-c0dbe3d94069" Name="Tests-ERM" Publisher="Microsoft" />
+    <Module Id="9bf23d52-8194-4857-8896-5e48b24493f6" Name="Tests-Job" Publisher="Microsoft" />
+    <Module Id="155bc500-e420-4113-803e-7aa8e8eea112" Name="Tests-CRM integration" Publisher="Microsoft" />
+    <Module Id="bd6c6741-7734-4109-bf2d-db58545d482c" Name="Tests-Local" Publisher="Microsoft" />
+    <Module Id="2b634ad5-63df-4a3c-9e35-e347f646e940" Name="Tests-Integration" Publisher="Microsoft" />
+    <Module Id="2a5ff629-58b0-48e8-9414-319055c49e8d" Name="Tests-MOCKSERVICETESTS-Internal" Publisher="Microsoft" />
+    <Module Id="1a424ad5-63df-4a3c-9e35-e347f644a831" Name="Tests-Integration-Internal" Publisher="Microsoft" />
+    <Module Id="d0e99b97-089b-449f-a0f5-a2ab994dbfd7" Name="Tests-Upgrade" Publisher="Microsoft" />
+    <Module Id="d94a0cee-f211-4941-b609-7c984f85ad03" Name="Tests-Permissions" Publisher="Microsoft" />
+    <Module Id="6f0b528b-a4de-4ccd-a948-d1350e228e4a" Name="Tests-SCM" Publisher="Microsoft" />
+    <Module Id="6555cb10-63ea-4ec0-99aa-8e6a4db67c87" Name="Core Localization Pack for Czech Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+    <Feature>NOIMPLICITWITH</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:18:57.1363974Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
