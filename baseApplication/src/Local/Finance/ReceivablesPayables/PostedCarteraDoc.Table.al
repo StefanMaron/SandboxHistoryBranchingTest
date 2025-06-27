@@ -122,6 +122,7 @@ table 7000003 "Posted Cartera Doc."
             Caption = 'Cust./Vendor Bank Acc. Code';
             TableRelation = "Customer Bank Account".Code where("Customer No." = field("Account No."));
         }
+#if not CLEANSCHEMA25
         field(21; "Pmt. Address Code"; Code[10])
         {
             Caption = 'Pmt. Address Code';
@@ -130,6 +131,7 @@ table 7000003 "Posted Cartera Doc."
             ObsoleteState = Removed;
             ObsoleteTag = '25.0';
         }
+#endif
         field(22; "Global Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,1,1';

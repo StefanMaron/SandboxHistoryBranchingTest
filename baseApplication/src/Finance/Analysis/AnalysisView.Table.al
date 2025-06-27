@@ -402,15 +402,6 @@ table 363 "Analysis View"
         {
             Caption = 'Data update needed';
         }
-        field(10700; "Historic G/L Account Filter"; Text[250])
-        {
-            Caption = 'Historic G/L Account Filter';
-            ObsoleteReason = 'Obsolete feature';
-            ObsoleteState = Removed;
-            ObsoleteTag = '15.0';
-            //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
-            //ValidateTableRelation = false;
-        }
     }
 
     keys
@@ -1000,4 +991,3 @@ table 363 "Analysis View"
     begin
     end;
 }
-

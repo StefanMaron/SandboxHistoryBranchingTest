@@ -172,14 +172,6 @@ table 5200 Employee
         {
             Caption = 'Alt. Address End Date';
         }
-        field(19; Picture; BLOB)
-        {
-            Caption = 'Picture';
-            ObsoleteReason = 'Replaced by Image field';
-            ObsoleteState = Removed;
-            SubType = Bitmap;
-            ObsoleteTag = '18.0';
-        }
         field(20; "Birth Date"; Date)
         {
             Caption = 'Birth Date';
@@ -489,13 +481,6 @@ table 5200 Employee
         {
             Caption = 'Cost Object Code';
             TableRelation = "Cost Object";
-        }
-        field(8000; Id; Guid)
-        {
-            Caption = 'Id';
-            ObsoleteState = Removed;
-            ObsoleteReason = 'This functionality will be replaced by the systemID field';
-            ObsoleteTag = '22.0';
         }
         field(10700; "First Name"; Text[30])
         {
@@ -849,4 +834,3 @@ table 5200 Employee
     begin
     end;
 }
-

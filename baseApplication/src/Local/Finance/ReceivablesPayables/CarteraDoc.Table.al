@@ -137,6 +137,7 @@ table 7000002 "Cartera Doc."
                 UpdateDirectDebitMandate();
             end;
         }
+#if not CLEANSCHEMA25
         field(21; "Pmt. Address Code"; Code[10])
         {
             Caption = 'Pmt. Address Code';
@@ -144,6 +145,7 @@ table 7000002 "Cartera Doc."
             ObsoleteState = Removed;
             ObsoleteTag = '25.0';
         }
+#endif
         field(22; "Global Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,1,1';
