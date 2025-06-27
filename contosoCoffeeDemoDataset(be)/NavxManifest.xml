@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="5b0b41a1-7b42-4123-a521-2265186cfb33" Name="Contoso Coffee Demo Dataset (BE)" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2187180" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="11345" MaxObjectId="11350" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:06:23.4620384Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

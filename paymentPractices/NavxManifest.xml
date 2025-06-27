@@ -1,0 +1,21 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="64977288-facd-4b48-aaaa-bb0e288edfb3" Name="Payment Practices" Publisher="Microsoft" Brief="The Payment Practices app introduces a feature enabling the calculation of payment times, aggregated across various metrics." Description="Numerous countries have regulatory requirements to report payment times to vendors. This app offers a user-friendly solution to report payment times for both vendors and customers. Additionally, it offers adaptable interfaces for introducing personalized aggregation methods and data collection." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?LinkId=724011" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="685" MaxObjectId="694" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:10:23.6360673Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
