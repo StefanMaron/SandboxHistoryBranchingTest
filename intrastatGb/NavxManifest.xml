@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="64977288-facd-4a48-aaaa-bb0e288edfb3" Name="Intrastat GB" Publisher="Microsoft" Brief="The Intrastat extension makes it easy to export the Intrastat report in the format that the authorities in your country require." Description="The formats that businesses must use to report Intrastat vary from country to country. The Intrastat Core extension makes it easy to export the Intrastat report in the format that the British authorities require." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2212316" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2197813" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="64977288-facd-4a48-aaaa-bb0e288edfb3" Name="Intrastat GB" Publisher="Microsoft" Brief="The Intrastat extension makes it easy to export the Intrastat report in the format that the authorities in your country require." Description="The formats that businesses must use to report Intrastat vary from country to country. The Intrastat Core extension makes it easy to export the Intrastat report in the format that the British authorities require." Version="25.2.27733.35907" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2212316" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2197813" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="10500" MaxObjectId="10503" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="70912191-3c4c-49fc-a1de-bc6ea1ac9da6" Name="Intrastat Core" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="70912191-3c4c-49fc-a1de-bc6ea1ac9da6" Name="Intrastat Core" Publisher="Microsoft" MinVersion="25.2.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T23:41:24.9959177Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T20:09:35.3619365Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
