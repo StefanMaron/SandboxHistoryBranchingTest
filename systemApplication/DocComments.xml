@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>26.0.30643.35936</version>
+        <version>26.1.33404.35908</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
@@ -13464,6 +13464,15 @@
             <param name="ShowTorchButton">Indicates whether the torch button should be shown.</param>
             <param name="ResultDisplayDuration">The duration in milliseconds for which the barcode result should be displayed.</param>
         </member>
+        <member name="M:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn.RequestBarcodeAsync(Text,Boolean,Boolean,Integer)">
+            <summary>
+            This method is used to request the camera barcode scanner.
+            </summary>
+            <param name="BarcodeFormats">A list of comma-separated barcode formats that the scanner should recognize. The available formats are: QR_CODE,DATA_MATRIX,UPC_A,UPC_E,EAN_8,EAN_13,CODE_39,CODE_93,CODE_128,CODABAR,ITF,RSS14,PDF_417,RSS_EXPANDED,MSI,AZTEC</param>
+            <param name="ShowFlipCameraButton">Indicates whether the flip camera button should be shown.</param>
+            <param name="ShowTorchButton">Indicates whether the torch button should be shown.</param>
+            <param name="ResultDisplayDuration">The duration in milliseconds for which the barcode result should be displayed.</param>
+        </member>
         <member name="EV:">
             <summary>
             This event is raised when the control is ready.
@@ -20368,7 +20377,7 @@
             </summary>
             <param name="EmailMessage">Email message codeunit which is linked to the current email.</param>
         </member>
-        <member name="M:Codeunit::System#Email#Email.OnBeforeGetEmailAttachmentsByEmailScenarios(Email Scenario Attachments)">
+        <member name="M:Codeunit::System#Email#Email.OnBeforeGetEmailAttachmentsByEmailScenarios(Email Scenario Attachments@)">
             <summary>
             Integration event that allows adding filters to the Email Scenario Attachments before they are retrieved.
             </summary>
@@ -21763,6 +21772,16 @@
             Opens a save to dialog.
             </summary>
             <param name="Path">Start path of the dialog.</param>
+            <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
+             <param name="DialogTitle">Title of the selection dialog.</param>
+            <returns>Returns the selected file path.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SaveFile(Text,Text,Text,Text):Text">
+            <summary>
+            Opens a save to dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <param name="FileNameSuggestion">Suggested file name for the dialog.</param>
             <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
              <param name="DialogTitle">Title of the selection dialog.</param>
             <returns>Returns the selected file path.</returns>
@@ -24672,6 +24691,12 @@
             <param name="CopilotCapability">The Copilot Capability to log usage for.</param>
             <param name="Usage">The usage to log.</param>
             <param name="CopilotQuotaUsageType">The type of Copilot Quota to log.</param>
+        </member>
+        <member name="M:Codeunit::System#AI#Copilot Quota.CanConsume:Boolean">
+            <summary>
+            Checks if the tenant is allowed to consume Copilot quota.
+            </summary>
+            <returns>True if allowed, false otherwise.</returns>
         </member>
         <member name="O:Enum::System#AI#Copilot Quota Usage Type">
             <summary>
