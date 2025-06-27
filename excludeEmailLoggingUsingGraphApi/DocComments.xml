@@ -4,7 +4,7 @@
         <id>114e4e19-182b-42e2-b5a9-91d8b8ee8ce1</id>
         <name>_Exclude_Email Logging Using Graph API</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#CRM#EmailLoggin#Email Logging - Read">
@@ -187,12 +187,12 @@
             Initializes client id, client secret and redirect url with the default values
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.Initialize(Text,Text,Text)">
+        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.Initialize(Text,SecretText,Text)">
             <summary>
             Initializes client id, client secret and redirect url with the custom values
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.GetAccessToken(Enum::System#Security#Authentication#Prompt Interaction,Text@)">
+        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.GetAccessToken(Enum::System#Security#Authentication#Prompt Interaction,SecretText@)">
             <summary>
             Retrieves the access token to connect to Outlook API.
             </summary>
@@ -200,7 +200,7 @@
             <param name="AccessToken">Out parameter with the access token.</param>
             <error>Could not get access token.</error>
         </member>
-        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.TryGetAccessToken(Enum::System#Security#Authentication#Prompt Interaction,Text@):Boolean">
+        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.TryGetAccessToken(Enum::System#Security#Authentication#Prompt Interaction,SecretText@):Boolean">
             <summary>
             Retrieves the access token to connect to Outlook API.
             </summary>
@@ -208,14 +208,14 @@
             <param name="AccessToken">Out parameter with the access token.</param>
             <returns>True, if the access token was acquired successfully, false otherwise.</returns>
         </member>
-        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.GetAccessToken(Text@)">
+        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.GetAccessToken(SecretText@)">
             <summary>
             retrieves the access token for the current user to connect to Outlook API.
             </summary>
             <param name="AccessToken">Out parameter with the access token.</param>
             <error>Could not get access token.</error>
         </member>
-        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.TryGetAccessToken(Text@):Boolean">
+        <member name="M:Interface::Microsoft#CRM#EmailLoggin#Email Logging OAuth Client.TryGetAccessToken(SecretText@):Boolean">
             <summary>
             Retrieves the access Token for the current user to connect to Outlook API.
             </summary>
