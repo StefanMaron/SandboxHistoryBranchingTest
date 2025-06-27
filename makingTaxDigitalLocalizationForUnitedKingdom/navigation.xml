@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Making Tax Digital Localization for United Kingdom" ControlGUID="{7cabc422-f17e-48e7-8d5d-3a5ef7f44a7c}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10530" DepartmentCategory="Lists" RunObjectSrcTable="10530" ControlGUID="{f97feb36-4f44-48d6-b9eb-d410be3ba359}" Name="MTD Liabilities" CaptionML="ENG=VAT Liabilities;ENU=VAT Liabilities" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3844370208 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3844370208 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10531" DepartmentCategory="Lists" RunObjectSrcTable="10531" ControlGUID="{74506eca-d26a-4a79-830b-b33b5f78f625}" Name="MTD Payments" CaptionML="ENG=VAT Payments;ENU=VAT Payments" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 383642376 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 383642376 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Making Tax Digital Localization for United Kingdom" ControlGUID="{786f25c8-52c4-4d5b-a060-65b939b29873}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10531" DepartmentCategory="Lists" RunObjectSrcTable="10531" ControlGUID="{dd75c2e5-4881-4018-bfdb-83ea12c07cdd}" Name="MTD Payments" CaptionML="ENG=VAT Payments;ENU=VAT Payments" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 383642376 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 383642376 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10530" DepartmentCategory="Lists" RunObjectSrcTable="10530" ControlGUID="{1c4b1d1e-cb43-458e-9abc-371133763c6f}" Name="MTD Liabilities" CaptionML="ENG=VAT Liabilities;ENU=VAT Liabilities" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3844370208 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3844370208 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="1140" TargetType="Page" />
     <ActionChange TargetID="743" TargetType="Page" />
     <ActionChange TargetID="738" TargetType="Page" />
+    <ActionChange TargetID="1140" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
