@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Business Central Cloud Migration - Previous Release" ControlGUID="{44008d6f-78b3-42c8-a142-5895223ba4c3}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40031" DepartmentCategory="Lists" RunObjectSrcTable="2000000257" ControlGUID="{340b441f-dfd0-4576-b4f0-e5f492a79c13}" Name="Table Field Mappings" CaptionML="ENU=Table Field Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 230854373 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 230854373 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40030" DepartmentCategory="Lists" RunObjectSrcTable="2000000256" ControlGUID="{c183fee5-dbc1-4b69-8f3f-6605fe9da66a}" Name="Table Mappings" CaptionML="ENU=Table Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 131131259 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 131131259 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+</NavigationDefinition>
