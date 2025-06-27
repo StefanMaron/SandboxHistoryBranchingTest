@@ -1,12 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="acbbfbc7-75c1-436f-8b22-926d741b2616" Name="Contoso Coffee Demo Dataset (CZ)" Publisher="Microsoft" Brief="To help partners demonstrate the premium capabilities of Business Central, we are making the demo data available for manufacturing scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios in the manufacturing space." Version="25.4.29661.35988" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2187180" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="acbbfbc7-75c1-436f-8b22-926d741b2616" Name="Contoso Coffee Demo Dataset (CZ)" Publisher="Microsoft" Brief="To help partners demonstrate the premium capabilities of Business Central, we are making the demo data available for manufacturing scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios in the manufacturing space." Version="25.5.30849.35958" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2187180" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="2147483647" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="ef5dfe8c-ba1c-4271-8a86-95d5abdc6fe9" Name="Fixed Asset Localization for Czech" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="267b59d3-7302-44c5-ba77-c87000380514" Name="Core Localization Pack for Czech" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="267b59d3-7302-44c5-ba77-c87000380514" Name="Core Localization Pack for Czech" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -20,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:20:36.5605256Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-26T10:14:15.5513825Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
