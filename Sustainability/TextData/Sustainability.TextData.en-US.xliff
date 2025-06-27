@@ -298,8 +298,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Scorecard - Control Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1547061915 - Control 3552983923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Owner field.</source>
-          <target>Specifies the value of the Owner field.</target>
+          <source>Specifies the Owner field value. Only users designated as Sustainability Managers in the User Setup page can be selected as the owner.</source>
+          <target>Specifies the Owner field value. Only users designated as Sustainability Managers in the User Setup page can be selected as the owner.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Scorecard - Control Owner - Property ToolTip</note>
         </trans-unit>
@@ -904,8 +904,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Emission Fees - Control Responsibility Center - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2006639648 - Control 2596957407 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies internal carbon fee that a company charges itself for each unit of CO2 equivalent that it emits.</source>
-          <target>Specifies internal carbon fee that a company charges itself for each unit of CO2 equivalent that it emits.</target>
+          <source>Specifies internal carbon fee that a company charges itself for each unit of CO2 equivalent that it emits. It can be configured only if the Emission Type is CO2, and it will be calculated not based on CO2 emission but based on CO2e.</source>
+          <target>Specifies internal carbon fee that a company charges itself for each unit of CO2 equivalent that it emits. It can be configured only if the Emission Type is CO2, and it will be calculated not based on CO2 emission but based on CO2e.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Emission Fees - Control Carbon Fee - Property ToolTip</note>
         </trans-unit>
@@ -928,8 +928,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Emission Fees - Control Scope Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2006639648 - Control 432786326 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the coefficient that converts the impact of various greenhouse gases into the equivalent amount of carbon dioxide based on their global warming potential.</source>
-          <target>Specifies the coefficient that converts the impact of various greenhouse gases into the equivalent amount of carbon dioxide based on their global warming potential.</target>
+          <source>Specifies the coefficient that converts the impact of various greenhouse gases into the equivalent amount of carbon dioxide based on their global warming potential. for CO2 it will be 1 by default and you cannot change this value. For other gases you need to add coefficients. If you use for example that 1 kilogram of CH4 is equivalent to 28 kilograms of CO2, to calculate this coefficient you need to use value 1/28.</source>
+          <target>Specifies the coefficient that converts the impact of various greenhouse gases into the equivalent amount of carbon dioxide based on their global warming potential. for CO2 it will be 1 by default and you cannot change this value. For other gases you need to add coefficients. If you use for example that 1 kilogram of CH4 is equivalent to 28 kilograms of CO2, to calculate this coefficient you need to use value 1/28.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Emission Fees - Control Carbon Equivalent Factor - Property ToolTip</note>
         </trans-unit>
@@ -1096,8 +1096,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Unit of Measure - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 2008739414 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Current Value for N2O field.</source>
-          <target>Specifies the value of the Current Value for N2O field.</target>
+          <source>Specifies the N2O emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the N2O emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Current Value for N2O - Property ToolTip</note>
         </trans-unit>
@@ -1180,8 +1180,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 3383841505 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Baseline for CH4 field.</source>
-          <target>Specifies the value of the Baseline for CH4 field.</target>
+          <source>Specifies the value of the Baseline for CH4. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the value of the Baseline for CH4. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Baseline for CH4 - Property ToolTip</note>
         </trans-unit>
@@ -1204,8 +1204,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Owner - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 3711058722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Baseline for CO2 field.</source>
-          <target>Specifies the value of the Baseline for CO2 field.</target>
+          <source>Specifies the value of the Baseline for CO2. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the value of the Baseline for CO2. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Baseline for CO2 - Property ToolTip</note>
         </trans-unit>
@@ -1228,8 +1228,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Baseline End Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 4071805770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Main Goal field.</source>
-          <target>Specifies the value of the Main Goal field.</target>
+          <source>Specifies that this sustainability goal is the main goal for the company. You can designate only one goal as the primary goal for the entire company. KPIs related to this primary goal are displayed in the Sustainability Manager role center.</source>
+          <target>Specifies that this sustainability goal is the main goal for the company. You can designate only one goal as the primary goal for the entire company. KPIs related to this primary goal are displayed in the Sustainability Manager role center.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Main Goal - Property ToolTip</note>
         </trans-unit>
@@ -1252,8 +1252,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 4203708026 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Current Value for CH4 field.</source>
-          <target>Specifies the value of the Current Value for CH4 field.</target>
+          <source>Specifies the CH4 emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the CH4 emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Current Value for CH4 - Property ToolTip</note>
         </trans-unit>
@@ -1276,8 +1276,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 772226489 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Current Value for CO2 field.</source>
-          <target>Specifies the value of the Current Value for CO2 field.</target>
+          <source>Specifies the CO2 emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the CO2 emission amount of the for the current period. This value is automatically calculated based on Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Current Value for CO2 - Property ToolTip</note>
         </trans-unit>
@@ -1300,8 +1300,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Baseline Start Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 274097549 - Control 998261741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Baseline for N2O field.</source>
-          <target>Specifies the value of the Baseline for N2O field.</target>
+          <source>Specifies the value of the Baseline for N2O. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</source>
+          <target>Specifies the value of the Baseline for N2O. This value is automatically calculated based on Baseline Start and End Date and Country/Region Code and Responsibility Center. If the Country/Region Code and Responsibility Center fields are empty, field will show all entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Goals - Control Baseline for N2O - Property ToolTip</note>
         </trans-unit>
@@ -1804,8 +1804,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Scorecards - Control Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3252199942 - Control 3552983923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Owner field.</source>
-          <target>Specifies the value of the Owner field.</target>
+          <source>Specifies the Owner field value. Only users designated as Sustainability Managers in the User Setup page can be selected as the owner.</source>
+          <target>Specifies the Owner field value. Only users designated as Sustainability Managers in the User Setup page can be selected as the owner.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Scorecards - Control Owner - Property ToolTip</note>
         </trans-unit>
@@ -1846,8 +1846,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Setup - Action SustainAccountCategory - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3283349310 - Action 2409838304 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>View or add Emission Fees.</source>
-          <target>View or add Emission Fees.</target>
+          <source>Set up internal carbon fees and CO2 equivalent.</source>
+          <target>Set up internal carbon fees and CO2 equivalent.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Setup - Action EmissionFees - Property ToolTip</note>
         </trans-unit>
@@ -1966,8 +1966,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Setup - Control Emission Decimal Places - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3283349310 - Control 754467590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the value of the Use Emissions In Purchase Documents field.</source>
-          <target>Specifies the value of the Use Emissions In Purchase Documents field.</target>
+          <source>Specifies that you want to enable sustainability features in purchase documents. Until this field is selected, sustainability fields will not be displayed in the purchase lines. Select this field only if you intend to post your GHG emissions using purchase documents or to post purchasing carbon credits.</source>
+          <target>Specifies that you want to enable sustainability features in purchase documents. Until this field is selected, sustainability fields will not be displayed in the purchase lines. Select this field only if you intend to post your GHG emissions using purchase documents or to post purchasing carbon credits.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Setup - Control Use Emissions In Purch. Doc. - Property ToolTip</note>
         </trans-unit>
@@ -3838,20 +3838,20 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sustainability Account Card - Property AdditionalSearchTerms</note>
         </trans-unit>
         <trans-unit id="PageExtension 1027515626 - Control 2511277290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies the Sust. Cert. No. of Item</source>
-          <target>Specifies the Sust. Cert. No. of Item</target>
+          <source>Specifies the Sustainability Certificate Number of the Item.</source>
+          <target>Specifies the Sustainability Certificate Number of the Item.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Item Card - Control Sust. Cert. No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1027515626 - Control 2691538178 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies the Carbon Credit Per UOM of Item</source>
-          <target>Specifies the Carbon Credit Per UOM of Item</target>
+          <source>Specifies the Carbon Credit Per UOM of the Item.</source>
+          <target>Specifies the Carbon Credit Per UOM of the Item.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Item Card - Control Carbon Credit Per UOM - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1027515626 - Control 2747721922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies the Sust. Cert. Name of Item</source>
-          <target>Specifies the Sust. Cert. Name of Item</target>
+          <source>Specifies the Sustainability Certificate Name of the Item.</source>
+          <target>Specifies the Sustainability Certificate Name of the Item.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Item Card - Control Sust. Cert. Name - Property ToolTip</note>
         </trans-unit>
@@ -3868,14 +3868,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Item Card - Control Sustainability - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1418954609 - Control 2511277290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
-          <source>Specifies the Sust. Cert. No. of Vendor</source>
-          <target>Specifies the Sust. Cert. No. of Vendor</target>
+          <source>Specifies the Sustainability Certificate Number of the Vendor.</source>
+          <target>Specifies the Sustainability Certificate Number of the Vendor.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Vendor Card - Control Sust. Cert. No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1418954609 - Control 2747721922 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
-          <source>Specifies the Sust. Cert. Name of Vendor</source>
-          <target>Specifies the Sust. Cert. Name of Vendor</target>
+          <source>Specifies the Sustainability Certificate Name of the Vendor.</source>
+          <target>Specifies the Sustainability Certificate Name of the Vendor.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sust. Vendor Card - Control Sust. Cert. Name - Property ToolTip</note>
         </trans-unit>
