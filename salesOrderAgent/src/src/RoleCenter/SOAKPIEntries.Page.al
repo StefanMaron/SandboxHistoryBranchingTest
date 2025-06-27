@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.CRM.Contact;
 using Microsoft.Sales.Customer;
@@ -41,20 +42,6 @@ page 4403 "SOA KPI Entries"
                 field(Status; Rec.Status)
                 {
                 }
-                field(ContactNo; Rec."Contact No.")
-                {
-                    Visible = false;
-                    trigger OnDrillDown()
-                    var
-                        Contact: Record "Contact";
-                    begin
-                        Contact.Get(Rec."Contact No.");
-                        Page.Run(Page::"Contact Card", Contact);
-                    end;
-                }
-                field(ContactName; Rec."Contact Name")
-                {
-                }
                 field(CustomerNo; Rec."Customer No.")
                 {
                     Visible = false;
@@ -68,13 +55,31 @@ page 4403 "SOA KPI Entries"
                 }
                 field(CustomerName; Rec."Customer Name")
                 {
+                    Editable = false;
+                    Enabled = false;
+                }
+                field(ContactNo; Rec."Contact No.")
+                {
+                    Visible = false;
+                    trigger OnDrillDown()
+                    var
+                        Contact: Record "Contact";
+                    begin
+                        Contact.Get(Rec."Contact No.");
+                        Page.Run(Page::"Contact Card", Contact);
+                    end;
+                }
+                field(ContactName; Rec."Contact Name")
+                {
+                    Editable = false;
+                    Enabled = false;
                 }
                 field(Amount; Rec."Amount Including Tax")
                 {
                 }
                 field(SystemModifiedAt; Rec.SystemModifiedAt)
                 {
-                    Caption = 'Date modified';
+                    Caption = 'Date Modified';
                     ToolTip = 'Specifies the date and time when the record was last modified';
                 }
             }
