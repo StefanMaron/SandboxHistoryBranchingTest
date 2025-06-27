@@ -1,7 +1,16 @@
 {
   "folders": [
     {
+      "path": "./aiTestToolkit"
+    },
+    {
       "path": "./testRunner"
+    },
+    {
+      "path": "./testRunner/src/src/DataDrivenTest"
+    },
+    {
+      "path": "./aiTestToolkit/src/src/TestSuite"
     },
     {
       "path": "./systemApplication/src/Email/src/testEmail"
@@ -11,19 +20,19 @@
     }
   ],
   "settings": {
-    "al.enableUICop": false,
     "search.useIgnoreFiles": true,
-    "al.ruleSetPath": "",
+    "al.enableCodeActions": false,
     "al.enableCodeCop": false,
-    "search.useGlobalIgnoreFiles": true,
-    "al.enableCodeAnalysis": false,
-    "files.watcherExclude": {
-      "**/.git/**": true,
-      "**/node_modules/**": true,
+    "search.exclude": {
       "**/*.xlf": true
     },
-    "al.enableCodeActions": false,
-    "search.exclude": {
+    "al.enableUICop": false,
+    "search.useGlobalIgnoreFiles": true,
+    "al.enableCodeAnalysis": false,
+    "al.ruleSetPath": "",
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.git/**": true,
       "**/*.xlf": true
     }
   }
