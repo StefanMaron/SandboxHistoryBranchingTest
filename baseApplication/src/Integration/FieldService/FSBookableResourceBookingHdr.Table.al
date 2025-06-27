@@ -1,3 +1,4 @@
+#if not CLEANSCHEMA28 
 namespace Microsoft.Integration.FieldService;
 
 using Microsoft.Integration.D365Sales;
@@ -309,4 +310,5 @@ table 6413 "FS BookableResourceBookingHdr"
         {
         }
     }
-}
+} 
+#endif

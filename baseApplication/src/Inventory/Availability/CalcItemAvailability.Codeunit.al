@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Availability;
 
 using Microsoft.Foundation.Enums;
@@ -325,7 +329,7 @@ codeunit 5530 "Calc. Item Availability"
               "Production Forecast Name", "Item No.", "Location Code", "Forecast Date", "Component Forecast");
 
         ItemLedgEntry.Reset();
-        ItemLedgEntry.SetCurrentKey("Item No.", Open, "Variant Code", Positive, "Location Code");
+        ItemLedgEntry.SetCurrentKey("Item No.", Open, "Variant Code", Positive, "Location Code", "Entry No.");
 
         ProdForecastEntry.SetRange("Production Forecast Name", ForecastName);
         ProdForecastEntry.SetRange("Forecast Date", ExcludeForecastBefore, ToDate);
