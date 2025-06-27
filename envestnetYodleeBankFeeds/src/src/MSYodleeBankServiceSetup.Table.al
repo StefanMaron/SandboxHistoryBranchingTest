@@ -2,7 +2,6 @@ namespace Microsoft.Bank.StatementImport.Yodlee;
 
 using Microsoft.Bank.Setup;
 using Microsoft.Foundation.Company;
-using System;
 using System.Integration;
 using System.Telemetry;
 using System.Security.Encryption;
@@ -84,9 +83,6 @@ table 1450 "MS - Yodlee Bank Service Setup"
             var
                 CustomerConsentMgt: Codeunit "Customer Consent Mgt.";
                 FeatureTelemetry: Codeunit "Feature Telemetry";
-                MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                MyALAuditCategory: DotNet ALAuditCategory;
                 MSYodleeBankServiceConsentProvidedLbl: Label 'MS Yodlee Bank Service - consent provided by UserSecurityId %1.', Locked = true;
             begin
                 if not xRec."Enabled" and Rec."Enabled" then
@@ -106,7 +102,7 @@ table 1450 "MS - Yodlee Bank Service Setup"
                     end;
                     TESTFIELD("User Profile Email Address");
                     FeatureTelemetry.LogUptake('0000GY2', 'Yodlee', Enum::"Feature Uptake Status"::"Set up");
-                    MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(MSYodleeBankServiceConsentProvidedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 4, 0);
+                    Session.LogAuditMessage(StrSubstNo(MSYodleeBankServiceConsentProvidedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 4, 0);
                 end;
             end;
         }

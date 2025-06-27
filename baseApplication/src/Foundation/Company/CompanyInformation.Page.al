@@ -17,7 +17,6 @@ using Microsoft.Inventory.Setup;
 using Microsoft.Projects.Project.Setup;
 using Microsoft.Purchases.Setup;
 using Microsoft.Sales.Setup;
-using System;
 using System.Diagnostics;
 using System.Environment.Configuration;
 using System.Globalization;
@@ -286,6 +285,11 @@ page 1 "Company Information"
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the country/region code of the address that the items are shipped to.';
                 }
+                field("Ship-to Phone No."; Rec."Ship-to Phone No.")
+                {
+                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the telephone number of the company''s shipping address.';
+                }
                 field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
                     ApplicationArea = Suite;
@@ -341,36 +345,6 @@ page 1 "Company Information"
                     ApplicationArea = Suite;
                     ToolTip = 'Specifies how dates based on calendar and calendar-related documents are calculated.';
                 }
-#if not CLEAN22
-                group(ElectronicDocument)
-                {
-                    Caption = 'Electronic Document';
-                    ObsoleteReason = 'Moved to Fixed Asset page';
-                    ObsoleteState = Pending;
-#pragma warning disable AS0072
-                    ObsoleteTag = '22.0';
-#pragma warning restore AS0072
-
-                    field("SCT Permission Type"; Rec."SCT Permission Type")
-                    {
-                        ApplicationArea = BasicMX;
-                        ToolTip = 'Specifies the type of permission provided by SecretarпїЅa de Comunicaciones y Transportes which must correspond to the type of motor transport used for the transfer of goods or merchandise.';
-                        ObsoleteReason = 'Moved to Fixed Asset page';
-                        ObsoleteState = Pending;
-                        ObsoleteTag = '22.0';
-                        Visible = false;
-                    }
-                    field("SCT Permission Number"; Rec."SCT Permission Number")
-                    {
-                        ApplicationArea = BasicMX;
-                        ToolTip = 'Specifies the permission number as defined by the SecretarпїЅa de Comunicaciones y Transportes that must correspond to the type of motor transport that is used for the transfer of goods or merchandise.';
-                        ObsoleteReason = 'Moved to Fixed Asset page';
-                        ObsoleteState = Pending;
-                        ObsoleteTag = '22.0';
-                        Visible = false;
-                    }
-                }
-#endif
             }
             group(Tax)
             {
@@ -410,17 +384,6 @@ page 1 "Company Information"
                     ApplicationArea = BasicMX;
                     ToolTip = 'Specifies the federal registration number for taxpayers.';
                 }
-#if not CLEAN22
-                field("RFC No."; Rec."RFC No.")
-                {
-                    ApplicationArea = BasicMX;
-                    ToolTip = 'Specifies the federal registration number for taxpayers.';
-                    ObsoleteReason = 'Replaced with RFC Number';
-                    ObsoleteState = Pending;
-                    ObsoleteTag = '22.0';
-                    Visible = false;
-                }
-#endif                
                 field("CURP No."; Rec."CURP No.")
                 {
                     ApplicationArea = BasicMX;
@@ -798,16 +761,13 @@ page 1 "Company Information"
     trigger OnClosePage()
     var
         ApplicationAreaMgmtFacade: Codeunit "Application Area Mgmt. Facade";
-        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-        MyALAuditCategory: DotNet ALAuditCategory;
     begin
         if ApplicationAreaMgmtFacade.SaveExperienceTierCurrentCompany(Experience) then
             RestartSession();
 
         if SystemIndicatorChanged then begin
             Message(CompanyBadgeRefreshPageTxt);
-            MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(CompanyBadgeChangedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+            Session.LogAuditMessage(StrSubstNo(CompanyBadgeChangedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
             RestartSession();
         end;
     end;
@@ -865,14 +825,11 @@ page 1 "Company Information"
 
     local procedure SystemIndicatorOnAfterValidate()
     var
-        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-        MyALAuditCategory: DotNet ALAuditCategory;
         CompanyBadgeChangedLbl: Label 'Company badge changed.', Locked = true;
     begin
         SystemIndicatorChanged := true;
         UpdateSystemIndicator();
-        MyCustomerAuditLoggerALHelper.LogAuditMessage(CompanyBadgeChangedLbl, MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+        Session.LogAuditMessage(CompanyBadgeChangedLbl, SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
     end;
 
     local procedure SetShowMandatoryConditions()
