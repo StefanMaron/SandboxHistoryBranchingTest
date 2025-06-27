@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>a53a4bb0-aa53-8ff8-77d6-fe3388db0eb8</id>
+        <name>Recommended Apps</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.InsertApp(Guid,Integer,Text[250],Text[250],Text[250],Text[2048],Enum::System#Environment#Configuration#App Recommended By,Text):Boolean">
+            <summary>
+            Insert a new recommended app.
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <param name="SortingId">The ID used to display apps in ascending order on the Recommended Apps page.</param>
+            <param name="Name">The app name.</param>
+            <param name="Publisher">The app publisher.</param>
+            <param name="Short DescriptionDescription">The short description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Long DescriptionDescription">The long description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Recommended ByBy">The entity that is recommending the app.</param>
+            <param name="AppSourceURL">The AppSource URL of the app.</param>
+            <returns>True if the app was successfully inserted; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.GetApp(Guid,Integer@,Text[250]@,Text[250]@,Text[250]@,Text[2048]@,Enum::System#Environment#Configuration#App Recommended By@,Text@):Boolean">
+            <summary>
+            Get a recommended app. Values are retrieved by reference. 
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <param name="SortingId">The ID used to display apps in ascending order on the Recommended Apps page.</param>
+            <param name="Name">The app name.</param>
+            <param name="Publisher">The app publisher.</param>
+            <param name="Short DescriptionDescription">The short description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Long DescriptionDescription">The long description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Recommended ByBy">The entity that is recommending the app.</param>
+            <param name="AppSourceURL">The AppSource URL of the app.</param>
+            <returns>True if the app was successfully retrieved; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.UpdateApp(Guid,Integer,Text[250],Text[250],Text[250],Text[2048],Enum::System#Environment#Configuration#App Recommended By,Text):Boolean">
+            <summary>
+            Update a recommended app.
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <param name="SortingId">The ID used to display apps in ascending order on the Recommended Apps page.</param>
+            <param name="Name">The app name.</param>
+            <param name="Publisher">The app publisher.</param>
+            <param name="Short DescriptionDescription">The short description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Long DescriptionDescription">The long description of the app that is displayed on the Recommended Apps page.</param>
+            <param name="Recommended ByBy">The entity that is recommending the app.</param>
+            <param name="AppSourceURL">The AppSource URL of the app.</param>
+            <returns>True if the app was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.RefreshImage(Guid):Boolean">
+            <summary>
+            Download the app's logo from AppSource. This is useful when the logo is changed.
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <returns>True if the app's logo was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.DeleteApp(Guid):Boolean">
+            <summary>
+            Delete a recommended app
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <returns>True if the app was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.DeleteAllApps">
+            <summary>
+            Delete all apps
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#Recommended Apps.GetAppURL(Guid):Text">
+            <summary>
+            Get the the AppSource URL of a recommended app.
+            </summary>
+            <param name="Id">The identifier for the app.</param>
+            <returns>The AppSource URL for the app</returns>
+        </member>
+    </members>
+</doc>

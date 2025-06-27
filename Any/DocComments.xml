@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>e7320ebb-08b3-4406-b1ec-b4927d3e280b</id>
+        <name>Any</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::System#TestLibraries#Utilities#Any">
+            <summary>
+            This library should be used to generate Pseudo-random values for tests
+            This approach is needed to ensure that it is possible to reproduce the failures, since tests will be using the same values
+            To ensure that there are no cross test dependencies, this library must be added as a local variable to the test method
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.Boolean:Boolean">
+            <summary>
+            Provides a boolean.
+            </summary>
+            <returns>Pseudo-random boolean value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.IntegerInRange(Integer):Integer">
+            <summary>
+            Provides an integer between 1 and the given value
+            </summary>
+            <param name="MaxValue">Upper value for the number, if the number is negative 1 is returned.</param>
+            <returns>Pseudo-random integer value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.IntegerInRange(Integer,Integer):Integer">
+            <summary>
+            Provides an integer between the given values
+            </summary>
+            <param name="MinValue">Lower value for the number</param>
+            <param name="MaxValue">Upper value for the number</param>
+            <returns>Pseudo-random integer value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DecimalInRange(Integer,Integer):Decimal">
+            <summary>
+            Provides a decimal between the given values
+            </summary>
+            <param name="MaxValue">Upper value for the number</param>
+            <param name="DecimalPlaces">Number of decimal places</param>
+            <returns>Pseudo-random decimal value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DecimalInRange(Integer,Integer,Integer):Decimal">
+            <summary>
+            Provides a decimal between the given values
+            </summary>
+            <param name="MinValue">Lower value for the number</param>
+            <param name="MaxValue">Upper value for the number</param>
+            <param name="DecimalPlaces">Number of decimal places</param>
+            <returns>Pseudo-random decimal value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DecimalInRange(Decimal,Decimal,Integer):Decimal">
+            <summary>
+            Provides a decimal between the given values
+            </summary>
+            <param name="MinValue">Lower value for the number</param>
+            <param name="MaxValue">Upper value for the number</param>
+            <param name="DecimalPlaces">Number of decimal places</param>
+            <returns>Pseudo-random decimal value</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DateInRange(Integer):Date">
+            <summary>
+            Provides a date between current Workdate to <see cref="MaxNumberOfDays"/> of days
+            </summary>
+            <param name="MaxNumberOfDays">Max number of days for date</param>
+            <returns>Pseudo-random Date in range</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DateInRange(Date,Integer):Date">
+            <summary>
+            Provides a date between <see cref="StartingDate"/> to <see cref="MaxNumberOfDays"/> of days
+            </summary>
+            <param name="StartingDate">Date to calculate the values from</param>
+            <param name="MaxNumberOfDays">Max number of days for date</param>
+            <returns>Pseudo-random Date in range</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.DateInRange(Date,Integer,Integer):Date">
+            <summary>
+            Provides a date between <see cref="StartingDate"/> + <see cref="MinNumberOfDays"/> to <see cref="MaxNumberOfDays"/> of days
+            </summary>
+            <param name="StartingDate">Date to calculate the values from</param>
+            <param name="MaxNumberOfDays">Max number of days from the StartingDate</param>
+            <param name="MinNumberOfDays">Minimum number of days from the StartingDate</param>
+            <returns>Pseudo-random Date in range</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.AlphabeticText(Integer):Text">
+            <summary>
+            Provides an alphabetic text
+            </summary>
+            <param name="Length">Desired length of the text</param>
+            <returns>Pseudo-random alphabetic text</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.AlphanumericText(Integer):Text">
+            <summary>
+            Provides an alphanumeric text
+            </summary>
+            <param name="Length">Desired length of the text</param>
+            <returns>A pseudo-random alphanumeric text</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.UnicodeText(Integer):Text">
+            <summary>
+            Provides a Unicode text
+            </summary>
+            <param name="Length">Desired length of the text</param>
+            <returns>Pseudo-random Unicode text</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.Email:Text">
+            <summary>
+            Provides an Email
+            </summary>
+            <returns>Pseudo-random Email</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.Email(Integer,Integer):Text">
+            <summary>
+            Provides an Email
+            </summary>
+            <param name="LocalPartLength">Desired length of the local-part</param>
+            <param name="DomainLength">Desired length of the domain</param>
+            <returns>Pseudo-random Email text</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.GuidValue:Guid">
+            <summary>
+            Provides a Guid
+            Guid is not pseudo-random, it is random value
+            </summary>
+            <returns>Random Guid</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.SetSeed(Integer)">
+            <summary>.
+            Sets the Seed for Pseudo-random number generation.
+            Setting this value will change the numbers returned.
+            </summary>
+            <param name="NewSeed">New seed to be used.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.GetSeed:Integer">
+            <summary>
+            Provides the Seed currently used for Pseudo-random number generation.
+            </summary>
+            <returns>Current seed used for pseudo-random numbers</returns>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.SetDefaultSeed">
+            <summary>.
+            Sets the default Seed for Pseudo-random number generation (no. of milliseconds since midnight of today).
+            Setting this value will change the numbers returned.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Any.GetNextValue(Integer):Integer">
+            <summary>.
+            This function must be called from all functions that want to use Pseudo-random generation.
+            This function will call the SetSeed with the default value to ensure the same numbers are returned
+            </summary>
+            <param name="MaxValue">Upper range for the number</param>
+            <returns>Pseudo-random integer value</returns>
+        </member>
+    </members>
+</doc>
