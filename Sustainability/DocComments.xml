@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af</id>
+        <name>Sustainability</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Microsoft#Sustainability#Calculation#Sustainability Calc# Mgt#.GetCollectableGLAmount(Sustain# Account Category,Date,Date):Decimal">
+            <summary>
+            Filter general ledger entries by criteria defined in sustainability category and by date and calculate the total
+            </summary>
+            <param name="SustainAccountCategory">Specifies the sustainability category that contains default filters.</param>
+            <param name="FromDate">Specifies the "from" part of a date filter .</param>
+            <param name="ToDate">Specifies the "to" part of a date filter .</param>
+            <returns>The sum of G/L Entry Amounts.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Sustainability#Journal#Sustainability Journal.SetRecurringView">
+            <summary>
+            Set the page to be opened in recurring view.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Sustainability#Journal#Sustainability Journal Mgt#.GetASustainabilityJournalBatch(Boolean):Sustainability Jnl# Batch">
+            <summary>
+            Get a Sustainability Journal Batch.
+            If more than one Template exists, the user will be prompted to select one.
+            If no Template/Batch exists, a default one will be created.
+            </summary>  
+            <param name="IsRecurring">Specifies whether the template is recurring.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Sustainability#Journal#Sustainability Journal Mgt#.SelectTemplate(Boolean):Sustainability Jnl# Template">
+            <summary>
+            Select a Sustainability Journal Template.
+            If more than one Template exists, the user will be prompted to select one.
+            If no Template exists, a default one will be created.
+            </summary>  
+            <param name="IsRecurring">Specifies whether the template is recurring.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Sustainability#Journal#Sustainability Journal Mgt#.CheckScopeMatchWithBatch(Sustainability Jnl# Line)">
+            <summary>
+            Emission Scope from Account Category must match the Emission Scope on the Journal Batch.
+            Unless the Emission Scope on the Journal Batch is not set.
+            </summary>  
+        </member>
+    </members>
+</doc>

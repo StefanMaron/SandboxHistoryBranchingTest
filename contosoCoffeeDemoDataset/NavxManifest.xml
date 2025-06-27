@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/contoso-coffee/contoso-coffee-intro" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="4760" MaxObjectId="4799" />
+    <IdRange MinObjectId="5100" MaxObjectId="5300" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="c471774f-4b9e-45eb-9619-e7e0b96a8b98" Name="Contoso Coffee Demo Dataset Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:13:30.7724507Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
