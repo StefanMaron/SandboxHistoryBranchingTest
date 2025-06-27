@@ -1,0 +1,25 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="f4a198ad-cd8c-44bb-aff1-814e0e28ab79" Name="E-Document Connector - Logiq" Publisher="Microsoft" Brief="E-Document Connector - Logiq" Description="E-Document Connector - Logiq" Version="25.4.29661.35902" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="6430" MaxObjectId="6439" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo>
+    <Module Id="d57ff58b-78cc-488f-81d0-c42079507a2d" Name="E-Document Connector - Logiq Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T20:22:17.9495183Z" CompilerVersion="14.3.23.59384" />
+  <AlternateIds />
+</Package>
