@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="ELSTER VAT Localization for Germany" ControlGUID="{707df8a4-4198-4f73-87cd-365aecd74ead}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11019" DepartmentCategory="Tasks" RunObjectSrcTable="11023" ControlGUID="{b0e3b216-51d2-4506-9455-1c9c127d2c48}" Name="Electronic VAT Decl. Setup" CaptionML="DEU=Elektronische Umsatzsteuererklärung - Einrichtung;ENU=Electronic VAT Decl. Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2767607058 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2767607058 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11017" DepartmentCategory="Lists" RunObjectSrcTable="11021" ControlGUID="{cbc1c713-3a72-43b0-98ae-fc6afb653080}" Name="Sales VAT Adv. Notif. List" CaptionML="DEU=Umsatzsteuervoranmeldung;ENU=Sales VAT Advance Notification List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 323663860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 323663860 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="ELSTER VAT Localization for Germany" ControlGUID="{3564963a-9b30-48ea-9c4e-21528da3e7f9}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11017" DepartmentCategory="Lists" RunObjectSrcTable="11021" ControlGUID="{9ee9a24f-6bd0-40bd-9855-7294c73a9790}" Name="Sales VAT Adv. Notif. List" CaptionML="DEU=Umsatzsteuervoranmeldung;ENU=Sales VAT Advance Notification List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 323663860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 323663860 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11019" DepartmentCategory="Tasks" RunObjectSrcTable="11023" ControlGUID="{58ff9051-b384-49d9-88ff-456b274d43a1}" Name="Electronic VAT Decl. Setup" CaptionML="DEU=Elektronische Umsatzsteuererklärung - Einrichtung;ENU=Electronic VAT Decl. Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2767607058 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2767607058 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="9001" TargetType="Page" />
     <ActionChange TargetID="9020" TargetType="Page" />
     <ActionChange TargetID="320" TargetType="Page" />
+    <ActionChange TargetID="9001" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
