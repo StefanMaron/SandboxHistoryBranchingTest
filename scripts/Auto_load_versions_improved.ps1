@@ -24,10 +24,7 @@ function Initialize-BcContainerHelper {
     
     try {
         # Import module
-        Import-Module BcContainerHelper -Force
-        
-        # Initialize configuration
-        $Global:bcContainerHelperConfig = Get-BcContainerHelperConfig
+        Import-Module BcContainerHelper -Force -WarningAction SilentlyContinue
         
         # Initialize app manifest if not exists
         if (-not (Get-Variable -Name 'appManifest' -Scope Global -ErrorAction SilentlyContinue)) {
@@ -39,7 +36,21 @@ function Initialize-BcContainerHelper {
             $Global:telemetryCorrelationId = [System.Guid]::NewGuid().ToString()
         }
         
+        # Initialize other common variables that might be expected
+        if (-not (Get-Variable -Name 'bcContainerHelperConfig' -Scope Global -ErrorAction SilentlyContinue)) {
+            $Global:bcContainerHelperConfig = @{
+                ObjectIdForInternalUse = [System.Guid]::NewGuid().ToString()
+                ContainerHelperFolder = $env:TEMP
+            }
+        }
+        
         Write-Log "BC Container Helper environment initialized successfully"
+        
+        # Get module info for logging
+        $Module = Get-Module BcContainerHelper
+        if ($Module) {
+            Write-Log "BC Container Helper module version: $($Module.Version)"
+        }
     }
     catch {
         Write-Log "Failed to initialize BC Container Helper: $($_.Exception.Message)" "ERROR"
@@ -443,7 +454,10 @@ function Download-ArtifactsCustom {
         # Set additional variables that might be expected by Download-Artifacts
         if (-not (Get-Variable -Name 'bcContainerHelperConfig' -Scope Global -ErrorAction SilentlyContinue)) {
             Write-Log "Initializing missing bcContainerHelperConfig variable"
-            $Global:bcContainerHelperConfig = Get-BcContainerHelperConfig
+            $Global:bcContainerHelperConfig = @{
+                ObjectIdForInternalUse = [System.Guid]::NewGuid().ToString()
+                ContainerHelperFolder = $env:TEMP
+            }
         }
 
         # Log current module state for debugging
@@ -454,8 +468,14 @@ function Download-ArtifactsCustom {
             Write-Log "BC Container Helper module not loaded" "WARNING"
         }
 
-        $DownloadResult = Invoke-WithRetry -OperationName "Download artifacts" -ScriptBlock {
-            Download-Artifacts -artifactUrl $ArtifactUrl
+        $DownloadResult = if ($Country -in ('w1', 'base','core', 'ph')) {
+            Invoke-WithRetry -OperationName "Download artifacts with platform" -ScriptBlock {
+                Download-Artifacts -artifactUrl $ArtifactUrl -includePlatform
+            }
+        } else {
+            Invoke-WithRetry -OperationName "Download artifacts" -ScriptBlock {
+                Download-Artifacts -artifactUrl $ArtifactUrl
+            }
         }
         
         Write-Log "Artifacts downloaded successfully"
