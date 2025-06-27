@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.1.25873.35923</version>
+        <version>25.2.27733.35907</version>
     </application>
     <members>
         <member name="O:Codeunit::System#Azure#Functions#Azure Functions">
@@ -7708,6 +7708,14 @@
             <param name="UserSecurityId">The security ID of the user to check for.</param>
             <returns>True if the user with the given user security ID has custom permissions; false otherwise.</returns>
         </member>
+        <member name="M:Codeunit::System#Security#User#User Permissions.AssignPermissionSets(Guid@,Text,Aggregate Permission Set@)">
+            <summary>
+            Assign a permission set to a given user
+            </summary>
+            <param name="UserSecurityId">The user's security ID.</param>
+            <param name="Company">The company for which to give the permission</param>
+            <param name="AggregatePermissionSet">Permission sets to assign</param>
+        </member>
         <member name="M:Codeunit::System#Security#User#User Permissions.GetEffectivePermission(Option,Integer):Expanded Permission">
             <summary>
             Gets the effective permissions for the current user in the current company.
@@ -8510,6 +8518,25 @@
             Get the companies the current user has access to.
             </summary>
             <param name="TempCompany">Companies the current user has access to.</param>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#User Settings.LookupProfile(User Settings@)">
+            <summary>
+            Allows the user to select the new profile for given User Settings
+            </summary>
+            <param name="UserSettingsRec">User settings to update with the new profile</param>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#User Settings.GetProfileName(User Settings):Text">
+            <summary>
+            Gets a profile name for the given user settings.
+            </summary>
+            <param name="UserSettingsRec">User settings to get the profile name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Codeunit::System#Environment#Configuration#User Settings.UpdateUserSettings(User Settings@)">
+            <summary>
+            Updates the user settings for given user
+            </summary>
+            <param name="UserSettings"></param>
         </member>
         <member name="M:Codeunit::System#Environment#Configuration#User Settings.OnGetDefaultProfile(All Profile@)">
             <summary>
@@ -9441,6 +9468,141 @@
             Specifies that the tenant license is in the locked state.
             The tenant is locked, and no one can access it.
             </summary>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
+            <summary>
+            Get the message text for the given agent task message.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message.</param>
+            <returns>The body of the agent task message.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.UpdateText(Agent Task Message@,Text)">
+            <summary>
+            Updates the message text.
+            </summary>
+            <param name="AgentTaskMessage">The message record to update.</param>
+            <param name="NewMessageText">New message text to set.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.IsEditable(Agent Task Message@):Boolean">
+            <summary>
+            Check if it is possible to edit the message.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message to verify.</param>
+            <returns>If it is possible to change the message.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.SetStatusToSent(Agent Task Message@)">
+            <summary>
+            Sets the message status to sent.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message to update status.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.DownloadAttachments(Agent Task Message@)">
+            <summary>
+            Downloads the attachments for a specific message.
+            </summary>
+            <param name="AgentTaskMessage">Message to download attachments for.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Task.TaskExists(Guid,Text):Boolean">
+            <summary>
+            Check if a task exists for the given agent user and conversation
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="ConversationId">The conversation ID to check.</param>
+            <returns>True if task exists, false if not.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Task.CreateTaskMessage(Text[250],Text,Text[2048],Agent Task@)">
+            <summary>
+            Create a new task message for the given agent user and conversation.
+            If task does not exist, it will be created.
+            </summary>
+            <param name="From">Specifies from address.</param>
+            <param name="MessageText">The message text for the task.</param>
+            <param name="CurrentAgentTask">Current Agent Task to which the message will be added.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Create(Enum::System#Agents#Agent Metadata Provider,Code[50],Text[80],Agent Access Control@):Guid">
+            <summary>
+            Creates a new agent.
+            The agent will be in the disabled state, with the users that can interact with the agent setup.
+            </summary>
+            <param name="AgentMetadataProvider">The metadata provider of the agent.</param>
+            <param name="UserName">User name for the agent.</param>
+            <param name="UserDisplayName">Display name for the agent.</param>
+            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
+            <param name="TempAgentAccessControl">The list of users that can configure or interact with the agent.</param>
+            <returns>The ID of the agent.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Activate(Guid)">
+            <summary>
+            Activates the agent
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Deactivate(Guid)">
+            <summary>
+            Deactivates the agent
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetDisplayName(Guid):Text[80]">
+            <summary>
+            Get the display name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetUserName(Guid):Code[50]">
+            <summary>
+            Get the user name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetDisplayName(Guid,Text[80])">
+            <summary>
+            Sets the display name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="DisplayName">The display name of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetInstructions(Guid,SecretText)">
+            <summary>
+            Set the instructions which agent will use to complete the tasks.
+            </summary>
+            <param name="Agent">The agent which instructions will be set.</param>
+            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.IsActive(Guid):Boolean">
+            <summary>
+            Checks if the agent is active.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <returns>If the agent is active.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetProfile(Guid,All Profile@)">
+            <summary>
+            Assigns the permission set to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="AllProfile">Profile to set to the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.AssignPermissionSet(Guid,Aggregate Permission Set@)">
+            <summary>
+            Assigns the permission set to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="AggregatePermissionSet">Permission sets to assign</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetUserAccess(Guid,Agent Access Control@)">
+            <summary>
+            Gets the users that can manage or give tasks to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">Security ID of the agent.</param>
+            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.UpdateAccess(Guid,Agent Access Control@)">
+            <summary>
+            Sets the users that can manage or give tasks to the agent. Existing set of users will be replaced with a new set.
+            </summary>
+            <param name="AgentUserSecurityID">Security ID of the agent.</param>
+            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
         </member>
         <member name="O:Codeunit::System#Apps#AppSource#AppSource Json Utilities">
             <summary>
@@ -15685,11 +15847,6 @@
             A list part factbox to view related entities for Word templates.
             </summary>
         </member>
-        <member name="O:Page::System#Integration#Word#Word Templates Related List">
-            <summary>
-            A list page to view and edit related entities for Word templates.
-            </summary>
-        </member>
         <member name="O:Page::System#Integration#Word#Word Templates Related Part">
             <summary>
             A list part page to view and edit related entities for Word templates.
@@ -19482,9 +19639,15 @@
         </member>
         <member name="M:Page::System#Email#Email Accounts.FilterConnectorV2Accounts(Boolean)">
             <summary>
-            Filters the email accounts to only show accounts that are using the Email Connector v2.
+            Filters the email accounts to only show accounts that are using the Email Connector v2 or v3.
             </summary>
             <param name="Filter">True to filter the email accounts, false to show all email accounts</param>
+        </member>
+        <member name="M:Page::System#Email#Email Accounts.FilterConnectorV3Accounts(Boolean)">
+            <summary>
+            Filters the email accounts to only show accounts that are using the Email Connector v2 or v3.
+            </summary>
+            <param name="UseFilter">True to filter the email accounts, false to show all email accounts</param>
         </member>
         <member name="O:Page::System#Email#Email Account Wizard">
             <summary>
@@ -19585,6 +19748,33 @@
             <param name="EmailInbox">The email inbox record that will store the emails.</param>
         </member>
         <member name="M:Interface::System#Email#Email Connector v2.MarkAsRead(Guid,Text)">
+            <summary>
+            Mark an e-mail as read in the provided account.
+            </summary>
+            <param name="AccountId">The email account ID.</param>
+            <param name="ExternalId">The external ID of the email.</param>
+        </member>
+        <member name="O:Interface::System#Email#Email Connector v3">
+            <summary>
+            An e-mail connector interface enhances the "Email Connector" with reading, replying to e-mails and marking emails as read.
+            </summary>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v3.Reply(Codeunit::System#Email#Email Message@,Guid)">
+            <summary>
+            Reply to an e-mail using the provided account.
+            </summary>
+            <param name="EmailMessage">The email message that is to be sent out.</param>
+            <param name="AccountId">The email account ID which is used to send out the email.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v3.RetrieveEmails(Guid,Email Inbox@,Email Retrieval Filters@)">
+            <summary>
+            Read e-mails from the provided account.
+            </summary>
+            <param name="AccountId">The email account ID which is used to send out the email.</param>
+            <param name="EmailInbox">The email inbox record that will store the emails.</param>
+            <param name="Filters">Filters to be used when retrieving emails.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email Connector v3.MarkAsRead(Guid,Text)">
             <summary>
             Mark an e-mail as read in the provided account.
             </summary>
@@ -19763,6 +19953,42 @@
             <param name="EmailConnector">The email connector to use for sending the email.</param>
             <param name="EmailOutbox">The email outbox which is set up for sending in the background.</param>
         </member>
+        <member name="M:Codeunit::System#Email#Email.Reply(Codeunit::System#Email#Email Message,Guid,Enum::System#Email#Email Connector):Boolean">
+            <summary>
+            Sends a reply to an external message id in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <returns>True if sent</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.ReplyAll(Codeunit::System#Email#Email Message,Guid,Enum::System#Email#Email Connector):Boolean">
+            <summary>
+            Sends a reply to an external message id to all recipients on that email in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <returns>True if sent</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.EnqueueReply(Codeunit::System#Email#Email Message,Guid,Enum::System#Email#Email Connector,Email Outbox@)">
+            <summary>
+            Sends a reply to an external message id in the background.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailOutbox">The email outbox which is set up for sending in the background.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.EnqueueReplyAll(Codeunit::System#Email#Email Message,Guid,Enum::System#Email#Email Connector,Email Outbox@)">
+            <summary>
+            Sends a reply to an external message id to all recipients on that email in the foreground.
+            </summary>
+            <param name="EmailMessage">The email message with the details of the recipients and reply to be added.</param>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailOutbox">The email outbox which is set up for sending in the background.</param>
+        </member>
         <member name="M:Codeunit::System#Email#Email.RetrieveEmails(Guid,Enum::System#Email#Email Connector,Email Inbox@)">
             <summary>
             Retrieves emails from the email account.
@@ -19770,6 +19996,15 @@
             <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
             <param name="EmailConnector">The email connector to use for sending the email.</param>
             <param name="EmailInbox">The return record of all new emails that were retrieved.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email.RetrieveEmails(Guid,Enum::System#Email#Email Connector,Email Inbox@,Email Retrieval Filters@)">
+            <summary>
+            Retrieves emails from the email account.
+            </summary>
+            <param name="EmailAccountId">The ID of the email account to use for sending the email.</param>
+            <param name="EmailConnector">The email connector to use for sending the email.</param>
+            <param name="EmailInbox">The return record of all new emails that were retrieved.</param>
+            <param name="Filters">Filters to be used when retrieving emails.</param>
         </member>
         <member name="M:Codeunit::System#Email#Email.MarkAsRead(Guid,Enum::System#Email#Email Connector,Text)">
             <summary>
@@ -20177,6 +20412,17 @@
             <param name="Subject">The subject of the email.</param>
             <param name="Body">The body of the email.</param>
             <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email Message.Create(Text,Text,Text,Boolean,Boolean)">
+            <summary>
+            Creates the email with recipients, subject, and body.
+            </summary>
+            <param name="ToRecipients">The recipient(s) of the email. A string containing the email addresses of the recipients separated by semicolon.</param>
+            <param name="Subject">The subject of the email.</param>
+            <param name="Body">The body of the email.</param>
+            <param name="HtmlFormatted">Whether the body is HTML formatted.</param>
+            <param name="Sanitize">If the body is of HTML formatting, most of it will be sanitized. Keeping only tags and no styling.</param>
+            <remarks>Sanitize is only applicable if the body is HTML formatted. It also helps prevent potential email messages from hiding images and text from the user.</remarks>
         </member>
         <member name="M:Codeunit::System#Email#Email Message.Create(List of [Text],Text,Text,Boolean)">
             <summary>
@@ -20665,6 +20911,9 @@
         </member>
         <member name="O:Table::System#Email#Email Inbox">
             <summary>Holds information about emails retrieved from an inbox.</summary>
+        </member>
+        <member name="O:Table::System#Email#Email Retrieval Filters">
+            <summary>Holds information about the filters for retrieving emails.</summary>
         </member>
         <member name="O:Enum::System#Email#Email Action">
             <summary>
