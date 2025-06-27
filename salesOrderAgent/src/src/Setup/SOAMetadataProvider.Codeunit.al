@@ -3,11 +3,11 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
 using System.AI;
-using Agent.SalesOrderAgent.Integration;
 
 codeunit 4401 "SOA Metadata Provider" implements IAgentMetadata, IAgentFactory
 {
@@ -17,7 +17,7 @@ codeunit 4401 "SOA Metadata Provider" implements IAgentMetadata, IAgentFactory
 
     procedure GetInitials(): Text[4]
     begin
-        exit(SOASetup.GetInitials());
+        exit(SOASetupCU.GetInitials());
     end;
 
     procedure GetFirstTimeSetupPageId(): Integer
@@ -39,7 +39,7 @@ codeunit 4401 "SOA Metadata Provider" implements IAgentMetadata, IAgentFactory
 
     procedure ShowCanCreateAgent(): Boolean
     begin
-        exit(SOASetup.AllowCreateNewSOAgent());
+        exit(SOASetupCU.AllowCreateNewSOAgent());
     end;
 
     procedure GetCopilotCapability(): Enum "Copilot Capability"
@@ -49,7 +49,12 @@ codeunit 4401 "SOA Metadata Provider" implements IAgentMetadata, IAgentFactory
 
     procedure GetAgentTaskUserInterventionSuggestions(AgentUserId: Guid; AgentTaskId: BigInteger; PageId: Integer; RecordId: RecordId; var AgentTaskUserInterventionSuggestion: Record "Agent Task User Int Suggestion")
     begin
-        SOASetup.GetAgentTaskUserInterventionSuggestions(AgentUserId, AgentTaskId, PageId, RecordId, AgentTaskUserInterventionSuggestion);
+        SOASetupCU.GetAgentTaskUserInterventionSuggestions(AgentUserId, AgentTaskId, PageId, RecordId, AgentTaskUserInterventionSuggestion);
+    end;
+
+    procedure GetAgentTaskPageContext(AgentUserId: Guid; AgentTaskId: BigInteger; PageId: Integer; RecordId: RecordId; var AgentTaskPageContext: Record "Agent Task Page Context")
+    begin
+        SOASetupCU.GetAgentTaskPageContext(AgentUserId, AgentTaskId, PageId, RecordId, AgentTaskPageContext);
     end;
 
     procedure GetAgentTaskMessagePageId(): Integer
@@ -58,5 +63,5 @@ codeunit 4401 "SOA Metadata Provider" implements IAgentMetadata, IAgentFactory
     end;
 
     var
-        SOASetup: Codeunit "SOA Setup";
+        SOASetupCU: Codeunit "SOA Setup";
 }

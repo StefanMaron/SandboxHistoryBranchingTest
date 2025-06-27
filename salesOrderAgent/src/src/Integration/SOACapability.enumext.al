@@ -4,6 +4,7 @@
 // ------------------------------------------------------------------------------------------------
 
 namespace System.Text;
+
 using System.AI;
 
 enumextension 4586 "SOA Capability" extends "Copilot Capability"

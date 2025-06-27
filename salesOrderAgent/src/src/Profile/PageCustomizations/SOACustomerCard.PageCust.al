@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Sales.Customer;
 
@@ -102,6 +103,10 @@ pagecustomization "SOA Customer Card" customizes "Customer Card"
             Visible = true;
         }
         modify("Payment Terms Code")
+        {
+            Visible = true;
+        }
+        modify("Currency Code")
         {
             Visible = true;
         }

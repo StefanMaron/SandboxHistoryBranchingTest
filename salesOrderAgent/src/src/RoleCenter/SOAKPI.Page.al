@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Finance.GeneralLedger.Setup;
 using System.Agents;
@@ -13,7 +14,6 @@ page 4402 "SOA KPI"
 {
     PageType = CardPart;
     ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = Agent;
     Permissions = tabledata "General Ledger Setup" = R;
     Caption = 'Sales Order Agent';
@@ -84,6 +84,7 @@ page 4402 "SOA KPI"
                     ApplicationArea = All;
                     AutoFormatExpression = TotalAmountOrdersFormat;
                     AutoFormatType = 11;
+                    CaptionClass = '3,' + GetAmountCaption();
                     Caption = 'Amount incl. Tax';
                     ToolTip = 'Specifies the total amount of all orders that the agent has created. Both active and inactive orders are included.';
                 }
@@ -98,6 +99,7 @@ page 4402 "SOA KPI"
 
     local procedure CalculateTotals()
     begin
+        VerifyUserHasAccessToAgent();
         SOAgentKPI.GetSafe();
         SOAgentKPI.UpdateEmailKPIs(Rec."User Security ID");
         GetAmount(SOAgentKPI."Total Amount Orders", TotalAmountOrders, TotalAmountOrdersFormat);
@@ -105,27 +107,47 @@ page 4402 "SOA KPI"
         TimeSavedQuotes := GetTimeSavedQuotes(QuoteTimeAutoFormatExpression);
     end;
 
+    local procedure VerifyUserHasAccessToAgent()
+    var
+        Agent: Record Agent;
+    begin
+        // Verify user has access to the agent
+        Agent.Get(Rec."User Security ID");
+    end;
+
     local procedure GetAmount(CurrentAmount: Decimal; var NewAmount: Decimal; var NewAmountFormat: Text)
     var
-        GeneralLedgerSetup: Record "General Ledger Setup";
         TypeHelper: Codeunit "Type Helper";
         AmountAbbreviation: Text;
-        CurrencySymbol: Text[10];
         DecimalPlaces: Integer;
     begin
         ShortenAmount(CurrentAmount, NewAmount, AmountAbbreviation, DecimalPlaces);
 
+        NewAmountFormat := TypeHelper.GetAmountFormatWithUserLocale('', DecimalPlaces);
+        NewAmountFormat := NewAmountFormat.TrimStart(' ').TrimEnd(' ') + ' ' + AmountAbbreviation;
+    end;
+
+    local procedure GetAmountCaption(): Text
+    var
+        AmountCaption: Text;
+    begin
+        AmountCaption := AmountIncludingTaxLbl;
+        AddCurrencySymbol(AmountCaption);
+        exit(AmountCaption);
+    end;
+
+    local procedure AddCurrencySymbol(var AmountCaption: Text)
+    var
+        GeneralLedgerSetup: Record "General Ledger Setup";
+        CurrencySymbol: Text[10];
+    begin
         GeneralLedgerSetup.ReadIsolation := IsolationLevel::ReadUncommitted;
         CurrencySymbol := '';
         if GeneralLedgerSetup.Get() then
             CurrencySymbol := GeneralLedgerSetup.GetCurrencySymbol();
 
-        NewAmountFormat := TypeHelper.GetAmountFormatWithUserLocale(CurrencySymbol, DecimalPlaces);
-
-        if NewAmountFormat.EndsWith(CurrencySymbol) then
-            NewAmountFormat := NewAmountFormat.TrimEnd(CurrencySymbol) + ' ' + AmountAbbreviation + ' ' + CurrencySymbol
-        else
-            NewAmountFormat += ' ' + AmountAbbreviation;
+        if CurrencySymbol <> '' then
+            AmountCaption := StrSubstNo(AmountIncludingCurrencyLbl, AmountCaption, CurrencySymbol);
     end;
 
     local procedure ShortenAmount(CurrentAmount: Decimal; var NewAmount: Decimal; var AmountAbbreviation: Text; var DecimalPlaces: Integer)
@@ -173,6 +195,8 @@ page 4402 "SOA KPI"
     local procedure ConvertDurationToText(MinutesSaved: Integer; var ControlAutoFormatExpression: Text): Decimal
     var
         HoursSaved: Decimal;
+        DaysSaved: Decimal;
+        YearsSaved: Decimal;
     begin
         ControlAutoFormatExpression := StrSubstNo(AutoFormatExpressionLbl, MinutesUnitLbl);
 
@@ -188,7 +212,24 @@ page 4402 "SOA KPI"
         else
             HoursSaved := Round(MinutesSaved / 60, 0.5);
 
-        exit(HoursSaved);
+        if HoursSaved < 1000 then
+            exit(HoursSaved);
+
+        // Under 100 days we track with 0.1 increment, over 100 days we report full days.
+        DaysSaved := Round(HoursSaved / 24, 0.1);
+        ControlAutoFormatExpression := StrSubstNo(AutoFormatExpressionLbl, DaysUnitLbl);
+        if DaysSaved < 100 then
+            exit(DaysSaved)
+        else
+            DaysSaved := Round(DaysSaved, 1);
+
+        if DaysSaved < 1000 then
+            exit(DaysSaved);
+
+        // Years are always reported with 0.01 increment.
+        YearsSaved := Round(DaysSaved / 365, 0.01);
+        ControlAutoFormatExpression := StrSubstNo(AutoFormatExpressionLbl, YearsUnitLbl);
+        exit(YearsSaved);
     end;
 
     var
@@ -199,8 +240,12 @@ page 4402 "SOA KPI"
         QuoteTimeAutoFormatExpression: Text;
         TotalAmountOrdersFormat: Text;
         TotalAmountOrders: Decimal;
+        AmountIncludingTaxLbl: Label 'Amount incl. Tax';
+        AmountIncludingCurrencyLbl: Label '%1 (%2)', Comment = '%1 - is the title e.g. Amount incl. Tax, %2 - is the currency symbol. Example of full title Amount incl. Tax ($) or Amount incl. Tax (DKK)';
         AutoFormatExpressionLbl: Label '<Precision,0:1><Standard Format,0> %1', Locked = true, Comment = '%1 - is the unit hr or min';
-        HoursUnitLbl: Label 'hr', Comment = 'hr represents hours, it will be shown like 23.7 hr', MaxLength = 3;
+        HoursUnitLbl: Label 'h', Comment = 'h represents hours, it will be shown like 23.7 h', MaxLength = 3;
+        DaysUnitLbl: Label 'd', Comment = 'd represents days, it will be shown like 23.6 d', MaxLength = 3;
+        YearsUnitLbl: Label 'yr', Comment = 'yr represents years, it will be shown like 3.6 yr', MaxLength = 3;
         MinutesUnitLbl: Label 'min', Comment = 'min represents minutes, it will be shown like 23 min', MaxLength = 3;
         MillionAbbreviationLbl: Label 'M', Comment = 'M is a short for million, use a local language abbreviation.', MaxLength = 5;
         BillionAbbreviationLbl: Label 'B', Comment = 'B is a short for billion, use a local language abbreviation.', MaxLength = 5;
