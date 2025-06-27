@@ -23,6 +23,7 @@ table 10000 "PAC Web Service"
         {
             Caption = 'Name';
         }
+#if not CLEANSCHEMA25
         field(22; "Certificate Thumbprint"; Text[250])
         {
             Caption = 'Certificate Thumbprint';
@@ -30,6 +31,7 @@ table 10000 "PAC Web Service"
             ObsoleteState = Removed;
             ObsoleteTag = '25.0';
         }
+#endif
         field(23; Certificate; Code[20])
         {
             Caption = 'Certificate';

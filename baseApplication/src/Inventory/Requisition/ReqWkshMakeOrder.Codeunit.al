@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Requisition;
 
 using Microsoft.Assembly.Document;
@@ -92,6 +96,7 @@ codeunit 333 "Req. Wksh.-Make Order"
         Day: Integer;
         Week: Integer;
         Month: Integer;
+        Year: Integer;
         CounterFailed: Integer;
         PrevPurchCode: Code[10];
         PrevShipToCode: Code[10];
@@ -181,7 +186,7 @@ codeunit 333 "Req. Wksh.-Make Order"
         OrderLineCounter := 0;
         Clear(PurchOrderHeader);
         PurchSetup.Get();
-
+	
         IsHandled := false;
         OnCodeOnBeforeSetPurchOrderHeader(ReqLine, IsHandled);
         if not IsHandled then
@@ -1046,13 +1051,14 @@ codeunit 333 "Req. Wksh.-Make Order"
             Week := Date2DWY(ReqLine2."Order Date", 2);
             Month := Date2DMY(ReqLine2."Order Date", 2);
             MonthText := Format(ReqLine2."Order Date", 0, Text007);
+            Year := Date2DMY(ReqLine2."Order Date", 3);
             AccountingPeriod.SetRange("Starting Date", 0D, ReqLine2."Order Date");
             if not AccountingPeriod.FindLast() then
                 AccountingPeriod.Name := '';
             ReqLine2.Description :=
               DelChr(
                 PadStr(
-                  StrSubstNo(ReqLine2.Description, Day, Week, Month, MonthText, AccountingPeriod.Name),
+                  StrSubstNo(ReqLine2.Description, Day, Week, Month, MonthText, AccountingPeriod.Name, Year),
                   MaxStrLen(ReqLine2.Description)),
                 '>');
             ReqLine2.Modify();
