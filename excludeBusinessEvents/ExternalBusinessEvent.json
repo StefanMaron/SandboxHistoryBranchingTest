@@ -17,29 +17,6 @@
         "Index": 1,
         "Name": "Url",
         "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "PurchasePaymentPosted",
-    "displayName": "Purchase payment posted",
-    "description": "This business event is triggered when a vendor payment is posted as part of the Procure to Pay process.",
-    "containingApplicationObjectId": 38503,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38501,
-    "categoryText": "Accounts Payable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "VendorId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
       },
       {
         "Index": 2,
@@ -49,75 +26,6 @@
     ],
     "permissions": [],
     "version": "1.0"
-  },
-  {
-    "name": "PurchaseInvoicePosted",
-    "displayName": "Purchase invoice posted",
-    "description": "This business event is triggered when a vendor invoice is posted as part of the Procure to Pay process.",
-    "containingApplicationObjectId": 38503,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38501,
-    "categoryText": "Accounts Payable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "PurchaseInvoiceId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "PurchaseCreditMemoPosted",
-    "displayName": "Purchase credit memo posted",
-    "description": "This business event is triggered when a purchase credit memo is posted.",
-    "containingApplicationObjectId": 38503,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38501,
-    "categoryText": "Accounts Payable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "PurchaseInvoiceId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "PurchaseReceiptPosted",
-    "displayName": "Purchase receipt posted",
-    "description": "This business event is triggered when goods from a purchase order are received by the internal warehouse/external logistics company. This can trigger Finance Department to post a purchase invoice.",
-    "containingApplicationObjectId": 38503,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38501,
-    "categoryText": "Accounts Payable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "PurchaseInvoiceId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
   },
   {
     "name": "PurchaseInvoicePosted",
@@ -212,75 +120,6 @@
     ],
     "permissions": [],
     "version": "1.0"
-  },
-  {
-    "name": "SalesInvoicePosted",
-    "displayName": "Sales invoice posted ",
-    "description": "This business event is triggered when a sales invoice is posted as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "SalesInvoiceId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "SalesCreditMemoPosted",
-    "displayName": "Sales credit memo posted",
-    "description": "This business event is triggered when a sales credit memo is posted.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "SalesCreditMemoId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "SalesShipmentPosted",
-    "displayName": "Sales shipment posted",
-    "description": "This business event is triggered when goods from a sales order are shipped by the internal warehouse/external logistics company. This can trigger Finance Department to post a sales invoice.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "SalesShipmentId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
   },
   {
     "name": "SalesInvoicePosted",
@@ -399,62 +238,6 @@
         "Index": 2,
         "Name": "Url",
         "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "CustomerUnBlocked",
-    "displayName": "Customer unblocked",
-    "description": "This business event is triggered when a customer is unblocked for shipping/invoicing.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "CustomerId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Blocked",
-        "Type": "Enum Microsoft.Sales.Customer.\"Customer Blocked\""
-      },
-      {
-        "Index": 2,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "CustomerBlocked",
-    "displayName": "Customer blocked",
-    "description": "This business event is triggered when a customer is blocked for shipping/invoicing.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "CustomerId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Blocked",
-        "Type": "Enum Microsoft.Sales.Customer.\"Customer Blocked\""
-      },
-      {
-        "Index": 2,
-        "Name": "Url",
-        "Type": "Text[250]"
       },
       {
         "Index": 3,
@@ -497,52 +280,6 @@
     ],
     "permissions": [],
     "version": "1.0"
-  },
-  {
-    "name": "SalesPaymentPosted",
-    "displayName": "Sales payment posted",
-    "description": "This business event is triggered when a customer payment is posted as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "CustomerId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "SalesCreditLimitExceeded",
-    "displayName": "Sales credit limit exceeded",
-    "description": "This business event is triggered when the credit limit for a customer is exceeded due to a posted sales invoice/changed credit limit for that customer.",
-    "containingApplicationObjectId": 38502,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38500,
-    "categoryText": "Accounts Receivable",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "CustomerId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
   },
   {
     "name": "SalesPaymentPosted",
@@ -654,34 +391,6 @@
     "payload": [
       {
         "Index": 0,
-        "Name": "OpportunitiesId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "SalesQuoteId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 2,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "OpportunityQuoted",
-    "displayName": "Quote created for opportunity",
-    "description": "This business event is triggered when a quote is created for an opportunity as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38506,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38504,
-    "categoryText": "Opportunities",
-    "payload": [
-      {
-        "Index": 0,
         "Name": "OpportunityId",
         "Type": "Guid"
       },
@@ -703,62 +412,6 @@
     ],
     "permissions": [],
     "version": "1.0"
-  },
-  {
-    "name": "OpportunityWon",
-    "displayName": "Winning quote converted into sales order",
-    "description": "This business event is triggered when a winning quote for an opportunity is converted into a sales order as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38506,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38504,
-    "categoryText": "Opportunities",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "OpportunitiesId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Status",
-        "Type": "Enum Microsoft.CRM.Opportunity.\"Opportunity Status\""
-      },
-      {
-        "Index": 2,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "OpportunityLost",
-    "displayName": "Opportunity closed as lost",
-    "description": "This business event is triggered when a lost opportunity is closed as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38506,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38504,
-    "categoryText": "Opportunities",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "OpportunitiesId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Status",
-        "Type": "Enum Microsoft.CRM.Opportunity.\"Opportunity Status\""
-      },
-      {
-        "Index": 2,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
   },
   {
     "name": "OpportunityWon",
@@ -837,29 +490,6 @@
     "payload": [
       {
         "Index": 0,
-        "Name": "OpportunitiesId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "OpportunityActivated",
-    "displayName": "Opportunity activated",
-    "description": "This business event is triggered when an opportunity is activated as part of the Quote to Cash process.",
-    "containingApplicationObjectId": 38506,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38504,
-    "categoryText": "Opportunities",
-    "payload": [
-      {
-        "Index": 0,
         "Name": "OpportunityId",
         "Type": "Guid"
       },
@@ -895,29 +525,6 @@
         "Index": 1,
         "Name": "Url",
         "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
-  },
-  {
-    "name": "PurchaseOrderReleased",
-    "displayName": "Purchase order released",
-    "description": "This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they're ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central.",
-    "containingApplicationObjectId": 38505,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38503,
-    "categoryText": "Purchasing",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "PurchaseOrderId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
       },
       {
         "Index": 2,
@@ -927,29 +534,6 @@
     ],
     "permissions": [],
     "version": "1.0"
-  },
-  {
-    "name": "SalesOrderReleased",
-    "displayName": "Sales order released",
-    "description": "This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central.",
-    "containingApplicationObjectId": 38504,
-    "containingApplicationObjectType": "Codeunit",
-    "categoryOrdinalValue": 38502,
-    "categoryText": "Sales",
-    "payload": [
-      {
-        "Index": 0,
-        "Name": "SalesOrderId",
-        "Type": "Guid"
-      },
-      {
-        "Index": 1,
-        "Name": "Url",
-        "Type": "Text[250]"
-      }
-    ],
-    "permissions": [],
-    "version": null
   },
   {
     "name": "SalesOrderReleased",

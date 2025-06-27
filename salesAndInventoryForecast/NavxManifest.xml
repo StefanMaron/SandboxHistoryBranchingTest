@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="c526b3e9-b8ca-4683-81ba-fcd5f6b1472a" Name="Sales and Inventory Forecast" Publisher="Microsoft" Brief="Get insights about potential sales and a clear overview of expected stock-outs." Description="Inventory management is a trade-off between customer service and managing cost. On one hand, low inventory levels require less working capital. On the other hand, stock-outs can lead to missed sales. The Sales and Inventory Forecast extension uses historical data to predict potential sales so you know when to expect stock-outs. Based on the forecast, the extension saves you time by helping to create replenishment requests to your vendors." Version="25.5.30849.35974" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2189535" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2189535" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="c526b3e9-b8ca-4683-81ba-fcd5f6b1472a" Name="Sales and Inventory Forecast" Publisher="Microsoft" Brief="Get insights about potential sales and a clear overview of expected stock-outs." Description="Inventory management is a trade-off between customer service and managing cost. On one hand, low inventory levels require less working capital. On the other hand, stock-outs can lead to missed sales. The Sales and Inventory Forecast extension uses historical data to predict potential sales so you know when to expect stock-outs. Based on the forecast, the extension saves you time by helping to create replenishment requests to your vendors." Version="26.0.30643.35936" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2189535" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2189535" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
   </IdRanges>
@@ -16,6 +16,6 @@
   <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T15:38:24.7741995Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-26T04:05:12.7662909Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
