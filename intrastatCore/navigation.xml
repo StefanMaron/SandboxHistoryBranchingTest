@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Intrastat Core" ControlGUID="{ff83ed02-f60d-4f43-9e69-c8f53bac6eef}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4811" DepartmentCategory="Lists" RunObjectSrcTable="4811" ControlGUID="{0e5bc1bb-ee5b-4e92-b325-c6d80328dc52}" Name="Intrastat Report List" CaptionML="CSY=Seznam hlášení Intrastat;DAN=Intrastat-rapportliste;DEA=Intrastat-Berichtsliste;DES=Intrastat-Berichtsliste;DEU=Intrastat-Berichtsliste;ENA=Intrastat Report List;ENC=Intrastat Report List;ENG=Intrastat Report List;ENU=Intrastat Report List;ENZ=Intrastat Report List;ESM=Lista informes Intrastat;ESN=Lista informes Intrastat;FIN=Intrastat-raporttiluettelo;FRA=Liste de l’état de déclaration d’échanges de biens;FRB=Liste de l’état de déclaration d’échanges de biens;FRC=Liste du rapport Intrastat;FRS=Liste de l’état de déclaration d’échanges de biens;ISL=Intrastat-skýrslulisti;ITA=Lista report Intrastat;ITS=Lista report Intrastat;NLB=Intrastat-rapportlijst;NLD=Intrastat-rapportlijst;NOR=Oversikt over Intrastat-rapport;RUS=Список отчетов Интрастат;SVE=Lista för Intrastat-rapport" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1566601818 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1566601818 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4810" DepartmentCategory="Administration" RunObjectSrcTable="4810" ControlGUID="{aba72b48-cb6c-4dd9-900f-fec72c696875}" Name="Intrastat Report Setup" CaptionML="CSY=Nastavení hlášení Intrastat;DAN=Opsætning af Intrastat-rapport;DEA=Intrastat-Berichtseinrichtung;DES=Intrastat-Berichtseinrichtung;DEU=Intrastat-Berichtseinrichtung;ENA=Intrastat Report Setup;ENC=Intrastat Report Setup;ENG=Intrastat Report Setup;ENU=Intrastat Report Setup;ENZ=Intrastat Report Setup;ESM=Config. de informe Intrastat;ESN=Config. de informe Intrastat;FIN=Intrastat-raportin asetukset;FRA=Configuration de l’état de déclaration d’échanges de biens;FRB=Configuration de l’état de déclaration d’échanges de biens;FRC=Configuration du rapport Intrastat;FRS=Configuration de l’état de déclaration d’échanges de biens;ISL=Uppsetning Intrastat-skýrslu;ITA=Setup report Intrastat;ITS=Setup report Intrastat;NLB=Configuratie van Intrastat-rapport;NLD=Configuratie van Intrastat-rapport;NOR=Oppsett for Intrastat-rapport;RUS=Настройка отчета Интрастат;SVE=Konfiguration av Intrastat-rapport" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3132071445 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3132071445 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Intrastat Core" ControlGUID="{a57ab5d3-7774-4a90-9d9a-68c30a10272a}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4811" DepartmentCategory="Lists" RunObjectSrcTable="4811" ControlGUID="{427c82a6-263c-4d39-88ed-ec4b73b9ec0b}" Name="Intrastat Report List" CaptionML="CSY=Seznam hlášení Intrastat;DAN=Intrastat-rapportliste;DEA=Intrastat-Berichtsliste;DES=Intrastat-Berichtsliste;DEU=Intrastat-Berichtsliste;ENA=Intrastat Report List;ENC=Intrastat Report List;ENG=Intrastat Report List;ENU=Intrastat Report List;ENZ=Intrastat Report List;ESM=Lista informes Intrastat;ESN=Lista informes Intrastat;FIN=Intrastat-raporttiluettelo;FRA=Liste de l’état de déclaration d’échanges de biens;FRB=Liste de l’état de déclaration d’échanges de biens;FRC=Liste du rapport Intrastat;FRS=Liste de l’état de déclaration d’échanges de biens;ISL=Intrastat-skýrslulisti;ITA=Lista report Intrastat;ITS=Lista report Intrastat;NLB=Intrastat-rapportlijst;NLD=Intrastat-rapportlijst;NOR=Oversikt over Intrastat-rapport;RUS=Список отчетов Интрастат;SVE=Lista för Intrastat-rapport" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1566601818 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1566601818 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4810" DepartmentCategory="Administration" RunObjectSrcTable="4810" ControlGUID="{f607ffe0-54f4-43de-afe9-8bd952d4eaad}" Name="Intrastat Report Setup" CaptionML="CSY=Nastavení hlášení Intrastat;DAN=Opsætning af Intrastat-rapport;DEA=Intrastat-Berichtseinrichtung;DES=Intrastat-Berichtseinrichtung;DEU=Intrastat-Berichtseinrichtung;ENA=Intrastat Report Setup;ENC=Intrastat Report Setup;ENG=Intrastat Report Setup;ENU=Intrastat Report Setup;ENZ=Intrastat Report Setup;ESM=Config. de informe Intrastat;ESN=Config. de informe Intrastat;FIN=Intrastat-raportin asetukset;FRA=Configuration de l’état de déclaration d’échanges de biens;FRB=Configuration de l’état de déclaration d’échanges de biens;FRC=Configuration du rapport Intrastat;FRS=Configuration de l’état de déclaration d’échanges de biens;ISL=Uppsetning Intrastat-skýrslu;ITA=Setup report Intrastat;ITS=Setup report Intrastat;NLB=Configuratie van Intrastat-rapport;NLD=Configuratie van Intrastat-rapport;NOR=Oppsett for Intrastat-rapport;RUS=Настройка отчета Интрастат;SVE=Konfiguration av Intrastat-rapport" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3132071445 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3132071445 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="6508" TargetType="Page" />
+    <ActionChange TargetID="6505" TargetType="Page" />
     <ActionChange TargetID="30" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="5600" TargetType="Page" />
+    <ActionChange TargetID="1382" TargetType="Page" />
+    <ActionChange TargetID="6526" TargetType="Page" />
     <ActionChange TargetID="6504" TargetType="Page" />
     <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="6508" TargetType="Page" />
     <ActionChange TargetID="6510" TargetType="Page" />
-    <ActionChange TargetID="6526" TargetType="Page" />
-    <ActionChange TargetID="310" TargetType="Page" />
-    <ActionChange TargetID="5600" TargetType="Page" />
-    <ActionChange TargetID="6505" TargetType="Page" />
-    <ActionChange TargetID="1384" TargetType="Page" />
     <ActionChange TargetID="701" TargetType="Page" />
-    <ActionChange TargetID="6509" TargetType="Page" />
     <ActionChange TargetID="9022" TargetType="Page" />
-    <ActionChange TargetID="1382" TargetType="Page" />
+    <ActionChange TargetID="310" TargetType="Page" />
+    <ActionChange TargetID="6509" TargetType="Page" />
     <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="1384" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
