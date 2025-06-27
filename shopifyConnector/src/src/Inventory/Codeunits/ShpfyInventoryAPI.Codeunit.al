@@ -33,6 +33,7 @@ codeunit 30195 "Shpfy Inventory API"
         ShopifyVariant: Record "Shpfy Variant";
         StockCalculation: Interface "Shpfy Stock Calculation";
         UOM: Code[10];
+        SalesUOM: Code[10];
     begin
         SetShop(ShopInventory."Shop Code");
         if ShopifyProduct.Get(ShopInventory."Product Id") and ShopifyVariant.Get(ShopInventory."Variant Id") then begin
@@ -48,6 +49,7 @@ codeunit 30195 "Shpfy Inventory API"
             end;
 
             StockCalculationFactory(StockCalculation, ShopLocation."Stock Calculation");
+            SalesUOM := Item."Sales Unit of Measure";
             Stock := StockCalculation.GetStock(Item);
 
             case ShopifyVariant."UoM Option Id" of
@@ -58,7 +60,7 @@ codeunit 30195 "Shpfy Inventory API"
                 3:
                     UOM := CopyStr(ShopifyVariant."Option 3 Value", 1, MaxStrLen(UOM));
                 else
-                    UOM := Item."Sales Unit of Measure";
+                    UOM := SalesUOM;
             end;
             if (UOM <> '') and (UOM <> Item."Base Unit of Measure") then
                 if ItemUnitofMeasure.Get(Item."No.", UOM) then
@@ -220,10 +222,12 @@ codeunit 30195 "Shpfy Inventory API"
         VariantId: BigInteger;
         Stock: Decimal;
         JArray: JsonArray;
+        JQuantities: JsonArray;
         JInventoryItem: JsonObject;
         JNode: JsonObject;
         JProduct: JsonObject;
         JVariant: JsonObject;
+        JQuantity: JsonToken;
         JItem: JsonToken;
         JValue: JsonValue;
         Cursor: Text;
@@ -235,10 +239,12 @@ codeunit 30195 "Shpfy Inventory API"
                 else
                     Clear(Cursor);
                 if JsonHelper.GetJsonObject(JItem.AsObject(), JNode, 'node') then begin
-                    if JsonHelper.GetJsonValue(JNode, JValue, 'available') then
-                        Stock := JValue.AsInteger()
-                    else
-                        Stock := 0;
+                    if JsonHelper.GetJsonArray(JNode, JQuantities, 'quantities') then
+                        if JQuantities.Get(0, JQuantity) then
+                            if JsonHelper.GetJsonValue(JQuantity, JValue, 'quantity') then
+                                Stock := JValue.AsInteger()
+                            else
+                                Stock := 0;
                     InventoryItemId := 0;
                     VariantId := 0;
                     ProductId := 0;
