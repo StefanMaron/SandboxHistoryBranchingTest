@@ -598,8 +598,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract Lines API - Control CustContractDeferralAPI - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1304685356 - Control 1227165199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Billing</source>
-          <target>Billing</target>
+          <source>Dates</source>
+          <target>Dates</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Billing Document - Control DateFields - Property Caption</note>
         </trans-unit>
@@ -638,12 +638,6 @@
           <target>Post Document</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Billing Document - Control PostDocument - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1304685356 - Control 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting</source>
-          <target>Posting</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Create Billing Document - Control Posting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1304685356 - Control 3037438984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the date which is used as the posting date in the documents.</source>
@@ -1798,8 +1792,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Discount Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1642888827 - Control 1778072510 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that the associated service has ended.</source>
-          <target>Specifies that the associated service has ended.</target>
+          <source>Indicates that the associated service has ended.</source>
+          <target>Indicates that the associated service has ended.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Cust. Cont. Line Subp. - Control Closed - Property ToolTip</note>
         </trans-unit>
@@ -2686,8 +2680,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract - Control Shipping and Billing - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1844147434 - Control 3805908166 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
-          <target>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
+          <source>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <target>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Customer Contract - Control Without Contract Deferrals - Property ToolTip</note>
         </trans-unit>
@@ -3094,8 +3088,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1940275159 - Control 3689299390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
-          <target>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
+          <source>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
+          <target>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments - Control Agreed Serv. Comm. Start Date - Property ToolTip</note>
         </trans-unit>
@@ -3375,18 +3369,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action ServiceCommitmentTemplate - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1347898780 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Analyze vendor contract deferrals.</source>
-          <target>Analyze vendor contract deferrals.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action VendorContractDeferralsAnalysis - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1347898780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Contract Deferrals Analysis</source>
-          <target>Vendor Contract Deferrals Analysis</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action VendorContractDeferralsAnalysis - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2030015066 - Action 145586122 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create a new Vendor Contract.</source>
           <target>Create a new Vendor Contract.</target>
@@ -3422,18 +3404,6 @@
           <target>Setup</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action Setup - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1550352179 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the list of Usage Data Supplier References.</source>
-          <target>Opens the list of Usage Data Supplier References.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSupplierReferences - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1550352179 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage Data Supplier References</source>
-          <target>Usage Data Supplier References</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSupplierReferences - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2030015066 - Action 1592251668 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open the list of posted purchase credit memos.</source>
@@ -3483,18 +3453,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action RecurringJobJournals - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1642270958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the list of Usage Data Suppliers.</source>
-          <target>Opens the list of Usage Data Suppliers.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSuppliers - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 1642270958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage Data Suppliers</source>
-          <target>Usage Data Suppliers</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSuppliers - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2030015066 - Action 1705761409 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View auditing details for all item ledger entries. Every time an entry is posted, a register is created in which you can see the first and last number of its entries in order to document when entries were posted.</source>
           <target>View auditing details for all item ledger entries. Every time an entry is posted, a register is created in which you can see the first and last number of its entries in order to document when entries were posted.</target>
@@ -3531,18 +3489,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action RecurringBilling - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 2104231133 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the list of Usage Data Imports.</source>
-          <target>Opens the list of Usage Data Imports.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataImports - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 2104231133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage Data Imports</source>
-          <target>Usage Data Imports</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataImports - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2030015066 - Action 2111109339 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detailed information on the Service Objects. The Service Objects shows the article for which it was created and the services that belong to it. The amount and the details of the provision can be seen. The service recipient indicates to which customer the service item was sold. Different delivery and billing addresses provide information about who the item was delivered to and who received the invoice. In addition, the services are shown in detail and can be edited.</source>
           <target>Detailed information on the Service Objects. The Service Objects shows the article for which it was created and the services that belong to it. The amount and the details of the provision can be seen. The service recipient indicates to which customer the service item was sold. Different delivery and billing addresses provide information about who the item was delivered to and who received the invoice. In addition, the services are shown in detail and can be edited.</target>
@@ -3566,12 +3512,6 @@
           <target>Project Tasks</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action JobTasks - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reports</source>
-          <target>Reports</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action Reports - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2030015066 - Action 2182005804 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open the list of all planned and quoted projects.</source>
@@ -3626,18 +3566,6 @@
           <target>Service Commitment Package</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action ServiceCommitmentPackage - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 2572817348 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Analyze customer contract deferrals.</source>
-          <target>Analyze customer contract deferrals.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action CustomerContractDeferralsAnalysis - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 2572817348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Customer Contract Deferrals Analysis</source>
-          <target>Customer Contract Deferrals Analysis</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action CustomerContractDeferralsAnalysis - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2030015066 - Action 2726139539 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View auditing details for all G/L entries. Every time an entry is posted, a register is created in which you can see the first and last number of its entries in order to document when entries were posted.</source>
@@ -3807,30 +3735,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action JobGLJournals - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 375388628 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Create a new Service Object.</source>
-          <target>Create a new Service Object.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action ServiceObject - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 375388628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Service Object</source>
-          <target>Service Object</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action ServiceObject - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 3764848903 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Opens the list of Usage Data Subscriptions.</source>
-          <target>Opens the list of Usage Data Subscriptions.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSubscriptions - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 3764848903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage Data Subscriptions</source>
-          <target>Usage Data Subscriptions</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageDataSubscriptions - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2030015066 - Action 3772398281 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Create purchase credit memos to mirror sales credit memos that vendors send to you for incorrect or damaged items that you have paid for and then returned to the vendor. If you need more control of the purchase return process, such as warehouse documents for the physical handling, use purchase return orders, in which purchase credit memos are integrated. Purchase credit memos can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature. Note: If you have not yet paid for an erroneous purchase, you can simply cancel the posted purchase invoice to automatically revert the financial transaction.</source>
           <target>Create purchase credit memos to mirror sales credit memos that vendors send to you for incorrect or damaged items that you have paid for and then returned to the vendor. If you need more control of the purchase return process, such as warehouse documents for the physical handling, use purchase return orders, in which purchase credit memos are integrated. Purchase credit memos can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature. Note: If you have not yet paid for an erroneous purchase, you can simply cancel the posted purchase invoice to automatically revert the financial transaction.</target>
@@ -3842,12 +3746,6 @@
           <target>Purchase Credit Memos</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action PurchaseCreditMemos - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 3809155631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Usage Data</source>
-          <target>Usage Data</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action UsageData - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2030015066 - Action 3950619723 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View or edit Contract Types.</source>
@@ -3896,18 +3794,6 @@
           <target>Purchase Invoices</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action PurchaseInvoices - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 411130336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Analyze components of your contracts.</source>
-          <target>Analyze components of your contracts.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action OverviewOfContractComponents - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2030015066 - Action 411130336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Overview of Contract Components</source>
-          <target>Overview of Contract Components</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Sub. Billing Role Center - Action OverviewOfContractComponents - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2030015066 - Action 4125361688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Revert the financial transactions involved when your customers want to cancel a purchase or return incorrect or damaged items that you sent to them and received payment for. To include the correct information, you can create the sales credit memo from the related posted sales invoice or you can create a new sales credit memo with copied invoice information. If you need more control of the sales return process, such as warehouse documents for the physical handling, use sales return orders, in which sales credit memos are integrated. Note: If an erroneous sale has not been paid yet, you can simply cancel the posted sales invoice to automatically revert the financial transaction.</source>
@@ -4438,8 +4324,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Imported Customer Contracts - Control Contract created - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 20514507 - Control 3805908166 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
-          <target>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
+          <source>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <target>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Imported Customer Contracts - Control Without Contract Deferrals - Property ToolTip</note>
         </trans-unit>
@@ -4636,8 +4522,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2065999009 - Control 3689299390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
-          <target>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
+          <source>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
+          <target>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Control Agreed Serv. Comm. Start Date - Property ToolTip</note>
         </trans-unit>
@@ -4712,12 +4598,6 @@
           <target>Sales Service Commitments</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Service Commitments List - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2100684896 - Control 1008347101 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the variant code of the service object before the change.</source>
-          <target>Specifies the variant code of the service object before the change.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Service Commitment Archive - Control Variant Code (Service Object) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2100684896 - Control 1165272857 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a date formula for automatic renewal after initial term and the rhythm of the update of "Notice possible to" and "Term Until". If the field is empty and the initial term or notice period is filled, the end of service is automatically set to the end of the initial term or notice period.</source>
@@ -5524,8 +5404,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract - Control Buy-from Contact No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2335879890 - Control 3805908166 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
-          <target>Specifies whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
+          <source>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</source>
+          <target>Indicates whether deferrals should be generated for the contract. If the field is activated, no deferrals are generated and the invoices are posted directly to profit or loss.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Vendor Contract - Control Without Contract Deferrals - Property ToolTip</note>
         </trans-unit>
@@ -5781,144 +5661,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Contract Setup - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 1334597385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the template that is used to calculate billable services.</source>
-          <target>Specifies the name of the template that is used to calculate billable services.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control VendorContractNoFilter - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 1334597385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Contract No.</source>
-          <target>Vendor Contract No.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control VendorContractNoFilter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 179123949 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies for which period the Service Amount is valid. If you enter 1M here, a period of one month, or 12M, a period of 1 year, to which Service Amount refers to.</source>
-          <target>Specifies for which period the Service Amount is valid. If you enter 1M here, a period of one month, or 12M, a period of 1 year, to which Service Amount refers to.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Billing Base Period - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 1984900360 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the optional date up to which the billable services should be charged.</source>
-          <target>Specifies the optional date up to which the billable services should be charged.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Billing to Date - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 1984900360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Billing to Date</source>
-          <target>Billing to Date</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Billing to Date - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 2476598635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Dateformula for hythm in which the service is invoiced. Using a Dateformula rhythm can be, for example, a monthly, a quarterly or a yearly invoicing.</source>
-          <target>Specifies the Dateformula for hythm in which the service is invoiced. Using a Dateformula rhythm can be, for example, a monthly, a quarterly or a yearly invoicing.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Billing Rhythm - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 2991286571 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source> Specifies the amount to be charged.</source>
-          <target> Specifies the amount to be charged.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Vendor Invoice Amount - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 2991286571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor Invoice Amount </source>
-          <target>Vendor Invoice Amount </target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Vendor Invoice Amount - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3001618318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the vendor's reference.</source>
-          <target>Specifies the vendor's reference.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Your Reference - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3214437004 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the date of the next billing possible.</source>
-          <target>Specifies the date of the next billing possible.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Next Billing Date - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3214437004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Next Billing Date</source>
-          <target>Next Billing Date</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Next Billing Date - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 351545917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Number of units of service object.</source>
-          <target>Number of units of service object.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Service Object Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3609111399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies in which contract the service will be calculated.</source>
-          <target>Specifies in which contract the service will be calculated.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Contract No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3635338911 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the price of the service with quantity of 1 in the billing period. The price is calculated from Base Price and Base Price %.</source>
-          <target>Specifies the price of the service with quantity of 1 in the billing period. The price is calculated from Base Price and Base Price %.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Price - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <target>Price</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 611648388 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the base amount from which the price will be calculated.</source>
-          <target>Specifies the base amount from which the price will be calculated.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Calculation Base Amount - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 704047291 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the percent at which the price of the service will be calculated. 100% means that the price corresponds to the Base Price.</source>
-          <target>Specifies the percent at which the price of the service will be calculated. 100% means that the price corresponds to the Base Price.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Calculation Base % - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 767911778 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a description of the service object.</source>
-          <target>Specifies a description of the service object.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Service Object Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 782864500 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the description of the service.</source>
-          <target>Specifies the description of the service.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Service Commitment Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 831102418 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Filter</source>
-          <target>Filter</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control VendorContractFilter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 90423963 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that the Service Commitment is to be called up in the purchase invoice.</source>
-          <target>Specifies that the Service Commitment is to be called up in the purchase invoice.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Selected - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Control 914189619 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the amount for the service including discount.</source>
-          <target>Specifies the amount for the service including discount.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Control Service Amount - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2520676567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Get Vendor Contract Lines</source>
-          <target>Get Vendor Contract Lines</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Get Vendor Contract Lines - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2554371247 - Control 1199686038 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies that no data from the associated blob field is used as the basis for processing the usage data. This is the case, for example, when the usage data is imported via API.</source>
           <target>Specifies that no data from the associated blob field is used as the basis for processing the usage data. This is the case, for example, when the usage data is imported via API.</target>
@@ -6130,8 +5872,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Assigned Items - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2632523359 - Control 1227165199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Billing</source>
-          <target>Billing</target>
+          <source>Dates</source>
+          <target>Dates</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Vend. B. Docs - Control DateFields - Property Caption</note>
         </trans-unit>
@@ -6158,12 +5900,6 @@
           <target>Billing Date</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Vend. B. Docs - Control BillingDate - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2632523359 - Control 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting</source>
-          <target>Posting</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Vend. B. Docs - Control Posting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2632523359 - Control 3037438984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the date which is used as the posting date in the documents.</source>
@@ -6718,8 +6454,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Service Start Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2874599362 - Control 3180290044 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
-          <target>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
+          <source>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
+          <target>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines - Control Update Required - Property ToolTip</note>
         </trans-unit>
@@ -7288,8 +7024,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2997449368 - Control 3689299390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the individually agreed start of the service.</source>
-          <target>Specifies the individually agreed start of the service.</target>
+          <source>Indicates the individually agreed start of the service.</source>
+          <target>Indicates the individually agreed start of the service.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Contract Renewal - Control Agreed Serv. Comm. Start Date - Property ToolTip</note>
         </trans-unit>
@@ -7414,8 +7150,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Serv. Comm. Archive List - Control Price - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3040126418 - Control 3689299390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
-          <target>Specifies the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
+          <source>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</source>
+          <target>Indicates the individually agreed start of the service. Enter a date here to overwrite the determination of the start of service with the start of service formula upon delivery. If the field remains empty, the start of the service is determined upon delivery.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Serv. Comm. Archive List - Control Agreed Serv. Comm. Start Date - Property ToolTip</note>
         </trans-unit>
@@ -8248,8 +7984,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Extend Contract - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3375964247 - Control 1227165199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Billing</source>
-          <target>Billing</target>
+          <source>Dates</source>
+          <target>Dates</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Cust. B. Docs - Control DateFields - Property Caption</note>
         </trans-unit>
@@ -8288,12 +8024,6 @@
           <target>Post Document</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Cust. B. Docs - Control PostDocument - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3375964247 - Control 2808404044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Posting</source>
-          <target>Posting</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Create Usage B. Cust. B. Docs - Control Posting - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3375964247 - Control 3037438984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the date which is used as the posting date in the documents.</source>
@@ -8842,8 +8572,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Service Start Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3410184032 - Control 3180290044 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
-          <target>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
+          <source>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
+          <target>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Billing Lines List - Control Update Required - Property ToolTip</note>
         </trans-unit>
@@ -10096,8 +9826,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Service Start Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3704080430 - Control 3180290044 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
-          <target>Specifies whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
+          <source>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</source>
+          <target>Indicates whether the associated service has been changed. The "Create Billing Proposal" function must be called up again before the billing document is created.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Recurring Billing - Control Update Required - Property ToolTip</note>
         </trans-unit>
@@ -10288,8 +10018,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Discount Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3740541235 - Control 1778072510 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that the associated service has ended.</source>
-          <target>Specifies that the associated service has ended.</target>
+          <source>Indicates that the associated service has ended.</source>
+          <target>Indicates that the associated service has ended.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Closed Vend. Cont. Line Subp. - Control Closed - Property ToolTip</note>
         </trans-unit>
@@ -11961,12 +11691,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Object - Control Archived Service Commitments - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 4265752052 - Control 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Variant Code of the service object.</source>
-          <target>Specifies the Variant Code of the service object.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Service Object - Control Variant Code - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="Page 4265752052 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a description of the service object.</source>
           <target>Specifies a description of the service object.</target>
@@ -12490,8 +12214,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Action VendorContracts - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Action 2197396733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Enables the import of billing data in the form of a CSV file into the selected import.</source>
-          <target>Enables the import of billing data in the form of a CSV file into the selected import.</target>
+          <source>Enables the import of billing data in the form of a CSV file.</source>
+          <target>Enables the import of billing data in the form of a CSV file.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Action ImportFile - Property ToolTip</note>
         </trans-unit>
@@ -12602,18 +12326,6 @@
           <target>Create Usage Data Billing</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Action Create Usage Data Billing - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 584234461 - Action 4054714416 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Creates a new import and opens a dialog for importing billing data in the form of a CSV file.</source>
-          <target>Creates a new import and opens a dialog for importing billing data in the form of a CSV file.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Action NewImportAndFile - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 584234461 - Action 4054714416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>New Import &amp; file</source>
-          <target>New Import &amp; file</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Imports - Action NewImportAndFile - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 584234461 - Action 4177973127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Opens the posted customer contract invoices that belong to this import.</source>
@@ -12782,12 +12494,6 @@
           <target>Specifies the reference by which the customer identifies the service object.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Service Objects - Control Customer Reference - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 632672245 - Control 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Variant Code of the service object.</source>
-          <target>Specifies the Variant Code of the service object.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Service Objects - Control Variant Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 632672245 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a description of the service object.</source>
@@ -13617,24 +13323,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purch Invoice Subform - Action ShowBillingLines - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1177848449 - Action 3180116455 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 896930563">
-          <source>Select a corresponding Vendor Contract line.</source>
-          <target>Select a corresponding Vendor Contract line.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purch Invoice Subform - Action Assign Contract Line - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1177848449 - Action 3180116455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 896930563">
-          <source>Assign Contract Line</source>
-          <target>Assign Contract Line</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purch Invoice Subform - Action Assign Contract Line - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1177848449 - Control 2503316943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 896930563">
-          <source>Specifies that the invoice line is linked to a contract line.</source>
-          <target>Specifies that the invoice line is linked to a contract line.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purch Invoice Subform - Control Attached to Contract Line - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="PageExtension 1234581291 - Action 2831882809 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1234581291">
           <source>Shows the archived service commitments for the line.</source>
           <target>Shows the archived service commitments for the line.</target>
@@ -13648,8 +13336,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Arch. Sub. - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1234581291 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1234581291">
-          <source>Shows the number of service commitments (Subscription Billing) for the archived sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the archived sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Arch. Sub. - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -13738,14 +13426,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Card - Action ServiceCommitments - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1434786627 - Control 1779183316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies that at least one usage data supplier reference exists for the item. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies that at least one usage data supplier reference exists for the item. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies that at least one usage data supplier reference exists for the item.</source>
+          <target>Specifies that at least one usage data supplier reference exists for the item.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Card - Control UsageDataSupplierRefExists - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1434786627 - Control 3822659215 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies whether or not service commitments can be linked to this item, or if the item is being used for recurring billing. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether or not service commitments can be linked to this item, or if the item is being used for recurring billing. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Indicates whether a service commitment can be stored for an item or whether an item is used for Recurring Billing.</source>
+          <target>Indicates whether a service commitment can be stored for an item or whether an item is used for Recurring Billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Card - Control Service Commitment Option - Property ToolTip</note>
         </trans-unit>
@@ -13756,20 +13444,20 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Card - Control ItemServCommitmentsFactbox - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1567633909 - Control 3704080430 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
-          <source>Specifies whether the entry was created by Subscription Billing.</source>
-          <target>Specifies whether the entry was created by Subscription Billing.</target>
+          <source>Specifies whether the entry was created via recurring billing.</source>
+          <target>Specifies whether the entry was created via recurring billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Ledger Entries - Control Recurring Billing - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1571666526 - Control 2693583028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1571666526">
-          <source>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies the sequential number of the associated product reference for processing usage-based billing.</source>
+          <target>Specifies the sequential number of the associated product reference for processing usage-based billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Item Catalog - Control SupplierRefEntryNo - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1642199961 - Control 2369708401 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1642199961">
-          <source>Specifies which source code is used in the G/L when posting the release of contract deferrals (Subscription Billing).</source>
-          <target>Specifies which source code is used in the G/L when posting the release of contract deferrals (Subscription Billing).</target>
+          <source>Indicates which source code is used in the G/L when posting the release of contract deferrals.</source>
+          <target>Indicates which source code is used in the G/L when posting the release of contract deferrals.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Source Code Setup - Control ContractDeferralsRelease - Property ToolTip</note>
         </trans-unit>
@@ -13780,8 +13468,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Source Code Setup - Control SubcriptionBilling - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1708100201 - Control 3936944636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
-          <source>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies whether the billing details for this document are automatically output.</source>
+          <target>Specifies whether the billing details for this document are automatically output.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Credit Memo - Control Contract Detail Overview - Property ToolTip</note>
         </trans-unit>
@@ -13804,8 +13492,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Archive Subform - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1893889982 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1893889982">
-          <source>Shows the number of service commitments (Subscription Billing) for the archived sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the archived sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Archive Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -13816,8 +13504,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Marketing Mgr. RC - Control SubBillingActivities - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1925407999 - Control 1451338661 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1925407999">
-          <source>Specifies the G/L account to which vendor contract costs (Subscription Billing) are accrued.</source>
-          <target>Specifies the G/L account to which vendor contract costs (Subscription Billing) are accrued.</target>
+          <source>Specifies the G/L account to which the revenue from vendor contracts is accrued.</source>
+          <target>Specifies the G/L account to which the revenue from vendor contracts is accrued.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control VendContrDeferralAccount - Property ToolTip</note>
         </trans-unit>
@@ -13828,8 +13516,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control VendContrDeferralAccount - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1925407999 - Control 1578430217 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1925407999">
-          <source>Specifies the G/L account to which vendor contract costs (Subscription Billing) are posted.</source>
-          <target>Specifies the G/L account to which vendor contract costs (Subscription Billing) are posted.</target>
+          <source>Specifies the G/L account to which the revenues from vendor contracts are posted.</source>
+          <target>Specifies the G/L account to which the revenues from vendor contracts are posted.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control VendorContractAccount - Property ToolTip</note>
         </trans-unit>
@@ -13846,8 +13534,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control SubcriptionBilling - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1925407999 - Control 3629757089 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1925407999">
-          <source>Specifies the G/L account to which customer contract revenue (Subscription Billing) is posted.</source>
-          <target>Specifies the G/L account to which customer contract revenue (Subscription Billing) is posted.</target>
+          <source>Specifies the G/L account to which the revenues from customer contracts are posted.</source>
+          <target>Specifies the G/L account to which the revenues from customer contracts are posted.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control CustomerContractAccount - Property ToolTip</note>
         </trans-unit>
@@ -13858,8 +13546,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control CustomerContractAccount - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1925407999 - Control 4006538717 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1925407999">
-          <source>Specifies the G/L account to which customer contract revenue (Subscription Billing) is accrued.</source>
-          <target>Specifies the G/L account to which customer contract revenue (Subscription Billing) is accrued.</target>
+          <source>Specifies the G/L account to which the revenue from customer contracts is accrued.</source>
+          <target>Specifies the G/L account to which the revenue from customer contracts is accrued.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup Card - Control CustContrDeferralAccount - Property ToolTip</note>
         </trans-unit>
@@ -13882,8 +13570,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Action AddSalesServiceCommitment - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2026081320 - Action 1906957713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
-          <source>Add Service Commitments</source>
-          <target>Add Service Commitments</target>
+          <source>Add Service</source>
+          <target>Add Service</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Action AddSalesServiceCommitment - Property Caption</note>
         </trans-unit>
@@ -13900,8 +13588,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Action ShowSalesServiceCommitments - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2026081320 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2026081320">
-          <source>Shows the number of service commitments (Subscription Billing) for the sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -13930,8 +13618,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Subform - Control Customer Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2185457841 - Control 3822659215 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2185457841">
-          <source>Specifies whether or not service commitments can be linked to this item, or if the item is being used for recurring billing. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether or not service commitments can be linked to this item, or if the item is being used for recurring billing. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Indicates whether a service commitment can be stored for an item or whether an item is used for Recurring Billing.</source>
+          <target>Indicates whether a service commitment can be stored for an item or whether an item is used for Recurring Billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Templ. Card - Control Service Commitment Option - Property ToolTip</note>
         </trans-unit>
@@ -13942,44 +13630,32 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Templ. Card - Control ServiceCommitmentPackages - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2266731984 - Control 2693583028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2266731984">
-          <source>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies the sequential number of the associated product reference for processing usage-based billing.</source>
+          <target>Specifies the sequential number of the associated product reference for processing usage-based billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Reference Entries - Control SupplierRefEntryNo - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2341912694 - Control 2693583028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
-          <source>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies the sequential number of the associated product reference for processing usage-based billing. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies the sequential number of the associated product reference for processing usage-based billing.</source>
+          <target>Specifies the sequential number of the associated product reference for processing usage-based billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item Vendor Catalog - Control SupplierRefEntryNo - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2393537757 - Control 3704080430 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
-          <source>Specifies whether the entry was created by Subscription Billing.</source>
-          <target>Specifies whether the entry was created by Subscription Billing.</target>
+          <source>Specifies whether the entry was created via recurring billing.</source>
+          <target>Specifies whether the entry was created via recurring billing.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries - Control Recurring Billing - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2420212404 - Control 3936944636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
-          <source>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies whether the billing details for this document are automatically output.</source>
+          <target>Specifies whether the billing details for this document are automatically output.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Invoice - Control Contract Detail Overview - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2437096118 - Action 2520676567 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
-          <source>Select Vendor Contract lines and create corresponding invoice lines.</source>
-          <target>Select Vendor Contract lines and create corresponding invoice lines.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoice - Action Get Vendor Contract Lines - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 2437096118 - Action 2520676567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
-          <source>Get Vendor Contract Lines</source>
-          <target>Get Vendor Contract Lines</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoice - Action Get Vendor Contract Lines - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 2716593954 - Control 3936944636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
-          <source>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies whether the billing details for this document are automatically output.</source>
+          <target>Specifies whether the billing details for this document are automatically output.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Credit Memo - Control Contract Detail Overview - Property ToolTip</note>
         </trans-unit>
@@ -14032,8 +13708,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Order Processor RC - Control SubBillingActivities - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 320642379 - Control 1451338661 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 320642379">
-          <source>Specifies the G/L account to which vendor contract costs (Subscription Billing) are accrued.</source>
-          <target>Specifies the G/L account to which vendor contract costs (Subscription Billing) are accrued.</target>
+          <source>Specifies the G/L account to which the revenue from vendor contracts is accrued.</source>
+          <target>Specifies the G/L account to which the revenue from vendor contracts is accrued.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control VendContrDeferralAccount - Property ToolTip</note>
         </trans-unit>
@@ -14044,8 +13720,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control VendContrDeferralAccount - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 320642379 - Control 1578430217 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 320642379">
-          <source>Specifies the G/L account to which vendor contract costs (Subscription Billing) are posted.</source>
-          <target>Specifies the G/L account to which vendor contract costs (Subscription Billing) are posted.</target>
+          <source>Specifies the G/L account to which the revenues from vendor contracts are posted.</source>
+          <target>Specifies the G/L account to which the revenues from vendor contracts are posted.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control VendorContractAccount - Property ToolTip</note>
         </trans-unit>
@@ -14056,8 +13732,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control VendorContractAccount - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 320642379 - Control 3629757089 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 320642379">
-          <source>Specifies the G/L account to which customer contract revenue (Subscription Billing) is posted.</source>
-          <target>Specifies the G/L account to which customer contract revenue (Subscription Billing) is posted.</target>
+          <source>Specifies the G/L account to which the revenues from customer contracts are posted.</source>
+          <target>Specifies the G/L account to which the revenues from customer contracts are posted.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control CustomerContractAccount - Property ToolTip</note>
         </trans-unit>
@@ -14068,8 +13744,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control CustomerContractAccount - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 320642379 - Control 4006538717 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 320642379">
-          <source>Specifies the G/L account to which customer contract revenue (Subscription Billing) is accrued.</source>
-          <target>Specifies the G/L account to which customer contract revenue (Subscription Billing) is accrued.</target>
+          <source>Specifies the G/L account to which the revenue from customer contracts is accrued.</source>
+          <target>Specifies the G/L account to which the revenue from customer contracts is accrued.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Posting Setup - Control CustContrDeferralAccount - Property ToolTip</note>
         </trans-unit>
@@ -14104,8 +13780,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Contract Sales H. Sell Factbox - Control Service Objects - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3573230301 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3573230301">
-          <source>Shows the number of service commitments (Subscription Billing) for the sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Line FactBox - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -14194,14 +13870,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Contr. Vendor H. Buy FactBox - Control Vendor Contracts - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4034894651 - Control 3936944636 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
-          <source>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</source>
-          <target>Specifies whether to automatically print the billing details for this document. This is only relevant if you are using Subscription Billing functionalities.</target>
+          <source>Specifies whether the billing details for this document are automatically output.</source>
+          <target>Specifies whether the billing details for this document are automatically output.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice - Control Contract Detail Overview - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 4050813720 - Control 4055503516 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4050813720">
-          <source>Specifies the Dimension Code that is used for Customer Contracts.</source>
-          <target>Specifies the Dimension Code that is used for Customer Contracts.</target>
+          <source>Specifies the value of the Dim. Code for Cust. Contr. field.</source>
+          <target>Specifies the value of the Dim. Code for Cust. Contr. field.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Ledger Setup - Control Dimension Code Cust. Contr. - Property ToolTip</note>
         </trans-unit>
@@ -14236,8 +13912,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Archive Subform - Action ShowSalesServiceCommitmentArchive - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4117186890 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4117186890">
-          <source>Shows the number of service commitments (Subscription Billing) for the archived sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the archived sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Archive Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -14260,8 +13936,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Action AddSalesServiceCommitment - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 416138076 - Action 1906957713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
-          <source>Add Service Commitments</source>
-          <target>Add Service Commitments</target>
+          <source>Add Service</source>
+          <target>Add Service</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Action AddSalesServiceCommitment - Property Caption</note>
         </trans-unit>
@@ -14278,8 +13954,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Action ShowSalesServiceCommitments - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 416138076 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 416138076">
-          <source>Shows the number of service commitments (Subscription Billing) for the sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>
@@ -14368,8 +14044,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Action AddSalesServiceCommitment - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 884441745 - Action 1906957713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 884441745">
-          <source>Add Service Commitments</source>
-          <target>Add Service Commitments</target>
+          <source>Add Service</source>
+          <target>Add Service</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Action AddSalesServiceCommitment - Property Caption</note>
         </trans-unit>
@@ -14386,8 +14062,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Action ShowSalesServiceCommitments - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 884441745 - Control 150765807 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 884441745">
-          <source>Shows the number of service commitments (Subscription Billing) for the sales line.</source>
-          <target>Shows the number of service commitments (Subscription Billing) for the sales line.</target>
+          <source>Shows the number of service commitments for the sales line.</source>
+          <target>Shows the number of service commitments for the sales line.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Blanket Sales Order Subform - Control Service Commitments - Property ToolTip</note>
         </trans-unit>

@@ -3,6 +3,42 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="TextDataApp">
     <body>
       <group id="body">
+        <trans-unit id="Page 1566601818 - Control 215497968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code that identifies the currency of the Intrastat Report.</source>
+          <target>Specifies a code that identifies the currency of the Intrastat Report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control Currency Identifier - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1566601818 - Control 3293730985 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the entry has already been reported to the tax authorities.</source>
+          <target>Specifies whether the entry has already been reported to the tax authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control Reported - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1566601818 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies some information about the Intrastat Report.</source>
+          <target>Specifies some information about the Intrastat Report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1566601818 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Intrastat Report number.</source>
+          <target>Specifies the Intrastat Report number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1566601818 - Control 556262972 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</source>
+          <target>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control Amounts in Add. Currency - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1566601818 - Control 970646220 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017.</source>
+          <target>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report List - Control Statistics Period - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1566601818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report List</source>
           <target>Intrastat Report List</target>
@@ -21,6 +57,156 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control TotalStatisticalValue - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 1212385681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code for the country/region where the item was produced or processed.</source>
+          <target>Specifies a code for the country/region where the item was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Country/Region of Origin Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 1267997203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a specification of the document's transaction, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies a specification of the document's transaction, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Transaction Specification - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 1624434300 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the counter party's VAT number.</source>
+          <target>Specifies the counter party's VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Partner VAT ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the entry type.</source>
+          <target>Specifies the entry type.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Source Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the item was received or shipped by the company.</source>
+          <target>Specifies whether the item was received or shipped by the company.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2102199635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies an amount that represents the costs for freight and insurance.</source>
+          <target>Specifies an amount that represents the costs for freight and insurance.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Indirect Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2161516449 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a reference number used by the customs and tax authorities.</source>
+          <target>Specifies a reference number used by the customs and tax authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Internal Ref. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2161572060 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the location that the entry is linked to.</source>
+          <target>Specifies the code for the location that the entry is linked to.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Location Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2242438606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies any indirect costs, as a percentage.</source>
+          <target>Specifies any indirect costs, as a percentage.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Cost Regulation % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2259420277 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item's shipment method.</source>
+          <target>Specifies the item's shipment method.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Shpt. Method Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2275026644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the entry's statistical value, which must be reported to the statistics authorities.</source>
+          <target>Specifies the entry's statistical value, which must be reported to the statistics authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Statistical Value - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of units of the item in the entry.</source>
+          <target>Specifies the number of units of the item in the entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2842094365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the tariff no. that is associated with the item.</source>
+          <target>Specifies the name of the tariff no. that is associated with the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Item Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2842094365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tariff No. Description</source>
+          <target>Tariff No. Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region of the address.</source>
+          <target>Specifies the country/region of the address.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2959979021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code for the tariff number on this line.</source>
+          <target>Specifies the unit of measure code for the tariff number on this line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Suppl. Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the item.</source>
+          <target>Specifies the name of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Name</source>
+          <target>Item Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3088522385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net weight of one unit of the item.</source>
+          <target>Specifies the net weight of one unit of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Net Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3165222728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity of supplementary units on the Intrastat line.</source>
+          <target>Specifies the quantity of supplementary units on the Intrastat line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Supplementary Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3192175264 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date the item entry was posted.</source>
+          <target>Specifies the date the item entry was posted.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3193866272 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the transport method, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the transport method, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Transport Method - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3532935625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the area of the customer or vendor, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the area of the customer or vendor, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Area - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3627141058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number that the item entry had in the table it came from.</source>
+          <target>Specifies the number that the item entry had in the table it came from.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Source Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3678710499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the conversion factor of the item on this Intrastat report line.</source>
+          <target>Specifies the conversion factor of the item on this Intrastat report line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Suppl. Conversion Factor - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1949250098 - Control 3698871364 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the statistical value that has accumulated in the Intrastat report.</source>
           <target>Specifies the statistical value that has accumulated in the Intrastat report.</target>
@@ -33,17 +219,293 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control StatisticalValue - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3701472611 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item's tariff number.</source>
+          <target>Specifies the item's tariff number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Tariff No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3773776616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of transaction that the document represents, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the type of transaction that the document represents, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Transaction Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3814925297 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</source>
+          <target>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Entry/Exit Point - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 3998061958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you must report information about quantity and units of measure for this item.</source>
+          <target>Specifies if you must report information about quantity and units of measure for this item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Supplementary Units - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number on the entry.</source>
+          <target>Specifies the document number on the entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the item.</source>
+          <target>Specifies the number of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 582094086 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total weight for the items in the item entry.</source>
+          <target>Specifies the total weight for the items in the item entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Total Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1949250098 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total amount of the entry, excluding VAT.</source>
+          <target>Specifies the total amount of the entry, excluding VAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Control Amount - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1949250098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lines</source>
           <target>Lines</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Subform - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 1212385681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code for the country/region where the item was produced or processed.</source>
+          <target>Specifies a code for the country/region where the item was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Country/Region of Origin Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 1267997203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a specification of the document's transaction, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies a specification of the document's transaction, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Transaction Specification - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 1624434300 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the counter party's VAT number.</source>
+          <target>Specifies the counter party's VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Partner VAT ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the entry type.</source>
+          <target>Specifies the entry type.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Source Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the item was received or shipped by the company.</source>
+          <target>Specifies whether the item was received or shipped by the company.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2102199635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies an amount that represents the costs for freight and insurance.</source>
+          <target>Specifies an amount that represents the costs for freight and insurance.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Indirect Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2161516449 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a reference number used by the customs and tax authorities.</source>
+          <target>Specifies a reference number used by the customs and tax authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Internal Ref. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2161572060 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the location that the entry is linked to.</source>
+          <target>Specifies the code for the location that the entry is linked to.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Location Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2242438606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies any indirect costs, as a percentage.</source>
+          <target>Specifies any indirect costs, as a percentage.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Cost Regulation % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2259420277 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item's shipment method.</source>
+          <target>Specifies the item's shipment method.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Shpt. Method Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2275026644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the entry's statistical value, which must be reported to the statistics authorities.</source>
+          <target>Specifies the entry's statistical value, which must be reported to the statistics authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Statistical Value - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of units of the item in the entry.</source>
+          <target>Specifies the number of units of the item in the entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2842094365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the tariff no. that is associated with the item.</source>
+          <target>Specifies the name of the tariff no. that is associated with the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Item Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2842094365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tariff No. Description</source>
+          <target>Tariff No. Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the country/region of the address.</source>
+          <target>Specifies the country/region of the address.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2959979021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unit of measure code for the tariff number on this line.</source>
+          <target>Specifies the unit of measure code for the tariff number on this line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Suppl. Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the item.</source>
+          <target>Specifies the name of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Name</source>
+          <target>Item Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3088522385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net weight of one unit of the item.</source>
+          <target>Specifies the net weight of one unit of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Net Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3165222728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity of supplementary units on the Intrastat line.</source>
+          <target>Specifies the quantity of supplementary units on the Intrastat line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Supplementary Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3192175264 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date the item entry was posted.</source>
+          <target>Specifies the date the item entry was posted.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3193866272 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the transport method, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the transport method, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Transport Method - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3532935625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the area of the customer or vendor, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the area of the customer or vendor, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Area - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3627141058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number that the item entry had in the table it came from.</source>
+          <target>Specifies the number that the item entry had in the table it came from.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Source Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3678710499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the conversion factor of the item on this Intrastat report line.</source>
+          <target>Specifies the conversion factor of the item on this Intrastat report line.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Suppl. Conversion Factor - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3701472611 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item's tariff number.</source>
+          <target>Specifies the item's tariff number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Tariff No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3773776616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of transaction that the document represents, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the type of transaction that the document represents, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Transaction Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3814925297 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</source>
+          <target>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Entry/Exit Point - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 3998061958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you must report information about quantity and units of measure for this item.</source>
+          <target>Specifies if you must report information about quantity and units of measure for this item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Supplementary Units - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number on the entry.</source>
+          <target>Specifies the document number on the entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the item.</source>
+          <target>Specifies the number of the item.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 582094086 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total weight for the items in the item entry.</source>
+          <target>Specifies the total weight for the items in the item entry.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Total Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2323374715 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total amount of the entry, excluding VAT.</source>
+          <target>Specifies the total amount of the entry, excluding VAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Control Amount - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2323374715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report Lines</source>
           <target>Intrastat Report Lines</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2405959708 - Control 2523111426 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the check for fields is run only on those lines that do not match the filter expression. If the line is not filtered, this field is ignored.</source>
+          <target>Specifies that the check for fields is run only on those lines that do not match the filter expression. If the line is not filtered, this field is ignored.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Checklist - Control Reversed Filter Expression - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2405959708 - Control 3070320983 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the table field that this entry in the checklist uses.</source>
+          <target>Specifies the name of the table field that this entry in the checklist uses.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Checklist - Control Field Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2405959708 - Control 3506477580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the filter expression that must be applied to the Intrastat line where field must be blank. The check for fields is run only on the lines that meet the filter criteria.</source>
+          <target>Specifies the filter expression that must be applied to the Intrastat line where field must be blank. The check for fields is run only on the lines that meet the filter criteria.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Checklist - Control Must Be Blank For Filter Expr. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2405959708 - Control 3531868071 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the table field that this entry in the checklist uses.</source>
+          <target>Specifies the number of the table field that this entry in the checklist uses.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Checklist - Control Field No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2405959708 - Control 3793438982 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the filter expression that must be applied to the Intrastat line. The check for fields is run only on the lines that meet the filter criteria.</source>
+          <target>Specifies the filter expression that must be applied to the Intrastat line. The check for fields is run only on the lines that meet the filter criteria.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Checklist - Control Filter Expression - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2405959708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report Checklist</source>
@@ -75,11 +537,83 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Action ImportDefaultDataExchangeDef - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1001138814 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Intrastat contact type.</source>
+          <target>Specifies the Intrastat contact type.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Intrastat Contact Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1119210147 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you must include arrivals of received goods in Intrastat reports.</source>
+          <target>Specifies that you must include arrivals of received goods in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Report Receipts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1136635266 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</source>
+          <target>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Intrastat Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1282614447 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file for received goods.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file for received goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Code - Receipt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1451650335 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Intrastat contact.</source>
+          <target>Specifies the Intrastat contact.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Intrastat Contact No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3132071445 - Control 1532816877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Numbering</source>
           <target>Numbering</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Numbering - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1577525362 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1659701640 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1809596345 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file for received goods.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file for received goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Name - Receipt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1818799312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the information to include in a customer's VAT registration number when it's exported to the Intrastat file.</source>
+          <target>Specifies the information to include in a customer's VAT registration number when it's exported to the Intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Cust. VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 1929781526 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default source of country code for item tracking.</source>
+          <target>Specifies the default source of country code for item tracking.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Def. Country Code for Item Tr. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 19531693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default 3-party trade VAT number.</source>
+          <target>Specifies the default 3-party trade VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Def. 3-Party Trade VAT No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 2043133186 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if report file (-s) shall be added to Zip file.</source>
+          <target>Specifies if report file (-s) shall be added to Zip file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Zip Files - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3132071445 - Control 2057091634 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reporting</source>
@@ -87,17 +621,107 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Reporting - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 2410835908 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of line that the partner's VAT registration number is updated for.</source>
+          <target>Specifies the type of line that the partner's VAT registration number is updated for.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Get Partner VAT For - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3132071445 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <target>General</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 2680197960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the information to include in a vendor's VAT registration number when it's exported to the Intrastat file.</source>
+          <target>Specifies the information to include in a vendor's VAT registration number when it's exported to the Intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Vend. VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 2681653000 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the information to include in the company's VAT registration number when it's exported to the Intrastat file.</source>
+          <target>Specifies the information to include in the company's VAT registration number when it's exported to the Intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Company VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 275031390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Name - Shpt. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 2903705327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default private person VAT number.</source>
+          <target>Specifies the default private person VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Def. Private Person VAT No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 3027822327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if drop shipment transactions are included in Intrastat reports.</source>
+          <target>Specifies if drop shipment transactions are included in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Include Drop Shipment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 3033389719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you must include shipments of dispatched items in Intrastat reports.</source>
+          <target>Specifies that you must include shipments of dispatched items in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Report Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 3496517085 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies based on which country code Intrastat report lines are taken.</source>
+          <target>Specifies based on which country code Intrastat report lines are taken.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Shipments Based On - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 377589252 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Data Exch. Def. Code - Shpt. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 3902642213 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default transaction type for sales returns and service returns, and purchase returns.</source>
+          <target>Specifies the default transaction type for sales returns and service returns, and purchase returns.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Default Trans. Type - Returns - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 3961198312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</source>
+          <target>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control VAT No. Based On - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3132071445 - Control 3962922608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Default Transactions</source>
           <target>Default Transactions</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Default Transactions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 4007980569 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if Receipts and Shipments shall be reported in two separate files.</source>
+          <target>Specifies if Receipts and Shipments shall be reported in two separate files.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Split Files - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 4157906401 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</source>
+          <target>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Default Transaction Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 4168804269 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default receiving country code.</source>
+          <target>Specifies the default receiving country code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Def. Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3132071445 - Control 694900210 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default VAT number for unknown state.</source>
+          <target>Specifies the default VAT number for unknown state.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup - Control Def. VAT for Unknown State - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3132071445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report Setup</source>
@@ -129,16 +753,34 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Action ActionNext - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1001138814 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Intrastat contact type.</source>
+          <target>Specifies the Intrastat contact type.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Intrastat Contact Type - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3458657684 - Control 1100141636 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Defaults</source>
           <target>Defaults</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Defaults - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1119210147 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you must include arrivals of received goods in Intrastat reports.</source>
+          <target>Specifies that you must include arrivals of received goods in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Report Receipts - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3458657684 - Control 1121962313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control StandardBanner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1136635266 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</source>
+          <target>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Intrastat Nos. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3458657684 - Control 1156881414 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report Setup is used to enable intrastat reporting and set defaults for it. You can specify whether you need to report Intrastat from shipments (dispatches), receipts (arrivals) or both depending on thresholds set by your local regulations. You can also set default transaction types for regular and return documents, used for nature of transaction reporting.</source>
@@ -152,11 +794,65 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Welcome to Intrastat Report Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1282614447 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file for received goods.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file for received goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Code - Receipt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1451650335 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Intrastat contact.</source>
+          <target>Specifies the Intrastat contact.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Intrastat Contact No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3458657684 - Control 1532816877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Numbering</source>
           <target>Numbering</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Numbering - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1577525362 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1659701640 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1809596345 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file for received goods.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file for received goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Name - Receipt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1818799312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how a customer's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
+          <target>Specifies how a customer's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Cust. VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 1929781526 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default source of country code for item tracking.</source>
+          <target>Specifies the default source of country code for item tracking.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Def. Country Code for Item Tr. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 19531693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default 3-party trade VAT number.</source>
+          <target>Specifies the default 3-party trade VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Def. 3-Party Trade VAT No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 2043133186 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if report file (-s) shall be added to Zip file.</source>
+          <target>Specifies if report file (-s) shall be added to Zip file.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Zip Files - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3458657684 - Control 2057091634 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reporting</source>
@@ -164,16 +860,64 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Reporting - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 2410835908 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies for which type of line Partner's VAT registration number is updated.</source>
+          <target>Specifies for which type of line Partner's VAT registration number is updated.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Get Partner VAT For - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3458657684 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General Information</source>
           <target>General Information</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 2680197960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how a vendor's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
+          <target>Specifies how a vendor's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Vend. VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 2681653000 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how the company's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
+          <target>Specifies how the company's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Company VAT No. on File - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 275031390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</source>
+          <target>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Name - Shpt. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 2903705327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default private person VAT number.</source>
+          <target>Specifies the default private person VAT number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Def. Private Person VAT No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3458657684 - Control 300852202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source></source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control FinishedBanner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 3027822327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if drop shipment transactions are included in Intrastat reports.</source>
+          <target>Specifies if drop shipment transactions are included in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Include Drop Shipment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 3033389719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you must include shipments of dispatched items in Intrastat reports.</source>
+          <target>Specifies that you must include shipments of dispatched items in Intrastat reports.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Report Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 3496517085 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies based on which country code Intrastat report lines are taken.</source>
+          <target>Specifies based on which country code Intrastat report lines are taken.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Shipments Based On - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3458657684 - Control 3647570164 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Choose Next to specify basic Intrastat reporting info.</source>
@@ -198,6 +942,48 @@
           <target>Important</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Important - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 377589252 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</source>
+          <target>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Data Exch. Def. Code - Shpt. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 3902642213 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default transaction type for sales returns and service returns, and purchase returns.</source>
+          <target>Specifies the default transaction type for sales returns and service returns, and purchase returns.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Default Trans. Type - Returns - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 3961198312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</source>
+          <target>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control VAT No. Based On - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 4007980569 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if Receipts and Shipments shall be reported in two separate files.</source>
+          <target>Specifies if Receipts and Shipments shall be reported in two separate files.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Split Files - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 4157906401 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</source>
+          <target>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Default Transaction Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 4168804269 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the default receiving country code.</source>
+          <target>Shows the default receiving country code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Def. Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3458657684 - Control 694900210 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default VAT number for unknown state.</source>
+          <target>Specifies the default VAT number for unknown state.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report Setup Wizard - Control Def. VAT for Unknown State - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3458657684 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report Setup</source>
@@ -307,17 +1093,95 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Action Release - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 879680616 - Control 215497968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a code that identifies the currency of the Intrastat report.</source>
+          <target>Specifies a code that identifies the currency of the Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Currency Identifier - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 879680616 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <target>General</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 879680616 - Control 3293730985 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether the entry has already been reported to the tax authorities.</source>
+          <target>Specifies whether the entry has already been reported to the tax authorities.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Reported - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies some information about the Intrastat Report.</source>
+          <target>Specifies some information about the Intrastat Report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 3813362964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the date when the report has been exported.</source>
+          <target>Specifies the date when the report has been exported.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Export Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the Intrastat Report.</source>
+          <target>Specifies the number of the Intrastat Report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 471116883 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the time when the report has been exported.</source>
+          <target>Specifies the time when the report has been exported.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Export Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status of the Intrastat Report.</source>
+          <target>Specifies the status of the Intrastat Report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 556262972 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</source>
+          <target>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Amounts in Add. Currency - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 879680616 - Control 970646220 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017</source>
+          <target>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Control Statistics Period - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 879680616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intrastat Report</source>
           <target>Intrastat Report</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Intrastat Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1231277438 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3901500866">
+          <source>Specifies a code of the country/region where the item was produced or processed.</source>
+          <target>Specifies a code of the country/region where the item was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intr. Rep. Lot No. Info List - Control Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1246386290 - Control 2959979021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1688820690">
+          <source>Specifies the unit of measure for the tariff number.</source>
+          <target>Specifies the unit of measure for the tariff number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Tariff Nmbs. - Control Suppl. Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1246386290 - Control 3678710499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1688820690">
+          <source>Specifies the conversion factor for the tariff number.</source>
+          <target>Specifies the conversion factor for the tariff number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Tariff Nmbs. - Control Suppl. Conversion Factor - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1473427827 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1886573825">
+          <source>Specifies a code of the country/region where the item was produced or processed.</source>
+          <target>Specifies a code of the country/region where the item was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intr. Rep. Ser. No. Info Card - Control Country/Region Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2304735109 - Action 3354820289 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2458191494">
           <source>Summarize the value of your purchases and sales with business partners in the EU for statistical purposes and prepare to send it to the relevant authority.</source>
@@ -331,17 +1195,95 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Bus.Man. RC - Action IntrastatReports - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2681147672 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4038454596">
+          <source>Specifies a code of the country/region where the item was produced or processed.</source>
+          <target>Specifies a code of the country/region where the item was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intr. Rep. Lot No. Info Card - Control Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 1212385681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies a code for the country/region where the asset was produced or processed.</source>
+          <target>Specifies a code for the country/region where the asset was produced or processed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Country/Region of Origin Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies if the asset shall be excluded from Intrastat report.</source>
+          <target>Specifies if the asset shall be excluded from Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Exclude from Intrastat Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 2319106204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies the unit of measure that is used as the supplementary unit in the Intrastat report.</source>
+          <target>Specifies the unit of measure that is used as the supplementary unit in the Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Supplementary Unit of Measure - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2803557633 - Control 2506657454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
           <source>Intrastat</source>
           <target>Intrastat</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Intrastat - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 3088522385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies the net weight of the asset.</source>
+          <target>Specifies the net weight of the asset.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Net Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 3701472611 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies a code for the asset's tariff number.</source>
+          <target>Specifies a code for the asset's tariff number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Tariff No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2803557633 - Control 4239513174 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3133908286">
+          <source>Specifies the gross weight of the asset.</source>
+          <target>Specifies the gross weight of the asset.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report FA Card - Control Gross Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3163649679 - Control 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies if the item shall be excluded from Intrastat report.</source>
+          <target>Specifies if the item shall be excluded from Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Item Card - Control Exclude from Intrastat Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3163649679 - Control 2319106204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit of measure code used in Intrastat report as supplementary unit.</source>
+          <target>Specifies the unit of measure code used in Intrastat report as supplementary unit.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Item Card - Control Supplementary Unit of Measure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3503152889 - Control 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2185457841">
+          <source>Specifies if the item shall be excluded from Intrastat report.</source>
+          <target>Specifies if the item shall be excluded from Intrastat report.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Item Templ. - Control Exclude from Intrastat Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 374427272 - Control 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Specifies the default transaction type for purchase returns.</source>
+          <target>Specifies the default transaction type for purchase returns.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Vendor Card - Control Default Trans. Type - Return - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 374427272 - Control 2506657454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Intrastat</source>
           <target>Intrastat</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Vendor Card - Control Intrastat - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 374427272 - Control 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Specifies the default transport method, for the purpose of reporting to INTRASTAT.</source>
+          <target>Specifies the default transport method, for the purpose of reporting to INTRASTAT.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Vendor Card - Control Def. Transport Method - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 374427272 - Control 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Specifies the default transaction type for regular purchase receipts.</source>
+          <target>Specifies the default transaction type for regular purchase receipts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Vendor Card - Control Default Trans. Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 4090736040 - Action 3354820289 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3470244815">
           <source>Summarize the value of your purchases and sales with business partners in the EU for statistical purposes and prepare to send it to the relevant authority.</source>
@@ -379,611 +1321,35 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Account RC - Action IntrastatReportsEmb - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 4248639385 - Control 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the default transaction type for sales returns and service returns.</source>
+          <target>Specifies the default transaction type for sales returns and service returns.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Cust. Card - Control Default Trans. Type - Return - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4248639385 - Control 2506657454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Intrastat</source>
           <target>Intrastat</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Cust. Card - Control Intrastat - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 589305342 - Control 2506657454 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2277595866">
-          <source>Intrastat</source>
-          <target>Intrastat</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Rep. Cust. Tem. Card - Control Intrastat - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 1212385681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a code for the country/region where the item was produced or processed.</source>
-          <target>Specifies a code for the country/region where the item was produced or processed.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Country/Region of Origin Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 1267997203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a specification of the document's transaction, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies a specification of the document's transaction, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Transaction Specification - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 1624434300 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the counter party's VAT number.</source>
-          <target>Specifies the counter party's VAT number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Partner VAT ID - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the entry type.</source>
-          <target>Specifies the entry type.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Source Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the item was received or shipped by the company.</source>
-          <target>Specifies whether the item was received or shipped by the company.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2102199635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies an amount that represents the costs for freight and insurance.</source>
-          <target>Specifies an amount that represents the costs for freight and insurance.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Indirect Cost - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2161516449 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a reference number used by the customs and tax authorities.</source>
-          <target>Specifies a reference number used by the customs and tax authorities.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Internal Ref. No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2161572060 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code for the location that the entry is linked to.</source>
-          <target>Specifies the code for the location that the entry is linked to.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Location Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2242438606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies any indirect costs, as a percentage.</source>
-          <target>Specifies any indirect costs, as a percentage.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Cost Regulation % - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2259420277 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the item's shipment method.</source>
-          <target>Specifies the item's shipment method.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Shpt. Method Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2275026644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the entry's statistical value, which must be reported to the statistics authorities.</source>
-          <target>Specifies the entry's statistical value, which must be reported to the statistics authorities.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Statistical Value - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of units of the item in the entry.</source>
-          <target>Specifies the number of units of the item in the entry.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the country/region of the address.</source>
-          <target>Specifies the country/region of the address.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Country/Region Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 2959979021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the unit of measure code for the tariff number on this line.</source>
-          <target>Specifies the unit of measure code for the tariff number on this line.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Suppl. Unit of Measure - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3088522385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the net weight of one unit of the item.</source>
-          <target>Specifies the net weight of one unit of the item.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Net Weight - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3165222728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the quantity of supplementary units on the Intrastat line.</source>
-          <target>Specifies the quantity of supplementary units on the Intrastat line.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Supplementary Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3192175264 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the date the item entry was posted.</source>
-          <target>Specifies the date the item entry was posted.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Date - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3193866272 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the transport method, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies the transport method, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Transport Method - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3532935625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the area of the customer or vendor, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies the area of the customer or vendor, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Area - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 359523772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the tariff no. that is associated with the item.</source>
-          <target>Specifies the name of the tariff no. that is associated with the item.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Tariff Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3627141058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number that the item entry had in the table it came from.</source>
-          <target>Specifies the number that the item entry had in the table it came from.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Source Entry No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3678710499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the conversion factor of the item on this Intrastat report line.</source>
-          <target>Specifies the conversion factor of the item on this Intrastat report line.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Suppl. Conversion Factor - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3683672590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the item.</source>
-          <target>Specifies the name of the item.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Item Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3701472611 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the item's tariff number.</source>
-          <target>Specifies the item's tariff number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Tariff No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3773776616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the type of transaction that the document represents, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies the type of transaction that the document represents, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Transaction Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3814925297 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</source>
-          <target>Specifies the code of either the port of entry where the items passed into your country/region or the port of exit.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Entry/Exit Point - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 3998061958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if you must report information about quantity and units of measure for this item.</source>
-          <target>Specifies if you must report information about quantity and units of measure for this item.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Supplementary Units - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the document number on the entry.</source>
-          <target>Specifies the document number on the entry.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Document No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of the item.</source>
-          <target>Specifies the number of the item.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Item No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 582094086 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the total weight for the items in the item entry.</source>
-          <target>Specifies the total weight for the items in the item entry.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Total Weight - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2113709934 - Field 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the total amount of the entry, excluding VAT.</source>
-          <target>Specifies the total amount of the entry, excluding VAT.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Line - Field Amount - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2405959708 - Field 2523111426 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that the check for fields is run only on those lines that do not match the filter expression. If the line is not filtered, this field is ignored.</source>
-          <target>Specifies that the check for fields is run only on those lines that do not match the filter expression. If the line is not filtered, this field is ignored.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Checklist - Field Reversed Filter Expression - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2405959708 - Field 3070320983 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the name of the table field that this entry in the checklist uses.</source>
-          <target>Specifies the name of the table field that this entry in the checklist uses.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Checklist - Field Field Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2405959708 - Field 3506477580 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the filter expression that must be applied to the Intrastat line where field must be blank. The check for fields is run only on the lines that meet the filter criteria.</source>
-          <target>Specifies the filter expression that must be applied to the Intrastat line where field must be blank. The check for fields is run only on the lines that meet the filter criteria.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Checklist - Field Must Be Blank For Filter Expr. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2405959708 - Field 3531868071 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of the table field that this entry in the checklist uses.</source>
-          <target>Specifies the number of the table field that this entry in the checklist uses.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Checklist - Field Field No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2405959708 - Field 3793438982 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the filter expression that must be applied to the Intrastat line. The check for fields is run only on the lines that meet the filter criteria.</source>
-          <target>Specifies the filter expression that must be applied to the Intrastat line. The check for fields is run only on the lines that meet the filter criteria.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Checklist - Field Filter Expression - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 215497968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a code that identifies the currency of the Intrastat report.</source>
-          <target>Specifies a code that identifies the currency of the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Currency Identifier - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 3293730985 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the entry has already been reported to the tax authorities.</source>
-          <target>Specifies whether the entry has already been reported to the tax authorities.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Reported - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies some information about the Intrastat Report.</source>
-          <target>Specifies some information about the Intrastat Report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 3813362964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the date when the report has been exported.</source>
-          <target>Specifies the date when the report has been exported.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Export Date - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the number of the Intrastat Report.</source>
-          <target>Specifies the number of the Intrastat Report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 471116883 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the time when the report has been exported.</source>
-          <target>Specifies the time when the report has been exported.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Export Time - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the status of the Intrastat Report.</source>
-          <target>Specifies the status of the Intrastat Report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Status - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 556262972 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</source>
-          <target>Specifies that you use an additional reporting currency in the general ledger and that you want to report Intrastat in this currency.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Amounts in Add. Currency - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 2491010837 - Field 970646220 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017</source>
-          <target>Specifies the month to report data for. Enter the period as a four-digit number, with no spaces or symbols. Enter the year first and then the month, for example, enter 1706 for June, 2017</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Header - Field Statistics Period - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1001138814 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Intrastat contact type.</source>
-          <target>Specifies the Intrastat contact type.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Intrastat Contact Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1119210147 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that you must include arrivals of received goods in Intrastat reports.</source>
-          <target>Specifies that you must include arrivals of received goods in Intrastat reports.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Report Receipts - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1122114835 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which customer code VAT number is taken for the Intrastat report.</source>
-          <target>Specifies based on which customer code VAT number is taken for the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Project VAT No. Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1136635266 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</source>
-          <target>Specifies the code for the number series that will be used to assign numbers to intrastat documents. To see the number series that have been set up in the No. Series table, click the drop-down arrow in the field.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Intrastat Nos. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1282614447 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition code to generate the intrastat file for received goods.</source>
-          <target>Specifies the data exchange definition code to generate the intrastat file for received goods.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Code - Receipt - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1451650335 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Intrastat contact.</source>
-          <target>Specifies the Intrastat contact.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Intrastat Contact No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1536595120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which customer code, or document VAT number is taken for the Intrastat report.</source>
-          <target>Specifies based on which customer code, or document VAT number is taken for the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Sales VAT No. Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1577525362 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition name to generate the intrastat file.</source>
-          <target>Specifies the data exchange definition name to generate the intrastat file.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1659701640 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition code to generate the intrastat file.</source>
-          <target>Specifies the data exchange definition code to generate the intrastat file.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1809596345 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition name to generate the intrastat file for received goods.</source>
-          <target>Specifies the data exchange definition name to generate the intrastat file for received goods.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Name - Receipt - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1818799312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how a customer's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
-          <target>Specifies how a customer's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Cust. VAT No. on File - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 1929781526 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default source of country code for item tracking.</source>
-          <target>Specifies the default source of country code for item tracking.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Def. Country Code for Item Tr. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 19531693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default 3-party trade VAT number.</source>
-          <target>Specifies the default 3-party trade VAT number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Def. 3-Party Trade VAT No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2043133186 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if report file (-s) shall be added to Zip file.</source>
-          <target>Specifies if report file (-s) shall be added to Zip file.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Zip Files - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2305921724 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default transaction type for sales returns and service returns, and purchase returns.</source>
-          <target>Specifies the default transaction type for sales returns and service returns, and purchase returns.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Default Trans. - Return - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2410835908 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the type of line that the partner's VAT registration number is updated for.</source>
-          <target>Specifies the type of line that the partner's VAT registration number is updated for.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Get Partner VAT For - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2486716289 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which vendor code, or document VAT number is taken for the Intrastat report.</source>
-          <target>Specifies based on which vendor code, or document VAT number is taken for the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Purchase VAT No. Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2680197960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how a vendor's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
-          <target>Specifies how a vendor's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Vend. VAT No. on File - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2681653000 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies how the company's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</source>
-          <target>Specifies how the company's VAT registration number exports to the Intrastat file. 0 is the value of the VAT Reg. No. field, 1 adds the EU country code as a prefix, and 2 removes the EU country code.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Company VAT No. on File - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 275031390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</source>
-          <target>Specifies the data exchange definition name to generate the intrastat file for shipped goods.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Name - Shpt. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 2903705327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default private person VAT number.</source>
-          <target>Specifies the default private person VAT number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Def. Private Person VAT No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3027822327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if drop shipment transactions are included in Intrastat reports.</source>
-          <target>Specifies if drop shipment transactions are included in Intrastat reports.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Include Drop Shipment - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3033389719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies that you must include shipments of dispatched items in Intrastat reports.</source>
-          <target>Specifies that you must include shipments of dispatched items in Intrastat reports.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Report Shipments - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3269991984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which customer code Intrastat settings are added to the document.</source>
-          <target>Specifies based on which customer code Intrastat settings are added to the document.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Sales Intrastat Info Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3334861410 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which vendor code Intrastat settings are added to the document.</source>
-          <target>Specifies based on which vendor code Intrastat settings are added to the document.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Purch. Intrastat Info Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3496517085 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which country code Intrastat report lines are taken.</source>
-          <target>Specifies based on which country code Intrastat report lines are taken.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Shipments Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3550498315 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</source>
-          <target>Specifies the default transaction type for regular sales shipments and service shipments, and purchase receipts.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Default Trans. - Purchase - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 377589252 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</source>
-          <target>Specifies the data exchange definition code to generate the intrastat file for shipped goods.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Data Exch. Def. Code - Shpt. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 3961198312 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</source>
-          <target>Specifies based on which customer/vendor code VAT number is taken for the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field VAT No. Based On - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 4007980569 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies if Receipts and Shipments shall be reported in two separate files.</source>
-          <target>Specifies if Receipts and Shipments shall be reported in two separate files.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Split Files - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 4168804269 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default receiving country code.</source>
-          <target>Specifies the default receiving country code.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Def. Country/Region Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 3132071445 - Field 694900210 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the default VAT number for unknown state.</source>
-          <target>Specifies the default VAT number for unknown state.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Intrastat Report Setup - Field Def. VAT for Unknown State - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 1323922556 - Field 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
-          <source>Specifies the default transaction type for purchase returns.</source>
-          <target>Specifies the default transaction type for purchase returns.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor - Field Default Trans. Type - Return - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 1323922556 - Field 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
-          <source>Specifies the default transport method, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies the default transport method, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor - Field Def. Transport Method - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 1323922556 - Field 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
-          <source>Specifies the default transaction type for regular purchase receipts.</source>
-          <target>Specifies the default transaction type for regular purchase receipts.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Vendor - Field Default Trans. Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2092778747 - Field 2959979021 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3279488167">
-          <source>Specifies the unit of measure for the tariff number.</source>
-          <target>Specifies the unit of measure for the tariff number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Tariff Number - Field Suppl. Unit of Measure - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2092778747 - Field 3678710499 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3279488167">
-          <source>Specifies the conversion factor for the tariff number.</source>
-          <target>Specifies the conversion factor for the tariff number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Tariff Number - Field Suppl. Conversion Factor - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2219638380 - Field 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3361278800">
-          <source>Specifies a code of the country/region where the item was produced or processed.</source>
-          <target>Specifies a code of the country/region where the item was produced or processed.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intr. Rep. Lot No. Info - Field Country/Region Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2230664559 - Field 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 747439518">
-          <source>Specifies the default transaction type for sales returns and service returns.</source>
-          <target>Specifies the default transaction type for sales returns and service returns.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Cust. Templ. - Field Default Trans. Type - Return - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2230664559 - Field 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 747439518">
+        <trans-unit id="PageExtension 4248639385 - Control 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Specifies the default transport method, for the purpose of reporting to INTRASTAT.</source>
           <target>Specifies the default transport method, for the purpose of reporting to INTRASTAT.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Cust. Templ. - Field Def. Transport Method - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Cust. Card - Control Def. Transport Method - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2230664559 - Field 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 747439518">
+        <trans-unit id="PageExtension 4248639385 - Control 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Specifies the default transaction type for regular sales shipments and service shipments.</source>
           <target>Specifies the default transaction type for regular sales shipments and service shipments.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Cust. Templ. - Field Default Trans. Type - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intrastat Report Cust. Card - Control Default Trans. Type - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3148640699 - Field 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
-          <source>Specifies if the item shall be excluded from Intrastat report.</source>
-          <target>Specifies if the item shall be excluded from Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Item - Field Exclude from Intrastat Report - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3148640699 - Field 2319106204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
-          <source>Specifies the unit of measure code used in Intrastat report as supplementary unit.</source>
-          <target>Specifies the unit of measure code used in Intrastat report as supplementary unit.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Item - Field Supplementary Unit of Measure - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3503152889 - Field 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 463323981">
-          <source>Specifies if the item shall be excluded from Intrastat report.</source>
-          <target>Specifies if the item shall be excluded from Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Item Templ. - Field Exclude from Intrastat Report - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3634564553 - Field 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2119038973">
+        <trans-unit id="PageExtension 990940033 - Control 284764054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 671847571">
           <source>Specifies a code of the country/region where the item was produced or processed.</source>
           <target>Specifies a code of the country/region where the item was produced or processed.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intr. Rep. Serial No. Info - Field Country/Region Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3644027860 - Field 1663358532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
-          <source>Specifies the default transaction type for sales returns and service returns.</source>
-          <target>Specifies the default transaction type for sales returns and service returns.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Customer - Field Default Trans. Type - Return - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3644027860 - Field 447700159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
-          <source>Specifies the default transport method, for the purpose of reporting to Intrastat.</source>
-          <target>Specifies the default transport method, for the purpose of reporting to Intrastat.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Customer - Field Def. Transport Method - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3644027860 - Field 830567041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
-          <source>Specifies the default transaction type for regular sales shipments and service shipments.</source>
-          <target>Specifies the default transaction type for regular sales shipments and service shipments.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Customer - Field Default Trans. Type - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 1212385681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies a code for the country/region where the asset was produced or processed.</source>
-          <target>Specifies a code for the country/region where the asset was produced or processed.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Country/Region of Origin Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 1335947384 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies if the asset shall be excluded from Intrastat report.</source>
-          <target>Specifies if the asset shall be excluded from Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Exclude from Intrastat Report - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 2319106204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies the unit of measure that is used as the supplementary unit in the Intrastat report.</source>
-          <target>Specifies the unit of measure that is used as the supplementary unit in the Intrastat report.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Supplementary Unit of Measure - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 3088522385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies the net weight of the asset.</source>
-          <target>Specifies the net weight of the asset.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Net Weight - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 3701472611 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies a code for the asset's tariff number.</source>
-          <target>Specifies a code for the asset's tariff number.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Tariff No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 437226862 - Field 4239513174 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 372951706">
-          <source>Specifies the gross weight of the asset.</source>
-          <target>Specifies the gross weight of the asset.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Intrastat Report Fixed Asset - Field Gross Weight - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Intr. Rep. Ser. No. Info List - Control Country/Region Code - Property ToolTip</note>
         </trans-unit>
       </group>
     </body>
