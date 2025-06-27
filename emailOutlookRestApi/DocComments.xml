@@ -4,7 +4,7 @@
         <id>e6328152-bb29-4664-9dae-3bc7eaae1fd8</id>
         <name>Email - Outlook REST API</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35974</version>
+        <version>26.0.30643.35936</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Email#Email - OAuth Client.GetAccessToken(Text@)">
@@ -160,6 +160,13 @@
             <param name="EmailAddress">The email address of the mailbox.</param>
             <param name="ExternalMessageId">The external message id to be marked as read.</param>
         </member>
+        <member name="M:Codeunit::System#Email#Email - Outlook API Helper.EmailOutlookAccountAddressValidation(Email - Outlook Account@)">
+            <summary>
+            The current user connector does not store the actual email address but can be retrieved from the email accounts as it subsitutes the placeholder value.
+            The email address is validated and if it is not valid, the email address is replaced with the proper one from calling GetAllAccounts in EmailAccount codeunit.
+            </summary>
+            <param name="EmailOutlookAccount">The retrieved email outlook account.</param>
+        </member>
         <member name="M:Codeunit::System#Email#Email - Outlook API Helper.KeepLastMessageOnly(Text):Text">
             <summary>
             Keep only the last message in the email body.
@@ -167,6 +174,16 @@
             <param name="Value">Email body.</param>
             <returns>Cleaned email body.</returns>
             <remarks>The last message is the message that is the reply to the email. The history of the email is removed.</remarks>
+        </member>
+        <member name="M:Codeunit::System#Email#Email - Outlook API Helper.RemoveOutlookHistory(Text):Text">
+            <summary>
+            Removes the history from emails that are sent from new Outlook client.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Email#Email - Outlook API Helper.RemoveOldOutlookHistory(Text):Text">
+            <summary>
+            Removes the history from emails that are sent from old Outlook client.
+            </summary>
         </member>
     </members>
 </doc>

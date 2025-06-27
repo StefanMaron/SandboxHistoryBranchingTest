@@ -2,7 +2,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
-namespace Agent.SalesOrderAgent;
+
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Azure.KeyVault;
 using System.Telemetry;
@@ -28,8 +30,7 @@ codeunit 4598 "SOA Prompts"
     var
         BroaderItemSearchPrompt: SecretText;
     begin
-        GetAzureKeyVaultSecret(BroaderItemSearchPrompt, 'BCSOABroaderItemSearchPromptV252');
-
+        GetAzureKeyVaultSecret(BroaderItemSearchPrompt, 'BCSOABroaderItemSearchPromptV26');
         exit(BroaderItemSearchPrompt);
     end;
 
@@ -37,8 +38,7 @@ codeunit 4598 "SOA Prompts"
     var
         BroaderItemSearchSystemPrompt: SecretText;
     begin
-        GetAzureKeyVaultSecret(BroaderItemSearchSystemPrompt, 'BCSOABroaderItemSearchTaskPromptV252');
-
+        GetAzureKeyVaultSecret(BroaderItemSearchSystemPrompt, 'BCSOABroaderItemSearchTaskPromptV26');
         exit(BroaderItemSearchSystemPrompt);
     end;
 
