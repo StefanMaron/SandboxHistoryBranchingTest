@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>75f1590f-55c5-4501-ae63-bada5534e852</id>
+        <name>Performance Toolkit</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Enum::System#Tooling#BCPT Header Status">
+            <summary>
+            This enum has the Status of the BCPT Header.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Header Status. ">
+            <summary>
+            Specifies the initial state.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Header Status.Running">
+            <summary>
+            Specifies that the BCPT Header state is Running.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Header Status.Completed">
+            <summary>
+            Specifies that the BCPT Header state is Completed.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Header Status.Cancelled">
+            <summary>
+            Specifies that the BCPT Header state is Cancelled.
+            </summary>
+        </member>
+        <member name="O:Enum::System#Tooling#BCPT Line Delay Type">
+            <summary>
+            This enum has the Delay Type of the BCPT Line.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Delay Type.Fixed">
+            <summary>
+            Specifies that the BCPT Line Delay Type Fixed.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Delay Type.Random">
+            <summary>
+            Specifies that the BCPT Line Delay Type is Random.
+            </summary>
+        </member>
+        <member name="O:Enum::System#Tooling#BCPT Line Status">
+            <summary>
+            This enum has the Status of the BCPT Line.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Status. ">
+            <summary>
+            Specifies the initial state.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Status.Starting">
+            <summary>
+            Specifies that the BCPT Line state is Starting.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Status.Running">
+            <summary>
+            Specifies that the BCPT Line state is Running.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Status.Completed">
+            <summary>
+            Specifies that the BCPT Line state is Completed.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Line Status.Cancelled">
+            <summary>
+            Specifies that the BCPT Line state is Cancelled.
+            </summary>
+        </member>
+        <member name="F:Table::System#Tooling#BCPT Log Entry.Orig# Status">
+            <summary>
+            Contains the original status of the test if any event subscribers modifies the status of the test
+            </summary>
+        </member>
+        <member name="F:Table::System#Tooling#BCPT Log Entry.Orig# Message[250]">
+            <summary>
+            Contains the original message of the test if any event subscribers modifies the message of the test
+            </summary>
+        </member>
+        <member name="F:Table::System#Tooling#BCPT Log Entry.Log was Modified">
+            <summary>
+            Is true if any event subscribers has modified the log entry
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Role Wrapper.SetBCPTLine(BCPT Line@)">
+            <summary>
+            Sets the BCPT Line so that the test codeunits can retrieve.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Role Wrapper.GetBCPTLine(BCPT Line@)">
+            <summary>
+            Gets the BCPT Line stored through the SetBCPTLine method.
+            </summary>
+        </member>
+        <member name="O:Enum::System#Tooling#BCPT Run Type">
+            <summary>
+            This enum has the Run Type of the BCPT Header.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Run Type.BCPT">
+            <summary>
+            Specifies that the BCPT Header Run Type is BCPT.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Tooling#BCPT Run Type.PRT">
+            <summary>
+            Specifies that the BCPT Header Run Type is PRT.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#Tooling#BCPT Test Context">
+            <summary>
+            Exposes functions that can be used by the BCPT tests.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.StartScenario(Text)">
+            <summary>
+            This method starts the scope of a test session where the performance numbers are collected.
+            </summary>
+            <param name="ScenarioOperation">Label of the scenario.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.EndScenario(Text)">
+            <summary>
+            This method ends the scope of a test session where the performance numbers are collected.
+            </summary>
+            <param name="ScenarioOperation">Label of the scenario.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.EndScenario(Text,Boolean)">
+            <summary>
+            This method ends the scope of a test session where the performance numbers are collected.
+            </summary>
+            <param name="ScenarioOperation">Label of the scenario.</param>
+            <param name="ExecutionSuccess">Result of the test execution.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.UserWait">
+            <summary>
+            This method simulates a users delay between operations. This method is called by the BCPT test to represent a realistic scenario.
+            The calculation of the length of the wait is done usign the parameters defined on the BCPT suite.
+            </summary>
+            <param name="ScenarioOperation">Label of the scenario.</param>
+            <param name="ExecutionSuccess">Result of the test execution.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.GetBCPTLine(BCPT Line@)">
+            <summary>
+            Returns the BCPTLine associated with the sessions.
+            </summary>
+            <param name="BCPTLine">BCPTLine associated with the session.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.GetBCPTHeader(BCPT Header@)">
+            <summary>
+            Returns the BCPTHeader associated with the sessions.
+            </summary>
+            <param name="BCPTLine">BCPTLine associated with the session.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.GetParameters:Text">
+            <summary>
+            Returns the paramater list associated with the sessions.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Context.GetParameter(Text):Text">
+            <summary>
+            Returns the requested paramater value associated with the session.
+            </summary>
+            <param name="ParameterName">Name of the parameter.</param>
+        </member>
+        <member name="M:Codeunit::System#Tooling#BCPT Test Suite.OnBeforeBCPTLineAddLogEntry(Code[10],Integer,Text,Text,Boolean,Text,Text@,Boolean@,Text@)">
+            <summary>
+            This event is raised before a log entry is added to the BCPT Line table.
+            It can be used to skip errors which are not relevant for the test suite. Like unused handler functions.
+            </summary>
+            <param name="SuiteCode">The test suite code</param>
+            <param name="CodeunitId">The id of the test codunit that is being run</param>
+            <param name="Description">Description of the test on the "BCPT Line"</param>
+            <param name="Orig. Operation.Operation">Original operation that is currently executed</param>
+            <param name="Orig. ExecutionSuccess.ExecutionSuccess">The original ExecutionSuccess</param>
+            <param name="Orig. Message.Message">The original message</param>
+            <param name="Operation">Replacement operation that is currently executed</param>
+            <param name="ExecutionSuccess">Replacement ExcecutionSuccess</param>
+            <param name="Message">Replacement Message</param>
+        </member>
+    </members>
+</doc>
