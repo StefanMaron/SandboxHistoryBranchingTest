@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>a41b0c3e-bf1c-4c97-ad1b-b430a3933ada</id>
+        <name>Audit File Export</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Check.CheckDataToExport(Audit File Export Header@):Enum::Microsoft#Finance#AuditFileExport#Audit Data Check Status">
+            <summary>
+            Checks all records and fields that will be used for exporting of the selected audit file export document to the corresponding audit file export format.
+            </summary>
+            <param name="AuditFileExportHeader">Audit file export document.</param>
+            <returns>The status of the data check - Passed or Failed.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Check.CheckAuditDocReadyToExport(Audit File Export Header@):Enum::Microsoft#Finance#AuditFileExport#Audit Data Check Status">
+            <summary>
+            Checks if the selected audit file export document is ready for exporting, for example if all required fields are filled.
+            </summary>
+            <param name="AuditFileExportHeader">Audit file export document.</param>
+            <returns>The status of the data check - Passed or Failed.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Handling.LoadStandardAccounts(Enum::Microsoft#Finance#AuditFileExport#Standard Account Type):Boolean">
+            <summary>
+            Loads list of standard general ledger accounts to Standard Account table.
+            </summary>
+            <param name="StandardAccountType">Standard G/L Account Type</param>
+            <returns>true if all G/L accounts were uploaded.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Handling.CreateAuditFileExportLines(Audit File Export Header@)">
+            <summary>
+            Creates lines for the selected audit file export document.
+            </summary>
+            <param name="AuditFileExportHeader">Header of a document for which lines are created.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Handling.GenerateFileContentForAuditFileExportLine(Audit File Export Line@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Generates audit file content for the selected audit file export line.
+            </summary>
+            <param name="AuditFileExportLine">Audit export line for which file content is generated.</param>
+            <param name="TempBlob">Generated file content must be returned as TempBlob.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Handling.GetFileNameForAuditFileExportLine(Audit File Export Line@):Text[1024]">
+            <summary>
+            Creates a string which will be used as a file name when an audit file is created from the audit file export line.
+            </summary>
+            <param name="AuditFileExportLine">Audit export line for which file name is created.</param>
+            <returns>A string with full file name like abc.txt or SIE.se.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#AuditFileExport#Audit File Export Data Handling.InitAuditExportDataTypeSetup">
+            <summary>
+            Removes the existing records and create new default records in the Audit Export Data Type Setup table.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Import Audit Data Mgt#.ImportStandardAccountsFromXMLBuffer(XML Buffer@,Enum::Microsoft#Finance#AuditFileExport#Standard Account Type)">
+            <summary> Fills Standard Account table from temporary XML Buffer table.</summary>
+            <param name="TempCSVBuffer">Temporary table XML Buffer.</param>
+            <param name="StandardAccountType">Standard account type for which standard account records are created.</param>
+            <remarks>
+            XML Buffer must contain 2 child nodes for each buffer record. The 1st node holds Standard Account No.; 2nd - Standard Account Description".
+            </remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Import Audit Data Mgt#.ImportStandardAccountsWithGroupingCodesFromXMLBuffer(XML Buffer@,Enum::Microsoft#Finance#AuditFileExport#Standard Account Type)">
+            <summary> Fills Standard Account table from temporary XML Buffer table.</summary>
+            <param name="TempCSVBuffer">Temporary table XML Buffer.</param>
+            <param name="StandardAccountType">Standard account type for which standard account records are created.</param>
+            <remarks>
+            XML Buffer must contain 3 child nodes for each buffer record. 
+            The 1st node holds Standard Account Category No.; 2nd - Standard Account No.; 3rd - Standard Account Description".
+            </remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Import Audit Data Mgt#.ImportStandardAccountsFromCSVBuffer(CSV Buffer@,Enum::Microsoft#Finance#AuditFileExport#Standard Account Type)">
+            <summary> Fills Standard Account table from temporary CSV Buffer table. </summary>
+            <param name="TempCSVBuffer">Temporary table CSV Buffer.</param>
+            <param name="StandardAccountType">Standard account type for which standard account records are created.</param>
+            <remarks>
+            CSV Buffer must contain at least 2 fields for each line. The 1st field holds Standard Account No.; 2nd - Standard Account Description; 3rd - Standard Account Category (optional)".
+            </remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#Import Audit Data Mgt#.LoadStandardAccountsFromCSVTextToCSVBuffer(CSV Buffer@,Text,Text[1])">
+            <summary>Parses CSV document content and saves it into the temporary CSV Buffer table. </summary>
+            <param name="TempCSVBuffer">Temporary table CSV Buffer.</param>
+            <param name="CSVDocContent">CSV text in a format "Standard Account No.; Standard Account Description; Standard Account Category" or "Standard Account No.; Standard Account Description"</param>
+            <param name="CSVFieldSeparator">Separator which is used to divide values within a CSV line.</param>
+        </member>
+    </members>
+</doc>

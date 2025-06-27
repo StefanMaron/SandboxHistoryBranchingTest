@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="a53a4bb0-aa53-8ff8-77d6-fe3388db0eb8" Name="Recommended Apps" Publisher="Microsoft" Brief="Create a collection of apps that you can recommend to customers." Description="Create a collection of apps that you can recommend to customers." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2173058" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2173058" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="4750" MaxObjectId="4753" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="4b1cbbc7-a6fd-442c-87b1-60b1d2b059d7" Name="Recommended Apps Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T00:57:58.3998655Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
