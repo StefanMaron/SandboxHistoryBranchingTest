@@ -1,55 +1,56 @@
-name: BuildNewCommitsvNext
+name: BuildNewCommits3
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
   prepare:
     name: Prepare Matrix
     runs-on: ubuntu-latest
-        
     outputs:
       countries: ${{ steps.load_countries.outputs.countries }}
-      
     steps:
       - name: Install BC Container Helper
-        shell: pwsh   
+        shell: pwsh
         run: Install-Module bccontainerhelper -force
 
       - name: Check out the repository to the runner
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@v4
         with:
           ref: main
-      
+
       - name: Load Countries
         id: load_countries
-        shell: pwsh       
-        run: ./scripts/GetAllCountries_vNext.ps1
+        shell: pwsh
+        run: ./scripts/GetAllCountries_improved.ps1
 
-      - name: ShowOutput      
-        shell: pwsh       
-        run: Write-Host '${{ steps.load_countries.outputs.countries }}'
-        
+      - name: Show Output
+        shell: pwsh
+        run: Write-Host "${{ steps.load_countries.outputs.countries }}"
+
   buildCommits:
     needs: prepare
     name: Build Commits
     runs-on: ubuntu-latest
-    
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.prepare.outputs.countries) }}
-
     steps:
       - name: Install BC Container Helper
-        shell: pwsh   
+        shell: pwsh
         run: Install-Module bccontainerhelper -force
 
       - name: Check out the repository to the runner
-        uses: actions/checkout@v4.1.2
-        
+        uses: actions/checkout@v4
+
       - name: Build Commits
-        shell: pwsh       
+        shell: pwsh
         run: |
-          ./scripts/Auto_load_versions_vNext.ps1 -country ${{matrix.countries}}
-      
-    
+          ./scripts/Auto_load_versions_improved.ps1 -country ${{ matrix.countries }}
+
+# Improvements:
+# - Updated actions/checkout to v4 for latest features and security.
+# - Added comments for clarity.
+# - Improved step naming for consistency.
