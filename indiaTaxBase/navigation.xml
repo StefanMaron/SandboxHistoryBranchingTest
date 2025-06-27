@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="India Tax Base" ControlGUID="{27144b07-b7b5-4f0a-b3d2-9fa1482f6715}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18548" DepartmentCategory="Lists" RunObjectSrcTable="18548" ControlGUID="{b4da0c33-08e0-49e8-824b-28871065e783}" Name="T.A.N. Nos." CaptionML="ENU=T.A.N. Nos." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1855941299 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1855941299 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18556" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{a564328d-6847-4345-9c0c-4583383fd260}" Name="Contra Voucher" CaptionML="ENU=Contra Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2018235175 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2018235175 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18549" DepartmentCategory="Lists" RunObjectSrcTable="18549" ControlGUID="{996bfdf6-b442-4908-af56-373eb8c171d6}" Name="Tax Accounting Periods" CaptionML="ENU=Tax Accounting Periods" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1999971382 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1999971382 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18550" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{f20ebf28-d99d-4ea6-bce4-e6aece8a24e7}" Name="Bank Payment Voucher" CaptionML="ENU=Bank Payment Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 52617824 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 52617824 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18543" DepartmentCategory="Lists" RunObjectSrcTable="18543" ControlGUID="{32bc12f8-a15e-425c-8b96-721064b385bd}" Name="Assessee Codes" CaptionML="ENU=Assessee Codes" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 674273518 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 674273518 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18554" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{ca7b86de-0449-45a5-800b-6a26caf1ad54}" Name="Cash Payment Voucher" CaptionML="ENU=Cash Payment Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1993654917 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1993654917 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18555" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{d0fc8e38-07e1-4a84-b111-853765323e63}" Name="Cash Receipt Voucher" CaptionML="ENU=Cash Receipt Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1802865343 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1802865343 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18547" DepartmentCategory="Lists" RunObjectSrcTable="18547" ControlGUID="{75cb46a0-505c-47e1-87af-f4c0cc52cb3c}" Name="States" CaptionML="ENU=States" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3651789288 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3651789288 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18545" DepartmentCategory="Lists" RunObjectSrcTable="18545" ControlGUID="{4b81f3c8-5c90-48ca-8da6-befb59ed8466}" Name="Deductor Categories" CaptionML="ENU=Deductor Categories" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1727624792 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1727624792 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18559" DepartmentCategory="Administration" RunObjectSrcTable="18552" ControlGUID="{9b4549bf-95d6-490a-bbcc-ca5dc728078f}" Name="Posting No. Series Setup" CaptionML="ENU=Posting No. Series Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2232251021 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2232251021 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18558" DepartmentCategory="Lists" RunObjectSrcTable="18551" ControlGUID="{95d4bcad-3373-4534-a2d6-e4aacbaa1fb3}" Name="Parties" CaptionML="ENU=Parties" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 550407604 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 550407604 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18544" DepartmentCategory="Lists" RunObjectSrcTable="18544" ControlGUID="{0ebd1a87-03b5-46d6-85b3-2b33d3fd69ae}" Name="Concessional Codes" CaptionML="ENU=Concessional Codes" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3864552009 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3864552009 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18553" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{64730127-ee6d-4397-a982-a47693b1836b}" Name="Bank Receipt Voucher" CaptionML="ENU=Bank Receipt Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1124727046 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1124727046 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18557" DepartmentCategory="Tasks" RunObjectSrcTable="81" ControlGUID="{c03bcb4a-0f5b-4517-94eb-dac25ec2f173}" Name="Journal Voucher" CaptionML="ENU=Journal Voucher" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3336251243 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3336251243 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18546" DepartmentCategory="Lists" RunObjectSrcTable="18546" ControlGUID="{5e6404fb-fc50-475b-a814-d9662920e7d6}" Name="Ministries" CaptionML="ENU=Ministries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3490379211 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3490379211 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="161" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="397" TargetType="Page" />
+    <ActionChange TargetID="403" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="255" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
+    <ActionChange TargetID="507" TargetType="Page" />
+    <ActionChange TargetID="9007" TargetType="Page" />
+    <ActionChange TargetID="401" TargetType="Page" />
+    <ActionChange TargetID="400" TargetType="Page" />
+    <ActionChange TargetID="160" TargetType="Page" />
+    <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="398" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="402" TargetType="Page" />
+    <ActionChange TargetID="5703" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="20246" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>

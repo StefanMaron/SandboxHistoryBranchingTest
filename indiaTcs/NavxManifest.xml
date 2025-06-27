@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="eddcf82e-482c-49d1-836b-ad0284f2c5b0" Name="India TCS" Publisher="Microsoft" Brief="Tax Collection at Source (TCS) is a tax collection method used by the government. TCS requires buyers and sellers to collect tax at the source, and remit it to tax authorities." Description="The TCS feature contains setups that are required for calculating Tax Collected at Source. This allows you to calculate TCS on sales transactions through sales invoices, sales orders, journal vouchers, and on customer advance payments. It also allows you to adjust and settle TCS amounts and submit TCS that has been collected to the government." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139281" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139281" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="18807" MaxObjectId="18910" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:13:51.9407145Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

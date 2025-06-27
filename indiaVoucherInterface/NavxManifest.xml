@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="f1d9b696-156b-4251-b542-34e549fa80e9" Name="India Voucher Interface" Publisher="Microsoft" Brief="Contains functionality of Voucher Interface" Description="Voucher Interface provides features that cover business scenarios in India. Voucher Interface is a standard solution for companies that record cash, bank, and journal transactions." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139282" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139282" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="18929" MaxObjectId="18999" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:13:59.8135592Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>c1eafb3f-e397-468e-bdb4-ecc5c317ca00</id>
+        <name>Tax Engine</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Editor Mgmt#.RefreshEditorLines(Script Editor Line@)">
+            Lookup Functions
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateComment(Guid,Guid,Text[250]):Guid">
+            Comments
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateNumberCalculation(Guid,Guid):Guid">
+            Calculation
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateIfCondition(Guid,Guid,Guid):Guid">
+            If Calculation
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateLoopNTimes(Guid,Guid):Guid">
+            Loop N Times
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateLoopWithCondition(Guid,Guid):Guid">
+            Loop with Condition
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateFindDateInterval(Guid,Guid):Guid">
+            Date Function
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateCondition(Guid,Guid):Guid">
+            Condition
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateSetVariable(Guid,Guid):Guid">
+            Set Rule Variable
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateConcatenate(Guid,Guid):Guid">
+            Rule Concatenate
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateFindSubstrInString(Guid,Guid):Guid">
+            Find Substring In String
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateReplaceSubstring(Guid,Guid):Guid">
+            Replace Substring In String
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateDateCalculation(Guid,Guid):Guid">
+            Date Calculation
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateDateToDateTime(Guid,Guid):Guid">
+            Date To DateTime
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateAlertMessage(Guid,Guid):Guid">
+            Alert Message
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateLoopThroughRecords(Guid,Guid):Guid">
+            Loop Through Records
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateExtractDatePart(Guid,Guid):Guid">
+            Extract Date Part
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateExtractDateTimePart(Guid,Guid):Guid">
+            Extract Date Time Part
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateLengthOfString(Guid,Guid):Guid">
+            Length of String
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateConvertCaseOfString(Guid,Guid):Guid">
+            Convert case of String
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateRoundNumber(Guid,Guid):Guid">
+            Round Number
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateNumericExpression(Guid,Guid):Guid">
+            Numeric Expression
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#ScriptHandler#Script Entity Mgmt#.CreateStringExpression(Guid,Guid):Guid">
+            String Expression
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#UseCaseBuilder#Use Case Entity Mgmt#.CreateRateColumnRelation(Guid):Guid">
+            Rate Column Relation
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#UseCaseBuilder#Use Case Entity Mgmt#.CreateUseCaseAttributeMapping(Guid):Guid">
+            Use Case line
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#UseCaseBuilder#Use Case Entity Mgmt#.CreateComponentCalculation(Guid):Guid">
+            Component Calculation
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#UseCaseBuilder#Use Case Entity Mgmt#.CreateTableRelation(Guid):Guid">
+            TableRelation Functions
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Script Data Type Mgmt#.ConvertText2Type(Text,Enum::Microsoft#Finance#TaxEngine#Core#Symbol Data Type,Text,Variant@)">
+            Type Convertion
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Script Data Type Mgmt#.Variant2Text(Variant,Text):Text">
+            Variant
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Script Data Type Mgmt#.EvaluateExpression(Text,Dictionary of [Text,Decimal]):Decimal">
+            Expressions
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Script Data Type Mgmt#.Trim(Text):Text">
+            String Functions
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Lookup Entity Mgmt#.CreateTableFilters(Guid,Guid,Integer):Guid">
+            Table Filters
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#TaxEngine#Core#Lookup Entity Mgmt#.CreateLookup(Guid,Guid):Guid">
+            Lookup Functions
+        </member>
+    </members>
+</doc>
