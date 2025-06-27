@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India Voucher Interface" ControlGUID="{65dc2e27-9bda-4c14-87d8-59d03762e54a}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18930" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{9007b2bc-2c8d-47ac-b555-83d256e0c62e}" Name="Bank Book" CaptionML="ENU=Bank Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2598131873 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2598131873 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18933" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{019b25f8-c1fd-4065-8061-e77f8a157f13}" Name="Voucher Register" CaptionML="ENU=Voucher Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 716052563 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 716052563 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18931" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c2617539-d31e-436e-856b-f33b0837cf01}" Name="Cash Book" CaptionML="ENU=Cash Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1206994156 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1206994156 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18929" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{22626fcf-908b-4fbd-855f-8fa2286e7030}" Name="Day Book" CaptionML="ENU=Day Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2820230295 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2820230295 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18932" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{77e184c3-a32c-45cb-8174-b8de8767b5d4}" Name="Ledger" CaptionML="ENU=Ledger" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1915507847 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1915507847 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India Voucher Interface" ControlGUID="{f8f4ac76-0167-4cce-908f-8a423eccbb0c}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18933" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8decd514-3ed3-478d-ba5f-13bdb51bb14f}" Name="Voucher Register" CaptionML="ENU=Voucher Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 716052563 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 716052563 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18931" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8ce415c2-9c10-4b7e-812d-3190d7acb6b6}" Name="Cash Book" CaptionML="ENU=Cash Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1206994156 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1206994156 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18929" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{19e52a8d-cae4-4a83-8021-f4e44f729eea}" Name="Day Book" CaptionML="ENU=Day Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2820230295 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2820230295 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18930" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{08d1313f-6be7-4e60-b281-f217ed78dd9e}" Name="Bank Book" CaptionML="ENU=Bank Book" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2598131873 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2598131873 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18932" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c1283104-282d-4b7f-a092-5553de5e0609}" Name="Ledger" CaptionML="ENU=Ledger" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1915507847 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1915507847 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="18553" TargetType="Page" />
-    <ActionChange TargetID="18555" TargetType="Page" />
-    <ActionChange TargetID="18550" TargetType="Page" />
-    <ActionChange TargetID="372" TargetType="Page" />
-    <ActionChange TargetID="9007" TargetType="Page" />
-    <ActionChange TargetID="279" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="18557" TargetType="Page" />
-    <ActionChange TargetID="9022" TargetType="Page" />
-    <ActionChange TargetID="370" TargetType="Page" />
-    <ActionChange TargetID="118" TargetType="Page" />
-    <ActionChange TargetID="374" TargetType="Page" />
-    <ActionChange TargetID="20" TargetType="Page" />
-    <ActionChange TargetID="9006" TargetType="Page" />
-    <ActionChange TargetID="29" TargetType="Page" />
-    <ActionChange TargetID="18554" TargetType="Page" />
     <ActionChange TargetID="1" TargetType="Page" />
-    <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="18554" TargetType="Page" />
     <ActionChange TargetID="25" TargetType="Page" />
-    <ActionChange TargetID="5703" TargetType="Page" />
+    <ActionChange TargetID="372" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
+    <ActionChange TargetID="18557" TargetType="Page" />
     <ActionChange TargetID="251" TargetType="Page" />
-    <ActionChange TargetID="18556" TargetType="Page" />
+    <ActionChange TargetID="9007" TargetType="Page" />
+    <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+    <ActionChange TargetID="279" TargetType="Page" />
+    <ActionChange TargetID="20" TargetType="Page" />
     <ActionChange TargetID="101" TargetType="Page" />
+    <ActionChange TargetID="18553" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="5703" TargetType="Page" />
+    <ActionChange TargetID="18555" TargetType="Page" />
+    <ActionChange TargetID="18556" TargetType="Page" />
+    <ActionChange TargetID="374" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="18550" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
