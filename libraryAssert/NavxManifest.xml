@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" Brief="Library used in tests to verify if the values are as expected. " Description="In test code Library Assert should be used to compare the values and throw errors. TESTFIELD and ERROR must not be used in test code." Version="26.1.33404.35961" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" Brief="Library used in tests to verify if the values are as expected. " Description="In test code Library Assert should be used to compare the values and throw errors. TESTFIELD and ERROR must not be used in test code." Version="26.1.33404.35996" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="130002" MaxObjectId="130002" />
   </IdRanges>
@@ -16,6 +16,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="8c935f72a38d4f5fc4b992190cc61ae1b3fd849f" />
-  <Build Timestamp="2025-06-26T11:17:29.7707973Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-27T01:16:34.5662453Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
