@@ -3,25 +3,32 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
-using System.Email;
-using Microsoft.Sales.Document;
-using System.Reflection;
-using Agent.SalesOrderAgent.Integration;
-using System.Security.AccessControl;
 using System.Azure.Identity;
-using Agent.SalesOrderAgent.ItemSearch;
 using System.Azure.KeyVault;
-using System.Telemetry;
+using System.Email;
+using System.Environment;
 using System.Environment.Configuration;
+using System.Reflection;
+using System.Security.AccessControl;
+using System.Telemetry;
+using Microsoft.CRM.Contact;
+using Microsoft.Finance.Currency;
+using Microsoft.Finance.GeneralLedger.Setup;
+using Microsoft.Sales.Customer;
+using Microsoft.Sales.Document;
 
+#pragma warning disable AS0049
 codeunit 4400 "SOA Setup"
 {
+    Access = Internal;
     InherentEntitlements = X;
     InherentPermissions = X;
     Permissions = tabledata "Email Inbox" = rd;
+#pragma warning restore AS0049
 
     /// <summary>
     /// Used for testing OnPrem
@@ -40,41 +47,38 @@ codeunit 4400 "SOA Setup"
         TempSOASetup."Email Monitoring" := false;
 
         GetDefaultAgentAccessControl(TempAgent."User Security ID", TempAgentAccessControl);
-        UpdateAgent(TempAgent, TempAgentAccessControl, TempSOASetup, TempEmailAccount, true);
+        UpdateAgent(TempAgent, TempAgentAccessControl, TempSOASetup, TempEmailAccount, true, true);
     end;
 
     internal procedure CreateAgent(var TempAgent: Record Agent; var TempAgentAccessControl: Record "Agent Access Control" temporary; var TempSOASetup: Record "SOA Setup" temporary; var TempEmailAccount: Record "Email Account" temporary)
     var
         AllProfile: Record "All Profile";
-        SOASetup: Record "SOA Setup";
         TempAggregatePermissionSet: Record "Aggregate Permission Set" temporary;
         Agent: Codeunit Agent;
-        AgentUserSecurityID: Guid;
         InstructionsSecret: SecretText;
     begin
         PrepareInstructions(InstructionsSecret, TempSOASetup);
 
-        AgentUserSecurityID := Agent.Create("Agent Metadata Provider"::"SO Agent", TempAgent."User Name", TempAgent."Display Name", TempAgentAccessControl);
-        Agent.SetInstructions(AgentUserSecurityID, InstructionsSecret);
+        TempSOASetup."Agent User Security ID" := Agent.Create("Agent Metadata Provider"::"SO Agent", TempAgent."User Name", TempAgent."Display Name", TempAgentAccessControl);
+        Agent.SetInstructions(TempSOASetup."Agent User Security ID", InstructionsSecret);
 
         GetProfile(AllProfile);
         GetPermissionSets(TempAggregatePermissionSet);
-        Agent.SetProfile(AgentUserSecurityID, AllProfile);
-        Agent.AssignPermissionSet(AgentUserSecurityID, TempAggregatePermissionSet);
+        Agent.SetProfile(TempSOASetup."Agent User Security ID", AllProfile);
+        Agent.AssignPermissionSet(TempSOASetup."Agent User Security ID", TempAggregatePermissionSet);
 
         if TempAgent.State = TempAgent.State::Enabled then
             UpdateSOASetupActivationDT(TempSOASetup);
-        UpdateSOASetupEmail(TempSOASetup, TempEmailAccount);
-        UpdateSOASetup(AgentUserSecurityID, TempSOASetup);
+        UpdateSOASetup(TempSOASetup);
 
         if TempAgent.State = TempAgent.State::Enabled then begin
             EnableItemSearch();
-            Agent.Activate(AgentUserSecurityID);
-            if TempSOASetup."Email Monitoring" and TempSOASetup."Incoming Monitoring" and not IsNullGuid(TempEmailAccount."Account Id") then
-                SOAImpl.ScheduleSOAgent(SOASetup)
+            Agent.Activate(TempSOASetup."Agent User Security ID");
+            if TempSOASetup."Email Monitoring" and TempSOASetup."Incoming Monitoring" and not IsNullGuid(TempSOASetup."Email Account ID") then
+                SOAImpl.ScheduleSOAgent(TempSOASetup)
         end
         else
-            Agent.Deactivate(AgentUserSecurityID);
+            Agent.Deactivate(TempSOASetup."Agent User Security ID");
     end;
 
     internal procedure GetInitials(): Text[4]
@@ -102,7 +106,7 @@ codeunit 4400 "SOA Setup"
         exit(SOASetup.IsEmpty());
     end;
 
-    internal procedure UpdateAgent(var TempAgent: Record Agent; var TempAgentAccessControl: Record "Agent Access Control" temporary; var TempSOASetup: Record "SOA Setup" temporary; var TempEmailAccount: Record "Email Account" temporary; AccessUpdated: Boolean)
+    internal procedure UpdateAgent(var TempAgent: Record Agent; var TempAgentAccessControl: Record "Agent Access Control" temporary; var TempSOASetup: Record "SOA Setup" temporary; var TempEmailAccount: Record "Email Account" temporary; AccessUpdated: Boolean; Schedule: Boolean)
     var
         Agent: Codeunit Agent;
         AzureADGraphUser: Codeunit "Azure AD Graph User";
@@ -117,35 +121,37 @@ codeunit 4400 "SOA Setup"
 
         if TempAgent.State = TempAgent.State::Enabled then
             UpdateSOASetupActivationDT(TempSOASetup);
-        UpdateSOASetupEmail(TempSOASetup, TempEmailAccount);
-        UpdateSOASetup(TempAgent."User Security ID", TempSOASetup);
-        UpdateInstructions(TempAgent."User Security ID", TempSOASetup);
+        UpdateInstructions(TempSOASetup);
 
         Agent.SetDisplayName(TempAgent."User Security ID", TempAgent."Display Name");
         if TempAgent.State = TempAgent.State::Enabled then begin
             Agent.Activate(TempAgent."User Security ID");
             EnableItemSearch();
-            if TempSOASetup."Email Monitoring" and TempSOASetup."Incoming Monitoring" and not IsNullGuid(TempEmailAccount."Account Id") then
+            if TempSOASetup."Email Monitoring" and TempSOASetup."Incoming Monitoring" and not IsNullGuid(TempSOASetup."Email Account ID") and Schedule then
                 SOAImpl.ScheduleSOAgent(TempSOASetup);
         end
-        else
+        else begin
             Agent.Deactivate(TempAgent."User Security ID");
+            SOAImpl.RemoveScheduledTask(TempSOASetup);
+        end;
+        UpdateSOASetup(TempSOASetup);
 
         if AccessUpdated then
             Agent.UpdateAccess(TempAgent."User Security ID", TempAgentAccessControl);
     end;
 
-    local procedure UpdateSOASetup(AgentUserSecurityID: Guid; var TempSOASetup: Record "SOA Setup" temporary)
+    local procedure UpdateSOASetup(var TempSOASetup: Record "SOA Setup" temporary)
     var
         SOASetup: Record "SOA Setup";
     begin
-        SOASetup.SetRange("Agent User Security ID", AgentUserSecurityID);
+        SOASetup.SetRange("Agent User Security ID", TempSOASetup."Agent User Security ID");
         if SOASetup.FindFirst() then begin
             SOASetup."Incoming Monitoring" := TempSOASetup."Incoming Monitoring";
             SOASetup."Email Monitoring" := TempSOASetup."Email Monitoring";
             if SOASetup."Email Monitoring" then begin
                 SOASetup."Email Account ID" := TempSOASetup."Email Account ID";
                 SOASetup."Email Connector" := TempSOASetup."Email Connector";
+                SOASetup."Email Address" := TempSOASetup."Email Address";
             end;
 
             SOASetup."Activated At" := TempSOASetup."Activated At";
@@ -156,13 +162,16 @@ codeunit 4400 "SOA Setup"
             SOASetup."Order Review" := TempSOASetup."Order Review";
             SOASetup."Create Order from Quote" := TempSOASetup."Create Order from Quote";
             SOASetup."Search Only Available Items" := TempSOASetup."Search Only Available Items";
+            SOASetup."Agent Scheduled Task ID" := TempSOASetup."Agent Scheduled Task ID";
+            SOASetup."Recovery Scheduled Task ID" := TempSOASetup."Recovery Scheduled Task ID";
 
             SOASetup.Modify();
         end
         else begin
             SOASetup.Copy(TempSOASetup);
-            SOASetup."Agent User Security ID" := AgentUserSecurityID;
             SOASetup.Insert();
+            TempSOASetup := SOASetup;
+            TempSOASetup.Insert();
         end;
     end;
 
@@ -175,21 +184,13 @@ codeunit 4400 "SOA Setup"
         SOASetup."Search Only Available Items" := true;
     end;
 
-    internal procedure UpdateInstructions(AgentUserSecurityID: Guid; var TempSOASetup: Record "SOA Setup" temporary)
+    internal procedure UpdateInstructions(var TempSOASetup: Record "SOA Setup" temporary)
     var
         AgentCU: Codeunit Agent;
         InstructionsSecret: SecretText;
     begin
         PrepareInstructions(InstructionsSecret, TempSOASetup);
-        AgentCU.SetInstructions(AgentUserSecurityID, InstructionsSecret);
-    end;
-
-    local procedure UpdateSOASetupEmail(var TempSOASetup: Record "SOA Setup" temporary; var TempEmailAccount: Record "Email Account" temporary)
-    begin
-        if TempSOASetup."Email Monitoring" and TempSOASetup."Incoming Monitoring" and not IsNullGuid(TempEmailAccount."Account Id") then begin
-            TempSOASetup."Email Account ID" := TempEmailAccount."Account Id";
-            TempSOASetup."Email Connector" := TempEmailAccount.Connector;
-        end;
+        AgentCU.SetInstructions(TempSOASetup."Agent User Security ID", InstructionsSecret);
     end;
 
     internal procedure UpdateSOASetupActivationDT(var TempSOASetup: Record "SOA Setup" temporary)
@@ -243,15 +244,15 @@ codeunit 4400 "SOA Setup"
                 TempSOASetup.Insert();
             end
             else
-                SetSOASetupDefaults(TempSOASetup)
+                SetSOASetupDefaults(TempSOASetup, TempSOAgent."User Security ID")
         else begin
-            SOASetup.SetRange("Agent User Security ID", TempSOAgent."User Security ID");
+            SOASetup.SetRange("Agent User Security ID", TempSOASetup."Agent User Security ID");
             if SOASetup.FindFirst() then begin
                 TempSOASetup := SOASetup;
                 TempSOASetup.Insert();
             end
             else
-                SetSOASetupDefaults(TempSOASetup);
+                SetSOASetupDefaults(TempSOASetup, TempSOAgent."User Security ID");
         end;
     end;
 
@@ -296,12 +297,67 @@ codeunit 4400 "SOA Setup"
         end;
     end;
 
-    local procedure SetSOASetupDefaults(var TempSOASetup: Record "SOA Setup" temporary)
+    internal procedure GetAgentTaskPageContext(AgentUserId: Guid; AgentTaskId: BigInteger; PageId: Integer; RecordId: RecordId; var AgentTaskPageContext: Record "Agent Task Page Context")
+    var
+        Contact: Record Contact;
+        Currency: Record Currency;
+        Customer: Record Customer;
+        GeneralLedgerSetup: Record "General Ledger Setup";
+        SalesHeader: Record "Sales Header";
+        SOAFiltersImpl: Codeunit "SOA Filters Impl.";
+        CustomerFilter: Text;
+        CurrencyCode: Code[10];
+    begin
+        Clear(AgentTaskPageContext);
+
+        case PageId of
+            Page::"Sales Quote",
+            Page::"Sales Order":
+                if SalesHeader.Get(RecordId) then
+                    CurrencyCode := SalesHeader."Currency Code";
+            Page::"Contact Card":
+                if Contact.Get(RecordId) then begin
+                    if Contact.Type = Contact.Type::Person then
+                        if Contact.Get(Contact."Company No.") then;
+                    CurrencyCode := Contact."Currency Code";
+                end;
+            Page::"Customer Card":
+                if Customer.Get(RecordId) then
+                    CurrencyCode := Customer."Currency Code";
+            Page::"SOA Multi Items Availability":
+                begin
+                    CustomerFilter := SOAFiltersImpl.GetSecurityFiltersForCustomers(SOAFiltersImpl.GetSecurityFiltersForContacts(AgentTaskID));
+                    if CustomerFilter <> '' then begin
+                        Customer.SetFilter("No.", CustomerFilter);
+                        if Customer.FindFirst() then
+                            CurrencyCode := Customer."Currency Code";
+                    end;
+                end;
+        end;
+
+        if CurrencyCode <> '' then begin
+            if Currency.Get(CurrencyCode) then
+                SetAgentTaskPageContext(Currency.Code, Currency.GetCurrencySymbol(), AgentTaskPageContext)
+        end else
+            if GeneralLedgerSetup.Get() then
+                SetAgentTaskPageContext(GeneralLedgerSetup."LCY Code", GeneralLedgerSetup.GetCurrencySymbol(), AgentTaskPageContext);
+    end;
+    
+    local procedure SetAgentTaskPageContext(CurrencyCode: Code[10]; CurrencySymbol: Code[10]; var AgentTaskPageContext: Record "Agent Task Page Context")
+    begin
+        Clear(AgentTaskPageContext);
+        AgentTaskPageContext."Currency Code" := CurrencyCode;
+        AgentTaskPageContext."Currency Symbol" := CurrencySymbol;
+        AgentTaskPageContext.Insert();
+    end;
+
+    local procedure SetSOASetupDefaults(var TempSOASetup: Record "SOA Setup" temporary; AgentUserSecurityID: Guid)
     begin
         TempSOASetup.Init();
         TempSOASetup."Incoming Monitoring" := true;
         TempSOASetup."Email Monitoring" := true;
         SetDefaultSalesDocConfig(TempSOASetup, true);
+        TempSOASetup."Agent User Security ID" := AgentUserSecurityID;
         TempSOASetup.Insert();
     end;
 
@@ -345,7 +401,7 @@ codeunit 4400 "SOA Setup"
 
     local procedure PrepareInstructions(var InstructionsSecret: SecretText; var SOASetup: Record "SOA Setup")
     begin
-        GetAzureKeyVaultSecret(InstructionsSecret, 'BCSOAInstructionsV252');
+        GetAzureKeyVaultSecret(InstructionsSecret, 'BCSOAInstructionsV26');
         BuildPromptBasedOnSetup(InstructionsSecret, SOASetup);
         AddCompanyNameToSignature(InstructionsSecret);
     end;
@@ -362,6 +418,7 @@ codeunit 4400 "SOA Setup"
         HintName: Text;
         Prompt: Text;
         Include: Boolean;
+        NextStepNo: Integer;
     begin
         InstructionsText := InstructionsSecret.Unwrap();
         PromptInfo.ReadFrom(InstructionsText);
@@ -375,18 +432,19 @@ codeunit 4400 "SOA Setup"
         PromptArray := PromptOrder.AsArray();
 
         foreach PromptHint in PromptArray do begin
+            NextStepNo := 0;
             HintName := PromptHint.AsValue().AsText();
             Include := CheckShouldBeIncluded(SOASetup, HintName);
 
             if Include then
                 if PromptHints.AsObject().Get(HintName, PromptHint) then
-                    ProcessJToken(SOASetup, Prompt, PromptHint, '', 0, false);
+                    ProcessJToken(SOASetup, Prompt, PromptHint, '', NextStepNo, false);
         end;
         InstructionsSecret := Prompt;
     end;
 
     [NonDebuggable]
-    local procedure ProcessJToken(var SOASetup: Record "SOA Setup"; var Prompt: Text; JToken: JsonToken; ParentStepNo: Text; NextStepNo: Integer; AddNumbering: Boolean): Boolean
+    local procedure ProcessJToken(var SOASetup: Record "SOA Setup"; var Prompt: Text; JToken: JsonToken; ParentStepNo: Text; var NextStepNo: Integer; AddNumbering: Boolean): Boolean
     begin
         case true of
             JToken.IsValue():
@@ -401,18 +459,27 @@ codeunit 4400 "SOA Setup"
     end;
 
     [NonDebuggable]
-    local procedure ProcessJTokenAsValue(var Prompt: Text; JToken: JsonToken; ParentStepNo: Text; NextStepNo: Integer): Boolean
+    local procedure ProcessJTokenAsValue(var Prompt: Text; JToken: JsonToken; ParentStepNo: Text; var NextStepNo: Integer): Boolean
+    var
+        Value: Text;
+        IsPageSpecInstructionTag: Boolean;
     begin
-        if NextStepNo > 0 then
-            AddValueToPrompt(Prompt, JToken, GetNextStepNo(ParentStepNo, NextStepNo))
+        Value := JToken.AsValue().AsText();
+        IsPageSpecInstructionTag := Value.StartsWith('{%') and Value.EndsWith('%}');
+
+        if IsPageSpecInstructionTag and (NextStepNo > 0) then
+            NextStepNo -= 1;
+
+        if not IsPageSpecInstructionTag and (NextStepNo > 0) then
+            AddValueToPrompt(Prompt, Value, GetNextStepNo(ParentStepNo, NextStepNo))
         else
-            AddValueToPrompt(Prompt, JToken, '');
+            AddValueToPrompt(Prompt, Value, '');
 
         exit(true);
     end;
 
     [NonDebuggable]
-    local procedure ProcessJTokenAsObject(var SOASetup: Record "SOA Setup"; var Prompt: Text; JObject: JsonObject; ParentStepNo: Text; NextStep: Integer): Boolean
+    local procedure ProcessJTokenAsObject(var SOASetup: Record "SOA Setup"; var Prompt: Text; JObject: JsonObject; ParentStepNo: Text; var NextStep: Integer): Boolean
     var
         AttributeJToken: JsonToken;
         Name: Text;
@@ -462,21 +529,19 @@ codeunit 4400 "SOA Setup"
     end;
 
     [NonDebuggable]
-    local procedure AddValueToPrompt(var Prompt: Text; JToken: JsonToken; StepNo: Text)
+    local procedure AddValueToPrompt(var Prompt: Text; Value: Text; StepNo: Text)
     var
         PrefixToAdd: Text;
-        Value: Text;
         NewLineChar: Char;
     begin
         NewLineChar := 10;
-        Value := JToken.AsValue().AsText();
 
         if StepNo <> '' then begin
             PrefixToAdd := StepNo + '. ';
             AddSpaceInFront(PrefixToAdd);
         end;
 
-        Prompt += PrefixToAdd + Value + '<br>' + NewLineChar;
+        Prompt += PrefixToAdd + Value + NewLineChar;
     end;
 
     local procedure AddSpaceInFront(var PrefixToAdd: Text)
@@ -504,7 +569,7 @@ codeunit 4400 "SOA Setup"
                 exit(SOASetup."Quote Review" and SOASetup."Sales Doc. Configuration");
             'review_order_before_send':
                 exit(SOASetup."Order Review" and SOASetup."Sales Doc. Configuration");
-            'item_avalibility':
+            'item_availability':
                 exit(SOASetup."Search Only Available Items");
             else
                 exit(true);
@@ -532,16 +597,44 @@ codeunit 4400 "SOA Setup"
         end;
     end;
 
-    internal procedure TestEmailConnection(var TempSOASetup: Record "SOA Setup" temporary; var ConnectionSuccess: Boolean)
+    internal procedure ValidateEmailConnectionStatus(var TempSOASetup: Record "SOA Setup" temporary) ConnectionSuccess: Boolean
     var
         SOATestSetup: Codeunit "SOA Test Setup";
     begin
         SOATestSetup.SetTestEmailConnection(true);
         ConnectionSuccess := SOATestSetup.Run(TempSOASetup);
-        if not ConnectionSuccess then begin
-            if GuiAllowed() then
-                Message(SOAAttemptedConnectionFailedErr);
-            Error('');
+    end;
+
+    internal procedure ValidateEmailConnection(StateChanged: Boolean; var TempSOASetup: Record "SOA Setup" temporary)
+    var
+        NAVAppSettings: Record "NAV App Setting";
+        EnvironmentInformation: Codeunit "Environment Information";
+        CurrentModuleInfo: ModuleInfo;
+        GeneralError: Boolean;
+    begin
+        if TempSOASetup."Incoming Monitoring" and TempSOASetup."Email Monitoring" and not IsNullGuid(TempSOASetup."Email Account ID") then begin
+            if StateChanged then
+                UpdateSyncDateTime(TempSOASetup);
+
+            if ValidateEmailConnectionStatus(TempSOASetup) then
+                exit;
+
+            if GuiAllowed() then begin
+                GeneralError := true;
+                if EnvironmentInformation.IsSandbox() then begin
+                    NavApp.GetCurrentModuleInfo(CurrentModuleInfo);
+                    NAVAppSettings.ReadIsolation(IsolationLevel::ReadUncommitted);
+                    NAVAppSettings.SetRange("App ID", CurrentModuleInfo.Id);
+                    if NAVAppSettings.FindFirst() then
+                        if NAVAppSettings."Allow HttpClient Requests" = false then begin
+                            GeneralError := false;
+                            Error(SOAAttemptedConnectionHttpRequestFailedErr);
+                        end;
+                end;
+
+                if GeneralError then
+                    Error(SOAAttemptedConnectionFailedErr);
+            end;
         end;
     end;
 
@@ -553,6 +646,7 @@ codeunit 4400 "SOA Setup"
         // First activation
         if TempSetup."Activated At" = 0DT then begin
             TempSetup."Earliest Sync At" := CurrentDateTime();
+            TempSetup."Last Sync At" := TempSetup."Earliest Sync At";
             exit;
         end;
 
@@ -560,6 +654,7 @@ codeunit 4400 "SOA Setup"
 
         if EmailsCount = 0 then begin
             TempSetup."Earliest Sync At" := CurrentDateTime();
+            TempSetup."Last Sync At" := TempSetup."Earliest Sync At";
             exit;
         end;
 
@@ -623,5 +718,6 @@ codeunit 4400 "SOA Setup"
         SOAInterventionSuggestionQuoteLbl: Label 'quote';
         SOAInterventionSuggestionOrderLbl: Label 'order';
         NewEmailsSinceDeactivationLbl: Label 'New e-mails (%1) have arrived since %2 but haven''t been processed yet. Should Sales Order Agent also process these?', Comment = '%1 - Number of emails, %2 - Date and time of deactivation.';
-        SOAAttemptedConnectionFailedErr: Label 'The agent can''t be activated since connecting to the selected mailbox failed. Check permissions to the mailbox.';
+        SOAAttemptedConnectionFailedErr: Label 'The agent can''t be activated because the connection to the selected Microsoft 365 mailbox failed. Ask your Microsoft 365 administrator to check if the user configuring the agent has permission to access the mailbox.';
+        SOAAttemptedConnectionHttpRequestFailedErr: Label 'The agent can''t be activated because its settings don''t allow Http Requests. Ask your administrator to update this setting and try again.';
 }

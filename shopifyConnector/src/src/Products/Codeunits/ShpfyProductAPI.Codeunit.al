@@ -17,6 +17,7 @@ codeunit 30176 "Shpfy Product API"
         JsonHelper: Codeunit "Shpfy Json Helper";
         ProductEvents: Codeunit "Shpfy Product Events";
         VariantApi: Codeunit "Shpfy Variant API";
+        MetafieldAPI: Codeunit "Shpfy Metafield API";
 
     /// <summary> 
     /// Create Product.
@@ -211,11 +212,7 @@ codeunit 30176 "Shpfy Product API"
         if Item.Picture.Count > 0 then
             if CreateImageUploadUrl(Item, Url, ResourceUrl, TenantMedia) then
                 if UploadImage(TenantMedia, Url) then
-#if not CLEAN23
-                    if not BulkOperationMgt.IsBulkOperationFeatureEnabled() or (RecordCount < BulkOperationMgt.GetBulkOperationThreshold()) then
-#else
                     if RecordCount <= BulkOperationMgt.GetBulkOperationThreshold() then
-#endif
                         exit(UpdateProductImage(Product, ResourceUrl))
                     else begin
                         IBulkOperation := BulkOperationType::UpdateProductImage;
@@ -411,6 +408,7 @@ codeunit 30176 "Shpfy Product API"
         Shop := ShopifyShop;
         VariantApi.SetShop(Shop);
         CommunicationMgt.SetShop(Shop);
+        MetafieldAPI.SetShop(Shop);
     end;
 
     /// <summary> 
@@ -509,7 +507,6 @@ codeunit 30176 "Shpfy Product API"
     /// <returns>Return variable "Result" of type Boolean.</returns>
     internal procedure UpdateShopifyProductFields(var ShopifyProduct: record "Shpfy Product"; JProduct: JsonObject) Result: Boolean
     var
-        MetafieldAPI: Codeunit "Shpfy Metafield API";
         UpdatedAt: DateTime;
         JMetafields: JsonArray;
     begin
