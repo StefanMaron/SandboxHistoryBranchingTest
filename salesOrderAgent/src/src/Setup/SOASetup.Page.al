@@ -3,11 +3,13 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
 using System.AI;
 using System.Email;
+using System.Security.AccessControl;
 
 page 4400 "SOA Setup"
 {
@@ -15,7 +17,6 @@ page 4400 "SOA Setup"
     Extensible = false;
     ApplicationArea = All;
     IsPreview = true;
-    UsageCategory = Administration;
     Caption = 'Configure Sales Order Agent';
     InstructionalText = 'Choose how the agent helps with inquiries, quotes, and orders.';
     AdditionalSearchTerms = 'Sales order agent, Copilot agent, Agent, SOA';
@@ -130,24 +131,24 @@ page 4400 "SOA Setup"
                         var
                             EmailAccounts: Page "Email Accounts";
                         begin
-                            if Rec.State = Rec.State::Enabled then
-                                Error(DisableAgentToConfigErr);
-
                             if not CheckMailboxExists() then
                                 Page.RunModal(Page::"Email Account Wizard");
 
                             if not CheckMailboxExists() then
                                 exit;
+
                             EmailAccounts.EnableLookupMode();
                             EmailAccounts.FilterConnectorV3Accounts(true);
                             if EmailAccounts.RunModal() = Action::LookupOK then begin
                                 EmailAccounts.GetAccount(TempEmailAccount);
                                 TempSOASetup."Email Account ID" := TempEmailAccount."Account Id";
                                 TempSOASetup."Email Connector" := TempEmailAccount.Connector;
+                                TempSOASetup."Email Address" := TempEmailAccount."Email Address";
                             end;
 
-                            if MailboxName <> TempEmailAccount."Email Address" then begin
-                                MailboxName := TempEmailAccount."Email Address";
+                            if MailboxName <> TempSOASetup."Email Address" then begin
+                                MailboxChanged := true;
+                                MailboxName := TempSOASetup."Email Address";
                                 ConfigUpdated();
                             end;
                         end;
@@ -335,13 +336,14 @@ page 4400 "SOA Setup"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        SOASetup: Codeunit "SOA Setup";
+        User: Record User;
+        SOASetupCU: Codeunit "SOA Setup";
         SOASessionEvents: Codeunit "SOA Session Events";
         ReadyToActivateLbl: Label 'Ready to activate the sales order agent?\\The Copilot agent will run now and until you deactivate it.';
         ActivateWithoutMailboxLbl: Label 'There is no mailbox selected for the agent to monitor. Are you sure you want to continue? ';
         ActivateWithoutMailboxNameErr: Label 'To activate the agent with the current settings, a mailbox must be selected first.';
         ActivateWithoutMonitoringLbl: Label 'The monitoring of email is not enabled. Are you sure you want to continue?';
-        ConnectionSuccess: Boolean;
+        DeactivateWarningLbl: Label 'If you deactivate the agent, you won''t be able to reactivate it because you don''t have permission to the current mail account (activated by %1). Are you sure you want continue?', Comment = '%1=Username of user who activated the agent.';
     begin
         if CloseAction = CloseAction::Cancel then
             exit(true);
@@ -350,15 +352,10 @@ page 4400 "SOA Setup"
             if Confirm(ReadyToActivateLbl) then
                 Rec.State := Rec.State::Enabled;
 
-        if (Rec.State = Rec.State::Enabled) then
+        if (Rec.State = Rec.State::Enabled) and MailboxChanged and StateChanged() then
             if CheckIsValidConfig() then begin
                 SOASessionEvents.BindUserEvents();
-                if TempSOASetup."Incoming Monitoring" and TempSOASetup."Email Monitoring" and not IsNullGuid(TempSOASetup."Email Account ID") then begin
-                    SOASetup.TestEmailConnection(TempSOASetup, ConnectionSuccess);
-
-                    if ConnectionSuccess and (InitialState <> Rec.State) then
-                        SOASetup.UpdateSyncDateTime(TempSOASetup);
-                end;
+                SOASetupCU.ValidateEmailConnection(StateChanged(), TempSOASetup);
             end
             else begin
                 SOASessionEvents.BindUserEvents();
@@ -374,39 +371,64 @@ page 4400 "SOA Setup"
                         exit(false);
             end;
 
-        if InitialState <> Rec.State then
-            SOASetup.UpdateSOASetupActivationDT(TempSOASetup);
+        if ShowDeactivateAgentEmailPermissionsWarning() then begin
+            if User.Get(Rec.SystemModifiedBy) then;
+            if not Confirm(StrSubstNo(DeactivateWarningLbl, User."User Name")) then
+                exit(false);
+        end;
 
-        SOASetup.UpdateAgent(Rec, TempAgentAccessControl, TempSOASetup, TempEmailAccount, AccessUpdated);
+        if StateChanged() then
+            SOASetupCU.UpdateSOASetupActivationDT(TempSOASetup);
+
+        SOASetupCU.UpdateAgent(Rec, TempAgentAccessControl, TempSOASetup, TempEmailAccount, AccessUpdated, ShouldScheduleTask());
         exit(true);
+    end;
+
+    local procedure StateChanged(): Boolean
+    begin
+        exit((Rec.State <> InitialState) or IsFirstConfig());
+    end;
+
+    local procedure ShouldScheduleTask(): Boolean
+    begin
+        exit((Rec.State = Rec.State::Enabled) and (StateChanged() or MailboxChanged));
+    end;
+
+    local procedure ShowDeactivateAgentEmailPermissionsWarning(): Boolean
+    var
+        SOASetupCU: Codeunit "SOA Setup";
+    begin
+        if (Rec.State = Rec.State::Disabled) and StateChanged() then
+            if not SOASetupCU.ValidateEmailConnectionStatus(TempSOASetup) then
+                exit(true);
     end;
 
     local procedure UpdateControls()
     var
-        SOASetup: Codeunit "SOA Setup";
+        SOASetupCU: Codeunit "SOA Setup";
     begin
-        BadgeTxt := SOASetup.GetInitials();
-        AgentType := SOASetup.GetAgentType();
-        AgentSummary := SOASetup.GetAgentSummary();
+        BadgeTxt := SOASetupCU.GetInitials();
+        AgentType := SOASetupCU.GetAgentType();
+        AgentSummary := SOASetupCU.GetAgentSummary();
 
         if Rec.IsEmpty() then begin
-            SOASetup.GetAgent(Rec);
+            SOASetupCU.GetAgent(Rec);
             if not IsNullGuid(Rec."User Security ID") then begin
                 Rec.Insert();
                 InitialState := Rec.State;
-            end;
+            end else
+                InitialState := Rec.State::Disabled;
         end;
 
         if TempSOASetup.IsEmpty() then begin
-            SOASetup.GetDefaultSOASetup(TempSOASetup, Rec);
-            SOASetup.GetEmailAccount(TempSOASetup, TempEmailAccount);
-            MailboxName := TempEmailAccount."Email Address";
+            SOASetupCU.GetDefaultSOASetup(TempSOASetup, Rec);
+            MailboxName := TempSOASetup."Email Address";
             ShowLastSync := CheckIsValidConfig() and (TempSOASetup."Last Sync At" <> 0DT);
             LastSync := Format(TempSOASetup."Last Sync At");
         end;
 
         if TempAgentAccessControl.IsEmpty() then
-            SOASetup.GetDefaultAgentAccessControl(Rec."User Security ID", TempAgentAccessControl);
+            SOASetupCU.GetDefaultAgentAccessControl(Rec."User Security ID", TempAgentAccessControl);
 
         CreateOrderFromQuoteActive := TempSOASetup."Create Order from Quote";
 
@@ -473,7 +495,6 @@ page 4400 "SOA Setup"
         TempEmailAccount: Record "Email Account" temporary;
         TempSOASetup: Record "SOA Setup" temporary;
         AzureOpenAI: Codeunit "Azure OpenAI";
-        DisableAgentToConfigErr: Label 'Please deactivate the agent before making changes to the configuration.';
         MailboxName: Text;
         LastSync: Text;
         BadgeTxt: Text[4];
@@ -484,6 +505,7 @@ page 4400 "SOA Setup"
         AccessUpdated: Boolean;
         FirstConfig: Boolean;
         CreateOrderFromQuoteActive: Boolean;
+        MailboxChanged: Boolean;
         InitialState: Option Enabled,Disabled;
         QuoteLbl: Label 'Create quotes for sales inquiries';
         ItemSearchLbl: Label 'Search for requested items';
