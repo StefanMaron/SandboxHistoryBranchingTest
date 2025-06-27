@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>23b1772f-b8b8-4e87-9339-9ff7cbb2364b</id>
+        <name>Sales Order Agent</name>
+        <publisher>Microsoft</publisher>
+        <version>25.3.28755.35906</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Agent#SalesOrderAgent#Integration#SO Agent.OnGetEmailProcessLimitPer24Hours(Integer@)">
+            <summary>
+            Limit cannot be greater than 100
+            </summary>
+            <param name="Limit">Limit of the number of emails that can be processed in 24 hours</param>
+        </member>
+        <member name="M:Codeunit::Agent#SalesOrderAgent#Integration#SOA Impl.ActiveAgentExistInCurrentCompany:Boolean">
+            <summary>
+            Checks if the agent is active in the current company.
+            Method must work even for users that have no access to Agent, thus we need to use User table to check if the agent is enabled.
+            </summary>
+            <returns>True if active agent exists, false otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::Agent#SalesOrderAgent#SOA Setup.CreateDefaultAgentNoEmail">
+            <summary>
+            Used for testing OnPrem
+            </summary>
+        </member>
+        <member name="O:Codeunit::Agent#SalesOrderAgent#SOA Test Setup">
+            <summary>
+            Methods for testing the agent setup upon activation.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Agent#SalesOrderAgent#SOA Session Filter">
+            <summary>
+            This codeunit is used to filter the documents based on the contact that sent the email.
+            </summary>
+        </member>
+    </members>
+</doc>
