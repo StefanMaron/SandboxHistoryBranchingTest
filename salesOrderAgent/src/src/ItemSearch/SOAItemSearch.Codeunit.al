@@ -275,6 +275,8 @@ codeunit 4591 "SOA Item Search"
         ExpectedInventory, DummyQtyAvailable, PlannedOrderReleases, GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, ProjAvailableBalance, AvailableInventory : Decimal;
     begin
         Item2.Copy(Item);
+        if Item2.Type <> Item2.Type::Inventory then
+            exit(true);
         ItemAvailFormsMgt.CalcAvailQuantities(Item2, true, GrossRequirement, PlannedOrderRcpt, ScheduledRcpt,
             PlannedOrderReleases, ProjAvailableBalance, ExpectedInventory, DummyQtyAvailable, AvailableInventory);
         exit((ProjAvailableBalance > 0) and (ProjAvailableBalance >= RequiredQuantity));
