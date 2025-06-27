@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>7a129d06-5fd6-4fb6-b82b-0bf539c779d0</id>
+        <name>_Exclude_Bank Deposits</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:PermissionSet::Microsoft#Bank#Deposit#Bank Deposits">
+            <summary>
+            this permission set is used to grant full access to this app's functionality
+            </summary>
+        </member>
+        <member name="O:PermissionSet::Microsoft#Bank#Deposit#Bank Deposits - Objects">
+            <summary>
+            this permission set is used to easily add all the extension objects into the apps license
+            do not include this permission set in any other permission set
+            and do not change the Access and Assignable properties
+            </summary>
+        </member>
+    </members>
+</doc>

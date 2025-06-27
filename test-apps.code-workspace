@@ -1,11 +1,30 @@
 {
-  "folders": [],
   "settings": {
-    "al.enableCodeActions": false,
     "al.enableCodeAnalysis": false,
+    "search.useIgnoreFiles": true,
+    "al.enableCodeActions": false,
+    "al.ruleSetPath": "",
+    "al.enableCodeCop": false,
     "search.exclude": {
-      "**.xlf": true
+      "**/*.xlf": true
     },
-    "allint.enabled": false
-  }
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.git/**": true,
+      "**/*.xlf": true
+    },
+    "search.useGlobalIgnoreFiles": true,
+    "al.enableUICop": false
+  },
+  "folders": [
+    {
+      "path": "./testRunner"
+    },
+    {
+      "path": "./systemApplication/src/Email/src/testEmail"
+    },
+    {
+      "path": "./baseApplication/src/System/DevTools/CALTest"
+    }
+  ]
 }
