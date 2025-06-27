@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Business Central Cloud Migration - Previous Release" ControlGUID="{6647defe-1390-4d99-881e-279c4a7450b6}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40030" DepartmentCategory="Lists" RunObjectSrcTable="2000000256" ControlGUID="{03a82a94-7e6a-4b33-a3f6-15a5ff80bb66}" Name="Table Mappings" CaptionML="ENU=Table Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 131131259 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 131131259 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40031" DepartmentCategory="Lists" RunObjectSrcTable="2000000257" ControlGUID="{abf5ecda-11e1-4b25-9ef9-0e8a8a9a1368}" Name="Table Field Mappings" CaptionML="ENU=Table Field Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 230854373 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 230854373 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Business Central Cloud Migration - Previous Release" ControlGUID="{1dd0fa4f-a853-4147-ac59-782714608ca4}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40031" DepartmentCategory="Lists" RunObjectSrcTable="2000000257" ControlGUID="{128de4b2-c0e1-4ed9-8dd3-88c92b16ad60}" Name="Table Field Mappings" CaptionML="ENU=Table Field Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 230854373 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 230854373 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="40030" DepartmentCategory="Lists" RunObjectSrcTable="2000000256" ControlGUID="{c7dee2c8-fa0c-4752-b279-6cd22cdee24e}" Name="Table Mappings" CaptionML="ENU=Table Mappings" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 131131259 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 131131259 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>
