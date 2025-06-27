@@ -1,6 +1,5 @@
 namespace System.Diagnostics;
 
-using System;
 using System.Reflection;
 
 table 404 "Change Log Setup (Field)"
@@ -46,9 +45,6 @@ table 404 "Change Log Setup (Field)"
 
             trigger OnValidate()
             var
-                MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                MyALAuditCategory: DotNet ALAuditCategory;
                 EnabledLbl: Label 'Enabled', Locked = true;
                 DisabledLbl: Label 'Disabled', Locked = true;
                 AuditMessageLbl: Label 'The Field Monitoring has been %1 for the field %2 in the table %3 by UserSecurityId %4.', Locked = true;
@@ -59,7 +55,7 @@ table 404 "Change Log Setup (Field)"
                 else
                     AuditMessageTxt := StrSubstNo(AuditMessageLbl, DisabledLbl, "Field Caption", "Table Caption", UserSecurityId());
 
-                MyCustomerAuditLoggerALHelper.LogAuditMessage(AuditMessageTxt, MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+                Session.LogAuditMessage(AuditMessageTxt, SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
             end;
         }
         field(8; Notify; Boolean)
