@@ -1,0 +1,25 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="174985c6-4d3d-475d-b681-94ac1a0e061e" Name="Banking Documents Localization for Czech Demo Data" Publisher="Microsoft" Brief="Provides functionality for Banking Documents in Business Central for the Czech Republic." Description="Banking Documents app allows you to create payment orders and bank statements documents in a form that respects local practices. You can use an unlimited number of bank accounts of various banking institutions and in different currencies. You can import and export bank files from/to the banking software." Version="26.1.33404.35908" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="1" MaxObjectId="2147483647" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="8730dafb-13cd-42c9-987c-decb6354269d" Name="Banking Documents Localization for Czech" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="acbbfbc7-75c1-436f-8b22-926d741b2616" Name="Contoso Coffee Demo Dataset (CZ)" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo />
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T20:55:32.8625865Z" CompilerVersion="15.0.23.59383" />
+  <AlternateIds />
+</Package>
