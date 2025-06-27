@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>dd0be2ea-f733-4d65-bb34-a28f4624fb14</id>
+        <name>Library Assert</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::System#TestLibraries#Utilities#Library Assert">
+            <summary>
+            This module provides functions for easy verification of expected values and error handling in test code.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.IsTrue(Boolean,Text)">
+            <summary>
+            Tests whether the specified condition is true and throws an exception if the condition is false.
+            </summary>
+            <param name="Condition">The condition the test expects to be true.</param>
+            <param name="Msg">The message to include in the exception when condition is false. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.IsFalse(Boolean,Text)">
+            <summary>
+            Tests whether the specified condition is false and throws an exception if the condition is true.
+            </summary>
+            <param name="Condition">The condition the test expects to be false.</param>
+            <param name="Msg">The message to include in the exception when condition is true. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreEqual(Variant,Variant,Text)">
+            <summary>
+            Tests whether the specified values are equal and throws an exception if the two values are not equal.
+            </summary>
+            <param name="ExpectedVariant">The first value to compare. This is the value the tests expects.</param>
+            <param name="ActualVariant">The second value to compare. This is the value produced by the code under test.</param>
+            <param name="Msg">The message to include in the exception when actual is not equal to expected. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreEqual(Dictionary of [Text,Text],Dictionary of [Text,Text])">
+            <summary>
+            Tests whether the specified dictionaries are equal and throws an exception if the two dictionaries are not equal.
+            </summary>
+            <param name="Expected">The first dicitonary to compare.</param>
+            <param name="Actual">The second dictionary to compare.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreEqualDateTime(DateTime,DateTime,Text)">
+            <summary>
+            Tests whether the specified DateTime values are equal and throws an exception if the two DateTime values are not equal.
+            This function uses the high precision format type 1
+            </summary>
+            <param name="Expected">The first DateTime value to compare. This is the DateTime value the tests expects.</param>
+            <param name="Actual">The second DateTime value to compare. This is the DateTime value produced by the code under test.</param>
+            <param name="Msg">The message to include in the exception when actual is not equal to expected. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreEqualDateTime(DateTime,DateTime,Duration,Text)">
+            <summary>
+            Tests whether the specified DateTime values are nearly equal and throws an exception if the two DateTime values are not nearly equal.
+            </summary>
+            <param name="Expected">The first DateTime value to compare. This is the DateTime value the tests expects.</param>
+            <param name="Actual">The second DateTime value to compare. This is the DateTime value produced by the code under test.</param>
+            <param name="Delta">The maximum difference between the two DateTime values.</param>
+            <param name="Msg">The message to include in the exception when actual is not equal to expected. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreNotEqual(Variant,Variant,Text)">
+            <summary>
+            Tests whether the specified values are unequal and throws an exception if they are equal.
+            </summary>
+            <param name="ExpectedVariant">The first value to compare. This is the value the test expects not to match actual.</param>
+            <param name="ActualVariant">The second value to compare. This is the value produced by the code under test.</param>
+            <param name="Msg">The message to include in the exception when actual is not equal to expected. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreNearlyEqual(Decimal,Decimal,Decimal,Text)">
+            <summary>
+            Tests whether the specified decimals are equal and throws an exception if the they are not equal.
+            </summary>
+            <param name="Expected">The first value to compare. This is the value the tests expects.</param>
+            <param name="Actual">The second value to compare. This is the value produced by the code under test.</param>
+            <param name="Delta">The required accuracy. An exception will be thrown only if actual is different than expected by more than delta.</param>
+            <param name="Msg">The message to include in the exception when actual is different than expected by more than delta. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AreNotNearlyEqual(Decimal,Decimal,Decimal,Text)">
+            <summary>
+            Tests whether the specified decimals are unequal and throws an exception if the they are equal.
+            </summary>
+            <param name="Expected">The first value to compare. This is the value the tests expects not to match actual.</param>
+            <param name="Actual">The second value to compare. This is the value produced by the code under test.</param>
+            <param name="Delta">The required accuracy. An exception will be thrown only if actual is different than Expected by at most delta.</param>
+            <param name="Msg">The message to include in the exception when actual is equal to Expected or different by less than delta. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.Fail(Text)">
+            <summary>
+            Throws an exception.
+            </summary>
+            <param name="Msg">The message to include in the exception. The message is shown in test results.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.RecordIsEmpty(Variant)">
+            <summary>
+            Tests whether the specified record is non-empty and throws an exception if it is.
+            </summary>
+            <param name="RecVariant">The record to be checked</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.RecordIsNotEmpty(Variant)">
+            <summary>
+            Tests whether the specified record is empty and throws an exception if it is.
+            </summary>
+            <param name="RecVariant">The record to be checked</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.TableIsEmpty(Integer)">
+            <summary>
+            Tests whether the specified table is non-empty and throws an exception if it is.
+            </summary>
+            <param name="TableNo">The id of table the test expects to be empty</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.TableIsNotEmpty(Integer)">
+            <summary>
+            Tests whether the specified table is empty and throws an exception if it is.
+            </summary>
+            <param name="TableNo">The id of table the test expects not to be empty</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.RecordCount(Variant,Integer)">
+            <summary>
+            Tests whether the Table holds the expected number of Records and throws an exception when the count is different.
+            </summary>
+            <param name="RecVariant">The table whos records will be counter</param>
+            <param name="ExpectedCount">The expected number of records in the table</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.KnownFailure(Text,Integer)">
+            <summary>
+            This function is used to indicate the test is known to fail with a certain error. If the last error thrown is the expected one, a known failure error is thrown. If the last error was a different error than an exception is thrown.
+            </summary>
+            <param name="Expected">The expected error</param>
+            <param name="WorkItemNo">The Id of the workitem to fix the know test defect</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.ExpectedError(Text)">
+            <summary>
+            Verifies that the last error thrown is the expected error. If a different error was thrown, an exception is thrown.
+            </summary>
+            <param name="Expected">The expected error</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.ExpectedErrorCode(Text)">
+            <summary>
+            Verifies that the last error code thrown is the expected error code. If a different error code was thrown, an exception is thrown.
+            </summary>
+            <param name="Expected">The expected error code</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.ExpectedMessage(Text,Text)">
+            <summary>
+            Tests that the Expected message matches the Actual message
+            </summary>
+            <param name="Expected">The first value to compare. This is the value the tests expects not to match actual.</param>
+            <param name="Actual">The second value to compare. This is the value produced by the code under test.</param>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AssertRecordNotFound">
+            <summary>
+            Verifies that the last error code thrown was the Record Not Found error code.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AssertRecordAlreadyExists">
+            <summary>
+            Verifies that the last error code thrown was the Record Already Exists error code.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AssertNothingInsideFilter">
+            <summary>
+            Verifies that the last error code thrown was the Nothing Inside Filter error code.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AssertNoFilter">
+            <summary>
+            Verifies that the last error code thrown was the No Filter error code.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestLibraries#Utilities#Library Assert.AssertPrimRecordNotFound">
+            <summary>
+            Verifies that the last error code thrown was the Primary Record Not Found error code.
+            </summary>
+        </member>
+    </members>
+</doc>
