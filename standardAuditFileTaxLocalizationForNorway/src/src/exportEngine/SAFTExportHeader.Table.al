@@ -119,14 +119,6 @@ table 10682 "SAF-T Export Header"
             Caption = 'Execution End Date/Time';
             Editable = false;
         }
-        field(20; "SAF-T File"; Blob)
-        {
-            DataClassification = CustomerContent;
-            Caption = 'SAF-T File';
-            ObsoleteState = Removed;
-            ObsoleteReason = 'Replaced with the SAF-T Export File table';
-            ObsoleteTag = '24.0';
-        }
         field(30; "Latest Data Check Date/Time"; DateTime)
         {
             DataClassification = CustomerContent;

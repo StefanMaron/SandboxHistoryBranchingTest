@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="437dbf0e-84ff-417a-965d-ed2bb9650972" Name="Base Application" Publisher="Microsoft" Brief="Base Application (NO)" Description="Provides business processes that are typical for small and mid-sized companies, such as sales and purchasing, and customer and vendor management, plus complex processes, such as assembly, manufacturing, service, and directed warehouse management. https://go.microsoft.com/fwlink/?LinkId=2205496" Version="25.5.30849.35974" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" PropagateDependencies="True" />
+  <App Id="437dbf0e-84ff-417a-965d-ed2bb9650972" Name="Base Application" Publisher="Microsoft" Brief="Base Application (NO)" Description="Provides business processes that are typical for small and mid-sized companies, such as sales and purchasing, and customer and vendor management, plus complex processes, such as assembly, manufacturing, service, and directed warehouse management. https://go.microsoft.com/fwlink/?LinkId=2205496" Version="26.0.30643.35936" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" PropagateDependencies="True" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
     <IdRange MinObjectId="104000" MaxObjectId="104999" />
@@ -12,11 +12,15 @@
     <IdRange MinObjectId="11000000" MaxObjectId="11000499" />
     <IdRange MinObjectId="15000000" MaxObjectId="15000499" />
     <IdRange MinObjectId="32000000" MaxObjectId="32000199" />
-    <IdRange MinObjectId="99000700" MaxObjectId="99009000" />
+    <IdRange MinObjectId="99000700" MaxObjectId="99000701" />
+    <IdRange MinObjectId="99000750" MaxObjectId="99001049" />
+    <IdRange MinObjectId="99003500" MaxObjectId="99004399" />
+    <IdRange MinObjectId="99004600" MaxObjectId="99005899" />
+    <IdRange MinObjectId="99008500" MaxObjectId="99009699" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="f3552374-a1f2-4356-848e-196002525837" Name="Business Foundation" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="f3552374-a1f2-4356-848e-196002525837" Name="Business Foundation" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" />
@@ -39,7 +43,10 @@
     <Module Id="d0e99b97-089b-449f-a0f5-a2ab994dbfd7" Name="Tests-Upgrade" Publisher="Microsoft" />
     <Module Id="d94a0cee-f211-4941-b609-7c984f85ad03" Name="Tests-Permissions" Publisher="Microsoft" />
     <Module Id="6f0b528b-a4de-4ccd-a948-d1350e228e4a" Name="Tests-SCM" Publisher="Microsoft" />
+    <Module Id="88f3615c-370c-4f39-bb5f-54e096c984e9" Name="Tests-SCM-Manufacturing" Publisher="Microsoft" />
+    <Module Id="e737590a-fede-4692-ac4e-d1d4849dd043" Name="Tests-Service" Publisher="Microsoft" />
     <Module Id="6555cb10-63ea-4ec0-99aa-8e6a4db67c87" Name="Core Localization Pack for Czech Tests" Publisher="Microsoft" />
+    <Module Id="0243a4ea-21b3-4fa8-ad70-9915a4400be0" Name="Tests-Resource" Publisher="Microsoft" />
   </InternalsVisibleTo>
   <ScreenShots />
   <SupportedLocales />
@@ -53,6 +60,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T15:26:18.6882404Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-26T04:27:51.6426388Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>

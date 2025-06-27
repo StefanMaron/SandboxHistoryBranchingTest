@@ -1,3 +1,4 @@
+#if not CLEANSCHEMA28 
 namespace Microsoft.Integration.FieldService;
 
 using Microsoft.Integration.D365Sales;
@@ -313,4 +314,5 @@ table 6403 "FS Work Order Incident"
         {
         }
     }
-}
+} 
+#endif

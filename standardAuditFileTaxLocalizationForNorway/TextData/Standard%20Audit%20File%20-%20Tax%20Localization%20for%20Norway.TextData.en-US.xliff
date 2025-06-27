@@ -561,18 +561,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Exports - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3865464019 - Action 161509663 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copy sales and purchase reporting codes to sales/purchase SAF-T standard tax codes.</source>
-          <target>Copy sales and purchase reporting codes to sales/purchase SAF-T standard tax codes.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Action CopyReportingCodes - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3865464019 - Action 161509663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copy Reporting Codes to SAF-T</source>
-          <target>Copy Reporting Codes to SAF-T</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Action CopyReportingCodes - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3865464019 - Control 1246077090 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the relevant VAT rate for the particular combination of VAT business posting group and VAT product posting group. Do not enter the percent sign, only the number. For example, if the VAT rate is 25 %, enter 25 in this field.</source>
           <target>Specifies the relevant VAT rate for the particular combination of VAT business posting group and VAT product posting group. Do not enter the percent sign, only the number. For example, if the VAT rate is 25 %, enter 25 in this field.</target>
@@ -620,30 +608,6 @@
           <target>Specifies a description of the VAT posting setup</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Control Description - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3865464019 - Control 3717046756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the VAT code to be used with this VAT posting setup for sales reporting.</source>
-          <target>Specifies the VAT code to be used with this VAT posting setup for sales reporting.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Control Sales VAT Reporting Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3865464019 - Control 3863697861 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the VAT code to be used with this VAT posting setup for purchase reporting.</source>
-          <target>Specifies the VAT code to be used with this VAT posting setup for purchase reporting.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Control Purchase VAT Reporting Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3865464019 - Control 4053430370 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Control Sales SAF-T Standard Tax Code - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3865464019 - Control 4150717296 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T VAT Posting Setup - Control Purch. SAF-T Standard Tax Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3865464019 - Control 4274949637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the VAT code to be used with this VAT posting setup for sales reporting.</source>
@@ -1109,12 +1073,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SAF-T Std. Account Categories - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1489669071 - Control 2603357364 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4132487568">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup List - Control PurchaseStandardTaxCode - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="PageExtension 1489669071 - Control 2867432420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4132487568">
           <source>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the sales VAT entries.</source>
           <target>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the sales VAT entries.</target>
@@ -1126,12 +1084,6 @@
           <target>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the purchase VAT entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup List - Control PurchaseSAFTTaxCode - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1489669071 - Control 4138765653 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4132487568">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup List - Control SalesStandardTaxCode - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 351339034 - Control 2374442188 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2170603285">
           <source>Specifies the code that will be exported to the JournalID XML node in the SAF-T file.</source>
@@ -1145,12 +1097,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Company Contact - Control SAFTContactNo - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3968840133 - Control 2603357364 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 434101636">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the purchase VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup Card - Control PurchaseStandardTaxCode - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="PageExtension 3968840133 - Control 2867432420 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 434101636">
           <source>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the sales VAT entries.</source>
           <target>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the sales VAT entries.</target>
@@ -1162,12 +1108,6 @@
           <target>Specifies the code of the VAT posting setup that will be used for the TaxCode XML node in the SAF-T file for the purchase VAT entries.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup Card - Control PurchaseSAFTTaxCode - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3968840133 - Control 4138765653 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 434101636">
-          <source>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</source>
-          <target>Specifies the code of the VAT posting setup that will be used for the StandardTaxCode XML node in the SAF-T file for the sales VAT entries.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T Tax Setup Card - Control SalesStandardTaxCode - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3974796057 - Control 3675218945 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2173385693">
           <source>Specifies if information about this dimension will be exported to the SAF-T file.</source>
@@ -1187,17 +1127,713 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T VAT Reporting Code - Control Compensation - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 766791453 - Control 3835983272 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3059077503">
-          <source>Specifies if the tax code is used for compensation.</source>
-          <target>Specifies if the tax code is used for compensation.</target>
+        <trans-unit id="Report 683032088 - Control 362981690 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the mapping range code to copy mapping from</source>
+          <target>Specifies the mapping range code to copy mapping from</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T VAT Code - Control Compensation - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SAF-T Copy Mapping - Control MappingRangeID - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 766791453 - Control 3835983272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3059077503">
+        <trans-unit id="Report 683032088 - Control 362981690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Range Code</source>
+          <target>Mapping Range Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SAF-T Copy Mapping - Control MappingRangeID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 683032088 - Control 363376037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the existing mapping will be replaced by the mapping range to copy.</source>
+          <target>Specifies that the existing mapping will be replaced by the mapping range to copy.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SAF-T Copy Mapping - Control ReplaceControl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 683032088 - Control 363376037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Replace Existing Mapping</source>
+          <target>Replace Existing Mapping</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SAF-T Copy Mapping - Control ReplaceControl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 683032088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Copy Mapping</source>
+          <target>SAF-T Copy Mapping</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SAF-T Copy Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1270772992 - Field 1753214751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Type</source>
+          <target>Source Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Source - Field Source Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1270772992 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <target>Source No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Source - Field Source No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1270772992 - Field 3641927271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <target>ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Source - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1270772992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Mapping Source</source>
+          <target>SAF-T Mapping Source</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1045836580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parallel Processing</source>
+          <target>Parallel Processing</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Parallel Processing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1176000704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number of G/L Entries</source>
+          <target>Number of G/L Entries</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Number of G/L Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1347859192 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Header Comment</source>
+          <target>Header Comment</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Header Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1578191139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split By Month</source>
+          <target>Split By Month</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Split By Month - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1753067149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Execution End Date/Time</source>
+          <target>Execution End Date/Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Execution End Date/Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 1786487985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Currency Information</source>
+          <target>Export Currency Information</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Export Currency Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 18210474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max No. Of Jobs</source>
+          <target>Max No. Of Jobs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Max No. Of Jobs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2148955958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Multiple Zip Files</source>
+          <target>Create Multiple Zip Files</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Create Multiple Zip Files - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2172196565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Latest Data Check Date/Time</source>
+          <target>Latest Data Check Date/Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Latest Data Check Date/Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 237762718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target>Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2420424136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total G/L Entry Debit</source>
+          <target>Total G/L Entry Debit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Total G/L Entry Debit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2678142823 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split By Date</source>
+          <target>Split By Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Split By Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2681143077 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Folder Path</source>
+          <target>Folder Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Folder Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 2747192818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Range Code</source>
+          <target>Mapping Range Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Mapping Range Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 3598169969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total G/L Entry Credit</source>
+          <target>Total G/L Entry Credit</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Total G/L Entry Credit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 3641927271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <target>ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target>Ending Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Ending Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target>Starting Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not Started,In Progress,Failed,Completed</source>
+          <target>Not Started,In Progress,Failed,Completed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 6461729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Earliest Start Date/Time</source>
+          <target>Earliest Start Date/Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Earliest Start Date/Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 648601929 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable Zip File Generation</source>
+          <target>Disable Zip File Generation</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Disable Zip File Generation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 707229288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Execution Start Date/Time</source>
+          <target>Execution Start Date/Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Execution Start Date/Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Field 898403966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data check status</source>
+          <target>Data check status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Field Data check status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2386421154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Export Header</source>
+          <target>SAF-T Export Header</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 2005121193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Category No.</source>
+          <target>Category No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field Category No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 2747192818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Range Code</source>
+          <target>Mapping Range Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field Mapping Range Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 3379764274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Entries Exists</source>
+          <target>G/L Entries Exists</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field G/L Entries Exists - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <target>G/L Account No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 3984022072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Type</source>
+          <target>Mapping Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field Mapping Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target>No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Field 63418190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account Name</source>
+          <target>G/L Account Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Field G/L Account Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2868310936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T G/L Account Mapping</source>
+          <target>SAF-T G/L Account Mapping</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T G/L Account Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 295034767 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Source Code - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 295034767 - Field 3289481650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Includes No Source Code</source>
+          <target>Includes No Source Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Source Code - Field Includes No Source Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 295034767 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Source Code - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 295034767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Source Code</source>
+          <target>SAF-T Source Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Source Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Field 1787409580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Group No.</source>
+          <target>Group No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Field Group No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Field 2897660500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record ID</source>
+          <target>Record ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Field Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Field 3017471043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Table No.</source>
+          <target>Table No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Field Table No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Field 3531868071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field No.</source>
+          <target>Field No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Field Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Field 823559016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Caption</source>
+          <target>Field Caption</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Field Field Caption - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2980707877 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Missing Field</source>
+          <target>SAF-T Missing Field</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Missing Field - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 1387593085 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Post Code</source>
+          <target>Check Post Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 1533897310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Customer</source>
+          <target>Check Customer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target>Primary Key</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 1882811858 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Post Code</source>
+          <target>Default Post Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Default Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 2079293726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not Applicable VAT Code</source>
+          <target>Not Applicable VAT Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Not Applic. VAT Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 2345991345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension No.</source>
+          <target>Dimension No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Dimension No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 2998338620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Address</source>
+          <target>Check Address</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 3187525439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Company Information</source>
+          <target>Check Company Information</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Company Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 3397053526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Tax Code</source>
+          <target>Last Tax Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Last Tax Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 3762453258 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not Applicable VAT Code</source>
+          <target>Not Applicable VAT Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Not Applicable VAT Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 38781331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Bank Account</source>
+          <target>Check Bank Account</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Bank Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 4166757670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Vendor</source>
+          <target>Check Vendor</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Check Vendor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Field 65859355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Default Version</source>
+          <target>Default Version</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Field Default Version - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3247374822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Setup</source>
+          <target>SAF-T Setup</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3326605066 - Field 1347859192 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Header Comment</source>
+          <target>Header Comment</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Setup - Field Header Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3326605066 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target>Primary Key</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3326605066 - Field 2747192818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Range Code</source>
+          <target>Mapping Range Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Setup - Field Mapping Range Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3326605066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Export Setup</source>
+          <target>SAF-T Export Setup</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 1239567501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Category No.</source>
+          <target>Mapping Category No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Mapping Category No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 2327360480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accounting Period</source>
+          <target>Accounting Period</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Accounting Period - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 3376138136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Include Incoming Balance</source>
+          <target>Include Incoming Balance</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Include Incoming Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 3984022072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Type</source>
+          <target>Mapping Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Mapping Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 4199324085 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping No.</source>
+          <target>Mapping No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Mapping No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target>Ending Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Ending Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target>Starting Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Field 948037281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Range Type</source>
+          <target>Range Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Field Range Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3901834970 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Mapping Range</source>
+          <target>SAF-T Mapping Range</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Range - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 602235041 - Field 2022107547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File No.</source>
+          <target>File No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export File - Field File No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 602235041 - Field 382888509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T File</source>
+          <target>SAF-T File</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export File - Field SAF-T File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 602235041 - Field 4250875323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export ID</source>
+          <target>Export ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export File - Field Export ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 602235041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Export File</source>
+          <target>SAF-T Export File</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 672503691 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Category - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 672503691 - Field 3984022072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Type</source>
+          <target>Mapping Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Category - Field Mapping Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 672503691 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target>No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Category - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 672503691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Mapping Category</source>
+          <target>SAF-T Mapping Category</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping Category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 903811563 - Field 2005121193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Category No.</source>
+          <target>Category No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping - Field Category No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 903811563 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 903811563 - Field 3984022072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mapping Type</source>
+          <target>Mapping Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping - Field Mapping Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 903811563 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target>No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 903811563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Mapping</source>
+          <target>SAF-T Mapping</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 138642376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Master Data</source>
+          <target>Master Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Master Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 1829104285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Session ID</source>
+          <target>Session ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Session ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 2934272260 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Of Retries</source>
+          <target>No. Of Retries</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field No. Of Retries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Line No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 3641927271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <target>ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 382888509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T File</source>
+          <target>SAF-T File</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field SAF-T File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 3958072724 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task ID</source>
+          <target>Task ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Task ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 3975658731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Server Instance ID</source>
+          <target>Server Instance ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Server Instance ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 4237402031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Progress</source>
+          <target>Progress</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Progress - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target>Ending Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Ending Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target>Starting Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Starting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Status</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not Started,In Progress,Failed,Completed</source>
+          <target>Not Started,In Progress,Failed,Completed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Status - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Field 892252506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created Date/Time</source>
+          <target>Created Date/Time</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Field Created Date/Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 909457577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SAF-T Export Line</source>
+          <target>SAF-T Export Line</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SAF-T Export Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 295034767 - Field 295034767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2720485332">
+          <source>SAF-T Source Code</source>
+          <target>SAF-T Source Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Source Code - Field SAF-T Source Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3535736462 - Field 2377726822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
+          <source>SAF-T Contact No.</source>
+          <target>SAF-T Contact No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Company Contact - Field SAF-T Contact No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3974796057 - Field 1412124609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 881177948">
+          <source>SAF-T Analysis Type</source>
+          <target>SAF-T Analysis Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Analysis - Field SAF-T Analysis Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3974796057 - Field 227023942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 881177948">
+          <source>Export to SAF-T</source>
+          <target>Export to SAF-T</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Analysis - Field Export to SAF-T - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 417346265 - Field 127375946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
+          <source>Purchase SAF-T Tax Code</source>
+          <target>Purchase SAF-T Tax Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Tax Setup - Field Purchase SAF-T Tax Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 417346265 - Field 3378701591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
+          <source>Sales SAF-T Tax Code</source>
+          <target>Sales SAF-T Tax Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Tax Setup - Field Sales SAF-T Tax Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 417346265 - Field 4053430370 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
+          <source>Sales SAF-T Standard Tax Code</source>
+          <target>Sales SAF-T Standard Tax Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Tax Setup - Field Sales SAF-T Standard Tax Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 417346265 - Field 4150717296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
+          <source>Purchase SAF-T Standard Tax Code</source>
+          <target>Purchase SAF-T Standard Tax Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T Tax Setup - Field Purch. SAF-T Standard Tax Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 766791453 - Field 3835983272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1256068594">
           <source>Compensation</source>
           <target>Compensation</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SAF-T VAT Code - Control Compensation - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SAF-T VAT Code - Field Compensation - Property Caption</note>
         </trans-unit>
       </group>
     </body>
