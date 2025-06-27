@@ -1,0 +1,25 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="b56171bd-9a8e-47ad-a527-99f476d5af83" Name="E-Document Connector - SignUp" Publisher="Microsoft" Brief="E-Document Connector - SignUp" Description="E-Document Connector - SignUp" Version="26.0.30643.35936" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="6440" MaxObjectId="6449" />
+  </IdRanges>
+  <Dependencies>
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+  </Dependencies>
+  <InternalsVisibleTo>
+    <Module Id="b56171bd-9a8e-47ad-a527-99f476d5af84" Name="E-Document Connector - SignUp Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-26T04:20:26.9291257Z" CompilerVersion="15.0.23.59383" />
+  <AlternateIds />
+</Package>

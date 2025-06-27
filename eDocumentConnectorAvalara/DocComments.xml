@@ -4,7 +4,7 @@
         <id>f35c56a6-7c5f-4dbe-89c4-fef5145d00f4</id>
         <name>E-Document Connector - Avalara</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35974</version>
+        <version>26.0.30643.35936</version>
     </application>
     <members>
         <member name="O:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Models#Metadata">
@@ -38,7 +38,7 @@
             Throw error for requests not of status 200 and 201.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetCompanyList(Company@)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetCompanyList(Avalara Company@)">
             <summary>
             Call Avalara Shared API for list of companies
             </summary>
@@ -54,45 +54,43 @@
             Let user select Avalara Mandate for e-document service
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.SendEDocument(E-Document@,Codeunit::System#Utilities#Temp Blob@,Boolean@,HttpRequestMessage@,HttpResponseMessage@)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.SendEDocument(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext)">
             <summary>
             Calls Avalara API for SubmitDocument.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetDocumentStatus(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetDocumentStatus(E-Document@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext):Boolean">
             <summary>
             Calls Avalara API for GetDocumentStatus.
             If request is successfull, but status is Error, then errors are logged and error is thrown to set document to Sending Error state
             </summary>
             <returns>False if status is Pending, True if status is Complete.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ReceiveDocument(Codeunit::System#Utilities#Temp Blob@,HttpRequestMessage@,HttpResponseMessage@)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ReceiveDocuments(E-Document Service@,Codeunit::System#Utilities#Temp Blob List,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
             <summary>
             Lookup documents for last XX days. 
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ReceiveDocumentInner(Codeunit::System#Utilities#Temp Blob@,HttpRequestMessage@,HttpResponseMessage@,Text):JsonArray">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ReceiveDocumentInner(Codeunit::System#Utilities#Temp Blob@,HttpRequestMessage,HttpResponseMessage,Text):JsonArray">
             <summary>
             Recursive function to keep following next link from API.
             Ensures we get all documents within Start and End time that we requested.
             </summary>
             <returns>List of Json Objects with data about document that belong to selected avalara company.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetDocumentCountInBatch(Codeunit::System#Utilities#Temp Blob@):Integer">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.DownloadDocument(E-Document@,E-Document Service@,Codeunit::System#Utilities#Temp Blob,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
             <summary>
-            Get number of documents in batch
+            Download document XML from Avalara API
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.OnBeforeInsertEdocumentCheck(E-Document@,E-Document Service,Codeunit::System#Utilities#Temp Blob@,Integer,HttpRequestMessage,HttpResponseMessage,Boolean@,Boolean@)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.RemoveExistingDocumentsFromResponse(JsonArray@)">
             <summary>
-            Filter out received documents that are already downloaded.
-            Needed as Avalara API does not support marking documents as fetched.
+            Remove document ids from array that are already created as E-Documents.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.OnAfterInsertEdocumentReadDocumentIdAndDownloadContent(E-Document@,E-Document Service,Codeunit::System#Utilities#Temp Blob@,Integer,HttpRequestMessage,HttpResponseMessage)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.DocumentExists(Text):Boolean">
             <summary>
-            Get Document Id and store it E-Document.
-            Create Request to Download XML based on Document Id, and store it in TempBlob. 
+            Check if E-Document with Document Id exists in E-Document table
             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.SetMandateForMetaData(E-Document Service,Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Models#Metadata@)">
@@ -110,7 +108,7 @@
             Parse mandates from json into table
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ParseCompanyList(Company@,Text)">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ParseCompanyList(Avalara Company@,Text)">
             <summary>
             Parse companies from json into table
             </summary>
@@ -125,9 +123,9 @@
             Parse Document Response. If erros log all events
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.ParseReceivedDocument(Text,Integer,Text@):Boolean">
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.GetDocumentIdFromArray(JsonArray,Integer):Text">
             <summary>
-            Parse the document id from json
+            Returns id from json array
             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#Avalara#Processing.FormatDateTime(Date):Text">
