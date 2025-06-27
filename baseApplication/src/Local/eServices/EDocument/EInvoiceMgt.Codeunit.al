@@ -437,7 +437,7 @@ codeunit 10145 "E-Invoice Mgt."
         InStream: InStream;
         XMLDoc: DotNet XmlDocument;
         XMLDocResult: DotNet XmlDocument;
-        Environment: DotNet Environment;
+        SystemEnvironment: DotNet SystemEnvironment;
         OriginalString: Text;
         SignedString: Text;
         Certificate: Text;
@@ -572,7 +572,8 @@ codeunit 10145 "E-Invoice Mgt."
                     end;
 
         TempBlobOriginalString.CreateInStream(InStream);
-        OriginalString := TypeHelper.ReadAsTextWithSeparator(InStream, Environment.NewLine);
+        SystemEnvironment := SystemEnvironment.SystemEnvironment();
+        OriginalString := TypeHelper.ReadAsTextWithSeparator(InStream, SystemEnvironment.NewLine());
         CreateDigitalSignature(OriginalString, SignedString, CertificateSerialNo, Certificate);
         TempBlobDigitalStamp.CreateOutStream(OutStrSignedDoc);
         OutStrSignedDoc.WriteText(SignedString);
@@ -4896,7 +4897,7 @@ codeunit 10145 "E-Invoice Mgt."
         OutStrSignedDoc: OutStream;
         XMLDoc: DotNet XmlDocument;
         XMLDocResult: DotNet XmlDocument;
-        Environment: DotNet Environment;
+        SystemEnvironment: DotNet SystemEnvironment;
         RecordRef: RecordRef;
         InStream: InStream;
         OriginalString: Text;
@@ -4949,7 +4950,8 @@ codeunit 10145 "E-Invoice Mgt."
             Customer, CustLedgerEntry, TempDetailedCustLedgEntry, DateTimeFirstReqSent, TempBlobOriginalString);
 
         TempBlobOriginalString.CreateInStream(InStream);
-        OriginalString := TypeHelper.ReadAsTextWithSeparator(InStream, Environment.NewLine);
+        SystemEnvironment := SystemEnvironment.SystemEnvironment();
+        OriginalString := TypeHelper.ReadAsTextWithSeparator(InStream, SystemEnvironment.NewLine());
         CreateDigitalSignature(OriginalString, SignedString, CertificateSerialNo, Certificate);
         TempBlobDigitalStamp.CreateOutStream(OutStrSignedDoc);
         OutStrSignedDoc.WriteText(SignedString);

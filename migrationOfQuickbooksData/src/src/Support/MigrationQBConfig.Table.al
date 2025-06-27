@@ -36,27 +36,6 @@ table 1917 "MigrationQB Config"
         {
             DataClassification = SystemMetadata;
         }
-        field(9; "Realm Id"; Text[250])
-        {
-            DataClassification = CustomerContent;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'The suggested way to store the secrets is Isolated Storage, therefore Realm Id will be removed.';
-            ObsoleteTag = '15.4';
-        }
-        field(10; "Token Key"; Text[250])
-        {
-            DataClassification = CustomerContent;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'The suggested way to store the secrets is Isolated Storage, therefore Token Key will be removed.';
-            ObsoleteTag = '15.4';
-        }
-        field(11; "Token Secret"; Text[250])
-        {
-            DataClassification = CustomerContent;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'The suggested way to store the secrets is Isolated Storage, therefore Token Secret will be removed.';
-            ObsoleteTag = '15.4';
-        }
     }
 
     keys
@@ -126,7 +105,7 @@ table 1917 "MigrationQB Config"
             IsolatedStorage.Set('Migration QB Token Secret', TokenSecret, DataScope::Company);
         end;
     end;
-# endif
+#endif
 
     procedure IsOnlineData(): Boolean
     begin

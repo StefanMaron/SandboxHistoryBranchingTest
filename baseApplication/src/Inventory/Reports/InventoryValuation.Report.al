@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Reports;
 
 using Microsoft.Finance.Currency;
@@ -413,12 +417,4 @@ report 10139 "Inventory Valuation"
         IsCollecting := false;
         Clear(TempEntryBuffer);
     end;
-
-#if not CLEAN23
-    [IntegrationEvent(false, false)]
-    [Obsolete('The event is not used and will be removed', '23.0')]
-    local procedure OnBeforeOnAfterItemGetRecord(var Item: Record Item; var SkipItem: Boolean)
-    begin
-    end;
-#endif
 }

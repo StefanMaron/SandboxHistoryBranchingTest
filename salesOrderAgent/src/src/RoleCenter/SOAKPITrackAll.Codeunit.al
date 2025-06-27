@@ -3,18 +3,21 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Integration.Entity;
 using Microsoft.Sales.Document;
 using System.Agents;
-using Agent.SalesOrderAgent.Integration;
 
+#pragma warning disable AS0049
 codeunit 4595 "SOA - KPI Track All"
 {
     InherentEntitlements = X;
     InherentPermissions = X;
     EventSubscriberInstance = Manual;
+    Access = Internal;
+#pragma warning restore AS0049
 
     [EventSubscriber(ObjectType::Table, Database::"Sales Quote Entity Buffer", 'OnAfterModifyEvent', '', false, false)]
     local procedure UpdateSalesQuoteChanged(var Rec: Record "Sales Quote Entity Buffer")
@@ -121,6 +124,7 @@ codeunit 4595 "SOA - KPI Track All"
 
         if not SOAKPIEntryExist then begin
             SOAKPIEntry."Created by User ID" := UserSecurityId();
+            SOAKPIEntry."Task ID" := GetAgentTaskID();
             SOAKPIEntry.Insert(true);
             SOAgentKPI.UpdateEntryKPIs(SOAKPIEntry, PreviousAmount, true);
         end else begin
@@ -157,11 +161,18 @@ codeunit 4595 "SOA - KPI Track All"
         if "Agent Metadata Provider".FromInteger(AgentType) <> "Agent Metadata Provider"::"SO Agent" then
             exit(false);
 
-        AgentTaskID := AgentALFunctions.GetSessionAgentTaskId();
+        AgentTaskID := GetAgentTaskID();
         if AgentTaskID = 0 then
             exit(false);
 
         exit(true);
+    end;
+
+    internal procedure GetAgentTaskID(): Integer
+    var
+        AgentALFunctions: DotNet AgentALFunctions;
+    begin
+        exit(AgentALFunctions.GetSessionAgentTaskId());
     end;
 
     var

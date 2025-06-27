@@ -1,13 +1,12 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" Brief="This extension will allow you to set up data migration from your Dynamics GP companies to your Dynamics 365 Business Central tenant through a wizard." Description="This extension will take you through the process to migrate data from your Dynamics GP on-premises solution to your Dynamics 365 Business Central cloud tenant.  This will enable you to take advantage of what the cloud has to offer your business such as, enhanced insights into your business, artificial intelligence, multiple device access, and anytime, anywhere access." Version="25.5.30849.35974" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2244149" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" Brief="This extension will allow you to set up data migration from your Dynamics GP companies to your Dynamics 365 Business Central tenant through a wizard." Description="This extension will take you through the process to migrate data from your Dynamics GP on-premises solution to your Dynamics 365 Business Central cloud tenant.  This will enable you to take advantage of what the cloud has to offer your business such as, enhanced insights into your business, artificial intelligence, multiple device access, and anytime, anywhere access." Version="26.0.30643.35936" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2244149" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="7c7d97ca-3598-40f5-b263-f713f49bd2a5" Name="Dynamics GP Historical Data" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="c526b3e9-b8ca-4683-81ba-fcd5f6b1472a" Name="Sales and Inventory Forecast" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="7c7d97ca-3598-40f5-b263-f713f49bd2a5" Name="Dynamics GP Historical Data" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="82acac14-8067-499b-8cf0-f068448dff34" Name="Dynamics GP Intelligent Cloud Tests" Publisher="Microsoft" />
@@ -23,6 +22,6 @@
   <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T15:46:54.1824208Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-26T04:18:45.0916989Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>

@@ -247,7 +247,7 @@ page 40010 "Add Migration Table Mappings"
         if MigrationTableMapping."Target Table Type" = TargetMigrationTableType::Table then
             MigrationTableMapping."Table Name" := AllObj."Object Name"
         else
-        MigrationTableMapping."Table Name" := CopyStr(SourceTableName, 1, MaxStrLen(MigrationTableMapping."Table Name"));
+            MigrationTableMapping."Table Name" := CopyStr(SourceTableName, 1, MaxStrLen(MigrationTableMapping."Table Name"));
 
         MigrationTableMapping."Source Table Name" := CopyStr(SourceTableName, 1, MaxStrLen(MigrationTableMapping."Table Name"));
         MigrationTableMapping.SetSourceTableName(SourceTableAppID);
@@ -267,7 +267,7 @@ page 40010 "Add Migration Table Mappings"
         if TargetMigrationTableType = TargetMigrationTableType::Table then
             Rec.SetRange("Object Type", Rec."Object Type"::Table)
         else
-        Rec.SetRange("Object Type", Rec."Object Type"::TableExtension);
+            Rec.SetRange("Object Type", Rec."Object Type"::TableExtension);
     end;
 
     local procedure ClearExtensionsFilter()
