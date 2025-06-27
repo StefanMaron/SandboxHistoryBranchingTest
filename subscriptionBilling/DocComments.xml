@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c</id>
+        <name>Subscription Billing</name>
+        <publisher>Microsoft</publisher>
+        <version>26.0.30643.35936</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Contract Price Update.SetPriceUpdateParameters(Price Update Template,Date,Date)">
+            <summary>
+            This method sets minimal needed parameters for updating the contract prices.
+            </summary>
+            <param name="PriceUpdateTemplate">Price Update Template by which the update is executed</param>
+            <param name="IncludeContractLinesUpToDate">Filter for date </param>
+            <param name="PerformUpdateOnDate"></param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Contract Price Update.ApplyFilterOnServiceCommitments">
+            <summary>
+            The method applies filters on Subscription Lines which should be processed for price update.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Contract Price Update.CreatePriceUpdateProposal">
+            <summary>
+            The metod creates implemented price update proposal.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Contract Price Update.CalculateNewPrice(Decimal,Sub# Contr# Price Update Line@)">
+            <summary>
+            The method calculates the New Price in Contract Price Update Line parameter based on Update Percent Value.
+            </summary>
+            <param name="UpdatePercentValue">Decimal percentage value for calculation of the New Price</param>
+            <param name="NewContractPriceUpdateLine">The Record on which New Price is calculated</param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Usage Data Processing.ImportUsageData(Usage Data Import@)">
+            <summary>
+            Use it to specify how to import usage data into connector specific staging table whether by using Data Exchange Definition or by using APIs.
+            </summary>
+            <param name="UsageDataImport">Usage Data Import for which the import is executed</param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Usage Data Processing.ProcessUsageData(Usage Data Import@)">
+            <summary>
+            Use it in order to process the records in connector specific staging table. Processing includes:
+            1. Checking if the quantity in the staging table is 0.
+            2. Creating Usage Data Customers if they do not exist.
+            3. Creating Usage Data Subscriptions if they do not exist.
+            4. Checking if Subscription Lines exist and if yes, check the dates.
+            5. If possible assigns the Subscription to the record in the staging table.
+            </summary>
+            <param name="UsageDataImport">Usage Data Import for which the process is executed</param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Usage Data Processing.TestUsageDataImport(Usage Data Import@)">
+            <summary>
+            Use it to prevent the creation of Usage Data Billing records from the records in staging table that are marked with in an error.
+            </summary>
+            <param name="UsageDataImport">Usage Data Import for which the creation is executed</param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Usage Data Processing.FindAndProcessUsageDataImport(Usage Data Import@)">
+            <summary>
+            Use it in order to find and process the records in connector specific staging table and create Usage Data Billing records.
+            </summary>
+            <param name="UsageDataImport">Usage Data Import for which the creation is executed</param>
+        </member>
+        <member name="M:Interface::Microsoft#SubscriptionBilling#Usage Data Processing.SetUsageDataImportError(Usage Data Import@)">
+            <summary>
+            Use it to set an error for for import if the errors happened during the processing of the records in the staging table.
+            </summary>
+            <param name="UsageDataImport">Usage Data Import for which the creation is executed</param>
+        </member>
+    </members>
+</doc>

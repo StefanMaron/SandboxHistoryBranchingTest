@@ -2,10 +2,11 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
-namespace Agent.SalesOrderAgent.ItemSearch;
+
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.AI;
-using Agent.SalesOrderAgent;
 using System;
 using Microsoft.Inventory.Item;
 
@@ -96,7 +97,7 @@ codeunit 4596 "SOA Broader Item Search"
 
         QueryResults := ALSearchResult.GetResultsForQuery(SearchPrimaryKeyWord);
         foreach ALSearchQueryResult in QueryResults do
-            if ALSearchQueryResult.ContextAwareRankingScore >= 0.85 then begin
+            if ALSearchQueryResult.ContextAwareRankingScore >= 0.79 then begin
                 TempSearchResponse.RecordFoundSystemID := ALSearchQueryResult.SystemId;
                 TempSearchResponse.Score := ALSearchQueryResult.ContextAwareRankingScore;
                 TempSearchResponse.Insert();
