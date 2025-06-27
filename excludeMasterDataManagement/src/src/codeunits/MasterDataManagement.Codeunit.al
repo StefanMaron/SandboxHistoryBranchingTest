@@ -1491,7 +1491,7 @@ codeunit 7233 "Master Data Management"
             IntegrationTableMapping.ReadIsolation := IsolationLevel::ReadUncommitted;
             IntegrationTableMapping.SetRange(Type, IntegrationTableMapping.Type::"Master Data Management");
             IntegrationTableMapping.SetRange(Status, IntegrationTableMapping.Status::Enabled);
-            isIntegrationRecord := IntegrationTableMapping.FindMappingForTable(TableID);
+            isIntegrationRecord := IntegrationTableMapping.DoesExistForTable(TableID);
         end;
 
         CachedIsSynchronizationRecord.Add(DictionaryKey, isIntegrationRecord);
