@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Recommended Apps" ControlGUID="{f6809aed-6042-4e4c-aad2-9240aca257e4}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4750" DepartmentCategory="Administration" RunObjectSrcTable="4750" ControlGUID="{10f08b8e-9007-481a-965d-ee0d087816b5}" Name="Recommended Apps List" CaptionML="CSY=Doporučené aplikace;DAN=Anbefalede apps;DEA=Empfohlene Apps;DES=Empfohlene Apps;DEU=Empfohlene Apps;ENA=Recommended Apps;ENC=Recommended Apps;ENG=Recommended Apps;ENU=Recommended Apps;ENZ=Recommended Apps;ESM=Aplicaciones recomendadas;ESN=Aplicaciones recomendadas;FIN=Suositellut sovellukset;FRA=Applications recommandées;FRB=Applications recommandées;FRC=Applications recommandées;FRS=Applications recommandées;ISL=Ráðlögð forrit;ITA=App consigliate;ITS=App consigliate;NLB=Aanbevolen apps;NLD=Aanbevolen apps;NOR=Anbefalte apper;RUS=Рекомендуемые приложения;SVE=Rekommenderade appar" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 216317471 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 216317471 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+</NavigationDefinition>
