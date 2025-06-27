@@ -2,20 +2,26 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
-namespace Agent.SalesOrderAgent;
+
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Assembly.Document;
 using Microsoft.Foundation.Enums;
+using Microsoft.Foundation.Period;
+using Microsoft.Foundation.UOM;
+using Microsoft.Inventory.Availability;
 using Microsoft.Inventory.Item;
+using Microsoft.Inventory.Location;
 using Microsoft.Inventory.Transfer;
 using Microsoft.Manufacturing.Document;
 using Microsoft.Projects.Project.Planning;
+using Microsoft.Finance.GeneralLedger.Setup;
 using Microsoft.Purchases.Document;
+using Microsoft.Sales.Customer;
 using Microsoft.Sales.Document;
-using Microsoft.Foundation.Period;
-using Microsoft.Inventory.Location;
+
 using System.Utilities;
-using Microsoft.Inventory.Availability;
 
 page 4410 "SOA Multi Items Availability"
 {
@@ -28,11 +34,21 @@ page 4410 "SOA Multi Items Availability"
     Extensible = false;
     InherentEntitlements = X;
     InherentPermissions = X;
+    UsageCategory = Lists;
 
     layout
     {
         area(Content)
         {
+            field(PreviewDisclaimer; PreviewDisclaimerLbl)
+            {
+                ShowCaption = false;
+                Style = StrongAccent;
+                trigger OnDrillDown()
+                begin
+                    Hyperlink(PreviewDisclaimerURLLbl);
+                end;
+            }
             group(Options)
             {
                 Caption = 'Options';
@@ -68,6 +84,17 @@ page 4410 "SOA Multi Items Availability"
                         FindPeriod('');
                     end;
                 }
+                field(CustomerNo; CustomerNo)
+                {
+                    Caption = 'Customer No.';
+                    TableRelation = Customer;
+                    ToolTip = 'Specifies the customer number that will be used to calculate prices and discounts.';
+
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(false);
+                    end;
+                }
                 field(LocationFilter; LocationFilter)
                 {
                     Caption = 'Location Filter';
@@ -101,6 +128,31 @@ page 4410 "SOA Multi Items Availability"
                         CurrPage.Update(false);
                     end;
                 }
+                field(InUOM; InUOMCode)
+                {
+                    Caption = 'UOM Filter';
+                    ToolTip = 'Specifies the unit of measure in which available quantity is calculated.';
+                    TableRelation = "Unit of Measure";
+                    Visible = false;
+
+                    trigger OnValidate()
+                    var
+                        UOM: Record "Unit of Measure";
+                        SearchTerm: Text;
+                    begin
+                        SearchTerm := StrSubstNo('@*%1*', InUOMCode);
+
+                        UOM.FilterGroup(-1);
+                        UOM.SetFilter(Code, SearchTerm);
+                        UOM.SetFilter(Description, SearchTerm);
+                        UOM.SetFilter("International Standard Code", SearchTerm);
+                        if UOM.FindFirst() then
+                            InUOMCode := UOM.Code
+                        else
+                            InUOMCode := '';
+                        CurrPage.Update(false);
+                    end;
+                }
             }
             repeater(Control1)
             {
@@ -115,14 +167,52 @@ page 4410 "SOA Multi Items Availability"
                 }
                 field(Available; Available)
                 {
-                    Caption = 'Available';
-                    ToolTip = 'Specifies if the required quantity is available.';
+                    Caption = 'Requested Quantity Available';
+                    ToolTip = 'Specifies if the requested quantity is available in requested unit of measure.';
+                }
+                field(AvailabilityLevel; AvailabilityLevel)
+                {
+                    Caption = 'Availability Level';
+                    ToolTip = 'Specifies the level of item availability.';
+                }
+                field(UnitCost; UnitCost)
+                {
+                    Caption = 'Unit Cost';
+                    ToolTip = 'Specifies the unit cost of the item on the line.';
+                    Visible = false;
+                }
+                field(UnitPrice; UnitPrice)
+                {
+                    Caption = 'Unit Price';
+                    ToolTip = 'Specifies the price for one unit on the line.';
+                }
+                field(DiscountPct; DiscountPct)
+                {
+                    Caption = 'Discount %';
+                    ToolTip = 'Specifies the discount percentage that can be granted for the item on the line.';
+                }
+                field(UnitPriceInclDiscount; UnitPriceInclDiscount)
+                {
+                    Caption = 'Unit Price Including Discount';
+                    ToolTip = 'Specifies the price for one unit on the line including discount.';
+                }
+                field(CurrencyCode; CurrencyCode)
+                {
+                    Caption = 'Currency Code';
+                    ToolTip = 'Specifies the currency code of the price on the line.';
+                }
+                field(MatchingItem; MatchingItem)
+                {
+                    Caption = 'Matching Item';
+                    ToolTip = 'Specifies if the search result finds a matching item against the searched query or alternative items.';
+                    Visible = false;
                 }
                 field(GrossRequirement; GrossRequirement)
                 {
                     Caption = 'Gross Requirement';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the sum of the total demand for the item. The gross requirement consists of independent demand (which include sales orders, service orders, transfer orders, and demand forecasts) and dependent demand, which include production order components for planned, firm planned, and released production orders and requisition and planning worksheets lines.';
+                    Visible = false;
 
                     trigger OnDrillDown()
                     begin
@@ -134,6 +224,7 @@ page 4410 "SOA Multi Items Availability"
                     Caption = 'Scheduled Receipt';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the sum of items from replenishment orders. This includes firm planned and released production orders, purchase orders, and transfer orders.';
+                    Visible = false;
 
                     trigger OnDrillDown()
                     begin
@@ -145,6 +236,7 @@ page 4410 "SOA Multi Items Availability"
                     Caption = 'Planned Receipt';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the quantity on planned production orders plus planning worksheet lines plus requisition worksheet lines.';
+                    Visible = false;
 
                     trigger OnDrillDown()
                     begin
@@ -156,6 +248,7 @@ page 4410 "SOA Multi Items Availability"
                     Caption = 'Inventory';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the inventory level of an item.';
+                    Visible = false;
 
                     trigger OnDrillDown()
                     var
@@ -167,7 +260,7 @@ page 4410 "SOA Multi Items Availability"
                 }
                 field(ProjAvailableBalance; ProjAvailableBalance)
                 {
-                    Caption = 'Available Quantity';
+                    Caption = 'Available Quantity (Base UOM)';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the item''s availability. This quantity includes all known supply and demand but does not include anticipated demand from demand forecasts or blanket sales orders or suggested supplies from planning or requisition worksheets.';
 
@@ -175,6 +268,23 @@ page 4410 "SOA Multi Items Availability"
                     begin
                         ShowItemAvailLineList(4);
                     end;
+                }
+                field(ProjAvailableBalanceInUOM; ProjAvailableBalanceInUOM)
+                {
+                    Caption = 'Available Quantity';
+                    DecimalPlaces = 0 : 5;
+                    ToolTip = 'Specifies the item''s availability recalculated in specified Unit on Measure.';
+                }
+                field(LineUOM; LineUOM)
+                {
+                    Caption = 'Unit Of Measure Code';
+                    ToolTip = 'Specifies the item''s Unit of Measure code.';
+                }
+                field(LineUOMDescription; LineUOMDescription)
+                {
+                    Caption = 'Unit Of Measure';
+                    ToolTip = 'Specifies the item''s Unit of Measure description.';
+                    Visible = false;
                 }
                 field(QtyOnPurchOrder; Rec."Qty. on Purch. Order")
                 {
@@ -345,6 +455,7 @@ page 4410 "SOA Multi Items Availability"
                     Caption = 'Planned Order Releases';
                     DecimalPlaces = 0 : 5;
                     ToolTip = 'Specifies the sum of items from replenishment order proposals, which include planned production orders and planning or requisition worksheets lines, that are calculated according to the starting date in the planning worksheet and production order or the order date in the requisition worksheet. This sum is not included in the projected available inventory. However, it indicates which quantities should be converted from planned to scheduled receipts.';
+                    Visible = false;
 
                     trigger OnDrillDown()
                     begin
@@ -486,13 +597,24 @@ page 4410 "SOA Multi Items Availability"
         if SOAKPITrackAll.IsOrderTakerAgentSession(AgentType, AgentTaskID) then
             if SOASetup.FindLast() then
                 OptionsVisible := SOASetup."Search Only Available Items";
+
+        OnAfterInitPage(CustomerNo, LocationFilter);
     end;
 
     trigger OnOpenPage()
+    var
+        SOAKPITrackAll: Codeunit "SOA - KPI Track All";
+        AgentType, AgentTaskID, OriginalFilterGroup : Integer;
     begin
-        LocationFilter := Rec.GetFilter("Location Filter");
+        Rec.SetFilter("Location Filter", '%1', LocationFilter);
         Rec.SetRange("Drop Shipment Filter", false);
         Rec.SetRange("Variant Filter", '');
+        if SOAKPITrackAll.IsOrderTakerAgentSession(AgentType, AgentTaskID) then begin
+            OriginalFilterGroup := Rec.FilterGroup();
+            Rec.FilterGroup(-1);
+            Rec.SetRange("No.", '<>*');
+            Rec.FilterGroup(OriginalFilterGroup);
+        end;
 
         FindPeriod('');
     end;
@@ -503,7 +625,7 @@ page 4410 "SOA Multi Items Availability"
         IsHandled: Boolean;
     begin
         IsHandled := false;
-        OnBeforeFindRecord(Rec, Which, CrossColumnSearchFilter, Found, QuantityFilter, IsHandled);
+        OnBeforeFindRecord(Rec, Which, CrossColumnSearchFilter, Found, QuantityFilter, IsHandled, MatchingItem);
         if IsHandled then
             exit(Found);
 
@@ -512,7 +634,8 @@ page 4410 "SOA Multi Items Availability"
 
     trigger OnAfterGetRecord()
     begin
-        CalcAvailQuantities(GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, PlannedOrderReleases, ProjAvailableBalance, ExpectedInventory, QtyAvailable);
+        CalcAvailQuantities(GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, PlannedOrderReleases, ProjAvailableBalance, ProjAvailableBalanceInUOM, ExpectedInventory, QtyAvailable);
+        CalcPrice();
     end;
 
     var
@@ -526,10 +649,17 @@ page 4410 "SOA Multi Items Availability"
         TransferAvailabilityMgt: Codeunit "Transfer Availability Mgt.";
         AnalysisAmountType: Enum "Analysis Amount Type";
         AnalysisPeriodType: Enum "Analysis Period Type";
-        QuantityFilter, ExpectedInventory, QtyAvailable, PlannedOrderReleases, GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, ProjAvailableBalance : Decimal;
-        DateFilter, LocationFilter, CrossColumnSearchFilter : Text;
+        AvailabilityLevel: Enum "SOA Availability Level";
+        CustomerNo: Code[20];
+        InUOMCode, LineUOM, CurrencyCode : Code[10];
+        QuantityFilter, ExpectedInventory, QtyAvailable, PlannedOrderReleases, GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, ProjAvailableBalance, ProjAvailableBalanceInUOM : Decimal;
+        UnitCost, UnitPrice, UnitPriceInclDiscount, DiscountPct : Decimal;
+        DateFilter, LocationFilter, CrossColumnSearchFilter, LineUOMDescription : Text;
         Available: Boolean;
         OptionsVisible: Boolean;
+        MatchingItem: Boolean;
+        PreviewDisclaimerLbl: Label 'Item Availability page (preview). Learn more.';
+        PreviewDisclaimerURLLbl: Label 'https://go.microsoft.com/fwlink/?linkid=2303848', Locked = true;
 
     local procedure ShowItemAvailLineList(What: Integer)
     var
@@ -537,25 +667,6 @@ page 4410 "SOA Multi Items Availability"
     begin
         Item.Copy(Rec);
         ItemAvailFormsMgt.ShowItemAvailLineList(Item, What);
-    end;
-
-    local procedure CalcAvailQuantities(var GrossRequirement2: Decimal; var PlannedOrderRcpt2: Decimal; var ScheduledRcpt2: Decimal; var PlannedOrderReleases2: Decimal; var ProjAvailableBalance2: Decimal; var ExpectedInventory2: Decimal; var AvailableInventory: Decimal)
-    var
-        Item: Record Item;
-        DummyQtyAvailable: Decimal;
-    begin
-        Item.Copy(Rec);
-        if Item.Type = Item.Type::Inventory then begin
-            Item.SetFilter("Date Filter", DateFilter);
-            Item.SetFilter("Location Filter", LocationFilter);
-            Item.SetRange("Drop Shipment Filter", false);
-            Item.SetRange("Variant Filter", '');
-
-            ItemAvailFormsMgt.CalcAvailQuantities(Item, AnalysisAmountType = AnalysisAmountType::"Balance at Date", GrossRequirement2, PlannedOrderRcpt2, ScheduledRcpt2,
-                PlannedOrderReleases2, ProjAvailableBalance2, ExpectedInventory2, DummyQtyAvailable, AvailableInventory);
-            Available := (ProjAvailableBalance2 > 0) and (ProjAvailableBalance2 >= QuantityFilter);
-        end else
-            Available := true;
     end;
 
     local procedure FindPeriod(SearchText: Text[3])
@@ -579,8 +690,144 @@ page 4410 "SOA Multi Items Availability"
         CurrPage.Update(false);
     end;
 
+    local procedure CalcAvailQuantities(var GrossRequirement2: Decimal; var PlannedOrderRcpt2: Decimal; var ScheduledRcpt2: Decimal; var PlannedOrderReleases2: Decimal; var ProjAvailableBalance2: Decimal; var ProjAvailableBalanceInUOM2: Decimal; var ExpectedInventory2: Decimal; var AvailableInventory: Decimal)
+    var
+        Item: Record Item;
+        SKU: Record "Stockkeeping Unit";
+        UnitOfMeasure: Record "Unit of Measure";
+        ItemUnitOfMeasure: Record "Item Unit of Measure";
+        DummyQtyAvailable, QtyRoundingPrecision, SafetyStockQty : Decimal;
+    begin
+        Item.Copy(Rec);
+        if Item.Type = Item.Type::Inventory then begin
+            Item.SetFilter("Date Filter", DateFilter);
+            Item.SetFilter("Location Filter", LocationFilter);
+            Item.SetRange("Drop Shipment Filter", false);
+            Item.SetRange("Variant Filter", '');
+
+            ItemAvailFormsMgt.CalcAvailQuantities(Item, AnalysisAmountType = AnalysisAmountType::"Balance at Date", GrossRequirement2, PlannedOrderRcpt2, ScheduledRcpt2,
+                PlannedOrderReleases2, ProjAvailableBalance2, ExpectedInventory2, DummyQtyAvailable, AvailableInventory);
+
+            Item.Copy(Rec);
+
+            LineUOM := InUOMCode;
+            if LineUOM = '' then
+                LineUOM := Item."Sales Unit of Measure";
+
+            if UnitOfMeasure.Get(LineUOM) then
+                LineUOMDescription := UnitOfMeasure.Description;
+
+            if LineUOM in ['', Item."Base Unit of Measure"] then
+                ProjAvailableBalanceInUOM2 := ProjAvailableBalance2
+            else
+                if ItemUnitOfMeasure.Get(Item."No.", LineUOM) and (ItemUnitOfMeasure."Qty. per Unit of Measure" <> 0) then begin
+                    QtyRoundingPrecision := ItemUnitOfMeasure."Qty. Rounding Precision";
+                    if QtyRoundingPrecision = 0 then
+                        QtyRoundingPrecision := 0.00001;
+                    ProjAvailableBalanceInUOM2 := Round(ProjAvailableBalance2 / ItemUnitOfMeasure."Qty. per Unit of Measure", QtyRoundingPrecision);
+                end else
+                    ProjAvailableBalanceInUOM2 := 0;
+
+            Available := (ProjAvailableBalanceInUOM2 > 0) and (ProjAvailableBalanceInUOM2 >= QuantityFilter);
+
+            if SKU.Get(LocationFilter, Item."No.", '') then
+                SafetyStockQty := SKU."Safety Stock Quantity"
+            else
+                SafetyStockQty := Item."Safety Stock Quantity";
+
+            AvailabilityLevel := AvailabilityLevel::"Out of stock";
+            if ProjAvailableBalance2 > 0 then
+                AvailabilityLevel := AvailabilityLevel::Limited;
+            if ProjAvailableBalance2 > SafetyStockQty then
+                AvailabilityLevel := AvailabilityLevel::Available;
+        end else
+            Available := true;
+    end;
+
+    local procedure CalcPrice()
+    var
+        GLSetup: Record "General Ledger Setup";
+        Customer: Record Customer;
+        Item: Record Item;
+        ItemUnitOfMeasure: Record "Item Unit of Measure";
+        TempSalesHeader: Record "Sales Header" temporary;
+        TempSalesLine: Record "Sales Line" temporary;
+        QtyPerUOM: Decimal;
+    begin
+        if GLSetup.Get() then
+            CurrencyCode := GLSetup."LCY Code";
+
+        Item.Copy(Rec);
+
+        if CustomerNo <> '' then begin
+            Customer.Get(CustomerNo);
+            TempSalesHeader."Document Type" := TempSalesHeader."Document Type"::Quote;
+            TempSalesHeader."No." := 'PRICE_CHECK';
+
+            TempSalesHeader."Sell-to Customer No." := CustomerNo;
+            TempSalesHeader."Bill-to Customer No." := CustomerNo;
+            TempSalesHeader."Customer Price Group" := Customer."Customer Price Group";
+            TempSalesHeader."Customer Disc. Group" := Customer."Customer Disc. Group";
+            TempSalesHeader."Allow Line Disc." := Customer."Allow Line Disc.";
+            TempSalesHeader."Gen. Bus. Posting Group" := Customer."Gen. Bus. Posting Group";
+            TempSalesHeader."VAT Bus. Posting Group" := Customer."VAT Bus. Posting Group";
+            TempSalesHeader."Tax Area Code" := Customer."Tax Area Code";
+            TempSalesHeader."Tax Liable" := Customer."Tax Liable";
+            TempSalesHeader."VAT Country/Region Code" := Customer."Country/Region Code";
+            TempSalesHeader."Customer Posting Group" := Customer."Customer Posting Group";
+            TempSalesHeader."Prices Including VAT" := Customer."Prices Including VAT";
+            TempSalesHeader.Validate("Document Date", Calendar."Period End");
+            TempSalesHeader.Validate("Order Date", Calendar."Period End");
+            TempSalesHeader.Validate("Currency Code", Customer."Currency Code");
+            TempSalesHeader.Insert(false);
+
+            TempSalesLine."Document Type" := TempSalesHeader."Document Type";
+            TempSalesLine."Document No." := TempSalesHeader."No.";
+            TempSalesLine."System-Created Entry" := true;
+            TempSalesLine.SetSalesHeader(TempSalesHeader);
+            TempSalesLine.Validate(Type, TempSalesLine.Type::Item);
+            TempSalesLine.Validate("No.", Item."No.");
+            TempSalesLine.Validate(Quantity, 1);
+            if TempSalesLine."Unit of Measure Code" <> '' then
+                TempSalesLine.Validate("Unit of Measure Code", Item."Sales Unit of Measure");
+            if InUOMCode <> '' then
+                if ItemUnitOfMeasure.Get(Item."No.", InUOMCode) then
+                    TempSalesLine.Validate("Unit of Measure Code", InUOMCode);
+            UnitCost := TempSalesLine."Unit Cost";
+            UnitPrice := TempSalesLine."Unit Price";
+            DiscountPct := TempSalesLine."Line Discount %";
+            UnitPriceInclDiscount := TempSalesLine."Line Amount";
+            if TempSalesLine."Currency Code" <> '' then
+                CurrencyCode := TempSalesLine."Currency Code";
+        end else begin
+            UnitCost := Item."Unit Cost";
+            UnitPrice := Item."Unit Price";
+            DiscountPct := 0;
+
+            if Item."Sales Unit of Measure" <> '' then
+                if ItemUnitOfMeasure.Get(Item."No.", Item."Sales Unit of Measure") then
+                    QtyPerUOM := ItemUnitOfMeasure."Qty. per Unit of Measure";
+
+            if InUOMCode <> '' then
+                if ItemUnitOfMeasure.Get(Item."No.", InUOMCode) then
+                    QtyPerUOM := ItemUnitOfMeasure."Qty. per Unit of Measure";
+
+            if QtyPerUOM <> 0 then begin
+                UnitCost := UnitCost * QtyPerUOM;
+                UnitPrice := UnitPrice * QtyPerUOM;
+            end;
+
+            UnitPriceInclDiscount := UnitPrice;
+        end;
+    end;
+
     [InternalEvent(false, false)]
-    local procedure OnBeforeFindRecord(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean)
+    local procedure OnBeforeFindRecord(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean; var MatchingItem: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterInitPage(var CustomerNo: Code[20]; var LocationFilter: Text)
     begin
     end;
 }

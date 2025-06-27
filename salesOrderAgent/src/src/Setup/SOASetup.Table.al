@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
 using System.Email;
@@ -14,6 +15,7 @@ table 4325 "SOA Setup"
     Extensible = false;
     InherentEntitlements = RIMDX;
     InherentPermissions = RIMDX;
+    ReplicateData = false;
 
     fields
     {
@@ -113,6 +115,12 @@ table 4325 "SOA Setup"
         {
             Caption = 'Last Sync At';
             ToolTip = 'Specifies the date and time the agent last processed emails.';
+            DataClassification = SystemMetadata;
+        }
+        field(19; "Email Address"; Text[250])
+        {
+            Caption = 'Email Address';
+            ToolTip = 'Specifies the email address of the agent.';
             DataClassification = SystemMetadata;
         }
     }

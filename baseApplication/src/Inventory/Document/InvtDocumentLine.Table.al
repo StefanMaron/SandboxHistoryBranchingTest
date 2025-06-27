@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Document;
 
 using Microsoft.CRM.Team;
@@ -688,12 +692,14 @@ table 5851 "Invt. Document Line"
         key(Key1; "Document Type", "Document No.", "Line No.")
         {
             Clustered = true;
-            MaintainSIFTIndex = false;
         }
         key(Key2; "Location Code")
         {
         }
         key(Key3; "Item No.", "Variant Code")
+        {
+        }
+        key(Key4; "Document Type", "Document No.", "Item No.", "Location Code")
         {
         }
     }
@@ -789,7 +795,7 @@ table 5851 "Invt. Document Line"
         ItemLedgEntry: Record "Item Ledger Entry";
         ItemDocLine2: Record "Invt. Document Line";
     begin
-        ItemLedgEntry.SetCurrentKey("Item No.", Open, "Variant Code", Positive, "Location Code");
+        ItemLedgEntry.SetCurrentKey("Item No.", Open, "Variant Code", Positive, "Location Code", "Entry No.");
         ItemLedgEntry.SetRange("Item No.", "Item No.");
         ItemLedgEntry.SetRange(Correction, false);
         if "Location Code" <> '' then
@@ -909,6 +915,7 @@ table 5851 "Invt. Document Line"
     procedure OpenItemTrackingLines()
     begin
         ReserveInvtDocLine.CallItemTracking(Rec);
+        OnAfterOpenItemTrackingLines(Rec);
     end;
 
     procedure CreateDim(DefaultDimSource: List of [Dictionary of [Integer, Code[20]]])
@@ -1218,6 +1225,11 @@ table 5851 "Invt. Document Line"
 
     [IntegrationEvent(false, false)]
     local procedure OnAfterGetUnitAmount(var InvtDocumentLine: Record "Invt. Document Line"; var UnitCost: Decimal; CalledByFieldNo: Integer)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterOpenItemTrackingLines(var InvtDocumentLine: Record "Invt. Document Line")
     begin
     end;
 }
