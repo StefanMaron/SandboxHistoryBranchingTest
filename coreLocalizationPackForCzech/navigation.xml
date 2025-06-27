@@ -1,299 +1,299 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Core Localization Pack for Czech" ControlGUID="{c8f0c5bf-8a41-42ba-afb8-a10f120f48e2}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31116" DepartmentCategory="Lists" RunObjectSrcTable="31107" ControlGUID="{8fa334eb-63f1-4268-926b-facc72c10a0a}" Name="VAT Ctrl. Report Lines CZL" CaptionML="CSY=Řádky kontrolního hlášení DPH;ENU=VAT Control Report Lines" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2183057582 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2183057582 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31122" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{cdac067a-2cc0-47ac-8197-1c97ace74976}" Name="VAT Register CZL" CaptionML="CSY=Žurnál DPH;ENU=VAT Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2503687625 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2503687625 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11755" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{b177784f-e233-43d1-a8f0-901a69bbd35e}" Name="Open Balance Sheet CZL" CaptionML="CSY=Otevření rozvahy;ENU=Open Balance Sheet" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3503835596 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3503835596 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11716" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c651b907-a192-40c0-9d10-4fd5fbdd6fff}" Name="Open Vend. Entries to Date CZL" CaptionML="CSY=Otevřené položky dodavatelů k datu;ENU=Open Vendor Entries to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3573120205 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3573120205 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11758" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{140248c1-03b3-48a7-b7c9-e1e405895d45}" Name="Unreliable Payer Get All CZL" CaptionML="CSY=Hromadné načtení spolehlivosti dod.;ENU=Get All Unreliable Payers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 565602626 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 565602626 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11765" DepartmentCategory="Administration" RunObjectSrcTable="11793" ControlGUID="{d57ad4a5-7dbb-427e-a9b1-a64a46e2f8b8}" Name="Company Official List CZL" CaptionML="CSY=Zástupci společnosti;ENU=Company Officials" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2846075811 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2846075811 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31109" DepartmentCategory="Tasks" RunObjectSrcTable="31106" ControlGUID="{6c4ec43d-2162-4eb1-a23e-28619f95f837}" Name="VAT Ctrl. Report List CZL" CaptionML="CSY=Kontrolní hlášení DPH;ENU=VAT Control Reports" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1075785319 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1075785319 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11753" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{0a53c261-bc52-46c2-82f6-19c280b134b6}" Name="Close Income Statement CZL" CaptionML="CSY=Uzavření výsledovky;ENU=Close Income Statement CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=výkaz uzavření roku,výkaz uzavření účetního období,výkaz uzavření fiskálního roku;ENU=year closing statement,close accounting period statement,close fiscal year statement" CaptionTranslationKey="Report 1992137791 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1992137791 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31196" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="367" ControlGUID="{c600c782-62f4-440f-9b5d-0f188c3133b9}" Name="Inv. G/L Reconciliation CZL" CaptionML="CSY=Odsouhlasení zásoby - finance;ENU=Inventory - G/L Reconciliation Enhanced" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=odsouhlasení zásob s finančním účetnictvím;ENU=general ledger reconcile inventory" CaptionTranslationKey="Page 3372850547 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3372850547 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11704" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8f4bd611-a11f-404d-846c-26d7c45e8bae}" Name="All Payments on Hold CZL" CaptionML="CSY=Pozdržené platby;ENU=All Payments on Hold" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 273639157 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 273639157 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31142" DepartmentCategory="Administration" RunObjectSrcTable="31125" ControlGUID="{c6a278d7-10dc-47c4-aad3-ef87ab0963af}" Name="EET Service Setup CZL" CaptionML="CSY=Nastavení služby EET;ENU=EET Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2446698645 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2446698645 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11769" DepartmentCategory="Administration" RunObjectSrcTable="11769" ControlGUID="{ae9a1860-ae2a-4d26-8b5a-019ae74163a0}" Name="VAT Periods CZL" CaptionML="CSY=Období DPH;ENU=VAT Periods" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4016272548 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4016272548 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11794" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{273d0a42-2ed1-4d6a-bce7-622f48dd5f53}" Name="Balance Sheet CZL" AccessByObjectType="TableData" CaptionML="CSY=Rozvaha;ENU=Balance Sheet" AccessByObjectID="15" AccessByPermissionMask="1" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3753239760 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3753239760 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31038" DepartmentCategory="Administration" RunObjectSrcTable="31077" ControlGUID="{fcea1e74-7450-4068-ae5d-fed935eafef1}" Name="Specific Movements CZL" CaptionML="CSY=Specifické pohyby (zastaralé);ENU=Specific Movements (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3198856623 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3198856623 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31073" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{d83c109b-4511-43fd-b3a4-418be731facd}" Name="Phys. Inventory Document CZL" CaptionML="CSY=Doklad o fyzické inventuře;ENU=Physical Inventory Counting Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2493664168 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2493664168 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11718" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{2dae8b9c-1656-427f-8589-1d6052b9e2a2}" Name="Quantity Shipped Check CZL" CaptionML="CSY=Kontrola dodaného množství;ENU=Quantity Shipped Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1889395765 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1889395765 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31069" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{89165c0d-3dcd-4dd4-ab3d-f60f0eed5e84}" Name="Create Stockkeeping Unit CZL" CaptionML="CSY=Vytvořit skladovou jednotku;ENU=Create Stockkeeping Unit" ApplicationArea="#Warehouse" AdditionalSearchTermsML="CSY=vytvořit skj;ENU=create sku" CaptionTranslationKey="Report 1744894992 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1744894992 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11757" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3d5f2f15-3d94-45d5-a563-7fc6ef4bc916}" Name="Documentation for VAT CZL" CaptionML="CSY=Podklady pro DPH;ENU=Documentation for VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3170582681 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3170582681 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31079" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{4a454d19-5551-41e8-b8a5-1f5b8a8a0fb5}" Name="Posted Inventory Document CZL" CaptionML="CSY=Zaúčtovaný doklad zásob;ENU=Posted Inventory Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2023013595 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2023013595 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11721" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8c674989-078a-401f-8f98-c19e4671ad38}" Name="G/L Acc. Group Post. Check CZL" CaptionML="CSY=Kontrola účtování dle skupin účtů;ENU=G/L Account Group Posting Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 244531227 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 244531227 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11769" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{ed9ef55f-56ec-401d-bef4-0f16e89fddfd}" Name="VAT Statement CZL" CaptionML="CSY=Výkaz DPH CZ;ENU=VAT Statement CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 439915317 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 439915317 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31123" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{59968ff4-9111-4888-b19b-bbd86135e03a}" Name="VAT Exceptions CZL" CaptionML="CSY=Výjimky DPH;ENU=VAT Exceptions" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3213583422 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3213583422 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31145" DepartmentCategory="History" RunObjectSrcTable="31128" ControlGUID="{e42bc9ef-63ff-449f-87b4-db6924d778f6}" Name="EET Entries CZL" CaptionML="CSY=Položky EET;ENU=EET Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2934801957 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2934801957 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31205" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c1b2cb61-8741-4560-b3b5-a1a7cb525ea3}" Name="Posted Direct Transfer CZL" CaptionML="CSY=Účtovaný přímý transfer;ENU=Posted Direct Transfer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3623982710 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3623982710 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11756" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{4d8242f9-8d9f-403e-9528-fa21ba123092}" Name="VAT Documents List CZL" CaptionML="CSY=Seznam daňových dokladů;ENU=VAT Documents" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 547112492 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 547112492 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31215" DepartmentCategory="Administration" RunObjectSrcTable="11713" ControlGUID="{d1d3ad41-35d8-4efb-af15-f36493c3a853}" Name="Non-Deductible VAT Setup CZL" CaptionML="CSY=Nastavení neodčitatelné DPH;ENU=Non-Deductible VAT Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4039432442 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4039432442 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11754" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{2edae909-adf6-405a-8eaa-facfec21a747}" Name="Close Balance Sheet CZL" CaptionML="CSY=Uzavření rozvahy;ENU=Close Balance Sheet" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 266556782 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 266556782 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11753" DepartmentCategory="History" RunObjectSrcTable="11753" ControlGUID="{9cd1ddf3-ab1f-4f1f-adc7-75bddb6ae042}" Name="Unreliable Payer Entries CZL" CaptionML="CSY=Položky nespolehlivosti plátce;ENU=Unreliable Payer Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3300374333 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3300374333 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11715" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{80f95f00-7e9e-4ed2-b811-74c4684e1037}" Name="Open Cust. Entries to Date CZL" CaptionML="CSY=Otevřené položky zákazníků k datu;ENU=Open Customer Entries to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3097259909 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3097259909 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11750" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{4a1a15df-dd46-4011-ad5e-cea258d2ed08}" Name="Posted Inventory Shipment CZL" CaptionML="CSY=Účtovaný výdej zásob;ENU=Posted Inventory Shipment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2297099538 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2297099538 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31105" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{f1de1a53-9274-441a-b421-347d472a8578}" Name="Test Tariff Numbers CZL" CaptionML="CSY=Kontrola čísel sazebníku;ENU=Test Tariff Numbers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3629883671 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3629883671 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11766" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{7587668d-d324-4310-9e33-a9481b50379e}" Name="General Ledger Document CZL" CaptionML="CSY=Obecný účetní doklad;ENU=General Ledger Document CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3366595099 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3366595099 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11724" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3407f338-597b-4679-9ed4-dacd9dc1d88e}" Name="Vendor-Bal. Reconciliation CZL" CaptionML="CSY=Odsouhlasení salda dodavatele;ENU=Vendor - Bal. Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3377050038 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3377050038 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31141" DepartmentCategory="Lists" RunObjectSrcTable="31076" ControlGUID="{d9fbb836-c42b-4c0c-a06c-b85a25aba48e}" Name="VIES Declaration Lines CZL" CaptionML="CSY=Řádky Souhrnného hlášení;ENU=VIES Declaration Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2411306259 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2411306259 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11700" DepartmentCategory="Administration" RunObjectSrcTable="11712" ControlGUID="{deeccc4f-b424-44a8-8abf-544df3254408}" Name="Constant Symbols CZL" CaptionML="CSY=Konstantní symboly;ENU=Constant Symbols" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1294611434 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1294611434 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11720" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{54a027cb-4ed4-44a5-84a5-42d40a3068d2}" Name="Turnover Rpt. by Gl. Dim. CZL" CaptionML="CSY=Obratová předvaha dle globální dimenze;ENU=Turnover Report by Global Dimensions" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3935922130 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3935922130 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31076" DepartmentCategory="Administration" RunObjectSrcTable="31090" ControlGUID="{a18bc047-16bf-4f8f-bc40-3e3822a86897}" Name="Commodities CZL" CaptionML="CSY=Komodity;ENU=Commodities" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1438822532 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1438822532 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31079" DepartmentCategory="Lists" RunObjectSrcTable="31069" ControlGUID="{7d08b02a-4311-4dd5-8b5b-4827b69287de}" Name="Invt. Movement Templates CZL" CaptionML="CSY=Šablony pohybu zásob;ENU=Inventory Movement Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2044369626 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2044369626 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11754" DepartmentCategory="Administration" RunObjectSrcTable="11754" ControlGUID="{b9f7d577-a09f-49a0-b938-af98b34703b9}" Name="Unrel. Payer Service Setup CZL" CaptionML="CSY=Nastavení služby nespolehlivého plátce;ENU=Unreliable Payer Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2820813634 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2820813634 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31005" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{ca827d70-9be7-415f-a771-408f257c5595}" Name="Cash Flow Date List CZL" CaptionML="CSY=Cash Flow - přehled dle data;ENU=Cash Flow Date List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 320362316 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 320362316 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11971" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{60073a61-1e42-4eea-af2f-99cf39a6d416}" Name="Calc. and Post VAT Settl. CZL" CaptionML="CSY=Vypočítat a účtovat vyrovnání DPH;ENU=Calculate and Post VAT Settlement" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=vyrovnání daně z přidané hodnoty,sestava daně z přidané hodnoty;ENU=settle vat value added tax,report vat value added tax" CaptionTranslationKey="Report 467122462 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 467122462 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11759" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{40b77afd-e19d-4bef-b0a9-1db550257ac1}" Name="Unreliable Payer List CZL" CaptionML="CSY=Přehled nespolehlivosti plátců DPH;ENU=Unreliable Payer List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2602400245 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2602400245 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11793" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3ea3e191-5e86-4310-b570-596657333b20}" Name="G/L VAT Reconciliation CZL" CaptionML="CSY=Odsouhlasení DPH - finance;ENU=G/L VAT Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1242877871 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1242877871 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11723" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{31c341cc-9f9a-4f54-93f2-5308fa26695d}" Name="Cust.- Bal. Reconciliation CZL" CaptionML="CSY=Odsouhlasení salda zák.;ENU=Customer - Bal. Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2667580051 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2667580051 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11751" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{10f96b83-382f-4f8f-8e25-344852eaa5f3}" Name="Posted Inventory Receipt CZL" CaptionML="CSY=Účtovaný příjem zásob;ENU=Posted Inventory Receipt" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3849435014 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3849435014 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11717" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{12294c6f-e2eb-4a11-82fc-9ae67ad0fd3e}" Name="Quantity Received Check CZL" CaptionML="CSY=Kontrola přijatého množství;ENU=Quantity Received Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3790561609 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3790561609 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11795" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{590e61ca-b776-4648-ad4e-ea4fa53a56fd}" Name="Income Statement CZL" AccessByObjectType="TableData" CaptionML="CSY=Výsledovka;ENU=Income Statement" AccessByObjectID="15" AccessByPermissionMask="1" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 4146503437 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 4146503437 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31078" DepartmentCategory="Administration" RunObjectSrcTable="31074" ControlGUID="{4fbef5cc-f4ca-4e66-8f85-ba7acf67966b}" Name="Statistic Indications CZL" CaptionML="CSY=Statistické údaje (zastaralé);ENU=Statistic Indications (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3617635968 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3617635968 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31045" DepartmentCategory="Lists" RunObjectSrcTable="31132" ControlGUID="{56bdac4c-e671-4b3d-98cb-ad68b4955588}" Name="Certificate Code List CZL" CaptionML="CSY=Kódy certifikátů;ENU=Certificate Codes" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 339275761 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 339275761 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31119" DepartmentCategory="Administration" RunObjectSrcTable="31119" ControlGUID="{65b61650-db2a-4f47-9db9-caa0bded4d1e}" Name="Document Footers CZL" CaptionML="CSY=Zápatí dokumentů;ENU=Document Footers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2586383168 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2586383168 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11714" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{12b56f8d-6e05-4e43-aa01-e74088aa7b1b}" Name="Joining G/L Account Adj. CZL" CaptionML="CSY=Vyrovnání spojovacího konta;ENU=Joining G/L Account Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2388139181 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2388139181 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31108" DepartmentCategory="Administration" RunObjectSrcTable="31105" ControlGUID="{1e7592cf-805e-4f02-a4fd-8f9c80c2680e}" Name="Statutory Reporting Setup CZL" CaptionML="CSY=Nastavení statutárního vykazování;ENU=Statutory Reporting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 99819693 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 99819693 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31037" DepartmentCategory="Administration" RunObjectSrcTable="31078" ControlGUID="{484dd158-05ea-4057-be83-e5618b89c271}" Name="Intrastat Delivery Groups CZL" CaptionML="CSY=Dodací skupiny Intrastat (zastaralé);ENU=Intrastat Delivery Groups (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1088943969 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1088943969 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11703" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8eb4ed3f-8533-43b3-bfde-ec83eebcc937}" Name="Accounting Sheets CZL" CaptionML="CSY=Kontační lístky;ENU=Accounting Sheets" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1653583588 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1653583588 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31111" DepartmentCategory="Tasks" RunObjectSrcTable="31108" ControlGUID="{c38784f0-a4fe-4c4e-942c-ff107979cbdd}" Name="VAT Ctrl. Report Sections CZL" CaptionML="CSY=Sekce kontrolního hlášení DPH;ENU=VAT Control Report Sections" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1610903151 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1610903151 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11719" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{36ac96ac-15d7-4b9c-af74-7a817f0d4d34}" Name="Recon. Bank Account Entry CZL" CaptionML="CSY=Odsouhlasení položek bankovního konta;ENU=Reconcile Bank Account Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3740268119 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3740268119 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31140" DepartmentCategory="Tasks" RunObjectSrcTable="31075" ControlGUID="{6ac9704b-c976-4c39-bda7-53fc39e5ac94}" Name="VIES Declarations CZL" CaptionML="CSY=Souhrnná hlášení;ENU=VIES Declarations" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3346013065 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3346013065 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11729" DepartmentCategory="Administration" RunObjectSrcTable="11750" ControlGUID="{75df1d0b-f31e-444c-8618-2a07d08aeb3f}" Name="Excel Templates CZL" CaptionML="CSY=Šablony aplikace Excel;ENU=Excel Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2896243155 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2896243155 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11749" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{76befa51-1eb0-419a-b018-8226e1ba018b}" Name="VAT Coeff. Correction CZL" CaptionML="CSY=Korekce DPH koeficientu;ENU=VAT Coefficient Correction" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=sestava koeficientu daně z přidané hodnoty,oprava koeficientu daně z přidané hodnoty;ENU=VAT value added tax coefficient report,VAT value added tax coefficient correct" CaptionTranslationKey="Report 488115721 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 488115721 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11713" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{101313d8-57d2-4595-956c-cae415dc53ba}" Name="Joining Bank. Acc. Adj. CZL" CaptionML="CSY=Vyrovnání bankovního konta;ENU=Joining Banking Account Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2968244395 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2968244395 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11752" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{15dd5f3d-17b4-4110-b146-77a37a72a4da}" Name="Inventory Document CZL" CaptionML="CSY=Doklad zásob;ENU=Inventory Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2901479708 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2901479708 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31005" DepartmentCategory="Lists" RunObjectSrcTable="31068" ControlGUID="{9fc8c13b-42b6-4eab-a8b0-ad45f8331b15}" Name="Stockkeeping Unit Templ. CZL" CaptionML="CSY=Šablony skladových jednotek;ENU=Stockkeeping Unit Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3926392490 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3926392490 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31004" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{d6e68d68-9649-45e8-87e5-7fc18a17177f}" Name="Adjust Exchange Rates CZL" CaptionML="CSY=Úprava směnných kurzů rozšířená;ENU=Adjust Exchange Rates Enhanced" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 629953382 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 629953382 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31106" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{6ac3c967-c3ad-49bc-8ecb-bbfafba124e4}" Name="Import Tariff Numbers XML CZL" CaptionML="CSY=Importovat čísla sazebníku (XML);ENU=Import Tariff Numbers (XML)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 13759417 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 13759417 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11712" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{81f5a3b3-2720-4515-9084-d5a852ca3515}" Name="General Ledger CZL" CaptionML="CSY=Hlavní účetní kniha;ENU=General Ledger" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 22646490 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 22646490 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11755" DepartmentCategory="Administration" RunObjectSrcTable="11755" ControlGUID="{1545cd92-1e62-4d32-9c96-db1b278ed8ed}" Name="Reg. No. Service Config CZL" CaptionML="CSY=Nastavení služby ověření IČ;ENU=Registration No. Validation Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=Nastavení ARES;ENU=ARES Setup" CaptionTranslationKey="Page 3856835045 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3856835045 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11705" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{8cf641ae-bce7-443a-8a01-a6bbe2171806}" Name="General Journal CZL" CaptionML="CSY=Finanční deník;ENU=General Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3758748566 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3758748566 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11756" DepartmentCategory="History" RunObjectSrcTable="11756" ControlGUID="{1bddadf9-b27e-4975-be91-cf7c28181f14}" Name="Registration Log CZL" CaptionML="CSY=Protokol ověření IČ;ENU=Registration Log" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1124383332 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1124383332 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Core Localization Pack for Czech" ControlGUID="{52161b2b-5567-42f2-a342-f6c19afa5fdd}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31111" DepartmentCategory="Tasks" RunObjectSrcTable="31108" ControlGUID="{9a4736cf-5410-4dd0-ad1b-41cac3ddf362}" Name="VAT Ctrl. Report Sections CZL" CaptionML="CSY=Sekce kontrolního hlášení DPH;ENU=VAT Control Report Sections" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1610903151 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1610903151 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11705" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{7fc38946-c24e-4378-b692-d2f74abefc3a}" Name="General Journal CZL" CaptionML="CSY=Finanční deník;ENU=General Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3758748566 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3758748566 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11794" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{7efacc75-8710-4c13-a64a-d9ead4a6ed3e}" Name="Balance Sheet CZL" AccessByObjectType="TableData" CaptionML="CSY=Rozvaha;ENU=Balance Sheet" AccessByObjectID="15" AccessByPermissionMask="1" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3753239760 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3753239760 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11714" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{26f8c1e6-33da-4a45-b734-024c2b92a8bf}" Name="Joining G/L Account Adj. CZL" CaptionML="CSY=Vyrovnání spojovacího konta;ENU=Joining G/L Account Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2388139181 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2388139181 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11769" DepartmentCategory="Administration" RunObjectSrcTable="11769" ControlGUID="{b656c15c-d4a3-4ef0-bb7f-b543586ca0e2}" Name="VAT Periods CZL" CaptionML="CSY=Období DPH;ENU=VAT Periods" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4016272548 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4016272548 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11754" DepartmentCategory="Administration" RunObjectSrcTable="11754" ControlGUID="{d1a01254-5778-45ba-ba11-71807856f895}" Name="Unrel. Payer Service Setup CZL" CaptionML="CSY=Nastavení služby nespolehlivého plátce;ENU=Unreliable Payer Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2820813634 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2820813634 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11703" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{f6973214-8755-4c52-9566-3717121c6dd2}" Name="Accounting Sheets CZL" CaptionML="CSY=Kontační lístky;ENU=Accounting Sheets" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1653583588 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1653583588 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11754" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{ecb0e495-e58a-41cb-ae2d-19e727e83717}" Name="Close Balance Sheet CZL" CaptionML="CSY=Uzavření rozvahy;ENU=Close Balance Sheet" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 266556782 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 266556782 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11765" DepartmentCategory="Administration" RunObjectSrcTable="11793" ControlGUID="{b6e3ec0b-7fe4-463f-88f2-ab6b539e18f1}" Name="Company Official List CZL" CaptionML="CSY=Zástupci společnosti;ENU=Company Officials" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2846075811 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2846075811 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31142" DepartmentCategory="Administration" RunObjectSrcTable="31125" ControlGUID="{272602d6-3425-419a-a256-05ca372d8f8f}" Name="EET Service Setup CZL" CaptionML="CSY=Nastavení služby EET;ENU=EET Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2446698645 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2446698645 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11712" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{fbd8b4cb-283f-4dd0-9d6f-7768e4f1914a}" Name="General Ledger CZL" CaptionML="CSY=Hlavní účetní kniha;ENU=General Ledger" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 22646490 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 22646490 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11729" DepartmentCategory="Administration" RunObjectSrcTable="11750" ControlGUID="{a6d18513-e030-42d1-9f54-375c5ed11b1e}" Name="Excel Templates CZL" CaptionML="CSY=Šablony aplikace Excel;ENU=Excel Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2896243155 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2896243155 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31078" DepartmentCategory="Administration" RunObjectSrcTable="31074" ControlGUID="{a753db0e-cd82-48b2-90b4-6168a84ff862}" Name="Statistic Indications CZL" CaptionML="CSY=Statistické údaje (zastaralé);ENU=Statistic Indications (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3617635968 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3617635968 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11753" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{ea9d8ff7-59a4-4747-93da-732a98460acb}" Name="Close Income Statement CZL" CaptionML="CSY=Uzavření výsledovky;ENU=Close Income Statement CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=výkaz uzavření roku,výkaz uzavření účetního období,výkaz uzavření fiskálního roku;ENU=year closing statement,close accounting period statement,close fiscal year statement" CaptionTranslationKey="Report 1992137791 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1992137791 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31108" DepartmentCategory="Administration" RunObjectSrcTable="31105" ControlGUID="{fab25fd9-9280-4277-b7bb-cd80cea33e9a}" Name="Statutory Reporting Setup CZL" CaptionML="CSY=Nastavení statutárního vykazování;ENU=Statutory Reporting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 99819693 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 99819693 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31215" DepartmentCategory="Administration" RunObjectSrcTable="11713" ControlGUID="{aeda376a-f53c-4e09-af81-10200f736df9}" Name="Non-Deductible VAT Setup CZL" CaptionML="CSY=Nastavení neodčitatelné DPH;ENU=Non-Deductible VAT Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4039432442 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4039432442 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11795" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a78d8f70-6884-43a3-8e1a-d94fad5e207b}" Name="Income Statement CZL" AccessByObjectType="TableData" CaptionML="CSY=Výsledovka;ENU=Income Statement" AccessByObjectID="15" AccessByPermissionMask="1" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 4146503437 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 4146503437 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31140" DepartmentCategory="Tasks" RunObjectSrcTable="31075" ControlGUID="{fc655a5c-5d02-4ccb-a49d-85b95ab6e4b3}" Name="VIES Declarations CZL" CaptionML="CSY=Souhrnná hlášení;ENU=VIES Declarations" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3346013065 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3346013065 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31196" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="367" ControlGUID="{23a68d0f-71e9-4b35-8109-bfcc9f479b1b}" Name="Inv. G/L Reconciliation CZL" CaptionML="CSY=Odsouhlasení zásoby - finance;ENU=Inventory - G/L Reconciliation Enhanced" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=odsouhlasení zásob s finančním účetnictvím;ENU=general ledger reconcile inventory" CaptionTranslationKey="Page 3372850547 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3372850547 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11757" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a28312a0-1ab1-4f32-b1d6-b49979f78b3a}" Name="Documentation for VAT CZL" CaptionML="CSY=Podklady pro DPH;ENU=Documentation for VAT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3170582681 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3170582681 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11766" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{2262348b-af15-416d-a572-cf08d632d2dd}" Name="General Ledger Document CZL" CaptionML="CSY=Obecný účetní doklad;ENU=General Ledger Document CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3366595099 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3366595099 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11752" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{b0f6a9d1-9f13-4992-ad9a-bcdfd13dd8ae}" Name="Inventory Document CZL" CaptionML="CSY=Doklad zásob;ENU=Inventory Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2901479708 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2901479708 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31145" DepartmentCategory="History" RunObjectSrcTable="31128" ControlGUID="{9e143b9b-95a1-40da-a81d-4497e656d066}" Name="EET Entries CZL" CaptionML="CSY=Položky EET;ENU=EET Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2934801957 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2934801957 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11749" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{f457a495-a5df-4f5f-bf0c-a1ef9ae6a8bc}" Name="VAT Coeff. Correction CZL" CaptionML="CSY=Korekce DPH koeficientu;ENU=VAT Coefficient Correction" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=sestava koeficientu daně z přidané hodnoty,oprava koeficientu daně z přidané hodnoty;ENU=VAT value added tax coefficient report,VAT value added tax coefficient correct" CaptionTranslationKey="Report 488115721 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 488115721 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31037" DepartmentCategory="Administration" RunObjectSrcTable="31078" ControlGUID="{8bead0f9-5483-4699-ac20-a02d36e2d09a}" Name="Intrastat Delivery Groups CZL" CaptionML="CSY=Dodací skupiny Intrastat (zastaralé);ENU=Intrastat Delivery Groups (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1088943969 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1088943969 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11720" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{778eda28-2d2f-4cc8-954c-4cca70736307}" Name="Turnover Rpt. by Gl. Dim. CZL" CaptionML="CSY=Obratová předvaha dle globální dimenze;ENU=Turnover Report by Global Dimensions" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3935922130 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3935922130 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11713" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{1f7b715a-fe22-479a-963c-e7322bfbb872}" Name="Joining Bank. Acc. Adj. CZL" CaptionML="CSY=Vyrovnání bankovního konta;ENU=Joining Banking Account Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2968244395 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2968244395 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11715" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c88b3077-ba6e-4509-9208-54148cb36590}" Name="Open Cust. Entries to Date CZL" CaptionML="CSY=Otevřené položky zákazníků k datu;ENU=Open Customer Entries to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3097259909 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3097259909 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11756" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3f0674bd-c4f6-47a4-91b6-af9f55fabd61}" Name="VAT Documents List CZL" CaptionML="CSY=Seznam daňových dokladů;ENU=VAT Documents" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 547112492 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 547112492 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11704" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{b5889f4e-b4fe-4837-a380-2a8015a45128}" Name="All Payments on Hold CZL" CaptionML="CSY=Pozdržené platby;ENU=All Payments on Hold" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 273639157 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 273639157 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31045" DepartmentCategory="Lists" RunObjectSrcTable="31132" ControlGUID="{482e368e-2923-4ec5-9794-ced8f245596a}" Name="Certificate Code List CZL" CaptionML="CSY=Kódy certifikátů;ENU=Certificate Codes" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 339275761 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 339275761 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31069" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{df6cfde1-417b-4e82-84e3-19031ea3f334}" Name="Create Stockkeeping Unit CZL" CaptionML="CSY=Vytvořit skladovou jednotku;ENU=Create Stockkeeping Unit" ApplicationArea="#Warehouse" AdditionalSearchTermsML="CSY=vytvořit skj;ENU=create sku" CaptionTranslationKey="Report 1744894992 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1744894992 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11724" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a194f2b2-dc28-473f-b996-991480291258}" Name="Vendor-Bal. Reconciliation CZL" CaptionML="CSY=Odsouhlasení salda dodavatele;ENU=Vendor - Bal. Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3377050038 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3377050038 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31079" DepartmentCategory="Lists" RunObjectSrcTable="31069" ControlGUID="{60919df1-b669-4934-8068-29ad342bd6ea}" Name="Invt. Movement Templates CZL" CaptionML="CSY=Šablony pohybu zásob;ENU=Inventory Movement Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2044369626 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2044369626 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31004" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{e73e48f7-2702-4356-93b3-8c9d5bfc1126}" Name="Adjust Exchange Rates CZL" CaptionML="CSY=Úprava směnných kurzů rozšířená;ENU=Adjust Exchange Rates Enhanced" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 629953382 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 629953382 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11717" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{93725a41-ffee-4adf-b34c-76d31e9c0d53}" Name="Quantity Received Check CZL" CaptionML="CSY=Kontrola přijatého množství;ENU=Quantity Received Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3790561609 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3790561609 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11700" DepartmentCategory="Administration" RunObjectSrcTable="11712" ControlGUID="{42218a71-df65-4d34-a2c8-f81ea1c1bbce}" Name="Constant Symbols CZL" CaptionML="CSY=Konstantní symboly;ENU=Constant Symbols" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1294611434 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1294611434 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11718" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{ea13997c-1cef-40b7-a4e2-5098079f0c91}" Name="Quantity Shipped Check CZL" CaptionML="CSY=Kontrola dodaného množství;ENU=Quantity Shipped Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1889395765 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1889395765 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31005" DepartmentCategory="Lists" RunObjectSrcTable="31068" ControlGUID="{ee837a20-1870-412a-8c4f-77edb89291b9}" Name="Stockkeeping Unit Templ. CZL" CaptionML="CSY=Šablony skladových jednotek;ENU=Stockkeeping Unit Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3926392490 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3926392490 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11716" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c756b33d-b544-4524-8568-76be1dddbbe3}" Name="Open Vend. Entries to Date CZL" CaptionML="CSY=Otevřené položky dodavatelů k datu;ENU=Open Vendor Entries to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3573120205 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3573120205 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31106" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{006ba3d0-c24b-4405-b3a1-584408026568}" Name="Import Tariff Numbers XML CZL" CaptionML="CSY=Importovat čísla sazebníku (XML);ENU=Import Tariff Numbers (XML)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 13759417 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 13759417 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11769" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{4564b06d-1c72-454e-8ca3-e9af3538c2ad}" Name="VAT Statement CZL" CaptionML="CSY=Výkaz DPH CZ;ENU=VAT Statement CZ" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 439915317 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 439915317 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11756" DepartmentCategory="History" RunObjectSrcTable="11756" ControlGUID="{3ab47caf-8c25-4643-a6f3-ad7391ba21a3}" Name="Registration Log CZL" CaptionML="CSY=Protokol ověření IČ;ENU=Registration Log" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1124383332 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1124383332 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31076" DepartmentCategory="Administration" RunObjectSrcTable="31090" ControlGUID="{75455694-a9a9-4d04-a60d-3ae54855f783}" Name="Commodities CZL" CaptionML="CSY=Komodity;ENU=Commodities" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1438822532 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1438822532 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11719" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{999aa228-fd4e-46e9-a5f6-99564333b8ea}" Name="Recon. Bank Account Entry CZL" CaptionML="CSY=Odsouhlasení položek bankovního konta;ENU=Reconcile Bank Account Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3740268119 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3740268119 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31109" DepartmentCategory="Tasks" RunObjectSrcTable="31106" ControlGUID="{a3a179b9-a5ee-48f2-8ec1-a244583fa909}" Name="VAT Ctrl. Report List CZL" CaptionML="CSY=Kontrolní hlášení DPH;ENU=VAT Control Reports" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1075785319 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1075785319 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11971" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{9ec06e3b-6e68-423b-80bc-fe2fd46e320f}" Name="Calc. and Post VAT Settl. CZL" CaptionML="CSY=Vypočítat a účtovat vyrovnání DPH;ENU=Calculate and Post VAT Settlement" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=vyrovnání daně z přidané hodnoty,sestava daně z přidané hodnoty;ENU=settle vat value added tax,report vat value added tax" CaptionTranslationKey="Report 467122462 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 467122462 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11759" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{420d9965-f5c7-43f5-a8aa-292610ba7dae}" Name="Unreliable Payer List CZL" CaptionML="CSY=Přehled nespolehlivosti plátců DPH;ENU=Unreliable Payer List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2602400245 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2602400245 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31105" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{a9098ac2-5377-4d2c-9627-97fadc611078}" Name="Test Tariff Numbers CZL" CaptionML="CSY=Kontrola čísel sazebníku;ENU=Test Tariff Numbers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3629883671 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3629883671 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11755" DepartmentCategory="Administration" RunObjectSrcTable="11755" ControlGUID="{c49ef368-a5fa-409f-a59e-6a5774283c96}" Name="Reg. No. Service Config CZL" CaptionML="CSY=Nastavení služby ověření IČ;ENU=Registration No. Validation Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=Nastavení ARES;ENU=ARES Setup" CaptionTranslationKey="Page 3856835045 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3856835045 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31141" DepartmentCategory="Lists" RunObjectSrcTable="31076" ControlGUID="{48edeaf9-d009-4ce3-a901-9d6418ce7078}" Name="VIES Declaration Lines CZL" CaptionML="CSY=Řádky Souhrnného hlášení;ENU=VIES Declaration Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2411306259 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2411306259 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11750" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c99773a2-c8aa-4c3a-868c-a4edc781bbdb}" Name="Posted Inventory Shipment CZL" CaptionML="CSY=Účtovaný výdej zásob;ENU=Posted Inventory Shipment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2297099538 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2297099538 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11723" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3ddf43b1-6f81-4506-90f2-d3e52ca5b6df}" Name="Cust.- Bal. Reconciliation CZL" CaptionML="CSY=Odsouhlasení salda zák.;ENU=Customer - Bal. Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2667580051 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2667580051 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31122" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{e114cfc1-945f-4a35-867b-9660eda0217c}" Name="VAT Register CZL" CaptionML="CSY=Žurnál DPH;ENU=VAT Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2503687625 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2503687625 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31123" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{d8394b0b-edfd-4f57-9227-fc2847eecf07}" Name="VAT Exceptions CZL" CaptionML="CSY=Výjimky DPH;ENU=VAT Exceptions" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3213583422 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3213583422 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11721" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3575c633-ceca-452f-b929-3fb15b640237}" Name="G/L Acc. Group Post. Check CZL" CaptionML="CSY=Kontrola účtování dle skupin účtů;ENU=G/L Account Group Posting Check" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 244531227 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 244531227 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31038" DepartmentCategory="Administration" RunObjectSrcTable="31077" ControlGUID="{35c2c36d-dbb4-4337-a4c5-e9c340a1424d}" Name="Specific Movements CZL" CaptionML="CSY=Specifické pohyby (zastaralé);ENU=Specific Movements (Obsolete)" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3198856623 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3198856623 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11793" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{ec1b6cd7-d5d6-4722-b606-8f4d57c1a79b}" Name="G/L VAT Reconciliation CZL" CaptionML="CSY=Odsouhlasení DPH - finance;ENU=G/L VAT Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1242877871 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1242877871 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31073" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3d8ac8aa-36df-4281-a0b5-11858909b0d3}" Name="Phys. Inventory Document CZL" CaptionML="CSY=Doklad o fyzické inventuře;ENU=Physical Inventory Counting Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2493664168 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2493664168 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31116" DepartmentCategory="Lists" RunObjectSrcTable="31107" ControlGUID="{3ecf9114-87c9-4a7f-9512-8f67ead17249}" Name="VAT Ctrl. Report Lines CZL" CaptionML="CSY=Řádky kontrolního hlášení DPH;ENU=VAT Control Report Lines" ApplicationArea="#VAT" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2183057582 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2183057582 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31119" DepartmentCategory="Administration" RunObjectSrcTable="31119" ControlGUID="{10fdd3c5-e426-47fc-8659-af4499be2769}" Name="Document Footers CZL" CaptionML="CSY=Zápatí dokumentů;ENU=Document Footers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2586383168 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2586383168 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11751" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{382251ac-2616-4983-9940-7f3321bfb450}" Name="Posted Inventory Receipt CZL" CaptionML="CSY=Účtovaný příjem zásob;ENU=Posted Inventory Receipt" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3849435014 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3849435014 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31079" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{06db5030-a3c3-46a6-bad4-32f79f09bbd7}" Name="Posted Inventory Document CZL" CaptionML="CSY=Zaúčtovaný doklad zásob;ENU=Posted Inventory Document" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2023013595 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2023013595 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31205" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{0954771a-e2c3-45cf-88e5-ac50ad8a838d}" Name="Posted Direct Transfer CZL" CaptionML="CSY=Účtovaný přímý transfer;ENU=Posted Direct Transfer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3623982710 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3623982710 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31005" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{7910d6e9-6d9b-46ef-a987-5a5f3007d9f9}" Name="Cash Flow Date List CZL" CaptionML="CSY=Cash Flow - přehled dle data;ENU=Cash Flow Date List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 320362316 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 320362316 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11753" DepartmentCategory="History" RunObjectSrcTable="11753" ControlGUID="{8b008e5d-a06c-4d39-a081-131b167c37b7}" Name="Unreliable Payer Entries CZL" CaptionML="CSY=Položky nespolehlivosti plátce;ENU=Unreliable Payer Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3300374333 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3300374333 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11755" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{1f97d3ad-4cc8-4eaa-898c-4951d49f4b6b}" Name="Open Balance Sheet CZL" CaptionML="CSY=Otevření rozvahy;ENU=Open Balance Sheet" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3503835596 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3503835596 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11758" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{5772b884-da70-4244-8bc8-50258bc085bc}" Name="Unreliable Payer Get All CZL" CaptionML="CSY=Hromadné načtení spolehlivosti dod.;ENU=Get All Unreliable Payers" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 565602626 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 565602626 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="9311" TargetType="Page" />
-    <ActionChange TargetID="40" TargetType="Page" />
-    <ActionChange TargetID="137" TargetType="Page" />
-    <ActionChange TargetID="569" TargetType="Page" />
-    <ActionChange TargetID="510" TargetType="Page" />
-    <ActionChange TargetID="5050" TargetType="Page" />
-    <ActionChange TargetID="5753" TargetType="Page" />
-    <ActionChange TargetID="110" TargetType="Page" />
-    <ActionChange TargetID="38" TargetType="Page" />
-    <ActionChange TargetID="5752" TargetType="Page" />
-    <ActionChange TargetID="108" TargetType="Page" />
-    <ActionChange TargetID="5975" TargetType="Page" />
-    <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="446" TargetType="Page" />
-    <ActionChange TargetID="320" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="5977" TargetType="Page" />
-    <ActionChange TargetID="5167" TargetType="Page" />
-    <ActionChange TargetID="111" TargetType="Page" />
-    <ActionChange TargetID="393" TargetType="Page" />
-    <ActionChange TargetID="6651" TargetType="Page" />
-    <ActionChange TargetID="416" TargetType="Page" />
-    <ActionChange TargetID="427" TargetType="Page" />
-    <ActionChange TargetID="5805" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="5052" TargetType="Page" />
-    <ActionChange TargetID="136" TargetType="Page" />
-    <ActionChange TargetID="116" TargetType="Page" />
-    <ActionChange TargetID="5979" TargetType="Page" />
-    <ActionChange TargetID="5900" TargetType="Page" />
-    <ActionChange TargetID="461" TargetType="Page" />
-    <ActionChange TargetID="8900" TargetType="Page" />
-    <ActionChange TargetID="508" TargetType="Page" />
-    <ActionChange TargetID="9310" TargetType="Page" />
-    <ActionChange TargetID="5743" TargetType="Page" />
-    <ActionChange TargetID="490" TargetType="Page" />
-    <ActionChange TargetID="1382" TargetType="Page" />
-    <ActionChange TargetID="6641" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="117" TargetType="Page" />
-    <ActionChange TargetID="425" TargetType="Page" />
-    <ActionChange TargetID="6782" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="9348" TargetType="Page" />
-    <ActionChange TargetID="5802" TargetType="Page" />
-    <ActionChange TargetID="5934" TargetType="Page" />
-    <ActionChange TargetID="133" TargetType="Page" />
-    <ActionChange TargetID="135" TargetType="Page" />
-    <ActionChange TargetID="426" TargetType="Page" />
-    <ActionChange TargetID="5933" TargetType="Page" />
-    <ActionChange TargetID="6627" TargetType="Page" />
-    <ActionChange TargetID="96" TargetType="Page" />
-    <ActionChange TargetID="5744" TargetType="Page" />
     <ActionChange TargetID="279" TargetType="Page" />
-    <ActionChange TargetID="6781" TargetType="Page" />
-    <ActionChange TargetID="327" TargetType="Page" />
-    <ActionChange TargetID="8905" TargetType="Page" />
-    <ActionChange TargetID="390" TargetType="Page" />
-    <ActionChange TargetID="6564" TargetType="Page" />
-    <ActionChange TargetID="30" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
+    <ActionChange TargetID="5805" TargetType="Page" />
+    <ActionChange TargetID="9300" TargetType="Page" />
+    <ActionChange TargetID="5846" TargetType="Page" />
+    <ActionChange TargetID="5050" TargetType="Page" />
+    <ActionChange TargetID="392" TargetType="Page" />
+    <ActionChange TargetID="123" TargetType="Page" />
     <ActionChange TargetID="5746" TargetType="Page" />
+    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="5826" TargetType="Page" />
+    <ActionChange TargetID="137" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="5743" TargetType="Page" />
+    <ActionChange TargetID="145" TargetType="Page" />
+    <ActionChange TargetID="5966" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="320" TargetType="Page" />
+    <ActionChange TargetID="436" TargetType="Page" />
+    <ActionChange TargetID="110" TargetType="Page" />
+    <ActionChange TargetID="1356" TargetType="Page" />
+    <ActionChange TargetID="5883" TargetType="Page" />
+    <ActionChange TargetID="9310" TargetType="Page" />
+    <ActionChange TargetID="38" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+    <ActionChange TargetID="9301" TargetType="Page" />
+    <ActionChange TargetID="5753" TargetType="Page" />
+    <ActionChange TargetID="20" TargetType="Page" />
+    <ActionChange TargetID="5610" TargetType="Page" />
+    <ActionChange TargetID="508" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="414" TargetType="Page" />
+    <ActionChange TargetID="6646" TargetType="Page" />
+    <ActionChange TargetID="129" TargetType="Page" />
+    <ActionChange TargetID="11" TargetType="Page" />
+    <ActionChange TargetID="16" TargetType="Page" />
+    <ActionChange TargetID="122" TargetType="Page" />
+    <ActionChange TargetID="9001" TargetType="Page" />
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="182" TargetType="Page" />
+    <ActionChange TargetID="127" TargetType="Page" />
+    <ActionChange TargetID="1020" TargetType="Page" />
+    <ActionChange TargetID="104" TargetType="Page" />
+    <ActionChange TargetID="5919" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="5814" TargetType="Page" />
+    <ActionChange TargetID="345" TargetType="Page" />
+    <ActionChange TargetID="98" TargetType="Page" />
+    <ActionChange TargetID="108" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="5628" TargetType="Page" />
+    <ActionChange TargetID="251" TargetType="Page" />
+    <ActionChange TargetID="416" TargetType="Page" />
+    <ActionChange TargetID="5979" TargetType="Page" />
+    <ActionChange TargetID="95" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
+    <ActionChange TargetID="135" TargetType="Page" />
+    <ActionChange TargetID="5935" TargetType="Page" />
+    <ActionChange TargetID="101" TargetType="Page" />
+    <ActionChange TargetID="427" TargetType="Page" />
+    <ActionChange TargetID="1355" TargetType="Page" />
+    <ActionChange TargetID="438" TargetType="Page" />
+    <ActionChange TargetID="5164" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="460" TargetType="Page" />
+    <ActionChange TargetID="40" TargetType="Page" />
+    <ActionChange TargetID="450" TargetType="Page" />
+    <ActionChange TargetID="5052" TargetType="Page" />
+    <ActionChange TargetID="6572" TargetType="Page" />
+    <ActionChange TargetID="9318" TargetType="Page" />
     <ActionChange TargetID="22" TargetType="Page" />
-    <ActionChange TargetID="9305" TargetType="Page" />
-    <ActionChange TargetID="5978" TargetType="Page" />
-    <ActionChange TargetID="5974" TargetType="Page" />
-    <ActionChange TargetID="509" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
-    <ActionChange TargetID="253" TargetType="Page" />
+    <ActionChange TargetID="390" TargetType="Page" />
+    <ActionChange TargetID="96" TargetType="Page" />
     <ActionChange TargetID="6662" TargetType="Page" />
-    <ActionChange TargetID="6629" TargetType="Page" />
-    <ActionChange TargetID="283" TargetType="Page" />
-    <ActionChange TargetID="448" TargetType="Page" />
+    <ActionChange TargetID="371" TargetType="Page" />
+    <ActionChange TargetID="6644" TargetType="Page" />
+    <ActionChange TargetID="5900" TargetType="Page" />
+    <ActionChange TargetID="5714" TargetType="Page" />
+    <ActionChange TargetID="310" TargetType="Page" />
+    <ActionChange TargetID="5978" TargetType="Page" />
+    <ActionChange TargetID="5800" TargetType="Page" />
+    <ActionChange TargetID="459" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="5700" TargetType="Page" />
+    <ActionChange TargetID="147" TargetType="Page" />
+    <ActionChange TargetID="5972" TargetType="Page" />
+    <ActionChange TargetID="9306" TargetType="Page" />
+    <ActionChange TargetID="6781" TargetType="Page" />
+    <ActionChange TargetID="5742" TargetType="Page" />
+    <ActionChange TargetID="76" TargetType="Page" />
+    <ActionChange TargetID="128" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="5934" TargetType="Page" />
+    <ActionChange TargetID="5159" TargetType="Page" />
+    <ActionChange TargetID="473" TargetType="Page" />
+    <ActionChange TargetID="9320" TargetType="Page" />
+    <ActionChange TargetID="317" TargetType="Page" />
+    <ActionChange TargetID="5977" TargetType="Page" />
+    <ActionChange TargetID="5745" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="573" TargetType="Page" />
+    <ActionChange TargetID="5237" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="31" TargetType="Page" />
+    <ActionChange TargetID="9302" TargetType="Page" />
+    <ActionChange TargetID="30" TargetType="Page" />
+    <ActionChange TargetID="144" TargetType="Page" />
+    <ActionChange TargetID="253" TargetType="Page" />
+    <ActionChange TargetID="119" TargetType="Page" />
+    <ActionChange TargetID="1290" TargetType="Page" />
+    <ActionChange TargetID="130" TargetType="Page" />
+    <ActionChange TargetID="5802" TargetType="Page" />
+    <ActionChange TargetID="425" TargetType="Page" />
+    <ActionChange TargetID="142" TargetType="Page" />
     <ActionChange TargetID="440" TargetType="Page" />
     <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="9349" TargetType="Page" />
-    <ActionChange TargetID="130" TargetType="Page" />
-    <ActionChange TargetID="314" TargetType="Page" />
-    <ActionChange TargetID="450" TargetType="Page" />
-    <ActionChange TargetID="318" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
-    <ActionChange TargetID="6570" TargetType="Page" />
-    <ActionChange TargetID="5164" TargetType="Page" />
-    <ActionChange TargetID="41" TargetType="Page" />
-    <ActionChange TargetID="5877" TargetType="Page" />
-    <ActionChange TargetID="310" TargetType="Page" />
-    <ActionChange TargetID="20" TargetType="Page" />
-    <ActionChange TargetID="434" TargetType="Page" />
-    <ActionChange TargetID="9307" TargetType="Page" />
-    <ActionChange TargetID="255" TargetType="Page" />
-    <ActionChange TargetID="5741" TargetType="Page" />
-    <ActionChange TargetID="5700" TargetType="Page" />
-    <ActionChange TargetID="574" TargetType="Page" />
-    <ActionChange TargetID="570" TargetType="Page" />
-    <ActionChange TargetID="1356" TargetType="Page" />
-    <ActionChange TargetID="146" TargetType="Page" />
-    <ActionChange TargetID="5905" TargetType="Page" />
-    <ActionChange TargetID="9303" TargetType="Page" />
-    <ActionChange TargetID="103" TargetType="Page" />
-    <ActionChange TargetID="5162" TargetType="Page" />
-    <ActionChange TargetID="9302" TargetType="Page" />
-    <ActionChange TargetID="76" TargetType="Page" />
-    <ActionChange TargetID="6660" TargetType="Page" />
-    <ActionChange TargetID="345" TargetType="Page" />
-    <ActionChange TargetID="1355" TargetType="Page" />
-    <ActionChange TargetID="9347" TargetType="Page" />
-    <ActionChange TargetID="104" TargetType="Page" />
-    <ActionChange TargetID="128" TargetType="Page" />
-    <ActionChange TargetID="1386" TargetType="Page" />
-    <ActionChange TargetID="5964" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="127" TargetType="Page" />
-    <ActionChange TargetID="134" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
-    <ActionChange TargetID="142" TargetType="Page" />
-    <ActionChange TargetID="5972" TargetType="Page" />
-    <ActionChange TargetID="370" TargetType="Page" />
-    <ActionChange TargetID="126" TargetType="Page" />
-    <ActionChange TargetID="6640" TargetType="Page" />
-    <ActionChange TargetID="209" TargetType="Page" />
-    <ActionChange TargetID="29" TargetType="Page" />
-    <ActionChange TargetID="101" TargetType="Page" />
-    <ActionChange TargetID="9319" TargetType="Page" />
-    <ActionChange TargetID="143" TargetType="Page" />
-    <ActionChange TargetID="6563" TargetType="Page" />
-    <ActionChange TargetID="459" TargetType="Page" />
-    <ActionChange TargetID="6569" TargetType="Page" />
-    <ActionChange TargetID="187" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="6661" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="6646" TargetType="Page" />
-    <ActionChange TargetID="147" TargetType="Page" />
-    <ActionChange TargetID="452" TargetType="Page" />
-    <ActionChange TargetID="6644" TargetType="Page" />
-    <ActionChange TargetID="9001" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="5740" TargetType="Page" />
-    <ActionChange TargetID="5966" TargetType="Page" />
-    <ActionChange TargetID="6650" TargetType="Page" />
-    <ActionChange TargetID="1" TargetType="Page" />
-    <ActionChange TargetID="6783" TargetType="Page" />
-    <ActionChange TargetID="5936" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
-    <ActionChange TargetID="438" TargetType="Page" />
-    <ActionChange TargetID="9308" TargetType="Page" />
-    <ActionChange TargetID="395" TargetType="Page" />
-    <ActionChange TargetID="311" TargetType="Page" />
-    <ActionChange TargetID="5714" TargetType="Page" />
-    <ActionChange TargetID="414" TargetType="Page" />
-    <ActionChange TargetID="6572" TargetType="Page" />
-    <ActionChange TargetID="97" TargetType="Page" />
-    <ActionChange TargetID="11" TargetType="Page" />
-    <ActionChange TargetID="9346" TargetType="Page" />
-    <ActionChange TargetID="1290" TargetType="Page" />
-    <ActionChange TargetID="9306" TargetType="Page" />
-    <ActionChange TargetID="16" TargetType="Page" />
-    <ActionChange TargetID="9300" TargetType="Page" />
-    <ActionChange TargetID="119" TargetType="Page" />
-    <ActionChange TargetID="144" TargetType="Page" />
-    <ActionChange TargetID="473" TargetType="Page" />
-    <ActionChange TargetID="17" TargetType="Page" />
-    <ActionChange TargetID="95" TargetType="Page" />
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="315" TargetType="Page" />
-    <ActionChange TargetID="139" TargetType="Page" />
-    <ActionChange TargetID="317" TargetType="Page" />
-    <ActionChange TargetID="27" TargetType="Page" />
-    <ActionChange TargetID="5883" TargetType="Page" />
-    <ActionChange TargetID="392" TargetType="Page" />
-    <ActionChange TargetID="5159" TargetType="Page" />
     <ActionChange TargetID="507" TargetType="Page" />
-    <ActionChange TargetID="92" TargetType="Page" />
-    <ActionChange TargetID="254" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="6561" TargetType="Page" />
+    <ActionChange TargetID="5744" TargetType="Page" />
+    <ActionChange TargetID="5933" TargetType="Page" />
+    <ActionChange TargetID="6651" TargetType="Page" />
+    <ActionChange TargetID="570" TargetType="Page" />
+    <ActionChange TargetID="9348" TargetType="Page" />
+    <ActionChange TargetID="209" TargetType="Page" />
+    <ActionChange TargetID="5877" TargetType="Page" />
+    <ActionChange TargetID="139" TargetType="Page" />
+    <ActionChange TargetID="9305" TargetType="Page" />
+    <ActionChange TargetID="17" TargetType="Page" />
+    <ActionChange TargetID="116" TargetType="Page" />
+    <ActionChange TargetID="9346" TargetType="Page" />
+    <ActionChange TargetID="448" TargetType="Page" />
+    <ActionChange TargetID="6570" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="6660" TargetType="Page" />
+    <ActionChange TargetID="5971" TargetType="Page" />
     <ActionChange TargetID="140" TargetType="Page" />
     <ActionChange TargetID="49" TargetType="Page" />
+    <ActionChange TargetID="92" TargetType="Page" />
+    <ActionChange TargetID="426" TargetType="Page" />
     <ActionChange TargetID="131" TargetType="Page" />
-    <ActionChange TargetID="201" TargetType="Page" />
-    <ActionChange TargetID="182" TargetType="Page" />
-    <ActionChange TargetID="8907" TargetType="Page" />
-    <ActionChange TargetID="145" TargetType="Page" />
-    <ActionChange TargetID="5628" TargetType="Page" />
-    <ActionChange TargetID="6566" TargetType="Page" />
-    <ActionChange TargetID="5935" TargetType="Page" />
-    <ActionChange TargetID="31" TargetType="Page" />
-    <ActionChange TargetID="122" TargetType="Page" />
-    <ActionChange TargetID="5919" TargetType="Page" />
-    <ActionChange TargetID="460" TargetType="Page" />
-    <ActionChange TargetID="5971" TargetType="Page" />
-    <ActionChange TargetID="9304" TargetType="Page" />
+    <ActionChange TargetID="8905" TargetType="Page" />
+    <ActionChange TargetID="5752" TargetType="Page" />
     <ActionChange TargetID="8901" TargetType="Page" />
-    <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="9318" TargetType="Page" />
-    <ActionChange TargetID="573" TargetType="Page" />
-    <ActionChange TargetID="6567" TargetType="Page" />
-    <ActionChange TargetID="472" TargetType="Page" />
-    <ActionChange TargetID="436" TargetType="Page" />
-    <ActionChange TargetID="251" TargetType="Page" />
-    <ActionChange TargetID="118" TargetType="Page" />
     <ActionChange TargetID="141" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="1020" TargetType="Page" />
-    <ActionChange TargetID="5237" TargetType="Page" />
-    <ActionChange TargetID="5800" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="184" TargetType="Page" />
-    <ActionChange TargetID="5610" TargetType="Page" />
-    <ActionChange TargetID="5745" TargetType="Page" />
-    <ActionChange TargetID="371" TargetType="Page" />
-    <ActionChange TargetID="9301" TargetType="Page" />
-    <ActionChange TargetID="5846" TargetType="Page" />
-    <ActionChange TargetID="5826" TargetType="Page" />
-    <ActionChange TargetID="5742" TargetType="Page" />
-    <ActionChange TargetID="129" TargetType="Page" />
-    <ActionChange TargetID="9309" TargetType="Page" />
-    <ActionChange TargetID="5973" TargetType="Page" />
-    <ActionChange TargetID="5814" TargetType="Page" />
-    <ActionChange TargetID="9320" TargetType="Page" />
-    <ActionChange TargetID="123" TargetType="Page" />
-    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="97" TargetType="Page" />
+    <ActionChange TargetID="255" TargetType="Page" />
+    <ActionChange TargetID="327" TargetType="Page" />
     <ActionChange TargetID="9317" TargetType="Page" />
+    <ActionChange TargetID="9309" TargetType="Page" />
+    <ActionChange TargetID="6783" TargetType="Page" />
+    <ActionChange TargetID="6640" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="5741" TargetType="Page" />
+    <ActionChange TargetID="315" TargetType="Page" />
+    <ActionChange TargetID="126" TargetType="Page" />
+    <ActionChange TargetID="136" TargetType="Page" />
+    <ActionChange TargetID="434" TargetType="Page" />
+    <ActionChange TargetID="509" TargetType="Page" />
+    <ActionChange TargetID="314" TargetType="Page" />
+    <ActionChange TargetID="574" TargetType="Page" />
+    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="184" TargetType="Page" />
+    <ActionChange TargetID="9307" TargetType="Page" />
+    <ActionChange TargetID="311" TargetType="Page" />
+    <ActionChange TargetID="6627" TargetType="Page" />
+    <ActionChange TargetID="393" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="6641" TargetType="Page" />
+    <ActionChange TargetID="9308" TargetType="Page" />
+    <ActionChange TargetID="318" TargetType="Page" />
+    <ActionChange TargetID="5162" TargetType="Page" />
+    <ActionChange TargetID="446" TargetType="Page" />
+    <ActionChange TargetID="6569" TargetType="Page" />
+    <ActionChange TargetID="6661" TargetType="Page" />
+    <ActionChange TargetID="201" TargetType="Page" />
+    <ActionChange TargetID="187" TargetType="Page" />
+    <ActionChange TargetID="1382" TargetType="Page" />
+    <ActionChange TargetID="27" TargetType="Page" />
+    <ActionChange TargetID="111" TargetType="Page" />
+    <ActionChange TargetID="5167" TargetType="Page" />
+    <ActionChange TargetID="1386" TargetType="Page" />
+    <ActionChange TargetID="5975" TargetType="Page" />
+    <ActionChange TargetID="143" TargetType="Page" />
+    <ActionChange TargetID="461" TargetType="Page" />
+    <ActionChange TargetID="510" TargetType="Page" />
+    <ActionChange TargetID="9303" TargetType="Page" />
+    <ActionChange TargetID="490" TargetType="Page" />
+    <ActionChange TargetID="9347" TargetType="Page" />
+    <ActionChange TargetID="6566" TargetType="Page" />
+    <ActionChange TargetID="5905" TargetType="Page" />
+    <ActionChange TargetID="5973" TargetType="Page" />
+    <ActionChange TargetID="5740" TargetType="Page" />
+    <ActionChange TargetID="9319" TargetType="Page" />
+    <ActionChange TargetID="117" TargetType="Page" />
+    <ActionChange TargetID="452" TargetType="Page" />
+    <ActionChange TargetID="146" TargetType="Page" />
+    <ActionChange TargetID="395" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="9349" TargetType="Page" />
+    <ActionChange TargetID="472" TargetType="Page" />
+    <ActionChange TargetID="6650" TargetType="Page" />
+    <ActionChange TargetID="103" TargetType="Page" />
+    <ActionChange TargetID="8907" TargetType="Page" />
+    <ActionChange TargetID="138" TargetType="Page" />
+    <ActionChange TargetID="6561" TargetType="Page" />
+    <ActionChange TargetID="6563" TargetType="Page" />
+    <ActionChange TargetID="6782" TargetType="Page" />
+    <ActionChange TargetID="5964" TargetType="Page" />
+    <ActionChange TargetID="8900" TargetType="Page" />
+    <ActionChange TargetID="9311" TargetType="Page" />
+    <ActionChange TargetID="569" TargetType="Page" />
+    <ActionChange TargetID="5974" TargetType="Page" />
+    <ActionChange TargetID="133" TargetType="Page" />
+    <ActionChange TargetID="9304" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="283" TargetType="Page" />
+    <ActionChange TargetID="5936" TargetType="Page" />
+    <ActionChange TargetID="6629" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="6567" TargetType="Page" />
+    <ActionChange TargetID="6564" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
