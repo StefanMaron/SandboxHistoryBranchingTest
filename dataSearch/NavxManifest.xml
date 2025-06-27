@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="ac14293f-1eb7-4a7b-9936-b280da31970b" Name="Data Search" Publisher="Microsoft" Brief="Enables a user to search data in predefined tables." Description="Enables a user to search data in predefined tables. An administrator can select which tables and fields to search" Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2182906" Help="https://go.microsoft.com/fwlink/?linkid=2204037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=220403" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="2680" MaxObjectId="2699" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="c0146a0a-d0fe-4eec-8857-8a66551d010d" Name="Data Search Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:00:55.4547374Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

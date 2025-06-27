@@ -1,0 +1,28 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" Brief="This extension will take you through the process to configure your Cloud Migration environment." Description="This extension will take you through the process to configure your Cloud Migration environment.  Once your Cloud Migration environment is configured, you will be able to replicate data from your Dynamics 365 Business Central on-premises solution to your Dynamics 365 Business Central cloud tenant.  This will enable you to take full advantage of what the cloud has to offer your business such as, enhanced insights into your business, artificial intelligence, multiple device access, and anytime, anywhere access." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009036" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="1" MaxObjectId="49999" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="57623bfa-0559-4bc2-ae1c-0979c29fc8d1" Name="Business Central Cloud Migration API" Publisher="Microsoft" />
+    <Module Id="334ef79e-547e-4631-8ba1-7a7f18e14de6" Name="Business Central Intelligent Cloud" Publisher="Microsoft" />
+    <Module Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" />
+    <Module Id="cf07faa6-4d21-428b-bfcf-8078c5b0e582" Name="Intelligent Cloud Base Tests" Publisher="Microsoft" />
+    <Module Id="c8e46b67-1f61-46e2-a3a5-0239429e26fb" Name="Business Central Cloud Migration - Previous Release Tests" Publisher="Microsoft" />
+    <Module Id="82acac14-8067-499b-8cf0-f068448dff34" Name="Dynamics GP Intelligent Cloud Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:07:57.4822860Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

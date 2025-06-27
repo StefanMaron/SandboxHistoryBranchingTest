@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="IS Core" ControlGUID="{7bcaeeef-0576-4b48-aa8a-c17138a98075}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="14603" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{de637ee1-731a-4a9d-8410-d6e6e9579027}" Name="IS IRS Details" CaptionML="ENU=IRS Details;ISL=Upplýsingar vegna skattstofu" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 402131260 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 402131260 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="14600" DepartmentCategory="Administration" RunObjectSrcTable="14600" ControlGUID="{ed5e4a5f-96a6-4683-ae9d-172e8bdac2f9}" Name="IS IRS Groups" CaptionML="ENU=IRS Group;ISL=Skattstofuflokkur" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2249724314 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2249724314 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="14605" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a07d9cbe-cde6-444e-86f2-88d533c5d85a}" Name="IS Trial Balance - IRS Number" CaptionML="ENU=Trial Balance - IRS Number;ISL=Prófjöfnuður - Skattstofunúmer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2885536324 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2885536324 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="14602" DepartmentCategory="Administration" RunObjectSrcTable="14602" ControlGUID="{f4767606-48ff-4a17-b787-aaafaef1a72c}" Name="IS IRS Types" CaptionML="ENU=IRS Type;ISL=Skattstofutegund" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2267337867 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2267337867 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="14608" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{b111ac06-824d-47f8-8d70-5b4108b3170e}" Name="IS IRS notification" CaptionML="ENU=IRS notification;ISL=Tilkynning skattayfirvalda" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1123347329 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1123347329 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="14601" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{13851e41-1394-4694-91d0-f0e50279a977}" Name="IS VAT Reconciliation A" CaptionML="ENU=VAT Reconciliation A;ISL=VSK-afstemming A" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2168282849 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2168282849 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="14601" DepartmentCategory="Administration" RunObjectSrcTable="14601" ControlGUID="{82c27695-b842-442b-9c9d-589a3011af23}" Name="IS IRS Numbers" CaptionML="ENU=IRS Number;ISL=Skattstofunúmer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1552904438 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1552904438 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="14600" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{2b45209c-b329-47ac-8dc3-fff575ec8c07}" Name="IS VAT Balancing Report" CaptionML="ENU=VAT Balancing Report;ISL=VSK-mótreikningsskýrsla" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1842981056 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1842981056 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="138" TargetType="Page" />
+    <ActionChange TargetID="5050" TargetType="Page" />
+    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="8901" TargetType="Page" />
+    <ActionChange TargetID="459" TargetType="Page" />
+    <ActionChange TargetID="9004" TargetType="Page" />
+    <ActionChange TargetID="9001" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="9020" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="16" TargetType="Page" />
+    <ActionChange TargetID="5610" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>
