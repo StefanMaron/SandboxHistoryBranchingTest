@@ -1,54 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India TCS" ControlGUID="{1f5acbb2-e49a-4798-af6e-b78b1996a397}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18873" DepartmentCategory="Lists" RunObjectSrcTable="18871" ControlGUID="{45e0fa22-3f07-481f-8d62-b797ff2b572b}" Name="TCS Journal Templates" CaptionML="ENU=TCS Journal Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1660590714 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1660590714 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18874" DepartmentCategory="Lists" RunObjectSrcTable="18872" ControlGUID="{1ec14408-564a-4af2-8dbc-4ca35f095d47}" Name="TCS Challan Register" CaptionML="ENU=TCS Challan Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 512250988 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 512250988 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18816" DepartmentCategory="Lists" RunObjectSrcTable="20251" ControlGUID="{8938cd34-9737-41aa-b1fd-70e53b287cfa}" Name="TCS Rates" CaptionML="ENU=TCS Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3383318727 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3383318727 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18811" DepartmentCategory="Lists" RunObjectSrcTable="18811" ControlGUID="{ec2bfc16-08c1-48b0-8e20-bcd4e2eae335}" Name="TCS Nature Of Collections" CaptionML="ENU=TCS Nature of Collections" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1504238691 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1504238691 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18906" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{9bedd00c-8b83-4df0-8ed1-52fd2920a348}" Name="Pay TCS" CaptionML="ENU=Pay TCS" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1656389264 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1656389264 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18809" DepartmentCategory="Lists" RunObjectSrcTable="18809" ControlGUID="{42e801ee-6def-448d-ae34-954e14ce8322}" Name="T.C.A.N. Nos." CaptionML="ENU=T.C.A.N. Nos." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4110272672 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4110272672 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18875" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{6ec3c9b4-aaad-4891-bd21-774697c1bd94}" Name="Update TCS Register" CaptionML="ENU=Update TCS Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 503048112 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 503048112 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18808" DepartmentCategory="Lists" RunObjectSrcTable="18808" ControlGUID="{39d3f341-5cc1-43e0-851b-f77ff5441c98}" Name="Customer Concessional Codes" CaptionML="ENU=Customer Concessional Codes" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4170394885 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4170394885 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18807" DepartmentCategory="Lists" RunObjectSrcTable="18807" ControlGUID="{adc9afa3-de74-4177-af39-e890aa3c3013}" Name="Allowed NOC" CaptionML="ENU=Allowed NOC" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1958049646 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1958049646 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18870" DepartmentCategory="Tasks" RunObjectSrcTable="18870" ControlGUID="{4d3b02ab-489f-4889-a9d2-0c2f9ef43785}" Name="TCS Adjustment Journal" CaptionML="ENU=TCS Adjustment Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 318733294 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 318733294 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18810" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{8ba9dab3-2f23-4bf1-b88e-a5311006e35a}" Name="TCS Entries" CaptionML="ENU=TCS Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2050565082 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2050565082 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18812" DepartmentCategory="Lists" RunObjectSrcTable="18813" ControlGUID="{027f2aeb-7e6a-4e99-9a55-7f62f3ee28b4}" Name="TCS Posting Setup" CaptionML="ENU=TCS Posting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 241039981 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 241039981 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18813" DepartmentCategory="Administration" RunObjectSrcTable="18814" ControlGUID="{49fff1f7-ee4f-47ff-ad76-d571f3f1b2e1}" Name="TCS Setup" CaptionML="ENU=TCS Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1543025229 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1543025229 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18869" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{e0f6f4b1-f980-4b5d-8385-e96348367a38}" Name="TCS Challan Register" CaptionML="ENU=TCS Challan Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 512250988 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 512250988 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India TCS" ControlGUID="{10d40616-d6ae-4a30-8788-ccdb4a7e30bc}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18808" DepartmentCategory="Lists" RunObjectSrcTable="18808" ControlGUID="{f6ce49ed-9f40-4063-b1ed-64cdd1a7f6fb}" Name="Customer Concessional Codes" CaptionML="ENU=Customer Concessional Codes" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4170394885 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4170394885 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18875" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{3b4ab998-31e5-4877-889d-b5f18503bc71}" Name="Update TCS Register" CaptionML="ENU=Update TCS Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 503048112 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 503048112 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18874" DepartmentCategory="Lists" RunObjectSrcTable="18872" ControlGUID="{bd9f07e0-86c4-46e4-924f-c71eb94ffad0}" Name="TCS Challan Register" CaptionML="ENU=TCS Challan Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 512250988 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 512250988 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18906" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{b020a35d-3cc0-4c06-a88b-72921fd7ad08}" Name="Pay TCS" CaptionML="ENU=Pay TCS" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1656389264 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1656389264 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18812" DepartmentCategory="Lists" RunObjectSrcTable="18813" ControlGUID="{e1759152-39c1-443f-8292-f3da136ffc71}" Name="TCS Posting Setup" CaptionML="ENU=TCS Posting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 241039981 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 241039981 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18816" DepartmentCategory="Lists" RunObjectSrcTable="20251" ControlGUID="{34fb0e88-0784-4c85-98e6-5740366172ff}" Name="TCS Rates" CaptionML="ENU=TCS Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3383318727 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3383318727 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18873" DepartmentCategory="Lists" RunObjectSrcTable="18871" ControlGUID="{7286283d-d8ea-4ddf-a272-3b9ce6ab2fc0}" Name="TCS Journal Templates" CaptionML="ENU=TCS Journal Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1660590714 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1660590714 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18809" DepartmentCategory="Lists" RunObjectSrcTable="18809" ControlGUID="{95a8742c-da8a-488b-9e8d-53063257edf4}" Name="T.C.A.N. Nos." CaptionML="ENU=T.C.A.N. Nos." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4110272672 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4110272672 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18870" DepartmentCategory="Tasks" RunObjectSrcTable="18870" ControlGUID="{f1ea4896-78fd-43d2-9ca3-fee1a31996c4}" Name="TCS Adjustment Journal" CaptionML="ENU=TCS Adjustment Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 318733294 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 318733294 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18869" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{cafe84df-9ad1-446f-8828-f60fd28afffa}" Name="TCS Challan Register" CaptionML="ENU=TCS Challan Register" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 512250988 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 512250988 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18807" DepartmentCategory="Lists" RunObjectSrcTable="18807" ControlGUID="{dc9ded6a-c55f-4d6d-bbcb-a4d962d638f3}" Name="Allowed NOC" CaptionML="ENU=Allowed NOC" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1958049646 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1958049646 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18813" DepartmentCategory="Administration" RunObjectSrcTable="18814" ControlGUID="{a9a3d72c-2886-425d-a61e-81cdeb4cf6e5}" Name="TCS Setup" CaptionML="ENU=TCS Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1543025229 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1543025229 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18810" DepartmentCategory="Lists" RunObjectSrcTable="18810" ControlGUID="{070c4d59-2a8d-4b73-bcec-c57a7042c4ee}" Name="TCS Entries" CaptionML="ENU=TCS Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2050565082 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2050565082 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18811" DepartmentCategory="Lists" RunObjectSrcTable="18811" ControlGUID="{4b705c2c-b6f8-4d4d-af2c-0f9e2f28e8da}" Name="TCS Nature Of Collections" CaptionML="ENU=TCS Nature of Collections" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1504238691 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1504238691 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="9007" TargetType="Page" />
-    <ActionChange TargetID="255" TargetType="Page" />
-    <ActionChange TargetID="118" TargetType="Page" />
-    <ActionChange TargetID="9022" TargetType="Page" />
     <ActionChange TargetID="116" TargetType="Page" />
-    <ActionChange TargetID="18554" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="398" TargetType="Page" />
-    <ActionChange TargetID="9006" TargetType="Page" />
-    <ActionChange TargetID="18550" TargetType="Page" />
-    <ActionChange TargetID="279" TargetType="Page" />
-    <ActionChange TargetID="160" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="18553" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
-    <ActionChange TargetID="18555" TargetType="Page" />
-    <ActionChange TargetID="397" TargetType="Page" />
-    <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
-    <ActionChange TargetID="1" TargetType="Page" />
-    <ActionChange TargetID="96" TargetType="Page" />
-    <ActionChange TargetID="95" TargetType="Page" />
-    <ActionChange TargetID="5703" TargetType="Page" />
-    <ActionChange TargetID="253" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="41" TargetType="Page" />
     <ActionChange TargetID="402" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="255" TargetType="Page" />
+    <ActionChange TargetID="95" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="398" TargetType="Page" />
+    <ActionChange TargetID="9007" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
+    <ActionChange TargetID="397" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+    <ActionChange TargetID="18555" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="160" TargetType="Page" />
+    <ActionChange TargetID="253" TargetType="Page" />
+    <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="18550" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="18554" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="18553" TargetType="Page" />
+    <ActionChange TargetID="279" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="96" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="5703" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
