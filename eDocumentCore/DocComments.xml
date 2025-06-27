@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>25.0.23364.35922</version>
+        <version>25.1.25873.35923</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -437,6 +437,21 @@
             <summary>
             Move attachment from E-Document to the newly created document.
             Used when importing E-Document into BC Document.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.InsertServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Inserts E-Document Service Status record. Throws runtime error if record does exists.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Updates existing service status record. Throws runtime error if record does not exists.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyEDocumentStatus(E-Document@,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Updates EDocument status based on E-Document Service Status value
             </summary>
         </member>
     </members>
