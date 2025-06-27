@@ -485,6 +485,21 @@ enum 30111 "Shpfy GraphQL Type" implements "Shpfy IGraphQL"
         Caption = 'Get Product Image';
         Implementation = "Shpfy IGraphQL" = "Shpfy GQL GetProductImage";
     }
+    value(98; CreateCompanyLocationTaxId)
+    {
+        Caption = 'Create Company Location Tax Id';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL CreateCompLocTaxId";
+    }
+    value(99; UpdateCompanyLocationPaymentTerms)
+    {
+        Caption = 'Update Company Location Payment Terms';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL UpdateLocPmtTerms";
+    }
+    value(100; GetCompanyLocations)
+    {
+        Caption = 'Company Locations';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL CompLocations";
+    }
     value(101; GetSalesChannels)
     {
         Caption = 'Get Sales Channels';
@@ -494,6 +509,46 @@ enum 30111 "Shpfy GraphQL Type" implements "Shpfy IGraphQL"
     {
         Caption = 'Get Next Sales Channels';
         Implementation = "Shpfy IGraphQL" = "Shpfy GQL Get Next S. Channels";
+    }
+    value(103; CustomerMetafieldIds)
+    {
+        Caption = 'Customer Metafield Ids';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL CustomerMetafieldIds";
+    }
+    value(104; CompanyMetafieldIds)
+    {
+        Caption = 'Company Metafield Ids';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL CompanyMetafieldIds";
+    }
+    value(105; GetDeliveryProfiles)
+    {
+        Caption = 'Get Delivery Profiles';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL DeliveryProfiles";
+    }
+    value(106; GetNextDeliveryProfiles)
+    {
+        Caption = 'Get Next Delivery Profiles';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL NextDeliveryProfiles";
+    }
+    value(107; GetLocationGroups)
+    {
+        Caption = 'Get Location Groups';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL LocationGroups";
+    }
+    value(108; GetDeliveryMethods)
+    {
+        Caption = 'Get Delivery Methods';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL DeliveryMethods";
+    }
+    value(109; GetNextDeliveryMethods)
+    {
+        Caption = 'Get Next Delivery Methods';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL NextDeliveryMethods";
+    }
+    value(110; GetMetafieldDefinitions)
+    {
+        Caption = 'Get Metafield Definitions';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL MetafieldDefinitions";
     }
     value(111; InventoryActivate)
     {
@@ -554,6 +609,21 @@ enum 30111 "Shpfy GraphQL Type" implements "Shpfy IGraphQL"
     {
         Caption = 'Get Ship To Countries';
         Implementation = "Shpfy IGraphQL" = "Shpfy GQL ShipToCountries";
+    }
+    value(123; GetRefundShippingLines)
+    {
+        Caption = 'Get Refund Shipping Lines';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL RefundShippingLines";
+    }
+    value(124; GetNextRefundShippingLines)
+    {
+        Caption = 'Get Next Refund Shipping Lines';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL NextRefundShipLines";
+    }
+    value(125; GetNextCompanyLocations)
+    {
+        Caption = 'Next Get Company Locations';
+        Implementation = "Shpfy IGraphQL" = "Shpfy GQL NextCompLocations";
     }
     value(126; UpdateProductOption)
     {

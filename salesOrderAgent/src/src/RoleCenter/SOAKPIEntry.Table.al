@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 using Microsoft.Sales.Document;
 using Microsoft.CRM.Contact;
 using Microsoft.Sales.Customer;
@@ -32,7 +33,7 @@ table 4592 "SOA KPI Entry"
         }
         field(3; "Amount Including Tax"; Decimal)
         {
-            Caption = 'Amount inc. Tax';
+            Caption = 'Amount Incl. Tax';
             ToolTip = 'Specifies the amount of the record that we are tracking. The amount includes tax.';
         }
         field(4; Status; Option)
@@ -64,17 +65,23 @@ table 4592 "SOA KPI Entry"
         }
         field(20; "Contact Name"; Text[100])
         {
-            Caption = 'Contact name';
+            Caption = 'Contact Name';
             ToolTip = 'Specifies the name of the contact.';
             FieldClass = FlowField;
             CalcFormula = lookup(Contact.Name where("No." = field("Contact No.")));
         }
         field(21; "Customer Name"; Text[100])
         {
-            Caption = 'Customer name';
-            ToolTip = 'Specifies the name of the contact.';
+            Caption = 'Customer Name';
+            ToolTip = 'Specifies the name of the customer.';
             FieldClass = FlowField;
             CalcFormula = lookup(Customer.Name where("No." = field("Customer No.")));
+            Editable = false;
+        }
+        field(22; "Task ID"; BigInteger)
+        {
+            Caption = 'Task ID';
+            ToolTip = 'Specifies the task ID of the agent.';
         }
     }
 

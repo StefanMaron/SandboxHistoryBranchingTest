@@ -3,12 +3,11 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
-using Agent.SalesOrderAgent.Integration;
 using Microsoft.Sales.Document;
 using Microsoft.Sales.Customer;
-using Microsoft.Inventory.Item;
 using Microsoft.CRM.Contact;
 using System.Security.User;
 
@@ -38,8 +37,22 @@ codeunit 4306 "SOA Session Filter"
         Rec.FilterGroup(0);
     end;
 
-    [EventSubscriber(ObjectType::Page, Page::"SOA Multi Items Availability", 'OnOpenPageEvent', '', false, false)]
-    local procedure SetFiltersOnOpenMultiItemAvailabilityPage(var Rec: Record Item)
+    [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnAfterModifyEvent', '', false, false)]
+    local procedure VerifySameCustomer(var Rec: Record "Sales Header")
+    var
+        BackupSalesHeader: Record "Sales Header";
+    begin
+        if (Rec."Sell-to Contact No." = '') and (Rec."Sell-to Customer No." = '') then
+            exit;
+
+        BackupSalesHeader.Copy(Rec);
+        SetFilterOnSalesHeader(BackupSalesHeader);
+        if not BackupSalesHeader.Find() then
+            Error(DifferentCustomerErr, BackupSalesHeader.GetView());
+    end;
+
+    [EventSubscriber(ObjectType::Page, Page::"SOA Multi Items Availability", 'OnAfterInitPage', '', false, false)]
+    local procedure OnAfterInitPage(var CustomerNo: Code[20]; var LocationFilter: Text)
     var
         Customer: Record Customer;
         ShipToAddress: Record "Ship-to Address";
@@ -49,14 +62,15 @@ codeunit 4306 "SOA Session Filter"
         LocationCode: Code[10];
         CustomerFilter: Text;
     begin
-        if SOASetup.FindFirst() then
-            if SOASetup."Search Only Available Items" then begin
-                CustomerFilter := SOAFiltersImpl.GetSecurityFiltersForCustomers(SOAFiltersImpl.GetSecurityFiltersForContacts(AgentTaskID));
-                if CustomerFilter = '' then
-                    exit;
+        CustomerFilter := SOAFiltersImpl.GetSecurityFiltersForCustomers(SOAFiltersImpl.GetSecurityFiltersForContacts(AgentTaskID));
+        if CustomerFilter = '' then
+            exit;
 
-                Customer.SetFilter("No.", CustomerFilter);
-                if Customer.FindFirst() then begin
+        Customer.SetFilter("No.", CustomerFilter);
+        if Customer.FindFirst() then begin
+            CustomerNo := Customer."No.";
+            if SOASetup.FindFirst() then
+                if SOASetup."Search Only Available Items" then begin
                     LocationCode := Customer."Location Code";
                     if Customer."Ship-to Code" <> '' then begin
                         ShipToAddress.SetLoadFields("Location Code");
@@ -64,11 +78,9 @@ codeunit 4306 "SOA Session Filter"
                             if ShipToAddress."Location Code" <> '' then
                                 LocationCode := ShipToAddress."Location Code";
                     end;
-                    LocationCode := UserSetupMgt.GetLocation(0, LocationCode, Customer."Responsibility Center");
-
-                    Rec.SetFilter("Location Filter", '%1', LocationCode);
+                    LocationFilter := UserSetupMgt.GetLocation(0, LocationCode, Customer."Responsibility Center");
                 end;
-            end;
+        end;
     end;
 
     local procedure SetFilterOnSalesHeader(var Rec: Record "Sales Header")
@@ -140,4 +152,5 @@ codeunit 4306 "SOA Session Filter"
     var
         AgentTaskID: Integer;
         FilteringOutAllSalesRecordsTxt: Label 'Filtering out all sales header records.';
+        DifferentCustomerErr: Label 'Agent cannot crete a quote for a different contact or customer than the one that has sent the request. Filter used: %1', Comment = '%1 - Filter that is used.';
 }
