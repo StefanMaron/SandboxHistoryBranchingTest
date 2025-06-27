@@ -4,7 +4,6 @@
 // ------------------------------------------------------------------------------------------------
 namespace Microsoft.EServices.EDocument;
 
-using System;
 using System.Privacy;
 using System.Security.Encryption;
 using System.Telemetry;
@@ -28,9 +27,6 @@ table 10751 "SII Setup"
             trigger OnValidate()
             var
                 CustomerConsentMgt: Codeunit "Customer Consent Mgt.";
-                MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                MyALAuditCategory: DotNet ALAuditCategory;
                 IsHandled: Boolean;
                 SIISetupConsentProvidedLbl: Label 'SII Setup - consent provided.', Locked = true;
             begin
@@ -41,10 +37,10 @@ table 10751 "SII Setup"
 
                 if Enabled and ("Certificate Code" = '') then
                     Error(CannotEnableWithoutCertificateErr);
-                IF Enabled then
+                if Enabled then
                     Enabled := CustomerConsentMgt.ConfirmUserConsent();
                 if Enabled then
-                    MyCustomerAuditLoggerALHelper.LogAuditMessage(SIISetupConsentProvidedLbl, MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 4, 0);
+                    Session.LogAuditMessage(SIISetupConsentProvidedLbl, SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 4, 0);
             end;
         }
         field(3; Certificate; BLOB)
@@ -91,8 +87,8 @@ table 10751 "SII Setup"
             InitValue = 'https://www1.agenciatributaria.gob.es/wlpl/SSII-FACT/ws/oi/SiiFactOIV1SOAP';
             NotBlank = true;
             ObsoleteReason = 'Intracommunity feature was removed in scope of 222210';
-            ObsoleteState = Pending;
-            ObsoleteTag = '15.0';
+            ObsoleteState = Removed;
+            ObsoleteTag = '25.0';
         }
         field(10; "Enable Batch Submissions"; Boolean)
         {

@@ -4,9 +4,34 @@
         <id>dd3f226b-40bf-4b3c-9988-9b1e0f74edd8</id>
         <name>Sales Lines Suggestions</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
+        <member name="O:Interface::Microsoft#Sales#Document#Attachment#File Handler">
+            <summary>
+            Specifies the interface for File Handler implementations.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Sales#Document#Attachment#File Handler.Process(InStream@):Variant">
+            <summary>
+            Processes the  file input stream that is passed to the function.
+            </summary>
+            <param name="FileInputStream">InStream pointing to the file content.</param>
+            <returns>Result of the file processing.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Sales#Document#Attachment#File Handler.GetFileData(Variant):List of [List]">
+            <summary>
+            Gets the data as a table from the file based on the file handler result.
+            </summary>
+            <param name="FileHandlerResult">Result of the file processing.</param>
+            <returns>List of rows where each row is a list of columns.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Sales#Document#Attachment#File Handler.Finalize(Variant)">
+            <summary>
+            Finalizes the file handler.
+            </summary>
+            <param name="FileHandlerResult">Result of the file processing.</param>
+        </member>
         <member name="M:Interface::Microsoft#Sales#Document#SalesAzureOpenAITools.GetToolPrompt:JsonObject">
             <summary>
             Get the prompt for the Tool. Tool prompt object describes the Tool and the should contain the following fields:
