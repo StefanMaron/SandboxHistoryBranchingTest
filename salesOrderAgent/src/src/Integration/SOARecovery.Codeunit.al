@@ -3,13 +3,13 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent.Integration;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
 using System.AI;
 using System.Environment;
 using System.Telemetry;
-using Agent.SalesOrderAgent;
 
 codeunit 4584 "SOA Recovery"
 {
