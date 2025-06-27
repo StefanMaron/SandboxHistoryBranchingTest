@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
+        <name>E-Document Core</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Check(RecordRef@,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Processing Phase)">
+            
+             The following methods are to create EDocument from Business Central document to send to the endpoint
+            
+            <summary>
+            Use it to run check on release/post action of a document to make sure all necessary fields to submit the document are available.
+            </summary>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocumentProcessingPhase">The document processing phase enum, for example it can be create, release, etc.</param>
+            <remarks>You should validated all required data to convert a document to a specific format, and throw an error if something missing.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Create(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a blob representing the posted document.
+            </summary>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocument">Electronic document.</param>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.CreateBatch(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a blob representing a batch of posted documents.
+            </summary>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocument">Electronic document.</param>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetBasicInfoFromReceivedDocument(E-Document@,Codeunit::System#Utilities#Temp Blob@)">
+            
+             The following methods are to receive a document from an endpoint and prepare it to be a BC
+            
+            <summary>
+            Use it to get the basic information of an E-Document from received blob.
+            </summary>
+            <param name="EDocument">Electronic document.</param>
+            <param name="TempBlob">Contians received blob from external service</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetCompleteInfoFromReceivedDocument(E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a document from imported blob.
+            </summary>
+            <param name="EDocument">Electronic document.</param>
+            <param name="CreatedDocumentHeader">The document header that should be populated from the blob as a recored ref.</param>
+            <param name="CreatedDocumentLines">The document lines that should be populated from the blob as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.ErrorMessageCount(E-Document@):Integer">
+            <summary>
+            Use it to get the number of errors for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <returns> Count of the errors in an an E-Document.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.WarningMessageCount(E-Document@):Integer">
+            <summary>
+            Use it to get the number of warnings for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <returns> Count of the warnings in an an E-Document.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.HasErrors(E-Document@):Boolean">
+            <summary>
+            Use it to check if there are errors for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <returns> True if the E-Document has an error.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.ClearErrorMessages(E-Document)">
+            <summary>
+            Use it to clear errors for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.LogWarningMessage(E-Document,Variant,Integer,Text)">
+            <summary>
+            Use it to log warning message for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="RelatedRec">Related record that caused the warning.</param>
+            <param name="FieldNo">Related field that caused the warning.</param>
+            <param name="Message">Warning message text.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.LogErrorMessage(E-Document,Variant,Integer,Text)">
+            <summary>
+            Use it to log error message for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="RelatedRec">Related record that caused the error.</param>
+            <param name="FieldNo">Related field that caused the error.</param>
+            <param name="Message">Error message text.</param>    
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.LogSimpleErrorMessage(E-Document@,Text)">
+            <summary>
+            Use it to log simple error message for E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="Message">Error message text.</param>    
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Helper.IsElectronicDocument(RecordRef@):Boolean">
+            <summary>
+            Use it to check if the source document is an E-Document.
+            </summary>
+            <param name="RecRef">Source document record reference.</param>
+            <returns> True if the source document is an E-Document.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Helper.AllowEDocumentCoreHttpCalls">
+            <summary>
+            Use it to set allow EDocument CoreHttpCalls.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Helper.GetEdocumentService(E-Document,E-Document Service@)">
+            <summary>
+            Use it to get E-Document Service for an Edocument.
+            </summary>
+            <param name="Edocument">Edocument record.</param>
+            <param name="EdocumentService">Edocument service record by reference.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ResolveUnitOfMeasureFromDataImport(E-Document@,RecordRef@):Boolean">
+            <summary>
+            Use it to check, resolve and update unit of measure information for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+            <returns>True if successful.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindItemReferenceForLine(E-Document@,RecordRef@):Boolean">
+            <summary>
+            Use it to find an item by reference and update item information for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+            <returns>True if successful.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindItemForLine(E-Document@,RecordRef@):Boolean">
+            <summary>
+            Use it to find an item by GTIN and update item information for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+            <returns>True if successful.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindGLAccountForLine(E-Document@,RecordRef@):Boolean">
+            <summary>
+            Use it to find a G/L account by imported text in Text-to-Account Mapping and update account information for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+            <returns>True if successful.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.LogErrorIfItemNotFound(E-Document@,RecordRef@):Boolean">
+            <summary>
+            Use it to log an error if an item or a G/L account is not found for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+            <returns>True if successful.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ValidateLineDiscount(E-Document@,RecordRef@)">
+            <summary>
+            Use it to validate discount for the imported document line.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentLine">Imported document line.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ValidateReceivingCompanyInfo(E-Document)">
+            <summary>
+            Use it to check if receiving company information is in line with Company Information.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ValidateReceivingCompanyInfoByNameAndAddress(E-Document)">
+            <summary>
+            Use it to check if receiving company name and address is in line with Company Information.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ApplyInvoiceDiscount(E-Document@,RecordRef@,RecordRef@)">
+            <summary>
+            Use it to apply invoice discount for the imported document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentHeader">Imported document header.</param>
+            <param name="DocumentHeader">Created document header.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.VerifyTotal(E-Document@,RecordRef@,RecordRef@)">
+            <summary>
+            Use it to verify compare imported document totals with created docuemnt totals.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempDocumentHeader">Imported document header.</param>
+            <param name="DocumentHeader">Created document header.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendor(Code[20],Code[13],Text[20]):Code[20]">
+            <summary>
+            Use it to find a vendor by number, GLN or VAT registration number.
+            </summary>
+            <param name="VendorNoText">Vendor's number.</param>
+            <param name="GLN">Vendor's GLN.</param>
+            <param name="VATRegistrationNo">Vendor's VAT registration number.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorById(Text):Code[20]">
+            <summary>
+            Use it to find a vendor by Id.
+            </summary>
+            <param name="VendorIdText">Vendor's Id.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByNo(Code[20]):Code[20]">
+            <summary>
+            Use it to find a vendor by number.
+            </summary>
+            <param name="VendorNoText">Vendor's number.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByGLN(Code[13]):Code[20]">
+            <summary>
+            Use it to find a vendor by GLN.
+            </summary>
+            <param name="GLN">Vendor's GLN.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByVATRegistrationNo(Text[20]):Code[20]">
+            <summary>
+            Use it to find a vendor by VAT registration number.
+            </summary>
+            <param name="VATRegistrationNo">Vendor's VAT registration number.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByPhoneNo(Text):Code[20]">
+            <summary>
+            Use it to find a vendor by phone number.
+            </summary>
+            <param name="PhoneNo">Vendor's Phone number.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByNameAndAddress(Text,Text):Code[20]">
+            <summary>
+            Use it to find a vendor by name and address.
+            </summary>
+            <param name="VendorName">Vendor's name.</param>
+            <param name="VendorAddress">Vendor's address.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.FindVendorByBankAccount(Code[50],Text[20],Text[30]):Code[20]">
+            <summary>
+            Use it to find a vendor by IBAN, vendor bank branch number and vendor bank account number.
+            </summary>
+            <param name="VendorIBAN">Vendor's IBAN.</param>
+            <param name="VendorBankBranchNo">Vendor's bank account branch number.</param>
+            <param name="VendorBankAccountNo">Vendor's bank account number.</param>
+            <returns>Vendor number if exists or empty string.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.GetVendor(E-Document@,Code[20]):Vendor">
+            <summary>
+            Use it to get a vendor by number, or rise an error if vendor does not exist
+            </summary>
+            <param name="VendorNo">Vendor's number</param>
+            <returns>Vendor record if exists or error.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.ProcessDocument(E-Document@,Boolean)">
+            <summary>
+            Use it to process imported E-Document
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="CreateJnlLine">If processing should create journal line</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.SetHideDialogs(Boolean)">
+            <summary>
+            Use it to set hide dialogs when importing E-Document.
+            </summary>
+            <param name="Hide">Hide or show the dialog.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Log Helper.InsertIntegrationLog(E-Document,E-Document Service,HttpRequestMessage,HttpResponseMessage)">
+            <summary>
+            Use it to insert integration log when you need to send more than one request to the service.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="EDocumentService">The E-Document service record.</param>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Log Helper.InsertLog(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Inserts a log entry for the E-Document.
+            </summary>
+            <param name="EDocument">The record representing the E-Document for which the log entry is being inserted.</param>
+            <param name="EDocumentService">The record representing the E-Document Service associated with the E-Document.</param>
+            <param name="EDocumentServiceStatus">The status of the E-Document Service at the time of log insertion.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Log Helper.InsertLog(E-Document,E-Document Service,Codeunit::System#Utilities#Temp Blob@,Enum::Microsoft#eServices#EDocument#E-Document Service Status):Integer">
+            <summary>
+            Inserts a log entry for the E-Document with a blob.
+            </summary>
+            <param name="EDocument">The record representing the E-Document for which the log entry is being inserted.</param>
+            <param name="EDocumentService">The record representing the E-Document Service associated with the E-Document.</param>
+            <param name="TempBlob">Temp blob codeunit instance representing document blob data.</param>
+            <param name="EDocumentServiceStatus">The status of the E-Document Service at the time of log insertion.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.Send(E-Document@,Codeunit::System#Utilities#Temp Blob@,Boolean@,HttpRequestMessage@,HttpResponseMessage@)">
+            <summary>
+            Use it to send an E-Document to external service.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempBlob">The tempblob that was created based on the E-Document format.</param>
+            <param name="IsAsync">Is sending the document is async.</param>
+            <remarks>If the E-Document is sent asynchronously, a background job will automatically get queued to fetch the response using GetResponse procedure.</remarks>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http request and response are populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.SendBatch(E-Document@,Codeunit::System#Utilities#Temp Blob@,Boolean@,HttpRequestMessage@,HttpResponseMessage@)">
+            <summary>
+            Use it to send a batch of E-Documents to external service.
+            </summary>
+            <param name="EDocuments">Set of E-Documents record.</param>
+            <param name="TempBlob">The tempblob that was created based on the E-Document format.</param>
+            <param name="IsAsync">Is sending the document is async.</param>
+            <remarks>If the E-Document is sent asynchronously, a background job will automatically get queued to fetch the response using GetResponse procedure.</remarks>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http request and response are populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetResponse(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            Use it to get response of async send request.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http response is populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetApproval(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            Use it to check if document is approved or rejected.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http response is populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.Cancel(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            Use it to send a cancel request for an E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http response is populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.ReceiveDocument(Codeunit::System#Utilities#Temp Blob@,HttpRequestMessage@,HttpResponseMessage@)">
+            <summary>
+            Use it to receive E-Document from external service.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempBlob">The tempblob that was created based on the E-Document format.</param>
+            <param name="IsAsync">Is sending the document is async.</param>
+            <remarks>If the E-Document is sent asynchronously, a background job will automatically get queued to fetch the response using GetResponse procedure.</remarks>
+            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
+            <remarks>If http response is populated, the response content and headers will be logged automatically to communication logs.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetDocumentCountInBatch(Codeunit::System#Utilities#Temp Blob@):Integer">
+            <summary>
+            Use it to define how many received documents in batch import.
+            </summary>
+            <param name="TempBlob">The tempblob that was received from the external service.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetIntegrationSetup(Integer@,Integer@)">
+            <summary>
+            Use it to define the integration setup of a service
+            </summary>
+            <param name="SetupPage">The E-Document integration page id.</param>
+            <param name="SetupTable">The E-Dcoument integration table id.</param>
+        </member>
+    </members>
+</doc>
