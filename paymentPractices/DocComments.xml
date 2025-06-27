@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>64977288-facd-4b48-aaaa-bb0e288edfb3</id>
+        <name>Payment Practices</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#Finance#Analysis#PaymentPracticeDataGenerator.GenerateData(Payment Practice Data@,Payment Practice Header)">
+            <summary>
+            Generates the data for the Payment Practice report from the source defined in the Header Type enum value.
+            </summary>
+            <param name="PaymentPracticeData">Generated data</param>
+            <param name="PaymentPracticeHeader">Header to generate data for.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#Analysis#PaymentPracticeLinesAggregator.PrepareLayout">
+            <summary>
+            Prepare the layout to be used for Payment Practice report that is suitable for the aggregation type of the header/lines.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#Analysis#PaymentPracticeLinesAggregator.GenerateLines(Payment Practice Data@,Payment Practice Header)">
+            <summary>
+            Generate the lines for the Payment Practice report based on the Payment Practice Data raw data and Payment Practice Header fields.
+            </summary>
+            <param name="PaymentPracticeData">Raw data generated with DataGenerator, based on header type.</param>
+            <param name="PaymentPracticeHeader">The document to link lines to and take configuration from.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#Analysis#PaymentPracticeLinesAggregator.ValidateHeader(Payment Practice Header@)">
+            <summary>
+            Validate if the Payment Practice Header is suitable for the aggregation type of the header/lines.
+            </summary>
+            <param name="PaymentPracticeHeader">The document header that needs checking.</param>
+        </member>
+    </members>
+</doc>

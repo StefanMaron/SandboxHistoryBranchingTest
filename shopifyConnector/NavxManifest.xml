@@ -1,0 +1,25 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="ec255f57-31d0-4ca2-b751-f2fa7c745abb" Name="Shopify Connector" Publisher="Microsoft" Brief="Seamless connection between Shopify and Dynamics 365 Business Central will synchronize order, stock, and customer information to ensure that merchants can fulfill orders faster and better serve their customers." Description="Connecting Dynamics 365 Business Central with Shopify will help merchants implement more agile online business processes, while keeping people focused on selling. With support for multitier pricing structures and multiple currencies, companies, and entities, Business Central will support multiple Shopify store scenarios with ease. By connecting Shopify and Business Central, you will improve visibility into stock, pricing, existing customers and order history, order status, billing, and payments." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2179727" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2179727" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="30100" MaxObjectId="30370" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="32f586f0-69fd-41bb-8e97-98c869856360" Name="Shopify Connector Test" Publisher="Microsoft" />
+    <Module Id="96da1317-c2e8-42ec-aa19-216e33d0da19" Name="Scaptify" Publisher="Scapta" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+    <Feature>NOIMPLICITWITH</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T00:56:13.5178538Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>

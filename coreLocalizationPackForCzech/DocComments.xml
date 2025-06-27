@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>267b59d3-7302-44c5-ba77-c87000380514</id>
+        <name>Core Localization Pack for Czech</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#VAT Control Report Export CZL.ExportToXMLFile(VAT Ctrl# Report Header CZL):Text">
+            <summary>
+            Export VAT Control Report to XML file.
+            </summary>
+            <param name="VATCtrlReportHeaderCZL">Record "VAT Ctrl. Report Header CZL" which will be exported.</param>
+            <returns>Exported file name.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#VAT Control Report Export CZL.ExportToXMLBlob(VAT Ctrl# Report Header CZL,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Export VAT Control Report to TempBlob.
+            </summary>
+            <param name="VATCtrlReportHeaderCZL">Record "VAT Ctrl. Report Header CZL" which will be exported.</param>
+            <param name="TempBlob">Pointer of type Codeunit "Temp Blob" into which the XML export output is filled.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#VAT Statement Export CZL.ExportToXMLFile(VAT Statement Name):Text">
+            <summary>
+            Export VAT Statement to XML file.
+            </summary>
+            <param name="VATStatementName">Record "VAT Statement Name" which will be calculated and exported.</param>
+            <returns>Exported file name.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#VAT Statement Export CZL.ExportToXMLBlob(VAT Statement Name,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Export VAT Statement to TempBlob.
+            </summary>
+            <param name="VATStatementName">Record "VAT Statement Name" which will be calculated and exported.</param>
+            <param name="TempBlob">Pointer of type Codeunit "Temp Blob" into which the XML export output is filled.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#VAT#Reporting#VAT Statement Export CZL.InitVATAttributes(Code[10])">
+            <summary>
+            Fill "VAT Attribute Code CZL" table with set of records for a specific XML Format.
+            </summary>
+            <param name="VATStatementTemplateName">VAT statement template name for which attributes are initialized.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#VAT#Conf# VAT Ent# Update Mgt# CZL.OnBeforeGuiAllowed(Boolean@,Boolean@)">
+            <summary>
+            Raises an event to be able to change the return of IsGuiAllowed function. Used for testing.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#EET Cash Register CZL.GetCashRegisterName(Code[20]):Text[100]">
+            <summary>
+            Returns the cash register name.
+            </summary>
+            <param name="CashRegisterNo">Cash register number.</param>
+            <returns>Cash register name.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#EET Cash Register CZL.LookupCashRegisterNo(Code[20]@):Boolean">
+            <summary>
+            Show the lookup page of cash registers for cash register no. field.
+            </summary>
+            <param name="CashRegisterNo">Cash register number</param>
+            <returns>True if the lookup page confirmed choice.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Finance#EET Cash Register CZL.ShowDocument(Code[20],Code[20])">
+            <summary>
+            Show the page of document of cash register.
+            </summary>
+            <param name="CashRegisterNo">Cash register number</param>
+            <param name="DocumentNo">Document number</param>
+        </member>
+    </members>
+</doc>

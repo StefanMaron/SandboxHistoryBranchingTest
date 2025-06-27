@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>d6636d6f-155e-4490-9979-ec323a6b7c81</id>
+        <name>Advance Payments Localization for Czech</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::Microsoft#Finance#AdvancePayments#Get Last G/L Entry No# CZZ">
+            <summary>
+            If an automatic inventory adjustment takes place during the sale/purchase posting then the counter (NextEntryNo) in codeunit 12 is not updated. 
+            This codeunit ensures that the last g/l entry number is obtained before the posting starts.
+            </summary>
+        </member>
+    </members>
+</doc>

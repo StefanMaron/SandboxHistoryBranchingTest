@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Banking Documents Localization for Czech" ControlGUID="{fd516454-ce92-4513-8c46-44f0c02b0727}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31257" DepartmentCategory="History" RunObjectSrcTable="31254" ControlGUID="{bfe4d606-e624-46e8-a3f1-828f0c8e51e6}" Name="Iss. Bank Statements CZB" CaptionML="CSY=Vydané bankovní výpisy;ENU=Issued Bank Statements" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1667797560 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1667797560 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31261" DepartmentCategory="Lists" RunObjectSrcTable="31256" ControlGUID="{c907bcfd-93e3-4186-ad0c-5cdaa9b744ea}" Name="Payment Orders CZB" CaptionML="CSY=Platební příkazy;ENU=Payment Orders" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2313358256 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2313358256 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31240" DepartmentCategory="Lists" RunObjectSrcTable="31250" ControlGUID="{5c0a317e-15b6-4c27-b052-d76974839a8e}" Name="Search Rule List CZB" CaptionML="CSY=Pravidla hledání;ENU=Search Rules" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4203843427 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4203843427 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31265" DepartmentCategory="History" RunObjectSrcTable="31258" ControlGUID="{5926e396-867a-40fe-bf7e-2976a7b1a479}" Name="Iss. Payment Orders CZB" CaptionML="CSY=Vydané platební příkazy;ENU=Issued Payment Orders" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3020756237 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3020756237 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31256" DepartmentCategory="Lists" RunObjectSrcTable="31253" ControlGUID="{934ae533-ba04-4f50-82f1-0a581d4e5088}" Name="Bank Statement Lines CZB" CaptionML="CSY=Řádky bankovního výpisu;ENU=Bank Statement Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3392398863 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3392398863 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31260" DepartmentCategory="History" RunObjectSrcTable="31255" ControlGUID="{3add95b0-3581-4bba-b3af-5fa256ebe560}" Name="Iss. Bank Statement Lines CZB" CaptionML="CSY=Řádky vydaného bankovního výpisu;ENU=Issued Bank Statement Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3836292078 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3836292078 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31264" DepartmentCategory="Lists" RunObjectSrcTable="31257" ControlGUID="{0ac0737e-1482-4fc6-a5d4-15191f7671d4}" Name="Payment Order Lines CZB" CaptionML="CSY=Řádky platebního příkazu;ENU=Payment Order Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 15803542 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 15803542 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31268" DepartmentCategory="History" RunObjectSrcTable="31259" ControlGUID="{529e6fac-b533-48c5-b514-d7eae5aeca7a}" Name="Iss. Payment Order Lines CZB" CaptionML="CSY=Řádky vydaného platebního příkazu;ENU=Issued Payment Order Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3141359231 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3141359231 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31253" DepartmentCategory="Lists" RunObjectSrcTable="31252" ControlGUID="{f4dfd308-fdcf-4967-afa2-2364dc70b107}" Name="Bank Statements CZB" CaptionML="CSY=Bankovní výpisy;ENU=Bank Statements" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1252050781 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1252050781 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="5237" TargetType="Page" />
+    <ActionChange TargetID="1200" TargetType="Page" />
+    <ActionChange TargetID="31198" TargetType="Page" />
+    <ActionChange TargetID="8901" TargetType="Page" />
+    <ActionChange TargetID="8900" TargetType="Page" />
+    <ActionChange TargetID="31210" TargetType="Page" />
+    <ActionChange TargetID="663" TargetType="Page" />
+    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
+    <ActionChange TargetID="119" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>

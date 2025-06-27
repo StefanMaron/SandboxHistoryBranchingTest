@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Compensation Localization for Czech" ControlGUID="{5be935e5-5caf-4010-b926-e9d2ddaa5a58}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31270" DepartmentCategory="Administration" RunObjectSrcTable="31270" ControlGUID="{5daa5c1e-e544-4607-987e-6ca2341222e8}" Name="Compensations Setup CZC" CaptionML="CSY=Nastavení zápočtů;ENU=Compensations Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3455657710 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3455657710 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31274" DepartmentCategory="Lists" RunObjectSrcTable="31272" ControlGUID="{a76480e0-f2b3-48c4-8a47-fad9a47b93e7}" Name="Compensation List CZC" CaptionML="CSY=Zápočty;ENU=Compensations" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2069854880 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2069854880 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31279" DepartmentCategory="History" RunObjectSrcTable="31274" ControlGUID="{776c7d89-e363-45b8-b095-dfb752ba7261}" Name="Posted Compensation List CZC" CaptionML="CSY=Účtované zápočty;ENU=Posted Compensations" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 312536327 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 312536327 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31275" DepartmentCategory="Lists" RunObjectSrcTable="31273" ControlGUID="{5230196b-4675-4563-8133-e80da8335d9c}" Name="Compensation Lines CZC" CaptionML="CSY=Řádky zápočtu;ENU=Compensation Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1705393029 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1705393029 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31193" DepartmentCategory="History" RunObjectSrcTable="31275" ControlGUID="{4dd4e341-5bdc-421a-93ad-7278616bf544}" Name="Posted Compensation Lines CZC" CaptionML="CSY=Řádek účtovaného zápočtu;ENU=Posted Compensation Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 804245894 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 804245894 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="31271" DepartmentCategory="Administration" RunObjectSrcTable="31271" ControlGUID="{0c1012c1-8bbc-4708-9023-3a626031a8e0}" Name="Compens. Report Selections CZC" CaptionML="CSY=Výběr sestav - zápočty;ENU=Report Selection - Compensation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4229655308 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4229655308 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+  <NavigationChanges>
+    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="31210" TargetType="Page" />
+    <ActionChange TargetID="279" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+  </NavigationChanges>
+</NavigationDefinition>
