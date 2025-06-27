@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Sales.Customer;
 
 using Microsoft.Service.Contract;
@@ -240,6 +244,7 @@ codeunit 6489 "Serv. Check Credit Limit"
     [EventSubscriber(ObjectType::Page, Page::"Check Credit Limit", 'OnCalcCreditLimitLCYOnAfterCalcAmounts', '', false, false)]
     local procedure OnCalcCreditLimitLCYOnAfterCalcAmounts(var Customer: Record Customer; var ShippedRetRcdNotIndLCY: Decimal; var CustCreditAmountLCY: Decimal)
     begin
+        Customer.CalcFields("Serv Shipped Not Invoiced(LCY)");
         ShippedRetRcdNotIndLCY += Customer."Serv Shipped Not Invoiced(LCY)";
         CustCreditAmountLCY += Customer."Serv Shipped Not Invoiced(LCY)";
     end;
