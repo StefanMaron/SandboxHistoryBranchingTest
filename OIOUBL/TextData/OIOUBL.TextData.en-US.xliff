@@ -729,12 +729,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension OIOUBL-Posted Service Cr Memo - Control OIOUBL-GLN - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3576717900 - Control 3001618318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4222048109">
-          <source>Specifies the customer's reference. This is used in the exported electronic document.</source>
-          <target>Specifies the customer's reference. This is used in the exported electronic document.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension OIOUBL-Posted Service Cr Memo - Control Your Reference - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="PageExtension 3576717900 - Control 3095583229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4222048109">
           <source>Specifies the role of the contact person at the customer. This is used in the exported electronic document.</source>
           <target>Specifies the role of the contact person at the customer. This is used in the exported electronic document.</target>
@@ -1011,12 +1005,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension OIOUBL-Service Credit Memo - Control OIOUBL-GLN - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4263100351 - Control 3001618318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2832910486">
-          <source>Specifies the customer's reference. This is used in the exported electronic document.</source>
-          <target>Specifies the customer's reference. This is used in the exported electronic document.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension OIOUBL-Service Credit Memo - Control Your Reference - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="PageExtension 4263100351 - Control 3095583229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2832910486">
           <source>Specifies the role of the contact person at the customer. This is used in the exported electronic document.</source>
           <target>Specifies the role of the contact person at the customer. This is used in the exported electronic document.</target>
@@ -1286,6 +1274,708 @@
           <target>Specifies the account code for the customer.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension OIOUBL-Customer Card - Control OIOUBL-Account Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1661391820 - Control 3959405189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Invoices - Control Main - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1661391820 - Control 816368762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</source>
+          <target>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Invoices - Control LogInteraction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1661391820 - Control 816368762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Interaction</source>
+          <target>Log Interaction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Invoices - Control LogInteraction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1661391820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Electronic Invoices</source>
+          <target>Create Electronic Invoices</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2023497663 - Control 18652612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create E-Fin Chrg Memos - Control  - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2023497663 - Control 816368762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</source>
+          <target>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create E-Fin Chrg Memos - Control LogInteraction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2023497663 - Control 816368762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Interaction</source>
+          <target>Log Interaction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create E-Fin Chrg Memos - Control LogInteraction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2023497663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Elec. Fin. Chrg. Memos</source>
+          <target>Create Elec. Fin. Chrg. Memos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create E-Fin Chrg Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2454303400 - Control 18652612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Cr. Memos - Control  - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2454303400 - Control 816368762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</source>
+          <target>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Cr. Memos - Control LogInteraction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2454303400 - Control 816368762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Interaction</source>
+          <target>Log Interaction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Cr. Memos - Control LogInteraction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2454303400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Electronic Credit Memos</source>
+          <target>Create Electronic Credit Memos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Cr. Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3108180649 - Control 18652612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Reminders - Control  - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3108180649 - Control 816368762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</source>
+          <target>Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Reminders - Control LogInteraction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3108180649 - Control 816368762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Interaction</source>
+          <target>Log Interaction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Reminders - Control LogInteraction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3108180649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Electronic Reminders</source>
+          <target>Create Electronic Reminders</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report OIOUBL-Create Elec. Reminders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362259864 - Field 3737215627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profile</source>
+          <target>Profile</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OIOUBL-Profile - Field OIOUBL-Profile ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3362259864 - Field 538163542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table OIOUBL-Profile - Field OIOUBL-Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1014637951 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3610197182">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1014637951 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3610197182">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1014637951 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3610197182">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1014637951 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3610197182">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 2779371529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Contact Fax No.</source>
+          <target>Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 3095252104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Contact Phone No.</source>
+          <target>Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 3392906730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Coontact E-Mail</source>
+          <target>Coontact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 3633465435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Elec. Fin. Charge Memo Created</source>
+          <target>Elec. Fin. Charge Memo Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Elec. Fin. Charge Memo Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 152500644 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2675224487">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChrgMemoHeader - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1801716184 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 1389960272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Reminder Path</source>
+          <target>Reminder Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field OIOUBL-Reminder Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 152881633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Cr. Memo Path</source>
+          <target>Cr. Memo Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field OIOUBL-Cr. Memo Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 3651937062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Default Profile Code</source>
+          <target>Default Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field OIOUBL-Default Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 4004248617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Fin. Chrg. Memo Path</source>
+          <target>Fin. Chrg. Memo Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field OIOUBL-Fin. Chrg. Memo Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 940671709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Invoice Path</source>
+          <target>Invoice Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field OIOUBL-Invoice Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2054303147 - Field 960185344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Document No. as External Doc. No.</source>
+          <target>Document No. as External Doc. No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales&amp;Receivables Setup - Field Document No. as Ext. Doc. No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 2171989557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Electronic Reminder Created</source>
+          <target>Electronic Reminder Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Electronic Reminder Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 2779371529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Contact Fax No.</source>
+          <target>Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 3095252104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Contact Phone No.</source>
+          <target>Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 3392906730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Contact E-Mail</source>
+          <target>Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2137679277 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1929467888">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2254828034 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4059857058">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Fin. Charge Memo Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 2301941973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Sell-to Contact Role</source>
+          <target>Sell-to Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-Sell-to Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 2615331202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Sell-to Contact E-Mail</source>
+          <target>Sell-to Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-Sell-to Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 897539873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Sell-to Contact Fax No.</source>
+          <target>Sell-to Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-Sell-to Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2435267110 - Field 979903104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Sell-to Contact Phone No.</source>
+          <target>Sell-to Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header Archive - Field OIOUBL-Sell-to Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2471236884 - Field 3952910319 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4148176377">
+          <source>Country/Region Code</source>
+          <target>Country/Region Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Country/Region - Field OIOUBL-Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522012900 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3471029625">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522012900 - Field 2728957782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3471029625">
+          <source>Electronic Credit Memo Created</source>
+          <target>Electronic Credit Memo Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Header - Field OIOUBL-Electronic Credit Memo Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522012900 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3471029625">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Header - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522012900 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3471029625">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522012900 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3471029625">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 2779371529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>Contact Fax No.</source>
+          <target>Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 3095252104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>Contact Phone No.</source>
+          <target>Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 3392906730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>Contact E-Mail</source>
+          <target>Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2766054287 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3952648489">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-FinChrgMemoHeader - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2870539612 - Field 447982215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3561154705">
+          <source>Currency Code</source>
+          <target>Currency Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Currency - Field OIOUBL-Currency Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2954038588 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3095261412 - Field 538163542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3197070065">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Payment Terms - Field OIOUBL-Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3249536815 - Field 1639690342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 297536702">
+          <source>Service Cr. Memo Path</source>
+          <target>Service Cr. Memo Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Mgt. Setup - Field OIOUBL-Service Cr. Memo Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3249536815 - Field 4186803522 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 297536702">
+          <source>Service Invoice Path</source>
+          <target>Service Invoice Path</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Mgt. Setup - Field OIOUBL-Service Invoice Path - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 2301941973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Sell-to Contact Role</source>
+          <target>Sell-to Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Sell-to Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 2615331202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Sell-to Contact E-Mail</source>
+          <target>Sell-to Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Sell-to Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 897539873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Sell-to Contact Fax No.</source>
+          <target>Sell-to Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Sell-to Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3274756772 - Field 979903104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Sell-to Contact Phone No.</source>
+          <target>Sell-to Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Header - Field OIOUBL-Sell-to Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3294164146 - Field 2042155141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4047643595">
+          <source>User ID</source>
+          <target>User ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Record Export Buffer - Field OIOUBL-User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3347141990 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 556460471">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Issued Reminder Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 2779371529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>Contact Fax No.</source>
+          <target>Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 3095252104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>Contact Phone No.</source>
+          <target>Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 3392906730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>Contact E-Mail</source>
+          <target>Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3541931442 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1837124963">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3544167776 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3117283677">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3544167776 - Field 1528802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3117283677">
+          <source>Electronic Invoice Created</source>
+          <target>Electronic Invoice Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Header - Field OIOUBL-Electronic Invoice Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3544167776 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3117283677">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Header - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3544167776 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3117283677">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3544167776 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3117283677">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3890267005 - Field 4067661428 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Profile Code Required</source>
+          <target>Profile Code Required</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Customer - Field OIOUBL-Profile Code Required - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3890267005 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Customer - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3890267005 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Customer - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3955044619 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3967370585 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2681651900">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Reminder Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 465752541 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Line Archive - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 2301941973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Sell-to Contact Role</source>
+          <target>Sell-to Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Sell-to Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 2615331202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Sell-to Contact E-Mail</source>
+          <target>Sell-to Contact E-Mail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Sell-to Contact E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 2728957782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Electronic Credit Memo Created</source>
+          <target>Electronic Credit Memo Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Electronic Credit Memo Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 897539873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Sell-to Contact Fax No.</source>
+          <target>Sell-to Contact Fax No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Sell-to Contact Fax No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 479262143 - Field 979903104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Sell-to Contact Phone No.</source>
+          <target>Sell-to Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Cr.Memo Header - Field OIOUBL-Sell-to Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 634830819 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Header - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 634830819 - Field 1528802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Electronic Invoice Created</source>
+          <target>Electronic Invoice Created</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Header - Field OIOUBL-Electronic Invoice Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 634830819 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Header - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 634830819 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Header - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 634830819 - Field 979903104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Sell-to Contact Phone No.</source>
+          <target>Sell-to Contact Phone No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Sales Invoice Header - Field OIOUBL-Sell-to Contact Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 702636924 - Field 1110520839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 151375497">
+          <source>Charge Category</source>
+          <target>Charge Category</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Item Charge - Field OIOUBL-Charge Category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 702636924 - Field 1110520839 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 151375497">
+          <source>"General Rebate","General Fine","Freight Charge",Duty,Tax</source>
+          <target>"General Rebate","General Fine","Freight Charge",Duty,Tax</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Item Charge - Field OIOUBL-Charge Category - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 714642311 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2228141878">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Invoice Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 725691770 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1824292819">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Line Archive - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 807753035 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3250149650">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Cr.Memo Line - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 80978112 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2682833765">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension tableextension20001 - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 892682385 - Field 1470516358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2797122556">
+          <source>GLN</source>
+          <target>GLN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header Archive - Field OIOUBL-GLN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 892682385 - Field 3095583229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2797122556">
+          <source>Contact Role</source>
+          <target>Contact Role</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header Archive - Field OIOUBL-Contact Role - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 892682385 - Field 491483755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2797122556">
+          <source>Profile Code</source>
+          <target>Profile Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header Archive - Field OIOUBL-Profile Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 892682385 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2797122556">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-Service Header Archive - Field OIOUBL-Account Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 9721095 - Field 698465781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3313652032">
+          <source>Account Code</source>
+          <target>Account Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension OIOUBL-IssuedFinChargeMemoLine - Field OIOUBL-Account Code - Property Caption</note>
         </trans-unit>
       </group>
     </body>
