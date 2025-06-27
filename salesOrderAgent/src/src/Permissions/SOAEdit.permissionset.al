@@ -4,7 +4,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Security.AccessControl;
 using System.Agents;
@@ -16,6 +17,8 @@ using Microsoft.Utilities;
 using System.Utilities;
 using Microsoft.Inventory.Item;
 using Microsoft.Inventory.Ledger;
+using Microsoft.Purchases.Vendor;
+using System.Diagnostics;
 using Microsoft.Inventory.Item.Attribute;
 using Microsoft.Inventory.Availability;
 using Microsoft.Sales.Comment;
@@ -29,11 +32,13 @@ permissionset 4405 "SOA - Edit"
     Caption = 'Sales Order Agent - Edit';
     Assignable = true;
     IncludedPermissionSets = "D365 Basic - Read",
+                             "D365 READ",
                              "D365 CUSTOMER, VIEW",
                              "D365 ITEM, VIEW",
                              "D365 ITEM AVAIL CALC",
                              "D365 SALES DOC, EDIT",
                              "D365 SALES DOC, POST",
+                             "LOCAL READ",
                              "SOA - Read";
 
     Permissions = tabledata "Agent Task Message" = r,
@@ -42,6 +47,7 @@ permissionset 4405 "SOA - Edit"
                   tabledata "Assembly Line" = IMD,
                   tabledata "Aggregate Permission Set" = imd,
                   tabledata "All Profile Page Metadata" = imd,
+                  tabledata "Change Log Entry" = i,
                   tabledata "Dimension Set Entry" = im,
                   tabledata "Dimension Set Tree Node" = im,
                   tabledata "Error Buffer" = IMD,
@@ -50,6 +56,7 @@ permissionset 4405 "SOA - Edit"
                   tabledata "Error Message Register" = IMD,
                   tabledata "My Customer" = IMD,
                   tabledata "My Item" = IMD,
+                  tabledata "My Vendor" = IMD,
                   tabledata "Item Amount" = IMD,
                   tabledata "Item Application Entry" = imd,
                   tabledata "Item Application Entry History" = imd,
