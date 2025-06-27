@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Performance Toolkit" ControlGUID="{9627ac0c-84c4-4763-8edc-88183204688b}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="149000" DepartmentCategory="Lists" RunObjectSrcTable="149000" ControlGUID="{d330c2e7-325e-4937-b3e4-18709181a324}" Name="BCPT Setup List" CaptionML="ENU=BCPT Suites" ApplicationArea="#All" AdditionalSearchTermsML="ENU=BCPT,Benchmark,Perf,Performance,Toolkit" CaptionTranslationKey="Page 494180900 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 494180900 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Performance Toolkit" ControlGUID="{7042cc80-0f00-4747-8789-91019d743279}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="149000" DepartmentCategory="Lists" RunObjectSrcTable="149000" ControlGUID="{312875ff-0ef3-4573-8452-301975e9d729}" Name="BCPT Setup List" CaptionML="ENU=BCPT Suites" ApplicationArea="#All" AdditionalSearchTermsML="ENU=BCPT,Benchmark,Perf,Performance,Toolkit" CaptionTranslationKey="Page 494180900 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 494180900 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>
