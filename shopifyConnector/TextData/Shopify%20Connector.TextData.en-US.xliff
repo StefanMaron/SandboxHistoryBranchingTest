@@ -1353,6 +1353,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Shop Card - Action Companies - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1970429680 - Action 3426456964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View a list of Shopify Sales Channels for the shop and choose ones used for new product publishing.</source>
+          <target>View a list of Shopify Sales Channels for the shop and choose ones used for new product publishing.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Shop Card - Action SalesChannels - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1970429680 - Action 3426456964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Channels</source>
+          <target>Sales Channels</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Shop Card - Action SalesChannels - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1970429680 - Action 3435539207 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View your Shopify agreements with customers to sell certain products on certain delivery and payment terms.</source>
           <target>View your Shopify agreements with customers to sell certain products on certain delivery and payment terms.</target>
@@ -3265,6 +3277,24 @@
           <target>Shopify Fulfillments</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Order Fulfillments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 263614744 - Action 3844042626 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retrieves the sales channels from Shopify.</source>
+          <target>Retrieves the sales channels from Shopify.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Sales Channels - Action GetSalesChannels - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 263614744 - Action 3844042626 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get Sales Channels</source>
+          <target>Get Sales Channels</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Sales Channels - Action GetSalesChannels - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 263614744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shopify Sales Channels</source>
+          <target>Shopify Sales Channels</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Sales Channels - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 275840071 - Control 1794311696 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the value of the Evidence Due By field.</source>
@@ -7631,6 +7661,36 @@
           <target>Specifies the order number from Shopify</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Shpfy Post. Sal. Inv. Subform - Control ShpfyOrderNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2513865537 - Field 1383905037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the sales channel is the default one. Used for new products publication if no other channel is selected</source>
+          <target>Specifies if the sales channel is the default one. Used for new products publication if no other channel is selected</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Sales Channel - Field Default - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2513865537 - Field 1669136979 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code of the shop.</source>
+          <target>Specifies the code of the shop.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Sales Channel - Field Shop Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2513865537 - Field 2238547280 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the sales channel is used for new products publication.</source>
+          <target>Specifies if the sales channel is used for new products publication.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Sales Channel - Field Use for publication - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2513865537 - Field 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the sales channel.</source>
+          <target>Specifies the name of the sales channel.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Sales Channel - Field Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 2513865537 - Field 415504711 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique identifier of the sales channel.</source>
+          <target>Specifies the unique identifier of the sales channel.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Sales Channel - Field Id - Property ToolTip</note>
         </trans-unit>
       </group>
     </body>
