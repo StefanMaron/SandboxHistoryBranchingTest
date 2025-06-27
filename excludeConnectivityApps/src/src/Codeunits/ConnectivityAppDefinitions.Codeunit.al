@@ -274,7 +274,7 @@ codeunit 20352 "Connectivity App Definitions"
         AppApprovedFor: Text;
     begin
         /***************************************************
-            Add app 'Bankfeed - Bank Statement Import & Reconciliation' to LT, DK, HU, GB, ES, LV, DE, RO
+            Add app 'Bankfeed - Bank Statement Import & Reconciliation' to LT, DK, HU, GB, ES, LV, DE, RO, IE, US
         ***************************************************/
 
         AppId := '74689c09-2ed3-4e69-a2e8-c9310a271b9a';
@@ -283,8 +283,8 @@ codeunit 20352 "Connectivity App Definitions"
         AppDescription := 'Bank statement import & reconciliation.';
         AppProviderSupportURL := 'https://bankfeed.com/banks/';
         AppSourceUrl := 'https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.softera_baltic%7CAID.softeradokubank%7CPAPPID.74689c09-2ed3-4e69-a2e8-c9310a271b9a';
-        AppApprovedFor := 'LT,DK,HU,GB,ES,LV,DE,RO';
-        AppWorksOn := 'W1,DK,GB,ES,DE';
+        AppApprovedFor := 'LT,DK,HU,GB,ES,LV,DE,RO,IE,US';
+        AppWorksOn := 'W1,DK,GB,ES,DE,US';
 
         AddDescriptionTranslation(AppId, 'Banko išrašo importas ir suderinimas.', 1063);
         AddDescriptionTranslation(AppId, 'Kontoudtog import & afstemning.', 1030);
@@ -337,7 +337,7 @@ codeunit 20352 "Connectivity App Definitions"
         AppApprovedFor: Text;
     begin
         /***************************************************
-            Add app 'Yavrio Open Banking' to GB
+            Add app 'Yavrio Open Banking' to GB, US
         ***************************************************/
 
         AppId := '3d686c04-e1b1-435e-bea4-862c2c203ca7';
@@ -346,8 +346,8 @@ codeunit 20352 "Connectivity App Definitions"
         AppDescription := 'Yavrio Open Banking uses industry-standard Open Banking technology to connect directly with your Bank Accounts. Using bank-grade security, you can draw down live feeds directly into Business Central, with no files required, and push payments directly from BC onto the Bank.';
         AppProviderSupportURL := 'https://yavr.io/bank-coverage/';
         AppSourceUrl := 'https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.yavrioltd1647526263468%7CAID.yavrio_open_banking%7CPAPPID.3d686c04-e1b1-435e-bea4-862c2c203ca7';
-        AppApprovedFor := 'GB';
-        AppWorksOn := 'GB';
+        AppApprovedFor := 'GB,US';
+        AppWorksOn := 'GB,US';
 
         RegisterApp(AppId, AppName, AppPublisher, AppDescription, AppProviderSupportURL, AppSourceURL, AppApprovedFor, AppWorksOn, "Connectivity Apps Category"::Banking);
     end;

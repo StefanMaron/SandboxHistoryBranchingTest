@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="57623bfa-0559-4bc2-ae1c-0979c29fc8d1" Name="Business Central Cloud Migration API" Publisher="Microsoft" Brief="This extension can help you set up and manage migration to Business Central online through an API." Description="This extension can help you set up and manage migration to Business Central online through an API. Use automation to manage the cloud migration end-to-end without using UI." Version="24.5.23489.35993" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009036" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="57623bfa-0559-4bc2-ae1c-0979c29fc8d1" Name="Business Central Cloud Migration API" Publisher="Microsoft" Brief="This extension can help you set up and manage migration to Business Central online through an API." Description="This extension can help you set up and manage migration to Business Central online through an API. Use automation to manage the cloud migration end-to-end without using UI." Version="25.0.23364.35903" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009036" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="24.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:10:18.7064888Z" CompilerVersion="13.1.23.59381" />
+  <Build Timestamp="2025-06-25T20:03:29.4189456Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>

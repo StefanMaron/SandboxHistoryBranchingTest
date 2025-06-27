@@ -1,6 +1,5 @@
 namespace Microsoft.CashFlow.Setup;
 
-using System;
 using System.AI;
 using System.Privacy;
 
@@ -46,11 +45,6 @@ page 846 "Cash Flow Setup"
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the sales order account number that is used in cash flow forecasts.';
-                }
-                field("Service CF Account No."; Rec."Service CF Account No.")
-                {
-                    ApplicationArea = Service;
-                    ToolTip = 'Specifies the service account number that is used in cash flow forecasts.';
                 }
                 field("Purch. Order CF Account No."; Rec."Purch. Order CF Account No.")
                 {
@@ -172,15 +166,12 @@ page 846 "Cash Flow Setup"
                     trigger OnValidate();
                     var
                         CustomerConsentMgt: Codeunit "Customer Consent Mgt.";
-                        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-                        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-                        MyALAuditCategory: DotNet ALAuditCategory;
                         CashFlowForecastConsentProvidedLbl: Label 'Cash Flow Forecast feature, Azure AI - consent provided by UserSecurityId %1.', Locked = true;
                     begin
                         if not xRec."Azure AI Enabled" and Rec."Azure AI Enabled" then
                             Rec."Azure AI Enabled" := CustomerConsentMgt.ConsentToMicrosoftServiceWithAI();
                         if Rec."Azure AI Enabled" then
-                            MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(CashFlowForecastConsentProvidedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 4, 0);
+                            Session.LogAuditMessage(StrSubstNo(CashFlowForecastConsentProvidedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 4, 0);
 
                     end;
                 }
