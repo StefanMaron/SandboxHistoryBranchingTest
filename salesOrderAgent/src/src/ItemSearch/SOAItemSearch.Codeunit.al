@@ -2,9 +2,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
-namespace Agent.SalesOrderAgent.ItemSearch;
 
-using Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
+
 using Microsoft.Inventory.Availability;
 using Microsoft.Inventory.Item;
 using Microsoft.Sales.Document;
@@ -147,20 +148,24 @@ codeunit 4591 "SOA Item Search"
 
     [EventSubscriber(ObjectType::Page, Page::"Item List", 'OnBeforeFindRecord', '', false, false)]
     local procedure FindRecordItemFromList(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; var IsHandled: Boolean)
+    var
+        MatchingItem: Boolean;
     begin
-        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, 0, IsHandled, false);
+        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, 0, IsHandled, false, MatchingItem);
     end;
 
     [EventSubscriber(ObjectType::Page, Page::"Item Lookup", 'OnBeforeFindRecord', '', false, false)]
     local procedure FindRecordItemFromLookup(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; var IsHandled: Boolean)
+    var
+        MatchingItem: Boolean;
     begin
-        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, 0, IsHandled, false);
+        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, 0, IsHandled, false, MatchingItem);
     end;
 
     [EventSubscriber(ObjectType::Page, Page::"SOA Multi Items Availability", 'OnBeforeFindRecord', '', false, false)]
-    local procedure FindRecordItemFromMultiItemsAvailability(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean)
+    local procedure FindRecordItemFromMultiItemsAvailability(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean; var MatchingItem: Boolean)
     begin
-        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, RequiredQuantity, IsHandled, true);
+        FindRecordItem(Rec, Which, CrossColumnSearchFilter, Found, RequiredQuantity, IsHandled, true, MatchingItem);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Sales Line", 'OnAfterCheckItemAvailable', '', false, false)]
@@ -171,6 +176,9 @@ codeunit 4591 "SOA Item Search"
         NotificationLifecycleMgt: Codeunit "Notification Lifecycle Mgt.";
         QuoteAvailabilityCheckNotification: Notification;
     begin
+        if SalesLine.IsTemporary() then
+            exit;
+
         if (SalesLine."Document Type" = SalesLine."Document Type"::Quote) and (SalesLine.Type = SalesLine.Type::Item) and (SalesLine."No." <> '') then
             if SOASetup.FindFirst() and SOASetup."Search Only Available Items" and Item.Get(SalesLine."No.") then begin
                 Item.SetRange("Drop Shipment Filter", false);
@@ -193,47 +201,40 @@ codeunit 4591 "SOA Item Search"
         exit('61dfb790-bf0c-47be-b95c-8e51afecd066');
     end;
 
-    local procedure FindRecordItem(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean; CheckAvalibility: Boolean)
+    local procedure FindRecordItem(var Rec: Record Item; Which: Text; var CrossColumnSearchFilter: Text; var Found: Boolean; RequiredQuantity: Decimal; var IsHandled: Boolean; CheckAvailability: Boolean; var MatchingItem: Boolean)
     var
         SOASetup: Record "SOA Setup";
         Item: Record Item;
         BroaderItemSearch: Codeunit "SOA Broader Item Search";
-        SearchKeyWords: List of [Text];
         SearchKeyWordsTrimmed: List of [Text];
         SearchFilter: Text;
-        SplitedSearchKeywords: Text;
-        SearchKeyword: Text;
+        SplitSearchKeywords: Text;
         ItemFilter: Text;
         TrimmedItemFilter: Text;
-        KeyWord: Text;
         OriginalFilterGroup: Integer;
         ItemSystemId: Guid;
     begin
+        MatchingItem := true;
         OriginalFilterGroup := Rec.FilterGroup();
         Rec.FilterGroup(-1);
         SearchFilter := Rec.GetFilter("No."); //Get current search filter
         Rec.FilterGroup(OriginalFilterGroup);
 
-        if SearchFilter = CrossColumnSearchFilter then //If the search filter is the same as the last one, then we don't need to search again
+        if (SearchFilter = CrossColumnSearchFilter) or (SearchFilter = '=''<>*''') then //If the search filter is the same as the last one, or empty filter then we don't need to search
             exit;
         CrossColumnSearchFilter := SearchFilter;
 
-        SearchKeyWords := SearchFilter.Split('&&'); //Split and trim the search keywords
-        foreach KeyWord in SearchKeyWords do begin
-            SearchKeyword := KeyWord.TrimStart('&').TrimEnd('*').Trim();
-            if SearchKeyword <> '' then
-                SearchKeyWordsTrimmed.Add(SearchKeyword);
-            if SearchKeyword <> '' then
-                SplitedSearchKeywords += SearchKeyword + ',';
-        end;
+        ExtractSearchKeyWords(SearchFilter, SplitSearchKeywords, SearchKeyWordsTrimmed);
 
         if SearchKeyWordsTrimmed.Count() = 0 then
             exit;
         if not GetItemFilters(ItemFilter, SearchKeyWordsTrimmed) then   //Search for the items using the entity search
             exit;
 
-        if (ItemFilter = '') and (SplitedSearchKeywords <> '') then
-            BroaderItemSearch.BroaderItemSearch(ItemFilter, SplitedSearchKeywords.TrimEnd(','));
+        if (ItemFilter = '') and (SplitSearchKeywords <> '') then begin
+            BroaderItemSearch.BroaderItemSearch(ItemFilter, SplitSearchKeywords.TrimEnd(','));
+            MatchingItem := false;
+        end;
 
         if SOASetup.FindFirst() then
             if ItemFilter <> '' then begin
@@ -241,7 +242,7 @@ codeunit 4591 "SOA Item Search"
                     if Item.GetBySystemId(ItemSystemId) then
                         Item.CopyFilters(Rec);
 
-                    if SOASetup."Search Only Available Items" and CheckAvalibility then begin
+                    if SOASetup."Search Only Available Items" and CheckAvailability then begin
                         if IsRequiredQuantityAvailable(Item, RequiredQuantity) then
                             TrimmedItemFilter += ItemSystemId + '|'
                     end else
@@ -266,6 +267,34 @@ codeunit 4591 "SOA Item Search"
             Found := Rec.Find(Which);
         end;
         IsHandled := true;
+    end;
+
+    local procedure ExtractSearchKeyWords(SearchFilter: Text; var SplitSearchKeywords: Text; var SearchKeyWordsTrimmed: List of [Text])
+    var
+        SearchKeyWord, KeyWord : Text;
+        SearchKeyWords: List of [Text];
+    begin
+        if SearchFilter.StartsWith('&&') then begin // Modern search filter
+            SearchKeyWords := SearchFilter.Split('&&');
+            foreach KeyWord in SearchKeyWords do begin
+                SearchKeyword := KeyWord.TrimStart('&').TrimEnd('*').Trim();
+                if SearchKeyword <> '' then begin
+                    SearchKeyWordsTrimmed.Add(SearchKeyword);
+                    SplitSearchKeywords += SearchKeyword + ',';
+                end;
+            end;
+        end
+        else
+            if SearchFilter.StartsWith('@*') then begin // Legacy search filter
+                SearchKeyWords := SearchFilter.Split(' ');
+                foreach KeyWord in SearchKeyWords do begin
+                    SearchKeyword := KeyWord.TrimStart('@*').TrimEnd('*').Trim();
+                    if SearchKeyword <> '' then begin
+                        SearchKeyWordsTrimmed.Add(SearchKeyword);
+                        SplitSearchKeywords += SearchKeyword + ',';
+                    end;
+                end;
+            end;
     end;
 
     local procedure IsRequiredQuantityAvailable(var Item: Record Item; RequiredQuantity: Decimal): Boolean

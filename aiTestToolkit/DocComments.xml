@@ -4,7 +4,7 @@
         <id>2156302a-872f-4568-be0b-60968696f0d5</id>
         <name>AI Test Toolkit</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35974</version>
+        <version>26.0.30643.35936</version>
     </application>
     <members>
         <member name="O:Codeunit::System#TestTools#AITestToolkit#AIT Test Context">
@@ -214,6 +214,24 @@
             <summary>
             Gets the Test Method Line stored through the SetAITTestMethodLine method.
             </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT AL Test Suite Mgt.ImportTestInputs(Text,InStream@)">
+            <summary>
+            Import the Test Input Dataset from an InStream of a dataset in a supported format.
+            Overwrite the dataset if the dataset with same filename is already imported by the same app
+            Error if the dataset with the same filename is created by a different app
+            </summary>
+            <param name="DatasetFileName">The file name of the dataset file which will be used in the description of the dataset.</param>
+            <param name="DatasetInStream">The InStream of the dataset file.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT AL Test Suite Mgt.ImportAITestSuite(InStream@)">
+            <summary>
+            Import the AI Test Suite using InStream of the XML file. Use this to import XML from resource files during installation of the test app.
+            Skip if the same suite is already imported by the same app
+            Error if the same suite is already imported with a different XML
+            Error if the same suite is already imported by a different app
+            </summary>
+            <param name="XMLSetupInStream">The InStream of the test suite XML file.</param>
         </member>
         <member name="O:Enum::System#TestTools#AITestToolkit#AIT Line Status">
             <summary>
