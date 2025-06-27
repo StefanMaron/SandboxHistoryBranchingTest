@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>e6328152-bb29-4664-9dae-3bc7eaae1fd8</id>
+        <name>Email - Outlook REST API</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::System#Email#Email - OAuth Client.GetAccessToken(Text@)">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email - OAuth Client.GetAccessToken(SecretText@)">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account</param>
+        </member>
+        <member name="M:Interface::System#Email#Email - OAuth Client.GetAccessToken(Text@)">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API.
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account.</param>
+            <error>Could not get access token.</error>
+        </member>
+        <member name="M:Interface::System#Email#Email - OAuth Client.TryGetAccessToken(Text@):Boolean">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API.
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account.</param>
+            <returns>True, if the access token was acquired successfully, false otherwise.</returns>
+        </member>
+        <member name="M:Interface::System#Email#Email - OAuth Client v2.GetAccessToken(SecretText@)">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API.
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account.</param>
+            <error>Could not get access token.</error>
+        </member>
+        <member name="M:Interface::System#Email#Email - OAuth Client v2.TryGetAccessToken(SecretText@):Boolean">
+            <summary>
+            Retrieves the Access token for the current user to connect to Outlook API.
+            </summary>
+            <param name="AccessToken">Out parameter with the Access token of the account.</param>
+            <returns>True, if the access token was acquired successfully, false otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::System#Email#Email - Outlook API Client.SendEmail(Text,JsonObject)">
+            <summary>
+            Send email using Outlook API. If the message json parameter &lt;= 4 mb and wrapped in a message object it is sent in a single request, otherwise it is sent it in multiple requests.
+            </summary>
+            <error>User is external and cannot authenticate to the exchange server.</error>
+            <param name="AccessToken">Access token of the account.</param>
+            <param name="MessageJson">The JSON representing the email message.</param>
+        </member>
+        <member name="M:Codeunit::System#Email#Email - Outlook API Client.SendEmail(SecretText,JsonObject)">
+            <summary>
+            Send email using Outlook API. If the message json parameter &lt;= 4 mb and wrapped in a message object it is sent in a single request, otherwise it is sent it in multiple requests.
+            </summary>
+            <error>User is external and cannot authenticate to the exchange server.</error>
+            <param name="AccessToken">Access token of the account.</param>
+            <param name="MessageJson">The JSON representing the email message.</param>
+        </member>
+    </members>
+</doc>
