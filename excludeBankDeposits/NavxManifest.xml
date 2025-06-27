@@ -1,0 +1,23 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="7a129d06-5fd6-4fb6-b82b-0bf539c779d0" Name="_Exclude_Bank Deposits" Publisher="Microsoft" Brief="_Exclude_Bank Deposits" Description="_Exclude_Bank Deposits" Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2182906" Help="https://go.microsoft.com/fwlink/?linkid=2206176" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2134520" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="1" MaxObjectId="10150" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="55456f47-e1bc-4ed6-98a0-8336de116d00" Name="_Exclude_Bank Deposits Tests" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:03:56.6198818Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
