@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.3.28755.35989</version>
+        <version>25.4.29661.35902</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -515,6 +515,32 @@
             <param name="CSVInStream">The stream from which to read data.</param>
             <param name="CSVFieldSeparator">The character to use to split the values.</param>
         </member>
+        <member name="M:Table::System#IO#CSV Buffer.LoadDataFromStream(InStream,Text[1],Integer)">
+            <summary>
+            Loads data from a stream.
+            </summary>
+            <param name="CSVInStream">Instream from which to read data.</param>
+            <param name="CSVFieldSeparator">The character to use to split the values.</param>
+            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
+        </member>
+        <member name="M:Table::System#IO#CSV Buffer.LoadDataFromStream(InStream,Text[1],Text,Integer)">
+            <summary>
+            Loads data from a stream.
+            </summary>
+            <param name="CSVInStream">Instream from which to read data.</param>
+            <param name="CSVFieldSeparator">The character to use to split the values.</param>
+            <param name="CSVCharactersToTrim">Characters to trim from the beginning and the end of the read values.</param>
+            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
+        </member>
+        <member name="M:Table::System#IO#CSV Buffer.InitializeReaderFromStream(InStream,Text[1],Text,Integer)">
+            <summary>
+            Initializes the CSV buffer.
+            </summary>
+            <param name="CSVInStream">The stream from which to read data.</param>
+            <param name="CSVFieldSeparator">The character to use to split the values.</param>
+            <param name="CSVCharactersToTrim">Characters to trim from the beginning and the end of the read values.</param>
+            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
+        </member>
         <member name="M:Table::System#IO#CSV Buffer.ReadLines(Integer):Boolean">
             <summary>
             Populated the CSV buffer with entries.
@@ -889,6 +915,12 @@
             Get all Onboarding Signals with Read access
             </summary>
             <param name="OnboardingSignalBuffer"> The variable holds all the onboarding signals </param>
+        </member>
+        <member name="M:Codeunit::System#Feedback#Onboarding Signal.CreateFilterForValidEnum:Text">
+            <summary>
+            Create a filter for all valid Enum Onboarding Signal Types.
+            This is needed to filter out Enum values that no longer exist in the current runtime (e.g. extensions that are uninstalled).
+            </summary>
         </member>
         <member name="M:Interface::System#Feedback#Onboarding Signal.IsOnboarded:Boolean">
             <summary>
