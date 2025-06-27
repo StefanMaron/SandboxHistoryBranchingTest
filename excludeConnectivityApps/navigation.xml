@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="_Exclude_Connectivity Apps" ControlGUID="{569a531f-bbfb-4463-8ae4-f6d41b951eee}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20353" DepartmentCategory="Lists" RunObjectSrcTable="20350" ControlGUID="{517d23e6-446f-4474-9857-bfddb890dac6}" Name="Banking Apps" CaptionML="CSY=Bankovní aplikace;DAN=Bankapps;DEA=Banking-Apps;DES=Banking-Apps;DEU=Banking-Apps;ENA=Banking Apps;ENC=Banking Apps;ENG=Banking Apps;ENU=Banking Apps;ENZ=Banking Apps;ESM=Aplicaciones bancarias;ESN=Aplicaciones bancarias;FIN=Pankkisovellukset;FRA=Applications bancaires;FRB=Applications bancaires;FRC=Applications bancaires;FRS=Applications bancaires;ISL=Bankaforrit;ITA=Apps bancarie;ITS=Apps bancarie;NLB=Bank-apps;NLD=Bank-apps;NOR=Bankapper;RUS=Банковские приложения;SVE=Bankappar" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1191328584 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1191328584 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20350" DepartmentCategory="Lists" RunObjectSrcTable="20350" ControlGUID="{d816a4cd-a3be-4f41-ab38-6bca0cc4d6a7}" Name="Connectivity Apps" CaptionML="CSY=Aplikace pro připojení;DAN=Tilslutningsapps;DEA=Konnektivitäts-Apps;DES=Konnektivitäts-Apps;DEU=Konnektivitäts-Apps;ENA=Connectivity Apps;ENC=Connectivity Apps;ENG=Connectivity Apps;ENU=Connectivity Apps;ENZ=Connectivity Apps;ESM=Aplicaciones de conectividad;ESN=Aplicaciones de conectividad;FIN=Yhteyssovellukset;FRA=Applications de connectivité;FRB=Applications de connectivité;FRC=Applications de connectivité;FRS=Applications de connectivité;ISL=Tengiforrit;ITA=App di connettività;ITS=App di connettività;NLB=Connectiviteits-apps;NLD=Connectiviteits-apps;NOR=Tilkoblingsapper;RUS=Приложения для подключения к внешним службам;SVE=Anslutningsappar" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3645885185 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3645885185 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="_Exclude_Connectivity Apps" ControlGUID="{9faa06ef-d0c9-4fd1-8378-2955836ddbda}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20353" DepartmentCategory="Lists" RunObjectSrcTable="20350" ControlGUID="{b148407b-2508-420e-a0fa-45e5e80b0c13}" Name="Banking Apps" CaptionML="CSY=Bankovní aplikace;DAN=Bankapps;DEA=Banking-Apps;DES=Banking-Apps;DEU=Banking-Apps;ENA=Banking Apps;ENC=Banking Apps;ENG=Banking Apps;ENU=Banking Apps;ENZ=Banking Apps;ESM=Aplicaciones bancarias;ESN=Aplicaciones bancarias;FIN=Pankkisovellukset;FRA=Applications bancaires;FRB=Applications bancaires;FRC=Applications bancaires;FRS=Applications bancaires;ISL=Bankaforrit;ITA=Apps bancarie;ITS=Apps bancarie;NLB=Bank-apps;NLD=Bank-apps;NOR=Bankapper;RUS=Банковские приложения;SVE=Bankappar" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1191328584 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1191328584 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20350" DepartmentCategory="Lists" RunObjectSrcTable="20350" ControlGUID="{3c7b2ee5-382f-4fd9-bf44-dc5be1a969fe}" Name="Connectivity Apps" CaptionML="CSY=Aplikace pro připojení;DAN=Tilslutningsapps;DEA=Konnektivitäts-Apps;DES=Konnektivitäts-Apps;DEU=Konnektivitäts-Apps;ENA=Connectivity Apps;ENC=Connectivity Apps;ENG=Connectivity Apps;ENU=Connectivity Apps;ENZ=Connectivity Apps;ESM=Aplicaciones de conectividad;ESN=Aplicaciones de conectividad;FIN=Yhteyssovellukset;FRA=Applications de connectivité;FRB=Applications de connectivité;FRC=Applications de connectivité;FRS=Applications de connectivité;ISL=Tengiforrit;ITA=App di connettività;ITS=App di connettività;NLB=Connectiviteits-apps;NLD=Connectiviteits-apps;NOR=Tilkoblingsapper;RUS=Приложения для подключения к внешним службам;SVE=Anslutningsappar" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3645885185 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3645885185 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="370" TargetType="Page" />
-    <ActionChange TargetID="371" TargetType="Page" />
-    <ActionChange TargetID="1440" TargetType="Page" />
     <ActionChange TargetID="379" TargetType="Page" />
+    <ActionChange TargetID="2500" TargetType="Page" />
+    <ActionChange TargetID="371" TargetType="Page" />
     <ActionChange TargetID="1294" TargetType="Page" />
+    <ActionChange TargetID="1440" TargetType="Page" />
     <ActionChange TargetID="256" TargetType="Page" />
     <ActionChange TargetID="1442" TargetType="Page" />
-    <ActionChange TargetID="2500" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
