@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India Gate Entry" ControlGUID="{dfc2a059-12ff-41c9-ad24-9bd5dec214ce}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18602" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{2743a8a5-4854-45d7-b2e9-e8117c800a81}" Name="Gate Entry Inward Status" CaptionML="ENU=Gate Entry - Inward Status" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3928028508 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3928028508 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18615" DepartmentCategory="History" RunObjectSrcTable="18606" ControlGUID="{0708aa34-007f-4c69-ab5e-6a15b996b94e}" Name="Posted Inward Gate Entry List" CaptionML="ENU=Posted Inward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3131328185 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3131328185 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18603" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{b91baa61-86fe-4f4a-8262-53baa9f82a6b}" Name="Gate Entry List" CaptionML="ENU=Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2326818523 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2326818523 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18610" DepartmentCategory="Lists" RunObjectSrcTable="18603" ControlGUID="{b2cc64ba-90d1-4a19-b97e-eda86cb6eed0}" Name="Outward Gate Entry List" CaptionML="ENU=Outward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 253487969 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 253487969 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18618" DepartmentCategory="History" RunObjectSrcTable="18606" ControlGUID="{87c92257-556b-441e-bf97-f50053d0d7ae}" Name="Posted Outward Gate Entry List" CaptionML="ENU=Posted Outward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 588184730 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 588184730 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18601" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{cbe3d21d-dc01-41b0-82eb-e4cc7ffba189}" Name="Gate Entry" CaptionML="ENU=Gate Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 244465541 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 244465541 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18606" DepartmentCategory="Lists" RunObjectSrcTable="18603" ControlGUID="{ff3c220d-dd4a-4efb-aab9-611cdb6b0c24}" Name="Inward Gate Entry List" CaptionML="ENU=Inward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3805427322 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3805427322 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18604" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{22632174-a4f0-4fe1-8b0a-f96f2bea7909}" Name="Posted Gate Entry" CaptionML="ENU=Posted Gate Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 597628758 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 597628758 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18605" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{be30dc21-c033-42b9-943f-0fcbdefa7f06}" Name="Posted Gate Entry List" CaptionML="ENU=Posted Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 242290324 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 242290324 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India Gate Entry" ControlGUID="{04372eb5-0c87-4fc4-b300-757473571624}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18618" DepartmentCategory="History" RunObjectSrcTable="18606" ControlGUID="{a4fea5b8-37f0-4527-bdcb-eff81b0e7b92}" Name="Posted Outward Gate Entry List" CaptionML="ENU=Posted Outward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 588184730 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 588184730 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18603" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{fb2676cd-3f18-4f2a-9c0d-070af07fb5cd}" Name="Gate Entry List" CaptionML="ENU=Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2326818523 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2326818523 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18601" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{3ca51d92-164e-4e13-acf1-ea58834b1fe0}" Name="Gate Entry" CaptionML="ENU=Gate Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 244465541 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 244465541 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18604" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{942f3c7e-f65d-48d3-9585-462f7cfb9352}" Name="Posted Gate Entry" CaptionML="ENU=Posted Gate Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 597628758 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 597628758 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18606" DepartmentCategory="Lists" RunObjectSrcTable="18603" ControlGUID="{73053d45-172d-419f-913c-cd2231461e7d}" Name="Inward Gate Entry List" CaptionML="ENU=Inward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3805427322 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3805427322 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18602" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{af801e57-bccc-4d94-8606-ba02ce9fa518}" Name="Gate Entry Inward Status" CaptionML="ENU=Gate Entry - Inward Status" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3928028508 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3928028508 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18605" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{d0e3ffa6-4243-4a4e-b1e4-686c58c0f68d}" Name="Posted Gate Entry List" CaptionML="ENU=Posted Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 242290324 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 242290324 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18615" DepartmentCategory="History" RunObjectSrcTable="18606" ControlGUID="{68a08565-078d-412e-901f-c37a690283eb}" Name="Posted Inward Gate Entry List" CaptionML="ENU=Posted Inward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3131328185 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3131328185 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18610" DepartmentCategory="Lists" RunObjectSrcTable="18603" ControlGUID="{851d862e-5e4c-49e9-a69c-7f195045d0e8}" Name="Outward Gate Entry List" CaptionML="ENU=Outward Gate Entry List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 253487969 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 253487969 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
     <ActionChange TargetID="7330" TargetType="Page" />
-    <ActionChange TargetID="461" TargetType="Page" />
     <ActionChange TargetID="5740" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="5745" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="130" TargetType="Page" />
-    <ActionChange TargetID="5743" TargetType="Page" />
-    <ActionChange TargetID="136" TargetType="Page" />
     <ActionChange TargetID="6660" TargetType="Page" />
-    <ActionChange TargetID="5769" TargetType="Page" />
+    <ActionChange TargetID="136" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
     <ActionChange TargetID="6650" TargetType="Page" />
+    <ActionChange TargetID="461" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
     <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="5745" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="5743" TargetType="Page" />
+    <ActionChange TargetID="130" TargetType="Page" />
+    <ActionChange TargetID="5769" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
