@@ -77,7 +77,7 @@ codeunit 32000001 "Currency Exchange Rate"
                                     CurrencyExchRate.Validate("Adjustment Exch. Rate Amount", Vaihtokurssisumma);
                                     CurrencyExchRate.Validate("Relational Exch. Rate Amount", 1);
                                     CurrencyExchRate.Validate("Relational Adjmt Exch Rate Amt", 1);
-                                    CurrencyExchRate."Fix Exchange Rate Amount" := 2;
+                                    CurrencyExchRate."Fix Exchange Rate Amount" := CurrencyExchRate."Fix Exchange Rate Amount"::Both;
                                 end;
                             0:
                                 begin
@@ -87,7 +87,7 @@ codeunit 32000001 "Currency Exchange Rate"
                                     CurrencyExchRate.Validate("Adjustment Exch. Rate Amount", Vaihtokurssisumma);
                                     CurrencyExchRate.Validate("Relational Exch. Rate Amount", 1);
                                     CurrencyExchRate.Validate("Relational Adjmt Exch Rate Amt", 1);
-                                    CurrencyExchRate."Fix Exchange Rate Amount" := 1;
+                                    CurrencyExchRate."Fix Exchange Rate Amount" := CurrencyExchRate."Fix Exchange Rate Amount"::"Relational Currency";
                                 end;
                         end;
                         Currency.Modify();
