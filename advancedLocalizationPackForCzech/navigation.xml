@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Advanced Localization Pack for Czech" ControlGUID="{72a49f77-bdb8-4d7a-b1ae-4a95a4990d8d}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31132" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{f2ce57a9-9d57-4da9-800a-a9fa81252f07}" Name="G/L Entry Applying CZA" CaptionML="CSY=Párování věcných položek;ENU=G/L Entry Applying" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 541621504 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 541621504 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31133" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{b6e906d5-1cde-403c-adca-fbcfa429a765}" Name="Inventory Valuation - WIP CZA" CaptionML="CSY=Výrobní zakázka - NV;ENU=Production Order - WIP" ApplicationArea="#Manufacturing" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 4070554326 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 4070554326 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31130" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{6b7e76c2-9b84-4615-af31-3fccde647b7b}" Name="Open G/L Entries To Date CZA" CaptionML="CSY=Otevřené věcné položky do data;ENU=Open G/L Entries To Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1581848143 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1581848143 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31131" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{21df0b36-205e-4b4a-97e4-a99649b020ea}" Name="Inventory Account To Date CZA" CaptionML="CSY=Inventura účtu k datu;ENU=Inventory Account to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 166047328 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 166047328 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Advanced Localization Pack for Czech" ControlGUID="{15d56a77-b375-43e1-900b-7453794f7535}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31130" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a119b489-3faf-4595-aaff-c9f2a2ba732e}" Name="Open G/L Entries To Date CZA" CaptionML="CSY=Otevřené věcné položky do data;ENU=Open G/L Entries To Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1581848143 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1581848143 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31132" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{9714d6b8-125d-444b-9ce9-6be6f13572cf}" Name="G/L Entry Applying CZA" CaptionML="CSY=Párování věcných položek;ENU=G/L Entry Applying" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 541621504 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 541621504 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31133" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{37b2b65f-18a6-4dbd-98fb-51f1e8cb2d83}" Name="Inventory Valuation - WIP CZA" CaptionML="CSY=Výrobní zakázka - NV;ENU=Production Order - WIP" ApplicationArea="#Manufacturing" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 4070554326 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 4070554326 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="31131" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{a6ce71fd-20f3-4fa4-8ed1-dc80a4f380e1}" Name="Inventory Account To Date CZA" CaptionML="CSY=Inventura účtu k datu;ENU=Inventory Account to Date" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 166047328 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 166047328 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="461" TargetType="Page" />
     <ActionChange TargetID="31210" TargetType="Page" />
-    <ActionChange TargetID="5740" TargetType="Page" />
-    <ActionChange TargetID="38" TargetType="Page" />
     <ActionChange TargetID="1217" TargetType="Page" />
-    <ActionChange TargetID="900" TargetType="Page" />
-    <ActionChange TargetID="167" TargetType="Page" />
-    <ActionChange TargetID="8901" TargetType="Page" />
     <ActionChange TargetID="905" TargetType="Page" />
-    <ActionChange TargetID="5748" TargetType="Page" />
-    <ActionChange TargetID="901" TargetType="Page" />
-    <ActionChange TargetID="5741" TargetType="Page" />
-    <ActionChange TargetID="20" TargetType="Page" />
-    <ActionChange TargetID="122" TargetType="Page" />
-    <ActionChange TargetID="541" TargetType="Page" />
-    <ActionChange TargetID="920" TargetType="Page" />
-    <ActionChange TargetID="921" TargetType="Page" />
-    <ActionChange TargetID="16" TargetType="Page" />
-    <ActionChange TargetID="99000768" TargetType="Page" />
+    <ActionChange TargetID="900" TargetType="Page" />
+    <ActionChange TargetID="8901" TargetType="Page" />
     <ActionChange TargetID="6781" TargetType="Page" />
-    <ActionChange TargetID="755" TargetType="Page" />
+    <ActionChange TargetID="38" TargetType="Page" />
     <ActionChange TargetID="6782" TargetType="Page" />
+    <ActionChange TargetID="167" TargetType="Page" />
+    <ActionChange TargetID="5740" TargetType="Page" />
+    <ActionChange TargetID="461" TargetType="Page" />
+    <ActionChange TargetID="20" TargetType="Page" />
+    <ActionChange TargetID="5748" TargetType="Page" />
+    <ActionChange TargetID="920" TargetType="Page" />
+    <ActionChange TargetID="901" TargetType="Page" />
+    <ActionChange TargetID="541" TargetType="Page" />
+    <ActionChange TargetID="16" TargetType="Page" />
+    <ActionChange TargetID="122" TargetType="Page" />
+    <ActionChange TargetID="5741" TargetType="Page" />
+    <ActionChange TargetID="99000768" TargetType="Page" />
+    <ActionChange TargetID="755" TargetType="Page" />
+    <ActionChange TargetID="921" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
