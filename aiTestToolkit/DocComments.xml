@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>2156302a-872f-4568-be0b-60968696f0d5</id>
+        <name>AI Test Toolkit</name>
+        <publisher>Microsoft</publisher>
+        <version>25.0.23364.35903</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::System#TestTools#AITestToolkit#AIT Test Context">
+            <summary>
+            Exposes functions that can be used by the AI tests.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.NextTurn:Boolean">
+            <summary>
+            Sets to next turn.
+            </summary>
+            <returns>True if another turn exists</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetCurrentTurn:Integer">
+            <summary>
+            Gets the current turn. Turns start from turn 0.
+            </summary>
+            <returns>The current turn number.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetInput:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Returns the Test Input value as Test Input Json Codeunit from the input dataset for the current iteration.
+            </summary>
+            <returns>Test Input Json for the current test.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetTestSetup:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Test Setup from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the test_setup element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetContext:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Context from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the context element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetQuestion:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Question from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the question element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetGroundTruth:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Ground Truth from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the ground_truth element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.GetExpectedData:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Expected Data value as text from the input dataset for the current iteration.
+            Expected data is used for internal validation if the test was successful.
+            </summary>
+            <returns>Test Input Json for the expected data</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.SetAnswerForQnAEvaluation(Text)">
+            <summary>
+            Sets the answer for a question and answer evaluation.
+            This will also copy the context, question and ground truth to the output dataset.
+            </summary>
+            <param name="Answer">The answer as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.SetTestOutput(Text)">
+            <summary>
+            Sets the test output for the current iteration.
+            </summary>
+            <param name="TestOutputText">The test output as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.SetTestOutput(Text,Text,Text)">
+            <summary>
+            Sets the test output for the current iteration.
+            </summary>
+            <param name="Context">The context as text.</param>
+            <param name="Question">The question as text.</param>
+            <param name="Answer">The answer as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context.SetTestMetric(Text)">
+            <summary>
+            Sets the test metric for the output dataset.
+            </summary>
+            <param name="TestMetric">The test metric as text.</param>
+        </member>
+        <member name="O:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#">
+            <summary>
+            Exposes functions that can be used by the AI tests.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetInput:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Returns the Test Input value as Test Input Json Codeunit from the input dataset for the current iteration.
+            </summary>
+            <returns>Test Input Json for the current test.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetTestSetup:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Test Setup from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the test_setup element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetContext:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Context from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the context element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetQuestion:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Question from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the question element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetGroundTruth:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Ground Truth from the input dataset for the current iteration.
+            </summary>
+            <returns>A Test Input Json codeunit for the ground_truth element.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetExpectedData:Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Get the Expected Data value as text from the input dataset for the current iteration.
+            Expected data is used for internal validation if the test was successful.
+            </summary>
+            <returns>Test Input Json for the expected data</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.SetAnswerForQnAEvaluation(Text)">
+            <summary>
+            Sets the answer for a question and answer evaluation.
+            This will also copy the context, question and ground truth to the output dataset.
+            </summary>
+            <param name="Answer">The answer as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.SetTestOutput(Text)">
+            <summary>
+            Sets the test output for the current iteration.
+            </summary>
+            <param name="TestOutputText">The test output as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.SetTestOutput(Text,Text,Text)">
+            <summary>
+            Sets the test output for the current iteration.
+            </summary>
+            <param name="Context">The context as text.</param>
+            <param name="Question">The question as text.</param>
+            <param name="Answer">The answer as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.SetTestMetric(Text)">
+            <summary>
+            Sets the test metric for the output dataset.
+            </summary>
+            <param name="TestMetric">The test metric as text.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.NextTurn:Boolean">
+            <summary>
+            Sets to next turn for multiturn testing.
+            </summary>
+            <returns>True if another turn exists, otherwise false.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetCurrentTurn:Integer">
+            <summary>
+            Gets the current turn for multiturn testing. Turns start from turn 0.
+            </summary>
+            <returns>The current turn number.</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.StartRunProcedureScenario">
+            <summary>
+            This method starts the scope of the Run Procedure scenario.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.EndRunProcedureScenario(Test Method Line,Boolean)">
+            <summary>
+            This method ends the scope of the Run Procedure scenario.
+            </summary>
+            <param name="TestMethodLine">Record containing the result of the test execution.</param>
+            <param name="ExecutionSuccess">Result of the test execution.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.InitializeGlobalVariables">
+            <summary>
+            Initializes global variables for the iteration.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetTestInput(Text):Codeunit::System#TestTools#TestRunner#Test Input Json">
+            <summary>
+            Gets the test input for the provided element.
+            </summary>
+            <param name="ElementName">Element name to get from test input.</param>
+            <returns>Test Input Json for the element</returns>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.SetSuiteTestOutput(Text)">
+            <summary>
+            Sets the test output for the current iteration.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.GetAITTestMethodLine(AIT Test Method Line@)">
+            <summary>
+            Returns the AITTestMethodLine associated with the sessions.
+            </summary>
+            <param name="AITTestMethodLine">AITTestMethodLine associated with the session.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Context Impl#.CopyElementToOutput(Text,Codeunit::System#TestTools#TestRunner#Test Output Json@)">
+            <summary>
+            Copies an element for the test input to the test output.
+            </summary>
+            <param name="ElementName">The name of the element to copy.</param>
+        </member>
+        <member name="M:Codeunit::System#TestTools#AITestToolkit#AIT Test Run Iteration.GetAITTestMethodLine(AIT Test Method Line@)">
+            <summary>
+            Gets the Test Method Line stored through the SetAITTestMethodLine method.
+            </summary>
+        </member>
+        <member name="O:Enum::System#TestTools#AITestToolkit#AIT Line Status">
+            <summary>
+            This enum has the Status of the AI Test Line.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Line Status. ">
+            <summary>
+            Specifies the initial state.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Line Status.Starting">
+            <summary>
+            Specifies that the AI Test Line state is Starting.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Line Status.Running">
+            <summary>
+            Specifies that the AI Test Line state is Running.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Line Status.Completed">
+            <summary>
+            Specifies that the AI Test Line state is Completed.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Line Status.Cancelled">
+            <summary>
+            Specifies that the AI Test Line state is Cancelled.
+            </summary>
+        </member>
+        <member name="O:Enum::System#TestTools#AITestToolkit#AIT Test Suite Status">
+            <summary>
+            This enum has the Status of the AI Test Suite.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Test Suite Status. ">
+            <summary>
+            Specifies the initial state.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Test Suite Status.Running">
+            <summary>
+            Specifies that the AI Test Suite state is Running.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Test Suite Status.Completed">
+            <summary>
+            Specifies that the AI Test Suite state is Completed.
+            </summary>
+        </member>
+        <member name="E:Enum::System#TestTools#AITestToolkit#AIT Test Suite Status.Cancelled">
+            <summary>
+            Specifies that the AI Test Suite state is Cancelled.
+            </summary>
+        </member>
+    </members>
+</doc>
