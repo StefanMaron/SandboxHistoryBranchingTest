@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="08d69832-9231-429e-be2c-8bab2c96905b" Name="Email - Current User Connector" Publisher="Microsoft" Brief="Enable users to use their own Microsoft 365 email account to send email in Business Central." Description="This connector enables users to send email from their own email account. After you set up this connector, it will automatically find the email accounts specified for each user. You only need to set up this connector one time." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2134520" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2134520" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="08d69832-9231-429e-be2c-8bab2c96905b" Name="Email - Current User Connector" Publisher="Microsoft" Brief="Enable users to use their own Microsoft 365 email account to send email in Business Central." Description="This connector enables users to send email from their own email account. After you set up this connector, it will automatically find the email accounts specified for each user. You only need to set up this connector one time." Version="24.5.23489.35932" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2134520" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2134520" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="2" MaxObjectId="2" />
     <IdRange MinObjectId="4500" MaxObjectId="4502" />
@@ -22,6 +22,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T01:06:47.1400265Z" CompilerVersion="13.1.23.59381" />
+  <Build Timestamp="2025-06-26T01:44:57.8443886Z" CompilerVersion="13.1.23.59381" />
   <AlternateIds />
 </Package>
