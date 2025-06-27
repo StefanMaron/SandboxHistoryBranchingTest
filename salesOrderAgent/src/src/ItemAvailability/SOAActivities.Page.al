@@ -2,7 +2,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
-namespace Agent.SalesOrderAgent;
+
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 page 4411 "SOA Activities"
 {
