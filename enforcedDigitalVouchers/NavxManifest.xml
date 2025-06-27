@@ -1,0 +1,24 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="e2ae191d-8829-44c3-a373-3749a2742d4e" Name="Enforced Digital Vouchers" Publisher="Microsoft" Brief="The Digital Vouchers extension makes it easy to generate digital version for every general ledger register." Description="In some countries authorities require to make sure that for every single general ledger register ther is a digital vouchers assigned." Version="24.5.23489.35870" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/across-how-setup-digital-vouchers" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="24.0.0.0" Application="24.5.0.0" Runtime="13.0" Target="Cloud" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="5579" MaxObjectId="5597" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="928f7b70-0dbd-431a-beb5-f45c4adbd361" Name="Enforced Digital Vouchers Test Library" Publisher="Microsoft" />
+    <Module Id="bb837764-d7cc-4b7b-898a-3ea5a1fab62f" Name="Enforced Digital Vouchers (DK)" Publisher="Microsoft" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T01:08:50.7379899Z" CompilerVersion="13.1.23.59381" />
+  <AlternateIds />
+</Package>
