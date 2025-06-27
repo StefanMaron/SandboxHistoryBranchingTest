@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.History;
 
 using Microsoft.CRM.Team;
@@ -296,7 +300,6 @@ table 5855 "Invt. Shipment Line"
         key(Key1; "Document No.", "Line No.")
         {
             Clustered = true;
-            MaintainSIFTIndex = false;
         }
     }
 
