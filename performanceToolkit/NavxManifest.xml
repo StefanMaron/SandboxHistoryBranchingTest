@@ -1,12 +1,12 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="75f1590f-55c5-4501-ae63-bada5534e852" Name="Performance Toolkit" Publisher="Microsoft" Brief="Provides tools for performance regression testing." Description="The Performance Toolkit lets developers use test suites during development to analyze the performance of their code by simulating the work environments in which the code will run." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2142241" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-performance-toolkit/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="75f1590f-55c5-4501-ae63-bada5534e852" Name="Performance Toolkit" Publisher="Microsoft" Brief="Provides tools for performance regression testing." Description="The Performance Toolkit lets developers use test suites during development to analyze the performance of their code by simulating the work environments in which the code will run." Version="25.3.28755.35906" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2142241" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-performance-toolkit/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="149000" MaxObjectId="149010" />
     <IdRange MinObjectId="149020" MaxObjectId="149020" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="23de40a6-dfe8-4f80-80db-d70f83ce8caf" Name="Test Runner" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="23de40a6-dfe8-4f80-80db-d70f83ce8caf" Name="Test Runner" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="3556cc45-5df4-46aa-8162-058cb6fea4f0" Name="Performance Toolkit Tests" Publisher="Microsoft" />
@@ -21,7 +21,7 @@
   <SuppressWarnings />
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
-  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="3e7638926d537cf0114d4e9d25b5564ed6d56611" />
-  <Build Timestamp="2025-06-25T23:28:20.4233174Z" CompilerVersion="14.3.23.59384" />
+  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="05114621b2b9ddb65622ce9a356ad0c7bce8c60c" />
+  <Build Timestamp="2025-06-25T19:52:10.7633894Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
