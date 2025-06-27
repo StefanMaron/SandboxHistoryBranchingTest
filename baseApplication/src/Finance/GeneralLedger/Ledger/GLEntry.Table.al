@@ -479,6 +479,7 @@ table 17 "G/L Entry"
             Caption = 'Last Modified DateTime';
             Editable = false;
         }
+#if not CLEANSCHEMA27
         field(3010536; "Amount (FCY)"; Decimal)
         {
             Caption = 'Amount (FCY)';
@@ -491,6 +492,7 @@ table 17 "G/L Entry"
             ObsoleteTag = '24.0';
 #endif
         }
+#endif
     }
 
     keys
@@ -549,7 +551,7 @@ table 17 "G/L Entry"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Entry No.", Description, "G/L Account No.", "Posting Date", "Document Type", "Document No.")
+        fieldgroup(DropDown; "Entry No.", Description, Amount, "G/L Account No.", "Posting Date", "Document Type", "Document No.")
         {
         }
     }
