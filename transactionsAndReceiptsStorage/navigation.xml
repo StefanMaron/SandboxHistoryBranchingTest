@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Transactions and Receipts Storage" ControlGUID="{4aad8ecf-a189-4f42-b57d-650d781683be}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6200" DepartmentCategory="Administration" RunObjectSrcTable="6201" ControlGUID="{708c8bbd-4921-421d-a914-1862c46479f0}" Name="Transaction Storage Setup" CaptionML="DAN=Opsætning af transaktionslager;ENU=Transaction Storage Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3640406638 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3640406638 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Transactions and Receipts Storage" ControlGUID="{1455b472-4017-43d5-8a04-4afbaf7e1e48}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6200" DepartmentCategory="Administration" RunObjectSrcTable="6201" ControlGUID="{8a93172e-c740-4435-be81-6f83d2a5650a}" Name="Transaction Storage Setup" CaptionML="DAN=Opsætning af transaktionslager;ENU=Transaction Storage Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3640406638 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3640406638 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>
