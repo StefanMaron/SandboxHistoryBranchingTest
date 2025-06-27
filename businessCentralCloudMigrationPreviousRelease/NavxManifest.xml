@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" Brief="Enables data migration from the previous version of Dynamics BC (n-1) to the current release of Dynamics 365 Business Central SaaS." Description="This extension will take you through the process to migrate data from your Business Central on-premises solution to your Dynamics 365 Business Central cloud tenant. This extension updates system and application tables. Once you have walked through the cloud migration wizard in assisted setup, you will be able to migrate your data from your on-premises environment to your cloud tenant." Version="25.3.28755.35989" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?LinkId=834880" Help="https://go.microsoft.com/fwlink/?linkid=2013440" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.3.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" Brief="Enables data migration from the previous version of Dynamics BC (n-1) to the current release of Dynamics 365 Business Central SaaS." Description="This extension will take you through the process to migrate data from your Business Central on-premises solution to your Dynamics 365 Business Central cloud tenant. This extension updates system and application tables. Once you have walked through the cloud migration wizard in assisted setup, you will be able to migrate your data from your on-premises environment to your cloud tenant." Version="25.4.29661.35902" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?LinkId=834880" Help="https://go.microsoft.com/fwlink/?linkid=2013440" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="c8e46b67-1f61-46e2-a3a5-0239429e26fb" Name="Business Central Cloud Migration - Previous Release Tests" Publisher="Microsoft" />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:15:40.4783993Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T20:03:00.8398184Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
