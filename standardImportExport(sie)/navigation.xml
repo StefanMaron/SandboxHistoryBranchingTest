@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Standard Import Export (SIE)" ControlGUID="{de81e6a6-2271-4a8b-9c42-59e7afa85eaa}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5314" DepartmentCategory="Administration" RunObjectSrcTable="5260" ControlGUID="{26e2e479-3719-4145-81c2-94b56c2ff982}" Name="SIE Setup Wizard" CaptionML="ENU=SIE Audit File Export Setup Guide;SVE=Konfigurationsguide för export av SIE-verifieringsfil" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 819335509 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 819335509 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5315" DepartmentCategory="Lists" RunObjectSrcTable="5315" ControlGUID="{e447618a-dc17-431e-a91b-0bd22c904b3d}" Name="Dimensions SIE" CaptionML="ENU=Dimensions SIE;SVE=Dimensioner för SIE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1903914832 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1903914832 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="5314" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{2fba6f8a-b3a4-4ef8-8545-192496819769}" Name="Import SIE" CaptionML="ENU=Import SIE;SVE=Importera SIE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3167011382 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3167011382 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Standard Import Export (SIE)" ControlGUID="{f0ed1da3-061f-459d-b8a8-208f8f0ad1b5}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="5314" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{dd5e777d-3a87-4fdf-8b72-cd694a9713a3}" Name="Import SIE" CaptionML="ENU=Import SIE;SVE=Importera SIE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3167011382 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3167011382 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5314" DepartmentCategory="Administration" RunObjectSrcTable="5260" ControlGUID="{82ba5f9d-022b-4770-a8f0-a77374deabf2}" Name="SIE Setup Wizard" CaptionML="ENU=SIE Audit File Export Setup Guide;SVE=Konfigurationsguide för export av SIE-verifieringsfil" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 819335509 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 819335509 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5315" DepartmentCategory="Lists" RunObjectSrcTable="5315" ControlGUID="{ebe7871e-65cb-4d69-8a18-f95db56c271a}" Name="Dimensions SIE" CaptionML="ENU=Dimensions SIE;SVE=Dimensioner för SIE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1903914832 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1903914832 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="5261" TargetType="Page" />
+    <ActionChange TargetID="5270" TargetType="Page" />
+    <ActionChange TargetID="5262" TargetType="Page" />
     <ActionChange TargetID="5272" TargetType="Page" />
+    <ActionChange TargetID="5261" TargetType="Page" />
     <ActionChange TargetID="5264" TargetType="Page" />
     <ActionChange TargetID="5267" TargetType="Page" />
-    <ActionChange TargetID="5262" TargetType="Page" />
-    <ActionChange TargetID="5270" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
