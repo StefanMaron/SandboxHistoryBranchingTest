@@ -1,12 +1,12 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="abe5dab1-9b38-44fc-a5f2-747ca8f4551e" Name="Dynamics GP Intelligent Cloud - US" Publisher="Microsoft" Brief="This extension migrates US specific information during a GP migration." Description="This extension migrates US specific information during a GP migration, such as Vendor 1099 data." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="abe5dab1-9b38-44fc-a5f2-747ca8f4551e" Name="Dynamics GP Intelligent Cloud - US" Publisher="Microsoft" Brief="This extension migrates US specific information during a GP migration." Description="This extension migrates US specific information during a GP migration, such as Vendor 1099 data." Version="25.2.27733.35907" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="2147483647" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="b696b4c9-637c-49d1-a806-763ff8f0a20e" Name="IRS Forms" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.2.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" MinVersion="25.2.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="b696b4c9-637c-49d1-a806-763ff8f0a20e" Name="IRS Forms" Publisher="Microsoft" MinVersion="25.2.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -21,6 +21,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T23:47:32.8792954Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T20:16:31.1464192Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
