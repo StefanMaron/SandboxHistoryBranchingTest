@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" Brief="Library used in tests to verify if the values are as expected. " Description="In test code Library Assert should be used to compare the values and throw errors. TESTFIELD and ERROR must not be used in test code." Version="25.2.27733.35937" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" Brief="Library used in tests to verify if the values are as expected. " Description="In test code Library Assert should be used to compare the values and throw errors. TESTFIELD and ERROR must not be used in test code." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="130002" MaxObjectId="130002" />
   </IdRanges>
@@ -15,7 +15,7 @@
   <SuppressWarnings />
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
-  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="531c540f9cfd12a9000ca060611679f0f5f98bdd" />
-  <Build Timestamp="2025-06-26T04:29:41.8774061Z" CompilerVersion="14.3.23.59384" />
+  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="3e7638926d537cf0114d4e9d25b5564ed6d56611" />
+  <Build Timestamp="2025-06-25T23:28:05.1692441Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
