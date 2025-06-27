@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Late Payment Prediction" ControlGUID="{7278896a-3b6c-4724-9382-e6ee5aa2fd3d}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1950" DepartmentCategory="Administration" RunObjectSrcTable="1950" ControlGUID="{3872ecf7-faca-4187-a16b-9d3fe240613f}" Name="LP Machine Learning Setup" CaptionML="CSY=Nastavení opožděných plateb;DAN=Opsætning af forudsigelse af forsinket betaling;DEA=Einrichtung der Vorhersage verspäteter Zahlungen;DES=Einrichtung der Vorhersage verspäteter Zahlungen;DEU=Einrichtung der Vorhersage verspäteter Zahlungen;ENA=Late Payment Prediction Setup;ENC=Late Payment Prediction Setup;ENG=Late Payment Prediction Setup;ENU=Late Payment Prediction Setup;ENZ=Late Payment Prediction Setup;ESM=Configuración de predicción de pago atrasado;ESN=Configuración de predicción de pago atrasado;FIN=Myöhästyneen maksun ennusteen asetukset;FRA=Configuration des prévisions de retard de paiement;FRB=Configuration des prévisions de retard de paiement;FRC=Configuration des prévisions de retard de paiement;FRS=Configuration des prévisions de retard de paiement;ISL=Uppsetning á spám fyrir greiðsludrátt;ITA=Impostazione previsione pagamento ritardato;ITS=Impostazione previsione pagamento ritardato;NLB=Voorspelling van te late betalingen instellen;NLD=Voorspelling van te late betalingen instellen;NOR=Oppsett av prognose for forsinket betaling;RUS=Настройка Прогнозирования просрочек оплаты;SVE=Inställningar för prediktion om sen betalning" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 523664430 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 523664430 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Late Payment Prediction" ControlGUID="{90a13599-23de-48fc-be70-dc4725720b2c}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1950" DepartmentCategory="Administration" RunObjectSrcTable="1950" ControlGUID="{d2aa37a8-9caf-4255-82a9-a638d4a599ea}" Name="LP Machine Learning Setup" CaptionML="CSY=Nastavení opožděných plateb;DAN=Opsætning af forudsigelse af forsinket betaling;DEA=Einrichtung der Vorhersage verspäteter Zahlungen;DES=Einrichtung der Vorhersage verspäteter Zahlungen;DEU=Einrichtung der Vorhersage verspäteter Zahlungen;ENA=Late Payment Prediction Setup;ENC=Late Payment Prediction Setup;ENG=Late Payment Prediction Setup;ENU=Late Payment Prediction Setup;ENZ=Late Payment Prediction Setup;ESM=Configuración de predicción de pago atrasado;ESN=Configuración de predicción de pago atrasado;FIN=Myöhästyneen maksun ennusteen asetukset;FRA=Configuration des prévisions de retard de paiement;FRB=Configuration des prévisions de retard de paiement;FRC=Configuration des prévisions de retard de paiement;FRS=Configuration des prévisions de retard de paiement;ISL=Uppsetning á spám fyrir greiðsludrátt;ITA=Impostazione previsione pagamento ritardato;ITS=Impostazione previsione pagamento ritardato;NLB=Voorspelling van te late betalingen instellen;NLD=Voorspelling van te late betalingen instellen;NOR=Oppsett av prognose for forsinket betaling;RUS=Настройка Прогнозирования просрочек оплаты;SVE=Inställningar för prediktion om sen betalning" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 523664430 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 523664430 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="1310" TargetType="Page" />
-    <ActionChange TargetID="25" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="9077" TargetType="Page" />
     <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="1310" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="25" TargetType="Page" />
+    <ActionChange TargetID="9077" TargetType="Page" />
     <ActionChange TargetID="41" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
