@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>8c972578-fe72-4aa5-ae51-cc5575fef2ea</id>
+        <name>Send To Email Printer</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::Document Print Ready">
+            <summary>
+             Handels the OnDocumentPrintReady event for Email Printers
+            </summary>
+        </member>
+        <member name="O:PageExtension::Email Printer Management">
+            <summary>
+            Exposes functionality to add new Email Printer in Printer Management.
+            </summary>
+        </member>
+        <member name="O:Enum::Email Printer Paper Unit">
+            <summary>
+            Specifies several of the units of measure used for printing.
+            </summary>
+        </member>
+        <member name="O:Page::Email Printer Settings">
+            <summary>
+            Exposes functionality to manage configuration settings of Email Printers.
+            </summary>
+        </member>
+        <member name="O:Table::Email Printer Settings">
+            <summary>
+            Provides functionality to manage configuration settings of Email Printers.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Setup Printers">
+            <summary>
+             Handels the set up of Email Printers and their configuration settings
+            </summary>
+        </member>
+    </members>
+</doc>
