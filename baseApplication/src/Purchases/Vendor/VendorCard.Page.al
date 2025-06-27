@@ -542,16 +542,6 @@ page 26 "Vendor Card"
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the number of the vendor.';
                 }
-#if not CLEAN23
-                field("Exclude from Pmt. Pract. Rep."; Rec."Exclude from Pmt. Pract. Rep.")
-                {
-                    ApplicationArea = Basic, Suite;
-                    ObsoleteState = Pending;
-                    ObsoleteReason = 'Replaced by W1 field "Exclude from Pmt. Practices"';
-                    ObsoleteTag = '23.0';
-                    ToolTip = 'Specifies that vendor must be excluded from calculation in Payment Practices report.';
-                }
-#endif
                 field("Exclude from Pmt. Practices"; Rec."Exclude from Pmt. Practices")
                 {
                     ApplicationArea = Basic, Suite;
@@ -623,6 +613,7 @@ page 26 "Vendor Card"
                 ObsoleteState = Pending;
                 ObsoleteReason = 'The "Document Attachment FactBox" has been replaced by "Doc. Attachment List Factbox", which supports multiple files upload.';
                 ApplicationArea = All;
+                Visible = false;
                 Caption = 'Attachments';
                 SubPageLink = "Table ID" = const(Database::Vendor),
                               "No." = field("No.");
@@ -1752,7 +1743,6 @@ page 26 "Vendor Card"
                 actionref("Co&mments_Promoted"; "Co&mments")
                 {
                 }
-
                 separator(Navigate_Separator)
                 {
                 }
@@ -1849,9 +1839,14 @@ page 26 "Vendor Card"
     }
 
     trigger OnAfterGetCurrRecord()
+    var
+        ClientTypeManagement: Codeunit "Client Type Management";
     begin
         if GuiAllowed() then
-            OnAfterGetCurrRecordFunc();
+            OnAfterGetCurrRecordFunc()
+        else
+            if not (ClientTypeManagement.GetCurrentClientType() in [ClientType::ODataV4, ClientType::Api]) then
+                StartBackgroundCalculations();
     end;
 
     local procedure OnAfterGetCurrRecordFunc()
@@ -1944,7 +1939,7 @@ page 26 "Vendor Card"
 
         CurrPage.EnqueueBackgroundTask(BackgroundTaskId, Codeunit::"Vendor Card Calculations", Args);
 
-        Session.LogMessage('0000GC4', StrSubstNo(PageBckGrndTaskStartedTxt, Rec."No."), Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', VendorCardServiceCategoryTxt);
+        Session.LogMessage('0000GC4', StrSubstNo(PageBckGrndTaskStartedTxt, Rec.SystemId), Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', VendorCardServiceCategoryTxt);
     end;
 
     trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
@@ -2192,4 +2187,3 @@ page 26 "Vendor Card"
     begin
     end;
 }
-

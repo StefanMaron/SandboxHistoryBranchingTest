@@ -1,3 +1,4 @@
+#if not CLEANSCHEMA28 
 namespace Microsoft.Integration.FieldService;
 
 using Microsoft.Integration.D365Sales;
@@ -260,4 +261,5 @@ table 6404 "FS Project Task"
         {
         }
     }
-}
+} 
+#endif
