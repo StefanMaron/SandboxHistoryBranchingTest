@@ -1263,18 +1263,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Payment Journal VI - Action IN_Void_Check - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3522356808 - Action 2550476631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
-          <source>Void the check if, for example, the check is not cashed by the bank.</source>
-          <target>Void the check if, for example, the check is not cashed by the bank.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Payment Journal VI - Action Void_Check - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3522356808 - Action 2550476631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
-          <source>Void Check</source>
-          <target>Void Check</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Payment Journal VI - Action Void_Check - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 3522356808 - Control 2807262541 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3196174509">
           <source>Specifies the cheque date of the journal entry.</source>
           <target>Specifies the cheque date of the journal entry.</target>
@@ -1580,6 +1568,402 @@
           <target>Narration</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Ledger Entry Ext. - Action Narration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 1430683347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if details of cash voucher in cash book are to be printed.</source>
+          <target>Place a check mark in this field if details of cash voucher in cash book are to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintDetail1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 1430683347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Detail</source>
+          <target>Print Detail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintDetail1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 2337494688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if line narration is to be printed.</source>
+          <target>Place a check mark in this field if line narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintLineNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 2337494688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Line Narration</source>
+          <target>Print Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintLineNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 4007326353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if voucher narration is to be printed.</source>
+          <target>Place a check mark in this field if voucher narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintVchNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 4007326353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Voucher Narration</source>
+          <target>Print Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintVchNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Book</source>
+          <target>Cash Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 1430683347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if details of bank vouchers in Bank Book are to be printed.</source>
+          <target>Place a check mark in this field if details of bank vouchers in Bank Book are to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintDetail1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 1430683347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Detail</source>
+          <target>Print Detail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintDetail1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 2337494688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if line narration is to be printed.</source>
+          <target>Place a check mark in this field if line narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintLineNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 2337494688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Line Narration</source>
+          <target>Print Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintLineNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 4007326353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if voucher narration is to be printed.</source>
+          <target>Place a check mark in this field if voucher narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintVchNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Control 4007326353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Voucher Narration</source>
+          <target>Print Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Control PrintVchNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1915507847 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger</source>
+          <target>Ledger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ledger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1059736969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you use check forms with preprinted stubs.</source>
+          <target>Specifies if you use check forms with preprinted stubs.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control PreprintedStub - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1059736969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preprinted Stub</source>
+          <target>Preprinted Stub</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control PreprintedStub - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1514267703 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Last Check No. field on the bank account card.</source>
+          <target>Specifies the value of the Last Check No. field on the bank account card.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control LastCheckNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1514267703 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Check No.</source>
+          <target>Last Check No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control LastCheckNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1563725732 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if only one check is printed per vendor for each document number.</source>
+          <target>Specifies if only one check is printed per vendor for each document number.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control OneCheckPerVendorPerDocumentNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 1563725732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One Check per Vendor per Document No.</source>
+          <target>One Check per Vendor per Document No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control OneCheckPerVendorPerDocumentNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 2663384385 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank account that the printed checks will be drawn from.</source>
+          <target>Specifies the bank account that the printed checks will be drawn from.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control BankAccount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 2663384385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account</source>
+          <target>Bank Account</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control BankAccount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 2992590101 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if checks are printed again if you canceled the printing due to a problem.</source>
+          <target>Specifies if checks are printed again if you canceled the printing due to a problem.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control ReprintChecks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 2992590101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reprint Checks</source>
+          <target>Reprint Checks</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control ReprintChecks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 4054877177 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to print the checks on blank paper before you print them on check forms.</source>
+          <target>Specifies if you want to print the checks on blank paper before you print them on check forms.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control TestPrinting - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Control 4054877177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test Print</source>
+          <target>Test Print</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Control TestPrinting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2246567508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check</source>
+          <target>Check</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Check Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 1430683347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if details of bank vouchers in Bank Book are to be printed.</source>
+          <target>Place a check mark in this field if details of bank vouchers in Bank Book are to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintDetail1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 1430683347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Detail</source>
+          <target>Print Detail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintDetail1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 2337494688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if line narration is to be printed.</source>
+          <target>Place a check mark in this field if line narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintLineNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 2337494688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Line Narration</source>
+          <target>Print Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintLineNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 4007326353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if voucher narration is to be printed.</source>
+          <target>Place a check mark in this field if voucher narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintVchNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 4007326353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Voucher Narration</source>
+          <target>Print Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintVchNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Book</source>
+          <target>Bank Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 1774964744 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if line narration is to be printed.</source>
+          <target>Place a check mark in this field if line narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Line Narration - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 1774964744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Narration</source>
+          <target>Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Line Narration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 3000901590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if voucher narration is to be printed.</source>
+          <target>Place a check mark in this field if voucher narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Voucher Narration - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 3000901590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Narration</source>
+          <target>Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Voucher Narration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day Book</source>
+          <target>Day Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 716052563 - Control 2337494688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Place a check mark in this field if line narration is to be printed.</source>
+          <target>Place a check mark in this field if line narration is to be printed.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Voucher Register - Control PrintLineNarration1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 716052563 - Control 2337494688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PrintLineNarration</source>
+          <target>PrintLineNarration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Voucher Register - Control PrintLineNarration1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 716052563 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Voucher Register - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 716052563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Register</source>
+          <target>Voucher Register</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Voucher Register - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2017246152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Posting Credit Accounts</source>
+          <target>Voucher Posting Credit Accounts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Voucher Posting Credit Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3603762498 - Field 2464461131 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Debit,Credit,Both</source>
+          <target> ,Debit,Credit,Both</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Journal Voucher Posting Setup - Field Transaction Direction - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3603762498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Posting Setup</source>
+          <target>Voucher Posting Setup</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Journal Voucher Posting Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 853067585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Posting Debit Accounts</source>
+          <target>Voucher Posting Debit Accounts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Voucher Posting Debit Account - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2630692215 - Field 2124105172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Stale Cheque</source>
+          <target>Stale Cheque</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gen.Jnl Line Ext - Field Stale Cheque - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2630692215 - Field 2807262541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Cheque Date</source>
+          <target>Cheque Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gen.Jnl Line Ext - Field Cheque Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2630692215 - Field 981725300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Cheque No.</source>
+          <target>Cheque No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gen.Jnl Line Ext - Field Cheque No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694622601 - Field 2124105172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1815808370">
+          <source>Stale Cheque</source>
+          <target>Stale Cheque</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Acc Led Entry Ext - Field Stale Cheque - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694622601 - Field 2807262541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1815808370">
+          <source>Cheque Date</source>
+          <target>Cheque Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Acc Led Entry Ext - Field Cheque Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694622601 - Field 2996934741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1815808370">
+          <source>Stale Cheque Expiry Date</source>
+          <target>Stale Cheque Expiry Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Acc Led Entry Ext - Field Stale Cheque Expiry Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694622601 - Field 3764421056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1815808370">
+          <source>Cheque Stale Date</source>
+          <target>Cheque Stale Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Acc Led Entry Ext - Field Cheque Stale Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2694622601 - Field 981725300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1815808370">
+          <source>Cheque No.</source>
+          <target>Cheque No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Acc Led Entry Ext - Field Cheque No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3033648794 - Field 1593216058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Stale Cheque Stipulated Period</source>
+          <target>Stale Cheque Stipulated Period</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Account Ext - Field Stale Cheque Stipulated Period - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3033648794 - Field 3506240275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>UPI ID</source>
+          <target>UPI ID</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Bank Account Ext - Field UPI ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3717382282 - Field 2124105172 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 717244561">
+          <source>Stale Cheque</source>
+          <target>Stale Cheque</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Check Led Entry Ext - Field Stale Cheque - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3717382282 - Field 2996934741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 717244561">
+          <source>Stale Cheque Expiry Date</source>
+          <target>Stale Cheque Expiry Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Check Led Entry Ext - Field Stale Cheque Expiry Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3717382282 - Field 3764421056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 717244561">
+          <source>Cheque Stale Date</source>
+          <target>Cheque Stale Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Check Led Entry Ext - Field Cheque Stale Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3988382343 - Field 3742309595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4050813720">
+          <source>Activate Cheque No.</source>
+          <target>Activate Cheque No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension General ledger Setup Ext - Field Activate Cheque No. - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -12,6 +12,8 @@ codeunit 30189 "Shpfy Variant API"
         CommunicationMgt: Codeunit "Shpfy Communication Mgt.";
         JsonHelper: Codeunit "Shpfy Json Helper";
         ProductEvents: Codeunit "Shpfy Product Events";
+        MetafieldAPI: Codeunit "Shpfy Metafield API";
+
 
     /// <summary> 
     /// Find Shopify Product Variant.
@@ -442,22 +444,12 @@ codeunit 30189 "Shpfy Variant API"
     /// <summary> 
     /// Set Shop.
     /// </summary>
-    /// <param name="Code">Parameter of type Code[20].</param>
-    internal procedure SetShop(Code: Code[20])
-    begin
-        Clear(Shop);
-        Shop.Get(Code);
-        CommunicationMgt.SetShop(Shop);
-    end;
-
-    /// <summary> 
-    /// Set Shop.
-    /// </summary>
     /// <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
     internal procedure SetShop(ShopifyShop: Record "Shpfy Shop")
     begin
         Shop := ShopifyShop;
         CommunicationMgt.SetShop(Shop);
+        MetafieldAPI.SetShop(Shop);
     end;
 
     internal procedure UpdateProductVariant(ShopifyVariant: Record "Shpfy Variant"; xShopifyVariant: Record "Shpfy Variant")
@@ -572,11 +564,7 @@ codeunit 30189 "Shpfy Variant API"
         Price: Text;
         CompareAtPrice: Text;
     begin
-#if not CLEAN23
-        IsBulkOperationEnabled := BulkOperationMgt.IsBulkOperationFeatureEnabled() and (RecordCount >= BulkOperationMgt.GetBulkOperationThreshold());
-#else
         IsBulkOperationEnabled := RecordCount >= BulkOperationMgt.GetBulkOperationThreshold();
-#endif
         GraphQuery.Append('{"query":"mutation { productVariantsBulkUpdate(productId: \"gid://shopify/Product/');
         GraphQuery.Append(Format(ShopifyVariant."Product Id"));
         GraphQuery.Append('\", variants: [{id: \"gid://shopify/ProductVariant/');
@@ -643,7 +631,6 @@ codeunit 30189 "Shpfy Variant API"
     /// <returns>Return variable "Result" of type Boolean.</returns>
     internal procedure UpdateShopifyVariantFields(ShopifyProduct: Record "Shpfy Product"; var ShopifyVariant: Record "Shpfy Variant"; var ShopifyInventoryItem: Record "Shpfy Inventory Item"; JVariant: JsonObject) Result: Boolean
     var
-        MetafieldAPI: Codeunit "Shpfy Metafield API";
         RecordRef: RecordRef;
         UpdatedAt: DateTime;
         JMetafields: JsonArray;

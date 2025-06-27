@@ -207,6 +207,8 @@ codeunit 18019 "GST Use Case Labels"
         CaseList.Add('{874048a6-575b-456f-a2e7-26532da3f1ca}');
         CaseList.Add('{9304251b-68e9-41d1-a6fd-00424ab38ee6}');
         CaseList.Add('{7d71fa6f-572e-4c61-b3cb-297e4521e1a9}');
+        CaseList.Add('{E587BDAC-2C08-42CA-9657-B3EA423F30E7}');
+        CaseList.Add('{F0AB5767-48C9-4F01-A346-D6CAA74EFCED}');
     end;
 
     procedure GetConfig(CaseID: Guid; var Handled: Boolean): Text
@@ -357,6 +359,8 @@ codeunit 18019 "GST Use Case Labels"
         "{874048a6-575b-456f-a2e7-26532da3f1ca}Lbl": Label 'GST Use Cases';
         "{9304251b-68e9-41d1-a6fd-00424ab38ee6}Lbl": Label 'GST Use Cases';
         "{7d71fa6f-572e-4c61-b3cb-297e4521e1a9}Lbl": Label 'GST Use Cases';
+        "{E587BDAC-2C08-42CA-9657-B3EA423F30E7}Lbl": Label 'GST Use Cases';
+        "{F0AB5767-48C9-4F01-A346-D6CAA74EFCED}Lbl": Label 'GST Use Cases';
     begin
         Handled := true;
 
@@ -683,6 +687,10 @@ codeunit 18019 "GST Use Case Labels"
                 exit("{9304251b-68e9-41d1-a6fd-00424ab38ee6}Lbl");
             '{7d71fa6f-572e-4c61-b3cb-297e4521e1a9}':
                 exit("{7d71fa6f-572e-4c61-b3cb-297e4521e1a9}Lbl");
+            '{E587BDAC-2C08-42CA-9657-B3EA423F30E7}':
+                exit("{E587BDAC-2C08-42CA-9657-B3EA423F30E7}Lbl");
+            '{F0AB5767-48C9-4F01-A346-D6CAA74EFCED}':
+                exit("{F0AB5767-48C9-4F01-A346-D6CAA74EFCED}Lbl");
         end;
 
         Handled := false;
