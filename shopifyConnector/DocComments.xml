@@ -4,7 +4,7 @@
         <id>ec255f57-31d0-4ca2-b751-f2fa7c745abb</id>
         <name>Shopify Connector</name>
         <publisher>Microsoft</publisher>
-        <version>25.0.23364.35922</version>
+        <version>25.2.27733.35907</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#Integration#Shopify#Shpfy - Admin">
@@ -1792,6 +1792,23 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Fulfill Order.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductImage">
+            <summary>
+            Codeunit Shpfy GQL GetProductImage (ID 30365) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductImage.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductImage.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
