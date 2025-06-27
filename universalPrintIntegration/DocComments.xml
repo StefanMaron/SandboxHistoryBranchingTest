@@ -4,166 +4,166 @@
         <id>2654d7e7-9afd-4947-9e02-6bb8f3e0cd04</id>
         <name>Universal Print Integration</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
-        <member name="O:Codeunit::Universal Print Document Ready">
+        <member name="O:Codeunit::System#Device#UniversalPrint#Universal Print Document Ready">
             <summary>
              Handles the OnDocumentPrintReady event for Universal Printers
             </summary>
         </member>
-        <member name="O:PageExtension::Universal Printer Management">
+        <member name="O:PageExtension::System#Device#UniversalPrint#Universal Printer Management">
             <summary>
             Exposes functionality to get Universal Print printersers in Printer Management.
             </summary>
         </member>
-        <member name="O:Enum::Universal Printer Orientation">
+        <member name="O:Enum::System#Device#UniversalPrint#Universal Printer Orientation">
             <summary>
             Specifies orientations used for printing. The value of each ID corresponds to the value assigned by Universal Print.
             Visit https://go.microsoft.com/fwlink/?linkid=2206448
             </summary>
         </member>
-        <member name="E:Enum::Universal Printer Orientation.portrait">
+        <member name="E:Enum::System#Device#UniversalPrint#Universal Printer Orientation.portrait">
             <summary>
             The printer will print documents in the portrait orientation.
             </summary>
         </member>
-        <member name="E:Enum::Universal Printer Orientation.landscape">
+        <member name="E:Enum::System#Device#UniversalPrint#Universal Printer Orientation.landscape">
             <summary>
             The printer will print documents in the landscape orientation.
             </summary>
         </member>
-        <member name="E:Enum::Universal Printer Orientation.reverseLandscape">
+        <member name="E:Enum::System#Device#UniversalPrint#Universal Printer Orientation.reverseLandscape">
             <summary>
             The printer will print documents in the reverse landscape orientation.
             </summary>
         </member>
-        <member name="E:Enum::Universal Printer Orientation.reversePortrait">
+        <member name="E:Enum::System#Device#UniversalPrint#Universal Printer Orientation.reversePortrait">
             <summary>
             The printer will print documents in the reverse portrait orientation.
             </summary>
         </member>
-        <member name="O:Enum::Universal Printer Paper Unit">
+        <member name="O:Enum::System#Device#UniversalPrint#Universal Printer Paper Unit">
             <summary>
             Specifies several of the units of measure used for printing.
             </summary>
         </member>
-        <member name="O:Page::Universal Printer Settings">
+        <member name="O:Page::System#Device#UniversalPrint#Universal Printer Settings">
             <summary>
             Exposes functionality to manage configuration settings of Universal Print printers.
             </summary>
         </member>
-        <member name="O:Table::Universal Printer Settings">
+        <member name="O:Table::System#Device#UniversalPrint#Universal Printer Settings">
             <summary>
             Provides functionality to manage configuration for Universal Printers.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Name[250]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Name[250]">
             <summary>
             The unique name of the printer settings.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Print Share ID">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Print Share ID">
             <summary>
             The identifier of the print share assocated with the printer settings.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Print Share Name[2048]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Print Share Name[2048]">
             <summary>
             The name of the print share associated with the printer settings.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Description[250]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Description[250]">
             <summary>
             The description of the printer.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Paper Size">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Size">
             <summary>
             The media (paper) size of the printer.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Paper Height">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Height">
             <summary>
             The height of the paper.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Paper Width">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Width">
             <summary>
             The width of the paper.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Paper Unit">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Unit">
             <summary>
             The unit of the paper measurements.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Landscape">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Landscape">
             <summary>
             The value indicating landscape paper orientation.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.AllowAllUsers">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.AllowAllUsers">
             <summary>
             The value indicating if printing is allowed for all the users.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.outputBin[2048]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.outputBin[2048]">
             <summary>
             The output bin to use when printing the document.
             </summary>
         </member>
-        <member name="F:Table::Universal Printer Settings.Paper Tray[2048]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Tray[2048]">
             <summary>
             The output paper tray to use when printing the document.
             </summary>
         </member>
-        <member name="O:Codeunit::Universal Printer Setup">
+        <member name="O:Codeunit::System#Device#UniversalPrint#Universal Printer Setup">
             <summary>
              Handles the set up of Universal Printers and their configuration settings
             </summary>
         </member>
-        <member name="O:Page::Universal Printer Tray List">
+        <member name="O:Page::System#Device#UniversalPrint#Universal Printer Tray List">
             <summary>
             Exposes functionality to lookup paper trays of universal Printers.
             </summary>
         </member>
-        <member name="O:Codeunit::Universal Print Graph Helper">
+        <member name="O:Codeunit::System#Device#UniversalPrint#Universal Print Graph Helper">
             <summary>
              Provides helper functionality related to Graph Api
             </summary>
         </member>
-        <member name="M:Codeunit::Universal Print Graph Helper.GetPrintSharesList(JsonArray@,Text@):Boolean">
+        <member name="M:Codeunit::System#Device#UniversalPrint#Universal Print Graph Helper.GetPrintSharesList(JsonArray@,Text@):Boolean">
             <summary>
             Retrieves the list of user print shares.
             </summary>
         </member>
-        <member name="M:Codeunit::Universal Print Graph Helper.GetPrintShare(Guid,JsonObject@,Text@):Boolean">
+        <member name="M:Codeunit::System#Device#UniversalPrint#Universal Print Graph Helper.GetPrintShare(Guid,JsonObject@,Text@):Boolean">
             <summary>
             Retrieves the user print share.
             </summary>
         </member>
-        <member name="M:Codeunit::Universal Print Graph Helper.CheckLicense:Boolean">
+        <member name="M:Codeunit::System#Device#UniversalPrint#Universal Print Graph Helper.CheckLicense:Boolean">
             <summary>
             Retrieves whether the user has license and access.
             </summary>
         </member>
-        <member name="O:Table::Universal Print Share Buffer">
+        <member name="O:Table::System#Device#UniversalPrint#Universal Print Share Buffer">
             <summary>
             Provides functionality to manage Print Shares.
             </summary>
         </member>
-        <member name="F:Table::Universal Print Share Buffer.ID">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Print Share Buffer.ID">
             <summary>
             The identifier of the print share.
             </summary>
         </member>
-        <member name="F:Table::Universal Print Share Buffer.Name[2048]">
+        <member name="F:Table::System#Device#UniversalPrint#Universal Print Share Buffer.Name[2048]">
             <summary>
             The name of the print share.
             </summary>
         </member>
-        <member name="O:Page::Universal Print Shares List">
+        <member name="O:Page::System#Device#UniversalPrint#Universal Print Shares List">
             <summary>
             Exposes functionality to manage configuration settings of universal Printers.
             </summary>
