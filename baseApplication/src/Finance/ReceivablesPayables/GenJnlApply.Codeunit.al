@@ -64,19 +64,26 @@ codeunit 225 "Gen. Jnl.-Apply"
         EntrySelected: Boolean;
         AccType: Enum "Gen. Journal Account Type";
 
+#pragma warning disable AA0074
+#pragma warning disable AA0470
         Text000: Label 'You must specify %1 or %2.';
+#pragma warning restore AA0470
+#pragma warning restore AA0074
         ConfirmChangeQst: Label 'CurrencyCode in the %1 will be changed from %2 to %3.\Do you wish to continue?', Comment = '%1 = Table Name, %2 and %3 = Currency Code';
         UpdateInterruptedErr: Label 'The update has been interrupted to respect the warning.';
+#pragma warning disable AA0074
+#pragma warning disable AA0470
         Text005: Label 'The %1 or %2 must be Customer or Vendor.';
+#pragma warning restore AA0470
         Text006: Label 'All entries in one application must be in the same currency.';
         Text007: Label 'All entries in one application must be in the same currency or one or more of the EMU currencies. ';
+#pragma warning restore AA0074
         EarlierPostingDateErr: Label 'You cannot apply and post an entry to an entry with an earlier posting date. Instead, post the document of type %1 with the number %2 and then apply it to the document of type %3 with the number %4.', Comment = '%1 = Applying document type, %2 = Applying document number, %3 = Entry document type, %4 = Entry document number';
 
     local procedure SelectCustLedgEntry(var GenJnlLine: Record "Gen. Journal Line"; var CustomAppliesToId: Code[50]) Selected: Boolean
     var
         CustLedgEntry: Record "Cust. Ledger Entry";
         ApplyCustEntries: Page "Apply Customer Entries";
-        PreviousAppliesToID: Code[50];
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -88,7 +95,6 @@ codeunit 225 "Gen. Jnl.-Apply"
         CustLedgEntry.SetRange("Customer No.", AccNo);
         CustLedgEntry.SetRange(Open, true);
         OnSelectCustLedgEntryOnAfterSetFilters(CustLedgEntry, GenJnlLine);
-        PreviousAppliesToID := GenJnlLine."Applies-to ID";
         if GenJnlLine."Applies-to ID" = '' then
             GenJnlLine."Applies-to ID" := GenJnlLine."Document No.";
         if GenJnlLine."Applies-to ID" = '' then
@@ -100,8 +106,6 @@ codeunit 225 "Gen. Jnl.-Apply"
         ApplyCustEntries.SetTableView(CustLedgEntry);
         ApplyCustEntries.LookupMode(true);
         Selected := ApplyCustEntries.RunModal() = ACTION::LookupOK;
-        if not Selected then
-            GenJnlLine."Applies-to ID" := PreviousAppliesToID;
         CustomAppliesToId := ApplyCustEntries.GetCustomAppliesToID();
         Clear(ApplyCustEntries);
 

@@ -4,9 +4,27 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
+            <summary>
+            Allow for empty Data Exch filtering.
+            Example: Document Attachments might not exist for document, so dont throw error if no record exists.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#EDoc Import PEPPOL BIS 3#0.ParseCreditMemo(E-Document,Purchase Header@,Purchase Line@,Document Attachment@,Codeunit::System#Utilities#Temp Blob,XML Buffer@)">
+            <summary>
+            Parses credit memo information line by line from TempXMLBuffer.
+            We handle the insert of Purchase Order Line and Document Attachment after the call to this function.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#EDoc Import PEPPOL BIS 3#0.ParseInvoice(E-Document,Purchase Header@,Purchase Line@,Document Attachment@,Codeunit::System#Utilities#Temp Blob,XML Buffer@)">
+            <summary>
+            Parses invoice information line by line from TempXMLBuffer.
+            We handle the insert of Purchase Order Line and Document Attachment after the call to this function.
+            </summary>
+        </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Check(RecordRef@,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Processing Phase)">
             
              The following methods are to create EDocument from Business Central document to send to the endpoint
@@ -337,12 +355,22 @@
         </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetResponse(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
             <summary>
-            Use it to get response of async send request.
+            Use this method to asynchronously retrieve the response after sending a request for an E-Document.
             </summary>
-            <param name="EDocument">The E-Document record.</param>
-            <param name="HttpRequest">The HTTP request message object that you should use when sending the request.</param>
-            <param name="HttpResponse">The HTTP response object that you should use when sending the request.</param>
-            <remarks>If http response is populated, the response content and headers will be logged automatically to communication logs.</remarks>
+            <param name="EDocument">The E-Document record for which the request is being made.</param>
+            <param name="HttpRequest">The HTTP request message object to be used when sending the request.</param>
+            <param name="HttpResponse">The HTTP response object that will be populated with the received response.</param>
+            <returns>
+                <c>true</c> if the response was successfully received by the service, marking the E-Document Service Status as "Sent."
+                <c>false</c> if the response is not yet ready from the service, marking the E-Document Service Status as "Pending Response."
+            </returns>
+            <remarks>
+            If a runtime error occurs or an error message is logged for the E-Document, the E-Document Service Status is set to "Sending Error,"
+            and no further retry attempts will be made.
+            </remarks>
+            <remarks>
+            If the HTTP response is populated, the response content and headers will be automatically logged to the communication logs.
+            </remarks>
         </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.GetApproval(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
             <summary>
@@ -386,6 +414,30 @@
             </summary>
             <param name="SetupPage">The E-Document integration page id.</param>
             <param name="SetupTable">The E-Dcoument integration table id.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.MoveAttachmentsAndDelete(E-Document,RecordId)">
+            <summary>
+            Move attachments from E-Document to NewDocument. Clean up any attachments stored on EDocument.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.Insert(E-Document,InStream,Text)">
+            <summary>
+            Insert Document Attachment record from stream and filename
+            Framework moves E-Document attachments to created documents at the end of import process
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.DeleteAll(E-Document,RecordRef)">
+            <summary>
+            Delete all document attachments for EDocument or purchase header
+            </summary>
+            <param name="EDocument">E-Document that attachment should be related to through "E-Document Entry No."</param>
+            <param name="RecordRef">Document header. Supports E-document and Purchase Header</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.MoveToPurchaseDocument(E-Document,RecordRef)">
+            <summary>
+            Move attachment from E-Document to the newly created document.
+            Used when importing E-Document into BC Document.
+            </summary>
         </member>
     </members>
 </doc>
