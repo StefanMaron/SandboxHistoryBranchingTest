@@ -1,7 +1,33 @@
 {
+  "settings": {
+    "files.watcherExclude": {
+      "**/.git/**": true,
+      "**/node_modules/**": true,
+      "**/*.xlf": true
+    },
+    "al.enableCodeActions": false,
+    "search.useIgnoreFiles": true,
+    "search.exclude": {
+      "**/*.xlf": true
+    },
+    "al.enableCodeAnalysis": false,
+    "al.ruleSetPath": "",
+    "al.enableCodeCop": false,
+    "al.enableUICop": false,
+    "search.useGlobalIgnoreFiles": true
+  },
   "folders": [
     {
+      "path": "./aiTestToolkit"
+    },
+    {
       "path": "./testRunner"
+    },
+    {
+      "path": "./testRunner/src/src/DataDrivenTest"
+    },
+    {
+      "path": "./aiTestToolkit/src/src/TestSuite"
     },
     {
       "path": "./systemApplication/src/Email/src/testEmail"
@@ -9,22 +35,5 @@
     {
       "path": "./baseApplication/src/System/DevTools/CALTest"
     }
-  ],
-  "settings": {
-    "search.exclude": {
-      "**/*.xlf": true
-    },
-    "files.watcherExclude": {
-      "**/node_modules/**": true,
-      "**/.git/**": true,
-      "**/*.xlf": true
-    },
-    "al.enableCodeCop": false,
-    "search.useIgnoreFiles": true,
-    "search.useGlobalIgnoreFiles": true,
-    "al.ruleSetPath": "",
-    "al.enableCodeAnalysis": false,
-    "al.enableUICop": false,
-    "al.enableCodeActions": false
-  }
+  ]
 }
