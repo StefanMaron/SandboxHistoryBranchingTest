@@ -711,6 +711,7 @@ table 25 "Vendor Ledger Entry"
         }
         key(Key20; "Applies-to ID")
         {
+            IncludedFields = "Accepted Payment Tolerance";
         }
         key(Key21; "Vendor No.", "Applies-to ID")
         {
@@ -741,8 +742,10 @@ table 25 "Vendor Ledger Entry"
     }
 
     var
+#pragma warning disable AA0470
         MustHaveSameSignErr: Label 'must have the same sign as %1';
         MustNotBeLargerErr: Label 'must not be larger than %1';
+#pragma warning restore AA0470
         NetBalanceOnHoldErr: Label 'General journal line number %3 on template name %1 batch name %2 is applied. Do you want to change On Hold value anyway?', Comment = '%1 - template name, %2 - batch name, %3 - line number';
 
     procedure GetLastEntryNo(): Integer;

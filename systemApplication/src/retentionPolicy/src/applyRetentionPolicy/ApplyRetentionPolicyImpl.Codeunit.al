@@ -5,7 +5,6 @@
 
 namespace System.DataAdministration;
 
-using System;
 using System.Telemetry;
 using System.Reflection;
 using System.Security.User;
@@ -117,9 +116,6 @@ codeunit 3904 "Apply Retention Policy Impl."
         RetenPolicyTelemetryImpl: Codeunit "Reten. Policy Telemetry Impl.";
         FeatureTelemetry: Codeunit "Feature Telemetry";
         RecordRef: RecordRef;
-        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-        MyALAuditCategory: DotNet ALAuditCategory;
         Dialog: Dialog;
         ExpiredRecordExpirationDate: Date;
     begin
@@ -137,7 +133,7 @@ codeunit 3904 "Apply Retention Policy Impl."
 
         RetentionPolicySetup.CalcFields("Table Name", "Table Caption");
         RetentionPolicyLog.LogInfo(LogCategory(), AppendStartedByUserMessage(StrSubstNo(StartApplyRetentionPolicyInfoLbl, RetentionPolicySetup."Table Id", RetentionPolicySetup."Table Caption"), UserInvokedRun));
-        MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(RetentionPolicyAppliedLbl, RetentionPolicySetup."Table Id", RetentionPolicySetup."Table Caption", UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+        Session.LogAuditMessage(StrSubstNo(RetentionPolicyAppliedLbl, RetentionPolicySetup."Table Id", RetentionPolicySetup."Table Caption", UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
 
         if GetExpiredRecords(RetentionPolicySetup, RecordRef, ExpiredRecordExpirationDate) then
             DeleteExpiredRecords(RecordRef)
