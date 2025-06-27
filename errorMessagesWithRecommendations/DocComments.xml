@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>64c9d5e2-7744-4866-bc0e-5ebc2898e651</id>
+        <name>Error Messages with Recommendations</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Codeunit::Microsoft#Shared#Error#ErrorMessagesActionHandler">
+            <summary>
+            Exposes the functionality to handle recommended actions on the error messages page.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Shared#Error#ErrorMessagesActionHandler.OnActionDrillDown(Error Message@)">
+            <summary>
+            Drill down to the recommended action of an error message to execute it with a confirmation dialog box.
+            </summary>
+            <param name="ErrorMessage">Selected error message record is passed to get the action implementation properties and update the message status after executing the action.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Shared#Error#ErrorMessagesActionHandler.ExecuteActions(Error Message@)">
+            <summary>
+            Execute recommended actions for all the selected error messages on the page.
+            </summary>
+            <param name="ErrorMessages">Selected error messages are passed from the page to get the action implementation properties and update the message status for each message after executing the actions.</param>
+        </member>
+        <member name="O:Interface::Microsoft#Shared#Error#ErrorMessageFix">
+            <summary>
+            An error message fix interface for setting additional properties and executing the fix from error message page.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Shared#Error#ErrorMessageFix.OnSetErrorMessageProps(Error Message@)">
+            <summary>
+            Set error message properties like: title, caption, etc.
+            It is primarily used to update fields in table extension 7900 "Error Message Ext."
+            </summary>
+            <param name="ErrorMessage">Update the extended fields of the error message record.</param>
+        </member>
+        <member name="M:Interface::Microsoft#Shared#Error#ErrorMessageFix.OnFixError(Error Message):Boolean">
+            <summary>
+            Execute this procedure to fix the error. Return the execution status.
+            If the error is fixed, the error message status will be set to Fixed and the OnSuccessMessage() will be shown.
+            If the error is not fixed, the error message status will be set to Not Fixed.
+            </summary>
+            <param name="ErrorMessage">The error message record provides the necessary information about the error to be able to fix it. This contains the context, source and the sub-context of the error message.</param>
+            <returns>True if the error is fixed. False if the error is not fixed.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Shared#Error#ErrorMessageFix.OnSuccessMessage:Text">
+            <summary>
+            Show a acknowledgement message on successfully fixing the error.
+            OnFixError and OnSuccessMessage are executed with the same instance of the interface.
+            This means that the interface can store information from OnFixError() and use it in the OnSuccessMessage().
+            </summary>
+            <returns>The text message for showing it to the user.</returns>
+        </member>
+    </members>
+</doc>
