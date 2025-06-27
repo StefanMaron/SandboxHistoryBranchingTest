@@ -1,3 +1,4 @@
+#if not CLEANSCHEMA28 
 namespace Microsoft.Integration.FieldService;
 
 using Microsoft.Integration.D365Sales;
@@ -241,4 +242,5 @@ table 6409 "FS Work Order Type"
         {
         }
     }
-}
+} 
+#endif

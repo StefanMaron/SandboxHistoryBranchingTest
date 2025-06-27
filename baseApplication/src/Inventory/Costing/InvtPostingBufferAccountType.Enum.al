@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Costing;
 
 #pragma warning disable AL0659
@@ -66,5 +70,13 @@ enum 48 "Invt. Posting Buffer Account Type"
     value(14; "Mfg. Overhead Variance")
     {
         Caption = 'Mfg. Overhead Variance';
+    }
+    value(15; "Direct Cost Non-Inventory Applied")
+    {
+        Caption = 'Direct Cost Non-Inventory Applied';
+    }
+    value(16; "Material - Non Inventory Variance")
+    {
+        Caption = 'Material - Non Inventory Variance';
     }
 }

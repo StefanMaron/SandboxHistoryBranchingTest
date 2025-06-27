@@ -128,6 +128,7 @@ table 10801 "FR Acc. Schedule Line"
             Caption = 'Date Filter 2';
             FieldClass = FlowFilter;
         }
+#if not CLEANSCHEMA25
         field(10810; "G/L Entry Type Filter"; Option)
         {
             Caption = 'G/L Entry Type Filter';
@@ -138,6 +139,7 @@ table 10801 "FR Acc. Schedule Line"
             OptionMembers = Definitive,Simulation;
             ObsoleteTag = '25.0';
         }
+#endif
     }
 
     keys
