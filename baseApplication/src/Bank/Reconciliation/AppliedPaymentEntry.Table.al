@@ -273,8 +273,10 @@ table 1294 "Applied Payment Entry"
 
     var
         CurrencyExchRate: Record "Currency Exchange Rate";
+#pragma warning disable AA0470
         CurrencyMismatchErr: Label 'Currency codes on bank account %1 and ledger entry %2 do not match.';
         AmtCannotExceedErr: Label 'The Amount to Apply cannot exceed %1. This is because the Remaining Amount on the entry is %2 and the amount assigned to other statement lines is %3.';
+#pragma warning restore AA0470
         CannotApplyStmtLineErr: Label 'You cannot apply to %1 %2 because the statement line already contains an application to %3 %4.', Comment = '%1 = Account Type, %2 = Account No., %3 = Account Type, %4 = Account No.';
 
     local procedure CheckApplnIsSameAcc()
@@ -609,34 +611,32 @@ table 1294 "Applied Payment Entry"
         exit(BankAccLedgEntry."Remaining Amount");
     end;
 
-    local procedure GetCustLedgEntryPmtTolAmt() TotalAcceptedPaymentTolerance: Decimal
+    local procedure GetCustLedgEntryPmtTolAmt(): Decimal
     var
         BankAccountReconciliationLine: Record "Bank Acc. Reconciliation Line";
         CustLedgEntry: Record "Cust. Ledger Entry";
     begin
         BankAccountReconciliationLine.Get(Rec."Statement Type", Rec."Bank Account No.", Rec."Statement No.", Rec."Statement Line No.");
+        CustLedgEntry.SetLoadFields("Applies-to ID", "Accepted Payment Tolerance");
         CustLedgEntry.SetRange("Applies-to ID", BankAccountReconciliationLine.GetAppliesToID());
-        if not CustLedgEntry.FindSet() then
+        if CustLedgEntry.IsEmpty() then
             exit(0);
-        repeat
-            TotalAcceptedPaymentTolerance += CustLedgEntry."Accepted Payment Tolerance";
-        until CustLedgEntry.Next() = 0;
-        exit(TotalAcceptedPaymentTolerance);
+        CustLedgEntry.CalcSums("Accepted Payment Tolerance");
+        exit(CustLedgEntry."Accepted Payment Tolerance");
     end;
 
-    local procedure GetVendLedgEntryPmtTolAmt() TotalAcceptedPaymentTolerance: Decimal
+    local procedure GetVendLedgEntryPmtTolAmt(): Decimal
     var
         BankAccountReconciliationLine: Record "Bank Acc. Reconciliation Line";
         VendorLedgerEntry: Record "Vendor Ledger Entry";
     begin
         BankAccountReconciliationLine.Get(Rec."Statement Type", Rec."Bank Account No.", Rec."Statement No.", Rec."Statement Line No.");
+        VendorLedgerEntry.SetLoadFields("Applies-to ID", "Accepted Payment Tolerance");
         VendorLedgerEntry.SetRange("Applies-to ID", BankAccountReconciliationLine.GetAppliesToID());
-        if not VendorLedgerEntry.FindSet() then
+        if VendorLedgerEntry.IsEmpty() then
             exit(0);
-        repeat
-            TotalAcceptedPaymentTolerance += VendorLedgerEntry."Accepted Payment Tolerance";
-        until VendorLedgerEntry.Next() = 0;
-        exit(TotalAcceptedPaymentTolerance);
+        VendorLedgerEntry.CalcSums("Accepted Payment Tolerance");
+        exit(VendorLedgerEntry."Accepted Payment Tolerance");
     end;
 
     procedure GetStmtLineRemAmtToApply(): Decimal
