@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>5f92e0d5-a60e-435f-ae85-71ec28dd3e41</id>
+        <name>_Exclude_PlanConfiguration_</name>
+        <publisher>Microsoft</publisher>
+        <version>24.5.23489.35870</version>
+    </application>
+    <members>
+        <member name="O:Page::System#Azure#Identity#Custom User Groups In Plan">
+            <summary>
+            List page that hold the custom user groups assigned to a plan.
+            </summary>
+        </member>
+        <member name="O:Page::System#Azure#Identity#Default User Groups In Plan">
+            <summary>
+            List page that hold the default user groups assigned to a plan.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#Azure#Identity#Plan Configuration Install">
+            <summary>
+            List page that hold the default user groups assigned to a plan.
+            </summary> 
+        </member>
+        <member name="O:PageExtension::System#Azure#Identity#Plan Configuration Admin RC">
+            <summary>
+            Add the available plan configuration to the Security Admin role center.
+            </summary>
+        </member>
+        <member name="O:PageExtension::System#Azure#Identity#Plan Configuration User Groups">
+            <summary>
+            Adds user groups to plan configurations.
+            </summary>
+        </member>
+    </members>
+</doc>
