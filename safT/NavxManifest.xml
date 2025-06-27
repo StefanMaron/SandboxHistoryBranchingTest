@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="4ce93371-6bd6-4027-a78f-021064ad250e" Name="SAF-T" Publisher="Microsoft" Brief="SAF-T provides a user interface for exporting accounting, tax, and other data required by auditors or authorities." Description="As a part of the audit reporting, companies must be able to export transaction data according to the SAF-T format based on OECD standard. This feature enables using SAF-T format for exporting data within Audit File Export app, where you can specify Standard Chart of Accounts and map other required data to fulfill all requirements." Version="25.1.25873.35923" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/localfunctionality/denmark/how-to-use-saft-audit-files-export" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="4ce93371-6bd6-4027-a78f-021064ad250e" Name="SAF-T" Publisher="Microsoft" Brief="SAF-T provides a user interface for exporting accounting, tax, and other data required by auditors or authorities." Description="As a part of the audit reporting, companies must be able to export transaction data according to the SAF-T format based on OECD standard. This feature enables using SAF-T format for exporting data within Audit File Export app, where you can specify Standard Chart of Accounts and map other required data to fulfill all requirements." Version="25.2.27733.35907" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/localfunctionality/denmark/how-to-use-saft-audit-files-export" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="5280" MaxObjectId="5299" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="a41b0c3e-bf1c-4c97-ad1b-b430a3933ada" Name="Audit File Export" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="a41b0c3e-bf1c-4c97-ad1b-b430a3933ada" Name="Audit File Export" Publisher="Microsoft" MinVersion="25.2.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="dfe6916f-cba8-4973-afdc-1544705c661f" Name="SAF-T Tests" Publisher="Microsoft" />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T23:49:03.1350454Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T20:15:07.5251930Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
