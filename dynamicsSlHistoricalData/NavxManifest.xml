@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="4f3fe3fd-bdc4-4371-8579-d53820b93575" Name="Dynamics SL Historical Data" Publisher="Microsoft" Brief="This extension adds the necessary components to retain historical Dynamics SL data after the cloud migration. Only uninstall this extension if the historical data is no longer needed." Description="This extension adds the necessary components to retain historical Dynamics SL data after the cloud migration. Only uninstall this extension if the historical data is no longer needed." Version="25.3.28755.35989" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2285106" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.3.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="4f3fe3fd-bdc4-4371-8579-d53820b93575" Name="Dynamics SL Historical Data" Publisher="Microsoft" Brief="This extension adds the necessary components to retain historical Dynamics SL data after the cloud migration. Only uninstall this extension if the historical data is no longer needed." Description="This extension adds the necessary components to retain historical Dynamics SL data after the cloud migration. Only uninstall this extension if the historical data is no longer needed." Version="25.4.29661.35902" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2009037" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2285106" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="42800" MaxObjectId="42999" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="58623bfa-0559-4bc2-ae1c-0979c29fd9e0" Name="Intelligent Cloud Base" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T01:20:54.0773100Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-25T20:16:15.0484648Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
