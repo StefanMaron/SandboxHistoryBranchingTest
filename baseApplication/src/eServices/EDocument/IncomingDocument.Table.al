@@ -146,38 +146,6 @@ table 130 "Incoming Document"
             Caption = 'URL';
             Editable = false;
         }
-        field(19; URL1; Text[250])
-        {
-            Caption = 'URL1';
-            Editable = false;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'URL field was introduced';
-            ObsoleteTag = '15.0';
-        }
-        field(20; URL2; Text[250])
-        {
-            Caption = 'URL2';
-            Editable = false;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'URL field was introduced';
-            ObsoleteTag = '15.0';
-        }
-        field(21; URL3; Text[250])
-        {
-            Caption = 'URL3';
-            Editable = false;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'URL field was introduced';
-            ObsoleteTag = '15.0';
-        }
-        field(22; URL4; Text[250])
-        {
-            Caption = 'URL4';
-            Editable = false;
-            ObsoleteState = Removed;
-            ObsoleteReason = 'URL field was introduced';
-            ObsoleteTag = '15.0';
-        }
         field(23; "Vendor Name"; Text[100])
         {
             Caption = 'Vendor Name';
@@ -2436,4 +2404,3 @@ table 130 "Incoming Document"
     begin
     end;
 }
-
