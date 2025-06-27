@@ -1,0 +1,39 @@
+<Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
+  <App Id="3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c" Name="Subscription &amp; Recurring Billing" Publisher="Microsoft" Brief="Sell and manage recurring services" Description="The app enables the selling of recurring services and provides accurate billing for a wide range of pricing models." Version="25.0.23364.35903" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2179727" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.0.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
+  <IdRanges>
+    <IdRange MinObjectId="8000" MaxObjectId="8100" />
+  </IdRanges>
+  <Dependencies />
+  <InternalsVisibleTo>
+    <Module Id="2ac317ef-11a5-4753-92f4-31c84b520c7b" Name="Subscription &amp; Recurring Billing Test" Publisher="Microsoft" />
+    <Module Id="b6bdb244-0e09-4313-b975-24e6343d00df" Name="Subscription &amp; Recurring Billing Plus" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="d4ccd4d9-ea68-4efe-802a-423348ec8d5a" Name="DYCE Essentials" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="c12f11e8-b5a0-4450-a3f5-110b6cd46d1e" Name="DYCE Subscription &amp; Recurring Billing" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="882b7b1e-2a19-4e1a-988d-b8a7cd3254fd" Name="DYCE Usage Based Billing" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="f8e0afc1-75ca-4cc4-ae67-6a567d2668ae" Name="DYCE Easy Bundle Seller" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="7afd8f0f-c178-4272-bb3c-c260c7a4cb71" Name="DYCE Managed Service Providers" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="3860f895-5025-4856-b272-ecb4918bfb22" Name="DYCE Recurring Prepaid Services" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="6be55868-7c39-4363-8df2-b709d0805e73" Name="DYCE Happy Texts" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="018ff6a2-4cf8-4945-b60f-2b40878ef5c4" Name="Subscription &amp; Recurring Billing Plus Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="41bf6cc7-7891-4a8c-827c-fe23266c5a98" Name="DYCE Essentials Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="eb59fb9f-b1b0-47ba-963d-80f38ad130b4" Name="DYCE Subscription &amp; Recurring Billing Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="d8d8a26c-5f2b-41a0-9e06-2b351aee1767" Name="DYCE Usage Based Billing Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="ab5fc040-94a7-4428-9280-66342c6ab703" Name="DYCE Easy Bundle Seller Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="e953ddb9-6c2f-46ce-9c93-e4004244ca28" Name="DYCE Managed Service Providers Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="945dc7a5-c8e5-4206-b82a-16da146c026e" Name="DYCE Recurring Prepaid Services Test" Publisher="Singhammer IT Consulting AG" />
+    <Module Id="6f4cbb6d-236a-4715-a95c-f04e167a85e6" Name="DYCE Happy Texts Test" Publisher="Singhammer IT Consulting AG" />
+  </InternalsVisibleTo>
+  <ScreenShots />
+  <SupportedLocales />
+  <Features>
+    <Feature>TRANSLATIONFILE</Feature>
+    <Feature>GENERATECAPTIONS</Feature>
+  </Features>
+  <PreprocessorSymbols />
+  <SuppressWarnings />
+  <ResourceExposurePolicy AllowDebugging="false" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
+  <KeyVaultUrls />
+  <Source />
+  <Build Timestamp="2025-06-25T20:14:34.7650586Z" CompilerVersion="14.3.23.59384" />
+  <AlternateIds />
+</Package>

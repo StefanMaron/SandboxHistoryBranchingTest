@@ -4,7 +4,7 @@
         <id>ec255f57-31d0-4ca2-b751-f2fa7c745abb</id>
         <name>Shopify Connector</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#Integration#Shopify#Shpfy - Admin">
@@ -76,6 +76,12 @@
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Background Syncs.PayoutsSync(Shpfy Shop@)">
             <summary> 
             Description for PayoutsSync.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Background Syncs.DisputesSync(Shpfy Shop@)">
+            <summary> 
+            Payment Dispute Sync.
             </summary>
             <param name="Shop">Parameter of type Record "Shopify Shop".</param>
         </member>
@@ -356,14 +362,14 @@
             Enum Shpfy Mapping Direction (ID 30101).
             </summary>
         </member>
-        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Metafield Value Type">
-            <summary>
-            Enum Shpfy Metafield Value Type (ID 30102).
-            </summary>
-        </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Synchronization Type">
             <summary>
             Enum Shopify Synchronization Type (ID 30103).
+            </summary>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Weight Unit">
+            <summary>
+            Enum Shpfy Weight Unit (ID 30163).
             </summary>
         </member>
         <member name="O:PageExtension::Microsoft#Integration#Shopify#Shpfy Business Manager RC">
@@ -414,11 +420,6 @@
         <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Cue">
             <summary>
             Table Shpfy Cue (ID 30100).
-            </summary>
-        </member>
-        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Metafield">
-            <summary>
-            Table Shpfy Metafield (ID 30101).
             </summary>
         </member>
         <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Shop">
@@ -1104,24 +1105,6 @@
             Codeunit Shpfy Sync Countries (ID 30107).
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Sync Countries.ImportCountry(JsonObject)">
-            <summary> 
-            Import Country.
-            </summary>
-            <param name="JCountry">Parameter of type JsonObject.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Sync Countries.ImportProvince(JsonObject,Text)">
-            <summary> 
-            Import Province.
-            </summary>
-            <param name="JProvince">Parameter of type JsonObject.</param>
-            <param name="CountrCode">Parameter of type Text.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Sync Countries.SyncCountries">
-            <summary> 
-            Sync Countries.
-            </summary>
-        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Sync Customers">
             <summary>
             Codeunit Shpfy Sync Customers (ID 30123).
@@ -1613,23 +1596,6 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
-        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateFulfillment">
-            <summary>
-            Codeunit Shpfy GQL CreateFulfillment (ID 30215) implements Interface Shpfy IGraphQL.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateFulfillment.GetGraphQL:Text">
-            <summary>
-            GetGraphQL.
-            </summary>
-            <returns>Return value of type Text.</returns>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateFulfillment.GetExpectedCost:Integer">
-            <summary>
-            GetExpectedCost.
-            </summary>
-            <returns>Return value of type Integer.</returns>
-        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateFulfillmentSvc.GetGraphQL:Text">
             <summary>
             GetGraphQL.
@@ -1717,6 +1683,23 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DraftOrderComplete">
+            <summary>
+            Codeunit Shpfy GQL DraftOrderComplete (ID 30318) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DraftOrderComplete.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DraftOrderComplete.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL FFOrdersFromOrder.GetGraphQL:Text">
             <summary>
             GetGraphQL.
@@ -1797,6 +1780,57 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Fulfill Order">
+            <summary>
+            Codeunit Shpfy GQL Fulfill Order (ID 30313) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Fulfill Order.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Fulfill Order.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductOptions">
+            <summary>
+            Codeunit Shpfy GQL GetProductOptions (ID 30345) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductOptions.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductOptions.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL InventoryActivate">
+            <summary>
+            Codeunit Shpfy GQL InventoryActivate (ID 30381) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL InventoryActivate.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL InventoryActivate.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL InventoryEntries">
             <summary>
             Codeunit Shpfy GQL InventoryEntries (ID 30133) implements Interface Shpfy IGraphQL.
@@ -1860,6 +1894,23 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL MarkOrderAsPaid.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL MetafieldsSet">
+            <summary>
+            Codeunit Shpfy GQL MetafieldSet (ID 30168) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL MetafieldsSet.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL MetafieldsSet.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -2090,6 +2141,40 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrders">
+            <summary>
+            Codeunit Shpfy GQL NextRevFulfillOrders (ID 30347) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrders.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrders.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrdLns">
+            <summary>
+            Codeunit Shpfy GQL NextRevFulfillOrdLns (ID 30349) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrdLns.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextRevFulfillOrdLns.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextVariantIds">
             <summary>
             Codeunit Shpfy GQL NextVariantIds (ID 30141) implements Interface Shpfy IGraphQL.
@@ -2216,6 +2301,40 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL OrderTransactions">
+            <summary>
+            Codeunit Shpfy GQL OrderTransactions (ID 30312) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL OrderTransactions.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL OrderTransactions.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payment Terms">
+            <summary>
+            Codeunit Shpfy GQL Payment Terms (ID 30213) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payment Terms.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payment Terms.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductById">
             <summary>
             Codeunit Shpfy GQL ProductById (ID 30146) implements Interface Shpfy IGraphQL.
@@ -2262,6 +2381,91 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductImages.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductMetafieldIds">
+            <summary>
+            Codeunit Shpfy GQL ProductMetafieldIds (ID 30332) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductMetafieldIds.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductMetafieldIds.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete">
+            <summary>
+            Codeunit Shpfy GQL ProductVariantDelete (ID 30344) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrderLines">
+            <summary>
+            Codeunit Shpfy GQL RevFulfillOrderLines (ID 30348) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrderLines.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrderLines.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrders">
+            <summary>
+            Codeunit Shpfy GQL RevFulfillOrders (ID 30346) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrders.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL RevFulfillOrders.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ShipToCountries">
+            <summary>
+            Codeunit Shpfy GQL ShipToCountries (ID 30396) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ShipToCountries.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ShipToCountries.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -2354,6 +2558,23 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL VariantImages.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL VariantMetafieldIds">
+            <summary>
+            Codeunit Shpfy GQL VariantMetafieldIds (ID 30336) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL VariantMetafieldIds.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL VariantMetafieldIds.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -3092,6 +3313,100 @@
             Create Location Filter.
             </summary>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Draft Orders API">
+            <summary>
+            Codeunit Draft Orders API (ID 30159).
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Draft Orders API.CreateDraftOrder(Shpfy Order Header@,Shpfy Order Line@,Dictionary of [Text,Decimal]@):BigInteger">
+            <summary>
+            Creates a draft order in Shopify by constructing and sending a graphQL request.
+            </summary>
+            <param name="TempOrderHeader">Header information for a Shopify order.</param>
+            <param name="TempOrderLine">Line items for a Shopify order.</param>
+            <param name="OrderTaxLines">Tax lines for a Shopify order.</param>
+            <returns>Unique id of the created draft order in Shopify.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Draft Orders API.CompleteDraftOrder(BigInteger):JsonToken">
+            <summary>
+            Completes a draft order in Shopify by converting it to an order.
+            </summary>
+            <param name="DraftOrderId">Draft order id that needs to be completed.</param>
+            <returns>Json response of a created order in Shopify.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Draft Orders API.SetShop(Code[20])">
+            <summary>
+            Sets a global Shopify shop to be used for draft orders api functionality.
+            </summary>
+            <param name="ShopCode">Shopify shop code to be set.</param>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Fulfillment API">
+            <summary>
+            Codeunit Shpfy Fulfillment API (ID 30315).
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Fulfillment API.CreateFulfillment(BigInteger)">
+            <summary>
+            Creates a fulfillment for a provided fulfillment order id.
+            </summary>
+            <param name="FulfillmentOrderId">Fulfillment order id.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Fulfillment API.GetFulfillmentOrderIds(Text,Integer):List of [BigInteger]">
+            <summary>
+            Gets fulfillment order ids for a provided shopify order id.
+            </summary>
+            <param name="OrderId">Shopify order id to get fulfillments from.</param>
+            <param name="NumberOfLines">Number of fulfillment orders to get.</param>
+            <returns>List of fulfillment order ids.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Fulfillment API.SetShop(Code[20])">
+            <summary>
+            Sets a global shopify shop to be used for fulfillment api functionality.
+            </summary>
+            <param name="ShopCode">Shopify shop code to be set.</param>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Posted Invoice Export">
+            <summary>
+            Codeunit Shpfy Posted Invoice Export" (ID 30316).
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Posted Invoice Export.SetShop(Code[20])">
+            <summary> 
+            Sets a global shopify shop to be used for posted invoice export.
+            </summary>
+            <param name="NewShopCode">Shopify shop code to be set.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Posted Invoice Export.ExportPostedSalesInvoiceToShopify(Sales Invoice Header)">
+            <summary>
+            Exports provided posted sales invoice to shopify.
+            </summary>
+            <remarks>
+            If the posted sales invoice isn't exportable, the shopify order id is set to -2. 
+            If shopify order creation fails, the id is set to -1.
+            </remarks>
+            <param name="SalesInvoiceHeader">Posted sales invoice to be exported.</param>
+        </member>
+        <member name="O:PageExtension::Microsoft#Integration#Shopify#Shpfy Sales Invoice Update">
+            <summary>
+            PageExtension Shpfy Sales Invoice Update (ID 30125) extends Record Posted Sales Inv. - Update.
+            </summary>
+        </member>
+        <member name="O:Report::Microsoft#Integration#Shopify#Shpfy Sync Invoices to Shpfy">
+            <summary>
+            Report Shpfy Sync Invoices to Shpfy (ID 30117).
+            </summary>
+        </member>
+        <member name="M:Report::Microsoft#Integration#Shopify#Shpfy Sync Invoices to Shpfy.SetShop(Code[20])">
+            <summary> 
+            Sets a global shopify shop code to be used.
+            </summary>
+            <param name="NewShopCode">Shopify shop code to be set.</param>
+        </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Invoice Header">
+            <summary>
+            Table Shpfy Invoice Header (ID 30156).
+            </summary>
+        </member>
         <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Data Capture List">
             <summary>
             Page Shpfy Data Capture List (ID 30118).
@@ -3141,6 +3456,210 @@
             Set Response.
             </summary>
             <param name="Data">Parameter of type Text.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Metafield API.CreateOrUpdateMetafieldsInShopify(Integer,BigInteger)">
+            <summary>
+            Creates or updates the metafields in Shopify.
+            </summary>
+            <remarks>
+            Only metafields that have been updated in BC since last update in Shopify will be updated.
+            MetafieldSet mutation only accepts 25 metafields at a time, so the function will create multiple queries if needed.
+            </remarks>
+            <param name="ParentTableId"></param>
+            <param name="OwnerId"></param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Metafield API.UpdateMetafields(Text):JsonToken">
+            <summary>
+            Updates the metafields in Shopify.
+            </summary>
+            <param name="MetafieldsQuery">GraphQL query for the metafields.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Metafield API.CreateMetafieldQuery(Shpfy Metafield,TextBuilder)">
+            <summary>
+            Creates a GraphQL query for a metafield.
+            </summary>
+            <param name="MetafieldSet">Metafield record to create the query for.</param>
+            <param name="GraphQuery">Return value: TextBuilder to append the query to.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Metafield API.UpdateMetafieldsFromShopify(JsonArray,Integer,BigInteger)">
+             <summary>
+             Updates the metafields in Business Central from Shopify.
+             </summary>
+             <remarks>
+             Metafields with a value longer than 2048 characters will not be imported.
+             Some metafield types are unsupported in Business Central (i.e. Rating).
+            </remarks>
+             <param name="JMetafields">JSON array of metafields from Shopify.</param>
+             <param name="ParentTableNo">Table id of the parent resource.</param>
+             <param name="OwnerId">Id of the parent resource.</param>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Metafield Type">
+            <summary>
+            Enum Shpfy Metafield Type (ID 30159).
+            </summary>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Metafield Value Type">
+            <summary>
+            Enum Shpfy Metafield Value Type (ID 30102).
+            </summary>
+        </member>
+        <member name="O:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Owner Type">
+            <summary>
+            Interface used to for metafield operations related to metafield owner resource.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Owner Type.GetTableId:Integer">
+            <summary>
+            Returns the table id where the owner record is stored in BC.
+            </summary>
+            <returns>Table id.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Owner Type.RetrieveMetafieldIdsFromShopify(BigInteger):Dictionary of [BigInteger,DateTime]">
+            <summary>
+            Retrieves metafields belonging to the owner resource in a dictionary with the last updated at timestamp.
+            </summary>
+            <param name="OwnerId">Id of the owner resource.</param>
+            <returns>Dictionary of metafield ids and last updated at timestamp.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Owner Type.GetShopCode(BigInteger):Code[20]">
+            <summary>
+            Retrieves the shop code from the owner resource.
+            </summary>
+            <param name="OwnerId">Id of the owner resource.</param>
+            <returns>Shop code.</returns>
+        </member>
+        <member name="O:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Type">
+            <summary>
+            Interface used for validating and editing values of a Shopify Metafield.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Type.HasAssistEdit:Boolean">
+            <summary>
+            Determines if Type defines an Assist Edit dialog.
+            </summary>
+            <returns>True if Type defines an Assist Edit dialog, otherwise false.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Type.IsValidValue(Text):Boolean">
+            <summary>
+            Determines if provided value is valid for Type.
+            </summary>
+            <param name="Value">Value to validate.</param>
+            <returns>True if value is valid, otherwise False.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Type.AssistEdit(Text[2048]@):Boolean">
+            <summary>
+            Opens a dialog to assist in editing the value.
+            </summary>
+            <param name="Value">Value to edit. Value may be modified.</param>
+            <returns>True if value was edited, otherwise False.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IMetafield Type.GetExampleValue:Text">
+            <summary>
+            Returns an example value for the Type.
+            </summary>
+            <returns>Example value.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.OpenForMoney(Decimal,Code[10]):Boolean">
+            <summary>
+            Opens the page for assisting with input of money values.
+            </summary>
+            <param name="Amount">The amount to preset on the page.</param>
+            <param name="CurrencyCode">The currency code to preset on the page.</param>
+            <returns>True if the user clicks OK; otherwise, false.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.GetMoneyValue(Decimal@,Code[10]@)">
+            <summary>
+            Gets the money value and currency code.
+            </summary>
+            <param name="Amount">Return value: The money value.</param>
+            <param name="Currency">Return value: The currency code.</param>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.OpenForDimension(Decimal,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Dimension Type):Boolean">
+            <summary>
+            Opens the page for assisting with input of dimension values.
+            </summary>
+            <param name="Dimension">The dimension to preset on the page.</param>
+            <param name="Unit">The unit of measure to preset on the page.</param>
+            <returns>True if the user clicks OK; otherwise, false.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.GetDimensionValue(Decimal@,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Dimension Type@)">
+            <summary>
+            Gets the dimension value and unit of measure.
+            </summary>
+            <param name="Value">Return value: The dimension value.</param>
+            <param name="Unit">Return value: The unit of measure.</param>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.OpenForVolume(Decimal,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Volume Type):Boolean">
+            <summary>
+            Opens the page for assisting with input of volume values.
+            </summary>
+            <param name="Volume">The volume to preset on the page.</param>
+            <param name="Unit">The unit of measure to preset on the page.</param>
+            <returns>True if the user clicks OK; otherwise, false.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.GetVolumeValue(Decimal@,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Volume Type@)">
+            <summary>
+            Gets the volume value and unit of measure.
+            </summary>
+            <param name="Volume">Return value: The volume value.</param>
+            <param name="Unit">Return value: The unit of measure.</param>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.OpenForWeight(Decimal,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Weight Type):Boolean">
+            <summary>
+            Opens the page for assisting with input of weight values.
+            </summary>
+            <param name="Weight">The weight to preset on the page.</param>
+            <param name="Unit">The unit of measure to preset on the page.</param>
+            <returns>True if the user clicks OK; otherwise, false.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.GetWeightValue(Decimal@,Enum::Microsoft#Integration#Shopify#Shpfy Metafield Weight Type@)">
+            <summary>
+            Gets the weight value and unit of measure.
+            </summary>
+            <param name="Value">Return value: The weight value.</param>
+            <param name="Unit">Return value: The unit of measure.</param>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.OpenForMultiLineText(Text[2048]):Boolean">
+            <summary>
+            Opens the page for assisting with input of multi-line text.
+            </summary>
+            <param name="Text">The text to preset on the page.</param>
+            <returns>True if the user clicks OK; otherwise, false.</returns>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafield Assist Edit.GetMultiLineText(Text[2048]@)">
+            <summary>
+            Gets the multi-line text.
+            </summary>
+            <param name="Text">Return value: The multi-line text.</param>
+        </member>
+        <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Metafields">
+            <summary>
+            Page Shpfy Metafields (ID 30163).
+            </summary>
+        </member>
+        <member name="M:Page::Microsoft#Integration#Shopify#Shpfy Metafields.RunForResource(Integer,BigInteger,Code[20])">
+            <summary>
+            Opens the page displaying metafields for the specified resource.
+            </summary>
+            <param name="ParentTableId">Table id of the resource.</param>
+            <param name="OwnerId">System Id of the resource.</param>
+        </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Metafield">
+            <summary>
+            Table Shpfy Metafield (ID 30101).
+            </summary>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Metafield.GetOwnerType(Integer):Enum::Microsoft#Integration#Shopify#Shpfy Metafield Owner Type">
+            <summary>
+            Get the owner type based on the resources's owner table number.
+            </summary>
+            <param name="ParentTableNo">The owning resource table number.</param>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Metafield.GetOwnerTypeName:Text">
+            <summary>
+            Returns the name of the enum value for the owner type. Used when the full owner resource id needs to be built.
+            </summary>
+            <returns>The name of the owner type.</returns>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Order Fulfillments">
             <summary>
@@ -3655,6 +4174,17 @@
             Table Shpfy Order Tax Line (ID 30122).
             </summary>
         </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Returns API.GetReturnLocations(BigInteger):Dictionary of [BigInteger,BigInteger]">
+            <summary>
+            Get the return locations for return lines.
+            </summary>
+            <param name="ReturnId">Id of the return.</param>
+            <remarks>
+            If item was restocked to multiple locations, we cannot determine the return location for the return line,
+            and the order line id will not be included in the return locations.
+            </remarks>
+            <returns>Dictionary of Order Line Id and Location Id.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Order Risks">
             <summary>
             Codeunit Shpfy Order Risks (ID 30170).
@@ -3677,7 +4207,12 @@
             Description for UpdateOrderRisks.
             </summary>
             <param name="OrderHeader">Parameter of type Record "Shopify Order Header".</param>
-            <param name="JRisks">Parameter of type JsonArray.</param>
+            <param name="JRiskAssesments">Parameter of type JsonArray.</param>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Assessment Sentiment">
+            <summary>
+            Enum Shpfy Assessment Sentiment (ID 30164).
+            </summary>
         </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Risk Level">
             <summary>
@@ -3722,6 +4257,23 @@
             </summary>
             <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Payment Terms API">
+            <summary>
+            Codeunit Shpfy Payment Terms API (ID 30168).
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payment Terms API.PullPaymentTermsCodes">
+            <summary>
+            Synchronizes payment terms from shopify, ensuring that the payment terms are up-to-date with those defined in the shopify store.
+            </summary>
+            <param name="ShopCode">Shopify shop code to be used.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payment Terms API.SetShop(Code[20])">
+            <summary>
+            Sets a global shopify shop to be used form payment terms api functionality.
+            </summary>
+            <param name="ShopCode">Shopify shop code to be set.</param>
+        </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Payment Trans# Source">
             <summary>
             Enum Shpfy Payment Transaction Source (ID 30114).
@@ -3737,6 +4289,11 @@
             Enum Shpfy Payout Status (ID 30128).
             </summary>
         </member>
+        <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Payment Terms Mapping">
+            <summary>
+            Page Shpfy Payment Terms Mapping (ID 30162).
+            </summary>
+        </member>
         <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Payment Transactions">
             <summary>
             Page Shpfy Payment Transactions (ID 30124).
@@ -3750,6 +4307,17 @@
         <member name="O:Report::Microsoft#Integration#Shopify#Shpfy Sync Payments">
             <summary>
             Report Shpfy Sync Payments (ID 30105).
+            </summary>
+        </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Dispute">
+            <summary>
+            Table Shopify Payout (ID 30125).
+            </summary>
+            
+        </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Payment Terms">
+            <summary>
+            Table Shpfy Payment Terms (ID 30157).
             </summary>
         </member>
         <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Payment Transaction">
@@ -3844,6 +4412,36 @@
             </summary>
             <param name="Code">Parameter of type Code[10].</param>
         </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.CreateVariantFromItem(Item@)">
+            <summary>
+            Creates a variant from a given item and adds it to the parent product.
+            </summary>
+            <param name="Item">The item to be added as a variant.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.CheckProductAndShopSettings">
+            <summary>
+            Checks if items can be added as variants to the product. The items cannot be added as variants if:
+            - The product has more than one option.
+            - The UoM as Variant setting is enabled.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.FindDefaultVariantId">
+            <summary>
+            Finds the default variant ID for the product if the product has no variants.
+            If new variants will be added, the default variant will be removed.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.RemoveDefaultVariant">
+            <summary>
+            Removes the default variant if new variants were added to the product.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.SetParentProduct(BigInteger)">
+            <summary>
+            Sets the parent product to which the variant will be added.
+            </summary>
+            <param name="ShopifyProductId">The parent Shopify product ID.</param>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy CreateProdStatusActive">
             <summary>
             Codeunit Shpfy CreateProdStatusActive (ID 30172) implements Interface Shpfy.ICreateProductStatusValue.
@@ -3888,14 +4486,21 @@
             <param name="UoM">Parameter of type Code[10].</param>
             <returns>Return value of type Text.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Product.GetVendorItemNo(Code[20],Code[10],Code[10]):Text">
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Product.GetVendorItemNo(Code[20],Code[10],Code[10]):Code[50]">
             <summary> 
             Get Vendor Item No.
             </summary>
             <param name="ItemNo">Parameter of type Code[20].</param>
             <param name="VariantCode">Parameter of type Code[10].</param>
             <param name="UoM">Parameter of type Code[10].</param>
-            <returns>Return value of type Text.</returns>
+            <returns>Return value of type Code[50].</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Product.CreateTempShopifyVariantFromItem(Item,Shpfy Variant@)">
+            <summary>
+            Creates a temporary Shopify variant with information from an item.
+            </summary>
+            <param name="Item">The item to create the variant from.</param>
+            <param name="TempShopifyVariant">The temporary Shopify variant record set where the variant will be inserted.</param>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Product.SetShop(Code[20])">
             <summary> 
@@ -3995,22 +4600,317 @@
             <param name="JProduct">Parameter of type JsonObject.</param>
             <returns>Return variable "Result" of type Boolean.</returns>
         </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product API.GetProductOptions(BigInteger):Dictionary of [Text,Text]">
+            <summary>
+            Gets all the Product Options for a product.
+            </summary>
+            <param name="ShopifyProductId">Shopify product ID for which the options are to be retrieved.</param>
+            <returns>Dictionary of option IDs and option names.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events">
             <summary>
             Codeunit Shpfy Product Events (ID 30177).
             </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterSetProductTitle(Item,Code[10],Text@)">
+            <summary> 
+            Description for OnAfterSetProductTitle.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="LanguageCode">Parameter of type Code[10].</param>
+            <param name="Title">Parameter of type Text.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterCreateItem(Shpfy Shop,Shpfy Product@,Shpfy Variant,Item@)">
+            <summary> 
+            Raised After Create Item.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterCreateItemVariant(Shpfy Shop,Shpfy Product,Shpfy Variant@,Item,Item Variant@)">
+            <summary> 
+            Raised After Create Item Variant.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterCreateTempShopifyProduct(Item,Shpfy Product@,Shpfy Variant@,Shpfy Tag@)">
+            <summary> 
+            Raised After Temp Shopify Product and Variant are created.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="ShopifyTag">Parameter of type Record "Shopify Tag".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterCreateProductBodyHtml(Code[20],Shpfy Shop,Text@,Code[10])">
+            <summary> 
+            Raised After Create Product Body Html.
+            </summary>
+            <param name="ItemNo">Parameter of type Code[20].</param>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ProductBodyHtml">Parameter of type Text.</param>
+            <param name="LanguageCode">Parameter of type Code[10].</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterFindItemTemplate(Shpfy Shop,Shpfy Product,Shpfy Variant,Code[20]@)">
+            <summary> 
+            Raised After Find Item Template.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="TemplateCode">Parameter of type Code[20].</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterGetBarcode(Code[20],Code[10],Code[10],Text@)">
+            <summary> 
+            Description for OnAfterGetBarcode.
+            </summary>
+            <param name="ItemNo">Parameter of type Code[20].</param>
+            <param name="VariantCode">Parameter of type Code[10].</param>
+            <param name="UoM">Parameter of type Code[10].</param>
+            <param name="Barcode">Parameter of type Text.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeCreateItem(Shpfy Shop,Shpfy Product@,Shpfy Variant,Item@,Boolean@)">
+            <summary> 
+            Raised Before Create Item.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeCreateItemVariant(Shpfy Shop,Shpfy Product,Shpfy Variant@,Item,Item Variant@,Boolean@)">
+            <summary> 
+            Raised Before Create Item Variant.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeCreateItemVariantCode(Shpfy Shop,Shpfy Product,Shpfy Variant@,Item,Code[10]@,Boolean@)">
+            <summary> 
+            Raised Before Create Item Variant Code.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariantCode">Parameter of type Code[10].</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeCreateProductBodyHtml(Code[20],Shpfy Shop,Text@,Boolean@,Code[10])">
+            <summary> 
+            Raised Before Create Product Body Html.
+            </summary>
+            <param name="ItemNo">Parameter of type Code[20].</param>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ProductBodyHtml">Parameter of type Text.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+            <param name="LanguageCode">Parameter of type Code[10].</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeFindItemTemplate(Shpfy Shop,Shpfy Product,Shpfy Variant,Code[20]@,Boolean@)">
+            <summary> 
+            Raised Before Find Item Template.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="TemplateCode">Parameter of type Code[20].</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforGetBarcode(Code[20],Code[10],Code[10],Text@,Boolean@)">
+            <summary> 
+            Description for OnBeforGetBarcode.
+            </summary>
+            <param name="ItemNo">Parameter of type Code[20].</param>
+            <param name="VariantCode">Parameter of type Code[10].</param>
+            <param name="UoM">Parameter of type Code[10].</param>
+            <param name="Barcode">Parameter of type Text.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforSetProductTitle(Item,Code[10],Text@,Boolean@)">
+            <summary> 
+            Description for OnBeforSetProductTitle.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="LanguageCode">Parameter of type Code[10].</param>
+            <param name="Title">Parameter of type Text.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeFindMapping(Enum::Microsoft#Integration#Shopify#Shpfy Mapping Direction,Shpfy Product@,Shpfy Variant@,Item@,Item Variant,Boolean@)">
+            <summary> 
+            Raised Before Find Mapping.
+            </summary>
+            <param name="Direction">Parameter of type enum "Shopify Mapping Direction".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeFindProductMapping(Enum::Microsoft#Integration#Shopify#Shpfy Mapping Direction,Shpfy Product@,Shpfy Variant@,Item@,Item Variant@,Boolean@)">
+            <summary> 
+            Raised Before Find Mapping.
+            </summary>
+            <param name="Direction">Parameter of type enum "Shopify Mapping Direction".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterCalculateUnitPrice(Item,Code[20],Code[20],Shpfy Shop,Shpfy Catalog,Decimal@,Decimal@,Decimal@)">
+            <summary> 
+            Raised After Calculate Unit Price.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="VariantCode">Parameter of type Code[20].</param>
+            <param name="UnitOfMeasure">Parameter of type Code[20].</param>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="Catalog">Parameter of type Record "Shopify Catalog".</param>
+            <param name="UnitCost">Parameter of type Decimal.</param>
+            <param name="Price">Parameter of type Decimal.</param>
+            <param name="ComparePrice">Parameter of type Decimal.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeCalculateUnitPrice(Item,Code[20],Code[20],Shpfy Shop,Shpfy Catalog,Decimal@,Decimal@,Decimal@,Boolean@)">
+            <summary> 
+            Raised Before Calculate Unit Price.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="VariantCode">Parameter of type Code[20].</param>
+            <param name="UnitOfMeasure">Parameter of type Code[20].</param>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="Catalog">Parameter of type Record "Shopify Catalog".</param>
+            <param name="UnitCost">Parameter of type Decimal.</param>
+            <param name="Price">Parameter of type Decimal.</param>
+            <param name="ComparePrice">Parameter of type Decimal.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterUpdateItem(Shpfy Shop,Shpfy Product@,Shpfy Variant,Item@)">
+            <summary> 
+            Raised After Update Item.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterUpdateItemVariant(Shpfy Shop,Shpfy Product,Shpfy Variant@,Item,Item Variant@)">
+            <summary> 
+            Raised After Update Item Variant.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeUpdateItem(Shpfy Shop,Shpfy Product@,Shpfy Variant,Item@,Boolean@)">
+            <summary> 
+            Raised Before Update Item.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeUpdateItemVariant(Shpfy Shop,Shpfy Product,Shpfy Variant@,Item,Item Variant@,Boolean@)">
+            <summary> 
+            Raised Before Update Item Variant.
+            </summary>
+            <param name="Shop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ItemVariant">Parameter of type Record "Item Variant".</param>
+            <param name="Handled">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeSendCreateShopifyProduct(Shpfy Shop,Shpfy Product@,Shpfy Variant@,Shpfy Tag@)">
+            <summary> 
+            Raised Before Send Create Shopify Product.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeSendUpdateShopifyProduct(Shpfy Shop,Shpfy Product@,Shpfy Product)">
+            <summary> 
+            Raised Before Send Update Shopify Product.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shopify Product".</param>
+            <param name="xShopifyProduct">Parameter of type Record "Shopify Product".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeSendAddShopifyProductVariant(Shpfy Shop,Shpfy Variant@)">
+            <summary> 
+            Raised Before Send Add Shopify Product Variant.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnBeforeSendUpdateShopifyProductVariant(Shpfy Shop,Shpfy Variant@,Shpfy Variant)">
+            <summary> 
+            Raised Before Send Update Shopify Product Variant.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="xShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnDoUpdateItemBeforeModify(Shpfy Shop@,Shpfy Product@,Item@,Boolean@)">
+            <summary> 
+            Raised Before Modify on Items.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyProduct">Parameter of type Record "Shpfy Product".</param>
+            <param name="Item">Parameter of type Record "Item".</param>
+            <param name="IsModified">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnDoUpdateItemVariantBeforeModify(Shpfy Shop@,Shpfy Variant@,Item Variant@,Boolean@)">
+            <summary> 
+            Raised Before Modify Items Variant.
+            </summary>
+            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
+            <param name="ShopifyVariant">Parameter of type Record "Shpfy Variant".</param>
+            <param name="ItemVariant">Parameter of type Record "Shpfy Variant".</param>
+            <param name="IsModified">Parameter of type Boolean.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterUpdateItemPicture(Item@,Text,InStream)">
+            <summary> 
+            Raised After Modify Item Picture.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ImageUrl">Parameter of type Text.</param>
+            <param name="InStream">Parameter of type InStream.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterFillInShopifyProductFields(Item,Shpfy Product@)">
+            <summary> 
+            Raised After Shopify Product fields are filled from Business Central Item. These fields are sent to Shopify when creating or updating a product.
+            </summary>
+            <param name="Item">Parameter of type Record Item.</param>
+            <param name="ShopifyProduct">Parameter of Record "Shopify Product".</param>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export">
             <summary>
             Codeunit Shpfy Product Export (ID 30178).
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.CreateProductBody(Code[20]):Text">
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.CreateProductBody(Code[20],Code[10]):Text">
             <summary> 
-            Create Product Body.
+            Creates html body for a product from extended text, marketing text and attributes.
             </summary>
-            <param name="ItemNo">Parameter of type Code[20].</param>
-            <returns>Return variable "ProductBodyHtml" of type Text.</returns>
+            <param name="ItemNo">Item number.</param>
+            <param name="LanguageCode">Language code to look for translations.</param>
+            <returns>Product body html.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.CreateProductVariant(BigInteger,Item,Item Unit of Measure)">
             <summary> 
@@ -4124,15 +5024,15 @@
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.UpdateProductVariant(Shpfy Variant,Item,Item Unit of Measure)">
             <summary> 
-            Update Product Variant.
+            Updates a product variant in Shopify. Used when item variant does not exist in BC, but variants per UoM are maintained in Shopify.
             </summary>
-            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
-            <param name="Item">Parameter of type Record Item.</param>
-            <param name="ItemUnitofMeasure">Parameter of type Record "Item Unit of Measure".</param>
+            <param name="ShopifyVariant">Shopify variant to update.</param>
+            <param name="Item">Item where information is taken from.</param>
+            <param name="ItemUnitofMeasure">Item unit of measure where information is taken from.</param>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.UpdateProductVariant(Shpfy Variant@,Item,Item Variant)">
             <summary> 
-            Update Product Variant.
+            Updates a Product Variant in Shopify. Used when variants per UoM are not maintained in Shopify.
             </summary>
             <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
             <param name="Item">Parameter of type Record Item.</param>
@@ -4140,7 +5040,7 @@
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export.UpdateProductVariant(Shpfy Variant,Item,Item Variant,Item Unit of Measure)">
             <summary> 
-            Update Product Variant.
+            Update a Product Variant in Shopify. Used when item variant exists in BC and variants per UoM are maintained in Shopify.
             </summary>
             <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
             <param name="Item">Parameter of type Record Item.</param>
@@ -4402,11 +5302,12 @@
             <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
             <returns>Return variable "Found" of type Boolean.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.AddProductVariant(Shpfy Variant@)">
-            <summary> 
-            Add Product Variant.
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.AddProductVariant(Shpfy Variant@):Boolean">
+            <summary>
+            Adds a product variant to Shopify.
             </summary>
-            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
+            <param name="ShopifyVariant">Shopify Variant record to add.</param>
+            <returns>True if the variant was added successfully; otherwise, false.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.FindShopifyVariantByBarcode(Shpfy Variant@):Boolean">
             <summary> 
@@ -4422,7 +5323,7 @@
             <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
             <returns>Return value of type Boolean.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.GetImageData(JsonObject,Dictionary of [BigInteger,Text]@)">
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.GetImageData(JsonToken,Dictionary of [BigInteger,Text]@)">
             <summary> 
             Description for GetImageData.
             </summary>
@@ -4480,6 +5381,12 @@
             <param name="JVariant">Parameter of type JsonObject.</param>
             <returns>Return variable "Result" of type Boolean.</returns>
         </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.DeleteProductVariant(BigInteger)">
+            <summary>
+            Deletes a product variant from Shopify.
+            </summary>
+            <param name="ShopifyVariantId">Id of the Shopify variant to delete.</param>
+        </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Cr# Prod# Status Value">
             <summary>
             Enum Shpfy Create Product Status Value (ID 30129) implements Interface Shpfy ICreateProductStatusValue.
@@ -4532,6 +5439,17 @@
             <summary>
             Page Shpfy Variants (ID 30127).
             </summary>
+        </member>
+        <member name="O:Report::Microsoft#Integration#Shopify#Shpfy Add Item As Variant">
+            <summary>
+            A report to add items as variants to a parent product.
+            </summary>
+        </member>
+        <member name="M:Report::Microsoft#Integration#Shopify#Shpfy Add Item As Variant.SetParentProduct(BigInteger)">
+            <summary>
+            Sets the parent product to which items will be added as variants.
+            </summary>
+            <param name="NewParentProductNo">The parent product number.</param>
         </member>
         <member name="O:Report::Microsoft#Integration#Shopify#Shpfy Add Item to Shopify">
             <summary>
@@ -4693,18 +5611,6 @@
             Codeunit Shpfy Transactions (ID 30194).
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Transactions.UpdateTransactionInfos(BigInteger)">
-            <summary> 
-            Description for UpdateTransactionInfos.
-            </summary>
-            <param name="OrderId">Parameter of type BigInteger.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Transactions.UpdateTransactionInfos(Shpfy Order Header)">
-            <summary> 
-            Description for UpdateTransactionInfos.
-            </summary>
-            <param name="OrderHeader">Parameter of type Record "Shopify Order Header".</param>
-        </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Transaction Status">
             <summary>
             Enum Shpfy Transaction Status (ID 30133).
@@ -4755,10 +5661,120 @@
             Table Shpfy Payment Method Mapping (ID 30134).
             </summary>
         </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Suggest Payment">
+            <summary>
+            Table Shpfy Suggest Payment (ID 30154).
+            </summary>
+        </member>
         <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Transaction Gateway">
             <summary>
             Table Shpfy Transaction Gateway (ID 30135).
             </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Translation API.PullLanguages(Code[20])">
+            <summary>
+            Retrieves the languages for a shop from Shopify and updates the table with the new languages. 
+            </summary>
+            <remarks>
+            Primary language is skipped as it is handled by the Shop."Language Code" field.
+            </remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Translation API.CreateOrUpdateTranslations(Shpfy Translation@):JsonToken">
+            <summary>
+            Creates or updates a translation for a product in Shopify.
+            </summary>
+            <param name="ProductId">Product Id in Shopify</param>
+            <param name="TempTranslation">Temporary record set with product translations</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Translation API.RetrieveTranslatableContentDigests(Enum::Microsoft#Integration#Shopify#Shpfy Resource Type,BigInteger):Dictionary of [Text,Text]">
+            <summary>
+            Retrieves the translatable content digests for a resource in Shopify.
+            </summary>
+            <param name="ResourceType">Type of the resource to retrieve the digests</param>
+            <param name="ResourceId">Id of the resource to retrieve the digests</param>
+            <returns>Dictionary with the translatable content digests</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Translation Mgt#.GetItemTranslation(Code[20],Code[10],Code[10]):Text[100]">
+            <summary>
+            Returns the translation of an item or item variant.
+            </summary>
+            <param name="ItemNo">Item No to find translation for.</param>
+            <param name="VariantCode">Variant Code to find translation for.</param>
+            <param name="LanguageCode">Language Code to find translation for.</param>
+            <returns>Translation of the item or item variant, or blank if not found.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy ICreate Translation.CreateTranslation(Variant,Shpfy Language,Shpfy Translation@,Dictionary of [Text,Text])">
+            <summary>
+            Create a translation record for the given resource and language.
+            Translation record is only created if the translation is not already present in the Shopify.
+            These records are used to create the query for updating the translation in Shopify.
+            </summary>
+            <param name="RecVariant">Variant record of the resource for which the translation is to be created.</param>
+            <param name="ShopifyLanguage">Language record for which the translation is to be created.</param>
+            <param name="TempTranslation">Temporary translation record set where the translation will be stored.</param>
+            <param name="Digests">Dictionary of translatable content digests for the resource.</param>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Language.AddLanguage(Shpfy Shop,Text[2])">
+            <summary>
+            Adds a language to the table.
+            </summary>
+            <param name="Shop">Shop the language belongs to.</param>
+            <param name="LocaleText">Locale of the language.</param>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Translation.GetValue:Text">
+            <summary> 
+            Gets the value of the translation as text
+            </summary>
+            <returns>Translation value as text</returns>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Translation.SetValue(Text)">
+            <summary> 
+            Sets the value of the translation
+            </summary>
+            <param name="NewTranslation">New value of the translation</param>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Translation.AddTranslation(Text[2],Text,Text,Text)">
+            <summary>
+            Adds a new translation to the record if it's different than the one in the database. 
+            Resource Type and Id should be already set wher calling this function.
+            </summary>
+            <param name="NewLocale">Locale of the translation</param>
+            <param name="TranslationKey">Key used to destingiush translations in Shopify</param>
+            <param name="Digest">Digest of the original translatable content</param>
+            <param name="TranslationText">Text of the translation</param>
+        </member>
+        <member name="M:Table::Microsoft#Integration#Shopify#Shpfy Translation.HasTranslationChanged(Shpfy Translation@):Boolean">
+            <summary>
+            Determines if the translation of an item has changed since last sync.
+            </summary>
+            <param name="TempTranslation">Temporary record containing the new translations.</param>
+            <returns>True if the translation has changed, false otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Mtfld Type Money.TryExtractValues(Text,Decimal@,Code[10]@):Boolean">
+            <summary>
+            Tried to extract the amount and currency code from the JSON string.
+            </summary>
+            <param name="Value">JSON string with the following format: {"amount": "5.99", "currency_code": "CAD"}</param>
+            <param name="Amount">Return value: the amount extracted from the JSON string.</param>
+            <param name="CurrencyCode">Return value: the currency code extracted from the JSON string.</param>
+            <returns>True if no errors occurred during the extraction.</returns>
+        </member>
+        <member name="O:Codeunit::Shpfy GQL Get Fulfillments">
+            <summary>
+            Codeunit Shpfy GQL Get Fulfillments (ID 30317) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Shpfy GQL Get Fulfillments.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Shpfy GQL Get Fulfillments.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
         </member>
     </members>
 </doc>
