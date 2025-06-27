@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Fixed Asset Depreciation for India" ControlGUID="{0a817def-ca0f-4ceb-95e1-cbea4c64d3b8}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18633" DepartmentCategory="Administration" RunObjectSrcTable="18633" ControlGUID="{ab195fea-61fa-4984-bbe1-3ea488199c0b}" Name="Fixed Asset Shifts" CaptionML="ENU=Fixed Asset Shifts" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 784014999 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 784014999 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18631" DepartmentCategory="Administration" RunObjectSrcTable="18631" ControlGUID="{87cb5290-aa66-4a71-9eb3-db9572d4b39d}" Name="FA Accounting Periods Inc. Tax" CaptionML="ENU=Fixed Asset Accounting Periods Inc. Tax" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1955792353 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1955792353 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18631" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{727de621-0dc6-480d-ab69-8e2e693b5f08}" Name="Calculate FA Depreciation" CaptionML="ENU=Calculate Depreciation Report" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=write down fixed asset" CaptionTranslationKey="Report 3755212302 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3755212302 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Fixed Asset Depreciation for India" ControlGUID="{63283419-aa23-4fa6-bbe1-5d09b9187b06}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18631" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{25999e92-38a4-4553-a4f4-24a73c64d92e}" Name="Calculate FA Depreciation" CaptionML="ENU=Calculate Depreciation Report" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=write down fixed asset" CaptionTranslationKey="Report 3755212302 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3755212302 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18631" DepartmentCategory="Administration" RunObjectSrcTable="18631" ControlGUID="{ea8289d5-fbf5-4753-b114-11e6e4c654c7}" Name="FA Accounting Periods Inc. Tax" CaptionML="ENU=Fixed Asset Accounting Periods Inc. Tax" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1955792353 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1955792353 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18633" DepartmentCategory="Administration" RunObjectSrcTable="18633" ControlGUID="{eb11f46c-6a2f-4e86-aee9-d1df20f09791}" Name="Fixed Asset Shifts" CaptionML="ENU=Fixed Asset Shifts" ApplicationArea="#FixedAssets" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 784014999 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 784014999 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="5601" TargetType="Page" />
-    <ActionChange TargetID="5615" TargetType="Page" />
-    <ActionChange TargetID="5666" TargetType="Page" />
     <ActionChange TargetID="5610" TargetType="Page" />
-    <ActionChange TargetID="5600" TargetType="Page" />
     <ActionChange TargetID="5628" TargetType="Page" />
     <ActionChange TargetID="5629" TargetType="Page" />
+    <ActionChange TargetID="5666" TargetType="Page" />
+    <ActionChange TargetID="5600" TargetType="Page" />
+    <ActionChange TargetID="5615" TargetType="Page" />
+    <ActionChange TargetID="5601" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
