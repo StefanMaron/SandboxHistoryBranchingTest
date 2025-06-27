@@ -15,7 +15,7 @@ codeunit 30344 "Shpfy GQL UpdateProductOption" implements "Shpfy IGraphQL"
     begin
         exit('{"query": "mutation { productOptionUpdate(productId: \"gid://shopify/Product/{{ProductId}}\", option: {id: \"gid://shopify/ProductOption/{{OptionId}}\", name: \"{{OptionName}}\"}) { product { id } userErrors { field message } } }"}');
     end;
-    
+
     /// <summary>
     /// GetExpectedCost.
     /// </summary>
