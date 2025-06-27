@@ -4,7 +4,7 @@
         <id>e6328152-bb29-4664-9dae-3bc7eaae1fd8</id>
         <name>Email - Outlook REST API</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Email#Email - OAuth Client.GetAccessToken(Text@)">
@@ -62,6 +62,54 @@
             <error>User is external and cannot authenticate to the exchange server.</error>
             <param name="AccessToken">Access token of the account.</param>
             <param name="MessageJson">The JSON representing the email message.</param>
+        </member>
+        <member name="O:Interface::System#Email#Email - Outlook API Client v3">
+            <summary>
+            Interface for the Email - Outlook API Client v3 which allows retrieval of emails, replying to emails and marking emails as read.
+            </summary>
+        </member>
+        <member name="M:Interface::System#Email#Email - Outlook API Client v3.RetrieveEmails(SecretText,Boolean,Email - Outlook Account):JsonArray">
+            <summary>
+            Retrieves the emails from the Outlook API.
+            </summary>
+            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
+            <param name="MarkAsRead">Whether to mark the retrieved email as read.</param>
+            <param name="OutlookAccount">The email account to retrieve emails from.</param>
+            <param name="EmailInbox">The emails retrieved from exchange.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email - Outlook API Client v3.RetrieveEmail(SecretText,Text[250],Text,Boolean):JsonObject">
+            <summary>
+            Retrieves an email from the Outlook API.
+            </summary>
+            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
+            <param name="EmailAddress">The email address of the mailbox.</param>
+            <param name="ExternalMessageId">The external message id of the message to retrieve.</param>
+            <returns>The json containing the information of the email.</returns>
+        </member>
+        <member name="M:Interface::System#Email#Email - Outlook API Client v3.CreateDraftReply(SecretText,Text[250],Text):Text">
+            <summary>
+            Creates a draft reply to a specific email.
+            </summary>
+            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
+            <param name="EmailAddress">The email address of the mailbox.</param>
+            <param name="ExternalMessageId">The external message id of the message to create a reply for.</param>
+            <returns>The external message id of the created draft.</returns>
+        </member>
+        <member name="M:Interface::System#Email#Email - Outlook API Client v3.ReplyEmail(SecretText,Text[250],Text,Text)">
+            <summary>
+            Replies to an email.
+            </summary>
+            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
+            <param name="EmailAddress">The email address of the mailbox.</param>
+            <param name="EmailMessage">The email message containg the response for replying to the email.</param>
+        </member>
+        <member name="M:Interface::System#Email#Email - Outlook API Client v3.MarkEmailAsRead(SecretText,Text[250],Text)">
+            <summary>
+            Marks an email as read.
+            </summary>
+            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
+            <param name="EmailAddress">The email address of the mailbox.</param>
+            <param name="ExternalMessageId">The external message id to be marked as read.</param>
         </member>
     </members>
 </doc>
