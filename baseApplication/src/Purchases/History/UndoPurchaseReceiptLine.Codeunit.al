@@ -54,11 +54,13 @@ codeunit 5813 "Undo Purchase Receipt Line"
         JobItem: Boolean;
         NextLineNo: Integer;
 
+#pragma warning disable AA0074
         Text000: Label 'Do you really want to undo the selected Receipt lines?';
         Text001: Label 'Undo quantity posting...';
         Text002: Label 'There is not enough space to insert correction lines.';
         Text003: Label 'Checking lines...';
         Text004: Label 'This receipt has already been invoiced. Undo Receipt can be applied only to posted, but not invoiced receipts.';
+#pragma warning restore AA0074
         AllLinesCorrectedErr: Label 'All lines have been already corrected.';
         AlreadyReversedErr: Label 'This receipt has already been reversed.';
 
@@ -353,6 +355,8 @@ codeunit 5813 "Undo Purchase Receipt Line"
 
     local procedure ReapplyJobConsumptionFromApplyToEntryList(PurchRcptHeader: Record "Purch. Rcpt. Header"; PurchRcptLine: Record "Purch. Rcpt. Line"; ItemJnlLine: Record "Item Journal Line"; var TempApplyToEntryList: Record "Item Ledger Entry" temporary)
     var
+        TempItemLedgerEntry: Record "Item Ledger Entry" temporary;
+        ShowAppliedEntries: Codeunit "Show Applied Entries";
         IsHandled: Boolean;
     begin
         IsHandled := false;
@@ -362,7 +366,15 @@ codeunit 5813 "Undo Purchase Receipt Line"
 
         if TempApplyToEntryList.FindSet() then
             repeat
-                UndoPostingMgt.ReapplyJobConsumption(TempApplyToEntryList."Entry No.");
+                //negative purchase receipt linked with job
+                if (TempApplyToEntryList."Entry Type" = TempApplyToEntryList."Entry Type"::Purchase) and (TempApplyToEntryList."Document Type" = TempApplyToEntryList."Document Type"::"Purchase Receipt") and (TempApplyToEntryList.Quantity < 0) and (TempApplyToEntryList."Job No." <> '') then begin
+                    ShowAppliedEntries.FindAppliedEntries(TempApplyToEntryList, TempItemLedgerEntry);
+                    TempItemLedgerEntry.FindSet();
+                    repeat
+                        UndoPostingMgt.ReapplyJobConsumption(TempItemLedgerEntry."Entry No.");
+                    until TempItemLedgerEntry.Next() = 0;
+                end else
+                    UndoPostingMgt.ReapplyJobConsumption(TempApplyToEntryList."Entry No.");
             until TempApplyToEntryList.Next() = 0;
     end;
 

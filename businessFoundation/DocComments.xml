@@ -4,9 +4,124 @@
         <id>f3552374-a1f2-4356-848e-196002525837</id>
         <name>Business Foundation</name>
         <publisher>Microsoft</publisher>
-        <version>24.5.23489.35993</version>
+        <version>25.0.23364.35903</version>
     </application>
     <members>
+        <member name="O:Table::Microsoft#Foundation#AuditCodes#Reason Code">
+            <summary>
+            Reason codes supplement the source codes and are used to indicate why an entry was created.
+            </summary>
+            <remarks>
+            https://learn.microsoft.com/en-us/dynamics365/business-central/finance-setup-trail-codes
+            </remarks>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Reason Code.Code[10]">
+            <summary>
+            The reason code. Use codes that are easy to remember and descriptive.
+            </summary>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Reason Code.Description[100]">
+            <summary>
+            The description field. Enter an explanatory text for the code.
+            </summary>
+        </member>
+        <member name="O:Page::Microsoft#Foundation#AuditCodes#Reason Codes">
+            <summary>
+            Reason codes supplement the source codes and are used to indicate why an entry was created.
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Reason Codes.content.Control1.Code">
+            <summary>
+            Specifies a reason code to attach to the entry.
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Reason Codes.content.Control1.Description">
+            <summary>
+            Specifies a description of what the code stands for.
+            </summary>
+        </member>
+        <member name="O:Table::Microsoft#Foundation#AuditCodes#Return Reason">
+            <summary>
+            Return reason codes indicate why a product was returned.
+            </summary>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Return Reason.Code[10]">
+            <summary>
+            The return reason code. Use codes that are easy to remember and descriptive.
+            </summary>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Return Reason.Description[100]">
+            <summary>
+            The description field. Enter an explanatory text for the code.
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Return Reasons.content.Control1.Code">
+            <summary>
+            The return reason code. Use codes that are easy to remember and descriptive.
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Return Reasons.content.Control1.Description">
+            <summary>
+            The description field. Enter an explanatory text for the code.
+            </summary>
+        </member>
+        <member name="O:Table::Microsoft#Foundation#AuditCodes#Source Code">
+            <summary>
+            Source code table. Source codes are used to identify the source of a transaction.
+            </summary>
+            <remarks>
+            https://learn.microsoft.com/en-us/dynamics365/business-central/finance-setup-trail-codes
+            </remarks>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Source Code.Code[10]">
+            <summary>
+            The source code. Use codes that are easy to remember and descriptive.
+            </summary>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Source Code.Description[100]">
+            <summary>
+            The description field. Enter an explanatory text for the code.
+            </summary>
+        </member>
+        <member name="O:Page::Microsoft#Foundation#AuditCodes#Source Codes">
+            <summary>
+            Source codes are used to categorize the source of a transaction.
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Source Codes.content.Control1.Code">
+            <summary>
+            Specifies the source code. 
+            </summary>
+        </member>
+        <member name="C:Page::Microsoft#Foundation#AuditCodes#Source Codes.content.Control1.Description">
+            <summary>
+            Specifies a description of what the code stands for.
+            </summary>
+        </member>
+        <member name="O:Page::Microsoft#Foundation#AuditCodes#Source Code Setup">
+            <summary>
+            Source codes are used to categorize the source of a transaction.
+            </summary>
+            <remarks>
+            This page is used to set up source codes that are used to categorize the source of a transaction. 
+            Each feature that introduces a new transaction source should add a field to set up a default source code.
+            </remarks>
+        </member>
+        <member name="O:Table::Microsoft#Foundation#AuditCodes#Source Code Setup">
+            <summary>
+            Source codes are used to categorize the source of a transaction.
+            </summary>
+            <remarks>
+            https://learn.microsoft.com/en-us/dynamics365/business-central/finance-setup-trail-codes
+            This page is used to set up source codes that are used to categorize the source of a transaction. 
+            Each feature that introduces a new transaction source should add a field to set up a default source code.
+            </remarks>
+        </member>
+        <member name="F:Table::Microsoft#Foundation#AuditCodes#Source Code Setup.Primary Key[10]">
+            <summary>
+            The primary key field of the setup record. A blank is used as default.
+            </summary>
+        </member>
         <member name="O:Codeunit::Microsoft#Foundation#NoSeries#No# Series - Batch">
             <summary>
             Provides an interface for interacting with number series.
@@ -531,14 +646,33 @@
             </summary>
             <returns>Whether it is possible that the implementation will produce gaps.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series Installer.TriggerMovedTableSchemaSanityCheck">
+        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series Cop# Add Intent.Build(JsonObject@):Dictionary of [Text,Integer]">
             <summary>
-            This method is used to ensure that the runtime metadata matches the schema for moved tables.
+            Build the prompts for generating new number series.
             </summary>
-            <remarks>
-            The if .. then statements ensure the code does not fail when the tables are empty. The presence of data is not important, the FindFirst will trigger a schema check.
-            Should this code fail it would indicate a bug in the server code. The code is not expected to fail.
-            </remarks>
+            <param name="Arguments">Function Arguments retrieved from LLM</param>
+            <returns></returns>
+            <remarks> This function is used to build the prompts for generating new number series. The prompts are built based on the tables and patterns specified in the input. If no tables are specified, all tables with number series are used. If no patterns are specified, default patterns are used. In case number of tables can't be pasted in one prompt, due to token limits, function chunk result into several messages, that need to be called separately</remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series Cop# Change Intent.Build(JsonObject@):Dictionary of [Text,Integer]">
+            <summary>
+            Build the prompts for modifying existing number series.
+            </summary>
+            <param name="Arguments">Function Arguments retrieved from LLM</param>
+            <returns></returns>
+            <remarks> This function is used to build the prompts for modifying existing series. The prompts are built based on the tables and patterns specified in the input. Tables should be specified. If no patterns are specified, default patterns are used. In case number of tables can't be pasted in one prompt, due to token limits, function chunk result into several messages, that need to be called separately</remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#Record Match Impl#.CalculateStringNearness(Text,Text,Integer,Integer):Integer">
+            <summary>
+            Computes a nearness score between strings. Nearness is based on repeatedly finding longest common substrings.
+            Substring matches below Threshold are not considered.
+            Normalizing factor is the max value returned by this procedure.
+            </summary>
+            <param name="FirstString">First string to match</param>
+            <param name="SecondString">Second string to match</param>
+            <param name="Threshold">Substring matches below Threshold are not considered</param>
+            <param name="NormalizingFactor">Max value returned by this procedure</param>
+            <returns>A number between 0 and NormalizingFactor, representing how much of the strings was matched</returns>
         </member>
     </members>
 </doc>
