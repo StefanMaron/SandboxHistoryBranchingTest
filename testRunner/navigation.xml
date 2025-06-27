@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
+  <ActionContainers ActionContainerType="Departments">
+    <Actions xsi:type="ActionGroupDefinition" Caption="Test Runner" ControlGUID="{aa877ca8-4a85-49e4-b409-e8e2c055898d}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="130451" DepartmentCategory="Administration" RunObjectSrcTable="130450" ControlGUID="{4494e2eb-9a73-408c-8fcd-361887482f78}" Name="AL Test Tool" AccessByObjectType="TableData" CaptionML="ENU=AL Test Tool" AccessByObjectID="130450" AccessByPermissionMask="15" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1579170981 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1579170981 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="130455" DepartmentCategory="Administration" RunObjectSrcTable="130450" ControlGUID="{563da971-7f04-4cdf-8f46-5805108e1038}" Name="Command Line Test Tool" AccessByObjectType="TableData" CaptionML="ENU=Command Line Test Tool" AccessByObjectID="130450" AccessByPermissionMask="15" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1018362353 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1018362353 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="130460" DepartmentCategory="Administration" RunObjectSrcTable="2000000049" ControlGUID="{63822dec-8423-4618-9aa6-6dbb3e2b1a1f}" Name="AL Code Coverage" CaptionML="ENU=Code Coverage" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3453384002 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3453384002 - Property 3863440606" />
+    </Actions>
+  </ActionContainers>
+</NavigationDefinition>
