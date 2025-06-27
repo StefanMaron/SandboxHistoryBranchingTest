@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Bank.Check;
 
 using Microsoft.Bank.BankAccount;
@@ -192,7 +196,7 @@ codeunit 367 CheckManagement
         FinancialVoidCheckPreValidation(CheckLedgEntry);
 
         Clear(ConfirmFinancialVoid);
-        
+
         IsHandled := false;
         OnFinancialVoidCheckOnBeforeConfirmFinancialVoid(CheckLedgEntry, IsHandled);
         if not IsHandled then begin
@@ -898,7 +902,13 @@ codeunit 367 CheckManagement
     var
         GenJnlLine2: Record "Gen. Journal Line";
         Currency: Record Currency;
+        IsHandled: Boolean;
     begin
+        IsHandled := false;
+        OnBeforePostRoundingAmount(BankAcc, CheckLedgEntry, BankAccLedgEntry2, PostingDate, RoundingAmount, IsHandled);
+        if IsHandled then
+            exit;
+
         Currency.Get(BankAcc."Currency Code");
         GenJnlLine2.Init();
         GenJnlLine2."System-Created Entry" := true;
@@ -1161,6 +1171,11 @@ codeunit 367 CheckManagement
 
     [IntegrationEvent(false, false)]
     local procedure OnFinancialVoidCheckOnBeforeConfirmFinancialVoid(var CheckLedgEntry: Record "Check Ledger Entry"; var IsHandled: Boolean);
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforePostRoundingAmount(var BankAcc: Record "Bank Account"; var CheckLedgEntry: Record "Check Ledger Entry"; BankAccLedgEntry2: Record "Bank Account Ledger Entry"; var PostingDate: Date; var RoundingAmount: Decimal; var IsHandled: Boolean)
     begin
     end;
 }

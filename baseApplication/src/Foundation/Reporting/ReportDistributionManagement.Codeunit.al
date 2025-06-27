@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Foundation.Reporting;
 
 using Microsoft.EServices.EDocument;
@@ -341,7 +345,7 @@ codeunit 452 "Report Distribution Management"
     end;
 
     [Scope('OnPrem')]
-    procedure SendXmlEmailAttachment(DocumentVariant: Variant; DocumentFormat: Code[20]; ServerEmailBodyFilePath: Text[250]; SendToEmailAddress: Text[250])
+    procedure SendXmlEmailAttachment(DocumentVariant: Variant; DocumentFormat: Code[20]; ServerEmailBodyFilePath: Text[250]; SendToEmailAddress: Text[250]; ReportUsage: Enum "Report Selection Usage")
     var
         ElectronicDocumentFormat: Record "Electronic Document Format";
         Customer: Record Customer;
@@ -351,7 +355,6 @@ codeunit 452 "Report Distribution Management"
         DocumentMailing: Codeunit "Document-Mailing";
         ReceiverRecord: RecordRef;
         ClientFileName: Text[250];
-        ReportUsage: Enum "Report Selection Usage";
     begin
         OnBeforeSendXmlEmailAttachment(ElectronicDocumentFormat, Customer, DocumentSendingProfile);
 
