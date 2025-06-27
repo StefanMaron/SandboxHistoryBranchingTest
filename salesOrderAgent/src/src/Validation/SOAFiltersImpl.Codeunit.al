@@ -3,10 +3,10 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.CRM.Contact;
-using Agent.SalesOrderAgent.Integration;
 using Microsoft.CRM.BusinessRelation;
 using System.Agents;
 using Microsoft.Sales.Customer;
@@ -119,32 +119,65 @@ codeunit 4305 "SOA Filters Impl."
         exit(ExcludeAllFilterTok);
     end;
 
-    procedure ShowMissingContactNotification(FromEmail: Text)
+    procedure ShowMissingContactNotification(FromEmail: Text; ContactName: Text)
     var
         MissingContactNotification: Notification;
     begin
-        MissingContactNotification.Id := '1a55c794-3b65-44b7-b0d8-433a5c0c6a7f';
+        RecallMissingContactNotification(MissingContactNotification);
         MissingContactNotification.Message := StrSubstNo(MissingContactNotificationLbl, FromEmail);
-        if MissingContactNotification.Recall() then;
         MissingContactNotification.AddAction(CreateContactLbl, Codeunit::"SOA Filters Impl.", 'CreateContactFromEmail');
         MissingContactNotification.AddAction(LearnMoreLbl, Codeunit::"SOA Filters Impl.", 'LearnMoreNotRegisteredEmail');
         MissingContactNotification.SetData('FromEmail', FromEmail);
+        MissingContactNotification.SetData('ContactName', ContactName);
         MissingContactNotification.Send();
+    end;
+
+    procedure RecallMissingContactNotification()
+    var
+        MissingContactNotification: Notification;
+    begin
+        RecallMissingContactNotification(MissingContactNotification);
+    end;
+
+    local procedure RecallMissingContactNotification(MissingContactNotification: Notification)
+    begin
+        MissingContactNotification.Id := '1a55c794-3b65-44b7-b0d8-433a5c0c6a7f';
+        if MissingContactNotification.Recall() then;
     end;
 
     procedure CreateContactFromEmail(MissingContactNotification: Notification)
     var
-        Contact: Record Contact;
         FromEmail: Text;
+        ContactName: Text;
     begin
         FromEmail := MissingContactNotification.GetData('FromEmail');
-#pragma warning disable AA0139
-        // Email cannot be truncated, we need an error
-        Contact."E-Mail" := FromEmail;
-#pragma warning restore AA0139
-        Contact.Insert(true);
+        ContactName := MissingContactNotification.GetData('ContactName');
+        CreateContact(FromEmail, ContactName);
+    end;
+
+    internal procedure CreateContact(ContactEmail: Text; SenderName: Text)
+    var
+        ExistingContact: Record Contact;
+        SOAFiltersImpl: Codeunit "SOA Filters Impl.";
+        CreateContactPage: Page "SOA Create Contact";
+        ContactEmailFilter: Text;
+    begin
+        if ContactEmail <> '' then begin
+            ExistingContact.ReadIsolation := IsolationLevel::ReadUncommitted;
+            ContactEmailFilter := SOAFiltersImpl.GetSafeFromEmailFilter(ContactEmail);
+            ExistingContact.SetFilter("E-Mail", ContactEmailFilter);
+            if ExistingContact.FindFirst() then
+                if not Confirm(StrSubstNo(ContactAlreadyExistQst, ExistingContact."No.")) then
+                    Error('')
+                else begin
+                    Page.Run(Page::"Contact Card", ExistingContact);
+                    exit;
+                end;
+        end;
+
+        CreateContactPage.SetGlobalVariables(SenderName, ContactEmail);
         Commit();
-        Page.RunModal(Page::"Contact Card", Contact);
+        CreateContactPage.RunModal();
     end;
 
     procedure LearnMoreNotRegisteredEmail(MissingContactNotification: Notification)
@@ -164,4 +197,5 @@ codeunit 4305 "SOA Filters Impl."
         CreateContactLbl: Label 'Create contact';
         SecurityFilteringDocumentationURLTxt: Label 'https://go.microsoft.com/fwlink/?linkid=2298901', Locked = true;
         MissingContactNotificationLbl: Label 'A contact with email <%1> is not found. Without it, document access and creation are not possible.', Comment = '%1 - email address';
+        ContactAlreadyExistQst: Label 'A contact with the same email already exists. Contact number is %1. Do you want to open it?', Comment = '%1 = Contact number';
 }

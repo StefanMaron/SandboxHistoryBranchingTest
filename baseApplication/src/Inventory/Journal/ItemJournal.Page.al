@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Inventory.Journal;
 
 using Microsoft.Finance.Dimension;
@@ -269,10 +273,13 @@ page 40 "Item Journal"
                     Visible = CanSelectItemTrackingOnLines;
                     ExtendedDatatype = Barcode;
 
+                    trigger OnValidate()
+                    begin
+                        CheckItemTrackingCode();
+                    end;
+
                     trigger OnAssistEdit()
                     begin
-                        if not CanSelectItemTrackingOnLines then
-                            exit;
                         Rec.LookUpTrackingSummary("Item Tracking Type"::"Serial No.");
                     end;
                 }
@@ -284,10 +291,13 @@ page 40 "Item Journal"
                     Visible = CanSelectItemTrackingOnLines;
                     ExtendedDatatype = Barcode;
 
+                    trigger OnValidate()
+                    begin
+                        CheckItemTrackingCode();
+                    end;
+
                     trigger OnAssistEdit()
                     begin
-                        if not CanSelectItemTrackingOnLines then
-                            exit;
                         Rec.LookUpTrackingSummary("Item Tracking Type"::"Lot No.");
                     end;
                 }
@@ -299,10 +309,13 @@ page 40 "Item Journal"
                     Visible = PackageNoVisible;
                     ExtendedDatatype = Barcode;
 
+                    trigger OnValidate()
+                    begin
+                        CheckItemTrackingCode();
+                    end;
+
                     trigger OnAssistEdit()
                     begin
-                        if not CanSelectItemTrackingOnLines then
-                            exit;
                         Rec.LookUpTrackingSummary("Item Tracking Type"::"Package No.");
                     end;
                 }
@@ -1039,6 +1052,9 @@ page 40 "Item Journal"
             ItemTrackingEditable := not Rec.ReservEntryExist();
 
         ExpirationDateEditable := SetExpirationDateVisibility();
+
+        if ClientTypeManagement.GetCurrentClientType() = CLIENTTYPE::ODataV4 then
+            SetItemTrackingFieldsEditabilityForOData();
     end;
 
     trigger OnDeleteRecord(): Boolean
@@ -1082,7 +1098,6 @@ page 40 "Item Journal"
         ItemAvailFormsMgt: Codeunit "Item Availability Forms Mgt";
         ClientTypeManagement: Codeunit "Client Type Management";
         ItemJournalErrorsMgt: Codeunit "Item Journal Errors Mgt.";
-        CurrentJnlBatchName: Code[10];
         ItemDescription: Text[100];
         ExtendedPriceEnabled: Boolean;
         BackgroundErrorCheck: Boolean;
@@ -1100,6 +1115,7 @@ page 40 "Item Journal"
     protected var
         EntryType: Enum "Item Journal Entry Type";
         ShortcutDimCode: array[8] of Code[20];
+        CurrentJnlBatchName: Code[10];
         DimVisible1: Boolean;
         DimVisible2: Boolean;
         DimVisible3: Boolean;
@@ -1214,6 +1230,27 @@ page 40 "Item Journal"
         ItemTrackingCode.SetLoadFields("Use Expiration Dates");
         ItemTrackingCode.Get(Item."Item Tracking Code");
         exit(ItemTrackingCode."Use Expiration Dates");
+    end;
+
+    local procedure CheckItemTrackingCode()
+    var
+        Item: Record Item;
+    begin
+        Rec.TestField(Rec."Item No.");
+        Item.SetLoadFields("Item Tracking Code");
+        Item.Get(Rec."Item No.");
+        Item.TestField("Item Tracking Code");
+    end;
+
+    local procedure SetItemTrackingFieldsEditabilityForOData()
+    var
+        ItemJournalBatch: Record "Item Journal Batch";
+    begin
+        if ItemJournalBatch.Get(Rec."Journal Template Name", Rec."Journal Batch Name") then begin
+            CanSelectItemTrackingOnLines := ItemJournalBatch."Item Tracking on Lines";
+            ItemTrackingEditable := CanSelectItemTrackingOnLines;
+            CurrPage.Update(false);
+        end;
     end;
 
     [IntegrationEvent(false, false)]
