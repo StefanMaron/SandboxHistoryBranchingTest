@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="AI Test Toolkit" ControlGUID="{c3e2cc41-078a-4278-8939-de429aca80ce}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="149040" DepartmentCategory="Lists" RunObjectSrcTable="149030" ControlGUID="{8c9fe672-a009-430f-b99c-5077ce75d642}" Name="AIT Test Suite List" CaptionML="ENU=AI Test Suites" ApplicationArea="#All" AdditionalSearchTermsML="ENU=AIT, AI Test Tool, Test Tool, AI Test Suite, Test Suite, Copilot, Copilot Test" CaptionTranslationKey="Page 2144688602 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2144688602 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="AI Test Toolkit" ControlGUID="{a5e88b88-ddd3-4e6f-98e2-aa4855d0a047}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="149040" DepartmentCategory="Lists" RunObjectSrcTable="149030" ControlGUID="{ca2f142b-8be5-4cbc-8592-7df5b7ce9f8f}" Name="AIT Test Suite List" CaptionML="ENU=AI Test Suites" ApplicationArea="#All" AdditionalSearchTermsML="ENU=AIT, AI Test Tool, Test Tool, AI Test Suite, Test Suite, Copilot, Copilot Test" CaptionTranslationKey="Page 2144688602 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2144688602 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>
