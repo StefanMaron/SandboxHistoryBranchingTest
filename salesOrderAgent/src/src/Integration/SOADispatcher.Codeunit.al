@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent.Integration;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using System.Agents;
 using System.AI;
@@ -11,7 +12,6 @@ using System.Azure.Identity;
 using System.Environment;
 using System.Telemetry;
 using System.Utilities;
-using Agent.SalesOrderAgent;
 
 codeunit 4586 "SOA Dispatcher"
 {
@@ -39,11 +39,16 @@ codeunit 4586 "SOA Dispatcher"
     procedure RunSOAgent(Setup: Record "SOA Setup")
     var
         SOATask: Record "SOA Task";
+        QuotaCanConsume: Boolean;
         RetrievalSuccess: Boolean;
         ReplySuccess: Boolean;
         TaskSuccess: Boolean;
         CustomDimensions: Dictionary of [Text, Text];
+        LastSync: DateTime;
     begin
+        if not SOAImpl.CheckSOASetupStillValid(Setup) then
+            exit;
+
         CustomDimensions.Add('category', SOAImpl.GetCategory());
         CustomDimensions.Add('SOASetupId', Format(Setup.ID));
 
@@ -52,27 +57,42 @@ codeunit 4586 "SOA Dispatcher"
 
         AddTask(SOATask);
 
-        // Retrieve emails
-        RetrievalSuccess := Codeunit.Run(Codeunit::"SOA Retrieve Emails", Setup);
-        if RetrievalSuccess then
-            Telemetry.LogMessage('0000NIU', TelemetryRetrieveEmailsSuccessLbl, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions)
-        else
-            Telemetry.LogMessage('0000NIV', TelemetryRetrieveEmailsFailedLbl, Verbosity::Warning, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions);
+        if not SOAImpl.CheckSOASetupStillValid(Setup) then
+            exit;
+
+        QuotaCanConsume := SOAImpl.CheckQuotaCanConsume();
+        if QuotaCanConsume then begin
+            // Retrieve emails
+            LastSync := CurrentDateTime();
+            RetrievalSuccess := Codeunit.Run(Codeunit::"SOA Retrieve Emails", Setup);
+            if RetrievalSuccess then
+                Telemetry.LogMessage('0000NIU', TelemetryRetrieveEmailsSuccessLbl, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions)
+            else
+                Telemetry.LogMessage('0000NIV', TelemetryRetrieveEmailsFailedLbl, Verbosity::Warning, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions);
+        end;
 
         // Send emails
+        if not SOAImpl.CheckSOASetupStillValid(Setup) then
+            exit;
+
         ReplySuccess := Codeunit.Run(Codeunit::"SOA Send Replies", Setup);
         if ReplySuccess then
             Telemetry.LogMessage('0000NIW', TelemetrySendEmailRepliesSuccessLbl, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions)
         else
             Telemetry.LogMessage('0000NIX', TelemetrySendEmailRepliesFailedLbl, Verbosity::Warning, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, CustomDimensions);
 
+        TaskSuccess := (RetrievalSuccess or not QuotaCanConsume) and ReplySuccess;
+
         // Reschedule
+        if not SOAImpl.CheckSOASetupStillValid(Setup) then
+            exit;
+
         SOAImpl.ScheduleSOAgent(Setup);
         Commit();
 
-        TaskSuccess := RetrievalSuccess and ReplySuccess;
         if TaskSuccess then begin
-            UpdateLastSync(Setup);
+            if RetrievalSuccess then
+                UpdateLastSync(Setup, LastSync);
             UpdateTaskSucceeded(SOATask);
         end;
 
@@ -110,10 +130,10 @@ codeunit 4586 "SOA Dispatcher"
         exit(true);
     end;
 
-    local procedure UpdateLastSync(var Setup: Record "SOA Setup")
+    local procedure UpdateLastSync(var Setup: Record "SOA Setup"; DT: DateTime)
     begin
         Setup.Get(Setup.ID);
-        Setup."Last Sync At" := CurrentDateTime();
+        Setup."Last Sync At" := DT;
         Setup.Modify();
         Commit();
     end;

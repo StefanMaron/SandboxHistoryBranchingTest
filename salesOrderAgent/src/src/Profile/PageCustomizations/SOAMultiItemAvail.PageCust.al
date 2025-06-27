@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 pagecustomization "SOA Multi Item Avail." customizes "SOA Multi Items Availability"
 {
@@ -25,6 +26,26 @@ pagecustomization "SOA Multi Item Avail." customizes "SOA Multi Items Availabili
             Visible = true;
         }
         modify(QuantityFilter)
+        {
+            Visible = true;
+        }
+        modify(AvailabilityLevel)
+        {
+            Visible = true;
+        }
+        modify(UnitPriceInclDiscount)
+        {
+            Visible = true;
+        }
+        modify(CurrencyCode)
+        {
+            Visible = true;
+        }
+        modify(LineUOMDescription)
+        {
+            Visible = true;
+        }
+        modify(MatchingItem)
         {
             Visible = true;
         }
