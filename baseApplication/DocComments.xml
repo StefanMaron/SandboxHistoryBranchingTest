@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.0.23364.35922</version>
+        <version>25.1.25873.35923</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -3310,6 +3310,13 @@
             <param name="GLEntry">The current G/L entry</param>
             <param name="GenJournalLine">The current general journal line</param>
         </member>
+        <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.CopyNonDedVATFromGenJnlLineToFALedgEntry(FA Ledger Entry@,Gen# Journal Line)">
+            <summary>
+            Copy Non-Deductible VAT from general journal line to FA ledger Entry
+            </summary>
+            <param name="FALedgEntry">The current FA ledger entry</param>
+            <param name="GenJnlLine">The current general journal line</param>
+        </member>
         <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.CheckPrepmtWithNonDeductubleVATInPurchaseLine(Purchase Line)">
             <summary>
             Throws an error if purchase line contains prepayment and Non-Deductible VAT
@@ -3412,6 +3419,13 @@
             </summary>
             <param name="TotalInvoicePostBuffer">The invoice post buffer to be incremented</param>
             <param name="InvoicePostBuffer">The current invoice post buffer</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.IsNonDedFALedgEntryInFirstAcquisition(FA Ledger Entry):Boolean">
+            <summary>
+            Identifies if the current FA ledger entry is a Non-Deductible VAT entry in the first acquisition
+            </summary>
+            <param name="FALedgEntry"></param>
+            <returns>Returns true if the current FA ledger entry is a Non-Deductible VAT entry in the first acquisition</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.RoundNonDeductibleVAT(Purchase Header,Purchase Line@,Purchase Line,Purchase Line)">
             <summary>
