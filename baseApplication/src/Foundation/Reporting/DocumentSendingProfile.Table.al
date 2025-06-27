@@ -1,3 +1,7 @@
+// ------------------------------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for license information.
+// ------------------------------------------------------------------------------------------------
 namespace Microsoft.Foundation.Reporting;
 
 using Microsoft.CRM.Outlook;
@@ -735,7 +739,7 @@ table 60 "Document Sending Profile"
                 begin
                     ReportSelections.GetEmailBodyForCust(ServerEmailBodyFilePath, ReportUsage, RecordVariant, ToCust, SendToEmailAddress);
                     ReportDistributionManagement.SendXmlEmailAttachment(
-                      RecordVariant, "E-Mail Format", ServerEmailBodyFilePath, SendToEmailAddress);
+                      RecordVariant, "E-Mail Format", ServerEmailBodyFilePath, SendToEmailAddress, ReportUsage);
                 end;
             "E-Mail Attachment"::"PDF & Electronic Document":
                 begin

@@ -13,6 +13,7 @@ codeunit 30343 "Shpfy Create Item As Variant"
         CreateProduct: Codeunit "Shpfy Create Product";
         VariantApi: Codeunit "Shpfy Variant API";
         ProductApi: Codeunit "Shpfy Product API";
+        Events: Codeunit "Shpfy Product Events";
         OptionId: BigInteger;
         OptionName: Text;
 
@@ -43,6 +44,7 @@ codeunit 30343 "Shpfy Create Item As Variant"
             TempShopifyVariant."Option 1 Name" := CopyStr(OptionName, 1, MaxStrLen(TempShopifyVariant."Option 1 Name"));
         TempShopifyVariant."Option 1 Value" := Item."No.";
 
+        Events.OnAfterCreateTempShopifyVariant(Item, TempShopifyVariant);
         TempShopifyVariant.Modify();
 
         if VariantApi.AddProductVariant(TempShopifyVariant, ShopifyProduct.Id, "Shpfy Variant Create Strategy"::DEFAULT) then begin
@@ -50,7 +52,6 @@ codeunit 30343 "Shpfy Create Item As Variant"
             ShopifyProduct.Modify(true);
         end;
     end;
-
 
     /// <summary>
     /// Checks if items can be added as variants to the product. The items cannot be added as variants if:
