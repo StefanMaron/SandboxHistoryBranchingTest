@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: Install BC Container Helper
         shell: pwsh
-        run: Install-Module bccontainerhelper -force
+        run: |
+          Install-Module bccontainerhelper -force -AllowClobber
+          Import-Module bccontainerhelper -Force
 
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
@@ -40,7 +42,9 @@ jobs:
     steps:
       - name: Install BC Container Helper
         shell: pwsh
-        run: Install-Module bccontainerhelper -force
+        run: |
+          Install-Module bccontainerhelper -force -AllowClobber
+          Import-Module bccontainerhelper -Force
 
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
@@ -48,6 +52,8 @@ jobs:
       - name: Build Commits
         shell: pwsh
         run: |
+          # Clear any existing variables that might interfere
+          Get-Variable -Scope Global | Where-Object { $_.Name -like '*app*' -or $_.Name -like '*bc*' } | Remove-Variable -ErrorAction SilentlyContinue
           ./scripts/Auto_load_versions_improved.ps1 -country ${{ matrix.countries }}
 
 # Improvements:
