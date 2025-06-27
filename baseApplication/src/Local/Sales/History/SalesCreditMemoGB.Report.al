@@ -712,8 +712,8 @@ report 10573 "Sales - Credit Memo GB"
                 FeatureTelemetry: Codeunit "Feature Telemetry";
             begin
                 FeatureTelemetry.LogUsage('0000OJK', FeatureNameTok, EventNameTok);
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
-                CurrReport.FormatRegion := Language.GetFormatRegionOrDefault("Format Region");
+                CurrReport.Language := GlobalLanguage.GetLanguageIdOrDefault("Language Code");
+                CurrReport.FormatRegion := GlobalLanguage.GetFormatRegionOrDefault("Format Region");
 
                 if not CompanyBankAccount.Get("Sales Cr.Memo Header"."Company Bank Account Code") then
                     CompanyBankAccount.CopyBankFieldsFromCompanyInfo(CompanyInfo);
@@ -912,7 +912,7 @@ report 10573 "Sales - Credit Memo GB"
         CompanyInfo1: Record "Company Information";
         SalesSetup: Record "Sales & Receivables Setup";
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        GlobalLanguage: Codeunit Language;
         FormatAddr: Codeunit "Format Address";
         SegManagement: Codeunit SegManagement;
         CustAddr: array[8] of Text;

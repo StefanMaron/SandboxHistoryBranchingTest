@@ -478,8 +478,8 @@ report 10579 "Blanket Purchase Order GB"
                 FeatureTelemetry: Codeunit "Feature Telemetry";
             begin
                 FeatureTelemetry.LogUsage('0000OJE', FeatureNameTok, EventNameTok);
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
-                CurrReport.FormatRegion := Language.GetFormatRegionOrDefault("Format Region");
+                CurrReport.Language := GlobalLanguage.GetLanguageIdOrDefault("Language Code");
+                CurrReport.FormatRegion := GlobalLanguage.GetFormatRegionOrDefault("Format Region");
 
                 CompanyInfo.Get();
 
@@ -598,7 +598,7 @@ report 10579 "Blanket Purchase Order GB"
         DimSetEntry1: Record "Dimension Set Entry";
         DimSetEntry2: Record "Dimension Set Entry";
         RespCenter: Record "Responsibility Center";
-        Language: Codeunit Language;
+        GlobalLanguage: Codeunit Language;
         PurchPost: Codeunit "Purch.-Post";
         FormatAddr: Codeunit "Format Address";
         SegManagement: Codeunit SegManagement;

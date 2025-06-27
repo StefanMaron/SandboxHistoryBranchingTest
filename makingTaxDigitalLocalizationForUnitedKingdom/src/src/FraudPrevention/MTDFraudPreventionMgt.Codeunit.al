@@ -68,19 +68,9 @@ codeunit 10541 "MTD Fraud Prevention Mgt."
         VendorProductNameTxt: Label 'GOV-VENDOR-PRODUCT-NAME', Locked = true;
         VendorPublicIpTxt: Label 'GOV-VENDOR-PUBLIC-IP', Locked = true;
         VendorVersionTxt: Label 'GOV-VENDOR-VERSION', Locked = true;
-        AzFunctionClientIdKeyTok: Label 'AppNetProxyFnClientID', Locked = true;
-        AzFuncScopeKeyTok: Label 'AppNetProxyFnScope', Locked = true;
-        AzFuncAuthURLKeyTok: Label 'AppNetProxyFnAuthUrl', Locked = true;
-        AzFuncCertificateNameTok: Label 'ElectronicInvoicingCertificateName', Locked = true;
-        AzFuncEndpointTextKeyTok: Label 'ClientPublicIP-Endpoint', Locked = true;
-        CannotGetAuthorityURLFromKeyVaultErr: Label 'Cannot get Authority URL from Azure Key Vault using key %1', Locked = true;
-        CannotGetClientIdFromKeyVaultErr: Label 'Cannot get Client ID from Azure Key Vault using key %1', Locked = true;
-        CannotGetCertFromKeyVaultErr: Label 'Cannot get certificate from Azure Key Vault using key %1', Locked = true;
-        CannotGetScopeFromKeyVaultErr: Label 'Cannot get Scope from Azure Key Vault using key %1', Locked = true;
-        CannotGetEndpointTextFromKeyVaultErr: Label 'Cannot get Endpoint from Azure Key Vault using key %1 ', Locked = true;
-        GetPublicIPAddressRequestFailedErr: Label 'Getting server public IP address from Azure Function failed.', Locked = true;
         EmptyPublicIPAddressErr: Label 'Empty server public IP address was returned.', Locked = true;
         NonEmptyPublicIPAddressTxt: Label 'Non-empty server public IP address was returned by tenant settings', Locked = true;
+        IPAddressNotMatchPatternErr: Label 'IP address from tenant settings does not match validation pattern %1. ', Locked = true;
         IPv4LoopbackIPAddressTxt: Label '127.0.0.1', Locked = true;
         IPv6LoopbackIPAddressTxt: Label '::1', Locked = true;
         IPAddressRegExPatternTxt: Label '[0-9]{1,3}(\.[0-9]{1,3}){3}|([0-9A-Fa-f]{0,4}:){2,7}([0-9A-Fa-f]{1,4})', Locked = true;
@@ -131,7 +121,7 @@ codeunit 10541 "MTD Fraud Prevention Mgt."
 
         // public server IP address
         if EnvironmentInformation.IsSaaS() then begin
-            if GetServerPublicIPFromAzureFunction(ServerIP) then;
+            if GetServerPublicIPFromTenantSettings(ServerIP) then;
         end else
             if GetServerPublicIPFromExternalService(ServerIP, VATReportSetup."MTD FP Public IP Service URL") then;
         MTDSessionFraudPrevHdr.SafeInsert('Gov-Vendor-Public-IP', ServerIP);
@@ -375,77 +365,28 @@ codeunit 10541 "MTD Fraud Prevention Mgt."
     end;
 
     [TryFunction]
-    [NonDebuggable]
-    internal procedure GetServerPublicIPFromAzureFunction(var ServerIPAddress: Text)
+    internal procedure GetServerPublicIPFromTenantSettings(var ServerIPAddress: Text)
     var
-        AzureFunctions: Codeunit "Azure Functions";
-        AzureFunctionsResponse: Codeunit "Azure Functions Response";
-        AzureFunctionsAuthentication: Codeunit "Azure Functions Authentication";
-        AzureFunctionsAuth: Interface "Azure Functions Authentication";
-        ResultResponseMsg: HttpResponseMessage;
-        ClientID, Scope, AuthURL, Endpoint : Text;
-        CustomDimensions: Dictionary of [Text, Text];
-        QueryDict: Dictionary of [Text, Text];
-        Cert: SecretText;
+        TenantSettings: DotNet NavTenantSettingsHelper;
     begin
         if not EnvironmentInformation.IsSaaS() then
             exit;
 
-        GetAzFunctionSecrets(ClientID, Cert, AuthURL, Scope, Endpoint);
-        AzureFunctionsAuth := AzureFunctionsAuthentication.CreateOAuth2WithCert(Endpoint, '', ClientID, Cert, AuthURL, '', Scope);
-        AzureFunctionsResponse := AzureFunctions.SendGetRequest(AzureFunctionsAuth, QueryDict);
-        if not AzureFunctionsResponse.IsSuccessful() then begin
-            AzureFunctionsResponse.GetHttpResponse(ResultResponseMsg);
-            CustomDimensions.Add('HttpStatusCode', Format(ResultResponseMsg.HttpStatusCode));
-            CustomDimensions.Add('ResponseError', AzureFunctionsResponse.GetError());
-            CustomDimensions.Add('ReasonPhrase', ResultResponseMsg.ReasonPhrase);
-            CustomDimensions.Add('IsBlockedByEnvironment', Format(ResultResponseMsg.IsBlockedByEnvironment));
-            FeatureTelemetry.LogError('0000NRO', HMRCFraudPreventHeadersTok, '', GetPublicIPAddressRequestFailedErr, '', CustomDimensions);
-        end;
-        AzureFunctionsResponse.GetResultAsText(ServerIPAddress);
-        if ServerIPAddress = '' then
-            FeatureTelemetry.LogError('0000NRP', HMRCFraudPreventHeadersTok, '', EmptyPublicIPAddressErr)
-        else
-            FeatureTelemetry.LogUsage('0000NRW', HMRCFraudPreventHeadersTok, NonEmptyPublicIPAddressTxt);
-    end;
+        ServerIPAddress := '';
+        ServerIPAddress := TenantSettings.GetPublicIpAddress();
 
-    [NonDebuggable]
-    local procedure GetAzFunctionSecrets(var ClientID: Text; var Certificate: SecretText; var AuthURL: Text; var Scope: Text; var Endpoint: Text)
-    var
-        AzureKeyVault: Codeunit "Azure Key Vault";
-        CertificateName: Text;
-    begin
-        if not EnvironmentInformation.IsSaaS() then
-            exit;
-
-        if not AzureKeyVault.GetAzureKeyVaultSecret(AzFunctionClientIdKeyTok, ClientID) then begin
-            FeatureTelemetry.LogError('0000NRQ', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetClientIdFromKeyVaultErr, AzFunctionClientIdKeyTok));
+        if ServerIPAddress = '' then begin
+            FeatureTelemetry.LogError('0000O1D', HMRCFraudPreventHeadersTok, '', EmptyPublicIPAddressErr);
             exit;
         end;
 
-        if not AzureKeyVault.GetAzureKeyVaultSecret(AzFuncCertificateNameTok, CertificateName) then begin
-            FeatureTelemetry.LogError('0000NRR', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetCertFromKeyVaultErr, AzFuncCertificateNameTok));
-            exit;
-        end;
-        if not AzureKeyVault.GetAzureKeyVaultCertificate(CertificateName, Certificate) then begin
-            FeatureTelemetry.LogError('0000NRS', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetCertFromKeyVaultErr, AzFuncCertificateNameTok));
+        if not MatchRegexPattern(ServerIPAddress, IPAddressRegExPatternTxt) then begin
+            FeatureTelemetry.LogError('0000O1E', HMRCFraudPreventHeadersTok, '', StrSubstNo(IPAddressNotMatchPatternErr, IPAddressRegExPatternTxt));
+            ServerIPAddress := '';
             exit;
         end;
 
-        if not AzureKeyVault.GetAzureKeyVaultSecret(AzFuncAuthURLKeyTok, AuthURL) then begin
-            FeatureTelemetry.LogError('0000NRT', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetAuthorityURLFromKeyVaultErr, AzFuncAuthURLKeyTok));
-            exit;
-        end;
-
-        if not AzureKeyVault.GetAzureKeyVaultSecret(AzFuncScopeKeyTok, Scope) then begin
-            FeatureTelemetry.LogError('0000NRU', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetScopeFromKeyVaultErr, AzFuncScopeKeyTok));
-            exit;
-        end;
-
-        if not AzureKeyVault.GetAzureKeyVaultSecret(AzFuncEndpointTextKeyTok, Endpoint) then begin
-            FeatureTelemetry.LogError('0000NRV', HMRCFraudPreventHeadersTok, '', StrSubstNo(CannotGetEndpointTextFromKeyVaultErr, AzFuncEndpointTextKeyTok));
-            exit;
-        end;
+        FeatureTelemetry.LogUsage('0000O1F', HMRCFraudPreventHeadersTok, NonEmptyPublicIPAddressTxt);
     end;
 
     [TryFunction]

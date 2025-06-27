@@ -76,9 +76,6 @@ tableextension 10539 "MTD Report Setup" extends "VAT Report Setup"
             var
                 CustomerConsentMgt: Codeunit "Customer Consent Mgt.";
                 FeatureTelemetry: Codeunit "Feature Telemetry";
-                MyCustomerAuditLoggerALHelper: DotNet System."CustomerAuditLoggerALHelper";
-                MyALSecurityOperationResult: DotNet System."ALSecurityOperationResult";
-                MyALAuditCategory: DotNet System."ALAuditCategory";
                 UKMakingTaxTok: Label 'UK Making Tax Digital', Locked = true;
                 UKMakingTaxConsentProvidedLbl: Label 'The UK Making Tax Digital consent provided by UserSecurityId %1.', Locked = true;
             begin
@@ -87,7 +84,7 @@ tableextension 10539 "MTD Report Setup" extends "VAT Report Setup"
                     "MTD Enabled" := CustomerConsentMgt.ConfirmUserConsent();
 
                 if "MTD Enabled" then
-                    MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(UKMakingTaxConsentProvidedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 4, 0);
+                    Session.LogAuditMessage(StrSubstNo(UKMakingTaxConsentProvidedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 4, 0);
             end;
         }
         field(10540; "MTD FP Public IP Service URL"; Text[250])

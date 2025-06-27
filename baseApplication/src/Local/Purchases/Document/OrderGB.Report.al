@@ -33,7 +33,7 @@ report 10576 "Order GB"
     {
         dataitem("Purchase Header"; "Purchase Header")
         {
-            DataItemTableView = sorting("Document Type", "No.") WHERE("Document Type" = const(Order));
+            DataItemTableView = sorting("Document Type", "No.") where("Document Type" = const(Order));
             RequestFilterFields = "No.", "Buy-from Vendor No.", "No. Printed";
             RequestFilterHeading = 'Purchase Order';
             column(DocumentType_PurchHeader; "Document Type")
@@ -47,7 +47,7 @@ report 10576 "Order GB"
                 DataItemTableView = sorting(Number);
                 dataitem(PageLoop; "Integer")
                 {
-                    DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                    DataItemTableView = sorting(Number) where(Number = const(1));
                     column(OrderCaption; StrSubstNo(Text004, CopyText))
                     {
                     }
@@ -210,7 +210,7 @@ report 10576 "Order GB"
                     dataitem(DimensionLoop1; "Integer")
                     {
                         DataItemLinkReference = "Purchase Header";
-                        DataItemTableView = sorting(Number) WHERE(Number = filter(1 ..));
+                        DataItemTableView = sorting(Number) where(Number = filter(1 ..));
                         column(DimText; DimText)
                         {
                         }
@@ -403,7 +403,7 @@ report 10576 "Order GB"
                         }
                         dataitem(DimensionLoop2; "Integer")
                         {
-                            DataItemTableView = sorting(Number) WHERE(Number = filter(1 ..));
+                            DataItemTableView = sorting(Number) where(Number = filter(1 ..));
                             column(DimText1; DimText)
                             {
                             }
@@ -492,7 +492,7 @@ report 10576 "Order GB"
                     }
                     dataitem("Integer"; "Integer")
                     {
-                        DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                        DataItemTableView = sorting(Number) where(Number = const(1));
                         dataitem(VATCounter; "Integer")
                         {
                             DataItemTableView = sorting(Number);
@@ -575,11 +575,11 @@ report 10576 "Order GB"
                     }
                     dataitem(Total; "Integer")
                     {
-                        DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                        DataItemTableView = sorting(Number) where(Number = const(1));
                     }
                     dataitem(Total2; "Integer")
                     {
-                        DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                        DataItemTableView = sorting(Number) where(Number = const(1));
                         column(PaytoVendorNo_PurchHeader; "Purchase Header"."Pay-to Vendor No.")
                         {
                         }
@@ -622,10 +622,10 @@ report 10576 "Order GB"
                     }
                     dataitem(Integer2; "Integer")
                     {
-                        DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                        DataItemTableView = sorting(Number) where(Number = const(1));
                         dataitem(Total3; "Integer")
                         {
-                            DataItemTableView = sorting(Number) WHERE(Number = const(1));
+                            DataItemTableView = sorting(Number) where(Number = const(1));
                             column(SelltoCustNo_PurchHeader; "Purchase Header"."Sell-to Customer No.")
                             {
                             }
@@ -710,8 +710,8 @@ report 10576 "Order GB"
                 FeatureTelemetry: Codeunit "Feature Telemetry";
             begin
                 FeatureTelemetry.LogUsage('0000OJF', FeatureNameTok, EventNameTok);
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
-                CurrReport.FormatRegion := Language.GetFormatRegionOrDefault("Format Region");
+                CurrReport.Language := GlobalLanguage.GetLanguageIdOrDefault("Language Code");
+                CurrReport.FormatRegion := GlobalLanguage.GetFormatRegionOrDefault("Format Region");
 
                 CompanyInfo.Get();
 
@@ -881,7 +881,7 @@ report 10576 "Order GB"
         DimSetEntry2: Record "Dimension Set Entry";
         RespCenter: Record "Responsibility Center";
         PurchSetup: Record "Purchases & Payables Setup";
-        Language: Codeunit Language;
+        GlobalLanguage: Codeunit Language;
         FormatAddr: Codeunit "Format Address";
         PurchPost: Codeunit "Purch.-Post";
         ArchiveManagement: Codeunit ArchiveManagement;

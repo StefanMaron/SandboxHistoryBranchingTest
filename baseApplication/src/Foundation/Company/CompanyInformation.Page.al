@@ -17,7 +17,6 @@ using Microsoft.Inventory.Setup;
 using Microsoft.Projects.Project.Setup;
 using Microsoft.Purchases.Setup;
 using Microsoft.Sales.Setup;
-using System;
 using System.Diagnostics;
 using System.Environment.Configuration;
 using System.Globalization;
@@ -354,6 +353,11 @@ page 1 "Company Information"
                     begin
                         HandleAddressLookupVisibility();
                     end;
+                }
+                field("Ship-to Phone No."; Rec."Ship-to Phone No.")
+                {
+                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the telephone number of the company''s shipping address.';
                 }
                 field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
@@ -780,16 +784,13 @@ page 1 "Company Information"
     trigger OnClosePage()
     var
         ApplicationAreaMgmtFacade: Codeunit "Application Area Mgmt. Facade";
-        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-        MyALAuditCategory: DotNet ALAuditCategory;
     begin
         if ApplicationAreaMgmtFacade.SaveExperienceTierCurrentCompany(Experience) then
             RestartSession();
 
         if SystemIndicatorChanged then begin
             Message(CompanyBadgeRefreshPageTxt);
-            MyCustomerAuditLoggerALHelper.LogAuditMessage(StrSubstNo(CompanyBadgeChangedLbl, UserSecurityId()), MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+            Session.LogAuditMessage(StrSubstNo(CompanyBadgeChangedLbl, UserSecurityId()), SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
             RestartSession();
         end;
     end;
@@ -852,14 +853,11 @@ page 1 "Company Information"
 
     local procedure SystemIndicatorOnAfterValidate()
     var
-        MyCustomerAuditLoggerALHelper: DotNet CustomerAuditLoggerALHelper;
-        MyALSecurityOperationResult: DotNet ALSecurityOperationResult;
-        MyALAuditCategory: DotNet ALAuditCategory;
         CompanyBadgeChangedLbl: Label 'Company badge changed.', Locked = true;
     begin
         SystemIndicatorChanged := true;
         UpdateSystemIndicator();
-        MyCustomerAuditLoggerALHelper.LogAuditMessage(CompanyBadgeChangedLbl, MyALSecurityOperationResult::Success, MyALAuditCategory::ApplicationManagement, 3, 0);
+        Session.LogAuditMessage(CompanyBadgeChangedLbl, SecurityOperationResult::Success, AuditCategory::ApplicationManagement, 3, 0);
     end;
 
     local procedure SetShowMandatoryConditions()

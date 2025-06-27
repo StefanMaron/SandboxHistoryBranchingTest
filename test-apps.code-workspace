@@ -1,24 +1,33 @@
 {
   "settings": {
+    "al.ruleSetPath": "",
+    "files.watcherExclude": {
+      "**/.git/**": true,
+      "**/node_modules/**": true,
+      "**/*.xlf": true
+    },
+    "al.enableCodeAnalysis": false,
+    "al.enableCodeActions": false,
+    "search.useIgnoreFiles": true,
     "al.enableUICop": false,
     "search.exclude": {
       "**/*.xlf": true
     },
     "search.useGlobalIgnoreFiles": true,
-    "al.enableCodeAnalysis": false,
-    "search.useIgnoreFiles": true,
-    "al.ruleSetPath": "",
-    "files.watcherExclude": {
-      "**/*.xlf": true,
-      "**/.git/**": true,
-      "**/node_modules/**": true
-    },
-    "al.enableCodeCop": false,
-    "al.enableCodeActions": false
+    "al.enableCodeCop": false
   },
   "folders": [
     {
+      "path": "./aiTestToolkit"
+    },
+    {
       "path": "./testRunner"
+    },
+    {
+      "path": "./testRunner/src/src/DataDrivenTest"
+    },
+    {
+      "path": "./aiTestToolkit/src/src/TestSuite"
     },
     {
       "path": "./systemApplication/src/Email/src/testEmail"
