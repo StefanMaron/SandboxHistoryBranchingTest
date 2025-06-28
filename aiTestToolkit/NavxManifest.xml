@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="2156302a-872f-4568-be0b-60968696f0d5" Name="AI Test Toolkit" Publisher="Microsoft" Brief="Provides tools for AI feature regression testing." Description="The AI Test Toolkit lets developers write and run automated tests for AI features. The toolkit supports running data driven tests and the ability to get the output generated from the tests." Version="26.1.33404.35940" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?LinkId=724011" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" PropagateDependencies="True" />
+  <App Id="2156302a-872f-4568-be0b-60968696f0d5" Name="AI Test Toolkit" Publisher="Microsoft" Brief="Provides tools for AI feature regression testing." Description="The AI Test Toolkit lets developers write and run automated tests for AI features. The toolkit supports running data driven tests and the ability to get the output generated from the tests." Version="26.0.30643.35959" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?LinkId=724011" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" PropagateDependencies="True" />
   <IdRanges>
     <IdRange MinObjectId="149030" MaxObjectId="149050" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="23de40a6-dfe8-4f80-80db-d70f83ce8caf" Name="Test Runner" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="23de40a6-dfe8-4f80-80db-d70f83ce8caf" Name="Test Runner" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,7 +18,7 @@
   <SuppressWarnings />
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
-  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="8c935f72a38d4f5fc4b992190cc61ae1b3fd849f" />
-  <Build Timestamp="2025-06-26T05:10:33.1531429Z" CompilerVersion="15.0.23.59383" />
+  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="f8d2838242c7ee7d2ae9e292773ab7786f8ce486" />
+  <Build Timestamp="2025-06-26T10:28:41.1069172Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
