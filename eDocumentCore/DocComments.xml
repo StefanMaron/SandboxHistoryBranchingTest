@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>26.2.34746.35962</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -80,17 +80,15 @@
             Retrieves the name of the E-Document content.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetFileFormat:Enum::Microsoft#eServices#EDocument#E-Doc# File Format">
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetType(Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type)">
             <summary>
-            Retrieves the file format of the E-Document content.
+            Sets the type of the E-Document content.
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetFileFormat(Enum::Microsoft#eServices#EDocument#E-Doc# File Format)">
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetType:Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type">
             <summary>
-            Sets the file format for the E-Document content.
+            Get the type of the E-Document content.
             </summary>
-            <param name="FileFormat"></param>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.Http:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State">
             <summary>
@@ -625,40 +623,26 @@
             Sets the HTTP response message object.
             </summary>
         </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Document Purchase Line.AdditionalColumnsDisplayText:Text">
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
             <summary>
-            Returns any additional columns defined for this line in a human-readable format.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Doc# Purchase Hist# Mapping.TrackRecord(E-Document,Variant,Variant)">
-            <summary>
-            Track header and line mapping between source and target records.
+            Function for service participant. 
             </summary>
         </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Doc# Purchase Line History">
+        <member name="O:Table::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
             <summary>
-            This table contains the history of field values that were on draft purchase lines, and the systemid of the purchase invoice line it was mapped to.
+            Represents the service participant. 
+            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
             </summary>
         </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Doc# Vendor Assign# History">
+        <member name="O:Page::Microsoft#eServices#EDocument#Service#Participant#Service Participants">
             <summary>
-            This table stores historical vendor information from received e-documents and the posted document they ended up in. When new e-documents are received, the information in this table can be leveraged to for example assign the same vendor to the e-document.
+            Represents the service participant. 
+            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
             </summary>
         </member>
-        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Process Draft">
+        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Structured Data Process">
             <summary>
             Enum for E-Document Processing
-            </summary>
-        </member>
-        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Read into Draft">
-            <summary>
-            Specifies how a structured data type should be interpreted and read into a draft.
-            </summary>
-        </member>
-        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Unspecified Impl#">
-            <summary>
-            Default implementations for E-Document interfaces.
             </summary>
         </member>
         <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#Import E-Doc# Proc# Status">
@@ -666,41 +650,16 @@
             States that the E-Document goes through during the import process. To go between each state, they go through the steps defined in "Import E-Document Steps".
             </summary>
         </member>
-        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#Import E-Document Process">
-            <summary>
-            This codeunit executes a single step of the import process, it can be configured with the step to run, whether to undo the step or not, and the E-Document to process.
-            </summary>
-        </member>
         <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#Import E-Document Steps">
             <summary>
             The steps that an E-Document goes through during the import process.
             </summary>
         </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#Processing#Import#EDoc# Purch# Line Field Setup.AllPurchaseLineFields(EDoc# Purch# Line Field Setup@)">
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Default Blob Type">
             <summary>
-            Populates the contents of the temporary table "EDoc. Purch. Line Field Setup" with the fields from the "Purch. Inv. Line" table that can be configured for e-document history.
-            The fields are loaded with the default configuration if the user has not set up any specific configuration.
+            Pass through blob converter for E-Documents.
+            This codeunit is default implementation of the IBlobToStructuredDataConverter interface.
             </summary>
-            <param name="EDocPurchLineFieldSetup"></param>
-        </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#Processing#Import#EDoc# Purch# Line Field Setup.ApplySetup(Boolean,EDoc# Purch# Line Field Setup)">
-            <summary>
-            Persist the changes in the parameter to the configuration
-            </summary>
-            <param name="ConsiderField"></param>
-            <param name="EDocPurchLineFieldSetup"></param>
-        </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#Processing#Import#E-Document Line - Field.Get(E-Document Purchase Line,EDoc# Purch# Line Field Setup):Option">
-             <summary>
-             Sets the current record to have the values corresponding to the line for a given purchase invoice line field
-             if there is no existing customization of the historic values (a physical record of this table) it loads the appropriate values from history.
-             The history is loaded according to the EDocumentLineMapping's "Line History Id" field.
-            
-             This procedure should not fail, default or blank values should be provided instead.
-             </summary>
-             <param name="EDocumentLineMapping">The draft line that will get its' value loaded</param>
-             <param name="PurchaseLineFieldSetup::">The Purchase Invoice Line field that we want to load</param>
-             <returns>The source that was used to load the values, Customized, Historic or Default</returns>
         </member>
         <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Create Purchase Invoice">
             <summary>
@@ -712,12 +671,17 @@
             Enum for the implementations of the E-Doc. Create Purchase Invoice interface.
             </summary>
         </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Default Implementation">
+            <summary>
+            Default implementations for E-Document interfaces.
+            </summary>
+        </member>
         <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter">
             <summary>
             Interfaces defines how to convert a blob to a structured type.
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter.Convert(E-Document,Codeunit::System#Utilities#Temp Blob,Integer,Integer@):Text">
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter.Convert(E-Document,Codeunit::System#Utilities#Temp Blob,Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type,Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type@):Text">
             <summary>
             Converts a given blob of data into a structured format (e.g., XML or JSON).
             This procedure handles the actual conversion logic based on the provided 
@@ -765,41 +729,6 @@
             Get the converter for the blob type
             </summary>
             <returns>Converter for the blob type</returns>
-        </member>
-        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocFileFormat">
-             <summary>
-             An interface representing the file format of a blob associated with an E-Document.
-             For example: PDF, XML, JSON.
-            
-             It defines things in a file-level and not necessarily in terms of how the e-document will be processed.
-            
-             However, the PreferredStructureDataImplementation method can be used to determine how the file format
-             will be processed into structured data. For example a PDF file may prefer to be processed by ADI.
-             As the name suggests, "preferred" means that other things may influence what implementation ends being used,
-             since it can be overriden by the integration imorting the E-Document.
-             </summary>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocFileFormat.FileExtension:Text">
-            <summary>
-            File extension of the file format, such as "pdf", "xml", "json".
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocFileFormat.PreviewContent(Text,Codeunit::System#Utilities#Temp Blob)">
-            <summary>
-            A method called when we want to preview the content of the file in-client.
-            </summary>
-            <param name="FileName"></param>
-            <param name="TempBlob"></param>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocFileFormat.PreferredStructureDataImplementation:Enum::Microsoft#eServices#EDocument#Processing#Import#Structure Received E-Doc#">
-            <summary>
-            The preferred implementation for processing the file format into structured data.
-            For example, a PDF file may prefer to be processed by ADI,
-            while an XML file is already structured.
-            The final implementation used may depend on the integration importing the E-Document.
-            </summary>
-            <returns></returns>
         </member>
         <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentCreatePurchaseInvoice">
             <summary>
@@ -857,11 +786,6 @@
             From an E-Document that has had its data structures populated, process the data to assign Business Central values
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData.GetVendor(E-Document,Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Proc# Customizations):Vendor">
-            <summary>
-            Get the vendor for the E-Document
-            </summary>
-        </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData.OpenDraftPage(E-Document@)">
             <summary>
             Open the draft page for the E-Document
@@ -878,24 +802,14 @@
             Interface for determining the account assignment for a purchase line in an E-Document.
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineAccountProvider.GetPurchaseLineAccount(E-Document Purchase Line,Enum::Microsoft#Purchases#Document#Purchase Line Type@,Code[20]@)">
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineAccountProvider.GetPurchaseLineAccount(E-Document Purchase Line,E-Document Line Mapping,Enum::Microsoft#Purchases#Document#Purchase Line Type@,Code[20]@)">
             <summary>
-            Determines the purchase line fields for a given E-Document purchase line.
+            Determines the account type and account number for a given E-Document purchase line.
             </summary>
             <param name="EDocumentPurchaseLine">The purchase line record from the E-Document.</param>
+            <param name="EDocumentLineMapping">The mapping record for the E-Document line.</param>
             <param name="AccountType">The output parameter for the determined purchase line account type.</param>
             <param name="AccountNo">The output parameter for the determined account number.</param>
-        </member>
-        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineProvider">
-            <summary>
-            Interface for determining the account assignment for a purchase line in an E-Document.
-            </summary>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineProvider.GetPurchaseLine(E-Document Purchase Line@)">
-            <summary>
-            Determines the purchase line fields for a given E-Document purchase line.
-            </summary>
-            <param name="EDocumentPurchaseLine">The purchase line record from the E-Document.</param>
         </member>
         <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseOrderProvider">
             <summary>
@@ -909,64 +823,19 @@
             <param name="EDocumentPurchaseHeader">The E-Document purchase header record containing order details.</param>
             <returns>A Purchase Header record matching the provided E-Document purchase header.</returns>
         </member>
-        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredDataType">
-             <summary>
-             An interface representing a structured data type that can be processed by the E-Document framework.
-             It holds the state of the structured data type, such as the file format, content, and how it should be read into a draft.
-             For example:
-             - JSON with the schema returned by ADI calls
-             - XML with the PEPPOL schema
-            
-             Since a single file format can have different ways of being interpreted (for example different JSON schemas)
-             the structured data type encodes that in the "Read into draft" implementation.
-             </summary>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredDataType.GetFileFormat:Enum::Microsoft#eServices#EDocument#E-Doc# File Format">
-            <summary>
-            Returns the file format of the structured data type, such as JSON or XML.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredDataType.GetContent:Text">
-            <summary>
-            Returns the content of the structured data type, such as a JSON string or XML document.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredDataType.GetReadIntoDraftImpl:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Read into Draft">
-            <summary>
-            Returns the how the structured data should be "parsed" / read into a draft.
-            </summary>
-            <returns></returns>
-        </member>
         <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader">
             <summary>
-            Specifies how a structured data type should be interpreted and read into a draft.
-            A structure data type is a textual representation of the e-document that is stored in a TempBlob to allow different encodings.
+            Describe the interface for reading a structured data format into data structures.
+            The data structures will be used in the data processing flow. 
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader.ReadIntoDraft(E-Document,Codeunit::System#Utilities#Temp Blob):Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Process Draft">
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader.Read(E-Document,Codeunit::System#Utilities#Temp Blob):Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Structured Data Process">
             <summary>
             Read the data into the E-Document data structures.
             </summary>
             <param name="EDocument">The E-Document record.</param>
             <param name="TempBlob">The temporary blob that contains the data to read</param>
             <returns>The data process to run on the structured data.</returns>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader.View(E-Document,Codeunit::System#Utilities#Temp Blob)">
-            <summary>
-            Presents a view of the data 
-            </summary>
-            <param name="EDocument">The E-Document record.</param>
-            <param name="TempBlob">The temporary blob that contains the data to read</param>
-        </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructureReceivedEDocument.StructureReceivedEDocument(E-Doc# Data Storage):Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredDataType">
-            <summary>
-            Specified how to structure the received E-Document Data Storage into a structured data type.
-            For example for a PDF this could be calling ADI and populating the structured data type with the ADI result.
-            </summary>
-            <param name="EDocumentDataStorage"></param>
-            <returns></returns>
         </member>
         <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IUnitOfMeasureProvider">
             <summary>
@@ -993,37 +862,6 @@
             </summary>
             <param name="EDocument">The E-Document record containing relevant details.</param>
             <returns>A Vendor record matching the E-Document.</returns>
-        </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Processing#E-Doc# Record Link">
-            <summary>
-            This table is used to link records together.
-            Used by purchase draft historical mapping algorithm:
-            - EDocPurchaseHistMappping.Codeunit.al
-            
-            To link a draft purchase line to a purchase line. 
-            </summary>
-        </member>
-        <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Function for service participant. 
-            </summary>
-        </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
-            </summary>
-        </member>
-        <member name="O:Page::Microsoft#eServices#EDocument#Service#Participant#Service Participants">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
-            </summary>
-        </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#E-Document.Create(Enum::Microsoft#eServices#EDocument#E-Document Direction,Enum::Microsoft#eServices#EDocument#E-Document Type,E-Document Service)">
-            <summary>
-            Inserts a new E-Document record with the specified parameters.
-            </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.ErrorMessageCount(E-Document@):Integer">
             <summary>
@@ -1390,10 +1228,10 @@
             This table stores binary data that is associated with a E-Document Log Entry.
             </summary>
         </member>
-        <member name="O:Enum::Microsoft#eServices#EDocument#E-Doc# File Format">
+        <member name="O:Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type">
             <summary>
-            E-Doc. File Format
-            This enum specifies the file format of the binary data stored in the E-Document Data Storage table.
+            E-Document Data Storage Blob Type
+            This enum specifies the type of the binary data stored in the E-Document Data Storage table.
             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.MoveAttachmentsAndDelete(E-Document,RecordId)">
@@ -1419,14 +1257,6 @@
             Move attachment from E-Document to the newly created document.
             Used when importing E-Document into BC Document.
             </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Export.CreateEDocument(E-Document,RecordRef@,E-Document Service@,Enum::Microsoft#eServices#EDocument#E-Document Type)">
-             <summary>
-             CreateEDocument - Creates E-Document for the given document header and a given set of services.
-             
-             If services do not support the document type they are filtered out
-            
-             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.InsertServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
             <summary>

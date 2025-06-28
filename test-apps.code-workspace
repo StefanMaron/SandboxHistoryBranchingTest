@@ -1,21 +1,4 @@
 {
-  "settings": {
-    "files.watcherExclude": {
-      "**/.git/**": true,
-      "**/node_modules/**": true,
-      "**/*.xlf": true
-    },
-    "al.enableCodeActions": false,
-    "search.useIgnoreFiles": true,
-    "search.exclude": {
-      "**/*.xlf": true
-    },
-    "al.enableCodeAnalysis": false,
-    "al.ruleSetPath": "",
-    "al.enableCodeCop": false,
-    "al.enableUICop": false,
-    "search.useGlobalIgnoreFiles": true
-  },
   "folders": [
     {
       "path": "./aiTestToolkit"
@@ -35,5 +18,22 @@
     {
       "path": "./baseApplication/src/System/DevTools/CALTest"
     }
-  ]
+  ],
+  "settings": {
+    "al.ruleSetPath": "",
+    "files.watcherExclude": {
+      "**/.git/**": true,
+      "**/*.xlf": true,
+      "**/node_modules/**": true
+    },
+    "search.exclude": {
+      "**/*.xlf": true
+    },
+    "al.enableUICop": false,
+    "al.enableCodeAnalysis": false,
+    "al.enableCodeCop": false,
+    "search.useGlobalIgnoreFiles": true,
+    "al.enableCodeActions": false,
+    "search.useIgnoreFiles": true
+  }
 }
