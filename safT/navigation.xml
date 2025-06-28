@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="SAF-T" ControlGUID="{fbfb7333-686b-43c4-98cd-1f7e53e60fe4}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5283" DepartmentCategory="Administration" RunObjectSrcTable="325" ControlGUID="{fac283cb-a07a-4bc9-9edf-4c39e0f0a937}" Name="VAT Posting Setup SAF-T" CaptionML="CSY=Nastavení účtování DPH SAF-T;DAN=SAF-T-momsbogføringsopsætning;DEA=MwSt.-Buchungseinrichtung SAF-T;ENU=VAT Posting Setup SAF-T;FRA=Paramètres comptabilisation TVA SAF-T;NOR=Mva-bokføringsoppsett SAF-T" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4189706051 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4189706051 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5282" DepartmentCategory="Administration" RunObjectSrcTable="5281" ControlGUID="{80135304-287c-4577-a07d-c44f4a310770}" Name="Source Codes SAF-T" CaptionML="CSY=Kódy původu SAF-T;DAN=SAF-T-kildekoder;DEA=SAF-T-Herkunftscodes;ENU=SAF-T Source Codes;FRA=Codes journaux SAF-T;NOR=SAF-T-kildekoder" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3650281282 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3650281282 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5280" DepartmentCategory="Administration" RunObjectSrcTable="5260" ControlGUID="{8bd5e991-8805-4968-b855-2c34ea3d7d81}" Name="SAF-T Wizard" CaptionML="CSY=Průvodce nastavením SAF-T;DAN=SAF-T Opsætningsvejledning;DEA=SAF-T-Einrichtungshandbuch;ENU=SAF-T Setup Guide;FRA=Guide de configuration de SAF-T;NOR=Veiledning for oppsett av SAF-T" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1410541002 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1410541002 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="SAF-T" ControlGUID="{d4838068-536a-4d8c-8535-dc358d15c81a}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5282" DepartmentCategory="Administration" RunObjectSrcTable="5281" ControlGUID="{4f3b5eb2-f8fe-4299-9fbc-4e4551c09d7d}" Name="Source Codes SAF-T" CaptionML="CSY=Kódy původu SAF-T;DAN=SAF-T-kildekoder;DEA=SAF-T-Herkunftscodes;ENU=SAF-T Source Codes;FRA=Codes journaux SAF-T;NOR=SAF-T-kildekoder" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3650281282 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3650281282 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5280" DepartmentCategory="Administration" RunObjectSrcTable="5260" ControlGUID="{12662a7d-7f0c-4a57-8c0b-a62c44fdc012}" Name="SAF-T Wizard" CaptionML="CSY=Průvodce nastavením SAF-T;DAN=SAF-T Opsætningsvejledning;DEA=SAF-T-Einrichtungshandbuch;ENU=SAF-T Setup Guide;FRA=Guide de configuration de SAF-T;NOR=Veiledning for oppsett av SAF-T" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1410541002 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1410541002 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5283" DepartmentCategory="Administration" RunObjectSrcTable="325" ControlGUID="{a59ef343-08a0-47a2-a1e4-d50e53ec349b}" Name="VAT Posting Setup SAF-T" CaptionML="CSY=Nastavení účtování DPH SAF-T;DAN=SAF-T-momsbogføringsopsætning;DEA=MwSt.-Buchungseinrichtung SAF-T;ENU=VAT Posting Setup SAF-T;FRA=Paramètres comptabilisation TVA SAF-T;NOR=Mva-bokføringsoppsett SAF-T" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4189706051 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4189706051 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
     <ActionChange TargetID="5267" TargetType="Page" />
-    <ActionChange TargetID="1" TargetType="Page" />
-    <ActionChange TargetID="5264" TargetType="Page" />
-    <ActionChange TargetID="257" TargetType="Page" />
     <ActionChange TargetID="536" TargetType="Page" />
+    <ActionChange TargetID="257" TargetType="Page" />
+    <ActionChange TargetID="5264" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
