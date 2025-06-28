@@ -17,7 +17,7 @@ page 6381 "OneDrive Setup"
     LinksAllowed = false;
     ShowFilter = false;
     SourceTable = "OneDrive Setup";
-    UsageCategory = None;
+    UsageCategory = Administration;
     InherentPermissions = X;
     InherentEntitlements = X;
 
@@ -73,10 +73,6 @@ page 6381 "OneDrive Setup"
     begin
         Rec.Reset();
         if not Rec.Get() then begin
-            if not Rec.WritePermission() then begin
-                UpdateBasedOnEnable();
-                exit;
-            end;
             Rec.Init();
             Rec.Insert(true);
             FeatureTelemetry.LogUptake('0000OBD', DriveProcessing.FeatureName(), Enum::"Feature Uptake Status"::Discovered);
