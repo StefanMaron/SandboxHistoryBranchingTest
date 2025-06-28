@@ -4,7 +4,7 @@
         <id>2654d7e7-9afd-4947-9e02-6bb8f3e0cd04</id>
         <name>Universal Print Integration</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35935</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="O:Codeunit::System#Device#UniversalPrint#Universal Print Document Ready">
@@ -106,11 +106,6 @@
         <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.AllowAllUsers">
             <summary>
             The value indicating if printing is allowed for all the users.
-            </summary>
-        </member>
-        <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.outputBin[2048]">
-            <summary>
-            The output bin to use when printing the document.
             </summary>
         </member>
         <member name="F:Table::System#Device#UniversalPrint#Universal Printer Settings.Paper Tray[2048]">

@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35935</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -30,6 +30,599 @@
             A page extension for the Customer Card page to show the E-Document service participation.
             </summary>
         </member>
+        <member name="O:Enum::Microsoft#eServices#EDocument#Format#E-Document Structured Format">
+            <summary>
+            Structured formats for E-Documents
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext">
+            <summary>
+            Represents the context for an action.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext.Http:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State">
+            <summary>
+            Contains the HTTP message state.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext.Status:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status">
+            <summary>
+            Contains the status of the integration action.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#Download Document">
+            <summary>
+            Codeunit to run DownloadDocument from IDocumentReceiver Interface
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#Mark Fetched">
+            <summary>
+            Executes the MarkFetched operation using the IReceivedDocumentMarker interface.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetTempBlob:Codeunit::System#Utilities#Temp Blob">
+            <summary>
+            Retrieves the temporary blob used for storing E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetTempBlob(Codeunit::System#Utilities#Temp Blob)">
+            <summary>
+            Sets the temporary blob with the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetName(Text[256])">
+            <summary>
+            Sets the name of the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetName:Text[256]">
+            <summary>
+            Retrieves the name of the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetType(Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type)">
+            <summary>
+            Sets the type of the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetType:Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type">
+            <summary>
+            Get the type of the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.Http:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State">
+            <summary>
+            Get the Http Message State codeunit.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.Status:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status">
+            <summary>
+            Retrieves the Action Status object.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#Receive Documents">
+            <summary>
+            Codeunit to run ReceiveDocuments from Receive Interface
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Action#E-Document Action Runner">
+            <summary>
+            Run E-Document Actions
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#E-Document Action Runner.SetEDocumentAndService(E-Document@,E-Document Service@)">
+            <summary>
+            Sets the parameters for the E-Document Action
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#E-Document Action Runner.ShouldActionUpdateStatus:Boolean">
+            <summary>
+            Returns if running action lead to update in service status.
+            Certain actions dont need to update service status, like asking if document was approved. 
+            </summary>
+            <returns>True if service status should be updated</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#E-Document Action Runner.SetActionType(Enum::Microsoft#eServices#EDocument#Integration#Action#Integration Action Type)">
+            <summary>
+            Sets the action type for the E-Document Action.
+            The implementation of the action that will run is determined by the ActionType.
+            </summary>
+            <param name="Action"></param>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#E-Document Action Runner.SetContext(Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext)">
+            <summary>
+            Sets the context for the E-Document Action
+            </summary>
+            <param name="ActionContext"></param>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status">
+            <summary>
+            Codeunit to manage the state for the integration actions.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status.SetStatus(Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Sets the status of the integration action.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status.GetStatus:Enum::Microsoft#eServices#EDocument#E-Document Service Status">
+            <summary>
+            Retrieves the status of the integration action.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status.SetErrorStatus(Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+            <summary>
+            Sets the error status of an integration action. 
+            Used when actions result in an error by runtime or logged error message.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status.GetErrorStatus:Enum::Microsoft#eServices#EDocument#E-Document Service Status">
+            <summary>
+            Retrieves the error status of the integration action.
+            </summary>
+        </member>
+        <member name="O:Enum::Microsoft#eServices#EDocument#Integration#Action#Integration Action Type">
+            <summary>
+            Type of actions that can be performed on an E-Document
+            Actions are invoked using the InvokeAction method in Integration Management
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Empty Integration Action">
+            <summary>
+            This codeunit is used to implement the "Action Invoker" interface. It is used to provide a default implementation for the "Action Invoker" interface.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Sent Document Approval">
+            <summary>
+            Executes the approval check for the sent E-Document.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Sent Document Cancellation">
+            <summary>
+            Executes the cancellation check for the sent E-Document.
+            </summary>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IConsentManager">
+            <summary>
+            Interface for managing customer consent related to E-Document functionality
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IConsentManager.ObtainPrivacyConsent:Boolean">
+            <summary>
+            Obtains privacy consent from the customer.
+            </summary>
+            <returns>Returns true if the customer granted consent to the privacy notice ; otherwise, false.</returns>  
+            <remarks>
+            Displays a privacy consent message to the customer and saves customer's answer.
+            </remarks>
+            <example>
+            This example demonstrates how to implement the default version of <c>ObtainPrivacyConsent</c> method:
+            <code>
+            procedure ObtainPrivacyConsent(): Boolean
+            var
+                ConsentManagerDefaultImpl: Codeunit "Consent Manager Default Impl.";
+            begin
+                exit(ConsentManagerDefaultImpl.ObtainPrivacyConsent());
+            end;
+            </code>
+            </example>
+            <example>
+            This example demonstrates how to implement a custom <c>ObtainPrivacyConsent</c> method:
+            <code>
+            procedure ObtainPrivacyConsent(): Boolean
+            var
+                CustConsentMgt: Codeunit "Customer Consent Mgt.";
+                CustomConsentMessageTxt: Text;
+            begin
+                // CustomConsentMessageTxt := 'intialize your custom consent message';
+                exit(CustConsentMgt.ConfirmCustomConsent(CustomConsentMessageTxt));
+            end;
+            </code>
+            </example>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentAction">
+            <summary>
+            Interface for E-Document actionable actions.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentAction.InvokeAction(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext):Boolean">
+            <summary>  
+            Invokes an action based on the specified action type for the given E-Document and E-Document Service.  
+            </summary>    
+            <param name="EDocument">The E-Document record on which the action is performed.</param>  
+            <param name="EDocumentService">The E-Document Service record used for the API interaction.</param>  
+            <param name="ActionContext">The context for the action to be performed.</param>
+            <returns>Returns true if the action performed should update E-Document status ; otherwise, false.</returns>  
+            <remarks>  
+            The implementation should send an HTTP request to the API to perform the specified action on the E-Document.  
+            </remarks>  
+            <example>  
+            This example demonstrates how to implement the InvokeAction method to reset the E-Document status by calling the API:  
+            <code>  
+            procedure InvokeAction(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; ActionContext: Codeunit ActionContext): Boolean
+            var  
+                HttpClient: HttpClient;  
+            begin  
+                // Initialize the HTTP request  
+                HttpRequestMessage.Method := 'POST';  
+                HttpRequestMessage.SetRequestUri('https://api.example.com/documents/reset');  
+                HttpRequestMessage.Content.WriteFromText('{"documentId": "' + EDocument."Document ID" + '"}');  
+             
+                // Send the HTTP request and receive the response  
+                HttpClient.Send(HttpRequestMessage, HttpResponseMessage);  
+             
+                ActionContext.Status().SetStatus(Enum::"E-Document Service Status"::MyStatus);
+                exit(true);  
+            end;  
+            </code>  
+            </example>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentReceiver">
+            <summary>
+            Interface for receiving E-Documents from E-Document service
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentReceiver.ReceiveDocuments(E-Document Service@,Codeunit::System#Utilities#Temp Blob List,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
+             <summary>
+             Retrieves one or more documents from the API and returns the count of documents to be created.
+             </summary>
+             <param name="EDocumentService">The record representing the E-Document Service used for the API interaction.</param>
+             <param name="Documents">The temporary blob list used to store the received documents.</param>
+             <param name="ReceiveContext">The receive context used for managing HTTP requests and responses.</param>
+             <remarks>
+             Sends an HTTP request to the API to retrieve the documents. 
+             The response is stored in the DocumentsMetadata list, and the count of documents is implicitly determined by the number of temp blobs added to the list.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>ReceiveDocuments</c> method:
+             <code>
+             procedure ReceiveDocuments(var EDocumentService: Record "E-Document Service"; DocumentsMetadata: Codeunit "Temp Blob List"; ReceiveContext: Codeunit ReceiveContext)
+             var
+                 HttpRequest: HttpRequestMessage;
+                 JsonResponse: JsonArray;
+                 DocumentBlob: Codeunit "Temp Blob";
+                 JsonObject: JsonObject;
+                 OutStream: OutStream;
+             begin
+                 // Prepare the HTTP request
+                 HttpRequest := ReceiveContext.Http().GetHttpRequestMessage();
+                 HttpRequest.Method := 'GET';
+                 HttpRequest.SetRequestUri(EDocumentService."Service URL" + '/documents');
+            
+                 // Send the HTTP request
+                 HttpClient.Send(HttpRequest, ReceiveContext.Http().GetHttpResponseMessage());
+            
+                 // Parse the JSON response
+                 JsonResponse.ReadFrom(HttpResponse.ContentAsText());
+            
+                 // Iterate over each object in the JSON array and add a temp blob to the DocumentsMetadata list
+                 foreach JsonObject in JsonResponse do begin
+                     DocumentBlob.CreateOutStream(OutStream);
+                     JsonObject.WriteTo(OutStream);
+                     DocumentsMetadata.Add(DocumentBlob);
+                 end;
+             end;
+             </code>
+             </example>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentReceiver.DownloadDocument(E-Document@,E-Document Service@,Codeunit::System#Utilities#Temp Blob,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
+             <summary>
+             Downloads the data (e.g., XML, PDF) for the specified document from the API.
+             </summary>
+             <param name="EDocument">The record representing the E-Document for which the data is being downloaded.</param>
+             <param name="EDocumentService">The record representing the E-Document Service used for the API interaction.</param>
+             <param name="DocumentMetadata">The temporary blob containing the metadata for the document.</param>
+             <param name="ReceiveContext">The receive context used for managing HTTP requests and responses.</param>
+             <remarks>
+             Reads the document ID from the DocumentMetadata and sends an HTTP request to download the document data. 
+             The document data is downloaded using an authenticated request and stored in the ReceiveContext. If the document ID is not found, an error is logged, and no further actions are taken.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>DownloadDocument</c> method:
+             <code>
+             procedure DownloadDocument(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; DocumentMetadata: Codeunit "Temp Blob"; ReceiveContext: Codeunit ReceiveContext)
+             var
+                 Request: Codeunit Requests;
+                 HttpExecutor: Codeunit "Http Executor";
+                 ResponseContent: Text;
+                 InStream: InStream;
+                 DocumentId: Text;
+                 OutStream: OutStream;
+             begin
+                 // Read the document ID from the DocumentMetadata
+                 DocumentMetadata.CreateInStream(InStream, TextEncoding::UTF8);
+                 InStream.ReadText(DocumentId);
+            
+                 if DocumentId = '' then begin
+                     EDocumentErrorHelper.LogSimpleErrorMessage(EDocument, DocumentIdNotFoundErr);
+                     exit;
+                 end;
+            
+                 // Update the document record with the document ID
+                 EDocument."Document Id" := CopyStr(DocumentId, 1, MaxStrLen(EDocument."Document Id"));
+                 EDocument.Modify();
+            
+                 // Prepare the HTTP request
+                 Request.Init();
+                 Request.Authenticate().CreateDownloadRequest(DocumentId);
+                 ReceiveContext.Http().SetHttpRequestMessage(Request.GetRequest());
+            
+                 // Execute the HTTP request
+                 ResponseContent := HttpExecutor.ExecuteHttpRequest(Request, ReceiveContext.Http().GetHttpResponseMessage());
+            
+                 // Store the response in the ReceiveContext
+                 ReceiveContext.GetTempBlob().CreateOutStream(OutStream, TextEncoding::UTF8);
+                 OutStream.WriteText(ResponseContent);
+             end;
+             </code>
+             </example>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentResponseHandler">
+            <summary>
+            Interface for getting response for sent E-Documents from E-Document service
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentResponseHandler.GetResponse(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext):Boolean">
+             <summary>
+             Retrieves the response from the external service for an asynchronously sent E-Document.
+             </summary>
+             <param name="EDocument">The record representing the E-Document for which the response is being retrieved.</param>
+             <param name="EDocumentService">The record representing the E-Document Service containing service configuration.</param>
+             <param name="SendContext">The context for the get response operation, providing access to resources and status updates.</param>
+             <returns>
+             <c>true</c> if the response was successfully received from the service, marking the E-Document Service Status as "Sent";
+             <c>false</c> if the response is not yet ready from the service, marking the E-Document Service Status as "Pending Response".
+             </returns>
+             <remarks>
+             If a runtime error occurs or an error message is logged for the E-Document, the E-Document Service Status is set to "Sending Error",
+             and no further retry attempts will be made.
+             If the HTTP response is populated within <c>SendContext</c>, the response content and headers will be automatically logged to communication logs.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>GetResponse</c> method:
+             <code>
+             procedure GetResponse(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; SendContext: Codeunit SendContext): Boolean
+             var
+                 HttpClient: HttpClient;
+                 HttpRequest: HttpRequestMessage;
+                 HttpResponse: HttpResponseMessage;
+             begin
+                 // Prepare the HTTP request to check the status of the E-Document
+                 HttpRequest := SendContext.Http().GetHttpRequestMessage();
+                 HttpRequest.Method := 'GET';
+                 HttpRequest.SetRequestUri(EDocumentService."Service URL" + '/status/' + EDocument."Document ID");
+                 HttpRequest.Headers.Add('Authorization', 'Bearer ' + EDocumentService."Access Token");
+            
+                 // Send the HTTP request
+                 HttpClient.Send(HttpRequest, HttpResponse);
+            
+                 // Set the response in SendContext for automatic logging
+                 SendContext.Http().SetHttpResponseMessage(HttpResponse);
+            
+                 // Determine the result based on the response status code
+                 if HttpResponse.IsSuccessStatusCode() then
+                     exit(true) // The document was successfully processed
+                 else if HttpResponse.HttpStatusCode() = 202 then
+                     exit(false) // The document is still being processed
+                 else begin
+                     // Log the error and set the status to "Sending Error"
+                     EDocumentErrorHelper.LogSimpleErrorMessage(EDocument, 'Error retrieving response: ' + Format(HttpResponse.HttpStatusCode()));
+                     exit(false);
+                 end;
+             end;
+             </code>
+             </example> 
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentSender">
+            <summary>
+            Interface for sending E-Documents to E-Document service
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IDocumentSender.Send(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext)">
+             <summary>
+             Sends an E-Document to an external service.
+             </summary>
+             <param name="EDocument">The record representing the E-Document to be sent.</param>
+             <param name="EDocumentService">The record representing the E-Document Service containing service configuration.</param>
+             <param name="SendContext">The context for the send operation, providing access to resources and settings.</param>
+             <remarks>
+             To support async sending, the implementation of this interface must also implement the IDocumentResponseHandler interface.
+             When batch sending is supported, the EDocument Record contains multiple E-Documents to be sent set by filters.
+             If the HTTP request is populated within <c>SendContext</c>, the request content and headers will be automatically logged to communication logs.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>Send</c> method:
+             <code>
+             procedure Send(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; SendContext: Codeunit SendContext)
+             var
+                 TempBlob: Codeunit "Temp Blob";
+                 HttpClient: HttpClient;
+                 HttpRequest: HttpRequestMessage;
+             begin
+                 // Get the TempBlob from the SendContext
+                 SendContext.GetTempBlob(TempBlob);
+            
+                 // Read the E-Document content from TempBlob and prepare the HTTP request
+                 HttpRequest := SendContext.Http().GetHttpRequestMessage();
+                 HttpRequest.Method := 'POST';
+                 HttpRequest.SetRequestUri(EDocumentService."Service URL");
+                 HttpRequest.Content := TempBlob.AsHttpContent('application/xml'); // Or 'application/json' based on format
+            
+                 // Set additional headers if necessary
+                 HttpRequest.Headers.Add('Authorization', 'Bearer ' + EDocumentService."Access Token");
+            
+                 // Send the HTTP request
+                 HttpClient.Send(HttpRequest, SendContext.Http().GetHttpResponseMessage());
+            
+             end;
+             </code>
+             </example>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IReceivedDocumentMarker">
+            <summary>
+            Interface for marking received E-Documents fetched from the E-Document service.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#IReceivedDocumentMarker.MarkFetched(E-Document@,E-Document Service@,Codeunit::System#Utilities#Temp Blob@,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
+             <summary>
+             Marks the given E-Document as fetched using an API call.
+             </summary>
+             <param name="EDocument">The record representing the E-Document to be marked as fetched.</param>
+             <param name="EDocumentService">The record representing the E-Document Service used for API interaction.</param>
+             <param name="DocumentBlob">The temporary blob containing document metadata.</param>
+             <param name="ReceiveContext">The receive context interface used for managing HTTP requests and responses.</param>
+             <remarks>
+             Sends an HTTP request to the API to mark the document as fetched. If the request fails, an error is thrown, preventing the document from being created.
+             If the API does not support this functionality, the implementation should avoid implementing the associated interfaces.
+             </remarks>
+             <example>
+             This example shows how to implement the MarkFetched method:
+             <code>
+             procedure MarkFetched(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; var DocumentBlob: Codeunit "Temp Blob"; var HttpRequestMessage: HttpRequestMessage; var HttpResponseMessage: HttpResponseMessage)
+             var
+                 HttpClient: HttpClient;
+             begin
+                 // Set up the HTTP request
+                 HttpRequestMessage.Method := 'POST';
+                 HttpRequestMessage.SetRequestUri('https://api.example.com/documents/' + EDocument.Id + '/mark-fetched');
+            
+                 // Send the HTTP request
+                 HttpClient.Send(HttpRequestMessage, HttpResponseMessage);
+            
+                 // Check if the response was successful
+                 if HttpResponseMessage.IsSuccessStatusCode then begin
+                     // Successfully marked the document as fetched
+                     exit;
+                 end;
+                 Error('Failed to mark the document as fetched.');
+             end;
+             </code>
+             </example>    
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#ISentDocumentActions">
+            <summary>
+            Default Integration Actions that framework provides.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#ISentDocumentActions.GetApprovalStatus(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext):Boolean">
+             <summary>
+             Sends an outgoing E-Document approval request to the API to check if the sent document is approved.
+             </summary>
+             <param name="EDocument">The record representing the E-Document to be approved.</param>
+             <param name="EDocumentService">The record representing the E-Document Service used for the API interaction.</param>
+             <param name="ActionContext">The action context interface used for managing HTTP requests and responses.</param>
+             <returns>Returns true if the document approval request should update the E-Document status; otherwise, false.</returns>
+             <remarks>
+             Sends an HTTP request to the API to check if the document was approved by the service. The response is processed to determine whether the status should be updated.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>GetApprovalStatus</c> method:
+             <code>
+             procedure GetApprovalStatus(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; ActionContext: Codeunit ActionContext): Boolean
+             var
+                 Request: Codeunit Requests;
+                 HttpExecutor: Codeunit "Http Executor";
+                 ResponseContent: Text;
+             begin
+                 // Prepare the HTTP request
+                 Request.Init();
+                 Request.Authenticate().CreateApprovalRequest(EDocument."Document ID");
+                 ActionContext.Http().SetHttpRequestMessage(Request.GetRequest());
+            
+                 // Execute the HTTP request
+                 ResponseContent := HttpExecutor.ExecuteHttpRequest(Request, ActionContext.Http().GetHttpResponseMessage());
+            
+                 // Process the response to determine the approval status
+                 if ResponseContent.Contains('approved') then begin
+                     ActionContext.SetStatus(ActionContext.GetStatus()."Approved");
+                     exit(true);
+                 end;
+             end;
+             </code>
+             </example>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Integration#Interfaces#ISentDocumentActions.GetCancellationStatus(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext):Boolean">
+             <summary>
+             Sends an outgoing E-Document cancellation request to the API to check if the sent document was canceled.
+             </summary>
+             <param name="EDocument">The record representing the E-Document to be canceled.</param>
+             <param name="EDocumentService">The record representing the E-Document Service used for the API interaction.</param>
+             <param name="ActionContext">The action context interface used for managing HTTP requests and responses.</param>
+             <returns>Returns true if the document cancellation request should update the E-Document status; otherwise, false.</returns>
+             <remarks>
+             Sends an HTTP request to the API to check if the document was canceled by the service. The response is processed to determine whether the status should be updated.
+             </remarks>
+             <example>
+             This example demonstrates how to implement the <c>GetCancellationStatus</c> method:
+             <code>
+             procedure GetCancellationStatus(var EDocument: Record "E-Document"; var EDocumentService: Record "E-Document Service"; ActionContext: Codeunit ActionContext): Boolean
+             var
+                 Request: Codeunit Requests;
+                 HttpExecutor: Codeunit "Http Executor";
+                 ResponseContent: Text;
+             begin
+                 // Prepare the HTTP request
+                 Request.Init();
+                 Request.Authenticate().CreateCancellationRequest(EDocument."Document ID");
+                 ActionContext.Http().SetHttpRequestMessage(Request.GetRequest());
+            
+                 // Execute the HTTP request
+                 ResponseContent := HttpExecutor.ExecuteHttpRequest(Request, ActionContext.Http().GetHttpResponseMessage());
+            
+                 // Process the response to determine the cancellation status
+                 if ResponseContent.Contains('canceled') then begin
+                     ActionContext.SetStatus(ActionContext.GetStatus()."Canceled");
+                     exit(true);
+                 end;
+             end;
+             </code>
+             </example>s
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext.GetTempBlob:Codeunit::System#Utilities#Temp Blob">
+            <summary>
+            Retrieves the temporary blob used for storing E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext.SetTempBlob(Codeunit::System#Utilities#Temp Blob)">
+            <summary>
+            Sets the temporary blob with the E-Document content.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext.Http:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State">
+            <summary>
+            Get the Http Message State codeunit.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext.Status:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status">
+            <summary>
+            Retrieves the Action Status object.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State">
+            <summary>
+            Codeunit to manage the HTTP state for the integration actions.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State.GetHttpRequestMessage:HttpRequestMessage">
+            <summary>
+            Retrieves the HTTP request message object.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State.SetHttpRequestMessage(HttpRequestMessage)">
+            <summary>
+            Sets the HTTP request message object.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State.GetHttpResponseMessage:HttpResponseMessage">
+            <summary>
+            Retrieves the HTTP response message object.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Http Message State.SetHttpResponseMessage(HttpResponseMessage)">
+            <summary>
+            Sets the HTTP response message object.
+            </summary>
+        </member>
         <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
             <summary>
             Function for service participant. 
@@ -47,56 +640,228 @@
             Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
             </summary>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Check(RecordRef@,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Processing Phase)">
-            
-             The following methods are to create EDocument from Business Central document to send to the endpoint
-            
+        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Structured Data Process">
             <summary>
-            Use it to run check on release/post action of a document to make sure all necessary fields to submit the document are available.
+            Enum for E-Document Processing
             </summary>
-            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
-            <param name="EDocumentService">The document service used to send the document electronically.</param>
-            <param name="EDocumentProcessingPhase">The document processing phase enum, for example it can be create, release, etc.</param>
-            <remarks>You should validated all required data to convert a document to a specific format, and throw an error if something missing.</remarks>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Create(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#Import E-Doc# Proc# Status">
             <summary>
-            Use it to create a blob representing the posted document.
+            States that the E-Document goes through during the import process. To go between each state, they go through the steps defined in "Import E-Document Steps".
             </summary>
-            <param name="EDocumentService">The document service used to send the document electronically.</param>
-            <param name="EDocument">Electronic document.</param>
-            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
-            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
-            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.CreateBatch(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#Import E-Document Steps">
             <summary>
-            Use it to create a blob representing a batch of posted documents.
+            The steps that an E-Document goes through during the import process.
             </summary>
-            <param name="EDocumentService">The document service used to send the document electronically.</param>
-            <param name="EDocument">Electronic document.</param>
-            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
-            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
-            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetBasicInfoFromReceivedDocument(E-Document@,Codeunit::System#Utilities#Temp Blob@)">
-            
-             The following methods are to receive a document from an endpoint and prepare it to be a BC
-            
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Default Blob Type">
             <summary>
-            Use it to get the basic information of an E-Document from received blob.
+            Pass through blob converter for E-Documents.
+            This codeunit is default implementation of the IBlobToStructuredDataConverter interface.
             </summary>
-            <param name="EDocument">Electronic document.</param>
-            <param name="TempBlob">Contians received blob from external service</param>
         </member>
-        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetCompleteInfoFromReceivedDocument(E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Create Purchase Invoice">
             <summary>
-            Use it to create a document from imported blob.
+            Dealing with the creation of the purchase invoice after the draft has been populated.
             </summary>
-            <param name="EDocument">Electronic document.</param>
-            <param name="CreatedDocumentHeader">The document header that should be populated from the blob as a recored ref.</param>
-            <param name="CreatedDocumentLines">The document lines that should be populated from the blob as a recored ref.</param>
-            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Create Purchase Invoice">
+            <summary>
+            Enum for the implementations of the E-Doc. Create Purchase Invoice interface.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Default Implementation">
+            <summary>
+            Default implementations for E-Document interfaces.
+            </summary>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter">
+            <summary>
+            Interfaces defines how to convert a blob to a structured type.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter.Convert(E-Document,Codeunit::System#Utilities#Temp Blob,Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type,Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type@):Text">
+            <summary>
+            Converts a given blob of data into a structured format (e.g., XML or JSON).
+            This procedure handles the actual conversion logic based on the provided 
+            blob and its type.
+            </summary>
+            <param name="EDocument">
+            The E-Document record that contains the blob data.
+            </param>
+            <param name="FromTempblob">
+            The codeunit representing the unstructured data in a temporary blob format.
+            This is the input blob that needs to be converted.
+            </param>
+            <param name="FromType">
+            The enum value representing the type of blob (e.g., PDF, XML, etc.) that 
+            is being converted. This helps determine how the conversion will proceed.
+            </param>
+            <param name="ConvertedType">
+            The enum value that will be set to the type of the converted data (e.g., JSON or XML).
+            It indicates the resulting structure type after the conversion.
+            </param>
+            <param name="StructuredData">
+            A text variable that will contain the result of the conversion.
+            This is the structured output derived from the input blob data.
+            </param>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobType">
+            <summary>
+            Interface for Blob Type
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobType.IsStructured:Boolean">
+            <summary>
+            Check if the blob type is structured
+            </summary>
+            <returns>True if the blob content is structured</returns>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobType.HasConverter:Boolean">
+            <summary>
+            Check if the blob type has a converter to convert its content to structured data
+            </summary>
+            <returns>True if the blob type has a converter</returns>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobType.GetStructuredDataConverter:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IBlobToStructuredDataConverter">
+            <summary>
+            Get the converter for the blob type
+            </summary>
+            <returns>Converter for the blob type</returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentCreatePurchaseInvoice">
+            <summary>
+            Interface for changing the way that purchase invoices get created from an E-Document.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentCreatePurchaseInvoice.CreatePurchaseInvoice(E-Document):Purchase Header">
+            <summary>
+            Creates a purchase invoice from an E-Document with a draft ready.
+            </summary>
+            <param name="EDocument"></param>
+            <returns></returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentFinishDraft">
+            <summary>
+            Interface that deals with creating a document in Business Central from the draft entities.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentFinishDraft.ApplyDraftToBC(E-Document,E-Doc# Import Parameters):RecordId">
+            <summary>
+            Applies the actions of a draft to Business Central entities.
+            </summary>
+            <param name="EDocument">The E-Document that has a draft ready.</param>
+            <param name="ImportEDocumentProcess"></param>
+            <returns>The record ID of the document created in Business Central.</returns>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IEDocumentFinishDraft.RevertDraftActions(E-Document)">
+            <summary>
+            Reverts the actions specified in ApplyDraftToBC.
+            </summary>
+            <param name="EDocument">The E-Document that has a document in Business Central.</param>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IItemProvider">
+            <summary>
+            Interface for retrieving an item based on an E-Document line, vendor, and unit of measure.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IItemProvider.GetItem(E-Document,Integer,Vendor,Unit of Measure):Item">
+            <summary>
+            Retrieves the corresponding item for a given E-Document line.
+            </summary>
+            <param name="EDocument">The E-Document record containing document details.</param>
+            <param name="EDocumentLineId">The identifier of the specific line within the E-Document.</param>
+            <param name="Vendor">The vendor associated with the E-Document.</param>
+            <param name="UnitOfMeasure">The unit of measure related to the item.</param>
+            <returns>An Item record matching the provided details.</returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData">
+            <summary>
+            Describe the data processing used to assign Business Central values to the E-Document data structures
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData.PrepareDraft(E-Document,E-Doc# Import Parameters):Enum::Microsoft#eServices#EDocument#E-Document Type">
+            <summary>
+            From an E-Document that has had its data structures populated, process the data to assign Business Central values
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData.OpenDraftPage(E-Document@)">
+            <summary>
+            Open the draft page for the E-Document
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IProcessStructuredData.CleanUpDraft(E-Document)">
+            <summary>
+            Clean up any custom or scenario specific records using during processing 
+            </summary>
+            <param name="EDocument"></param>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineAccountProvider">
+            <summary>
+            Interface for determining the account assignment for a purchase line in an E-Document.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseLineAccountProvider.GetPurchaseLineAccount(E-Document Purchase Line,E-Document Line Mapping,Enum::Microsoft#Purchases#Document#Purchase Line Type@,Code[20]@)">
+            <summary>
+            Determines the account type and account number for a given E-Document purchase line.
+            </summary>
+            <param name="EDocumentPurchaseLine">The purchase line record from the E-Document.</param>
+            <param name="EDocumentLineMapping">The mapping record for the E-Document line.</param>
+            <param name="AccountType">The output parameter for the determined purchase line account type.</param>
+            <param name="AccountNo">The output parameter for the determined account number.</param>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseOrderProvider">
+            <summary>
+            Interface for retrieving a purchase order based on an E-Document purchase header.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IPurchaseOrderProvider.GetPurchaseOrder(E-Document Purchase Header):Purchase Header">
+            <summary>
+            Retrieves the corresponding purchase order for a given E-Document purchase header.
+            </summary>
+            <param name="EDocumentPurchaseHeader">The E-Document purchase header record containing order details.</param>
+            <returns>A Purchase Header record matching the provided E-Document purchase header.</returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader">
+            <summary>
+            Describe the interface for reading a structured data format into data structures.
+            The data structures will be used in the data processing flow. 
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IStructuredFormatReader.Read(E-Document,Codeunit::System#Utilities#Temp Blob):Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Structured Data Process">
+            <summary>
+            Read the data into the E-Document data structures.
+            </summary>
+            <param name="EDocument">The E-Document record.</param>
+            <param name="TempBlob">The temporary blob that contains the data to read</param>
+            <returns>The data process to run on the structured data.</returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IUnitOfMeasureProvider">
+            <summary>
+            Interface for retrieving the unit of measure based on an E-Document.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IUnitOfMeasureProvider.GetUnitOfMeasure(E-Document,Integer,Text):Unit of Measure">
+            <summary>
+            Retrieves the corresponding unit of measure for a given E-Document line.
+            </summary>
+            <param name="EDocument">The E-Document record containing document details.</param>
+            <param name="EDocumentLineId">The identifier of the specific line within the E-Document.</param>
+            <param name="ExternalUnitOfMeasure">The external unit of measure reference.</param>
+            <returns>A Unit of Measure record corresponding to the provided details.</returns>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IVendorProvider">
+            <summary>
+            Interface for retrieving vendor information based on an E-Document.
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#Processing#Interfaces#IVendorProvider.GetVendor(E-Document):Vendor">
+            <summary>
+            Retrieves the vendor associated with the given E-Document.
+            </summary>
+            <param name="EDocument">The E-Document record containing relevant details.</param>
+            <returns>A Vendor record matching the E-Document.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.ErrorMessageCount(E-Document@):Integer">
             <summary>
@@ -156,6 +921,12 @@
             </summary>
             <param name="RecRef">Source document record reference.</param>
             <returns> True if the source document is an E-Document.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Helper.GetServicesInWorkflow(Workflow,E-Document Service@):Boolean">
+            <summary>
+            Returns the EDocuments services used in a workflow.
+            E-Document service record has code filter set.
+            </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Helper.AllowEDocumentCoreHttpCalls">
             <summary>
@@ -356,6 +1127,15 @@
             <param name="TempBlob">Temp blob codeunit instance representing document blob data.</param>
             <param name="EDocumentServiceStatus">The status of the E-Document Service at the time of log insertion.</param>
         </member>
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Integration Management.InvokeAction(E-Document@,E-Document Service@,Enum::Microsoft#eServices#EDocument#Integration#Action#Integration Action Type,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ActionContext)">
+            <summary>
+            Invokes an IDocumentAction for the E-Document and E-Document Service.
+            </summary>
+            <param name="EDocument">The record representing the E-Document to be used in the action.</param>
+            <param name="EDocumentService">The record representing the E-Document Service.</param>
+            <param name="ActionType">The action to be invoked.</param>
+            <param name="ActionContext">The context for the action operation, providing access to resources and settings.</param>
+        </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#E-Document Integration.Send(E-Document@,Codeunit::System#Utilities#Temp Blob@,Boolean@,HttpRequestMessage@,HttpResponseMessage@)">
             <summary>
             Use it to send an E-Document to external service.
@@ -442,6 +1222,18 @@
             <param name="SetupPage">The E-Document integration page id.</param>
             <param name="SetupTable">The E-Dcoument integration table id.</param>
         </member>
+        <member name="O:Table::Microsoft#eServices#EDocument#E-Doc# Data Storage">
+            <summary>
+            E-Document Data Storage Table
+            This table stores binary data that is associated with a E-Document Log Entry.
+            </summary>
+        </member>
+        <member name="O:Enum::Microsoft#eServices#EDocument#E-Doc# Data Storage Blob Type">
+            <summary>
+            E-Document Data Storage Blob Type
+            This enum specifies the type of the binary data stored in the E-Document Data Storage table.
+            </summary>
+        </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Attachment Processor.MoveAttachmentsAndDelete(E-Document,RecordId)">
             <summary>
             Move attachments from E-Document to NewDocument. Clean up any attachments stored on EDocument.
@@ -476,9 +1268,85 @@
             Updates existing service status record. Throws runtime error if record does not exists.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyEDocumentStatus(E-Document@,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
+        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyEDocumentStatus(E-Document@)">
             <summary>
             Updates EDocument status based on E-Document Service Status value
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Check(RecordRef@,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Processing Phase)">
+            
+             The following methods are to create EDocument from Business Central document to send to the endpoint
+            
+            <summary>
+            Use it to run check on release/post action of a document to make sure all necessary fields to submit the document are available.
+            </summary>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocumentProcessingPhase">The document processing phase enum, for example it can be create, release, etc.</param>
+            <remarks>You should validated all required data to convert a document to a specific format, and throw an error if something missing.</remarks>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Create(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a blob representing the posted document.
+            </summary>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocument">Electronic document.</param>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.CreateBatch(E-Document Service,E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a blob representing a batch of posted documents.
+            </summary>
+            <param name="EDocumentService">The document service used to send the document electronically.</param>
+            <param name="EDocument">Electronic document.</param>
+            <param name="SourceDocumentHeader">The source document header as a recored ref.</param>
+            <param name="SourceDocumentLines">The source document lines as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetBasicInfoFromReceivedDocument(E-Document@,Codeunit::System#Utilities#Temp Blob@)">
+            
+             The following methods are to receive a document from an endpoint and prepare it to be a BC
+            
+            <summary>
+            Use it to get the basic information of an E-Document from received blob.
+            </summary>
+            <param name="EDocument">Electronic document.</param>
+            <param name="TempBlob">Contians received blob from external service</param>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.GetCompleteInfoFromReceivedDocument(E-Document@,RecordRef@,RecordRef@,Codeunit::System#Utilities#Temp Blob@)">
+            <summary>
+            Use it to create a document from imported blob.
+            </summary>
+            <param name="EDocument">Electronic document.</param>
+            <param name="CreatedDocumentHeader">The document header that should be populated from the blob as a recored ref.</param>
+            <param name="CreatedDocumentLines">The document lines that should be populated from the blob as a recored ref.</param>
+            <param name="TempBlob">Tempblob that should contatin the exported document in the correspondant format.</param>
+        </member>
+        <member name="O:Interface::Microsoft#eServices#EDocument#IEDocumentStatus">
+            <summary>
+            Interface for E-Document Status
+            </summary>
+        </member>
+        <member name="M:Interface::Microsoft#eServices#EDocument#IEDocumentStatus.GetEDocumentStatus:Enum::Microsoft#eServices#EDocument#E-Document Status">
+            <summary>
+            Get E-Document Status
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#E-Doc Error Status">
+            <summary>
+            E-Document Error Status
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#E-Doc In Progress Status">
+            <summary>
+            E-Document In Progress Status
+            </summary>
+        </member>
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#E-Doc Processed Status">
+            <summary>
+            E-Document Processed Status
             </summary>
         </member>
     </members>

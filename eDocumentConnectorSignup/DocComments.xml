@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>b56171bd-9a8e-47ad-a527-99f476d5af83</id>
+        <name>E-Document Connector - SignUp</name>
+        <publisher>Microsoft</publisher>
+        <version>26.0.30643.35959</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.SendFilePostRequest(Codeunit::System#Utilities#Temp Blob@,E-Document,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method sends a file to the API.
+            https://[BASEURL]/api/v2/Peppol/outbox/transactions
+            </summary>
+            <param name="TempBlob">TempBlob</param>
+            <param name="EDocument">EDocument table</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.GetSentDocumentStatus(E-Document,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method checks the status of the sent document.
+            https://[BASE URL]/api/v2/Peppol/outbox/transactions/{transactionId}/status
+            </summary>
+            <param name="EDocument">EDocument table</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.PatchDocument(E-Document,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method modifies the document.
+            https://[BASE URL]/api/v2/Peppol/outbox/transactions/{transactionId}/acknowledge
+            </summary>
+            <param name="EDocument">EDocument table</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.GetReceivedDocumentsRequest(HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method gets the received document request.
+            https://[BASE URL]/api/v2/Peppol/inbox/transactions
+            </summary>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>    
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.GetTargetDocumentRequest(Text,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method gets the target document request.
+            https://[BASE URL]/api/v2/Peppol/inbox/transactions/{transactionId}
+            </summary>
+            <param name="DocumentId">Document ID</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.PatchReceivedDocument(E-Document,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method modifies the received document.
+            https://[BASE URL]/api/v2/Peppol/inbox/transactions/{transactionId}/acknowledge
+            </summary>
+            <param name="EDocument">EDocument table</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.FetchMetaDataProfiles(HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method fetches metadata profiles.
+            https://[BASE URL]/api/v2/Peppol/metadataprofile
+            </summary>
+            <param name="HttpRequestMessage">The HTTP request message to be sent.</param>
+            <param name="HttpResponseMessage">The HTTP response message received.</param>
+            <returns>Returns true if the metadata profiles were successfully fetched, otherwise false.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp API Requests.GetMarketPlaceCredentials(HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method gets the marketplace credentials.
+            </summary>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True if successfully completed</returns>   
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.InitConnectionSetup">
+            <summary>
+            The method initializes the connection setup.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.GetMarketplaceOnboardingUrl:Text">
+            <summary>
+            The method returns the onboarding URL.
+            </summary>
+            <returns>Onboarding URL</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.CreateClientCredentials">
+            <summary>
+            The method creates the client credentials.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.GetBearerAuthToken:SecretText">
+            <summary>
+            The method returns the bearer authentication text.
+            </summary>
+            <returns>Bearer authentication token</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.GetMarketplaceBearerAuthToken:SecretText">
+            <summary>
+            The method returns the Marketplace bearer authentication token.
+            </summary>
+            <returns>Marketplace bearer authentication token</returns>   
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.StorageSet(Guid@,Text):Boolean">
+            <summary>
+            The mehod saves the token to the storage.
+            </summary>
+            <param name="TokenKey">Token Key</param>
+            <param name="Value">Token</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.StorageSet(Guid@,SecretText):Boolean">
+            <summary>
+            The mehod saves the token to the storage.
+            </summary>
+            <param name="TokenKey">Token Key</param>
+            <param name="Value">Token</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.GetBCInstanceIdentifier:Text">
+            <summary>
+            The method returns BC instance identifier.
+            </summary>
+            <returns>Identifier</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Authentication.GetMarketplaceUrl:Text">
+            <summary>
+            The method returns the Marketplace URL.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.SendFilePostRequest(Codeunit::System#Utilities#Temp Blob@,E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The methods sends a file to the API.
+            </summary>
+            <param name="TempBlob">Content</param>
+            <param name="EDocument">E-Document record</param>
+            <param name="HttpRequestMessage">Http Request Message</param>
+            <param name="HttpResponseMessage">Http Response Message</param>
+            <returns>True - if completed successfully</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.CheckDocumentStatus(E-Document@,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method checks the status of the document.
+            </summary>
+            <param name="EDocument">E-Document record</param>
+            <param name="HttpRequestMessage">HttpRequestMessage</param>
+            <param name="HttpResponseMessage">HttpResponseMessage</param>
+            <returns>True - if completed successfully</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.GetReceivedDocuments(HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method gets received documents.
+            </summary>
+            <param name="HttpRequestMessage">HttpRequestMessage</param>
+            <param name="HttpResponseMessage">HttpResponseMessage</param>
+            <returns>True - if completed successfully</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.GetTargetDocumentRequest(Text,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method gets the target document.
+            </summary>
+            <param name="DocumentId">DocumentId</param>
+            <param name="HttpRequestMessage">HttpRequestMessage</param>
+            <param name="HttpResponseMessage">HttpResponseMessage</param>
+            <returns>True - if completed successfully</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.RemoveDocumentFromReceived(E-Document,HttpRequestMessage@,HttpResponseMessage@):Boolean">
+            <summary>
+            The method removes the document from received.
+            </summary>
+            <param name="EDocument">E-Document record</param>
+            <param name="HttpRequestMessage">HttpRequestMessage</param>
+            <param name="HttpResponseMessage">HttpResponseMessage</param>
+            <returns>True - if completed successfully</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Connection.UpdateMetadataProfile">
+            <summary>
+            Updates the Metadata Profile table.
+            If the data is Fectched, the current Metadata Profile table will be deleted and the new data will be inserted.
+            If any Metadata Profiles have been removed, references to them will be set to 0.
+            </summary>
+            <remarks>
+            This procedure retrieves and updates the metadata profile information from an external service.
+            </remarks>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Processing.Send(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext)">
+            <summary>
+            The method sends the E-Document to the API.
+            </summary>
+            <param name="EDocument">The E-Document record to be sent.</param>
+            <param name="EDocumentService">The E-Document Service record associated with the E-Document.</param>
+            <param name="SendContext">The context in which the document is being sent, encapsulated in a SendContext codeunit.</param>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Processing.GetResponse(E-Document@,E-Document Service@,Codeunit::Microsoft#eServices#EDocument#Integration#Send#SendContext):Boolean">
+            <summary>
+            The method retrieves the response for the sent E-Document from the API.
+            </summary>
+            <param name="EDocument">The E-Document record for which the response is being retrieved.</param>
+            <param name="EDocumentService">The E-Document Service record associated with the E-Document.</param>
+            <param name="SendContext">The context in which the document was sent, encapsulated in a SendContext codeunit.</param>
+            <returns>Returns true if the response was successfully retrieved, otherwise false.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#EServices#EDocumentConnector#SignUp#SignUp Processing.ReceiveDocuments(E-Document Service@,Codeunit::System#Utilities#Temp Blob List,Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext)">
+            <summary>
+            The method receives documents from the API.
+            </summary>
+            <param name="EDocumentService">The E-Document Service record associated with the documents being received.</param>
+            <param name="DocumentsMetadataTempBlobList">A codeunit containing metadata for the received documents.</param>
+            <param name="ReceiveContext">The context in which the documents are being received, encapsulated in a ReceiveContext codeunit.</param>
+        </member>
+    </members>
+</doc>

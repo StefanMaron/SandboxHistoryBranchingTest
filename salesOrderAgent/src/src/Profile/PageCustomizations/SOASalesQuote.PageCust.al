@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Sales.Document;
 
@@ -23,10 +24,12 @@ pagecustomization "SOA Sales Quote" customizes "Sales Quote"
         modify("Sell-to Customer No.")
         {
             Visible = true;
+            Editable = false;
         }
         modify("Sell-to Customer Name")
         {
             Visible = true;
+            Editable = false;
         }
         modify("External Document No.")
         {
@@ -38,7 +41,7 @@ pagecustomization "SOA Sales Quote" customizes "Sales Quote"
         }
         modify("Salesperson Code")
         {
-            Visible = true;
+            Visible = false;
         }
         modify("Sell-to Address")
         {
@@ -67,6 +70,7 @@ pagecustomization "SOA Sales Quote" customizes "Sales Quote"
         modify("Sell-to Contact No.")
         {
             Visible = true;
+            Editable = false;
         }
         modify(SellToPhoneNo)
         {
@@ -122,6 +126,11 @@ pagecustomization "SOA Sales Quote" customizes "Sales Quote"
         {
             Visible = true;
         }
+        modify("Currency Code")
+        {
+            Visible = true;
+            Editable = false;
+        }
     }
 
     actions
@@ -131,6 +140,10 @@ pagecustomization "SOA Sales Quote" customizes "Sales Quote"
             Visible = true;
         }
         modify(DownloadAsPDF_Promoted)
+        {
+            Visible = true;
+        }
+        modify(ItemAvailability_Promoted)
         {
             Visible = true;
         }

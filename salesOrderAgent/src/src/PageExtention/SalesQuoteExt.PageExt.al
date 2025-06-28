@@ -3,7 +3,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 // ------------------------------------------------------------------------------------------------
 
-namespace Agent.SalesOrderAgent;
+#pragma warning disable AS0007
+namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Sales.Document;
 using Microsoft.Foundation.Reporting;
@@ -32,11 +33,24 @@ pageextension 4400 "Sales Quote Ext" extends "Sales Quote"
                     ReportSelections.PrintWithDialogForCust(ReportSelections.Usage::"S.Quote", SalesHeader, false, SalesHeader.FieldNo("Bill-to Customer No."));
                 end;
             }
+            action(ItemAvailability)
+            {
+                ApplicationArea = All;
+                Caption = 'Item Availability';
+                ToolTip = 'Open the item availability page to search for available items.';
+                Image = ListPage;
+                RunObject = Page "SOA Multi Items Availability";
+                RunPageMode = Edit;
+            }
         }
 
         addlast(Category_Category9)
         {
             actionref(DownloadAsPDF_Promoted; DownloadAsPDF)
+            {
+
+            }
+            actionref(ItemAvailability_Promoted; ItemAvailability)
             {
 
             }
