@@ -4,7 +4,7 @@
         <id>ec255f57-31d0-4ca2-b751-f2fa7c745abb</id>
         <name>Shopify Connector</name>
         <publisher>Microsoft</publisher>
-        <version>26.0.30643.35936</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#Integration#Shopify#Shpfy - Admin">
@@ -6299,6 +6299,11 @@
             </summary>
             <param name="TempTranslation">Temporary record containing the new translations.</param>
             <returns>True if the translation has changed, false otherwise.</returns>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Webhook Topic">
+            <summary>
+            Enum Shpfy Webhook Topic (ID 30167).
+            </summary>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Mtfld Type Money.TryExtractValues(Text,Decimal@,Code[10]@):Boolean">
             <summary>
