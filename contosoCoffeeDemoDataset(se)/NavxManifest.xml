@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="5b0a41a1-7b42-4123-a521-2265356bab31" Name="Contoso Coffee Demo Dataset (SE)" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="26.0.30643.36041" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=724011" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="5b0a41a1-7b42-4123-a521-2265356bab31" Name="Contoso Coffee Demo Dataset (SE)" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Business Central, we are making new and extensive demo data available for various scenarios." Description="Presales specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various scenarios." Version="26.1.33404.35996" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=724011" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="11200" MaxObjectId="11250" />
     <IdRange MinObjectId="11299" MaxObjectId="11299" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T19:59:25.2034553Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-27T01:31:10.0862347Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
