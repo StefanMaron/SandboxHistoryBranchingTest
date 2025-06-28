@@ -134,11 +134,6 @@ table 18203 "GST Distribution Header"
                 ShowDocDim();
             end;
         }
-        field(481; "ISD Interstate Posting"; Boolean)
-        {
-            Caption = 'ISD Interstate Posting';
-            DataClassification = CustomerContent;
-        }
     }
 
     keys
