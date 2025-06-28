@@ -7,7 +7,6 @@
 namespace Microsoft.Agent.SalesOrderAgent;
 
 using Microsoft.Assembly.Document;
-using Microsoft.Finance.GeneralLedger.Setup;
 using Microsoft.Foundation.Enums;
 using Microsoft.Foundation.Period;
 using Microsoft.Foundation.UOM;
@@ -17,9 +16,11 @@ using Microsoft.Inventory.Location;
 using Microsoft.Inventory.Transfer;
 using Microsoft.Manufacturing.Document;
 using Microsoft.Projects.Project.Planning;
+using Microsoft.Finance.GeneralLedger.Setup;
 using Microsoft.Purchases.Document;
 using Microsoft.Sales.Customer;
 using Microsoft.Sales.Document;
+
 using System.Utilities;
 
 page 4410 "SOA Multi Items Availability"
@@ -634,13 +635,7 @@ page 4410 "SOA Multi Items Availability"
     trigger OnAfterGetRecord()
     begin
         CalcAvailQuantities(GrossRequirement, PlannedOrderRcpt, ScheduledRcpt, PlannedOrderReleases, ProjAvailableBalance, ProjAvailableBalanceInUOM, ExpectedInventory, QtyAvailable);
-
-        if not CalcPrice() then begin
-            UnitCost := 0;
-            UnitPrice := 0;
-            DiscountPct := 0;
-            UnitPriceInclDiscount := 0;
-        end;
+        CalcPrice();
     end;
 
     var
@@ -663,7 +658,7 @@ page 4410 "SOA Multi Items Availability"
         Available: Boolean;
         OptionsVisible: Boolean;
         MatchingItem: Boolean;
-        PreviewDisclaimerLbl: Label 'Item Availability page (preview). Learn more';
+        PreviewDisclaimerLbl: Label 'Item Availability page (preview). Learn more.';
         PreviewDisclaimerURLLbl: Label 'https://go.microsoft.com/fwlink/?linkid=2303848', Locked = true;
 
     local procedure ShowItemAvailLineList(What: Integer)
@@ -745,15 +740,10 @@ page 4410 "SOA Multi Items Availability"
                 AvailabilityLevel := AvailabilityLevel::Limited;
             if ProjAvailableBalance2 > SafetyStockQty then
                 AvailabilityLevel := AvailabilityLevel::Available;
-        end else begin
+        end else
             Available := true;
-            AvailabilityLevel := AvailabilityLevel::Available;
-            ProjAvailableBalance2 := 0;
-            ProjAvailableBalanceInUOM2 := 0;
-        end;
     end;
 
-    [TryFunction]
     local procedure CalcPrice()
     var
         GLSetup: Record "General Ledger Setup";
