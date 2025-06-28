@@ -1,12 +1,12 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="08d69832-9231-429e-be2c-8bab2c96905b" Name="Email - Current User Connector" Publisher="Microsoft" Brief="Enable users to use their own Microsoft 365 email account to send email in Business Central." Description="This connector enables users to send email from their own email account. After you set up this connector, it will automatically find the email accounts specified for each user. You only need to set up this connector one time." Version="26.1.33404.35908" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2134520" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2134520" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="08d69832-9231-429e-be2c-8bab2c96905b" Name="Email - Current User Connector" Publisher="Microsoft" Brief="Enable users to use their own Microsoft 365 email account to send email in Business Central." Description="This connector enables users to send email from their own email account. After you set up this connector, it will automatically find the email accounts specified for each user. You only need to set up this connector one time." Version="26.0.30643.35959" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2134520" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2134520" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="2" MaxObjectId="2" />
     <IdRange MinObjectId="4500" MaxObjectId="4502" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="e6328152-bb29-4664-9dae-3bc7eaae1fd8" Name="Email - Outlook REST API" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e6328152-bb29-4664-9dae-3bc7eaae1fd8" Name="Email - Outlook REST API" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="ac0b4daa-f46f-42ef-9468-6b623298e36b" Name="Email - Current User Connector Tests" Publisher="Microsoft" />
@@ -22,6 +22,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-25T20:26:12.7454228Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-26T10:46:47.7078065Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
