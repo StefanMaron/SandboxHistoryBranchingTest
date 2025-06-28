@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="QR-Bill Management for Switzerland" ControlGUID="{f0b06777-b562-4b45-ad01-93b617acc796}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11515" DepartmentCategory="Administration" RunObjectSrcTable="11513" ControlGUID="{968f14ad-8863-4e52-bf03-e8d1da28b911}" Name="Swiss QR-Bill Layout" CaptionML="DES=QR-Rechnungslayouts;ENU=QR-Bill Layouts;FRS=Mises en page QR-facture;ITS=Layout fattura QR" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3265151286 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3265151286 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11514" DepartmentCategory="Administration" RunObjectSrcTable="11512" ControlGUID="{63b5259f-c230-4bd0-959b-1ad4e8adc9c8}" Name="Swiss QR-Bill Setup" CaptionML="DES=Einrichtung der QR-Rechnung;ENU=QR-Bill Setup;FRS=Paramétrage QR-facture;ITS=Setup fattura QR" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 726691145 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 726691145 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11511" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="11510" ControlGUID="{89d86701-2775-4452-a670-bed632b9c887}" Name="Swiss QR-Bill Manual Print" CaptionML="DES=Manuelle QR-Rechnung erstellen;ENU=Create manual QR-Bill;FRS=Créer une QR-facture manuelle;ITS=Crea fattura QR manuale" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4176324925 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4176324925 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="QR-Bill Management for Switzerland" ControlGUID="{120b31ae-fff5-42c2-ae74-3b8df6574973}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11514" DepartmentCategory="Administration" RunObjectSrcTable="11512" ControlGUID="{f35aef16-62d5-4d1d-a975-7e604eda2220}" Name="Swiss QR-Bill Setup" CaptionML="DES=Einrichtung der QR-Rechnung;ENU=QR-Bill Setup;FRS=Paramétrage QR-facture;ITS=Setup fattura QR" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 726691145 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 726691145 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11515" DepartmentCategory="Administration" RunObjectSrcTable="11513" ControlGUID="{d9f29424-ee98-4aa1-97a0-3ae0f377a4d8}" Name="Swiss QR-Bill Layout" CaptionML="DES=QR-Rechnungslayouts;ENU=QR-Bill Layouts;FRS=Mises en page QR-facture;ITS=Layout fattura QR" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3265151286 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3265151286 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="11511" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="11510" ControlGUID="{5a157ff5-38d0-4fb4-9901-c298c256f6a5}" Name="Swiss QR-Bill Manual Print" CaptionML="DES=Manuelle QR-Rechnung erstellen;ENU=Create manual QR-Bill;FRS=Créer une QR-facture manuelle;ITS=Crea fattura QR manuale" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4176324925 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4176324925 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
     <ActionChange TargetID="425" TargetType="Page" />
-    <ActionChange TargetID="427" TargetType="Page" />
-    <ActionChange TargetID="370" TargetType="Page" />
-    <ActionChange TargetID="190" TargetType="Page" />
-    <ActionChange TargetID="189" TargetType="Page" />
     <ActionChange TargetID="1" TargetType="Page" />
     <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="189" TargetType="Page" />
     <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="427" TargetType="Page" />
+    <ActionChange TargetID="190" TargetType="Page" />
     <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
