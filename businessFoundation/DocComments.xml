@@ -4,7 +4,7 @@
         <id>f3552374-a1f2-4356-848e-196002525837</id>
         <name>Business Foundation</name>
         <publisher>Microsoft</publisher>
-        <version>25.3.28755.35906</version>
+        <version>25.0.23364.35998</version>
     </application>
     <members>
         <member name="O:Table::Microsoft#Foundation#AuditCodes#Reason Code">
@@ -565,15 +565,6 @@
             <remarks>NoSeriesCode must not be empty.</remarks>
             <returns>True if the No. Series line was found, false otherwise.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series.SelectCurrentNoSeriesLine(No# Series,No# Series Line@,Boolean):Boolean">
-            <summary>
-            Filters the No Series Lines and selects the currently applicable line based on the workdate.
-            </summary>
-            <param name="NoSeries">The No. Series for which to select a line.</param>
-            <param name="NoSeriesLine">The No Series Line is returned filtered and the currently applicable line is selected</param>
-            <param name="ResetFilters">If set to true, the filters on the Starting Date and Open fields are reset. The currently applicable line is still selected in the table.</param>
-            <returns>Returns true if a line was selected, false if no line was selected.</returns>
-        </member>
         <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series.IsNoSeriesInDateOrder(Code[20]):Boolean">
             <summary>
             Returns true if the number series has Date Order set.
@@ -597,13 +588,6 @@
             <param name="NoSeries">The No. Series record to drill down on.</param>
             <param name="NoSeriesLine">The No. Series Line to set filters on.</param>
             <param name="IsDrillDown">Specifies whether the filters are being set for a drill down.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series.OnSetNoSeriesLineFilters(No# Series Line@)">
-            <summary>
-            Use this event to set additional filters on the No. Series Line record. These filters are used when searching the No. Series.
-            </summary>
-            <remarks>Changing the filter on the "Series Code" field is not allowed and will result in an error.</remarks>
-            <param name="NoSeriesLine">The No. Series Line to set filters on.</param>
         </member>
         <member name="O:Enum::Microsoft#Foundation#NoSeries#No# Series Implementation">
             <summary>
@@ -678,7 +662,7 @@
             <returns></returns>
             <remarks> This function is used to build the prompts for modifying existing series. The prompts are built based on the tables and patterns specified in the input. Tables should be specified. If no patterns are specified, default patterns are used. In case number of tables can't be pasted in one prompt, due to token limits, function chunk result into several messages, that need to be called separately</remarks>
         </member>
-        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#No# Series Text Match Impl#.CalculateStringNearness(Text,Text,Integer,Integer):Integer">
+        <member name="M:Codeunit::Microsoft#Foundation#NoSeries#Record Match Impl#.CalculateStringNearness(Text,Text,Integer,Integer):Integer">
             <summary>
             Computes a nearness score between strings. Nearness is based on repeatedly finding longest common substrings.
             Substring matches below Threshold are not considered.
