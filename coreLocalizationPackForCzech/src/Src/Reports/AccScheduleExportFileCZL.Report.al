@@ -344,7 +344,6 @@ report 11776 "Acc. Schedule Export File CZL"
                 AnalysisView."Dimension 2 Code" := GeneralLedgerSetup."Global Dimension 2 Code";
             end;
 
-            RemoveDimFilters();
             UpdateEnabledControls();
         end;
     }
@@ -509,14 +508,6 @@ report 11776 "Acc. Schedule Export File CZL"
     local procedure PageGetCaptionClass(DimNo: Integer): Text[250]
     begin
         exit(AnalysisView.GetCaptionClassCZL(DimNo));
-    end;
-
-    local procedure RemoveDimFilters()
-    begin
-        Dim1Filter := '';
-        Dim2Filter := '';
-        Dim3Filter := '';
-        Dim4Filter := '';
     end;
 
     local procedure UpdateEnabledControls()

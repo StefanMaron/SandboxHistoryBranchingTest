@@ -24,7 +24,6 @@ codeunit 31315 "Gen.Jnl. Post Line Handler CZL"
                   tabledata "G/L Entry - VAT Entry Link" = d;
 
     var
-        GenJnlPostLineMgtCZL: Codeunit "Gen. Jnl.-Post Line Mgt. CZL";
         NonDeductibleVATCZL: Codeunit "Non-Deductible VAT CZL";
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnBeforeInsertGlobalGLEntry', '', false, false)]
@@ -39,13 +38,19 @@ codeunit 31315 "Gen.Jnl. Post Line Handler CZL"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterFindAmtForAppln', '', false, false)]
     local procedure ExchangeRatesAdjOnAfterFindAmtForAppln(var NewCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var OldCVLedgEntryBuf: Record "CV Ledger Entry Buffer"; var OldCVLedgEntryBuf2: Record "CV Ledger Entry Buffer"; var AppliedAmount: Decimal; var AppliedAmountLCY: Decimal; var OldAppliedAmount: Decimal)
     begin
-        GenJnlPostLineMgtCZL.CalcAppliedAmountLCY(NewCVLedgEntryBuf, OldCVLedgEntryBuf, OldCVLedgEntryBuf2, OldAppliedAmount, AppliedAmount, AppliedAmountLCY);
+        if NewCVLedgEntryBuf."Currency Code" = OldCVLedgEntryBuf2."Currency Code" then
+            AppliedAmountLCY := Round(AppliedAmount / OldCVLedgEntryBuf."Adjusted Currency Factor")
+        else
+            if NewCVLedgEntryBuf."Currency Code" <> '' then
+                AppliedAmountLCY := Round(OldAppliedAmount / OldCVLedgEntryBuf."Adjusted Currency Factor")
+            else
+                AppliedAmountLCY := Round(AppliedAmount / NewCVLedgEntryBuf."Adjusted Currency Factor");
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnAfterCalcCurrencyRealizedGainLoss', '', false, false)]
     local procedure ExchangeRatesAdjOnAfterCalcCurrencyRealizedGainLoss(var CVLedgEntryBuf: Record "CV Ledger Entry Buffer"; AppliedAmount: Decimal; AppliedAmountLCY: Decimal; var RealizedGainLossLCY: Decimal)
     begin
-        GenJnlPostLineMgtCZL.CalcRealizedGainLossLCY(CVLedgEntryBuf, AppliedAmount, AppliedAmountLCY, RealizedGainLossLCY);
+        RealizedGainLossLCY := AppliedAmountLCY - Round(AppliedAmount / CVLedgEntryBuf."Adjusted Currency Factor");
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnBeforeCalcCurrencyUnrealizedGainLoss', '', false, false)]
@@ -54,7 +59,7 @@ codeunit 31315 "Gen.Jnl. Post Line Handler CZL"
         if IsHandled then
             exit;
 
-        IsHandled := GenJnlPostLineMgtCZL.IsCalcCurrencyUnrealizedGainLossSuppressed();
+        IsHandled := true;
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", 'OnPostCustOnAfterAssignCurrencyFactors', '', false, false)]
