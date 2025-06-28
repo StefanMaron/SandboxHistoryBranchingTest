@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="8238f99b-cbe5-4b9c-b247-7771145b7470" Name="E-Document Format for Factura-E" Publisher="Microsoft" Brief="E-Document Format for Factura-E." Description="E-Document Format for Factura-E is a customization for Spanish business requirements. This app supports Factura-E format for working with E-documents app." Version="26.1.33404.35940" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2299409" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2299409" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="8238f99b-cbe5-4b9c-b247-7771145b7470" Name="E-Document Format for Factura-E" Publisher="Microsoft" Brief="E-Document Format for Factura-E." Description="E-Document Format for Factura-E is a customization for Spanish business requirements. This app supports Factura-E format for working with E-documents app." Version="26.0.30643.35959" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2299409" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2299409" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="10772" MaxObjectId="10776" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T05:38:26.6592207Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-26T11:02:20.0104781Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
