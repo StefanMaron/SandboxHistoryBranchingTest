@@ -342,7 +342,7 @@ codeunit 4400 "SOA Setup"
             if GeneralLedgerSetup.Get() then
                 SetAgentTaskPageContext(GeneralLedgerSetup."LCY Code", GeneralLedgerSetup.GetCurrencySymbol(), AgentTaskPageContext);
     end;
-
+    
     local procedure SetAgentTaskPageContext(CurrencyCode: Code[10]; CurrencySymbol: Code[10]; var AgentTaskPageContext: Record "Agent Task Page Context")
     begin
         Clear(AgentTaskPageContext);
@@ -708,7 +708,7 @@ codeunit 4400 "SOA Setup"
         SOAEditTok: Label 'SOA - EDIT', Locked = true, MaxLength = 20;
         SalesOrderAgentTok: Label 'Sales Order Agent', Locked = true;
         SalesOrderAgentInitialLbl: Label 'SO', MaxLength = 4;
-        SOASummaryLbl: Label 'Monitors incoming emails for sales inquiries, matches senders to customers, checks inventory, and creates quotes. When processing replies, the agent converts accepted quotes into orders. This agent uses generative AI—review its actions for accuracy.';
+        SOASummaryLbl: Label 'Monitors incoming emails for sales inquiries, matches senders to registered customers, checks inventory, and creates quotes. When sending quotes, the agent processes replies, and converts accepted quotes into orders.';
         DelegateAdminErr: Label 'Delegated admin and helpdesk users are not allowed to update the agent.';
         TelemetryGetInstructionsFailedErr: label 'There was an error getting instructions from the Key Vault.', Locked = true;
         SOASetupFailedErr: label 'There was an error setting up the Sales Order Copilot. Log a Business Central support request about this.';
