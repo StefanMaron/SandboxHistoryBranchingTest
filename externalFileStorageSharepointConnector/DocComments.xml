@@ -4,7 +4,7 @@
         <id>34bfcef7-f8ed-449f-94be-74024cadba3b</id>
         <name>External File Storage - SharePoint Connector</name>
         <publisher>Microsoft</publisher>
-        <version>26.2.34746.35962</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="O:Page::System#ExternalFileStorage#Ext# SharePoint Account">
@@ -17,30 +17,9 @@
             Holds the information for all file accounts that are registered via the SharePoint connector
             </summary>
         </member>
-        <member name="M:Table::System#ExternalFileStorage#Ext# SharePoint Account.UploadCertificateFile:SecretText">
-            <summary>
-            Opens a file dialog and uploads a certificate file, converting it to base64 format.
-            </summary>
-            <param name="ErrorOnFailure">Specifies whether to throw an error if the upload fails.</param>
-        </member>
         <member name="O:Page::System#ExternalFileStorage#Ext# SharePoint Account Wizard">
             <summary>
             Displays an account that is being registered via the SharePoint connector.
-            </summary>
-        </member>
-        <member name="O:Enum::System#ExternalFileStorage#Ext# SharePoint Auth Type">
-            <summary>
-            Specifies the authentication types for SharePoint accounts.
-            </summary>
-        </member>
-        <member name="E:Enum::System#ExternalFileStorage#Ext# SharePoint Auth Type.Client Secret">
-            <summary>
-            Authenticate using Client ID and Client Secret.
-            </summary>
-        </member>
-        <member name="E:Enum::System#ExternalFileStorage#Ext# SharePoint Auth Type.Certificate">
-            <summary>
-            Authenticate using Client ID and Certificate.
             </summary>
         </member>
         <member name="O:EnumExtension::System#ExternalFileStorage#Ext# SharePoint Connector">
