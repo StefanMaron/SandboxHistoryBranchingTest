@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>26.1.33404.36027</version>
+        <version>26.2.34746.36013</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
@@ -10321,6 +10321,44 @@
             <param name="InsertLineBreaks">Specifies whether line breaks are inserted in the output.
             If true, inserts line breaks after every 76 characters.</param>
             <returns>The string representation, in base-64, of the input string.</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text):Text">
+            <summary>
+            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
+            </summary>
+            <param name="String">The string to convert.</param>
+            <returns>The string representation, in base64url, of the input string.</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(SecretText):SecretText">
+            <summary>
+            Converts the value of the input secret string to its equivalent secret string representation that is encoded with base64 URL-safe characters.
+            </summary>
+            <param name="SecretString">The secret string to convert.</param>
+            <returns>The secret string representation, in base64url, of the input secret string.</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text,TextEncoding):Text">
+            <summary>
+            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
+            </summary>
+            <param name="String">The string to convert.</param>
+            <param name="TextEncoding">The TextEncoding for the input string.</param>
+            <returns>The string representation, in base64url, of the input string.</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text,TextEncoding,Integer):Text">
+            <summary>
+            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
+            </summary>
+            <param name="String">The string to convert.</param>
+            <param name="TextEncoding">The TextEncoding for the input string.</param>
+            <param name="Codepage">The Codepage if TextEncoding is MsDos or Windows.</param>
+            <returns>The string representation, in base64url, of the input string.</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(InStream):Text">
+            <summary>
+            Converts the value of the input stream to its equivalent string representation that is encoded with base64 URL-safe characters.
+            </summary>
+            <param name="InStream">The stream to read the input from.</param>
+            <returns>The string representation, in base64url, of the input string.</returns>
         </member>
         <member name="M:Codeunit::System#Text#Base64 Convert.FromBase64(Text):Text">
             <summary>
