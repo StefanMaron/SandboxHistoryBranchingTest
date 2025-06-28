@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>34bfcef7-f8ed-449f-94be-74024cadba3b</id>
+        <name>External File Storage - SharePoint Connector</name>
+        <publisher>Microsoft</publisher>
+        <version>26.0.30643.35959</version>
+    </application>
+    <members>
+        <member name="O:Page::System#ExternalFileStorage#Ext# SharePoint Account">
+            <summary>
+            Displays an account that was registered via the SharePoint connector.
+            </summary>
+        </member>
+        <member name="O:Table::System#ExternalFileStorage#Ext# SharePoint Account">
+            <summary>
+            Holds the information for all file accounts that are registered via the SharePoint connector
+            </summary>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#Ext# SharePoint Account Wizard">
+            <summary>
+            Displays an account that is being registered via the SharePoint connector.
+            </summary>
+        </member>
+        <member name="O:EnumExtension::System#ExternalFileStorage#Ext# SharePoint Connector">
+            <summary>
+            Enum extension to register the SharePoint connector.
+            </summary>
+        </member>
+        <member name="E:EnumExtension::System#ExternalFileStorage#Ext# SharePoint Connector.SharePoint">
+            <summary>
+            The SharePoint connector.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.ListFiles(Guid,Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@)">
+            <summary>
+            Gets a List of Files stored on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path to list.</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="TempFileAccountContent">A list with all files stored in the path.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.GetFile(Guid,Text,InStream)">
+            <summary>
+            Gets a file from the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <param name="Stream">The Stream were the file is read to.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.CreateFile(Guid,Text,InStream)">
+            <summary>
+            Create a file in the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <param name="Stream">The Stream were the file is read from.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.CopyFile(Guid,Text,Text)">
+            <summary>
+            Copies as file inside the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="SourcePath">The source file path.</param>
+            <param name="TargetPath">The target file path.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.MoveFile(Guid,Text,Text)">
+            <summary>
+            Move as file inside the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="SourcePath">The source file path.</param>
+            <param name="TargetPath">The target file path.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.FileExists(Guid,Text):Boolean">
+            <summary>
+            Checks if a file exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <returns>Returns true if the file exists</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.DeleteFile(Guid,Text)">
+            <summary>
+            Deletes a file exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.ListDirectories(Guid,Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@)">
+            <summary>
+            Gets a List of Directories stored on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path to list.</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="Files">A list with all directories stored in the path.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.CreateDirectory(Guid,Text)">
+            <summary>
+            Creates a directory on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The directory path inside the file account.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.DirectoryExists(Guid,Text):Boolean">
+            <summary>
+            Checks if a directory exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The directory path inside the file account.</param>
+            <returns>Returns true if the directory exists</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.DeleteDirectory(Guid,Text)">
+            <summary>
+            Deletes a directory exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The directory path inside the file account.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.GetAccounts(File Account@)">
+            <summary>
+            Gets the registered accounts for the SharePoint connector.
+            </summary>
+            <param name="TempAccounts">Out parameter holding all the registered accounts for the SharePoint connector.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.ShowAccountInformation(Guid)">
+            <summary>
+            Shows accounts information.
+            </summary>
+            <param name="AccountId">The ID of the account to show.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.RegisterAccount(File Account@):Boolean">
+            <summary>
+            Register an file account for the SharePoint connector.
+            </summary>
+            <param name="TempAccount">Out parameter holding details of the registered account.</param>
+            <returns>True if the registration was successful; false - otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.DeleteAccount(Guid):Boolean">
+            <summary>
+            Deletes an file account for the SharePoint connector.
+            </summary>
+            <param name="AccountId">The ID of the SharePoint account</param>
+            <returns>True if an account was deleted.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.GetDescription:Text[250]">
+            <summary>
+            Gets a description of the SharePoint connector.
+            </summary>
+            <returns>A short description of the SharePoint connector.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#Ext# SharePoint Connector Impl.GetLogoAsBase64:Text">
+            <summary>
+            Gets the SharePoint connector logo.
+            </summary>
+            <returns>A base64-formatted image to be used as logo.</returns>
+        </member>
+    </members>
+</doc>

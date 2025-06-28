@@ -4,9 +4,153 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35958</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
+        <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
+            <summary>
+            Get the message text for the given agent task message.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message.</param>
+            <returns>The body of the agent task message.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.UpdateText(Agent Task Message@,Text)">
+            <summary>
+            Updates the message text.
+            </summary>
+            <param name="AgentTaskMessage">The message record to update.</param>
+            <param name="NewMessageText">New message text to set.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.IsEditable(Agent Task Message@):Boolean">
+            <summary>
+            Check if it is possible to edit the message.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message to verify.</param>
+            <returns>If it is possible to change the message.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.SetStatusToSent(Agent Task Message@)">
+            <summary>
+            Sets the message status to sent.
+            </summary>
+            <param name="AgentTaskMessage">Agent task message to update status.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Message.DownloadAttachments(Agent Task Message@)">
+            <summary>
+            Downloads the attachments for a specific message.
+            </summary>
+            <param name="AgentTaskMessage">Message to download attachments for.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Task.TaskExists(Guid,Text):Boolean">
+            <summary>
+            Check if a task exists for the given agent user and conversation
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="ConversationId">The conversation ID to check.</param>
+            <returns>True if task exists, false if not.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Task.CreateTaskMessage(Text[250],Text,Text[2048],Agent Task@)">
+            <summary>
+            Create a new task message for the given agent user and conversation.
+            If task does not exist, it will be created.
+            </summary>
+            <param name="From">Specifies from address.</param>
+            <param name="MessageText">The message text for the task.</param>
+            <param name="CurrentAgentTask">Current Agent Task to which the message will be added.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent Task.CreateTaskWithoutMessage(Guid,Text[150],Text[2048],Agent Task@)">
+            <summary>
+            Create a new task  for the given agent user. No message is added to the task.
+            </summary>
+            <param name="AgentSecurityID">The security ID of the agent to create the task for.</param>
+            <param name="TaskTitle">The title of the task.</param>
+            <param name="ExternalId">The external ID of the task. This field is used to connect to external systems, like Message ID for emails.</param>
+            <param name="NewAgentTask">The new agent task record that was created.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Create(Enum::System#Agents#Agent Metadata Provider,Code[50],Text[80],Agent Access Control@):Guid">
+            <summary>
+            Creates a new agent.
+            The agent will be in the disabled state, with the users that can interact with the agent setup.
+            </summary>
+            <param name="AgentMetadataProvider">The metadata provider of the agent.</param>
+            <param name="UserName">User name for the agent.</param>
+            <param name="UserDisplayName">Display name for the agent.</param>
+            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
+            <param name="TempAgentAccessControl">The list of users that can configure or interact with the agent.</param>
+            <returns>The ID of the agent.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Activate(Guid)">
+            <summary>
+            Activates the agent
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.Deactivate(Guid)">
+            <summary>
+            Deactivates the agent
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetDisplayName(Guid):Text[80]">
+            <summary>
+            Get the display name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetUserName(Guid):Code[50]">
+            <summary>
+            Get the user name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetDisplayName(Guid,Text[80])">
+            <summary>
+            Sets the display name of the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="DisplayName">The display name of the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetInstructions(Guid,SecretText)">
+            <summary>
+            Set the instructions which agent will use to complete the tasks.
+            </summary>
+            <param name="Agent">The agent which instructions will be set.</param>
+            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.IsActive(Guid):Boolean">
+            <summary>
+            Checks if the agent is active.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <returns>If the agent is active.</returns>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.SetProfile(Guid,All Profile@)">
+            <summary>
+            Assigns the permission set to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="AllProfile">Profile to set to the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.AssignPermissionSet(Guid,Aggregate Permission Set@)">
+            <summary>
+            Assigns the permission set to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
+            <param name="AggregatePermissionSet">Permission sets to assign</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.GetUserAccess(Guid,Agent Access Control@)">
+            <summary>
+            Gets the users that can manage or give tasks to the agent.
+            </summary>
+            <param name="AgentUserSecurityID">Security ID of the agent.</param>
+            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
+        </member>
+        <member name="M:Codeunit::System#Agents#Agent.UpdateAccess(Guid,Agent Access Control@)">
+            <summary>
+            Sets the users that can manage or give tasks to the agent. Existing set of users will be replaced with a new set.
+            </summary>
+            <param name="AgentUserSecurityID">Security ID of the agent.</param>
+            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
+        </member>
         <member name="O:Codeunit::System#Azure#Functions#Azure Functions">
             <summary>
             Provides functionality for connecting to Azure functions.
@@ -224,13 +368,6 @@
             Gets the value of whether M365 collaboration is enabled.
             </summary>
             <returns>True, if M365 collaboration is enabled, false otherwise.</returns>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Azure AD Graph.GetEnvironmentDirectoryGroup:Text">
-            <summary>
-            Gets the name of the Microsoft Entra security group defined in tenant admin center.
-            For more info, see https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments#manage-access-using-azure-active-directory-groups
-            </summary>
-            <returns>The name of the Microsoft Entra security group defined in tenant admin center.</returns>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Graph.GetEnvironmentSecurityGroupId:Text">
             <summary>
@@ -474,11 +611,17 @@
             <param name="UserSecurityId">The security ID of the user</param>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.UpdateUserPlans(Guid,DotNetTypeDeclaration::System#UserInfo@)">
+            <summary>
+            Updates license plans for a user.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
             <param name="UserSecurityId">The user for whom to update license information.</param>
             <param name="GraphUserInfo">The graph user corresponding to the user to update, and containing the information about the plans assigned to the user.</param>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.UpdateUserPlans(Guid,DotNetTypeDeclaration::System#UserInfo@,Boolean,Boolean)">
+            <summary>
+            Updates license plans for a user.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
             <param name="UserSecurityId">The user for whom to update license information.</param>
             <param name="GraphUserInfo">The graph user corresponding to the user to update, and containing the information about the plans assigned to the user.</param>
@@ -486,10 +629,16 @@
             <param name="RemovePermissionsOnDeletePlan">Remove permissions when removing the plan for the user.</param>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.UpdateUserPlans(Guid)">
+            <summary>
+            Updates license plans for a user.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
             <param name="UserSecurityId">The user for whom to update license information.</param>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.UpdateUserPlans(Guid,Boolean,Boolean,Boolean)">
+            <summary>
+            Updates license plans for a user.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
             <param name="UserSecurityId">The user for whom to update license information.</param>
             <param name="AppendPermissionsOnNewPlan">Add permissions from the new license plan to the user. Existing permissions will not be affected.</param>
@@ -497,9 +646,15 @@
             <param name="RemovePlansOnDeleteUser">Remove license plans when a user is deleted in Office 365.</param>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.UpdateUserPlans">
+            <summary>
+            Updates plans for all users.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.RefreshUserPlanAssignments(Guid)">
+            <summary>
+            Refreshes the user plans assigned to the given user.
+            </summary>
             <raises>OnUpdateUserAccessForSaaS</raises>
             <param name="UserSecurityId">The user to update.</param>
         </member>
@@ -621,14 +776,6 @@
             <param name="ServicePlanId">The plan to check.</param>
             <returns>True, if the service plan is a Business Central Plan, false otherwise.</returns>
         </member>
-        <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.OnRemoveUserGroupsForUserAndPlan(Guid,Guid)">
-            <summary>
-            Integration event, raised from <see cref="UpdateUserPlans"/>.
-            Subscribe to this event to remove related user groups from the user.
-            </summary>
-            <param name="PlanID">The plan to remove.</param>
-            <param name="UserSecurityID">The user to remove.</param>
-        </member>
         <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.OnUpdateUserAccessForSaaS(Guid,Boolean@)">
             <summary>
             Integration event, raised from <see cref="UpdateUserPlans"/>.
@@ -636,13 +783,6 @@
             </summary>
             <param name="UserSecurityID">The user to update.</param>
             <param name="UserGroupsAdded">Whether the user groups were updated</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Azure AD Plan.OnCanCurrentUserManagePlansAndGroups(Boolean@)">
-            <summary>
-            Integration event, raised from <see cref="CheckMixedPlans"/>.
-            Subscribe to this event to check whether the user can manage plans and groups
-            </summary>
-            <param name="CanManage">Whether the user can manage plans and groups</param>
         </member>
         <member name="O:Query::System#Azure#Identity#Plan">
             <summary>
@@ -670,12 +810,6 @@
             Returns the ID for the Dynamics 365 Business Central Team Member plan.
             </summary>
             <returns>The ID for the Dynamics 365 Business Central Team Member plan.</returns>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Ids.GetM365CollaborationPlanId:Guid">
-            <summary>
-            Returns the ID for the Microsoft 365 Collaboration plan.
-            </summary>
-            <returns>The ID for the Microsoft 365 Collaboration plan.</returns>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Plan Ids.GetMicrosoft365PlanId:Guid">
             <summary>
@@ -736,12 +870,6 @@
             Returns the ID for the Dynamics 365 Administrator plan.
             </summary>
             <returns>The ID for the Dynamics 365 Administrator plan.</returns>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Ids.GetInternalAdminPlanId:Guid">
-            <summary>
-            Returns the ID for the Internal Administrator plan.
-            </summary>
-            <returns>The ID for the Internal Administrator plan.</returns>
         </member>
         <member name="M:Codeunit::System#Azure#Identity#Plan Ids.GetGlobalAdminPlanId:Guid">
             <summary>
@@ -898,6 +1026,12 @@
         <member name="M:Codeunit::System#Azure#Identity#Plan Upgrade Tag.GetMD365AdminUpgradeTag:Code[250]">
             <summary>
             Returns the Dynamics 365 Administrator upgrade tag.
+            </summary>
+            <returns>The Dynamics 365 Administrator upgrade tag.</returns>
+        </member>
+        <member name="M:Codeunit::System#Azure#Identity#Plan Upgrade Tag.GetDelegatedD365AdminUpgradeTag:Code[250]">
+            <summary>
+            Returns the Delegated Dynamics 365 Administrator upgrade tag.
             </summary>
             <returns>The Dynamics 365 Administrator upgrade tag.</returns>
         </member>
@@ -1313,42 +1447,6 @@
             <param name="Scope">The scope of the permission set.</param>
             <param name="Company">The company for which to check.</param>
         </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Configuration.OnCustomPermissionSetChange(Guid,Code[20],Guid,Option,Text[30])">
-            <summary>
-            Indicates whether a custom permission set assign to a plan has changed.
-            </summary>
-            <param name="PlanId">The ID of the plan for which a permission set has changed.</param>
-            <param name="RoleId">The ID of the role(permission set) which changed</param>
-            <param name="Scope">The scope of the permission set.</param>
-            <param name="AppId">The ID of the app from which the permission set originates.</param>
-            <param name="Company">The company for which to check.</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Configuration.OnAfterTransferPermissions(Guid)">
-            <summary>
-            Event for after default permissions has been transferred to custom.
-            </summary>
-            <param name="PlanId">The ID of the plan.</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Configuration.OnAfterDeleteCustomPermissions(Guid)">
-            <summary>
-            Event for after custom permissions have been deleted and the corresponding plan configuration is no longer customized.
-            </summary>
-            <param name="PlanId">The ID of the plan.</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Configuration.OnBeforeRemoveDefaultPermissionsFromUser(Access Control,Boolean@)">
-            <summary>
-            Event for checking if a permission set assigned to the user is a part of any user group assigned to the user.
-            </summary>
-            <param name="AccessControl">The record about to be deleted.</param>
-            <param name="IsAssignedViaUserGroups">Out parameter specifying if the permission set about to be removed is a part of a user group assigned to the user.</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Plan Configuration.OnBeforeRemoveCustomPermissionsFromUser(Access Control,Boolean@)">
-            <summary>
-            Event for checking if a permission set assigned to the user is a part of any user group assigned to the user.
-            </summary>
-            <param name="AccessControl">The record about to be deleted.</param>
-            <param name="IsAssignedViaUserGroups">Out parameter specifying if the permission set about to be removed is a part of a user group assigned to the user.</param>
-        </member>
         <member name="O:Page::System#Azure#Identity#Plan Configuration Card">
             <summary>
             Card page to show the permissions for a plan configuration.
@@ -1496,27 +1594,6 @@
             List part that holds the custom permission sets assigned to a plan.
             </summary>
         </member>
-        <member name="O:Codeunit::System#Azure#Identity#Default Permission Set In Plan">
-            <summary>
-            Provides functionality to fetch the default permission sets for a plan.
-            </summary>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Default Permission Set In Plan.OnGetDefaultPermissions(Guid)">
-            <summary>
-            Event to fetch the default permission sets for a plan.
-            After subscribing to the event, call <see cref="AddPermissionSetToPlan"/> to add default permission set for the plan.
-            </summary>
-            <param name="PlanId">The ID of the plan</param>
-        </member>
-        <member name="M:Codeunit::System#Azure#Identity#Default Permission Set In Plan.AddPermissionSetToPlan(Code[20],Guid,Option)">
-            <summary>
-            Add a default permission set for a plan.
-            </summary>
-            <see cref="OnGetDefaultPermissions"/>
-            <param name="RoleId">The ID of the role (permission set).</param>
-            <param name="AppId">The ID of the app from which the permission set originates.</param>
-            <param name="Scope">The scope of the permission set.</param>
-        </member>
         <member name="O:Page::System#Azure#Identity#Default Permission Set In Plan">
             <summary>
             List part that holds the default permission sets assigned to a plan.
@@ -1548,6 +1625,14 @@
             <param name="FileShare">The name of the file share to use.</param>
             <param name="Authorization">The authorization to use.</param>
             <param name="APIVersion">The API Version to use.</param>
+        </member>
+        <member name="M:Codeunit::System#Azure#Storage#Files#AFS File Client.SetBaseUrl(Text)">
+            <summary>
+            The base URL to use when constructing the final URI.
+            If not set, the base URL is https://%1.file.core.windows.net where %1 is the storage account name.
+            </summary>
+            <remarks>Use %1 as a placeholder for the storage account name.</remarks>
+            <param name="BaseUrl">A valid URL string</param>
         </member>
         <member name="M:Codeunit::System#Azure#Storage#Files#AFS File Client.CreateFile(Text,InStream):Codeunit::System#Azure#Storage#Files#AFS Operation Response">
             <summary>
@@ -5777,6 +5862,13 @@
             <param name="IdToken">Exit parameter containing the id token.</param>
             <param name="NewTokenCache">Exit parameter containing the new token cache.</param>
         </member>
+        <member name="M:Codeunit::System#Security#Authentication#OAuth2.GetClaims(SecretText):JsonObject">
+            <summary>
+            Gets the Claims Set from a JSON Web Token (JWT).
+            </summary>
+            <param name="JWT">The JSON Web Token.</param>
+            <returns>The JWT Claims Set.</returns>
+        </member>
         <member name="M:Codeunit::System#Security#Authentication#OAuth2.GetLastErrorMessage:Text">
             <summary>
             Get the last error message that happened during acquiring of an access token.
@@ -7701,13 +7793,6 @@
             <param name="AppId">The app ID of the permission set.</param>
             <returns>True if the user has permission sets assigned.</returns>
         </member>
-        <member name="M:Codeunit::System#Security#User#User Permissions.HasUserCustomPermissions(Guid):Boolean">
-            <summary>
-            Checks whether custom permissions are assigned to the user.
-            </summary>
-            <param name="UserSecurityId">The security ID of the user to check for.</param>
-            <returns>True if the user with the given user security ID has custom permissions; false otherwise.</returns>
-        </member>
         <member name="M:Codeunit::System#Security#User#User Permissions.AssignPermissionSets(Guid@,Text,Aggregate Permission Set@)">
             <summary>
             Assign a permission set to a given user
@@ -8282,11 +8367,6 @@
             </summary>
             <param name="FeatureDataUpdateStatus">the instance of the actual record</param>
         </member>
-        <member name="O:Page::System#Environment#Configuration#Upcoming Changes Factbox">
-            <summary>
-            Factbox part page that enables a user to learn more about upcoming changes
-            </summary>
-        </member>
         <member name="O:Codeunit::System#Environment#Configuration#Update Feature Data">
             <summary>
             Codeunit that is executed by the task scheduler during the feature data update.
@@ -8449,11 +8529,6 @@
         <member name="F:Table::System#Environment#Configuration#Application User Settings.Legacy Action Bar">
             <summary>
             Specifies whether the legacy action bar is enabled.
-            </summary>
-        </member>
-        <member name="O:Table::System#Environment#Configuration#Extra Settings">
-            <summary>
-            Table that saves settings the Application defines.
             </summary>
         </member>
         <member name="O:Page::System#Environment#Configuration#Roles">
@@ -9327,6 +9402,13 @@
             </summary>
             <returns>The linked Power Platform environment id, if set.</returns>
         </member>
+        <member name="M:Codeunit::System#Environment#Environment Information.GetEnvironmentSetting(Text):Text">
+            <summary>
+            Gets the value of the specified environment setting. This is only callable from Microsoft published apps.
+            </summary>
+            <param name="SettingName">The name of the setting.</param>
+            <returns>The value of the setting.</returns>
+        </member>
         <member name="O:Codeunit::System#Environment#Tenant Information">
             <summary>
             Exposes functionality to fetch attributes concerning the current tenant.
@@ -9468,141 +9550,6 @@
             Specifies that the tenant license is in the locked state.
             The tenant is locked, and no one can access it.
             </summary>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
-            <summary>
-            Get the message text for the given agent task message.
-            </summary>
-            <param name="AgentTaskMessage">Agent task message.</param>
-            <returns>The body of the agent task message.</returns>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Message.UpdateText(Agent Task Message@,Text)">
-            <summary>
-            Updates the message text.
-            </summary>
-            <param name="AgentTaskMessage">The message record to update.</param>
-            <param name="NewMessageText">New message text to set.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Message.IsEditable(Agent Task Message@):Boolean">
-            <summary>
-            Check if it is possible to edit the message.
-            </summary>
-            <param name="AgentTaskMessage">Agent task message to verify.</param>
-            <returns>If it is possible to change the message.</returns>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Message.SetStatusToSent(Agent Task Message@)">
-            <summary>
-            Sets the message status to sent.
-            </summary>
-            <param name="AgentTaskMessage">Agent task message to update status.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Message.DownloadAttachments(Agent Task Message@)">
-            <summary>
-            Downloads the attachments for a specific message.
-            </summary>
-            <param name="AgentTaskMessage">Message to download attachments for.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Task.TaskExists(Guid,Text):Boolean">
-            <summary>
-            Check if a task exists for the given agent user and conversation
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-            <param name="ConversationId">The conversation ID to check.</param>
-            <returns>True if task exists, false if not.</returns>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent Task.CreateTaskMessage(Text[250],Text,Text[2048],Agent Task@)">
-            <summary>
-            Create a new task message for the given agent user and conversation.
-            If task does not exist, it will be created.
-            </summary>
-            <param name="From">Specifies from address.</param>
-            <param name="MessageText">The message text for the task.</param>
-            <param name="CurrentAgentTask">Current Agent Task to which the message will be added.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.Create(Enum::System#Agents#Agent Metadata Provider,Code[50],Text[80],Agent Access Control@):Guid">
-            <summary>
-            Creates a new agent.
-            The agent will be in the disabled state, with the users that can interact with the agent setup.
-            </summary>
-            <param name="AgentMetadataProvider">The metadata provider of the agent.</param>
-            <param name="UserName">User name for the agent.</param>
-            <param name="UserDisplayName">Display name for the agent.</param>
-            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
-            <param name="TempAgentAccessControl">The list of users that can configure or interact with the agent.</param>
-            <returns>The ID of the agent.</returns>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.Activate(Guid)">
-            <summary>
-            Activates the agent
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.Deactivate(Guid)">
-            <summary>
-            Deactivates the agent
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.GetDisplayName(Guid):Text[80]">
-            <summary>
-            Get the display name of the agent.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.GetUserName(Guid):Code[50]">
-            <summary>
-            Get the user name of the agent.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.SetDisplayName(Guid,Text[80])">
-            <summary>
-            Sets the display name of the agent.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-            <param name="DisplayName">The display name of the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.SetInstructions(Guid,SecretText)">
-            <summary>
-            Set the instructions which agent will use to complete the tasks.
-            </summary>
-            <param name="Agent">The agent which instructions will be set.</param>
-            <param name="Instructions">Instructions for the agent that will be used to complete the tasks.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.IsActive(Guid):Boolean">
-            <summary>
-            Checks if the agent is active.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-            <returns>If the agent is active.</returns>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.SetProfile(Guid,All Profile@)">
-            <summary>
-            Assigns the permission set to the agent.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-            <param name="AllProfile">Profile to set to the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.AssignPermissionSet(Guid,Aggregate Permission Set@)">
-            <summary>
-            Assigns the permission set to the agent.
-            </summary>
-            <param name="AgentUserSecurityID">The user security ID of the agent.</param>
-            <param name="AggregatePermissionSet">Permission sets to assign</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.GetUserAccess(Guid,Agent Access Control@)">
-            <summary>
-            Gets the users that can manage or give tasks to the agent.
-            </summary>
-            <param name="AgentUserSecurityID">Security ID of the agent.</param>
-            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
-        </member>
-        <member name="M:Codeunit::System#Agents#Agent.UpdateAccess(Guid,Agent Access Control@)">
-            <summary>
-            Sets the users that can manage or give tasks to the agent. Existing set of users will be replaced with a new set.
-            </summary>
-            <param name="AgentUserSecurityID">Security ID of the agent.</param>
-            <param name="TempAgentAccessControl">List of users that can manage or give tasks to the agent.</param>
         </member>
         <member name="O:Codeunit::System#Apps#AppSource#AppSource Json Utilities">
             <summary>
@@ -10100,6 +10047,13 @@
             <summary>
             Returns the JSON array in text format.
             </summary>
+            <returns>The JSON array in text format</returns>
+        </member>
+        <member name="M:Codeunit::System#Text#Json#Json.GetCollectionAsText(Boolean):Text">
+            <summary>
+            Returns the JSON array in text format.
+            </summary>
+            <param name="Indentation">Specified whether the text should be indented.</param>
             <returns>The JSON array in text format</returns>
         </member>
         <member name="M:Codeunit::System#Text#Json#Json.GetCollection:JsonArray">
@@ -11938,14 +11892,6 @@
             Iterates over the record link table and removes those with obsolete record ids.
             </summary>
         </member>
-        <member name="M:Codeunit::System#Utilities#Record Link Management.OnBeforeCopyLinks(Variant,Variant,Boolean@)">
-            <summary>
-            Integration event for before copying links.
-            </summary>
-            <param name="FromRecord">The source record from which links are copied.</param>
-            <param name="ToRecord">The destination record to which links are copied.</param>
-            <param name="SkipReset">Out parameter not used anymore. Obsolete.</param>
-        </member>
         <member name="M:Codeunit::System#Utilities#Record Link Management.OnAfterCopyLinks(Variant,Variant)">
             <summary>
             Integration event for after copying links from one record to the other.
@@ -12710,6 +12656,76 @@
             <error>If the provided <paramref name="ParameterKey"/> is empty.</error>
             <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42".</remarks>
             <remarks>This function might modify existing query parameters to apply the same encoding rules. For example if the URL is "https://microsoft.com?%24top=1" and the new flag is "$skip=42", the result could be "https://microsoft.com?$skip=42&amp;$top=1".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.RemoveQueryFlag(Text,Enum::System#Utilities#Uri Query Duplicate Behaviour)">
+            <summary>
+            Removes a flag from the query string of this UriBuilder. In case the same query flag exists already, the action in <paramref name="DuplicateAction"/> is taken.
+            </summary>
+            <param name="Flag">A flag to Remove from the query string of this UriBuilder. This value will be encoded before being Removed to the URI query string. Cannot be empty.</param>
+            <param name="DuplicateAction">Specifies which action to take if the flag specified already exist.</param>
+            <error>If the provided <paramref name="Flag"/> is empty.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is <c>"Throw Error"</c> and the flag does not exist in the URI.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is not a valid value for the enum.</error>
+            <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.RemoveQueryFlag(Text)">
+            <summary>
+            Removes a flag from the query string of this UriBuilder. In case the same query flag exists already, only one occurrence is kept.
+            </summary>
+            <param name="Flag">A flag to Remove from the query string of this UriBuilder. This value will be encoded before being Removed to the URI query string. Cannot be empty.</param>
+            <error>If the provided <paramref name="Flag"/> is empty.</error>
+            <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.RemoveQueryParameter(Text,Text,Enum::System#Utilities#Uri Query Duplicate Behaviour)">
+            <summary>
+            Removes a parameter key-value pair from the query string of this UriBuilder (in the form <c>ParameterKey=ParameterValue</c>). In case the same query key exists already, the action in <paramref name="DuplicateAction"/> is taken.
+            </summary>
+            <param name="ParameterKey">The key for the new query parameter. This value will be encoded before being Removed to the URI query string. Cannot be empty.</param>
+            <param name="ParameterValue">The value for the new query parameter. This value will be encoded before being Removed to the URI query string. Can be empty.</param>
+            <param name="DuplicateAction">Specifies which action to take if the ParameterKey specified already exist.</param>
+            <error>If the provided <paramref name="ParameterKey"/> is empty.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is <c>"Throw Error"</c>.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is not a valid value for the enum.</error>
+            <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.RemoveQueryParameter(Text,Text)">
+            <summary>
+            Removes a parameter key-value pair from the query string of this UriBuilder (in the form <c>ParameterKey=ParameterValue</c>). In case the same query key exists already, its value is overwritten.
+            </summary>
+            <param name="ParameterKey">The key for the new query parameter. This value will be encoded before being Removed to the URI query string. Cannot be empty.</param>
+            <param name="ParameterValue">The value for the new query parameter. This value will be encoded before being Removed to the URI query string. Can be empty.</param>
+            <error>If the provided <paramref name="ParameterKey"/> is empty.</error>
+            <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.RemoveQueryParameters">
+            <summary>
+            Removes a parameter key-value pair from the query string of this UriBuilder (in the form <c>ParameterKey=ParameterValue</c>). In case the same query key exists already, the action in <paramref name="DuplicateAction"/> is taken.
+            </summary>
+            <param name="ParameterKey">The key for the new query parameter. This value will be encoded before being Removed to the URI query string. Cannot be empty.</param>
+            <param name="DuplicateAction">Specifies which action to take if the ParameterKey specified already exist.</param>
+            <error>If the provided <paramref name="ParameterKey"/> is empty.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is <c>"Throw Error"</c>.</error>
+            <error>If the provided <paramref name="DuplicateAction"/> is not a valid value for the enum.</error>
+            <remarks>This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&amp;john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42".</remarks>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.GetQueryFlags:List of [Text]">
+            <summary>
+            Gets the flags in the query string of this UriBuilder.
+            </summary>
+            <returns>A list of flags in the query string of this UriBuilder.</returns>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.GetQueryParameters:Dictionary of [Text,List]">
+            <summary>
+            Gets the parameters in the query string of this UriBuilder.
+            </summary>
+            <returns>A dictionary of parameters in the query string of this UriBuilder.</returns>
+        </member>
+        <member name="M:Codeunit::System#Utilities#Uri Builder.GetQueryParameter(Text):List of [Text]">
+            <summary>
+            Gets the value of the specified query parameter.
+            </summary>
+            <param name="ParameterKey">The key of the query parameter to get the value of.</param>
+            <returns>The value of the specified query parameter.</returns>
         </member>
         <member name="O:Enum::System#Utilities#UriKind">
             <summary>
@@ -14193,6 +14209,36 @@
             </summary>
             <param name="NewLocale">The locale to use, for example "en-us".</param>
         </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetBookmarksVisible(Boolean)">
+            <summary>
+            Controls whether the bookmark selection pane will be visible in the embed experience. Defaults to false.
+            </summary>
+            <param name="Visible">Whether bookmarks should be visible.</param>
+        </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetFiltersVisible(Boolean)">
+            <summary>
+            Controls whether the filter pane will be visible in the embed experience. Defaults to false.
+            </summary>
+            <param name="Visible">Whether filters should be visible.</param>
+        </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetPageSelectionVisible(Boolean)">
+            <summary>
+            Controls whether the page selection bar will be visible in the embed experience. Defaults to false.
+            </summary>
+            <param name="Visible">Whether page selection should be visible.</param>
+        </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetTransparentBackground(Boolean)">
+            <summary>
+            Controls whether the report background should be set to transparent regardless of the actual color. Defaults to false.
+            </summary>
+            <param name="Visible">Whether the background should be force to transparent.</param>
+        </member>
+        <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.AddBottomPadding(Boolean)">
+            <summary>
+            Controls whether the addin includes a bottom padding that makes it look nicer in some embedded scenarios. Defaults to false.
+            </summary>
+            <param name="AddPadding">Whether the bottom padding should be added.</param>
+        </member>
         <member name="M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetSettings(Boolean,Boolean,Boolean,Boolean,Boolean,Boolean,Boolean)">
              <summary>
              Sets the properties for the embed experience
@@ -14255,14 +14301,6 @@
             This codeunit provides an interface to running Edit in Excel for a specific page.
             </summary>
         </member>
-        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.EditPageInExcel(Text[240],Text,Text)">
-            <summary>
-            Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
-            </summary>
-            <param name="PageCaption">The name of the page. This will be used for the name of the downloaded excel file, additionally the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.</param>
-            <param name="PageId">The ID of the page, for example, "21".</param>
-            <param name="Filter">The Business Central filter to be applied in Edit in Excel.</param>
-        </member>
         <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.EditPageInExcel(Text[240],Integer)">
             <summary>
             Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
@@ -14277,15 +14315,6 @@
             <param name="PageCaption">The name of the page. This will be used for the name of the downloaded excel file, additionally the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.</param>
             <param name="PageId">The ID of the page, for example, 21.</param>
             <param name="EditinExcelFilters">The filters which will be applied to Edit in Excel.</param>
-        </member>
-        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.EditPageInExcel(Text[240],Text,Text,Text)">
-            <summary>
-            Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
-            </summary>
-            <param name="PageCaption">The name of the page. This will be used for the name of the downloaded excel file, if the FileName parameter is not set. Additionally, the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.</param>
-            <param name="PageId">The ID of the page, for example, "21".</param>
-            <param name="Filter">The Business Central filter to be applied in Edit in Excel.</param>
-            <param name="FileName">The name of the downloaded excel file.</param>
         </member>
         <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.EditPageInExcel(Text[240],Integer,Codeunit::System#Integration#Excel#Edit in Excel Filters,Text)">
             <summary>
@@ -14309,14 +14338,6 @@
             </summary>
             <param name="TenantWebService">The web service referenced through Edit in Excel.</param>
             <param name="EditinExcelFilters">The filters which will be applied to Edit in Excel.</param>
-        </member>
-        <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.OnEditInExcel(Text[240],Text,Text,Boolean@)">
-            <summary>
-            This event is called when Edit in Excel is invoked, accepting Filter in Text format. It allows overriding the Edit in Excel functionality.
-            </summary>
-            <param name="ServiceName">The name of the web service already created for use with Edit in Excel.</param>
-            <param name="Filter">The Business Central filter to be applied in Edit in Excel.</param>
-            <param name="SearchFilter">The search filter of the user.</param>
         </member>
         <member name="M:Codeunit::System#Integration#Excel#Edit in Excel.OnEditInExcelWithStructuredFilter(Text[240],JsonObject,JsonObject,Text,Boolean@)">
             <summary>
@@ -15181,6 +15202,13 @@
             <param name="SharePointFolder">Collection of the result (temporary record). Always one element.</param>
             <returns>True if the operation was successful; otherwise - false.</returns>
         </member>
+        <member name="M:Codeunit::System#Integration#Sharepoint#SharePoint Client.FolderExistsByServerRelativeUrl(Text):Boolean">
+            <summary>
+            Checks if a folder exists.
+            </summary>
+            <param name="ServerRelativeUrl">URL of the folder to check.</param>
+            <returns>True if the folder exists; otherwise - false.</returns>
+        </member>
         <member name="M:Codeunit::System#Integration#Sharepoint#SharePoint Client.DeleteFolder(Text):Boolean">
             <summary>
             Deletes a folder.
@@ -15679,14 +15707,6 @@
             </summary>
             <param name="Field">The field of a record.</param>
             <returns>Whether the given field is supported for Word Templates.</returns>
-        </member>
-        <member name="M:Codeunit::System#Integration#Word#Word Template.RemoveRelatedTable(Code[30],Integer):Boolean">
-            <summary>
-            Remove a related or unrelated table.
-            </summary>
-            <param name="WordTemplateCode">The code of the parent Word template.</param>
-            <param name="RelatedTableID">The ID of the related table to remove. This table must not have tables depending on it, otherwise an error will be thrown.</param>
-            <returns>True if the table was removed, false otherwise.</returns>
         </member>
         <member name="M:Codeunit::System#Integration#Word#Word Template.RemoveTable(Code[30],Integer):Boolean">
             <summary>
@@ -16812,6 +16832,24 @@
             Opens an URL that sends a request to VS Code to retrieve and open the source code of the provided extension from Git.
             </summary>
             <param name="PublishedApplication">The extension to open in VS Code.</param>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.UpdateConfigurationsInVSCode">
+            <summary>
+            Opens an URL that sends a request to VS Code to update the launch configurations to match the current environment to publish and debug.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.UpdateDependenciesInVSCode(Published Application@)">
+            <summary>
+            Opens an URL that sends a request to VS Code to add and download the selected extensions as dependencies.
+            </summary>
+            <param name="PublishedApplication">The selected extensions.</param>
+        </member>
+        <member name="M:Codeunit::System#Integration#VS Code Integration.GetDependenciesAsJson(Published Application@):Text">
+            <summary>
+            Returns the selected extensions as a JSON array of dependencies.
+            </summary>
+            <param name="PublishedApplication">The selected extensions.</param>
+            <returns>The JSON array.</returns>
         </member>
         <member name="M:Codeunit::System#Integration#VS Code Integration.NavigateToPageDefinitionInVSCode(Page Info And Fields@,NAV App Installed App@)">
             <summary>
@@ -18870,6 +18908,13 @@
             <param name="Id">Identification of an existing privacy notice.</param>
             <returns>Whether the Privacy Notice was disagreed to.</returns>
         </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice.IsApprovalStateDisagreed(Enum::System#Privacy#Privacy Notice Approval State):Boolean">
+            <summary>
+            Determines whether the admin or user has disagreed with the Privacy Notice.
+            </summary>
+            <param name="State">The approval state.</param>
+            <returns>Whether the Privacy Notice was disagreed to.</returns>
+        </member>
         <member name="M:Codeunit::System#Privacy#Privacy Notice.SetApprovalState(Code[50],Enum::System#Privacy#Privacy Notice Approval State)">
             <summary>
             Sets the approval state for the specified Privacy Notice.
@@ -18927,10 +18972,51 @@
             The Privacy Notice was disagreed.
             </summary>
         </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice Impl#.TryCreateDefaultApproval(Privacy Notice)">
+            <summary>
+            Creates a default approval for the given privacy notice if it can be approved by default and there is not already an approval record for it.
+            </summary>
+            <param name="PrivacyNotice">The notice to save approval under.</param>
+        </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice Impl#.CheckIntegrationIDEquality(Text,Text):Boolean">
+            <summary>
+            Checks if the IDs are equal.
+            </summary>
+            <param name="ID">The first ID.</param>
+            <param name="IDToCheck">The ID to check against the first ID parameter.</param>
+            <returns>true if equal; otherwise false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice Impl#.ShouldApproveByDefault(Text):Boolean">
+            <summary>
+            Indicates if the integration should be enabled by default.
+            </summary>
+            <param name="IntegrationID">The integration ID/</param>
+            <returns>true if it should be approved by default; otherwise false.</returns>
+        </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice Impl#.IsApprovalStateDisagreed(Code[50]):Boolean">
+            <summary>
+            Determines whether the admin or user has disagreed with the Privacy Notice.
+            </summary>
+            <param name="Id">Identification of an existing privacy notice.</param>
+            <returns>Whether the Privacy Notice was disagreed to.</returns>
+        </member>
+        <member name="M:Codeunit::System#Privacy#Privacy Notice Impl#.IsApprovalStateDisagreed(Enum::System#Privacy#Privacy Notice Approval State):Boolean">
+            <summary>
+            Determines whether the admin or user has disagreed with the Privacy Notice.
+            </summary>
+            <param name="State">The approval state.</param>
+            <returns>Whether the Privacy Notice was disagreed to.</returns>
+        </member>
         <member name="O:Codeunit::System#Privacy#System Privacy Notice Reg#">
             <summary>
             This codeunit registers platform level privacy notices and provides procedures to consistently reference the privacy notices.
             </summary>
+        </member>
+        <member name="M:Codeunit::System#Privacy#System Privacy Notice Reg#.GetMicrosoftLearnID:Code[50]">
+            <summary>
+            Gets the Microsoft Learn privacy notice identifier.
+            </summary>
+            <returns>The privacy notice id for Microsoft Learn.</returns>
         </member>
         <member name="M:Codeunit::System#Privacy#System Privacy Notice Reg#.GetTeamsPrivacyNoticeId:Code[50]">
             <summary>
@@ -20671,6 +20757,12 @@
             </summary>
             <returns>The ID of the next attachment if it was found; otherwise - 0.</returns>
         </member>
+        <member name="M:Codeunit::System#Email#Email Message.Attachments_GetId:BigInteger">
+            <summary>
+            Gets the Id of the current attachment
+            </summary>
+            <returns>The ID of the current attachment.</returns>
+        </member>
         <member name="M:Codeunit::System#Email#Email Message.Attachments_GetName:Text[250]">
             <summary>
             Gets the name of the current attachment.
@@ -21074,6 +21166,12 @@
             </summary>
             <returns>Message id.</returns>
         </member>
+        <member name="M:Table::System#Email#Sent Email.GetAccountId:Guid">
+            <summary>
+            Get the account id of the sent email.
+            </summary>
+            <returns>Account id.</returns>
+        </member>
         <member name="O:Page::System#Email#Sent Emails">
             <summary>
             Provides an overview of all e-mail that were sent out.
@@ -21321,6 +21419,495 @@
             <summary>
             Email policy that show emails to a given user,
             if that user is author of the email.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#ExternalFileStorage#File Account">
+            <summary>
+            Provides functionality to work with file accounts.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Account.GetAllAccounts(Boolean,File Account@)">
+            <summary>
+            Gets all of the file accounts registered in Business Central.
+            </summary>
+            <param name="LoadLogos">Flag, used to determine whether to load the logos for the accounts.</param>
+            <param name="TempFileAccount">Out parameter holding the file accounts.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Account.GetAllAccounts(File Account@)">
+            <summary>
+            Gets all of the file accounts registered in Business Central.
+            </summary>
+            <param name="TempFileAccount">Out parameter holding the file accounts.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Account.IsAnyAccountRegistered:Boolean">
+            <summary>
+            Checks if there is at least one file account registered in Business Central.
+            </summary>
+            <returns>True if there is any account registered in the system, otherwise - false.</returns>
+        </member>
+        <member name="O:Table::System#ExternalFileStorage#File Account">
+            <summary>
+            A common representation of a file account.
+            </summary>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#File Accounts">
+            <summary>
+            Lists all of the registered file accounts
+            </summary>
+        </member>
+        <member name="M:Page::System#ExternalFileStorage#File Accounts.GetAccount(File Account@)">
+            <summary>
+            Gets the selected file account.
+            </summary>
+            <param name="TempFileAccount">The selected file account</param>
+        </member>
+        <member name="M:Page::System#ExternalFileStorage#File Accounts.SetAccount(File Account@)">
+            <summary>
+            Sets a file account to be selected.
+            </summary>
+            <param name="TempFileAccount">The file account to be initially selected on the page</param>
+        </member>
+        <member name="M:Page::System#ExternalFileStorage#File Accounts.EnableLookupMode">
+            <summary>
+            Enables the lookup mode on the page.
+            </summary>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#File Account Wizard">
+            <summary>
+            Step by step guide for adding a new file account in Business Central
+            </summary>
+        </member>
+        <member name="O:Interface::System#ExternalFileStorage#External File Storage Connector">
+            <summary>
+            A External File Storage Connector interface "used to create file accounts and handle external files."
+            </summary>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.ListFiles(Guid,Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@)">
+            <summary>
+            Gets a List of Files stored on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path to list.</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="Files">A list with all files stored in the path.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.GetFile(Guid,Text,InStream)">
+            <summary>
+            Gets a file from the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <param name="Stream">The Stream were the file is read to.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.CreateFile(Guid,Text,InStream)">
+            <summary>
+            Gets a file to the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <param name="Stream">The Stream were the file is read from.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.CopyFile(Guid,Text,Text)">
+            <summary>
+            Copies as file inside the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="SourcePath">The source file path.</param>
+            <param name="TargetPath">The target file path.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.MoveFile(Guid,Text,Text)">
+            <summary>
+            Move as file inside the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="SourcePath">The source file path.</param>
+            <param name="TargetPath">The target file path.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.FileExists(Guid,Text):Boolean">
+            <summary>
+            Checks if a file exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+            <returns>Returns true if the file exists</returns>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.DeleteFile(Guid,Text)">
+            <summary>
+            Deletes a file exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The file path inside the file account.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.ListDirectories(Guid,Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@)">
+            <summary>
+            Gets a List of Directories stored on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to get the file.</param>
+            <param name="Path">The file path to list.</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="Files">A list with all directories stored in the path.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.CreateDirectory(Guid,Text)">
+            <summary>
+            Creates a directory on the provided account.
+            </summary>
+            <param name="Path">The directory path inside the file account.</param>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.DirectoryExists(Guid,Text):Boolean">
+            <summary>
+            Checks if a directory exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The directory path inside the file account.</param>
+            <returns>Returns true if the directory exists</returns>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.DeleteDirectory(Guid,Text)">
+            <summary>
+            Deletes a directory exists on the provided account.
+            </summary>
+            <param name="AccountId">The file account ID which is used to send out the file.</param>
+            <param name="Path">The directory path inside the file account.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.GetAccounts(File Account@)">
+            <summary>
+            Gets the file accounts registered for the connector.
+            </summary>
+            <param name="Accounts">Out variable that holds the registered file accounts for the connector.</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.ShowAccountInformation(Guid)">
+            <summary>
+            Shows the information for a file account.
+            </summary>
+            <param name="AccountId">The ID of the file account</param>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.RegisterAccount(File Account@):Boolean">
+            <summary>
+            Registers a file account for the connector.
+            </summary>
+            <remarks>The out parameter must hold the account ID of the added account.</remarks>
+            <param name="Account">Out parameter with the details of the registered Account.</param>
+            <returns>True if an account was registered.</returns>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.DeleteAccount(Guid):Boolean">
+            <summary>
+            Deletes a file account for the connector.
+            </summary>
+            <param name="AccountId">The ID of the file account</param>
+            <returns>True if an account was deleted.</returns>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.GetLogoAsBase64:Text">
+            <summary>
+            Provides a custom logo for the connector that shows in the Setup File Account Guide.
+            </summary>
+            <returns>Base64 encoded image.</returns>
+            <remarks>The recommended image size is 128x128.</remarks>
+            <returns>The logo of the connector is Base64 format</returns>
+        </member>
+        <member name="M:Interface::System#ExternalFileStorage#External File Storage Connector.GetDescription:Text[250]">
+            <summary>
+            Provides a more detailed description of the connector.
+            </summary>
+            <returns>A more detailed description of the connector.</returns>
+        </member>
+        <member name="O:Enum::System#ExternalFileStorage#Ext# File Storage Connector">
+            <summary>
+            Enum that holds all of the available file connectors.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.Initialize(Enum::System#ExternalFileStorage#File Scenario)">
+            <summary>
+            Initializes the File Storage for the given scenario.
+            </summary>
+            <param name="Scenario">File Scenario to use.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.Initialize(File Account)">
+            <summary>
+            Initializes the File Storage for the give file account.
+            </summary>
+            <param name="TempFileAccount"> File Account to use.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.ListFiles(Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@)">
+            <summary>
+            List all files from the given path.
+            </summary>
+            <param name="Path">Folder to list</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="TempFileAccountContent">File account content.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.GetFile(Text,InStream):Boolean">
+            <summary>
+            Retrieves a file from the file account.
+            </summary>
+            <param name="Path">File Path to open.</param>
+            <param name="Stream">Stream which contains the file content.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.CreateFile(Text,InStream):Boolean">
+            <summary>
+            Stores a file in to the file account.
+            </summary>
+            <param name="Path">File Path inside the file account.</param>
+            <param name="Stream">Stream to store.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.CopyFile(Text,Text):Boolean">
+            <summary>
+            Copies a file in the file account.
+            </summary>
+            <param name="SourcePath">Source path of the file.</param>
+            <param name="TargetPath">Target Path of the file copy.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.MoveFile(Text,Text):Boolean">
+            <summary>
+            Moves a file in the file account.
+            </summary>
+            <param name="SourcePath">Source path of the file.</param>
+            <param name="TargetPath">Target Path of the file.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.FileExists(Text):Boolean">
+            <summary>
+            Checks if a specific file exists in the file account.
+            </summary>
+            <param name="Path">File path to check.</param>
+            <returns>Returns true if the file exists.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.DeleteFile(Text):Boolean">
+            <summary>
+            Deletes a file from the file account.
+            </summary>
+            <param name="Path">File path of the file to delete.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.ListDirectories(Text,Codeunit::System#ExternalFileStorage#File Pagination Data,File Account Content@):Boolean">
+            <summary>
+            List all directories from the given path.
+            </summary>
+            <param name="Path">Folder to list</param>
+            <param name="FilePaginationData">Defines the pagination data.</param>
+            <param name="FileAccountContent">File account content.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.CreateDirectory(Text):Boolean">
+            <summary>
+            Creates a directory in the file account.
+            </summary>
+            <param name="Path">Path of the new Directory to create.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.DirectoryExists(Text):Boolean">
+            <summary>
+            Checks if a specific directory exists in the file account.
+            </summary>
+            <param name="Path">Path of the directory to check.</param>
+            <returns>Returns true if directory exists.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.DeleteDirectory(Text):Boolean">
+            <summary>
+            Deletes a directory from the file account.
+            </summary>
+            <param name="Path">Directory to remove.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.CombinePath(Text,Text):Text">
+            <summary>
+            Combines to paths together.
+            </summary>
+            <param name="Path">First part to combine.</param>
+            <param name="ChildPath">Second part to combine.</param>
+            <returns>Correctly combined path.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.GetParentPath(Text):Text">
+            <summary>
+            Gets the Parent Path of the given path.
+            </summary>
+            <param name="Path">File or directory path.</param>
+            <returns>The parent of the specified path.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SelectAndGetFolderPath(Text):Text">
+            <summary>
+            Opens a folder selection dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <returns>Returns the selected Folder.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SelectAndGetFolderPath(Text,Text):Text">
+            <summary>
+            Opens a folder selection dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <param name="DialogTitle">Title of the selection dialog.</param>
+            <returns>Returns the selected Folder.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SelectAndGetFilePath(Text,Text):Text">
+            <summary>
+            Opens a select file dialog.
+            </summary>
+            <param name="Path">Start path.</param>
+            <param name="FileFilter">A filter string that applies only on files not on folders.</param>
+            <returns>Returns the path of the selected file.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SelectAndGetFilePath(Text,Text,Text):Text">
+            <summary>
+            Opens a select file dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <param name="FileFilter">A filter string that applies only on files not on folders.</param>
+            <param name="DialogTitle">Title of the selection dialog.</param>
+            <returns>Returns the path of the selected file.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SaveFile(Text,Text):Text">
+            <summary>
+            Opens a save to dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
+            <returns>Returns the selected file path.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SaveFile(Text,Text,Text):Text">
+            <summary>
+            Opens a save to dialog.
+            </summary>
+            <param name="Path">Start path of the dialog.</param>
+            <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
+             <param name="DialogTitle">Title of the selection dialog.</param>
+            <returns>Returns the selected file path.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.BrowseAccount">
+            <summary>
+            Opens a File Browser
+            </summary>
+        </member>
+        <member name="O:Enum::System#ExternalFileStorage#Ext# File Storage File Type">
+            <summary>
+            Indicator of what type the resource is.
+            </summary>
+        </member>
+        <member name="E:Enum::System#ExternalFileStorage#Ext# File Storage File Type.Directory">
+            <summary>
+            Indicates if entry is a directory.
+            </summary>
+        </member>
+        <member name="E:Enum::System#ExternalFileStorage#Ext# File Storage File Type.File">
+            <summary>
+            Indicates if entry is a file type.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Pagination Data.SetMarker(Text)">
+            <summary>
+            Sets a marker to see if files and directories can be retrieved in batches.
+            </summary>
+            <param name="NewMarker">Marker value to set.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Pagination Data.GetMarker:Text">
+            <summary>
+            Gets the current marker value.
+            </summary>
+            <returns>Current marker value.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Pagination Data.SetEndOfListing(Boolean)">
+            <summary>
+            Set this value to true, if all files or directories have been read a from the File Service.
+            </summary>
+            <param name="NewEndOfListing">End of listing reached.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Pagination Data.IsEndOfListing:Boolean">
+            <summary>
+            Defines if all batches of directory or file listing has been received.
+            </summary>
+            <returns>End of listing reached.</returns>
+        </member>
+        <member name="O:Table::System#ExternalFileStorage#File Account Scenario">
+            <summary>
+            Temporary table used to display the tree structure in "File Scenario Setup".
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#ExternalFileStorage#File Scenario">
+            <summary>
+            Provides functionality to work with file scenarios.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.GetDefaultFileAccount(File Account@):Boolean">
+            <summary>
+            Gets the default file account.
+            </summary>
+            <param name="TempFileAccount">Out parameter holding information about the default file account.</param>
+            <returns>True if an account for the default scenario was found; otherwise - false.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.GetFileAccount(Enum::System#ExternalFileStorage#File Scenario,File Account@):Boolean">
+            <summary>
+            Gets the file account used by the given file scenario.
+            If the no account is defined for the provided scenario, the default account (if defined) will be returned.
+            </summary>
+            <param name="Scenario">The scenario to look for.</param>
+            <param name="TempFileAccount">Out parameter holding information about the file account.</param>
+            <returns>True if an account for the specified scenario was found; otherwise - false.</returns>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.SetDefaultFileAccount(File Account)">
+            <summary>
+            Sets a default file account.
+            </summary>
+            <param name="TempFileAccount">The file account to use.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.SetFileAccount(Enum::System#ExternalFileStorage#File Scenario,File Account)">
+            <summary>
+            Sets a file account to be used by the given file scenario.
+            </summary>
+            <param name="Scenario">The scenario for which to set a file account.</param>
+            <param name="TempFileAccount">The file account to use.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.UnassignScenario(Enum::System#ExternalFileStorage#File Scenario)">
+            <summary>
+            Unassign an file scenario. The scenario will then use the default file account.
+            </summary>
+            <param name="Scenario">The scenario to unassign.</param>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario.OnBeforeInsertAvailableFileScenario(Enum::System#ExternalFileStorage#File Scenario,Boolean@)">
+            <summary>
+            Event for changing whether an file scenario should be added to the list of assignable scenarios.
+            If the scenario has already been assigned or is the default scenario, this event won't be published.
+            </summary>
+            <param name="Scenario">The scenario that is going to be added to the list of assignable scenarios.</param>
+            <param name="IsAvailable">The return for whether this scenario should be listed in the assignable scenarios list.</param>
+        </member>
+        <member name="O:Enum::System#ExternalFileStorage#File Scenario">
+            <summary>
+            File scenarios.
+            Used to decouple file accounts from sending files.
+            </summary>
+        </member>
+        <member name="E:Enum::System#ExternalFileStorage#File Scenario.Default">
+            <summary>
+            The default file scenario.
+            Used in the cases where no other scenario is defined.
+            </summary>
+        </member>
+        <member name="O:Table::System#ExternalFileStorage#File Scenario">
+            <summary>
+            Holds the mapping between file account and scenarios.
+            One scenarios is mapped to one file account.
+            One file account can be used for multiple scenarios.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#ExternalFileStorage#File Scenario Impl#.GetScenariosByFileAccount(File Account Scenario@)">
+            <summary>
+            Get a list of entries, representing a tree structure with file accounts and the scenarios, assigned to each account.
+            </summary>
+            <example>
+            Account sales@cronus.com has scenarios "Sales Quote" and "Sales Credit Memo" assigned.
+            Account purchase@cronus.com has scenarios "Purchase Quote" and "Purchase Invoice" assigned.
+            The result of calling the function will be:
+            sales@cronus.com, "Sales Quote", "Sales Credit Memo", purchase@cronus.com, "Purchase Quote", "Purchase Invoice"
+            </example>
+            <param name="TempFileAccountScenario">A flattened tree structure representing all the file accounts and the scenarios assigned to them.</param>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#File Scenario Setup">
+            <summary>
+            Page is used to display file scenarios usage by file accounts.
+            </summary>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#File Scenarios FactBox">
+            <summary>
+            Lists of all scenarios assigned to an account.
+            </summary>
+        </member>
+        <member name="O:Page::System#ExternalFileStorage#File Scenarios for Account">
+            <summary>
+            Displays the scenarios that could be linked to a provided file account.
             </summary>
         </member>
         <member name="O:Codeunit::System#Reflection#Field Selection">
@@ -21680,12 +22267,22 @@
         </member>
         <member name="O:PermissionSet::System#Globalization#Language - Edit">
             <summary>
-            This permission set allows editing of the list of languages.
+            This permission set allows editing of the list of languages and supported languages.
             </summary>
         </member>
         <member name="O:PermissionSet::System#Globalization#Language - View">
             <summary>
             This permission set allows you to view the language list and set the preferred language for the user
+            </summary>
+        </member>
+        <member name="O:Table::System#Globalization#Allowed Language">
+            <summary>
+            Table that contains a list of specific application languages available for the users. If the table is empty, then all installed application languages will be available.
+            </summary>
+        </member>
+        <member name="O:Page::System#Globalization#Allowed Languages">
+            <summary>
+            Page that shows the list of allows languages which is enabled for this environment. If nothing is specified, then the user will be able to use all available languages.
             </summary>
         </member>
         <member name="O:Codeunit::System#Globalization#Language">
@@ -21866,6 +22463,12 @@
             Retrieves the culture name for the specified language ID.
             </summary>
             <param name="LanguageID">The language ID. See https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/a29e5c28-9fb9-4c49-8e43-4b9b8e733a05.</param>
+            <returns>The culture name. For example, 'en-US'.</returns>
+        </member>
+        <member name="M:Codeunit::System#Globalization#Language.GetCurrentCultureName:Text">
+            <summary>
+            Retrieves the current culture name for the session.
+            </summary>
             <returns>The culture name. For example, 'en-US'.</returns>
         </member>
         <member name="M:Codeunit::System#Globalization#Language.OnGetUserLanguageCode(Code[10]@,Boolean@)">
@@ -22398,46 +23001,6 @@
             <param name="ScheduleID">The schedule ID that triggers the profiling.</param>
             <returns>True if profiling is enabled, false otherwise.</returns>
         </member>
-        <member name="O:Table::System#Tooling#Query Navigation Validation">
-            <summary>
-            Contains details about the results of validating Query Navigation data.
-            </summary>
-        </member>
-        <member name="F:Table::System#Tooling#Query Navigation Validation.PK">
-            <summary>
-            Simple primary key of the temporary table.
-            </summary>
-        </member>
-        <member name="F:Table::System#Tooling#Query Navigation Validation.Valid">
-            <summary>
-            Indicates the success/failure of the validation
-            </summary>
-        </member>
-        <member name="F:Table::System#Tooling#Query Navigation Validation.Reason[500]">
-            <summary>
-            Specifies a detailed message describing why the validation failed.
-            </summary>
-        </member>
-        <member name="O:Table::System#Tooling#SmartList Designer Handler">
-            <summary>
-            A single-record table that can be used to handle contention between multiple subscribers of the events for the SmartList Designer.
-            Consumers of the events should check this record to see if another extension is registered as the handler and then decide if they
-            should execute code within their own subscriptions to these events. Likewise, consumers could set this record to register themselves
-            as the handler of events.
-            </summary>
-        </member>
-        <member name="F:Table::System#Tooling#SmartList Designer Handler.PrimaryKey[10]">
-            <summary>
-            The primary key of the table. As a single-record table this value
-            should only ever be set to the empty string ''.
-            </summary>
-        </member>
-        <member name="F:Table::System#Tooling#SmartList Designer Handler.HandlerExtensionId">
-            <summary>
-            The AppId of the extension that has registered itself as the handler
-            of SmartList Designer events.
-            </summary>
-        </member>
         <member name="O:Codeunit::System#RestClient#Http Content">
             <summary>Holder object for the Http Content data.</summary>
         </member>
@@ -22574,6 +23137,18 @@
             <remarks>Returns an empty JsonToken in case there is no content. 
             Fails in case the content is not a valid JSON document.</remarks>
         </member>
+        <member name="M:Codeunit::System#RestClient#Http Content.AsJsonObject:JsonObject">
+            <summary>Gets the content of the HTTP response message as a JsonObject.</summary>
+            <returns>The content of the HTTP response message as a JsonObject.</returns>
+            <remarks>Returns an empty JsonObject in case there is no content.
+            Fails in case the content is not a valid JSON document.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Content.AsJsonArray:JsonArray">
+            <summary>Gets the content of the HTTP response message as a JsonArray.</summary>
+            <returns>The content of the HTTP response message as a JsonArray.</returns>
+            <remarks>Returns an empty JsonArray in case there is no content.
+            Fails in case the content is not a valid JSON document.</remarks>
+        </member>
         <member name="O:Enum::System#RestClient#Http Method">
             <summary>
             This enum contains the REST Http Methods.
@@ -22617,6 +23192,13 @@
         <member name="O:Codeunit::System#RestClient#Http Request Message">
             <summary>Holder object for the HTTP request data.</summary>
         </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.Create(Enum::System#RestClient#Http Method,Text,Codeunit::System#RestClient#Http Content):Codeunit::System#RestClient#Http Request Message">
+            <summary>Creates a new instance of the HttpRequestMessage object.</summary>
+            <param name="Method">The HTTP method to use. Valid options are GET, POST, PATCH, PUT, DELETE, HEAD, OPTIONS</param>
+            <param name="RequestUri">The Uri to use for the HTTP request.</param>
+            <param name="Content">The Http Content object to use for the HTTP request.</param>
+            <returns>The create Http Request Message</returns>
+        </member>
         <member name="M:Codeunit::System#RestClient#Http Request Message.SetHttpMethod(Text)">
             <summary>Sets the HTTP method or the HttpRequestMessage object.</summary>
             <param name="Method">The HTTP method to use. Valid options are GET, POST, PATCH, PUT, DELETE, HEAD, OPTIONS</param>
@@ -22650,6 +23232,52 @@
             <param name="HeaderName">The name of the header to add.</param>
             <param name="HeaderValue">The value of the header to add.</param>
         </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetHeaderValues(Text):List of [Text]">
+            <summary>Gets the values of the header with the given name from the HttpRequestMessage object.</summary>
+            <param name="HeaderName">The name of the header to get.</param>
+            <returns>A list of values of the header with the given name.</returns>
+            <remarks>If the header is not found, an empty list is returned.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetSecretHeaderValues(Text):List of [SecretText]">
+            <summary>Gets the secret values of the header with the given name from the HttpRequestMessage object.</summary>
+            <param name="HeaderName">The name of the header to get.</param>
+            <returns>A list of values of the header with the given name.</returns>
+            <remarks>If the header is not found, an empty list is returned.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.SetCookie(Text,Text):Boolean">
+            <summary>Sets the cookie given a name and value</summary>
+            <param name="Name">The name of the cookie to set.</param>
+            <param name="Value">The value of the cookie to set.</param>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.SetCookie(Cookie):Boolean">
+            <summary>Sets the cookie given a cookie object</summary>
+            <param name="Cookie">The cookie object to set.</param>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetCookieNames:List of [Text]">
+            <summary>Gets the names of the cookies that are set in the HttpRequestMessage object.</summary>
+            <returns>The names of the cookies that are set in the HttpRequestMessage object.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetCookies:List of [Cookie]">
+            <summary>Gets the cookies that are set in the HttpRequestMessage object.</summary>
+            <returns>The cookies that are set in the HttpRequestMessage object.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetCookie(Text):Cookie">
+            <summary>Gets the cookie with the given name from the HttpRequestMessage object.</summary>
+            <param name="Name">The name of the cookie to get.</param>
+            <returns>The cookie object.</returns>
+            <remarks>If the cookie is not found, an empty cookie object is returned.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.GetCookie(Text,Cookie@):Boolean">
+            <summary>Gets the cookie with the given name from the HttpRequestMessage object.</summary>
+            <param name="Name">The name of the cookie to get.</param>
+            <param name="Cookie">The cookie object to get.</param>
+            <returns>True if the cookie was found, false otherwise.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Request Message.RemoveCookie(Text):Boolean">
+            <summary>Removes the cookie with the given name from the HttpRequestMessage object.</summary>
+            <param name="Name">The name of the cookie to remove.</param>
+            <returns>True if the cookie was removed, false otherwise.</returns>
+        </member>
         <member name="M:Codeunit::System#RestClient#Http Request Message.SetHttpRequestMessage(HttpRequestMessage@)">
             <summary>Sets the HttpRequestMessage that is represented by the HttpRequestMessage object.</summary>
             <param name="RequestMessage">The HttpRequestMessage to set.</param>
@@ -22664,6 +23292,11 @@
         </member>
         <member name="O:Codeunit::System#RestClient#Http Response Message">
             <summary>Holder object for the HTTP response data.</summary>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.Create(HttpResponseMessage):Codeunit::System#RestClient#Http Response Message">
+            <summary>Initializes a new instance of the HttpResponseMessage class.</summary>
+            <param name="HttpResponseMessage">The HTTP response message.</param>
+            <returns>The HttpResponseMessage object.</returns>
         </member>
         <member name="M:Codeunit::System#RestClient#Http Response Message.SetIsBlockedByEnvironment(Boolean)">
             <summary>Sets whether the request is blocked by the environment.</summary>
@@ -22719,6 +23352,30 @@
             <summary>Gets the HTTP headers.</summary>
             <returns>The HTTP headers.</returns>
         </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.SetCookies(Dictionary of [Text,Cookie])">
+            <summary>Sets the cookies in the HTTP response message.</summary>
+            <param name="Cookies">The cookies to set.</param>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.GetCookies:Dictionary of [Text,Cookie]">
+            <summary>Gets the cookies in the HTTP response message.</summary>
+            <returns>The cookies in the HTTP response message.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.GetCookieNames:List of [Text]">
+            <summary>Gets the names of the cookies that are set in the HTTP response message.</summary>
+            <returns>The names of the cookies that are set in the HTTP response message.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.GetCookie(Text):Cookie">
+            <summary>Gets the cookie with the given name from the HTTP response message.</summary>
+            <param name="Name">The name of the cookie to get.</param>
+            <returns>The cookie object.</returns>
+            <remarks>If the cookie is not found, an empty cookie object is returned.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.GetCookie(Text,Cookie@):Boolean">
+            <summary>Gets the cookie with the given name from the HTTP response message.</summary>
+            <param name="Name">The name of the cookie to get.</param>
+            <param name="Cookie">The cookie object to get.</param>
+            <returns>True if the cookie was found, false otherwise.</returns>
+        </member>
         <member name="M:Codeunit::System#RestClient#Http Response Message.SetErrorMessage(Text)">
             <summary>Sets an error message when the request failed.</summary>
             <param name="Value">The error message.</param>
@@ -22727,8 +23384,39 @@
             <summary>Gets the error message when the request failed.</summary>
             <returns>The error message.</returns>
         </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.SetException(ErrorInfo)">
+            <summary>Sets the exception information when the request failed.</summary>
+            <param name="Exception">The exception information.</param>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Http Response Message.GetException:ErrorInfo">
+            <summary>Gets the exception information when the request failed.</summary>
+            <returns>The exception information.</returns>
+        </member>
         <member name="O:Codeunit::System#RestClient#Rest Client">
             <summary>Provides functionality to easily work with the HttpClient object.</summary>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client.Create:Codeunit::System#RestClient#Rest Client">
+            <summary>Initializes a new instance of the Rest Client class.</summary>
+            <returns>The Rest Client object.</returns>
+            <remarks>The default Http Client Handler and anonymous Http authentication will be used.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client.Create(Interface::System#RestClient#Http Client Handler):Codeunit::System#RestClient#Rest Client">
+            <summary>Initializes a new instance of the Rest Client class.</summary>
+            <param name="HttpClientHandler">The Http Client Handler to use.</param>
+            <returns>The Rest Client object.</returns>
+            <remarks>The anynomous Http Authentication will be used.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client.Create(Interface::System#RestClient#Http Authentication):Codeunit::System#RestClient#Rest Client">
+            <summary>Initializes a new instance of the Rest Client class.</summary>
+            <param name="HttpAuthentication">The authentication to use.</param>
+            <returns>The Rest Client object.</returns>
+            <remarks>The default Http Client Handler will be used.</remarks>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client.Create(Interface::System#RestClient#Http Client Handler,Interface::System#RestClient#Http Authentication):Codeunit::System#RestClient#Rest Client">
+            <summary>Initializes a new instance of the Rest Client class.</summary>
+            <param name="HttpClientHandler">The Http Client Handler to use.</param>
+            <param name="HttpAuthentication">The authentication to use.</param>
+            <returns>The Rest Client object.</returns>
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Initialize">
             <summary>Initializes the Rest Client with the default Http Client Handler and anonymous Http authentication.</summary>
@@ -22809,15 +23497,22 @@
             The Rest Client will be initialized if it was not initialized before.</remarks>
             <param name="Value">The authorization header to use.</param>
         </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client.SetUseResponseCookies(Boolean)">
+            <summary>Sets the use of response cookies in subsequent requests.</summary>
+            <remarks>Use this function to enable or disable automatically attach cookies received in the response to all subsequent requests.
+            The Rest Client will be initialized if it was not initialized before.</remarks>
+            <param name="Value">If true, the client automatically attaches cookies received in the response to all subsequent requests. False to disable</param>
+        </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Get(Text):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a GET request to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.</remarks>
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
+            If a response was received, then the response message object contains information about the status.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <returns>The response message object</returns>
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Post(Text,Codeunit::System#RestClient#Http Content):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a POST request to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <param name="Content">The content to send.</param>
@@ -22825,7 +23520,7 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Patch(Text,Codeunit::System#RestClient#Http Content):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a PATCH request to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <param name="Content">The content to send.</param>
@@ -22833,7 +23528,7 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Put(Text,Codeunit::System#RestClient#Http Content):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a PUT request to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <param name="Content">The content to send.</param>
@@ -22841,24 +23536,24 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Delete(Text):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a DELETE request to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <returns>The response message object</returns>
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.GetAsJson(Text):JsonToken">
             <summary>Sends a GET request to the specified Uri and returns the response content as JsonToken.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
-            In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
+            In case the response contains content, then the function fails with a collectible error if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
             <returns>The response content as JsonToken</returns>
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.PostAsJson(Text,JsonObject):JsonToken">
             <summary>Sends a POST request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22868,7 +23563,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PostAsJson(Text,JsonArray):JsonToken">
             <summary>Sends a POST request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22878,7 +23573,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PostAsJson(Text,JsonToken):JsonToken">
             <summary>Sends a POST request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22888,7 +23583,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PatchAsJson(Text,JsonObject):JsonToken">
             <summary>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22898,7 +23593,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PatchAsJson(Text,JsonArray):JsonToken">
             <summary>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22908,7 +23603,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PatchAsJson(Text,JsonToken):JsonToken">
             <summary>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22918,7 +23613,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PutAsJson(Text,JsonObject):JsonToken">
             <summary>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22928,7 +23623,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PutAsJson(Text,JsonArray):JsonToken">
             <summary>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22938,7 +23633,7 @@
         <member name="M:Codeunit::System#RestClient#Rest Client.PutAsJson(Text,JsonToken):JsonToken">
             <summary>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</summary>
             <remarks>The function fails with an error message if the request could not be sent or a response was not received.
-            The function also fails in case the response does not contain a success status code.
+            The function also fails with a collectible error in case the response does not contain a success status code.
             In case the response contains no content, an empty JsonToken is returned. 
             In case the response contains content, then the function fails if the content is invalid JSON.</remarks>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22947,7 +23642,7 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Send(Enum::System#RestClient#Http Method,Text):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a request with the specific Http method and an empty content to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="Method">The HTTP method to use.</param>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22955,7 +23650,7 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Send(Enum::System#RestClient#Http Method,Text,Codeunit::System#RestClient#Http Content):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends a request with the specific Http method and the given content to the specified Uri and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.
             If a response was received, then the response message object contains information about the status.</remarks>
             <param name="Method">The HTTP method to use.</param>
             <param name="RequestUri">The Uri the request is sent to.</param>
@@ -22964,7 +23659,7 @@
         </member>
         <member name="M:Codeunit::System#RestClient#Rest Client.Send(Codeunit::System#RestClient#Http Request Message@):Codeunit::System#RestClient#Http Response Message">
             <summary>Sends the given request message and returns the response message.</summary>
-            <remarks>The function fails with an error message if the request could not be sent or a response was not received.</remarks>
+            <remarks>The function fails with a collectible error if the request could not be sent or a response was not received.</remarks>
             <param name="HttpRequestMessage">The request message to send.</param>
             <returns>The response message object</returns>
         </member>
@@ -23036,385 +23731,64 @@
             <summary>Gets the authorization headers for the request</summary>
             <returns>Returns a dictionary of headers that need to be added to the request</returns>
         </member>
-        <member name="O:Codeunit::System#Telemetry#Telemetry Custom Dimensions">
+        <member name="O:Enum::System#RestClient#Rest Client Exception">
             <summary>
-            Provides functionality for adding common custom dimensions to telemetry.
-            </summary>
-            <remarks>This codeunit is only intended to be used from subscribers of <see cref="OnAddCommonCustomDimensions"/> event.</remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Custom Dimensions.AddCommonCustomDimension(Text,Text)">
-            <summary>
-            Add a custom dimension for every telemetry message. Is used in conjunction with <see cref="OnAddCommonCustomDimensions"/>
-            </summary>
-            <param name="CustomDimensionName">The name of the custom dimension.</param>
-            <param name="CustomDimensionValue">The value of the custom dimension.</param>
-            <remarks>Only system metadata classified information should be added here as these custom dimensions will be used for all telemetry messages.</remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Custom Dimensions.OnAddCommonCustomDimensions">
-            <summary>
-            Allows to provide additional custom dimensions for every telemetry message. Is used in conjunction with <see cref="AddCommonCustomDimensions"/>.
-            </summary>
-            <remarks>Global language is set to default for the subscribers of this event.</remarks>
-            <example>
-            [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Custom Dimensions", 'OnAddCommonCustomDimensions', '', true, true)]
-            local procedure OnAddCommonCustomDimensions(var Sender: Codeunit "Telemetry Custom Dimensions")
-            begin
-                Sender.AddCommonCustomDimension('CommonCustomDimension', 'Some info');
-            end;
-            </example>
-        </member>
-        <member name="O:Codeunit::System#Telemetry#Feature Telemetry">
-            <summary>
-            Provides functionality for emitting telemetry in a universal format. Only system metadata is to be emitted through this codeunit.
-            </summary>
-            <remarks>
-            Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
-            to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
-            to work as expected (see "System Telemetry Logger" codeunit).
-            </remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text)">
-            <summary>
-            Sends telemetry about feature usage.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <example>FeatureTelemetry.LogUsage('0000XYZ', 'Emailing', 'Email sent');</example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about feature usage.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
-            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
-            <example>
-            TranslationHelper.SetGlobalLanguageToDefault();
-            CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
-            CustomDimensions.Add('JobQueueObjectId', Format(JobQueueEntry."Object ID to Run"));
-            FeatureTelemetry.LogUsage('0000XYZ', 'Job Queue', 'Job executed', CustomDimensions);
-            TranslationHelper.RestoreGlobalLanguage();
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about feature usage (with the capability to send to ISVs).
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
-            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
-            <example>
-            TranslationHelper.SetGlobalLanguageToDefault();
-            CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
-            CustomDimensions.Add('JobQueueObjectId', Format(JobQueueEntry."Object ID to Run"));
-            FeatureTelemetry.LogUsage('0000XYZ', 'Job Queue', 'Job executed', CustomDimensions);
-            TranslationHelper.RestoreGlobalLanguage();
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text)">
-            <summary>
-            Sends telemetry about errors happening during feature usage.
-            </summary>
-            <param name="EventId">A unique ID of the error.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="ErrorText">The text of the error.</param>
-            <example>
-            if not Success then
-                FeatureTelemetry.LogError('0000XYZ', 'Retention policies', 'Applying a policy', GetLastErrorText(true));
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text)">
-            <summary>
-            Sends telemetry about errors happening during feature usage.
-            </summary>
-            <param name="EventId">A unique ID of the error.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="ErrorText">The text of the error.</param>
-            <param name="ErrorCallStack">The error call stack.</param>
-            <example>
-            if not Success then
-                FeatureTelemetry.LogError('0000XYZ', 'Configuration packages', 'Importing a package', GetLastErrorText(true), GetLastErrorCallStack());
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about errors happening during feature usage.
-            </summary>
-            <param name="EventId">A unique ID of the error.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="ErrorText">The text of the error.</param>
-            <param name="ErrorCallStack">The error call stack.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
-            <remarks>Custom dimensions often contain infromation translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
-            <example>
-            if not Success then begin
-                TranslationHelper.SetGlobalLanguageToDefault();
-                CustomDimensions.Add('UpdateEntity', Format(AzureADUserUpdateBuffer."Update Entity"));
-                FeatureTelemetry.LogError('0000XYZ', 'User management', 'Syncing users with M365', GetLastErrorText(true), GetLastErrorCallStack(), CustomDimensions);
-                TranslationHelper.RestoreGlobalLanguage();
-            end;
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about errors happening during feature usage (with the capability to send to ISVs).
-            </summary>
-            <param name="EventId">A unique ID of the error.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="EventName">The name of the event.</param>
-            <param name="ErrorText">The text of the error.</param>
-            <param name="ErrorCallStack">The error call stack.</param>
-            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
-            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
-            <example>
-            if not Success then begin
-                TranslationHelper.SetGlobalLanguageToDefault();
-                CustomDimensions.Add('UpdateEntity', Format(AzureADUserUpdateBuffer."Update Entity"));
-                FeatureTelemetry.LogError('0000XYZ', 'User management', 'Syncing users with M365', GetLastErrorText(true), GetLastErrorCallStack(), CustomDimensions);
-                TranslationHelper.RestoreGlobalLanguage();
-            end;
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status)">
-            <summary>
-            Sends telemetry about feature uptake.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
-            <remarks>
-            Expected feature uptake transitions:
-            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
-            *Any state* -> "Undiscovered" (to reset the feature uptake status)
-            </remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about feature uptake.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
-            <remarks>
-            Expected feature uptake transitions:
-            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
-            *Any state* -> "Undiscovered" (to reset the feature uptake status)
-            </remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Boolean)">
-            <summary>
-            Sends telemetry about feature uptake.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
-            <param name="IsPerUser">Specifies if the feature is targeted to be uptaken once for the tenant or uptaken individually by different users.</param>
-            <remarks>
-            Expected feature uptake transitions:
-            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
-            *Any state* -> "Undiscovered" (to reset the feature uptake status)
-            </remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Boolean,Dictionary of [Text,Text])">
-            <summary>
-            Sends telemetry about feature uptake.
-            </summary>
-            <param name="EventId">A unique ID of the event.</param>
-            <param name="FeatureName">The name of the feature.</param>
-            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
-            <param name="IsPerUser">Specifies if the feature is targeted to be uptaken once for the tenant or uptaken individually by different users.</param>
-            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
-            <remarks>
-            Expected feature uptake transitions:
-            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
-            *Any state* -> "Undiscovered" (to reset the feature uptake status)
-            </remarks>
-        </member>
-        <member name="O:Enum::System#Telemetry#Feature Uptake Status">
-            <summary>
-            Specifies the uptake status of an application feature.
+            This enum contains the exceptions of the Rest Client.
             </summary>
         </member>
-        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Undiscovered">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.UnknownException">
             <summary>
-            The feature has not been discovered.
+            Specifies that the exception is an unknown exception.
             </summary>
         </member>
-        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Discovered">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.ConnectionFailed">
             <summary>
-            The feature has been discovered.
+            Specifies that the connection failed.
             </summary>
         </member>
-        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Set up">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.BlockedByEnvironment">
             <summary>
-            The feature has been set up.
+            Specifies that the request is blocked by the environment.
             </summary>
         </member>
-        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Used">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.RequestFailed">
             <summary>
-            The feature has been used.
+            Specifies that the request failed.
             </summary>
         </member>
-        <member name="M:Codeunit::System#Telemetry#Feature Uptake Status Impl#.WaitForStartedUpdateFeatureUptakeSession">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.InvalidJson">
             <summary>
-            The updates to Feature Uptake states must be done in a separate session (e. g. to not interfere with subsequent Page.RunModal() calls).
-            Normally we don't need to wait for this separate session to finish, as feature uptake states are expected to not change rapidly, and it only takes a few milliseconds for the session to complete.
-            But if the feature registers uptake states one right after another, then the session may not have enough time to start and acquire a lock on the "Feature Uptake" table by the time the next uptake state is registered.
-            For such cases, we can wait for this previous session to finish.
-            </summary>
-            <remarks>We will only ever wait when feature uptake states a registered for the first time, so there is no persistent performance penalty to this.</remarks>
-            <remarks>It is not hard requirement to actually wait for the session to finish, we only need to wait long enough, so that it calls FeatureUptake.LockTable().</remarks>
-        </member>
-        <member name="O:Enum::System#Telemetry#AL Telemetry Scope">
-            <summary>
-            Represents the emission scope of the telemetry signal.
-            An wrapper in AL to provide the capability to send Telemetries to ISVs.
+            Specifies that the content is not valid JSON.
             </summary>
         </member>
-        <member name="O:Codeunit::System#Telemetry#Telemetry">
-             <summary>
-             A wrapper on top of Session.LogMessage that allows for having additional common custom dimensions emitted with every message.
-             </summary>
-             <remarks>
-             Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
-             to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
-             to work as expected (see "System Telemetry Logger" codeunit or example below).
-             </remarks>
-             <example>
-             codeunit 50000 "PTE Telemetry Logger" implements "Telemetry Logger"
-             {
-                Access = Internal;
-            
-                procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
-                begin
-                    Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
-                end;
-            
-                // For the functionality to behave as expected, there should be exactly one implementation of the "Telemetry Logger" interface registered per app publisher
-                [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Loggers", 'OnRegisterTelemetryLogger', '', true, true)]
-                local procedure OnRegisterTelemetryLogger(var Sender: Codeunit "Telemetry Loggers")
-                var
-                    TelemetryLogger: Codeunit "PTE Telemetry Logger";
-                begin
-                    Sender.Register(TelemetryLogger);
-                end;
-             }
-             </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary of [Text,Text])">
+        <member name="E:Enum::System#RestClient#Rest Client Exception.InvalidXml">
             <summary>
-            Logs a telemetry message.
-            </summary>
-            <param name="EventId">A unique identifier of the telemetry message.</param>
-            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
-            <param name="Verbosity">The verbosity of the telemetry message.</param>
-            <param name="DataClassification">The data classification of the telemetry message.</param>
-            <param name="TelemetryScope">The telemetry scope of the message.</param>
-            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope)">
-            <summary>
-            Logs a telemetry message.
-            </summary>
-            <param name="EventId">A unique identifier of the telemetry message.</param>
-            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
-            <param name="Verbosity">The verbosity of the telemetry message.</param>
-            <param name="DataClassification">The data classification of the telemetry message.</param>
-            <param name="TelemetryScope">The telemetry scope of the message.</param>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification)">
-            <summary>
-            Logs a telemetry message.
-            </summary>
-            <param name="EventId">A unique identifier of the telemetry message.</param>
-            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
-            <param name="Verbosity">The verbosity of the telemetry message.</param>
-            <param name="DataClassification">The data classification of the telemetry message.</param>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
-            <summary>
-            Logs a telemetry message (with the capability to send to ISVs).
-            </summary>
-            <param name="EventId">A unique identifier of the telemetry message.</param>
-            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
-            <param name="Verbosity">The verbosity of the telemetry message.</param>
-            <param name="DataClassification">The data classification of the telemetry message.</param>
-            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
-            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
-        </member>
-        <member name="O:Interface::System#Telemetry#Telemetry Logger">
-             <summary>
-             The interface that allows 3d party extensions to emit telemetry to their own telemetry stores when the Telemetry codeunit is used.
-             </summary>
-             <example>
-             codeunit 50100 "My Telemetry Logger" implements "Telemetry Logger"
-             {
-                 Access = Internal;
-            
-                 procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
-                 begin
-                     Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
-                 end;
-             }
-             </example>
-        </member>
-        <member name="M:Interface::System#Telemetry#Telemetry Logger.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary of [Text,Text])">
-            <summary>
-            Logs a telemetry message.
-            </summary>
-            <param name="EventId">A unique identifier of the telemetry message.</param>
-            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
-            <param name="Verbosity">The verbosity of the telemetry message.</param>
-            <param name="DataClassification">The data classification of the telemetry message.</param>
-            <param name="TelemetryScope">The telemetry scope of the message.</param>
-            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
-        </member>
-        <member name="O:Codeunit::System#Telemetry#Telemetry Loggers">
-            <summary>
-            Provides functionality for registering 3d party telemetry loggers to be used with Telemetry codeunit.
-            </summary>
-            <remarks>This codeunit is only intended to be used from subscribers of <see cref="OnRegisterTelemetryLogger"/> event.</remarks>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.Register(Interface::System#Telemetry#Telemetry Logger)">
-            <summary>
-            Registers a telemetry logger from a 3d party extension. Is used in conjunction with <see cref="OnRegisterTelemetryLogger"/>
-            </summary>
-            <param name="TelemetryLogger">The codeunit implementing the Telemetry Logger inteface from a 3d party extension.</param>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.OnRegisterTelemetryLogger">
-            <summary>
-            Allows 3d party extensions to register their own telemetry loggers to be used with Telemetry codeunit. Is used in conjunction with <see cref="Register"/>.
-            </summary>
-            <example>
-            [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Loggers", 'OnRegisterTelemetryLogger', '', true, true)]
-            local procedure OnRegisterTelemetryLogger(var Sender: Codeunit "Telemetry Loggers")
-            var
-                MyTelemetryLogger: Codeunit "My Telemetry Logger"; // this codeunit must implement the Telemetry Logger interface
-            begin
-                Sender.Register(MyTelemetryLogger);
-            end;
-            </example>
-        </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetTelemetryLogger(Text,Interface::System#Telemetry#Telemetry Logger@):Boolean">
-            <summary>
-            Get the telemetry logger from publisher. If there are multiple telemetry loggers registered for the current publisher, a warning is logged.
+            Specifies that the content is not valid XML.
             </summary>
         </member>
-        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetRelevantTelemetryLoggers(Text):List of [Telemetry Logger]">
+        <member name="M:Codeunit::System#RestClient#Rest Client Exception Builder.CreateException(Enum::System#RestClient#Rest Client Exception,Text):ErrorInfo">
             <summary>
-            Gets the relevant telemetry loggers based on the CallerCallStack, doesn't include the ExcludePublisher's logger.
+            Creates an exception with the specified error code and message. The exception is collectible if the errors are currently being collected.
             </summary>
+            <param name="RestClientException">The error code for the exception.</param>
+            <param name="ErrorMessage">The message for the exception.</param>
+            <returns>The exception with the specified error code and message.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client Exception Builder.CreateException(Enum::System#RestClient#Rest Client Exception,Text,Boolean):ErrorInfo">
+            <summary>
+            Creates an exception with the specified error code, message, and collectible flag.
+            </summary>
+            <param name="RestClientException">The error code for the exception.</param>
+            <param name="ErrorMessage">The message for the exception.</param>
+            <param name="Collectible">Whether the exception is collectible.</param>
+            <returns>The exception with the specified error code, message, and collectible flag.</returns>
+        </member>
+        <member name="M:Codeunit::System#RestClient#Rest Client Exception Builder.GetRestClientException(ErrorInfo):Enum::System#RestClient#Rest Client Exception">
+            <summary>
+            Gets the exception code from the error info.
+            </summary>
+            <param name="ErrInfo">The error info of the exception.</param>
+            <returns>The exception code.</returns>
         </member>
         <member name="O:Codeunit::System#Upgrade#Upgrade Tag">
             <summary>
@@ -23439,6 +23813,13 @@
             <param name="Tag">Tag code to check</param>
             <param name="TagCompanyName">Name of the company to check existance of tag</param>
             <returns>True if the Tag with given code exist.</returns>
+        </member>
+        <member name="M:Codeunit::System#Upgrade#Upgrade Tag.HasDatabaseUpgradeTag(Code[250]):Boolean">
+            <summary>
+            Verifies if the database upgrade tag exists.
+            </summary>
+            <param name="Tag">Tag code to check</param>
+            <returns>True if the Tag with the given code exists.</returns>
         </member>
         <member name="M:Codeunit::System#Upgrade#Upgrade Tag.SetDatabaseUpgradeTag(Code[250])">
             <summary>
@@ -23735,6 +24116,75 @@
             </summary>
             <param name="XmlBigText">The BigText the Xml Writer has to be write to.</param>
         </member>
+        <member name="O:Enum::System#AI#DocumentIntelligence#ADI Model Type">
+            <summary>
+            The supported model types for Azure Document Intelligence.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#DocumentIntelligence#ADI Model Type.Invoice">
+            <summary>
+            Invoice model type.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#DocumentIntelligence#ADI Model Type.Receipt">
+            <summary>
+            Receipt model type.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#AI#DocumentIntelligence#Azure DI Impl#">
+            <summary>
+            Azure Document Intelligence implementation.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure DI Impl#.AnalyzeInvoice(Text,ModuleInfo):Text">
+            <summary>
+            Analyze a single invoice.
+            </summary>
+            <param name="Base64Data">Data to analyze.</param>
+            <param name="CallerModuleInfo">The module info of the caller.</param>
+            <returns>The analyzed result.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure DI Impl#.AnalyzeReceipt(Text,ModuleInfo):Text">
+            <summary>
+            Analyze a single receipt.
+            </summary>
+            <param name="Base64Data">Data to analyze.</param>
+            <param name="CallerModuleInfo">The module info of the caller.</param>
+            <returns>The analyzed result.</returns>
+        </member>
+        <member name="O:Codeunit::System#AI#DocumentIntelligence#Azure Document Intelligence">
+            <summary>
+            Provides functionality to invoke Azure Document Intelligence services.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure Document Intelligence.AnalyzeInvoice(Text):Text">
+            <summary>
+            Analyze the invoice.
+            </summary>
+            <param name="Base64Data">Data to analyze.</param>
+            <returns>The analyzed result.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure Document Intelligence.AnalyzeReceipt(Text):Text">
+            <summary>
+            Analyze the Receipt.
+            </summary>
+            <param name="Base64Data">Data to analyze.</param>
+            <returns>The analyzed result.</returns>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure Document Intelligence.RegisterCopilotCapability(Enum::System#AI#Copilot Capability,Enum::System#AI#Copilot Availability,Text[2048])">
+            <summary>
+            Register a capability for Azure Document Intelligence.
+            </summary>
+            <param name="CopilotCapability">The capability.</param>
+            <param name="CopilotAvailability">The availability.</param>
+            <param name="LearnMoreUrl">The learn more url.</param>
+        </member>
+        <member name="M:Codeunit::System#AI#DocumentIntelligence#Azure Document Intelligence.SetCopilotCapability(Enum::System#AI#Copilot Capability)">
+            <summary>
+            Sets the copilot capability that the API is running for.
+            </summary>
+            <param name="CopilotCapability">The copilot capability to set.</param>
+        </member>
         <member name="O:Codeunit::System#AI#AOAI Authorization">
             <summary>
             Store the authorization information for the AOAI service.
@@ -23886,6 +24336,14 @@
             <param name="Input">The input to get the token count for.</param>
             <returns>The token count.</returns>
         </member>
+        <member name="M:Codeunit::System#AI#AOAI Token.GetTotalServerSessionTokensConsumed:Integer">
+            <summary>
+            Gets the total tokens used till now for the server session.
+            The total tokens used is aggregated for all the models.
+            Note: this method is expected to change in future.
+            </summary>
+            <returns>The total token consumed for the session.</returns>
+        </member>
         <member name="O:Codeunit::System#AI#Azure OpenAI">
             <summary>
             Provides functionality for using the Azure OpenAI API.
@@ -23944,6 +24402,16 @@
             Endpoint would look like: https://resource-name.openai.azure.com/
             Deployment would look like: gpt-35-turbo-16k
             </remarks>
+        </member>
+        <member name="M:Codeunit::System#AI#Azure OpenAI.SetManagedResourceAuthorization(Enum::System#AI#AOAI Model Type,Text,SecretText,Text)">
+            <summary>
+            Sets the managed Azure OpenAI API authorization to use for a specific model type.
+            This will send the Azure OpenAI call to the deployment specified in <paramref name="ManagedResourceDeployment"/>, and will use the other parameters to verify that you have access to Azure OpenAI.
+            </summary>
+            <param name="ModelType">The model type to set authorization for.</param>
+            <param name="AOAIAccountName">Name of the Azure Open AI resource like "MyAzureOpenAIResource"</param>
+            <param name="ApiKey">The API key to access the Azure Open AI resource. This is used only for verification of access, not for actual Azure Open AI calls.</param>
+            <param name="ManagedResourceDeployment">The managed deployment to use for the model type.</param>
         </member>
         <member name="M:Codeunit::System#AI#Azure OpenAI.SetAuthorization(Enum::System#AI#AOAI Model Type,Text,Text,SecretText)">
             <summary>
@@ -24053,6 +24521,21 @@
             <param name="Input">The input to get the approximate token count for.</param>
             <returns>The approximate token count.</returns>
         </member>
+        <member name="O:Enum::System#AI#Azure AI Service Type">
+            <summary>
+            The supported service types for Azure AI.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#Azure AI Service Type.Azure OpenAI">
+            <summary>
+            Azure OpenAI service type.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#Azure AI Service Type.Azure Document Intelligence">
+            <summary>
+            Azure Document Intelligence service type.
+            </summary>
+        </member>
         <member name="O:Page::System#AI#Copilot AI Capabilities">
             <summary>
             This page is used to set the Copilot settings in the Environment.
@@ -24071,6 +24554,11 @@
         <member name="E:Enum::System#AI#Copilot Availability.Generally Available">
             <summary>
             The Copilot Capability is generally available.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#Copilot Availability.Early Preview">
+            <summary>
+            The Copilot Capability is in early preview.
             </summary>
         </member>
         <member name="O:Page::System#AI#Copilot Capabilities GA">
@@ -24157,6 +24645,11 @@
             <param name="AppId">The app id associated with the capability.</param>
             <param name="RequiredPrivacyNotices">The list of required privacy notices for the capability to be enabled.</param>
         </member>
+        <member name="O:Page::System#AI#Copilot Cap# Early Preview">
+            <summary>
+            Page for listing the Copilot Capabilities which are in Early Preview.
+            </summary>
+        </member>
         <member name="O:Page::System#AI#Copilot Deactivate Capability">
             <summary>
             Page for getting the reason for deactivation of a copilot capability.
@@ -24165,6 +24658,34 @@
         <member name="O:Page::System#AI#Copilot Not Available">
             <summary>
             Page for when copilot is unavailable due to various reasons. Fx capability disabled, cross region data movement is disabled.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#AI#Copilot Quota">
+            <summary>
+            Codeunit that exposes functionality related to Copilot Quota, such as logging quota usage
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#AI#Copilot Quota.TryLogQuotaUsage(Enum::System#AI#Copilot Capability,Integer,Enum::System#AI#Copilot Quota Usage Type):Boolean">
+            <summary>
+            Try function to log usage of Copilot quota in the system. This function is only available for Microsoft Copilot features.
+            </summary>
+            <param name="CopilotCapability">The Copilot Capability to log usage for.</param>
+            <param name="Usage">The usage to log.</param>
+            <param name="CopilotQuotaUsageType">The type of Copilot Quota to log.</param>
+        </member>
+        <member name="O:Enum::System#AI#Copilot Quota Usage Type">
+            <summary>
+            Enumeration of valid types of usage of the Copilot Quota.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#Copilot Quota Usage Type.Generative AI Answer">
+            <summary>
+            Represents a Generative AI Answer usage type.
+            </summary>
+        </member>
+        <member name="E:Enum::System#AI#Copilot Quota Usage Type.Autonomous Action">
+            <summary>
+            Represents an Autonomous Action usage type.
             </summary>
         </member>
         <member name="O:Table::System#AI#Copilot Settings">
@@ -24818,6 +25339,23 @@
             </summary>
             <param name="Payload">The JsonObject payload to add the completion parameters to.</param>
         </member>
+        <member name="O:Interface::System#AI#AI Service Name">
+            <summary>
+            Interface for providing naming information for a given AI service.
+            </summary>
+        </member>
+        <member name="M:Interface::System#AI#AI Service Name.GetServiceName:Text[250]">
+            <summary>
+            Get the name of the service.
+            </summary>
+            <returns>The name of the service.</returns>
+        </member>
+        <member name="M:Interface::System#AI#AI Service Name.GetServiceId:Code[50]">
+            <summary>
+            Get the id of the service. Will often be the service name in Code form.
+            </summary>
+            <returns>The id of the service.</returns>
+        </member>
         <member name="M:Interface::System#AI#AOAI Function.GetPrompt:JsonObject">
             <summary>
             Get the prompt for the Function. Function prompt object describes the Function and the should contain the following fields:
@@ -24840,6 +25378,386 @@
             Get the name of the function.
             </summary>
             <remarks>This needs to match the function name in GetPrompt.</remarks>
+        </member>
+        <member name="O:Codeunit::System#Telemetry#Telemetry Custom Dimensions">
+            <summary>
+            Provides functionality for adding common custom dimensions to telemetry.
+            </summary>
+            <remarks>This codeunit is only intended to be used from subscribers of <see cref="OnAddCommonCustomDimensions"/> event.</remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Custom Dimensions.AddCommonCustomDimension(Text,Text)">
+            <summary>
+            Add a custom dimension for every telemetry message. Is used in conjunction with <see cref="OnAddCommonCustomDimensions"/>
+            </summary>
+            <param name="CustomDimensionName">The name of the custom dimension.</param>
+            <param name="CustomDimensionValue">The value of the custom dimension.</param>
+            <remarks>Only system metadata classified information should be added here as these custom dimensions will be used for all telemetry messages.</remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Custom Dimensions.OnAddCommonCustomDimensions">
+            <summary>
+            Allows to provide additional custom dimensions for every telemetry message. Is used in conjunction with <see cref="AddCommonCustomDimensions"/>.
+            </summary>
+            <remarks>Global language is set to default for the subscribers of this event.</remarks>
+            <example>
+            [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Custom Dimensions", 'OnAddCommonCustomDimensions', '', true, true)]
+            local procedure OnAddCommonCustomDimensions(var Sender: Codeunit "Telemetry Custom Dimensions")
+            begin
+                Sender.AddCommonCustomDimension('CommonCustomDimension', 'Some info');
+            end;
+            </example>
+        </member>
+        <member name="O:Codeunit::System#Telemetry#Feature Telemetry">
+            <summary>
+            Provides functionality for emitting telemetry in a universal format. Only system metadata is to be emitted through this codeunit.
+            </summary>
+            <remarks>
+            Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
+            to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
+            to work as expected (see "System Telemetry Logger" codeunit).
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text)">
+            <summary>
+            Sends telemetry about feature usage.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <example>FeatureTelemetry.LogUsage('0000XYZ', 'Emailing', 'Email sent');</example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about feature usage.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            TranslationHelper.SetGlobalLanguageToDefault();
+            CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
+            CustomDimensions.Add('JobQueueObjectId', Format(JobQueueEntry."Object ID to Run"));
+            FeatureTelemetry.LogUsage('0000XYZ', 'Job Queue', 'Job executed', CustomDimensions);
+            TranslationHelper.RestoreGlobalLanguage();
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUsage(Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about feature usage (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            TranslationHelper.SetGlobalLanguageToDefault();
+            CustomDimensions.Add('JobQueueObjectType', Format(JobQueueEntry."Object Type to Run"));
+            CustomDimensions.Add('JobQueueObjectId', Format(JobQueueEntry."Object ID to Run"));
+            FeatureTelemetry.LogUsage('0000XYZ', 'Job Queue', 'Job executed', CustomDimensions);
+            TranslationHelper.RestoreGlobalLanguage();
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text)">
+            <summary>
+            Sends telemetry about errors happening during feature usage.
+            </summary>
+            <param name="EventId">A unique ID of the error.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ErrorText">The text of the error.</param>
+            <example>
+            if not Success then
+                FeatureTelemetry.LogError('0000XYZ', 'Retention policies', 'Applying a policy', GetLastErrorText(true));
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text)">
+            <summary>
+            Sends telemetry about errors happening during feature usage.
+            </summary>
+            <param name="EventId">A unique ID of the error.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ErrorText">The text of the error.</param>
+            <param name="ErrorCallStack">The error call stack.</param>
+            <example>
+            if not Success then
+                FeatureTelemetry.LogError('0000XYZ', 'Configuration packages', 'Importing a package', GetLastErrorText(true), GetLastErrorCallStack());
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about errors happening during feature usage.
+            </summary>
+            <param name="EventId">A unique ID of the error.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ErrorText">The text of the error.</param>
+            <param name="ErrorCallStack">The error call stack.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
+            <remarks>Custom dimensions often contain infromation translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            if not Success then begin
+                TranslationHelper.SetGlobalLanguageToDefault();
+                CustomDimensions.Add('UpdateEntity', Format(AzureADUserUpdateBuffer."Update Entity"));
+                FeatureTelemetry.LogError('0000XYZ', 'User management', 'Syncing users with M365', GetLastErrorText(true), GetLastErrorCallStack(), CustomDimensions);
+                TranslationHelper.RestoreGlobalLanguage();
+            end;
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogError(Text,Text,Text,Text,Text,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about errors happening during feature usage (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique ID of the error.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="EventName">The name of the event.</param>
+            <param name="ErrorText">The text of the error.</param>
+            <param name="ErrorCallStack">The error call stack.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the error.</param>
+            <remarks>Custom dimensions often contain information translated in different languages. It is a common practice to send telemetry in the default language (see example).</remarks>
+            <example>
+            if not Success then begin
+                TranslationHelper.SetGlobalLanguageToDefault();
+                CustomDimensions.Add('UpdateEntity', Format(AzureADUserUpdateBuffer."Update Entity"));
+                FeatureTelemetry.LogError('0000XYZ', 'User management', 'Syncing users with M365', GetLastErrorText(true), GetLastErrorCallStack(), CustomDimensions);
+                TranslationHelper.RestoreGlobalLanguage();
+            end;
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status)">
+            <summary>
+            Sends telemetry about feature uptake.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
+            <remarks>
+            Expected feature uptake transitions:
+            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+            *Any state* -> "Undiscovered" (to reset the feature uptake status)
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about feature uptake.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
+            <remarks>
+            Expected feature uptake transitions:
+            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+            *Any state* -> "Undiscovered" (to reset the feature uptake status)
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Boolean)">
+            <summary>
+            Sends telemetry about feature uptake.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
+            <param name="IsPerUser">Specifies if the feature is targeted to be uptaken once for the tenant or uptaken individually by different users.</param>
+            <remarks>
+            Expected feature uptake transitions:
+            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+            *Any state* -> "Undiscovered" (to reset the feature uptake status)
+            </remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature Uptake Status,Boolean,Dictionary of [Text,Text])">
+            <summary>
+            Sends telemetry about feature uptake.
+            </summary>
+            <param name="EventId">A unique ID of the event.</param>
+            <param name="FeatureName">The name of the feature.</param>
+            <param name="FeatureUptakeStatus">The new status of the feature uptake.</param>
+            <param name="IsPerUser">Specifies if the feature is targeted to be uptaken once for the tenant or uptaken individually by different users.</param>
+            <param name="CustomDimensions">A dictionary containing additional information about the event.</param>
+            <remarks>
+            Expected feature uptake transitions:
+            "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+            *Any state* -> "Undiscovered" (to reset the feature uptake status)
+            </remarks>
+        </member>
+        <member name="O:Enum::System#Telemetry#Feature Uptake Status">
+            <summary>
+            Specifies the uptake status of an application feature.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Undiscovered">
+            <summary>
+            The feature has not been discovered.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Discovered">
+            <summary>
+            The feature has been discovered.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Set up">
+            <summary>
+            The feature has been set up.
+            </summary>
+        </member>
+        <member name="E:Enum::System#Telemetry#Feature Uptake Status.Used">
+            <summary>
+            The feature has been used.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Feature Uptake Status Impl#.WaitForStartedUpdateFeatureUptakeSession">
+            <summary>
+            The updates to Feature Uptake states must be done in a separate session (e. g. to not interfere with subsequent Page.RunModal() calls).
+            Normally we don't need to wait for this separate session to finish, as feature uptake states are expected to not change rapidly, and it only takes a few milliseconds for the session to complete.
+            But if the feature registers uptake states one right after another, then the session may not have enough time to start and acquire a lock on the "Feature Uptake" table by the time the next uptake state is registered.
+            For such cases, we can wait for this previous session to finish.
+            </summary>
+            <remarks>We will only ever wait when feature uptake states a registered for the first time, so there is no persistent performance penalty to this.</remarks>
+            <remarks>It is not hard requirement to actually wait for the session to finish, we only need to wait long enough, so that it calls FeatureUptake.LockTable().</remarks>
+        </member>
+        <member name="O:Enum::System#Telemetry#AL Telemetry Scope">
+            <summary>
+            Represents the emission scope of the telemetry signal.
+            An wrapper in AL to provide the capability to send Telemetries to ISVs.
+            </summary>
+        </member>
+        <member name="O:Codeunit::System#Telemetry#Telemetry">
+             <summary>
+             A wrapper on top of Session.LogMessage that allows for having additional common custom dimensions emitted with every message.
+             </summary>
+             <remarks>
+             Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
+             to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
+             to work as expected (see "System Telemetry Logger" codeunit or example below).
+             </remarks>
+             <example>
+             codeunit 50000 "PTE Telemetry Logger" implements "Telemetry Logger"
+             {
+                Access = Internal;
+            
+                procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
+                begin
+                    Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
+                end;
+            
+                // For the functionality to behave as expected, there should be exactly one implementation of the "Telemetry Logger" interface registered per app publisher
+                [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Loggers", 'OnRegisterTelemetryLogger', '', true, true)]
+                local procedure OnRegisterTelemetryLogger(var Sender: Codeunit "Telemetry Loggers")
+                var
+                    TelemetryLogger: Codeunit "PTE Telemetry Logger";
+                begin
+                    Sender.Register(TelemetryLogger);
+                end;
+             }
+             </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary of [Text,Text])">
+            <summary>
+            Logs a telemetry message.
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+            <param name="TelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope)">
+            <summary>
+            Logs a telemetry message.
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+            <param name="TelemetryScope">The telemetry scope of the message.</param>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification)">
+            <summary>
+            Logs a telemetry message.
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,Enum::System#Telemetry#AL Telemetry Scope,Dictionary of [Text,Text])">
+            <summary>
+            Logs a telemetry message (with the capability to send to ISVs).
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+            <param name="ALTelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
+        </member>
+        <member name="O:Interface::System#Telemetry#Telemetry Logger">
+             <summary>
+             The interface that allows 3d party extensions to emit telemetry to their own telemetry stores when the Telemetry codeunit is used.
+             </summary>
+             <example>
+             codeunit 50100 "My Telemetry Logger" implements "Telemetry Logger"
+             {
+                 Access = Internal;
+            
+                 procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
+                 begin
+                     Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
+                 end;
+             }
+             </example>
+        </member>
+        <member name="M:Interface::System#Telemetry#Telemetry Logger.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary of [Text,Text])">
+            <summary>
+            Logs a telemetry message.
+            </summary>
+            <param name="EventId">A unique identifier of the telemetry message.</param>
+            <param name="Message">The main content of the telemetry message (typically contains text that can be easily read by a person).</param>
+            <param name="Verbosity">The verbosity of the telemetry message.</param>
+            <param name="DataClassification">The data classification of the telemetry message.</param>
+            <param name="TelemetryScope">The telemetry scope of the message.</param>
+            <param name="CustomDimensions">Any additional information provided together with the telemetry message.</param>
+        </member>
+        <member name="O:Codeunit::System#Telemetry#Telemetry Loggers">
+            <summary>
+            Provides functionality for registering 3d party telemetry loggers to be used with Telemetry codeunit.
+            </summary>
+            <remarks>This codeunit is only intended to be used from subscribers of <see cref="OnRegisterTelemetryLogger"/> event.</remarks>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.Register(Interface::System#Telemetry#Telemetry Logger)">
+            <summary>
+            Registers a telemetry logger from a 3d party extension. Is used in conjunction with <see cref="OnRegisterTelemetryLogger"/>
+            </summary>
+            <param name="TelemetryLogger">The codeunit implementing the Telemetry Logger inteface from a 3d party extension.</param>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.OnRegisterTelemetryLogger">
+            <summary>
+            Allows 3d party extensions to register their own telemetry loggers to be used with Telemetry codeunit. Is used in conjunction with <see cref="Register"/>.
+            </summary>
+            <example>
+            [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Loggers", 'OnRegisterTelemetryLogger', '', true, true)]
+            local procedure OnRegisterTelemetryLogger(var Sender: Codeunit "Telemetry Loggers")
+            var
+                MyTelemetryLogger: Codeunit "My Telemetry Logger"; // this codeunit must implement the Telemetry Logger interface
+            begin
+                Sender.Register(MyTelemetryLogger);
+            end;
+            </example>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetTelemetryLogger(Text,Interface::System#Telemetry#Telemetry Logger@):Boolean">
+            <summary>
+            Get the telemetry logger from publisher. If there are multiple telemetry loggers registered for the current publisher, a warning is logged.
+            </summary>
+        </member>
+        <member name="M:Codeunit::System#Telemetry#Telemetry Loggers.GetRelevantTelemetryLoggers(Text):List of [Telemetry Logger]">
+            <summary>
+            Gets the relevant telemetry loggers based on the CallerCallStack, doesn't include the ExcludePublisher's logger.
+            </summary>
         </member>
         <member name="EV:">
             <summary>

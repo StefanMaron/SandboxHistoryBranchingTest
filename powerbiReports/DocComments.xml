@@ -4,8 +4,15 @@
         <id>e4e86220-cac0-4ec3-b853-7c2fa610399d</id>
         <name>PowerBI Reports</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35958</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
+        <member name="O:Codeunit::Microsoft#PowerBIReports#Initialization">
+            <summary>
+            Creates the setup required to have the basic scenarios of the Power BI Reports working.
+            The only public procedure is the one calling all the setup actions. Internal procedures are the ones called by other "fix" actions in the setup page. The rest are local procedures.
+            Every "initialization" procedure should be safe to call multiple times and not override any user-defined setup. In contrast to the "restore" procedures.
+            </summary>
+        </member>
     </members>
 </doc>

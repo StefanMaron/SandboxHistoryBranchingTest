@@ -4,7 +4,7 @@
         <id>4ce93371-6bd6-4027-a78f-021064ad250e</id>
         <name>SAF-T</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35958</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#SAF-T Data Mgt#.GetNotApplicableVATCode:Code[9]">
@@ -65,11 +65,6 @@
         <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#SAF-T Data Mgt#.GetZipFileName:Text[1024]">
             <summary>
             Returns the name of the zip archive to which the SAF-T files are added.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Finance#AuditFileExport#SAF-T Data Mgt#.GetSAFTAuditFileExportFeatureKeyId:Text[50]">
-            <summary>
-            Returns the Feature Key Id for the SAF-T feature.
             </summary>
         </member>
         <member name="M:Interface::Microsoft#Finance#AuditFileExport#DataCheckSAFT.CheckDataToExport(Audit File Export Header@):Enum::Microsoft#Finance#AuditFileExport#Audit Data Check Status">
