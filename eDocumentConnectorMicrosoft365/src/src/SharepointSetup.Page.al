@@ -16,7 +16,7 @@ page 6382 "SharePoint Setup"
     LinksAllowed = false;
     ShowFilter = false;
     SourceTable = "SharePoint Setup";
-    UsageCategory = None;
+    UsageCategory = Administration;
     Caption = 'SharePoint Document Import Setup';
     InherentPermissions = X;
     InherentEntitlements = X;
@@ -70,10 +70,6 @@ page 6382 "SharePoint Setup"
     begin
         Rec.Reset();
         if not Rec.Get() then begin
-            if not Rec.WritePermission() then begin
-                UpdateBasedOnEnable();
-                exit;
-            end;
             Rec.Init();
             Rec.Insert(true);
             FeatureTelemetry.LogUptake('0000OBF', DriveProcessing.FeatureName(), Enum::"Feature Uptake Status"::Discovered);
