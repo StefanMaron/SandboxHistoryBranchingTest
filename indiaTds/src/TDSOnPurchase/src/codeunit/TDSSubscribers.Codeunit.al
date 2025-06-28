@@ -29,8 +29,7 @@ codeunit 18716 "TDS Subscribers"
     begin
         if Rec."Document Type" in [Rec."Document Type"::Order, Rec."Document Type"::Invoice] then begin
             AllowedSections.Reset();
-            AllowedSections.SetLoadFields("Vendor No", "Default Section", "TDS Section", "Nature of Remittance", "Act Applicable");
-            AllowedSections.SetRange("Vendor No", Rec."Pay-to Vendor No.");
+            AllowedSections.SetRange("Vendor No", Rec."Buy-from Vendor No.");
             AllowedSections.SetRange("Default Section", true);
             if AllowedSections.FindFirst() then begin
                 Rec.Validate("TDS Section Code", AllowedSections."TDS Section");
@@ -53,7 +52,6 @@ codeunit 18716 "TDS Subscribers"
         Location: Record Location;
         CompanyInformation: Record "Company Information";
     begin
-        PurchaseLine.SetLoadFields("Document Type", "Document No.", "TDS Section Code");
         PurchaseLine.SetRange("Document Type", PurchHeader."Document Type");
         PurchaseLine.SetRange("Document No.", PurchHeader."No.");
         if PurchaseLine.FindFirst() then
@@ -77,7 +75,6 @@ codeunit 18716 "TDS Subscribers"
         PurchaseLine: Record "Purchase Line";
     begin
         PurchaseLine.Reset();
-        PurchaseLine.SetLoadFields("Document Type", "Document No.", "TDS Section Code");
         PurchaseLine.SetRange("Document Type", PurchaseHeader."Document Type");
         PurchaseLine.SetRange("Document No.", PurchaseHeader."No.");
         PurchaseLine.SetFilter("TDS Section Code", '<>%1', '');
@@ -108,7 +105,7 @@ codeunit 18716 "TDS Subscribers"
         PurchaseLine: Record "Purchase Line";
         CalculateTax: Codeunit "Calculate Tax";
     begin
-        PurchaseLine.SetLoadFields("Document Type", "Document No.");
+        PurchaseLine.LoadFields("Document Type", "Document No.");
         PurchaseLine.SetRange("Document Type", PurchaseHeader."Document Type");
         PurchaseLine.SetRange("Document No.", PurchaseHeader."No.");
         if PurchaseLine.FindSet() then
@@ -225,7 +222,7 @@ codeunit 18716 "TDS Subscribers"
             if PurchaseHeader."Applies-to ID" <> '' then
                 VendorLedgerEntry.SetRange("User ID", PurchaseHeader."Applies-to ID");
 
-        if VendorLedgerEntry.FindFirst() then
+        if not VendorLedgerEntry.IsEmpty() then
             VendorLedgerEntry.TestField("TDS Section Code", PurchLine."TDS Section Code");
     end;
 

@@ -229,9 +229,6 @@ codeunit 18200 "GST Distribution"
 
             until GSTDistributionLine.Next() = 0;
 
-        if not DistReversal then
-            ApplyDistComponentRoundingAmount(DistributionNo, DistComponentAmount);
-
         InsertDistComponentAmountBalancingAcc(DistributionNo, DistReversal);
     end;
 
@@ -701,43 +698,5 @@ codeunit 18200 "GST Distribution"
         PostedGSTDistributionLine.SetRange("To Location Code", GSTDistributionLine."To Location Code");
         if PostedGSTDistributionLine.FindFirst() then
             exit(PostedGSTDistributionLine."Location ISD Document No.");
-    end;
-
-    local procedure ApplyDistComponentRoundingAmount(DistributionNo: Code[20]; DistComponentAmount: Record "Dist. Component Amount")
-    var
-        RoundingAmount: Decimal;
-    begin
-        GetDistComponentRoundingAmount(DistributionNo, DistComponentAmount, RoundingAmount);
-        if RoundingAmount = 0 then
-            exit;
-
-        if DistComponentAmount.FindFirst() then begin
-            DistComponentAmount."Debit Amount" += RoundingAmount;
-            DistComponentAmount.Modify();
-        end;
-    end;
-
-    local procedure GetDistComponentRoundingAmount(DistributionNo: Code[20]; var DistComponentAmount: Record "Dist. Component Amount"; var RoundingAmount: Decimal)
-    var
-        GSTDistributionLine: Record "GST Distribution Line";
-        DetailedGSTLedgerEntry: Record "Detailed GST Ledger Entry";
-    begin
-        GSTDistributionLine.SetLoadFields("Distribution No.");
-        GSTDistributionLine.SetRange("Distribution No.", DistributionNo);
-        if not GSTDistributionLine.FindFirst() then
-            exit;
-
-        DistComponentAmount.SetLoadFields("Distribution No.", "Debit Amount");
-        DistComponentAmount.SetRange("Distribution No.", DistributionNo);
-        DistComponentAmount.CalcSums("Debit Amount");
-
-        DetailedGSTLedgerEntry.SetLoadFields("Dist. Document No.", "GST Amount");
-        DetailedGSTLedgerEntry.SetRange("Dist. Document No.", DistributionNo);
-        DetailedGSTLedgerEntry.CalcSums("GST Amount");
-        RoundingAmount := DetailedGSTLedgerEntry."GST Amount" - DistComponentAmount."Debit Amount";
-        if not DetailedGSTLedgerEntry.FindFirst() then
-            exit;
-
-        FilterDistComponentAmount(DistComponentAmount, GSTDistributionLine, DetailedGSTLedgerEntry, DistributionNo);
     end;
 }
