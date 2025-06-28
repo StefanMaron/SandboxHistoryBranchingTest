@@ -4,7 +4,7 @@
         <id>ec255f57-31d0-4ca2-b751-f2fa7c745abb</id>
         <name>Shopify Connector</name>
         <publisher>Microsoft</publisher>
-        <version>26.1.33404.35930</version>
+        <version>26.0.30643.35959</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#Integration#Shopify#Shpfy - Admin">
@@ -469,19 +469,19 @@
         </member>
         <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IBulk Operation.GetGraphQL:Text">
             <summary>
-            Provides the GraphQL query for the bulk operation.
+            GetGraphQL.
             </summary>
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IBulk Operation.GetInput:Text">
             <summary>
-            Provides the request input for the bulk operation.
+            GetGraphQL.
             </summary>
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IBulk Operation.GetName:Text[250]">
             <summary>
-            Provides the name of the bulk operation.
+            GetName.
             </summary>
             <returns>Return value of type Text.</returns>
         </member>
@@ -490,18 +490,6 @@
             GetType.
             </summary>
             <returns>Return value of type Text.</returns>
-        </member>
-        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IBulk Operation.RevertFailedRequests(Shpfy Bulk Operation@)">
-            <summary>
-            Reverts the failed requests for the bulk operation.
-            </summary>
-            <param name="BulkOperation">The bulk operation record.</param>
-        </member>
-        <member name="M:Interface::Microsoft#Integration#Shopify#Shpfy IBulk Operation.RevertAllRequests(Shpfy Bulk Operation@)">
-            <summary>
-            Reverts all requests for the bulk operation.
-            </summary>
-            <param name="BulkOperation">The bulk operation record.</param>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Catalog API">
             <summary>
@@ -650,11 +638,6 @@
         <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Comp# Locations">
             <summary>
             Page Shpfy Company Locations (ID 30165).
-            </summary>
-        </member>
-        <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Comp# Locations Subform">
-            <summary>
-            Page Shpfy Comp. Locations Subform (ID 30170).
             </summary>
         </member>
         <member name="O:Page::Microsoft#Integration#Shopify#Shpfy Main Contact Factbox">
@@ -5470,14 +5453,6 @@
             </summary>
             <param name="Item">Parameter of type Record Item.</param>
             <param name="ShopifyProduct">Parameter of Record "Shopify Product".</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events.OnAfterProductsToSynchronizeFiltersSet(Shpfy Product@,Shpfy Shop,Boolean)">
-            <summary>
-            Raised after products to export are filtered.
-            </summary>
-            <param name="ShopifyProduct">Parameter of type Record "Shpfy Product".</param>
-            <param name="Shop">Parameter of type Record "Shpfy Shop".</param>
-            <param name="OnlyUpdatePrice">Parameter of type Boolean.</param>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Export">
             <summary>

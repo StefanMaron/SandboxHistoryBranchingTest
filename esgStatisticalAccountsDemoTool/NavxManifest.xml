@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="d196d21b-75c3-45da-831b-345055b9d25f" Name="ESG Statistical Accounts Demo Tool" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Statistical accounts related to the ESG features, we are making demo data available for various Statistical accounts scenarios." Description="Statistical specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various Statistical account scenarios related to the ESG." Version="26.1.33404.35930" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/contoso-coffee/contoso-coffee-intro" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="d196d21b-75c3-45da-831b-345055b9d25f" Name="ESG Statistical Accounts Demo Tool" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Statistical accounts related to the ESG features, we are making demo data available for various Statistical accounts scenarios." Description="Statistical specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various Statistical account scenarios related to the ESG." Version="26.0.30643.35959" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/contoso-coffee/contoso-coffee-intro" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="5236" MaxObjectId="5277" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="ea130081-c669-460f-a5f4-5dde14f03131" Name="Statistical Accounts" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T01:26:31.0824075Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-26T10:26:25.3195737Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
