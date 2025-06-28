@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="E-Document Core" ControlGUID="{b3537ac0-4d36-4a29-b81f-d738037ccfeb}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6103" DepartmentCategory="Administration" RunObjectSrcTable="6103" ControlGUID="{a504bf01-aec3-4f26-acad-d6772eab840b}" Name="E-Document Services" CaptionML="CSY=Služby elektronických dokumentů;DAN=E-dokumenttjenester;DEA=E-Belegdienste;DES=E-Belegdienste;DEU=E-Belegdienste;ENG=E-Document Services;ENU=E-Document Services;ESN=Servicios de documentos electrónicos;FIN=Sähköiset asiakirjapalvelut;FRA=Services documents électroniques;FRB=Services documents électroniques;FRC=Services documents électroniques;FRS=Services documents électroniques;ISL=Þjónusta fyrir rafræn skjöl;ITA=Servizi documenti elettronici;ITS=Servizi documenti elettronici;NLB=E-documentservices;NLD=E-documentservices;NOR=E-dokumenttjenester;SVE=E-dokumenttjänster" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2232497107 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2232497107 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6122" DepartmentCategory="Lists" RunObjectSrcTable="6121" ControlGUID="{55d6c8ef-0a75-417d-bcf9-07f6ca71bf9d}" Name="E-Documents" CaptionML="CSY=Elektronické dokumenty;DAN=E-dokumenter;DEA=E-Belege;DES=E-Belege;DEU=E-Belege;ENG=E-Documents;ENU=E-Documents;ESN=Documentos electrónicos;FIN=Sähköiset asiakirjat;FRA=Documents électroniques;FRB=Documents électroniques;FRC=Documents électroniques;FRS=Documents électroniques;ISL=Rafræn skjöl;ITA=Documenti elettronici;ITS=Documenti elettronici;NLB=E-documenten;NLD=E-documenten;NOR=E-dokumenter;SVE=E-dokument" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=Edoc,elektronický dokument;DAN=Edoc,Elektronisk dokument;DEA=E-Beleg,Elektronischer Beleg;DES=E-Beleg,Elektronischer Beleg;DEU=E-Beleg,Elektronischer Beleg;ENG=Edoc,Electronic Document;ENU=Edoc,Electronic Document;ESN=Doc. electrónico,Documento electrónico;FIN=E-asiakirja,Sähköinen asiakirja;FRA=Docé,Document électronique;FRB=Docé,Document électronique;FRC=Docé,Document électronique;FRS=Docé,Document électronique;ISL=Rafræn skjöl,Rafrænt skjal;ITA=Edoc,Documento elettronico;ITS=Edoc,Documento elettronico;NLB=E-document,elektronisch document;NLD=E-document,elektronisch document;NOR=E-dokument,Elektronisk dokument;SVE=E-dokument,Elektroniskt dokument" CaptionTranslationKey="Page 2429668632 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2429668632 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="E-Document Core" ControlGUID="{26c382f8-297b-472b-9337-259b7e8585c6}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6103" DepartmentCategory="Administration" RunObjectSrcTable="6103" ControlGUID="{37b62c2f-14eb-44c7-8bb8-763a5f788010}" Name="E-Document Services" CaptionML="CSY=Služby elektronických dokumentů;DAN=E-dokumenttjenester;DEA=E-Belegdienste;DES=E-Belegdienste;DEU=E-Belegdienste;ENG=E-Document Services;ENU=E-Document Services;ESN=Servicios de documentos electrónicos;FIN=Sähköiset asiakirjapalvelut;FRA=Services documents électroniques;FRB=Services documents électroniques;FRC=Services documents électroniques;FRS=Services documents électroniques;ISL=Þjónusta fyrir rafræn skjöl;ITA=Servizi documenti elettronici;ITS=Servizi documenti elettronici;NLB=E-documentservices;NLD=E-documentservices;NOR=E-dokumenttjenester;SVE=E-dokumenttjänster" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2232497107 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2232497107 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="6122" DepartmentCategory="Lists" RunObjectSrcTable="6121" ControlGUID="{3d4de6eb-f0c6-46f9-bd75-e3bb7ef77146}" Name="E-Documents" CaptionML="CSY=Elektronické dokumenty;DAN=E-dokumenter;DEA=E-Belege;DES=E-Belege;DEU=E-Belege;ENG=E-Documents;ENU=E-Documents;ESN=Documentos electrónicos;FIN=Sähköiset asiakirjat;FRA=Documents électroniques;FRB=Documents électroniques;FRC=Documents électroniques;FRS=Documents électroniques;ISL=Rafræn skjöl;ITA=Documenti elettronici;ITS=Documenti elettronici;NLB=E-documenten;NLD=E-documenten;NOR=E-dokumenter;SVE=E-dokument" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="CSY=Edoc,elektronický dokument;DAN=Edoc,Elektronisk dokument;DEA=E-Beleg,Elektronischer Beleg;DES=E-Beleg,Elektronischer Beleg;DEU=E-Beleg,Elektronischer Beleg;ENG=Edoc,Electronic Document;ENU=Edoc,Electronic Document;ESN=Doc. electrónico,Documento electrónico;FIN=E-asiakirja,Sähköinen asiakirja;FRA=Docé,Document électronique;FRB=Docé,Document électronique;FRC=Docé,Document électronique;FRS=Docé,Document électronique;ISL=Rafræn skjöl,Rafrænt skjal;ITA=Edoc,Documento elettronico;ITS=Edoc,Documento elettronico;NLB=E-document,elektronisch document;NLD=E-document,elektronisch document;NOR=E-dokument,Elektronisk dokument;SVE=E-dokument,Elektroniskt dokument" CaptionTranslationKey="Page 2429668632 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2429668632 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="9000" TargetType="Page" />
-    <ActionChange TargetID="140" TargetType="Page" />
-    <ActionChange TargetID="438" TargetType="Page" />
-    <ActionChange TargetID="5900" TargetType="Page" />
-    <ActionChange TargetID="134" TargetType="Page" />
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="446" TargetType="Page" />
-    <ActionChange TargetID="5935" TargetType="Page" />
-    <ActionChange TargetID="9008" TargetType="Page" />
-    <ActionChange TargetID="1523" TargetType="Page" />
-    <ActionChange TargetID="5978" TargetType="Page" />
-    <ActionChange TargetID="9307" TargetType="Page" />
-    <ActionChange TargetID="460" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
     <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
-    <ActionChange TargetID="434" TargetType="Page" />
-    <ActionChange TargetID="360" TargetType="Page" />
-    <ActionChange TargetID="5972" TargetType="Page" />
-    <ActionChange TargetID="450" TargetType="Page" />
+    <ActionChange TargetID="9000" TargetType="Page" />
     <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="9307" TargetType="Page" />
+    <ActionChange TargetID="438" TargetType="Page" />
+    <ActionChange TargetID="446" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
     <ActionChange TargetID="5933" TargetType="Page" />
-    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="5935" TargetType="Page" />
+    <ActionChange TargetID="360" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
     <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="9008" TargetType="Page" />
+    <ActionChange TargetID="450" TargetType="Page" />
+    <ActionChange TargetID="1523" TargetType="Page" />
+    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="5900" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
     <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="460" TargetType="Page" />
+    <ActionChange TargetID="5972" TargetType="Page" />
+    <ActionChange TargetID="434" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="5978" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
