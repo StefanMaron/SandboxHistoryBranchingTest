@@ -1,54 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Tax Engine" ControlGUID="{1c0e26cc-f75b-43fb-91d8-7f9503f3e397}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20246" DepartmentCategory="Lists" RunObjectSrcTable="20256" ControlGUID="{7f1cad93-b6b6-438a-abec-be50ccf3bef6}" Name="Tax Acc. Period Setup" CaptionML="ENU=Tax Acc. Period Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3777779172 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3777779172 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20360" DepartmentCategory="Lists" RunObjectSrcTable="20360" ControlGUID="{2ebe6da9-659a-451f-8940-9c86b6c62c2e}" Name="Use Case Archival Log Entries" CaptionML="ENU=Use Case Archival Log Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2507547317 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2507547317 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20298" DepartmentCategory="Lists" RunObjectSrcTable="20295" ControlGUID="{6e96c800-606c-4041-b730-3c96325f5a38}" Name="Use Case Tree" CaptionML="ENU=Use Case Tree" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1208409539 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1208409539 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20361" DepartmentCategory="Lists" RunObjectSrcTable="20362" ControlGUID="{245ccb2c-586d-4211-92a9-d283de2dfc4f}" Name="Tax Type Archival Log Entries" CaptionML="ENU=Tax Type Archival Log Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 115569843 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 115569843 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20256" DepartmentCategory="Lists" RunObjectSrcTable="20241" ControlGUID="{35c7e362-d4a4-4b22-ab0a-59770d67c56f}" Name="Global Tax Attributes" CaptionML="ENU=Global Input Parameters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1823956923 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1823956923 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20248" DepartmentCategory="Lists" RunObjectSrcTable="20258" ControlGUID="{2911b4b4-36e9-480e-ac33-4b7b15f77347}" Name="Tax Types" CaptionML="ENU=Tax Types" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3433576562 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3433576562 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Tax Engine" ControlGUID="{80d3dcfe-af44-4d6e-a1a2-a0bedcbfec1d}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20248" DepartmentCategory="Lists" RunObjectSrcTable="20258" ControlGUID="{d5cd480b-7fd6-4642-a91b-3cacacb31381}" Name="Tax Types" CaptionML="ENU=Tax Types" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3433576562 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3433576562 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20298" DepartmentCategory="Lists" RunObjectSrcTable="20295" ControlGUID="{93ef4fe2-31c0-443e-b368-ef7fe4ae79f5}" Name="Use Case Tree" CaptionML="ENU=Use Case Tree" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1208409539 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1208409539 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20246" DepartmentCategory="Lists" RunObjectSrcTable="20256" ControlGUID="{22bdd08f-ffa8-403f-879a-ae04b1a84bce}" Name="Tax Acc. Period Setup" CaptionML="ENU=Tax Acc. Period Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3777779172 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3777779172 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20360" DepartmentCategory="Lists" RunObjectSrcTable="20360" ControlGUID="{a89e9d44-5bfd-4e7f-8aa6-f22b92a48348}" Name="Use Case Archival Log Entries" CaptionML="ENU=Use Case Archival Log Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2507547317 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2507547317 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20361" DepartmentCategory="Lists" RunObjectSrcTable="20362" ControlGUID="{8d094111-5e39-4733-be75-9558e48c9964}" Name="Tax Type Archival Log Entries" CaptionML="ENU=Tax Type Archival Log Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 115569843 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 115569843 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="20256" DepartmentCategory="Lists" RunObjectSrcTable="20241" ControlGUID="{d72a64f5-e78d-488a-8271-30b8325588a4}" Name="Global Tax Attributes" CaptionML="ENU=Global Input Parameters" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1823956923 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1823956923 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="134" TargetType="Page" />
     <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="5756" TargetType="Page" />
-    <ActionChange TargetID="397" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
     <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="5745" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="5755" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="403" TargetType="Page" />
-    <ActionChange TargetID="509" TargetType="Page" />
+    <ActionChange TargetID="5756" TargetType="Page" />
     <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="401" TargetType="Page" />
-    <ActionChange TargetID="253" TargetType="Page" />
-    <ActionChange TargetID="402" TargetType="Page" />
-    <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="41" TargetType="Page" />
-    <ActionChange TargetID="6640" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
-    <ActionChange TargetID="5743" TargetType="Page" />
     <ActionChange TargetID="507" TargetType="Page" />
     <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="398" TargetType="Page" />
-    <ActionChange TargetID="49" TargetType="Page" />
-    <ActionChange TargetID="400" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="5745" TargetType="Page" />
+    <ActionChange TargetID="401" TargetType="Page" />
+    <ActionChange TargetID="5755" TargetType="Page" />
+    <ActionChange TargetID="397" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="509" TargetType="Page" />
     <ActionChange TargetID="5757" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="398" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="5743" TargetType="Page" />
+    <ActionChange TargetID="400" TargetType="Page" />
+    <ActionChange TargetID="30" TargetType="Page" CaptionML="ENU=" />
+    <ActionChange TargetID="253" TargetType="Page" />
+    <ActionChange TargetID="50" TargetType="Page" />
     <ActionChange TargetID="5740" TargetType="Page" />
+    <ActionChange TargetID="403" TargetType="Page" />
     <ActionChange TargetID="140" TargetType="Page" />
     <ActionChange TargetID="5703" TargetType="Page" />
-    <ActionChange TargetID="9202" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="161" TargetType="Page" />
-    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="49" TargetType="Page" />
     <ActionChange TargetID="160" TargetType="Page" />
-    <ActionChange TargetID="30" TargetType="Page" CaptionML="ENU=" />
+    <ActionChange TargetID="6640" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="9202" TargetType="Page" />
+    <ActionChange TargetID="402" TargetType="Page" />
+    <ActionChange TargetID="161" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
