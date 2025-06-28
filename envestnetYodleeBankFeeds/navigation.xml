@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Envestnet Yodlee Bank Feeds" ControlGUID="{bb3ad6ba-c5b7-41ad-94e4-a9779006b0d3}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1450" DepartmentCategory="Administration" RunObjectSrcTable="1450" ControlGUID="{3d66cb55-f77f-4265-a8ca-cedc41e2d948}" Name="MS - Yodlee Bank Service Setup" CaptionML="ENC=Envestnet Yodlee Bank Feeds Service Setup;ENG=Envestnet Yodlee Bank Feeds Service Setup;ENU=Envestnet Yodlee Bank Feeds Service Setup;FRC=Configuration du service Envestnet Yodlee Bank Feeds" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1268761635 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1268761635 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Envestnet Yodlee Bank Feeds" ControlGUID="{f18d59b9-9b4c-40dd-ad12-0c1bb9c36dcc}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1450" DepartmentCategory="Administration" RunObjectSrcTable="1450" ControlGUID="{2f3a9186-3cdf-4f4f-997d-ffdf7ea3a874}" Name="MS - Yodlee Bank Service Setup" CaptionML="ENC=Envestnet Yodlee Bank Feeds Service Setup;ENG=Envestnet Yodlee Bank Feeds Service Setup;ENU=Envestnet Yodlee Bank Feeds Service Setup;FRC=Configuration du service Envestnet Yodlee Bank Feeds" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1268761635 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1268761635 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>

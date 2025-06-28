@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="DIOT - Localization for Mexico" ControlGUID="{4019ad47-289a-4736-a683-81396544dd66}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="27030" DepartmentCategory="Lists" RunObjectSrcTable="27030" ControlGUID="{ac62c561-4360-41cd-8c95-16f7e70478c3}" Name="DIOT Concepts" CaptionML="ENU=DIOT Concepts;ESM=Conceptos de DIOT" ApplicationArea="#BasicMX" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1565502167 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1565502167 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="27033" DepartmentCategory="Lists" RunObjectSrcTable="27039" ControlGUID="{c9531e04-116a-4f33-8d8c-7d234551fecc}" Name="DIOT Country/Region Data" CaptionML="ENU=DIOT Country/Region Data;ESM=Datos de país o región de DIOT" ApplicationArea="#BasicMX" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2287590843 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2287590843 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="27030" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{65c773c4-f6dc-47cc-be22-60400e38249b}" Name="Create DIOT Report" CaptionML="ENU=Create DIOT Report;ESM=Crear reporte de DIOT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1739196608 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1739196608 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="DIOT - Localization for Mexico" ControlGUID="{2598de44-5ba0-41de-bf08-231896e21aa0}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="27030" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{bdb4e872-606d-4bab-9dae-d68f1f650c5c}" Name="Create DIOT Report" CaptionML="ENU=Create DIOT Report;ESM=Crear reporte de DIOT" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1739196608 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1739196608 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="27030" DepartmentCategory="Lists" RunObjectSrcTable="27030" ControlGUID="{821f71b3-868c-4904-a644-f8d7dd3ef0fa}" Name="DIOT Concepts" CaptionML="ENU=DIOT Concepts;ESM=Conceptos de DIOT" ApplicationArea="#BasicMX" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1565502167 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1565502167 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="27033" DepartmentCategory="Lists" RunObjectSrcTable="27039" ControlGUID="{09de4dc3-01b8-420f-acbf-6bc412d21e31}" Name="DIOT Country/Region Data" CaptionML="ENU=DIOT Country/Region Data;ESM=Datos de país o región de DIOT" ApplicationArea="#BasicMX" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2287590843 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2287590843 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="460" TargetType="Page" />
-    <ActionChange TargetID="315" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="472" TargetType="Page" />
     <ActionChange TargetID="254" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
     <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="315" TargetType="Page" />
+    <ActionChange TargetID="460" TargetType="Page" />
+    <ActionChange TargetID="472" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
     <ActionChange TargetID="39" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
