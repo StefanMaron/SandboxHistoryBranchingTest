@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="6c2902a8-23e5-4289-9c7c-d345e2a328f5" Name="Dynamics GP History SmartLists" Publisher="Microsoft" Brief="This extension will allow you to query your Dynamics GP history data with your Dynamics 365 Business Central cloud tenant." Description="This extension will add queries for your Dynamics GP history data that is in your Dynamics 365 Business Central cloud tenant.  This will enable you to view and search your Dynamics GP history data, and provide you with anytime, anywhere access." Version="26.0.30643.36041" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=825900" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="6c2902a8-23e5-4289-9c7c-d345e2a328f5" Name="Dynamics GP History SmartLists" Publisher="Microsoft" Brief="This extension will allow you to query your Dynamics GP history data with your Dynamics 365 Business Central cloud tenant." Description="This extension will add queries for your Dynamics GP history data that is in your Dynamics 365 Business Central cloud tenant.  This will enable you to view and search your Dynamics GP history data, and provide you with anytime, anywhere access." Version="26.1.33404.35996" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=825900" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2115702" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="9999" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="feeb3504-556e-4790-b28d-a2b9ce302d81" Name="Dynamics GP Intelligent Cloud" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T20:38:06.5703504Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-27T01:36:15.6569563Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
