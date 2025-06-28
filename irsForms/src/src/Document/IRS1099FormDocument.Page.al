@@ -20,7 +20,7 @@ page 10037 "IRS 1099 Form Document"
                 field("Period No."; Rec."Period No.")
                 {
                     Tooltip = 'Specifies the period of the document.';
-                    Visible = IsPeriodNoActive;
+                    Visible = false;
                 }
                 field("Vendor No."; Rec."Vendor No.")
                 {
@@ -196,7 +196,6 @@ page 10037 "IRS 1099 Form Document"
                         IRS1099SendEmailReport: Report "IRS 1099 Send Email";
                         IRS1099SendEmail: Codeunit "IRS 1099 Send Email";
                     begin
-                        IRS1099SendEmail.CheckEmailSetup();
                         IRS1099SendEmail.CheckCanSendEmail(Rec);
 
                         Rec.SetRecFilter();
@@ -240,13 +239,10 @@ page 10037 "IRS 1099 Form Document"
         IsLinesEditable: Boolean;
         EmailErrorVisible: Boolean;
 
-        IsPeriodNoActive: Boolean;
-
     trigger OnOpenPage()
     begin
         UpdateLinesAvailable();
         EmailErrorVisible := Rec."Email Error Log" <> '';
-        IsPeriodNoActive := (Rec."Period No." = '');
     end;
 
     trigger OnAfterGetRecord()
@@ -257,7 +253,6 @@ page 10037 "IRS 1099 Form Document"
     trigger OnAfterGetCurrRecord()
     begin
         UpdateLinesAvailable();
-        IsPeriodNoActive := (Rec."Period No." = '');
     end;
 
     trigger OnNewRecord(BelowxRec: Boolean)
