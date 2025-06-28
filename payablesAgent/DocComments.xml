@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <application>
+        <id>14aa1237-2f69-4c25-9a68-fa7d54e08613</id>
+        <name>Payables Agent</name>
+        <publisher>Microsoft</publisher>
+        <version>26.2.34746.36013</version>
+    </application>
+    <members>
+        <member name="M:Codeunit::Agent#PayablesAgent#Payables Agent.GetCurrentSessionsEDocument:E-Document">
+            <summary>
+            If the current session is a payables agent session, this procedure will return the e-document being processed by the agent.
+            </summary>
+            <returns>The E-Document being processed by the agent, or an empty record if the session is not from a payables agent.</returns>
+        </member>
+        <member name="O:Table::Agent#PayablesAgent#Payables Agent KPI">
+            <summary>
+            A table with the KPI data for the Payables Agent.
+            </summary>
+        </member>
+        <member name="O:PermissionSet::Agent#PayablesAgent#Payables Ag# - Excluded">
+            <summary>
+            Permissionset that has the permissions to be excluded from the Payables Agent to ensure no unintended access.
+            </summary>
+        </member>
+        <member name="O:PermissionSet::Agent#PayablesAgent#Payables Ag# - Run">
+            <summary>
+            The permissionset that the agent will be assigned to when they are created in the system. This permissionset is used to give the agent access to the pages and actions that are needed to perform their tasks.
+            </summary>
+        </member>
+        <member name="O:Codeunit::Agent#PayablesAgent#PA Setup Configuration">
+            <summary>
+            To be used as a state variable with the all the related records used to configure the agent.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Agent#PayablesAgent#Payables Agent Setup.LoadSetupConfiguration(Codeunit::Agent#PayablesAgent#PA Setup Configuration@)">
+            <summary>
+            Retrieves all the records containing setup information for the payables agent.
+            </summary>
+            <param name="PASetupConfiguration">State variable where all the setup related information is stored.</param>
+        </member>
+        <member name="M:Codeunit::Agent#PayablesAgent#Payables Agent Setup.ApplyPayablesAgentSetup(Codeunit::Agent#PayablesAgent#PA Setup Configuration@)">
+            <summary>
+            Persist the payables agent setup configured across the different records required.
+            </summary>
+            <param name="PASetupConfiguration">State variable where all the setup related information is stored.</param>
+        </member>
+        <member name="M:Codeunit::Agent#PayablesAgent#Payables Agent Setup.GetAgent(Agent@):Boolean">
+            <summary>
+            Retrieves the agent record if configured in the database, or populates the record with default values.
+            </summary>
+            <param name="Agent">Record where the Agent is loaded</param>
+            <returns>True if an Agent was found, false otherwise</returns>
+        </member>
+    </members>
+</doc>
