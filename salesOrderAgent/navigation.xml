@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{987905dc-f649-4df8-a124-ae54b14f0d15}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4410" DepartmentCategory="Lists" RunObjectSrcTable="27" ControlGUID="{e77b817a-8cd3-46a5-88d3-effc6abbc89d}" Name="SOA Multi Items Availability" CaptionML="ENA=Item Availability;ENC=Item Availability;ENG=Item Availability;ENU=Item Availability;ENZ=Item Availability;FRA=Disponibilité article;FRC=Disponibilité article" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 712503301 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 712503301 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{cbfd92fb-f2a6-4c2d-be76-113cf4159a1d}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4410" DepartmentCategory="Lists" RunObjectSrcTable="27" ControlGUID="{31907abc-883a-42c3-a496-de4f2cab2963}" Name="SOA Multi Items Availability" CaptionML="ENA=Item Availability;ENC=Item Availability;ENG=Item Availability;ENU=Item Availability;ENZ=Item Availability;FRA=Disponibilité article;FRC=Disponibilité article" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 712503301 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 712503301 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
