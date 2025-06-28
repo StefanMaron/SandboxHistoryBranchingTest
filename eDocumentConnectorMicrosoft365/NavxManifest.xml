@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="ec6b3b0e-f983-408b-8476-bafb4368ecbc" Name="E-Document Connector - Microsoft 365" Publisher="Microsoft" Brief="This app extends Microsoft standard E-documents framework, offering connectors to Microsoft 365." Description="This app extends Microsoft standard E-documents framework, offering connectors to Microsoft 365." Version="26.0.30643.36019" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help=" https://learn.microsoft.com/en-us/dynamics365/business-central/finance-edocuments-overview" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="ec6b3b0e-f983-408b-8476-bafb4368ecbc" Name="E-Document Connector - Microsoft 365" Publisher="Microsoft" Brief="This app extends Microsoft standard E-documents framework, offering connectors to Microsoft 365." Description="This app extends Microsoft standard E-documents framework, offering connectors to Microsoft 365." Version="26.1.33404.35996" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help=" https://learn.microsoft.com/en-us/dynamics365/business-central/finance-edocuments-overview" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="6381" MaxObjectId="6386" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="44efdf6d-efe4-4af7-9aaa-30df07c0d5a1" Name="E-Document Connector - Microsoft 365 Tests" Publisher="Microsoft" />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-27T13:03:47.8390871Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-27T01:28:37.9434677Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
