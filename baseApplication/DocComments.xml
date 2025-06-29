@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35974</version>
+        <version>25.0.23364.36035</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -248,12 +248,6 @@
             </summary>
             <param name="ReportSelectionUsage">The input report selection usage of the FromReportSelectionUsage function.</param>
             <param name="EmailScenario">The output email scenario of the FromReportSelectionUsage function.</param>
-        </member>
-        <member name="O:PermissionSet::System#Security#AccessControl#D365 Agent">
-            <summary>
-            Provides basic access to the agent functionality. 
-            TODO: Move permission set to the System app Agent module when it is introduced
-            </summary>
         </member>
         <member name="M:Codeunit::System#Security#AccessControl#Effective Permissions Mgt#.HasDirectRIMPermissionsOnTableData(Integer):Boolean">
             <summary>
@@ -515,32 +509,6 @@
             <param name="CSVInStream">The stream from which to read data.</param>
             <param name="CSVFieldSeparator">The character to use to split the values.</param>
         </member>
-        <member name="M:Table::System#IO#CSV Buffer.LoadDataFromStream(InStream,Text[1],Integer)">
-            <summary>
-            Loads data from a stream.
-            </summary>
-            <param name="CSVInStream">Instream from which to read data.</param>
-            <param name="CSVFieldSeparator">The character to use to split the values.</param>
-            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
-        </member>
-        <member name="M:Table::System#IO#CSV Buffer.LoadDataFromStream(InStream,Text[1],Text,Integer)">
-            <summary>
-            Loads data from a stream.
-            </summary>
-            <param name="CSVInStream">Instream from which to read data.</param>
-            <param name="CSVFieldSeparator">The character to use to split the values.</param>
-            <param name="CSVCharactersToTrim">Characters to trim from the beginning and the end of the read values.</param>
-            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
-        </member>
-        <member name="M:Table::System#IO#CSV Buffer.InitializeReaderFromStream(InStream,Text[1],Text,Integer)">
-            <summary>
-            Initializes the CSV buffer.
-            </summary>
-            <param name="CSVInStream">The stream from which to read data.</param>
-            <param name="CSVFieldSeparator">The character to use to split the values.</param>
-            <param name="CSVCharactersToTrim">Characters to trim from the beginning and the end of the read values.</param>
-            <param name="EncodingCodePage">Encoding page from the file that was loaded in the stream. For more references you can see the Encoding.GetEncoding(EncodingCodePage) in C#.</param>
-        </member>
         <member name="M:Table::System#IO#CSV Buffer.ReadLines(Integer):Boolean">
             <summary>
             Populated the CSV buffer with entries.
@@ -725,13 +693,6 @@
             <param name="ComputeRangesUsingRecords">Specify if the computations should be performed on records, or in-memory structures.
             If the parameter is false, the database load is greatly reduced, but the memory footprint is bigger</param>
             <returns>The filter for the provided field ID. For example, '1..3|6'.</returns>
-        </member>
-        <member name="M:Codeunit::System#Threading#Job Queue Dispatcher.RunCleanupForCurrentJob(Job Queue Entry@)">
-            <summary>
-            This is used to run the cleanup tasks for the current job queue entry when the job queue fails but is retriable.
-            The prior Job Queue Log Entry would still be in the "In Process" state.
-            </summary>
-            <param name="JobQueueEntry">The Job Queue Entry that is running.</param>
         </member>
         <member name="M:Table::System#Threading#Job Queue Entry.GetRecLockedExtendedTimeout:Boolean">
              <summary>
@@ -922,12 +883,6 @@
             Get all Onboarding Signals with Read access
             </summary>
             <param name="OnboardingSignalBuffer"> The variable holds all the onboarding signals </param>
-        </member>
-        <member name="M:Codeunit::System#Feedback#Onboarding Signal.CreateFilterForValidEnum:Text">
-            <summary>
-            Create a filter for all valid Enum Onboarding Signal Types.
-            This is needed to filter out Enum values that no longer exist in the current runtime (e.g. extensions that are uninstalled).
-            </summary>
         </member>
         <member name="M:Interface::System#Feedback#Onboarding Signal.IsOnboarded:Boolean">
             <summary>
@@ -3272,13 +3227,6 @@
             <param name="GLEntry">The current G/L entry</param>
             <param name="GenJournalLine">The current general journal line</param>
         </member>
-        <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.CopyNonDedVATFromGenJnlLineToFALedgEntry(FA Ledger Entry@,Gen# Journal Line)">
-            <summary>
-            Copy Non-Deductible VAT from general journal line to FA ledger Entry
-            </summary>
-            <param name="FALedgEntry">The current FA ledger entry</param>
-            <param name="GenJnlLine">The current general journal line</param>
-        </member>
         <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.CheckPrepmtWithNonDeductubleVATInPurchaseLine(Purchase Line)">
             <summary>
             Throws an error if purchase line contains prepayment and Non-Deductible VAT
@@ -3381,13 +3329,6 @@
             </summary>
             <param name="TotalInvoicePostBuffer">The invoice post buffer to be incremented</param>
             <param name="InvoicePostBuffer">The current invoice post buffer</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.IsNonDedFALedgEntryInFirstAcquisition(FA Ledger Entry):Boolean">
-            <summary>
-            Identifies if the current FA ledger entry is a Non-Deductible VAT entry in the first acquisition
-            </summary>
-            <param name="FALedgEntry"></param>
-            <returns>Returns true if the current FA ledger entry is a Non-Deductible VAT entry in the first acquisition</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Finance#VAT#Calculation#Non-Deductible VAT.RoundNonDeductibleVAT(Purchase Header,Purchase Line@,Purchase Line,Purchase Line)">
             <summary>
@@ -9046,15 +8987,6 @@
             <returns>Currency symbol.</returns>
         </member>
         <member name="M:Table::Microsoft#Sales#Document#Sales Header.UpdateShipToSalespersonCode">
-            <summary>
-            Updates the salesperson code from either the ship-to addresses or bill-to customer's salesperson.
-            </summary>
-            <remarks>
-            If neither are set, it uses the default salesperson from the user setup.
-            If salesperson is blocked, it doesn't get assigned.
-            </remarks>
-        </member>
-        <member name="M:Table::Microsoft#Sales#Document#Sales Header.UpdateShipToSalespersonCode(Integer)">
             <summary>
             Updates the salesperson code from either the ship-to addresses or bill-to customer's salesperson.
             </summary>
