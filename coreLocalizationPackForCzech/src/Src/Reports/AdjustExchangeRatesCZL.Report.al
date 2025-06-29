@@ -2971,11 +2971,6 @@ report 31004 "Adjust Exchange Rates CZL"
         Post := NewPostMode;
     end;
 
-    procedure SetDimMoveType(NewDimMoveType: Option "No move","Source Entry","By G/L Account")
-    begin
-        DimMoveType := NewDimMoveType;
-    end;
-
     procedure CreateCustRealGainLossEntries(var ThreeDetailedCustLedgEntry: Record "Detailed Cust. Ledg. Entry")
     var
         FourDetailedCustLedgEntry: Record "Detailed Cust. Ledg. Entry";
@@ -3117,10 +3112,10 @@ report 31004 "Adjust Exchange Rates CZL"
           TwoDetailedEmployeeLedgerEntry."Entry Type"::"Realized Gain");
         TwoDetailedEmployeeLedgerEntry.CalcSums("Amount (LCY)");
 
-        Temp2DetailedEmployeeLedgerEntry.SetRange("Posting Date", EntryPostingDate);
-        Temp2DetailedEmployeeLedgerEntry.CalcSums("Amount (LCY)");
+        Temp2DetailedCustLedgEntry.SetRange("Posting Date", EntryPostingDate);
+        Temp2DetailedCustLedgEntry.CalcSums("Amount (LCY)");
 
-        RealGainLossAmt := TwoDetailedEmployeeLedgerEntry."Amount (LCY)" + Temp2DetailedEmployeeLedgerEntry."Amount (LCY)";
+        RealGainLossAmt := TwoDetailedCustLedgEntry."Amount (LCY)" + Temp2DetailedCustLedgEntry."Amount (LCY)";
     end;
 
     procedure GetInitialGLAccountNo(InitialEntryNo: Integer; SourceType: Option Customer,Vendor,Employee; PostingGroup: Code[20]): Code[20]

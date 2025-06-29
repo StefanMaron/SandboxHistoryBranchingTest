@@ -205,7 +205,6 @@ tableextension 11703 "Sales Header CZL" extends "Sales Header"
             trigger OnValidate()
             begin
                 TestField("VAT Currency Code CZL", "Currency Code");
-                UpdateVATCurrencyFactorCZL();
             end;
         }
         field(11780; "VAT Date CZL"; Date)
@@ -341,7 +340,6 @@ tableextension 11703 "Sales Header CZL" extends "Sales Header"
     local procedure UpdateVATCurrencyFactorCZL()
     var
         CurrencyExchangeRate: Record "Currency Exchange Rate";
-        UpdateCurrencyExchangeRates: Codeunit "Update Currency Exchange Rates";
         CurrencyDate: Date;
         IsUpdated: Boolean;
     begin
@@ -355,10 +353,7 @@ tableextension 11703 "Sales Header CZL" extends "Sales Header"
             else
                 CurrencyDate := WorkDate();
 
-            if UpdateCurrencyExchangeRates.ExchangeRatesForCurrencyExist(CurrencyDate, "Currency Code") then
-                "VAT Currency Factor CZL" := CurrencyExchangeRate.ExchangeRate(CurrencyDate, "Currency Code")
-            else
-                UpdateCurrencyExchangeRates.ShowMissingExchangeRatesNotification("Currency Code");
+            "VAT Currency Factor CZL" := CurrencyExchangeRate.ExchangeRate(CurrencyDate, "Currency Code");
         end else
             "VAT Currency Factor CZL" := 0;
 

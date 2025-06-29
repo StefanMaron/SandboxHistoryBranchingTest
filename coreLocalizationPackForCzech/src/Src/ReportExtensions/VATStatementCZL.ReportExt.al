@@ -92,7 +92,7 @@ reportextension 11703 "VAT Statement CZL" extends "VAT Statement"
         RoundingDirection: Option Nearest,Down,Up;
         RoundingDirectionVisible: Boolean;
 
-    procedure GetAmtRoundingDirectionCZL() Direction: Text[1]
+    internal procedure GetAmtRoundingDirectionCZL() Direction: Text[1]
     begin
         case RoundingDirection of
             RoundingDirection::Nearest:

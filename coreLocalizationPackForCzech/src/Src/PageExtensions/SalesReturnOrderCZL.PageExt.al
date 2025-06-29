@@ -91,10 +91,10 @@ pageextension 11730 "Sales Return Order CZL" extends "Sales Return Order"
 
                 trigger OnAssistEdit()
                 begin
-                    Clear(ChangeExchangeRate);
                     ChangeExchangeRate.SetParameter(GeneralLedgerSetup.GetAdditionalCurrencyCode(), Rec."Additional Currency Factor CZL", Rec."Posting Date");
                     if ChangeExchangeRate.RunModal() = Action::OK then
                         Rec."Additional Currency Factor CZL" := ChangeExchangeRate.GetParameter();
+
                     Clear(ChangeExchangeRate);
                 end;
             }
@@ -106,7 +106,6 @@ pageextension 11730 "Sales Return Order CZL" extends "Sales Return Order"
 
                 trigger OnAssistEdit()
                 begin
-                    Clear(ChangeExchangeRate);
                     if Rec."VAT Reporting Date" <> 0D then
                         ChangeExchangeRate.SetParameter(Rec."VAT Currency Code CZL", Rec."VAT Currency Factor CZL", Rec."VAT Reporting Date")
                     else
@@ -115,7 +114,6 @@ pageextension 11730 "Sales Return Order CZL" extends "Sales Return Order"
                         Rec.Validate("VAT Currency Factor CZL", ChangeExchangeRate.GetParameter());
                         CurrPage.Update();
                     end;
-                    Clear(ChangeExchangeRate);
                 end;
 
                 trigger OnValidate()

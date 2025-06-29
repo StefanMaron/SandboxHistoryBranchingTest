@@ -350,24 +350,6 @@ report 31182 "Reminder CZL"
                     column(TotalLineAmount; TotalLineAmount)
                     {
                     }
-                    column(GreetingText; GreetingTxt)
-                    {
-                    }
-                    column(BodyText; BodyTxt)
-                    {
-                    }
-                    column(ClosingText; ClosingTxt)
-                    {
-                    }
-                    column(DescriptionText; DescriptionTxt)
-                    {
-                    }
-                    trigger OnPreDataItem()
-                    var
-                        ReminderCommunication: Codeunit "Reminder Communication";
-                    begin
-                        ReminderCommunication.PopulateEmailText("Issued Reminder Header", "Company Information", GreetingTxt, AmtDueTxt, BodyTxt, ClosingTxt, DescriptionTxt, TotalLineAmount);
-                    end;
                 }
                 dataitem("User Setup"; "User Setup")
                 {
@@ -530,10 +512,6 @@ report 31182 "Reminder CZL"
         LogInteraction: Boolean;
         ShowNotDueAmounts: Boolean;
         AmtDueTxt: Text;
-        GreetingTxt: Text;
-        BodyTxt: Text;
-        ClosingTxt: Text;
-        DescriptionTxt: Text;
         LineAmountText: Text;
         AmountInclVAT: Decimal;
         LineAmount: Decimal;

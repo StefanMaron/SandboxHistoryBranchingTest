@@ -51,30 +51,11 @@ page 31134 "VAT Stmt. Attachment Sheet CZL"
                 Ellipsis = true;
                 Image = Import;
                 ToolTip = 'Import an attachment.';
-                Visible = false;
 
                 trigger OnAction()
                 begin
                     if Rec.Import() then
                         CurrPage.SaveRecord();
-                end;
-            }
-            fileuploadaction(ImportFiles)
-            {
-                ApplicationArea = Basic, Suite;
-                Caption = 'Import files';
-                AllowMultipleFiles = true;
-                Visible = true;
-                Image = Import;
-                ToolTip = 'Import files as attachments.';
-
-                trigger OnAction(files: List of [FileUpload])
-                var
-                    VATStatementName: Record "VAT Statement Name";
-                begin
-                    VATStatementName.Get(Rec."VAT Statement Template Name", Rec."VAT Statement Name");
-                    Rec.Import(files, VATStatementName);
-                    CurrPage.Update();
                 end;
             }
         }
@@ -85,15 +66,11 @@ page 31134 "VAT Stmt. Attachment Sheet CZL"
                 actionref(Import_Promoted; Import)
                 {
                 }
-                actionref(ImportFiles_Promoted; ImportFiles)
-                {
-                }
             }
         }
     }
-
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
-        Rec.Date := Rec.GetDefaultDate();
+        Rec.Date := WorkDate();
     end;
 }

@@ -37,6 +37,6 @@ page 31118 "VAT Stmt. Comment Sheet CZL"
     }
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
-        Rec.Date := Rec.GetDefaultDate();
+        Rec.Date := WorkDate();
     end;
 }

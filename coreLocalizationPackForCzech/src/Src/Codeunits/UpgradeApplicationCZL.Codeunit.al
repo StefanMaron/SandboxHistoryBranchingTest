@@ -12,7 +12,6 @@ using Microsoft.Finance.FinancialReports;
 using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Finance.GeneralLedger.Ledger;
 using Microsoft.Finance.GeneralLedger.Setup;
-using Microsoft.Finance.VAT.Calculation;
 using Microsoft.Finance.VAT.Ledger;
 using Microsoft.Finance.VAT.Reporting;
 using Microsoft.Finance.VAT.Setup;
@@ -276,9 +275,8 @@ codeunit 31017 "Upgrade Application CZL"
         UpgradeVATStatementTemplate();
         UpgradeAllowVATPosting();
         UpgradeOriginalVATAmountsInVATEntries();
+        UpgradeFunctionalCurrency();
         UpgradeEnableNonDeductibleVATCZ();
-        UpgradeVATReport();
-        UpgradeSetEnableNonDeductibleVATCZ();
     end;
 
     local procedure UpgradeGeneralLedgerSetup();
@@ -2679,6 +2677,40 @@ codeunit 31017 "Upgrade Application CZL"
         UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZL.GetOriginalVATAmountsInVATEntriesUpgradeTag());
     end;
 
+    local procedure UpgradeFunctionalCurrency()
+    var
+        GeneralLedgerSetup: Record "General Ledger Setup";
+        PurchaseHeader: Record "Purchase Header";
+        SalesHeader: Record "Sales Header";
+    begin
+        if UpgradeTag.HasUpgradeTag(UpgradeTagDefinitionsCZL.GetFunctionalCurrencyUpgradeTag()) then
+            exit;
+
+        if GeneralLedgerSetup.IsAdditionalCurrencyEnabled() then begin
+            SalesHeader.SetLoadFields("Additional Currency Factor CZL", "Posting Date");
+            SalesHeader.SetRange("Additional Currency Factor CZL", 0);
+            if SalesHeader.FindSet(true) then
+                repeat
+                    SalesHeader.UpdateAddCurrencyFactorCZL();
+#pragma warning disable AA0214
+                    if SalesHeader.Modify() then;
+#pragma warning restore AA0214
+                until SalesHeader.Next() = 0;
+
+            PurchaseHeader.SetLoadFields("Additional Currency Factor CZL", "Posting Date");
+            PurchaseHeader.SetRange("Additional Currency Factor CZL", 0);
+            if PurchaseHeader.FindSet(true) then
+                repeat
+                    PurchaseHeader.UpdateAddCurrencyFactorCZL();
+#pragma warning disable AA0214
+                    if PurchaseHeader.Modify() then;
+#pragma warning restore AA0214
+                until PurchaseHeader.Next() = 0;
+        end;
+
+        UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZL.GetFunctionalCurrencyUpgradeTag());
+    end;
+
     local procedure UpgradeEnableNonDeductibleVATCZ()
     var
         VATEntry: Record "VAT Entry";
@@ -2697,77 +2729,6 @@ codeunit 31017 "Upgrade Application CZL"
             until VATEntry.Next() = 0;
 
         UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZL.GetEnableNonDeductibleVATCZUpgradeTag());
-    end;
-
-    local procedure UpgradeVATReport()
-    var
-        VATAttributeCodeCZL: Record "VAT Attribute Code CZL";
-        VATReportsConfiguration: Record "VAT Reports Configuration";
-        VATReportSetup: Record "VAT Report Setup";
-        VATReportVersionTok: Label 'CZ', Locked = true;
-        IsModified: Boolean;
-        Code: Text;
-    begin
-        if UpgradeTag.HasUpgradeTag(UpgradeTagDefinitionsCZL.GetVATReportUpgradeTag()) then
-            exit;
-
-        if not VATReportsConfiguration.Get(VATReportsConfiguration."VAT Report Type"::"VAT Return", VATReportVersionTok) then begin
-            VATReportsConfiguration.Init();
-            VATReportsConfiguration.Validate("VAT Report Type", VATReportsConfiguration."VAT Report Type"::"VAT Return");
-            VATReportsConfiguration.Validate("VAT Report Version", VATReportVersionTok);
-            VATReportsConfiguration.Validate("Suggest Lines Codeunit ID", Codeunit::"VAT Report Suggest Lines CZL");
-            VATReportsConfiguration.Validate("Validate Codeunit ID", Codeunit::"VAT Report Validate CZL");
-            VATReportsConfiguration.Validate("Content Codeunit ID", Codeunit::"VAT Report Export CZL");
-            VATReportsConfiguration.Validate("Submission Codeunit ID", Codeunit::"VAT Report Submit CZL");
-            if VATReportsConfiguration.Insert(true) then;
-        end;
-
-        if not VATReportSetup.Get() then begin
-            VATReportSetup.Init();
-            if VATReportSetup.Insert() then;
-        end;
-
-        VATReportSetup."Report Version" := VATReportVersionTok;
-        if VATReportSetup.Modify() then;
-
-        if VATAttributeCodeCZL.FindSet() then
-            repeat
-                IsModified := true;
-                Code := VATAttributeCodeCZL.Code;
-                case true of
-                    Code.EndsWith('Z'):
-                        VATAttributeCodeCZL."VAT Report Amount Type" := VATAttributeCodeCZL."VAT Report Amount Type"::Base;
-                    Code.EndsWith('D'):
-                        VATAttributeCodeCZL."VAT Report Amount Type" := VATAttributeCodeCZL."VAT Report Amount Type"::Amount;
-                    Code.EndsWith('K'):
-                        VATAttributeCodeCZL."VAT Report Amount Type" := VATAttributeCodeCZL."VAT Report Amount Type"::"Reduced Amount";
-                    else
-                        IsModified := false;
-                end;
-
-                if IsModified then
-                    if VATAttributeCodeCZL.Modify() then;
-            until VATAttributeCodeCZL.Next() = 0;
-
-        UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZL.GetVATReportUpgradeTag());
-    end;
-
-    local procedure UpgradeSetEnableNonDeductibleVATCZ()
-    var
-        NonDeductibleVATSetupCZL: Record "Non-Deductible VAT Setup CZL";
-        VATSetup: Record "VAT Setup";
-    begin
-        if UpgradeTag.HasUpgradeTag(UpgradeTagDefinitionsCZL.SetEnableNonDeductibleVATCZUpgradeTag()) then
-            exit;
-
-        if not NonDeductibleVATSetupCZL.IsEmpty() then
-            if VATSetup.Get() then
-                if VATSetup."Enable Non-Deductible VAT" then begin
-                    VATSetup."Enable Non-Deductible VAT CZL" := true;
-                    VATSetup.Modify();
-                end;
-
-        UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZL.SetEnableNonDeductibleVATCZUpgradeTag());
     end;
 
     local procedure InsertRepSelection(ReportUsage: Enum "Report Selection Usage"; Sequence: Code[10]; ReportID: Integer)

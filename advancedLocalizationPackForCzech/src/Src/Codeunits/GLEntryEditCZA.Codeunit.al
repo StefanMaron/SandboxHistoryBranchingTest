@@ -1,4 +1,3 @@
-#if not CLEAN26
 // ------------------------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
@@ -9,9 +8,6 @@ codeunit 31381 "G/L Entry - Edit CZA"
 {
     Permissions = tabledata "G/L Entry" = rim;
     TableNo = "G/L Entry";
-    ObsoleteState = Pending;
-    ObsoleteTag = '26.0';
-    ObsoleteReason = 'Use the standard G/L Entry-Edit codeunit instead. The same funcionality of this codeunit is available in codeunit 31177 G/L Entry Edit Handler CZA.';
 
     trigger OnRun()
     begin
@@ -28,4 +24,3 @@ codeunit 31381 "G/L Entry - Edit CZA"
         GLEntry: Record "G/L Entry";
 }
 
-#endif

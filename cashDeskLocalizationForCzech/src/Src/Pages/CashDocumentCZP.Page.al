@@ -774,14 +774,13 @@ page 31160 "Cash Document CZP"
 
     trigger OnNewRecord(BelowxRec: Boolean)
     var
-        CashDeskCZP: Record "Cash Desk CZP";
         CashDeskManagementCZP: Codeunit "Cash Desk Management CZP";
         CashDeskNo: Code[20];
         CashDeskSelected: Boolean;
     begin
         if Rec.GetFilter("Cash Desk No.") <> '' then
-            if CashDeskCZP.Get(Rec.GetFilter("Cash Desk No.")) then
-                CashDeskNo := CashDeskCZP."No.";
+            if Rec.GetRangeMin("Cash Desk No.") = Rec.GetRangeMax("Cash Desk No.") then
+                CashDeskNo := Rec.GetRangeMin("Cash Desk No.");
 
         if CashDeskNo = '' then begin
             CashDeskManagementCZP.CashDocumentSelection(Rec, CashDeskSelected);

@@ -632,24 +632,6 @@ xmlport 11766 "VAT Statement DPHDP3 CZL"
                             GetAmtAndSkipIfEmpty(rez_pren5, 'rez_pren5');
                         end;
                     }
-                    textattribute(opr_dane_dan)
-                    {
-                        Occurrence = Optional;
-
-                        trigger OnBeforePassVariable()
-                        begin
-                            GetAmtAndSkipIfEmpty(opr_dane_dan, 'opr_dane_dan');
-                        end;
-                    }
-                    textattribute(opr_dane_zd)
-                    {
-                        Occurrence = Optional;
-
-                        trigger OnBeforePassVariable()
-                        begin
-                            GetAmtAndSkipIfEmpty(opr_dane_zd, 'opr_dane_zd');
-                        end;
-                    }
                 }
                 textelement(Veta2)
                 {
@@ -971,33 +953,6 @@ xmlport 11766 "VAT Statement DPHDP3 CZL"
                             GetAmtAndSkipIfEmpty(odp_cu_nar, 'odp_cu_nar');
                         end;
                     }
-                    textattribute(kor_odp_krac)
-                    {
-                        Occurrence = Optional;
-
-                        trigger OnBeforePassVariable()
-                        begin
-                            GetAmtAndSkipIfEmpty(kor_odp_krac, 'kor_odp_krac');
-                        end;
-                    }
-                    textattribute(kor_odp_plne)
-                    {
-                        Occurrence = Optional;
-
-                        trigger OnBeforePassVariable()
-                        begin
-                            GetAmtAndSkipIfEmpty(kor_odp_plne, 'kor_odp_plne');
-                        end;
-                    }
-                    textattribute(kor_odp_zd)
-                    {
-                        Occurrence = Optional;
-
-                        trigger OnBeforePassVariable()
-                        begin
-                            GetAmtAndSkipIfEmpty(kor_odp_zd, 'kor_odp_zd');
-                        end;
-                    }
                 }
                 textelement(Veta5)
                 {
@@ -1214,15 +1169,13 @@ xmlport 11766 "VAT Statement DPHDP3 CZL"
                 begin
                     VATStatementName.SetRange("Statement Template Name", VATStatementTemplateName);
                     VATStatementName.SetRange(Name, VATStatementNameCode);
+                    VATStatementName.FindFirst();
                 end;
 
                 trigger OnAfterGetRecord()
                 var
                     VATStatementLine: Record "VAT Statement Line";
                 begin
-                    if XMLTagAmount.Count() <> 0 then
-                        exit;
-
                     VATStatementLine.Reset();
                     VATStatementLine.SetRange("Statement Template Name", VATStatementName."Statement Template Name");
                     VATStatementLine.SetRange("Statement Name", VATStatementName.Name);
@@ -1279,14 +1232,6 @@ xmlport 11766 "VAT Statement DPHDP3 CZL"
     procedure ClearVariables()
     begin
         ClearAll();
-    end;
-
-    procedure SetData(var VATStmtReportLineDataCZL: Record "VAT Stmt. Report Line Data CZL")
-    begin
-        if VATStmtReportLineDataCZL.FindSet() then
-            repeat
-                AddAmount(VATStmtReportLineDataCZL."XML Code", VATStmtReportLineDataCZL.Amount);
-            until VATStmtReportLineDataCZL.Next() = 0;
     end;
 
     procedure SetXMLParams(NewXMLParams: Text)

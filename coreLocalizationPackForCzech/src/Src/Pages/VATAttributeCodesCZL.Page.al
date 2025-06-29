@@ -21,18 +21,17 @@ page 31129 "VAT Attribute Codes CZL"
                 field("Code"; Rec.Code)
                 {
                     ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies a VAT attribute code.';
                 }
                 field(Description; Rec.Description)
                 {
                     ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the VAT attribute description.';
                 }
                 field("XML Code"; Rec."XML Code")
                 {
                     ApplicationArea = Basic, Suite;
-                }
-                field("VAT Report Amount Type"; Rec."VAT Report Amount Type")
-                {
-                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the XML code for VAT statement reporting.';
                 }
             }
         }

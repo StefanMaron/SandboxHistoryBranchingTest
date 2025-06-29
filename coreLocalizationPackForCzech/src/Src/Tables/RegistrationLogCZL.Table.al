@@ -138,29 +138,30 @@ table 11756 "Registration Log CZL"
         Contact: Record Contact;
         CustContUpdate: Codeunit "CustCont-Update";
         VendContUpdate: Codeunit "VendCont-Update";
+        CustVendBankUpdate: Codeunit "CustVendBank-Update";
         RecordRef: RecordRef;
     begin
         GetAccountRecordRef(RecordRef);
-        if OpenDetailForRecRef(RecordRef) then
+        if OpenDetailForRecRef(RecordRef) then begin
+            RecordRef.Modify();
             case RecordRef.Number of
                 Database::Customer:
                     begin
-                        RecordRef.Modify();
                         RecordRef.SetTable(Customer);
                         CustContUpdate.OnModify(Customer);
                     end;
                 Database::Vendor:
                     begin
-                        RecordRef.Modify();
                         RecordRef.SetTable(Vendor);
                         VendContUpdate.OnModify(Vendor);
                     end;
                 Database::Contact:
                     begin
                         RecordRef.SetTable(Contact);
-                        Contact.Modify(true);
+                        CustVendBankUpdate.Run(Contact);
                     end;
             end;
+        end;
     end;
 
     procedure OpenDetailForRecRef(var RecordRef: RecordRef): Boolean
@@ -311,10 +312,15 @@ table 11756 "Registration Log CZL"
     var
         RegistrationLogDetail: Record "Registration Log Detail CZL";
     begin
+        if ResponseValue = '' then
+            exit;
+
         InitRegistrationLogDetailFromRec(RegistrationLogDetail, FieldName, CurrentValue);
         RegistrationLogDetail.Response := CopyStr(ResponseValue, 1, MaxStrLen(RegistrationLogDetail.Response));
 
-        if RegistrationLogDetail."Current Value" = RegistrationLogDetail.Response then
+        if (RegistrationLogDetail."Current Value" = RegistrationLogDetail.Response) and
+           (RegistrationLogDetail.Response <> '')
+        then
             RegistrationLogDetail.Status := RegistrationLogDetail.Status::Valid;
         RegistrationLogDetail.Insert();
 

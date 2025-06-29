@@ -150,7 +150,6 @@ codeunit 11710 "Data Class. Eval. Handler CZL"
         VATAmountLine: Record "VAT Amount Line";
         VATEntry: Record "VAT Entry";
         VATPostingSetup: Record "VAT Posting Setup";
-        VATReportHeader: Record "VAT Report Header";
         VATStatementLine: Record "VAT Statement Line";
         VATStatementName: Record "VAT Statement Name";
         VATStatementTemplate: Record "VAT Statement Template";
@@ -204,7 +203,6 @@ codeunit 11710 "Data Class. Eval. Handler CZL"
         DataClassificationMgt.SetTableFieldsToNormal(Database::"VAT Period CZL");
         DataClassificationMgt.SetTableFieldsToNormal(Database::"VAT Statement Attachment CZL");
         DataClassificationMgt.SetTableFieldsToNormal(Database::"VAT Statement Comment Line CZL");
-        DataClassificationMgt.SetTableFieldsToNormal(Database::"VAT Stmt. Report Line Data CZL");
         DataClassificationMgt.SetTableFieldsToNormal(Database::"VIES Declaration Header CZL");
         DataClassificationMgt.SetTableFieldsToNormal(Database::"VIES Declaration Line CZL");
 
@@ -567,8 +565,6 @@ codeunit 11710 "Data Class. Eval. Handler CZL"
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Posting Setup", VATPostingSetup.FieldNo("Ratio Coefficient CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Posting Setup", VATPostingSetup.FieldNo("Corrections Bad Receivable CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Posting Setup", VATPostingSetup.FieldNo("VAT LCY Corr. Rounding Acc.CZL"));
-        DataClassificationMgt.SetFieldToNormal(Database::"VAT Report Header", VATReportHeader.FieldNo("Round to Integer CZL"));
-        DataClassificationMgt.SetFieldToNormal(Database::"VAT Report Header", VATReportHeader.FieldNo("Rounding Direction CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Line", VATStatementLine.FieldNo("Attribute Code CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Line", VATStatementLine.FieldNo("G/L Amount Type CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Line", VATStatementLine.FieldNo("Gen. Bus. Posting Group CZL"));
@@ -584,12 +580,7 @@ codeunit 11710 "Data Class. Eval. Handler CZL"
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Line", VATStatementLine.FieldNo("Ignore Simpl. Doc. Limit CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Name", VATStatementName.FieldNo("Comments CZL"));
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Name", VATStatementName.FieldNo("Attachments CZL"));
-        DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Name", VATStatementName.FieldNo("XML Format CZL"));
-#if not CLEAN26
-#pragma warning disable AL0432
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Template", VATStatementTemplate.FieldNo("XML Format CZL"));
-#pragma warning restore AL0432
-#endif
         DataClassificationMgt.SetFieldToNormal(Database::"VAT Statement Template", VATStatementTemplate.FieldNo("Allow Comments/Attachments CZL"));
 #if not CLEAN23
 #pragma warning disable AL0432
