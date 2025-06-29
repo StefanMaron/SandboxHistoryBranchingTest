@@ -41,7 +41,7 @@ pagecustomization "SOA Multi Item Avail." customizes "SOA Multi Items Availabili
         {
             Visible = true;
         }
-        modify(LineUOMDescription)
+        modify(LineUOM)
         {
             Visible = true;
         }

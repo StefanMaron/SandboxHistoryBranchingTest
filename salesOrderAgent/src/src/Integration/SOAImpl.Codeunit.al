@@ -6,7 +6,6 @@
 #pragma warning disable AS0007
 namespace Microsoft.Agent.SalesOrderAgent;
 
-using System;
 using System.AI;
 using System.Agents;
 using System.Azure.KeyVault;
@@ -814,22 +813,4 @@ codeunit 4587 "SOA Impl"
             AddUnpaidEntriesAnnotation(Annotations);
     end;
 
-    procedure CheckQuotaCanConsume(): Boolean
-    var
-        ALCopilotFunctions: DotNet ALCopilotFunctions;
-        ALCopilotQuotaDetails: Dotnet ALCopilotQuotaDetails;
-        UnableToRetrieveQuotaDetailsLbl: Label 'Unable to retrieve quota details for tenant', locked = true;
-        IsTenantAllowedToConsumeQuotaLbl: Label 'Is tenant allowed to consume quota: %1', locked = true, Comment = '%1 = true/false';
-    begin
-        ALCopilotQuotaDetails := ALCopilotFunctions.GetCopilotQuotaDetails();
-
-        if IsNull(ALCopilotQuotaDetails) then begin
-            Session.LogMessage('0000P7L', UnableToRetrieveQuotaDetailsLbl, Verbosity::Warning, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'category', CategoryLbl);
-            exit(false);
-        end;
-
-        Session.LogMessage('0000P7M', StrSubstNo(IsTenantAllowedToConsumeQuotaLbl, Format(ALCopilotQuotaDetails.CanConsume())), Verbosity::Warning, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'category', CategoryLbl);
-
-        exit(ALCopilotQuotaDetails.CanConsume());
-    end;
 }
