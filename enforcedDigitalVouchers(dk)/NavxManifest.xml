@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="bb837764-d7cc-4b7b-898a-3ea5a1fab62f" Name="Enforced Digital Vouchers (DK)" Publisher="Microsoft" Brief="The Digital Vouchers extension makes it easy to generate digital version for every general ledger register." Description="In some countries authorities require to make sure that for every single general ledger register ther is a digital vouchers assigned." Version="25.5.30849.35974" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-how-setup-use-service-declaration" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="bb837764-d7cc-4b7b-898a-3ea5a1fab62f" Name="Enforced Digital Vouchers (DK)" Publisher="Microsoft" Brief="The Digital Vouchers extension makes it easy to generate digital version for every general ledger register." Description="In some countries authorities require to make sure that for every single general ledger register ther is a digital vouchers assigned." Version="25.0.23364.36035" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/finance-how-setup-use-service-declaration" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="13621" MaxObjectId="13626" />
     <IdRange MinObjectId="13645" MaxObjectId="13645" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e2ae191d-8829-44c3-a373-3749a2742d4e" Name="Enforced Digital Vouchers" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e2ae191d-8829-44c3-a373-3749a2742d4e" Name="Enforced Digital Vouchers" Publisher="Microsoft" MinVersion="25.0.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-26T15:54:21.8086757Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-27T20:08:12.2891536Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
