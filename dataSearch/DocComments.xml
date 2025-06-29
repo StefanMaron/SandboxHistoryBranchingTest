@@ -4,7 +4,7 @@
         <id>ac14293f-1eb7-4a7b-9936-b280da31970b</id>
         <name>Data Search</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35974</version>
+        <version>25.0.23364.36035</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#Foundation#DataSearch#Data Search Defaults.OnAfterGetTableList(Integer,List of [Integer]@)">
@@ -69,10 +69,10 @@
         </member>
         <member name="M:Codeunit::Microsoft#Foundation#DataSearch#Data Search Events.OnAfterGetFieldListForTable(Integer,List of [Integer]@)">
             <summary>
-            Enables adding and removing fields from the default initial setup for fields for the specified table.
+            Enables adding and removing tables from the default initial setup for tables to search.
             </summary>
             <param name="TableNo">The table no. of the table that is being set up.</param>
-            <param name="ListOfFieldNumbers">List of integer. You can specify additional fields for a table here or remove unwanted.</param>
+            <param name="ListOfFieldNumbers">List of integer. You can specifify additional fields for a table here or remove unwanted.</param>
         </member>
         <member name="M:Codeunit::Microsoft#Foundation#DataSearch#Data Search Events.OnGetExcludedRelatedTableField(Integer,Boolean@)">
             <summary>
