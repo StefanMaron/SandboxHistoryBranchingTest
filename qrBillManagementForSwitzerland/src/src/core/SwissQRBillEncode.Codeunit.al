@@ -36,7 +36,6 @@ codeunit 11513 "Swiss QR-Bill Encode"
             AddLineIfNotBlanked(Result, FormatAltProcedureText("Alt. Procedure Name 2", "Alt. Procedure Value 2"));
         end;
 
-        OnAfterGenerateQRCodeText(SwissQRBillBuffer, Result);
         exit(Result);
     end;
 
@@ -173,10 +172,5 @@ codeunit 11513 "Swiss QR-Bill Encode"
     local procedure AddLineIfNotBlanked(var TargetText: Text; LineText: Text)
     begin
         SwissQRBillMgt.AddLineIfNotBlanked(TargetText, LineText);
-    end;
-
-    [IntegrationEvent(false, false)]
-    local procedure OnAfterGenerateQRCodeText(var SwissQRBillBuffer: Record "Swiss QR-Bill Buffer"; var Result: Text)
-    begin
     end;
 }
