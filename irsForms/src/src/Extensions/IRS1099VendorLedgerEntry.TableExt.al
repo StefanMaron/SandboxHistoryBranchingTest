@@ -20,12 +20,7 @@ tableextension 10035 "IRS 1099 Vendor Ledger Entry" extends "Vendor Ledger Entry
         {
             DataClassification = CustomerContent;
             TableRelation = "IRS Reporting Period";
-
-            trigger OnValidate()
-            begin
-                IRS1099FormDocument.CheckIfVendLedgEntryAllowed(Rec."Entry No.");
-                Validate("IRS 1099 Form No.", '');
-            end;
+            Editable = false;
         }
         field(10032; "IRS 1099 Form No."; Code[20])
         {
