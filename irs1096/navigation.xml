@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="IRS 1096" ControlGUID="{91d5b1e3-505a-42a0-bb40-d0d246d33599}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10019" DepartmentCategory="Lists" RunObjectSrcTable="10018" ControlGUID="{26eedf96-f92b-41f9-85ea-f3a279b9b14f}" Name="IRS 1096 Forms" CaptionML="ENU=1096 Forms" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 140355789 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 140355789 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="IRS 1096" ControlGUID="{ac01beb6-af7d-4ffb-b667-cf31b21508ee}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10019" DepartmentCategory="Lists" RunObjectSrcTable="10018" ControlGUID="{c209dd37-028f-4782-a5d6-075f45e1143f}" Name="IRS 1096 Forms" CaptionML="ENU=1096 Forms" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 140355789 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 140355789 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
