@@ -732,8 +732,8 @@ codeunit 10673 "Generate SAF-T File"
                     SAFTXMLHelper.FinalizeXMLNode();
                 ExportGLEntryTransactionInfo(GLEntry, CurrentTransactionID);
                 PrevTransactionID := GetSAFTTransactionIDFromGLEntry(GLEntry);
+                GetFCYData(CurrencyCode, ExchangeRate, EntryAmount, EntryAmountLCY, SAFTExportHeader, GLEntry);
             end;
-            GetFCYData(CurrencyCode, ExchangeRate, EntryAmount, EntryAmountLCY, SAFTExportHeader, GLEntry);
             SAFTXMLHelper.AddNewXMLNode('Line', '');
             SAFTXMLHelper.AppendXMLNode('RecordID', format(GLEntry."Entry No."));
             SAFTXMLHelper.AppendXMLNode('AccountID', GLEntry."G/L Account No.");
@@ -1114,7 +1114,6 @@ codeunit 10673 "Generate SAF-T File"
 
         if GLEntry."Source Type" in [GLEntry."Source Type"::Customer, GLEntry."Source Type"::" "] then begin
             CustLedgEntry.SetRange("Transaction No.", GLEntry."Transaction No.");
-            CustLedgEntry.SetRange("Customer No.", GLEntry."Source No.");
             if not CustLedgEntry.FindFirst() then
                 exit;
             if CustLedgEntry."Currency Code" = '' then
@@ -1125,14 +1124,13 @@ codeunit 10673 "Generate SAF-T File"
             CurrencyCode := CustLedgEntry."Currency Code";
             ExchangeRate := GetCurrencyFactor(CustLedgEntry."Original Currency Factor", CustLedgEntry.Amount, CustLedgEntry."Amount (LCY)");
             if CustLedgEntry."Entry No." = GLEntry."Entry No." then begin
-                EntryAmount := Abs(CustLedgEntry.Amount);
-                EntryAmountLCY := Abs(CustLedgEntry."Amount (LCY)");
+                EntryAmount := CustLedgEntry.Amount;
+                EntryAmountLCY := CustLedgEntry."Amount (LCY)";
             end;
             exit;
         end;
         if GLEntry."Source Type" in [GLEntry."Source Type"::Vendor, GLEntry."Source Type"::" "] then begin
             VendLedgEntry.SetRange("Transaction No.", GLEntry."Transaction No.");
-            VendLedgEntry.SetRange("Vendor No.", GLEntry."Source No.");
             if not VendLedgEntry.FindFirst() then
                 exit;
             if VendLedgEntry."Currency Code" = '' then
@@ -1150,7 +1148,6 @@ codeunit 10673 "Generate SAF-T File"
         end;
         if GLEntry."Source Type" in [GLEntry."Source Type"::"Bank Account", GLEntry."Source Type"::" "] then begin
             BankAccLedgEntry.SetRange("Transaction No.", GLEntry."Transaction No.");
-            BankAccLedgEntry.SetRange("Bank Account No.", GLEntry."Source No.");
             if not BankAccLedgEntry.FindFirst() then
                 exit;
             if BankAccLedgEntry."Currency Code" = '' then

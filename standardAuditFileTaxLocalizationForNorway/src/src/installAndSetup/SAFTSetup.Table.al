@@ -89,11 +89,6 @@ table 10670 "SAF-T Setup"
             DataClassification = CustomerContent;
             Caption = 'Check Address';
         }
-        field(26; "Default Version"; Enum "SAF-T Version")
-        {
-            DataClassification = CustomerContent;
-            Caption = 'Default Version';
-        }
     }
 
     keys
