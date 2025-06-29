@@ -10,7 +10,7 @@ tableextension 13640 "OIOUBL-Payment Terms" extends "Payment Terms"
     {
         field(13630; "OIOUBL-Code"; Option)
         {
-            Caption = 'OIOUBL-Code', Comment = 'Leave OIOUBL- as leading eq for in Danish OIOUBL-kode';
+            Caption = 'Code';
             OptionMembers = " ",Contract,Specific;
         }
     }
