@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>26.1.33404.36020</version>
+        <version>26.0.30643.36068</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -98,26 +98,6 @@
         <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.Status:Codeunit::Microsoft#eServices#EDocument#Integration#Action#Integration Action Status">
             <summary>
             Retrieves the Action Status object.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetSourceDetails(Text)">
-            <summary>
-            Sets the source details.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetSourceDetails:Text">
-            <summary>
-            Retrieves the source details.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.SetAdditionalSourceDetails(Text)">
-            <summary>
-            Sets additional source details
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#ReceiveContext.GetAdditionalSourceDetails:Text">
-            <summary>
-            Retrieves additional source details.
             </summary>
         </member>
         <member name="O:Codeunit::Microsoft#eServices#EDocument#Integration#Receive#Receive Documents">
@@ -643,18 +623,21 @@
             Sets the HTTP response message object.
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Doc# Purchase Hist# Mapping.TrackRecord(E-Document,Variant,Variant)">
+        <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
             <summary>
-            Track header and line mapping between source and target records.
+            Function for service participant. 
             </summary>
         </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Processing#Import#Purchase#E-Doc# Purchase Line History">
+        <member name="O:Table::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
             <summary>
-            This table contains the history of field values that were on draft purchase lines, 
-            and their corresponding values on the posted purchase lines.
-            
-            The Keys section is for identifier values on the draft purchase line.
-            These are mapped to the corresponding values on the posted purchase line in the Values section.
+            Represents the service participant. 
+            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
+            </summary>
+        </member>
+        <member name="O:Page::Microsoft#eServices#EDocument#Service#Participant#Service Participants">
+            <summary>
+            Represents the service participant. 
+            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
             </summary>
         </member>
         <member name="O:Enum::Microsoft#eServices#EDocument#Processing#Import#E-Doc# Structured Data Process">
@@ -879,37 +862,6 @@
             </summary>
             <param name="EDocument">The E-Document record containing relevant details.</param>
             <returns>A Vendor record matching the E-Document.</returns>
-        </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Processing#E-Doc# Record Link">
-            <summary>
-            This table is used to link records together.
-            Used by purchase draft historical mapping algorithm:
-            - EDocPurchaseHistMappping.Codeunit.al
-            
-            To link a draft purchase line to a purchase line. 
-            </summary>
-        </member>
-        <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Function for service participant. 
-            </summary>
-        </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
-            </summary>
-        </member>
-        <member name="O:Page::Microsoft#eServices#EDocument#Service#Participant#Service Participants">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
-            </summary>
-        </member>
-        <member name="M:Table::Microsoft#eServices#EDocument#E-Document.Create(Enum::Microsoft#eServices#EDocument#E-Document Direction,Enum::Microsoft#eServices#EDocument#E-Document Type,E-Document Service)">
-            <summary>
-            Inserts a new E-Document record with the specified parameters.
-            </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Error Helper.ErrorMessageCount(E-Document@):Integer">
             <summary>
@@ -1305,14 +1257,6 @@
             Move attachment from E-Document to the newly created document.
             Used when importing E-Document into BC Document.
             </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Doc# Export.CreateEDocument(E-Document,RecordRef@,E-Document Service@,Enum::Microsoft#eServices#EDocument#E-Document Type)">
-             <summary>
-             CreateEDocument - Creates E-Document for the given document header and a given set of services.
-             
-             If services do not support the document type they are filtered out
-            
-             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.InsertServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
             <summary>
