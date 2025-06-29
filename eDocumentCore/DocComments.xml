@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35958</version>
+        <version>25.0.23364.36035</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -23,28 +23,6 @@
             <summary>
             Parses invoice information line by line from TempXMLBuffer.
             We handle the insert of Purchase Order Line and Document Attachment after the call to this function.
-            </summary>
-        </member>
-        <member name="O:PageExtension::Microsoft#eServices#EDocument#Extensions#E-Doc# Customer Card">
-            <summary>
-            A page extension for the Customer Card page to show the E-Document service participation.
-            </summary>
-        </member>
-        <member name="O:Codeunit::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Function for service participant. 
-            </summary>
-        </member>
-        <member name="O:Table::Microsoft#eServices#EDocument#Service#Participant#Service Participant">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
-            </summary>
-        </member>
-        <member name="O:Page::Microsoft#eServices#EDocument#Service#Participant#Service Participants">
-            <summary>
-            Represents the service participant. 
-            Table allows a participant (Customer/Vendor/Etc.) to be associated with multiple services.
             </summary>
         </member>
         <member name="M:Interface::Microsoft#eServices#EDocument#E-Document.Check(RecordRef@,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Processing Phase)">
@@ -325,11 +303,6 @@
             </summary>
             <param name="Hide">Hide or show the dialog.</param>
         </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.DetermineFileType(Text):Text">
-            <summary>
-            Use it to find attachment file extension when importing E-Document.
-            </summary>
-        </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Log Helper.InsertIntegrationLog(E-Document,E-Document Service,HttpRequestMessage,HttpResponseMessage)">
             <summary>
             Use it to insert integration log when you need to send more than one request to the service.
@@ -464,21 +437,6 @@
             <summary>
             Move attachment from E-Document to the newly created document.
             Used when importing E-Document into BC Document.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.InsertServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
-            <summary>
-            Inserts E-Document Service Status record. Throws runtime error if record does exists.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyServiceStatus(E-Document,E-Document Service,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
-            <summary>
-            Updates existing service status record. Throws runtime error if record does not exists.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Processing.ModifyEDocumentStatus(E-Document@,Enum::Microsoft#eServices#EDocument#E-Document Service Status)">
-            <summary>
-            Updates EDocument status based on E-Document Service Status value
             </summary>
         </member>
     </members>

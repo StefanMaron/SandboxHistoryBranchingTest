@@ -4,7 +4,7 @@
         <id>e6328152-bb29-4664-9dae-3bc7eaae1fd8</id>
         <name>Email - Outlook REST API</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35958</version>
+        <version>25.0.23364.36035</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Email#Email - OAuth Client.GetAccessToken(Text@)">
@@ -110,63 +110,6 @@
             <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
             <param name="EmailAddress">The email address of the mailbox.</param>
             <param name="ExternalMessageId">The external message id to be marked as read.</param>
-        </member>
-        <member name="O:Interface::System#Email#Email - Outlook API Client v4">
-            <summary>
-            Interface for the Email - Outlook API Client which allows retrieval of emails, replying to emails and marking emails as read.
-            </summary>
-        </member>
-        <member name="M:Interface::System#Email#Email - Outlook API Client v4.RetrieveEmails(SecretText,Email - Outlook Account,Email Retrieval Filters@):JsonArray">
-            <summary>
-            Retrieves the emails from the Outlook API.
-            </summary>
-            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
-            <param name="OutlookAccount">The email account to retrieve emails from.</param>
-            <param name="Filters">Filters for filtering the retrieval of emails.</param>
-            <returns>The json containing the information of the emails.</returns>"
-        </member>
-        <member name="M:Interface::System#Email#Email - Outlook API Client v4.RetrieveEmail(SecretText,Text[250],Text,Email Retrieval Filters@):JsonObject">
-            <summary>
-            Retrieves an email from the Outlook API.
-            </summary>
-            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
-            <param name="EmailAddress">The email address of the mailbox.</param>
-            <param name="ExternalMessageId">The external message id of the message to retrieve.</param>
-            <param name="Filters">Filters for filtering the retrieval of emails.</param>
-            <returns>The json containing the information of the email.</returns>
-        </member>
-        <member name="M:Interface::System#Email#Email - Outlook API Client v4.CreateDraftReply(SecretText,Text[250],Text):Text">
-            <summary>
-            Creates a draft reply to a specific email.
-            </summary>
-            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
-            <param name="EmailAddress">The email address of the mailbox.</param>
-            <param name="ExternalMessageId">The external message id of the message to create a reply for.</param>
-            <returns>The external message id of the created draft.</returns>
-        </member>
-        <member name="M:Interface::System#Email#Email - Outlook API Client v4.ReplyEmail(SecretText,Text[250],Text,Text)">
-            <summary>
-            Replies to an email.
-            </summary>
-            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
-            <param name="EmailAddress">The email address of the mailbox.</param>
-            <param name="EmailMessage">The email message containg the response for replying to the email.</param>
-        </member>
-        <member name="M:Interface::System#Email#Email - Outlook API Client v4.MarkEmailAsRead(SecretText,Text[250],Text)">
-            <summary>
-            Marks an email as read.
-            </summary>
-            <param name="AccessToken">The access token used for connecting to exchange via graph.</param>
-            <param name="EmailAddress">The email address of the mailbox.</param>
-            <param name="ExternalMessageId">The external message id to be marked as read.</param>
-        </member>
-        <member name="M:Codeunit::System#Email#Email - Outlook API Helper.KeepLastMessageOnly(Text):Text">
-            <summary>
-            Keep only the last message in the email body.
-            </summary>
-            <param name="Value">Email body.</param>
-            <returns>Cleaned email body.</returns>
-            <remarks>The last message is the message that is the reply to the email. The history of the email is removed.</remarks>
         </member>
     </members>
 </doc>
