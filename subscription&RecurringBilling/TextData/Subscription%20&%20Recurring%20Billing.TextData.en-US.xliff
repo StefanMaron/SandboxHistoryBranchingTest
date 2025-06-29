@@ -12861,6 +12861,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Exchange Rate Selection - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 81753491 - Action 2387389402 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the page for connecting subscriptions to Service Objects, filtered to the currently selected subscription.</source>
+          <target>Opens the page for connecting subscriptions to Service Objects, filtered to the currently selected subscription.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Action ConnectSubscriptionToServiceObject - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 81753491 - Action 2387389402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Connect Subscription to Service Object</source>
+          <target>Connect Subscription to Service Object</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Action ConnectSubscriptionToServiceObject - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 81753491 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Process</source>
           <target>Process</target>
@@ -13028,6 +13040,12 @@
           <target>Specifies the cost price for the usage data row.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 81753491 - Control 4265752052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether a Service Object is available to be connected with the subscription or if the connection has been established already.</source>
+          <target>Specifies whether a Service Object is available to be connected with the subscription or if the connection has been established already.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Usage Data Generic Import - Control Service Object - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 81753491 - Control 595830302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the start date of the billing period.</source>
@@ -14013,6 +14031,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer List - Action NewContract - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2901867346 - Action 2174910741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>View a list of service objects for the customer.</source>
+          <target>View a list of service objects for the customer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer List - Action ServiceObjects - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2901867346 - Action 2174910741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Service Objects</source>
+          <target>Service Objects</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer List - Action ServiceObjects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2901867346 - Action 2902406003 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>View a list of ongoing customer contracts.</source>
+          <target>View a list of ongoing customer contracts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer List - Action Contracts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2901867346 - Action 2902406003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Contracts</source>
+          <target>Contracts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer List - Action Contracts - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2901867346 - Action 411130336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
           <source>View a detailed list of services for the selected customer(s).</source>
           <target>View a detailed list of services for the selected customer(s).</target>
@@ -14217,6 +14259,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card - Action NewContract - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 4055858012 - Action 2902406003 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>View a list of ongoing vendor contracts.</source>
+          <target>View a list of ongoing vendor contracts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card - Action Contracts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4055858012 - Action 2902406003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Contracts</source>
+          <target>Contracts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card - Action Contracts - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4109301636 - Control 1377448496 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4109301636">
           <source>Subscription &amp; Recurring Billing</source>
           <target>Subscription &amp; Recurring Billing</target>
@@ -14337,6 +14391,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor List - Action NewContract - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 4194195770 - Action 2902406003 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4194195770">
+          <source>View a list of ongoing vendor contracts.</source>
+          <target>View a list of ongoing vendor contracts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor List - Action Contracts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4194195770 - Action 2902406003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4194195770">
+          <source>Contracts</source>
+          <target>Contracts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor List - Action Contracts - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 523354100 - Action 1195824138 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Create a contract for the customer.</source>
           <target>Create a contract for the customer.</target>
@@ -14348,6 +14414,30 @@
           <target>Contract</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Card - Action NewContract - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 523354100 - Action 2174910741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>View a list of service objects for the customer.</source>
+          <target>View a list of service objects for the customer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Card - Action ServiceObjects - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 523354100 - Action 2174910741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Service Objects</source>
+          <target>Service Objects</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Card - Action ServiceObjects - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 523354100 - Action 2902406003 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>View a list of ongoing customer contracts.</source>
+          <target>View a list of ongoing customer contracts.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Card - Action Contracts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 523354100 - Action 2902406003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Contracts</source>
+          <target>Contracts</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Card - Action Contracts - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 523354100 - Action 411130336 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Show a detailed list of services for the selected contract.</source>
