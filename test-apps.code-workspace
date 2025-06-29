@@ -12,19 +12,19 @@
   ],
   "settings": {
     "al.ruleSetPath": "",
-    "al.enableCodeAnalysis": false,
-    "al.enableCodeCop": false,
     "search.useIgnoreFiles": true,
-    "al.enableCodeActions": false,
-    "search.useGlobalIgnoreFiles": true,
     "search.exclude": {
       "**/*.xlf": true
     },
+    "al.enableCodeCop": false,
+    "al.enableUICop": false,
+    "al.enableCodeAnalysis": false,
+    "search.useGlobalIgnoreFiles": true,
+    "al.enableCodeActions": false,
     "files.watcherExclude": {
-      "**/node_modules/**": true,
       "**/.git/**": true,
-      "**/*.xlf": true
-    },
-    "al.enableUICop": false
+      "**/*.xlf": true,
+      "**/node_modules/**": true
+    }
   }
 }
