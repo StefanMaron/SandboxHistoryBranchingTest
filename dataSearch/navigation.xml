@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Data Search" ControlGUID="{60f47651-5bb3-4a01-b291-28f3699a30aa}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="2683" DepartmentCategory="Administration" RunObjectSrcTable="2000000058" ControlGUID="{6a93cbf6-c69a-4488-8fcb-ee633b56b99b}" Name="Data Search Setup (Table) List" CaptionML="CSY=Povolit tabulky pro vyhledávání;DAN=Aktivér tabeller til søgning;DEA=Tabellen für die Suche aktivieren;DES=Tabellen für die Suche aktivieren;DEU=Tabellen für die Suche aktivieren;ENA=Enable tables for searching;ENC=Enable tables for searching;ENG=Enable tables for searching;ENU=Enable tables for searching;ENZ=Enable tables for searching;ESM=Habilitar tablas para búsquedas;ESN=Habilitar tablas para búsquedas;FIN=Ota taulukot käyttöön hakua varten;FRA=Activer les tables pour la recherche;FRB=Activer les tables pour la recherche;FRC=Activer les tables pour la recherche;FRS=Activer les tables pour la recherche;ISL=Virkja töflur fyrir leit;ITA=Abilita tabelle per la ricerca;ITS=Abilita tabelle per la ricerca;NLB=Tabellen activeren voor zoeken;NLD=Tabellen activeren voor zoeken;NOR=Aktiver tabeller for søking;RUS=Активация таблиц для поиска;SVE=Aktivera tabeller för sökning" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1032144280 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1032144280 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="2686" DepartmentCategory="Administration" RunObjectSrcTable="2000000138" ControlGUID="{70094cfe-a3dd-4215-9aa6-38331cc85945}" Name="Data Search Setup (Lists)" CaptionML="CSY=Povolení seznamů pro vyhledávání;DAN=Aktivér lister til søgning;DEA=Listen für die Suche aktivieren;DES=Listen für die Suche aktivieren;DEU=Listen für die Suche aktivieren;ENA=Enable lists for searching;ENC=Enable lists for searching;ENG=Enable lists for searching;ENU=Enable lists for searching;ENZ=Enable lists for searching;ESM=Habilitar listas para búsqueda;ESN=Habilitar listas para búsqueda;FIN=Ota luettelot käyttöön hakua varten;FRA=Activer les listes pour la recherche;FRB=Activer les listes pour la recherche;FRC=Activer les listes pour la recherche;FRS=Activer les listes pour la recherche;ISL=Virkja lista fyrir leit;ITA=Abilita liste per la ricerca;ITS=Abilita liste per la ricerca;NLB=Lijsten activeren voor zoeken;NLD=Lijsten activeren voor zoeken;NOR=Aktiver lister for søking;RUS=Активация списков для поиска;SVE=Aktivera listor för sökning" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 344073747 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 344073747 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Data Search" ControlGUID="{f8a8413b-e47e-4d92-864b-a63261dd7e50}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="2683" DepartmentCategory="Administration" RunObjectSrcTable="2000000058" ControlGUID="{5615816b-c344-4b2e-9b0d-49f60635434c}" Name="Data Search Setup (Table) List" CaptionML="CSY=Povolit tabulky pro vyhledávání;DAN=Aktivér tabeller til søgning;DEA=Tabellen für die Suche aktivieren;DES=Tabellen für die Suche aktivieren;DEU=Tabellen für die Suche aktivieren;ENA=Enable tables for searching;ENC=Enable tables for searching;ENG=Enable tables for searching;ENU=Enable tables for searching;ENZ=Enable tables for searching;ESM=Habilitar tablas para búsquedas;ESN=Habilitar tablas para búsquedas;FIN=Ota taulukot käyttöön hakua varten;FRA=Activer les tables pour la recherche;FRB=Activer les tables pour la recherche;FRC=Activer les tables pour la recherche;FRS=Activer les tables pour la recherche;ISL=Virkja töflur fyrir leit;ITA=Abilita tabelle per la ricerca;ITS=Abilita tabelle per la ricerca;NLB=Tabellen activeren voor zoeken;NLD=Tabellen activeren voor zoeken;NOR=Aktiver tabeller for søking;RUS=Активация таблиц для поиска;SVE=Aktivera tabeller för sökning" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1032144280 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1032144280 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="2686" DepartmentCategory="Administration" RunObjectSrcTable="2000000138" ControlGUID="{eb0d39a7-ba0e-4a02-a944-08562df9dce8}" Name="Data Search Setup (Lists)" CaptionML="CSY=Povolení seznamů pro vyhledávání;DAN=Aktivér lister til søgning;DEA=Listen für die Suche aktivieren;DES=Listen für die Suche aktivieren;DEU=Listen für die Suche aktivieren;ENA=Enable lists for searching;ENC=Enable lists for searching;ENG=Enable lists for searching;ENU=Enable lists for searching;ENZ=Enable lists for searching;ESM=Habilitar listas para búsqueda;ESN=Habilitar listas para búsqueda;FIN=Ota luettelot käyttöön hakua varten;FRA=Activer les listes pour la recherche;FRB=Activer les listes pour la recherche;FRC=Activer les listes pour la recherche;FRS=Activer les listes pour la recherche;ISL=Virkja lista fyrir leit;ITA=Abilita liste per la ricerca;ITS=Abilita liste per la ricerca;NLB=Lijsten activeren voor zoeken;NLD=Lijsten activeren voor zoeken;NOR=Aktiver lister for søking;RUS=Активация списков для поиска;SVE=Aktivera listor för sökning" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 344073747 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 344073747 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="9010" TargetType="Page" />
-    <ActionChange TargetID="9009" TargetType="Page" />
-    <ActionChange TargetID="9016" TargetType="Page" />
-    <ActionChange TargetID="9000" TargetType="Page" />
-    <ActionChange TargetID="9015" TargetType="Page" />
-    <ActionChange TargetID="9028" TargetType="Page" />
     <ActionChange TargetID="8904" TargetType="Page" />
-    <ActionChange TargetID="9006" TargetType="Page" />
     <ActionChange TargetID="9008" TargetType="Page" />
-    <ActionChange TargetID="9022" TargetType="Page" />
     <ActionChange TargetID="8908" TargetType="Page" />
+    <ActionChange TargetID="9016" TargetType="Page" />
     <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="9026" TargetType="Page" />
+    <ActionChange TargetID="9000" TargetType="Page" />
+    <ActionChange TargetID="9028" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="9010" TargetType="Page" />
+    <ActionChange TargetID="9015" TargetType="Page" />
+    <ActionChange TargetID="9009" TargetType="Page" />
     <ActionChange TargetID="9024" TargetType="Page" />
+    <ActionChange TargetID="9026" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
