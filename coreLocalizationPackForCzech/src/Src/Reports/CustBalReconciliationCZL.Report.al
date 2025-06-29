@@ -20,7 +20,6 @@ report 11723 "Cust.- Bal. Reconciliation CZL"
     ApplicationArea = Basic, Suite;
     Caption = 'Customer - Bal. Reconciliation';
     UsageCategory = ReportsAndAnalysis;
-    EnableExternalImages = true;
 
     dataset
     {

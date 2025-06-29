@@ -6,7 +6,6 @@ namespace System.Upgrade;
 
 using Microsoft;
 using Microsoft.Assembly.Document;
-using Microsoft.Assembly.History;
 using Microsoft.Assembly.Setup;
 using Microsoft.Finance.GeneralLedger.Ledger;
 using Microsoft.Inventory.Item;
@@ -26,8 +25,6 @@ codeunit 31251 "Upgrade Application CZA"
                   tabledata "G/L Entry" = m,
                   tabledata "Inventory Setup" = m,
                   tabledata "Manufacturing Setup" = m,
-                  tabledata "Posted Assembly Header" = m,
-                  tabledata "Posted Assembly Line" = m,
                   tabledata "Transfer Shipment Line" = m,
                   tabledata "Item Entry Relation" = m,
                   tabledata "Standard Item Journal Line" = m;
@@ -49,7 +46,6 @@ codeunit 31251 "Upgrade Application CZA"
         DataUpgradeMgt.SetUpgradeInProgress();
         BindSubscription(InstallApplicationsCZA);
         UpgradeDefaultBusinessPostingGroup();
-        UpgradePostedDefaultBusinessPostingGroup();
         UnbindSubscription(InstallApplicationsCZA);
     end;
 
@@ -85,28 +81,6 @@ codeunit 31251 "Upgrade Application CZA"
         AssemblyLineDataTransfer.CopyFields();
 
         UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZA.GetDefaultBusinessPostingGroupUpgradeTag());
-    end;
-
-    local procedure UpgradePostedDefaultBusinessPostingGroup()
-    var
-        PostedAssemblyHeader: Record "Posted Assembly Header";
-        PostedAssemblyLine: Record "Posted Assembly Line";
-        PostedAssemblyHeaderDataTransfer: DataTransfer;
-        PostedAssemblyLineDataTransfer: DataTransfer;
-
-    begin
-        if UpgradeTag.HasUpgradeTag(UpgradeTagDefinitionsCZA.GetPostedDefaultBusinessPostingGroupUpgradeTag()) then
-            exit;
-
-        PostedAssemblyHeaderDataTransfer.SetTables(Database::"Posted Assembly Header", Database::"Posted Assembly Header");
-        PostedAssemblyHeaderDataTransfer.AddFieldValue(PostedAssemblyHeader.FieldNo("Gen. Bus. Posting Group CZA"), PostedAssemblyHeader.FieldNo("Gen. Bus. Posting Group"));
-        PostedAssemblyHeaderDataTransfer.CopyFields();
-
-        PostedAssemblyLineDataTransfer.SetTables(Database::"Posted Assembly Line", Database::"Posted Assembly Line");
-        PostedAssemblyLineDataTransfer.AddFieldValue(PostedAssemblyLine.FieldNo("Gen. Bus. Posting Group CZA"), PostedAssemblyLine.FieldNo("Gen. Bus. Posting Group"));
-        PostedAssemblyLineDataTransfer.CopyFields();
-
-        UpgradeTag.SetUpgradeTag(UpgradeTagDefinitionsCZA.GetPostedDefaultBusinessPostingGroupUpgradeTag());
     end;
 
     local procedure SetDatabaseUpgradeTags();

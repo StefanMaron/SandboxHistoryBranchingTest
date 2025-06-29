@@ -55,10 +55,7 @@ tableextension 31039 "Payment Order Line CZZ" extends "Payment Order Line CZB"
                 Vendor.Get(PurchAdvLetterHeaderCZZ."Pay-to Vendor No.");
                 Description := CreateDescription(GetPlaceholderDescriptionValues(PurchAdvLetterHeaderCZZ, Vendor."No.", Vendor.Name));
                 if Description = '' then
-                    if PurchAdvLetterHeaderCZZ."Posting Description" <> '' then
-                        Description := PurchAdvLetterHeaderCZZ."Posting Description"
-                    else
-                        Description := CopyStr(StrSubstNo(AdvanceNoTxt, PurchAdvLetterHeaderCZZ."No."), 1, MaxStrLen(Description));
+                    Description := CopyStr(StrSubstNo(AdvanceNoTxt, PurchAdvLetterHeaderCZZ."No."), 1, MaxStrLen(Description));
                 Rec.Validate("Variable Symbol", PurchAdvLetterHeaderCZZ."Variable Symbol");
                 if PurchAdvLetterHeaderCZZ."Constant Symbol" <> '' then
                     Rec.Validate("Constant Symbol", PurchAdvLetterHeaderCZZ."Constant Symbol");
