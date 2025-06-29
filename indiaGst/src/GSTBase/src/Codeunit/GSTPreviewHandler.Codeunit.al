@@ -9,7 +9,6 @@ using Microsoft.Finance.GeneralLedger.Preview;
 using Microsoft.Finance.GST.Payments;
 using Microsoft.Foundation.Navigate;
 using Microsoft.Inventory.Transfer;
-using Microsoft.Purchases.Payables;
 using Microsoft.Purchases.Posting;
 using Microsoft.Sales.Posting;
 using Microsoft.Sales.Receivables;
@@ -270,12 +269,6 @@ codeunit 18003 "GST Preview Handler"
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"CustEntry-Apply Posted Entries", 'OnBeforeCustPostApplyCustLedgEntry', '', false, false)]
     local procedure OnBeforeCustPostApplyCustLedgEntry()
-    begin
-        ClearBuffers();
-    end;
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"VendEntry-Apply Posted Entries", 'OnBeforeVendPostApplyVendLedgEntry', '', false, false)]
-    local procedure OnBeforeVendPostApplyVendLedgEntry()
     begin
         ClearBuffers();
     end;
