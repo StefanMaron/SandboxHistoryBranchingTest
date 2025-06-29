@@ -596,7 +596,7 @@ report 10477 "Elec. Sales Invoice MX"
                                 UnitPriceToPrint := Round(AmountExclInvDisc / TempSalesInvoiceLine.Quantity, 0.00001);
                             TotalAmountIncludingVAT += TempSalesInvoiceLine."Amount Including VAT";
 
-                            SATClassification := SATUtilities.GetSATItemClassification(TempSalesInvoiceLine.Type.AsInteger(), TempSalesInvoiceLine."No.");
+                            SATClassification := SATUtilities.GetSATClassification(TempSalesInvoiceLine.Type, TempSalesInvoiceLine."No.");
 
                             CollectAsmInformation(TempSalesInvoiceLine);
                             if OnLineNumber = NumberOfLines then
