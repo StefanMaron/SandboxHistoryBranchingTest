@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Electronic VAT submission for Norway" ControlGUID="{49525047-10e6-4693-8de3-4cba37f1d171}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10696" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{eea09308-8c0a-4416-8b71-137af2cab454}" Name="Elec. VAT Submission Wizard" CaptionML="ENU=Electronic VAT Submission Wizard;NOR=Vei viser for sending via elektronisk mva" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 547137075 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 547137075 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10692" DepartmentCategory="Administration" RunObjectSrcTable="10686" ControlGUID="{d356e301-054a-4550-8728-9c04eaf1eb41}" Name="Electronic VAT Setup Card" CaptionML="ENU=Electronic VAT Setup;NOR=Elektronisk mva-oppsett" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1354521070 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1354521070 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Electronic VAT submission for Norway" ControlGUID="{23bd1be6-5148-49c9-8489-ef4a91a57f8c}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10692" DepartmentCategory="Administration" RunObjectSrcTable="10686" ControlGUID="{2673412a-c9d5-41d5-86c0-b34208022d8c}" Name="Electronic VAT Setup Card" CaptionML="ENU=Electronic VAT Setup;NOR=Elektronisk mva-oppsett" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1354521070 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1354521070 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10696" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{9f20e5e1-3b18-43b8-87ef-fe1928746658}" Name="Elec. VAT Submission Wizard" CaptionML="ENU=Electronic VAT Submission Wizard;NOR=Vei viser for sending via elektronisk mva" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 547137075 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 547137075 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="349" TargetType="Page" />
-    <ActionChange TargetID="10602" TargetType="Page" />
     <ActionChange TargetID="740" TargetType="Page" />
     <ActionChange TargetID="1140" TargetType="Page" />
+    <ActionChange TargetID="349" TargetType="Page" />
+    <ActionChange TargetID="10602" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
