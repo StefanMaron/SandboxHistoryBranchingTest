@@ -13,9 +13,9 @@ pageextension 41018 "Customer List Ext." extends "Customer List"
                 action("GP Rec. Docs")
                 {
                     ApplicationArea = All;
-                    Caption = 'Customer Receivables Transactions';
+                    Caption = 'Receivables Transactions';
                     Image = Documents;
-                    ToolTip = 'View the GP receivables transactions for the customer.';
+                    ToolTip = 'View the GP receivables transactions.';
                     Visible = GPRecvDataAvailable;
 
                     trigger OnAction()
@@ -26,21 +26,12 @@ pageextension 41018 "Customer List Ext." extends "Customer List"
                         HistReceivablesDocuments.Run();
                     end;
                 }
-                action("GP All Rec. Docs")
-                {
-                    ApplicationArea = All;
-                    Caption = 'All Receivables Transactions';
-                    Image = ViewWorksheet;
-                    RunObject = Page "Hist. Receivables Documents";
-                    ToolTip = 'View all GP receivables transactions.';
-                    Visible = GPRecvDataAvailable;
-                }
                 action("GP Sales Trx.")
                 {
                     ApplicationArea = All;
-                    Caption = 'Customer Sales Transactions';
+                    Caption = 'Sales Transactions';
                     Image = Sales;
-                    ToolTip = 'View the GP sales transactions for the customer.';
+                    ToolTip = 'View the GP sales transactions.';
                     Visible = GPSalesTrxDataAvailable;
 
                     trigger OnAction()
@@ -50,15 +41,6 @@ pageextension 41018 "Customer List Ext." extends "Customer List"
                         HistSalesTrxHeaders.SetFilterCustomerNo(Rec."No.");
                         HistSalesTrxHeaders.Run();
                     end;
-                }
-                action("GP All Sales Trx.")
-                {
-                    ApplicationArea = All;
-                    Caption = 'All Sales Transactions';
-                    Image = ViewWorksheet;
-                    RunObject = Page "Hist. Sales Trx. Headers";
-                    ToolTip = 'View all GP sales transactions.';
-                    Visible = GPSalesTrxDataAvailable;
                 }
             }
         }
@@ -72,26 +54,11 @@ pageextension 41018 "Customer List Ext." extends "Customer List"
                 Image = Archive;
                 Visible = GPHistDataAvailable;
 
-                actionref("GP All Rec. Docs_Promoted"; "GP All Rec. Docs")
+                actionref("GP Rec. Docs_Promoted"; "GP Rec. Docs")
                 {
                 }
-                actionref("GP All Sales Trx._Promoted"; "GP All Sales Trx.")
+                actionref("GP Sales Trx._Promoted"; "GP Sales Trx.")
                 {
-                }
-
-                group(Category_GPGLDetail_Selected)
-                {
-                    Caption = 'Selected Customer';
-                    ShowAs = Standard;
-                    Image = Customer;
-                    Visible = GPHistDataAvailable;
-
-                    actionref("GP Rec. Docs_Promoted"; "GP Rec. Docs")
-                    {
-                    }
-                    actionref("GP Sales Trx._Promoted"; "GP Sales Trx.")
-                    {
-                    }
                 }
             }
         }
