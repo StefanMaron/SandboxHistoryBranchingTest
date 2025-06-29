@@ -2660,11 +2660,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control GenerallyAvailableCapabilities - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 1517301684 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copilot and agents use the Azure OpenAI Service. Your environment connects to this service in your own region.</source>
-          <target>Copilot and agents use the Azure OpenAI Service. Your environment connects to this service in your own region.</target>
+        <trans-unit id="Page 1549657920 - Control 1369294027 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generative AI capabilities are deactivated because Azure OpenAI Service is not available in your region. By allowing data movement, you agree to data being stored and processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</source>
+          <target>Generative AI capabilities are deactivated because Azure OpenAI Service is not available in your region. By allowing data movement, you agree to data being stored and processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AOAIServicesInRegionArea - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control NotAlwaysConnected2 - Property InstructionalText</note>
         </trans-unit>
         <trans-unit id="Page 1549657920 - Control 1622127448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Production ready previews</source>
@@ -2672,65 +2672,53 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control PreviewCapabilities - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 1957458270 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1549657920 - Control 1969027627 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</source>
           <target>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control EUDBAreaDataMovement - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control DataMovement2 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 1957458270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1549657920 - Control 1969027627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Allow data movement</source>
           <target>Allow data movement</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control EUDBAreaDataMovement - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control DataMovement2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 2141396850 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copilot and agents use the Azure OpenAI Service, which isn't available in your region. To keep using these capabilities, you must allow data movement.</source>
-          <target>Copilot and agents use the Azure OpenAI Service, which isn't available in your region. To keep using these capabilities, you must allow data movement.</target>
+        <trans-unit id="Page 1549657920 - Control 2238262141 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</source>
+          <target>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AllowedDataMovementOnInfo2 - Property InstructionalText</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control DataMovement - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1549657920 - Control 2238262141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Allow data movement</source>
+          <target>Allow data movement</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control DataMovement - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1549657920 - Control 2827485022 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copilot and agents use the Azure OpenAI Service available within the EU Data Boundary. To activate these capabilities, you must allow data movement within this boundary.</source>
-          <target>Copilot and agents use the Azure OpenAI Service available within the EU Data Boundary. To activate these capabilities, you must allow data movement within this boundary.</target>
+          <source>Copilot uses the Azure OpenAI Service, which isn’t available in your region. To activate Copilot capabilities, you must allow data movement.</source>
+          <target>Copilot uses the Azure OpenAI Service, which isn’t available in your region. To activate Copilot capabilities, you must allow data movement.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AllowedDataMovementOffInfo - Property InstructionalText</note>
         </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 336943668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>By allowing data movement, you agree to data being processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</source>
-          <target>By allowing data movement, you agree to data being processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</target>
+        <trans-unit id="Page 1549657920 - Control 3117944029 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>By allowing data movement, you agree to data being stored and processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</source>
+          <target>By allowing data movement, you agree to data being stored and processed by the Azure OpenAI Service outside of your environment's geographic region or compliance boundary.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AOAIOutOfRegionAreaCaption - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control NotAlwaysConnected - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 1549657920 - Control 3698943402 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copilot and other generative AI capabilities use Azure OpenAI Service. Your environment connects to Azure OpenAI Service in your region.</source>
+          <target>Copilot and other generative AI capabilities use Azure OpenAI Service. Your environment connects to Azure OpenAI Service in your region.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AlwaysConnected - Property InstructionalText</note>
         </trans-unit>
         <trans-unit id="Page 1549657920 - Control 3837785928 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copilot and agents use the Azure OpenAI Service available within the EU Data Boundary. To keep using these capabilities, you must allow data movement within this boundary.</source>
-          <target>Copilot and agents use the Azure OpenAI Service available within the EU Data Boundary. To keep using these capabilities, you must allow data movement within this boundary.</target>
+          <source>Copilot uses the Azure OpenAI Service, which isn’t available in your region. To keep using Copilot capabilities, you must allow data movement.</source>
+          <target>Copilot uses the Azure OpenAI Service, which isn’t available in your region. To keep using Copilot capabilities, you must allow data movement.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AllowedDataMovementOnInfo - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 3901839977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>By allowing data movement, you agree to data being processed by the Azure OpenAI Service within the EU Data Boundary.</source>
-          <target>By allowing data movement, you agree to data being processed by the Azure OpenAI Service within the EU Data Boundary.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control EUDBAreaCaption - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 475772340 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Copilot and agents use the Azure OpenAI Service, which isn't available in your region. To activate these capabilities, you must allow data movement.</source>
-          <target>Copilot and agents use the Azure OpenAI Service, which isn't available in your region. To activate these capabilities, you must allow data movement.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AllowedDataMovementOffInfo2 - Property InstructionalText</note>
-        </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 734116199 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</source>
-          <target>Specifies whether data movement across regions is allowed. This is required to enable Copilot in your environment.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AOAIOutOfRegionAreaDataMovement - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 1549657920 - Control 734116199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Allow data movement</source>
-          <target>Allow data movement</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Copilot AI Capabilities - Control AOAIOutOfRegionAreaDataMovement - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1549657920 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
           <source>About Copilot</source>

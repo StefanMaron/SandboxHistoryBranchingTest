@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35935</version>
+        <version>25.2.27733.36043</version>
     </application>
     <members>
         <member name="O:Codeunit::System#Azure#Functions#Azure Functions">
@@ -9654,10 +9654,12 @@
             <returns>AppID found in the Product ID</returns>
             <remarks>The AppSource unique product ID is specific to AppSource and combines different features while always ending with PAPID. and extension app id. Example: PUBID.mdcc1667400477212|AID.bc_converttemp_sample|PAPPID.9d314b3e-ffd3-41fd-8755-7744a6a790df</remarks>
         </member>
-        <member name="M:Codeunit::System#Apps#AppSource#AppSource Product Manager.CanInstallProductWithPlans(Text):Boolean">
+        <member name="M:Codeunit::System#Apps#AppSource#AppSource Product Manager.CanInstallProductWithPlans(JsonArray):Boolean">
             <summary>
             Checks if the product can be installed or your are required to perform operations on AppSource before you can install the product.
             </summary>
+            <param name="Plans">JSonArray representing the product plans</param>
+            <returns>True if the product can be installed, otherwise false</returns>
         </member>
         <member name="M:Codeunit::System#Apps#AppSource#AppSource Product Manager.EnsureValidLanguage(Text):Text">
             <summary>
@@ -18927,29 +18929,6 @@
             The Privacy Notice was disagreed.
             </summary>
         </member>
-        <member name="O:Codeunit::System#Privacy#System Privacy Notice Reg#">
-            <summary>
-            This codeunit registers platform level privacy notices and provides procedures to consistently reference the privacy notices.
-            </summary>
-        </member>
-        <member name="M:Codeunit::System#Privacy#System Privacy Notice Reg#.GetTeamsPrivacyNoticeId:Code[50]">
-            <summary>
-            Gets the Microsoft Teams privacy notice identifier.
-            </summary>
-            <returns>The privacy notice id for Microsoft Teams.</returns>
-        </member>
-        <member name="M:Codeunit::System#Privacy#System Privacy Notice Reg#.GetPowerAutomatePrivacyNoticeId:Code[50]">
-            <summary>
-            Gets the Power Automate privacy notice identifier.
-            </summary>
-            <returns>The privacy notice id for Power Automate.</returns>
-        </member>
-        <member name="M:Codeunit::System#Privacy#System Privacy Notice Reg#.GetPowerAutomatePrivacyNoticeName:Code[250]">
-            <summary>
-            Gets the Power Automate privacy notice name.
-            </summary>
-            <returns>The privacy notice name for Power Automate.</returns>
-        </member>
         <member name="O:Codeunit::System#IO#Data Compression">
             <summary>
             Exposes functionality to provide ability to create, update, read and dispose a binary data compression archive.
@@ -24148,14 +24127,6 @@
             <param name="CopilotCapability">The capability.</param>
             <param name="AppId">The app id associated with the capability.</param>
             <returns>True if the capability is active.</returns>
-        </member>
-        <member name="M:Codeunit::System#AI#Copilot Capability.OnGetRequiredPrivacyNotices(Enum::System#AI#Copilot Capability,Guid,List of [Code]@)">
-            <summary>
-            Event that is raised to specify if a Copilot capability depends on any additional privacy notices.
-            </summary>
-            <param name="CopilotCapability">The capability.</param>
-            <param name="AppId">The app id associated with the capability.</param>
-            <param name="RequiredPrivacyNotices">The list of required privacy notices for the capability to be enabled.</param>
         </member>
         <member name="O:Page::System#AI#Copilot Deactivate Capability">
             <summary>

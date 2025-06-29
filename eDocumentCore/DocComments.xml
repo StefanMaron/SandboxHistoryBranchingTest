@@ -4,7 +4,7 @@
         <id>e1d97edc-c239-46b4-8d84-6368bdf67c8b</id>
         <name>E-Document Core</name>
         <publisher>Microsoft</publisher>
-        <version>25.5.30849.35935</version>
+        <version>25.2.27733.36043</version>
     </application>
     <members>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#IO#Peppol#E-Doc# Data Exchange Impl#.OnBeforeCheckRecRefCount(Boolean@,Data Exch# Mapping)">
@@ -324,11 +324,6 @@
             Use it to set hide dialogs when importing E-Document.
             </summary>
             <param name="Hide">Hide or show the dialog.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Import Helper.DetermineFileType(Text):Text">
-            <summary>
-            Use it to find attachment file extension when importing E-Document.
-            </summary>
         </member>
         <member name="M:Codeunit::Microsoft#eServices#EDocument#E-Document Log Helper.InsertIntegrationLog(E-Document,E-Document Service,HttpRequestMessage,HttpResponseMessage)">
             <summary>
