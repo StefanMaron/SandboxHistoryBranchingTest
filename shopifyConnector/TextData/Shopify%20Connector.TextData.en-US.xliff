@@ -183,6 +183,12 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Company Card - Control CustomerNo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1026698561 - Control 3850961964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the external ID of the company.</source>
+          <target>Specifies the external ID of the company.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Company Card - Control External Id - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1026698561 - Control 3852170108 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the company's tax ID.</source>
           <target>Specifies the company's tax ID.</target>
@@ -699,6 +705,12 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Customer Adresses - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1544510057 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Locations</source>
+          <target>Locations</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Comp. Locations Subform - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1563807450 - Action 1030013428 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View the data retrieved from Shopify.</source>
           <target>View the data retrieved from Shopify.</target>
@@ -1028,6 +1040,12 @@
           <target>Specifies the company's name.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Companies - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1840591311 - Control 3850961964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the external ID of the company.</source>
+          <target>Specifies the external ID of the company.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Companies - Control External Id - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1840591311 - Control 415504711 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the unique identifier for the company in Shopify.</source>
@@ -2206,8 +2224,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Shop Card - Control Shopify URL - Property AboutTitle</note>
         </trans-unit>
         <trans-unit id="Page 1970429680 - Control 4281524059 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the URL of the Shopify Shop.</source>
-          <target>Specifies the URL of the Shopify Shop.</target>
+          <source>Specifies the URL of the Shopify Admin you are connecting to. Use the format: "https://{store ID}.myshopify.com". You can build the URL by combining the store ID from the admin URL, e.g., "admin.shopify.com/store/{store ID}" and ".myshopify.com". Simply copy the URL from the Shopify Admin, and the connector will convert it to the required format. Ensure you copy the URL from the Shopify Admin, not the online store, as the online store may display a redirect URL.</source>
+          <target>Specifies the URL of the Shopify Admin you are connecting to. Use the format: "https://{store ID}.myshopify.com". You can build the URL by combining the store ID from the admin URL, e.g., "admin.shopify.com/store/{store ID}" and ".myshopify.com". Simply copy the URL from the Shopify Admin, and the connector will convert it to the required format. Ensure you copy the URL from the Shopify Admin, not the online store, as the online store may display a redirect URL.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Shop Card - Control Shopify URL - Property ToolTip</note>
         </trans-unit>
@@ -5599,14 +5617,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Connector Guide - Control MyCompanyShopCard - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3918578631 - Control 3042726841 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shopify shop URL.</source>
-          <target>Shopify shop URL.</target>
+          <source>Specifies the URL of the Shopify Admin you are connecting to. Use the format: "https://{store ID}.myshopify.com". You can build the URL by combining the store ID from the admin URL, e.g., "admin.shopify.com/store/{store ID}" and ".myshopify.com". Simply copy the URL from the Shopify Admin, and the connector will convert it to the required format. Ensure you copy the URL from the Shopify Admin, not the online store, as the online store may display a redirect URL.</source>
+          <target>Specifies the URL of the Shopify Admin you are connecting to. Use the format: "https://{store ID}.myshopify.com". You can build the URL by combining the store ID from the admin URL, e.g., "admin.shopify.com/store/{store ID}" and ".myshopify.com". Simply copy the URL from the Shopify Admin, and the connector will convert it to the required format. Ensure you copy the URL from the Shopify Admin, not the online store, as the online store may display a redirect URL.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Connector Guide - Control ShopUrl - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3918578631 - Control 3042726841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shop URL</source>
-          <target>Shop URL</target>
+          <source>Shopify Admin URL</source>
+          <target>Shopify Admin URL</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Shpfy Connector Guide - Control ShopUrl - Property Caption</note>
         </trans-unit>
@@ -8844,11 +8862,23 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Type - Property OptionCaption</note>
         </trans-unit>
+        <trans-unit id="Table 1469669043 - Field 2600044519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bulk Operation Type</source>
+          <target>Bulk Operation Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Bulk Operation Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1469669043 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Name</source>
           <target>Name</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1469669043 - Field 3208180638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processed</source>
+          <target>Processed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Processed - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1469669043 - Field 3676003639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error Code</source>
@@ -8856,11 +8886,29 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Error Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1469669043 - Field 3989545019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Request Data</source>
+          <target>Request Data</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Request Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1469669043 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Url</source>
+          <target>Url</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Url - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1469669043 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <target>Status</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1469669043 - Field 659128980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Partial Data Url</source>
+          <target>Partial Data Url</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Bulk Operation - Field Partial Data Url - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1469669043 - Field 937700988 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bulk Operation Id</source>
@@ -9540,6 +9588,12 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company - Field Location Id - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2223052605 - Field 3850961964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>External Id</source>
+          <target>External Id</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company - Field External Id - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2223052605 - Field 4069603710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Main Contact Id</source>
           <target>Main Contact Id</target>
@@ -9708,6 +9762,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Phone No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 225231194 - Field 3997336476 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the company.</source>
+          <target>Specifies the name of the company.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Company Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 225231194 - Field 3997336476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Name</source>
+          <target>Company Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Company Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 225231194 - Field 3999400202 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Shopify Payment Terms Id which is mapped with Customer's Payment Terms.</source>
           <target>Specifies the Shopify Payment Terms Id which is mapped with Customer's Payment Terms.</target>
@@ -9720,9 +9786,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Shpfy Payment Terms Id - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 225231194 - Field 400074693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the recipient name for the company location.</source>
+          <target>Specifies the recipient name for the company location.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Recipient - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Table 225231194 - Field 400074693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Recipient</source>
-          <target>Recipient</target>
+          <source>Company/Attention</source>
+          <target>Company/Attention</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Recipient - Property Caption</note>
         </trans-unit>
@@ -9749,6 +9821,18 @@
           <target>City</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 225231194 - Field 978351652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the Shopify Payment Term.</source>
+          <target>Specifies the description of the Shopify Payment Term.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Shpfy Payment Term - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 225231194 - Field 978351652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shopify Payment Term</source>
+          <target>Shopify Payment Term</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Company Location - Field Shpfy Payment Term - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 225231194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shopify Company Location</source>
@@ -11191,8 +11275,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Shop - Field Sold Gift Card Account - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2860632388 - Field 4281524059 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shopify URL</source>
-          <target>Shopify URL</target>
+          <source>Shopify Admin URL</source>
+          <target>Shopify Admin URL</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Shpfy Shop - Field Shopify URL - Property Caption</note>
         </trans-unit>
