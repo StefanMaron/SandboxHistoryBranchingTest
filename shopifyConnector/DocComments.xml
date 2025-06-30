@@ -4,7 +4,7 @@
         <id>ec255f57-31d0-4ca2-b751-f2fa7c745abb</id>
         <name>Shopify Connector</name>
         <publisher>Microsoft</publisher>
-        <version>25.4.29661.36073</version>
+        <version>25.5.30849.36072</version>
     </application>
     <members>
         <member name="O:PermissionSet::Microsoft#Integration#Shopify#Shpfy - Admin">
@@ -1649,6 +1649,23 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateWebhookSub">
+            <summary>
+            Codeunit Shpfy GQL CreateWebhookSub (ID 30393) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateWebhookSub.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CreateWebhookSub.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Customer">
             <summary>
             Codeunit Shpfy GQL Customer (ID 30127) implements Interface Shpfy IGraphQL.
@@ -1678,6 +1695,57 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL CustomerIds.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DeleteWebhookSub">
+            <summary>
+            Codeunit Shpfy GQL DeleteWebhookSub (ID 30395) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DeleteWebhookSub.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DeleteWebhookSub.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DisputeById">
+            <summary>
+            Codeunit Shpfy GQL DisputeById (ID 30390) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DisputeById.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL DisputeById.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Disputes">
+            <summary>
+            Codeunit Shpfy GQL Disputes (ID 30388) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Disputes.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Disputes.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -1797,6 +1865,40 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Fulfillments">
+            <summary>
+            Codeunit Shpfy GQL Get Fulfillments (ID 30317) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Fulfillments.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Fulfillments.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Next S# Channels">
+            <summary>
+            Codeunit Shpfy GQL Get Next S. Channels (ID 30384) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Next S# Channels.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get Next S# Channels.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductImage">
             <summary>
             Codeunit Shpfy GQL GetProductImage (ID 30365) implements Interface Shpfy IGraphQL.
@@ -1826,6 +1928,40 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetProductOptions.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get SalesChannels">
+            <summary>
+            Codeunit Shpfy GQL Get SalesChannels (ID 30371) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get SalesChannels.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Get SalesChannels.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetWebhookSubs">
+            <summary>
+            Codeunit Shpfy GQL GetWebhookSubs (ID 30394) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetWebhookSubs.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL GetWebhookSubs.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -2020,6 +2156,23 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextDisputes">
+            <summary>
+            Codeunit Shpfy GQL NextDisputes (ID 30389) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextDisputes.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextDisputes.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextFFOrdersFromOrd.GetGraphQL:Text">
             <summary>
             GetGraphQL.
@@ -2119,6 +2272,40 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextOrdersToImport.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPaymTransactions">
+            <summary>
+            Codeunit Shpfy GQL NextPaymTransactions (ID 30387) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPaymTransactions.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPaymTransactions.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPayouts">
+            <summary>
+            Codeunit Shpfy GQL NextPayouts (ID 30392) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPayouts.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL NextPayouts.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -2352,6 +2539,40 @@
             </summary>
             <returns>Return value of type Integer.</returns>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL PaymentTransactions">
+            <summary>
+            Codeunit Shpfy GQL PaymentTransactions (ID 30386) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL PaymentTransactions.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL PaymentTransactions.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payouts">
+            <summary>
+            Codeunit Shpfy GQL Payouts (ID 30391) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payouts.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL Payouts.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductById">
             <summary>
             Codeunit Shpfy GQL ProductById (ID 30146) implements Interface Shpfy IGraphQL.
@@ -2415,23 +2636,6 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductMetafieldIds.GetExpectedCost:Integer">
-            <summary>
-            GetExpectedCost.
-            </summary>
-            <returns>Return value of type Integer.</returns>
-        </member>
-        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete">
-            <summary>
-            Codeunit Shpfy GQL ProductVariantDelete (ID 30344) implements Interface Shpfy IGraphQL.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete.GetGraphQL:Text">
-            <summary>
-            GetGraphQL.
-            </summary>
-            <returns>Return value of type Text.</returns>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL ProductVariantDelete.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -2524,6 +2728,23 @@
             <returns>Return value of type Text.</returns>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL UpdateProductImage.GetExpectedCost:Integer">
+            <summary>
+            GetExpectedCost.
+            </summary>
+            <returns>Return value of type Integer.</returns>
+        </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL UpdateProductOption">
+            <summary>
+            Codeunit Shpfy GQL UpdateProductOption (ID 30344) implements Interface Shpfy IGraphQL.
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL UpdateProductOption.GetGraphQL:Text">
+            <summary>
+            GetGraphQL.
+            </summary>
+            <returns>Return value of type Text.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy GQL UpdateProductOption.GetExpectedCost:Integer">
             <summary>
             GetExpectedCost.
             </summary>
@@ -4251,28 +4472,10 @@
             Codeunit Shpfy Payments (ID 30169).
             </summary>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payments.ImportPaymentTransactions">
-            <summary> 
-            Description for ImportPaymentTransactions.
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Payments API">
+            <summary>
+            Codeunit Shpfy Payments API (ID 30385).
             </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payments.ImportPayouts(BigInteger)">
-            <summary> 
-            Description for ImportPayouts.
-            </summary>
-            <param name="SinceId">Parameter of type BigInteger.</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payments.SetShop(Code[20])">
-            <summary> 
-            Set Shop.
-            </summary>
-            <param name="Code">Parameter of type Code[20].</param>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Payments.SetShop(Shpfy Shop)">
-            <summary> 
-            Set Shop.
-            </summary>
-            <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Payment Terms API">
             <summary>
@@ -4440,17 +4643,6 @@
             Checks if items can be added as variants to the product. The items cannot be added as variants if:
             - The product has more than one option.
             - The UoM as Variant setting is enabled.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.FindDefaultVariantId">
-            <summary>
-            Finds the default variant ID for the product if the product has no variants.
-            If new variants will be added, the default variant will be removed.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.RemoveDefaultVariant">
-            <summary>
-            Removes the default variant if new variants were added to the product.
             </summary>
         </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Create Item As Variant.SetParentProduct(BigInteger)">
@@ -4623,6 +4815,12 @@
             </summary>
             <param name="ShopifyProductId">Shopify product ID for which the options are to be retrieved.</param>
             <returns>Dictionary of option IDs and option names.</returns>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Product API.PublishProduct(Shpfy Product)">
+            <summary>
+            Publish product to selected Shopify Sales Channels
+            </summary>
+            <param name="ShopifyProduct">Shopify product to be published</param>
         </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Product Events">
             <summary>
@@ -5201,6 +5399,17 @@
             </summary>
             <param name="Product">VAR Record "Shopify Product".</param>
         </member>
+        <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Sales Channel API">
+            <summary>
+            Codeunit Shpfy Sales Channel API (ID 30372).
+            </summary>
+        </member>
+        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Sales Channel API.RetrieveSalesChannelsFromShopify(Code[20])">
+            <summary>
+            Retrieves the sales channels from Shopify and updates the table with the new sales channels.
+            </summary>
+            <param name="ShopCode">The code of the shop.</param>
+        </member>
         <member name="O:Codeunit::Microsoft#Integration#Shopify#Shpfy Sync Product Image">
             <summary>
             Codeunit Shpfy Sync Product Image (ID 30184).
@@ -5319,13 +5528,6 @@
             <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
             <returns>Return variable "Found" of type Boolean.</returns>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.AddProductVariant(Shpfy Variant@):Boolean">
-            <summary>
-            Adds a product variant to Shopify.
-            </summary>
-            <param name="ShopifyVariant">Shopify Variant record to add.</param>
-            <returns>True if the variant was added successfully; otherwise, false.</returns>
-        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.FindShopifyVariantByBarcode(Shpfy Variant@):Boolean">
             <summary> 
             Find Shopify Variant By Barcode.
@@ -5381,13 +5583,6 @@
             </summary>
             <param name="ShopifyShop">Parameter of type Record "Shopify Shop".</param>
         </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.UpdateProductVariant(Shpfy Variant,Shpfy Variant)">
-            <summary> 
-            Update Product Variant.
-            </summary>
-            <param name="ShopifyVariant">Parameter of type Record "Shopify Variant".</param>
-            <param name="xShopifyVariant">Parameter of type Record "Shopify Variant".</param>
-        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.UpdateShopifyVariantFields(Shpfy Product,Shpfy Variant@,Shpfy Inventory Item@,JsonObject):Boolean">
             <summary> 
             Update Shopify Variant Fields.
@@ -5397,12 +5592,6 @@
             <param name="ShopifyInventoryItem">Parameter of type Record "Shopify Inventory Item".</param>
             <param name="JVariant">Parameter of type JsonObject.</param>
             <returns>Return variable "Result" of type Boolean.</returns>
-        </member>
-        <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Variant API.DeleteProductVariant(BigInteger)">
-            <summary>
-            Deletes a product variant from Shopify.
-            </summary>
-            <param name="ShopifyVariantId">Id of the Shopify variant to delete.</param>
         </member>
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Cr# Prod# Status Value">
             <summary>
@@ -5422,6 +5611,11 @@
         <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy SKU Mapping">
             <summary>
             Enum Shpfy SKU Mapping (ID 30132).
+            </summary>
+        </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Variant Create Strategy">
+            <summary>
+            Enum Shpfy Variant Create Strategy (ID 30165).
             </summary>
         </member>
         <member name="O:Interface::Microsoft#Integration#Shopify#Shpfy ICreateProductStatusValue">
@@ -5522,6 +5716,11 @@
             Update Tags.
             </summary>
             <param name="CommaSeperatedTags">Parameter of type Text.</param>
+        </member>
+        <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Sales Channel">
+            <summary>
+            Table Shpfy Sales Channel (ID 30159).
+            </summary>
         </member>
         <member name="O:Table::Microsoft#Integration#Shopify#Shpfy Shop Collection Map">
             <summary>
@@ -5767,6 +5966,11 @@
             <param name="TempTranslation">Temporary record containing the new translations.</param>
             <returns>True if the translation has changed, false otherwise.</returns>
         </member>
+        <member name="O:Enum::Microsoft#Integration#Shopify#Shpfy Webhook Topic">
+            <summary>
+            Enum Shpfy Webhook Topic (ID 30167).
+            </summary>
+        </member>
         <member name="M:Codeunit::Microsoft#Integration#Shopify#Shpfy Mtfld Type Money.TryExtractValues(Text,Decimal@,Code[10]@):Boolean">
             <summary>
             Tried to extract the amount and currency code from the JSON string.
@@ -5775,23 +5979,6 @@
             <param name="Amount">Return value: the amount extracted from the JSON string.</param>
             <param name="CurrencyCode">Return value: the currency code extracted from the JSON string.</param>
             <returns>True if no errors occurred during the extraction.</returns>
-        </member>
-        <member name="O:Codeunit::Shpfy GQL Get Fulfillments">
-            <summary>
-            Codeunit Shpfy GQL Get Fulfillments (ID 30317) implements Interface Shpfy IGraphQL.
-            </summary>
-        </member>
-        <member name="M:Codeunit::Shpfy GQL Get Fulfillments.GetGraphQL:Text">
-            <summary>
-            GetGraphQL.
-            </summary>
-            <returns>Return value of type Text.</returns>
-        </member>
-        <member name="M:Codeunit::Shpfy GQL Get Fulfillments.GetExpectedCost:Integer">
-            <summary>
-            GetExpectedCost.
-            </summary>
-            <returns>Return value of type Integer.</returns>
         </member>
     </members>
 </doc>
