@@ -1,21 +1,4 @@
 {
-  "settings": {
-    "al.enableCodeAnalysis": false,
-    "files.watcherExclude": {
-      "**/.git/**": true,
-      "**/*.xlf": true,
-      "**/node_modules/**": true
-    },
-    "al.enableCodeActions": false,
-    "search.useGlobalIgnoreFiles": true,
-    "al.enableUICop": false,
-    "search.useIgnoreFiles": true,
-    "search.exclude": {
-      "**/*.xlf": true
-    },
-    "al.enableCodeCop": false,
-    "al.ruleSetPath": ""
-  },
   "folders": [
     {
       "path": "./testRunner"
@@ -26,5 +9,22 @@
     {
       "path": "./baseApplication/src/System/DevTools/CALTest"
     }
-  ]
+  ],
+  "settings": {
+    "al.enableCodeActions": false,
+    "al.enableCodeAnalysis": false,
+    "al.enableUICop": false,
+    "search.useGlobalIgnoreFiles": true,
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/*.xlf": true,
+      "**/.git/**": true
+    },
+    "al.ruleSetPath": "",
+    "search.exclude": {
+      "**/*.xlf": true
+    },
+    "search.useIgnoreFiles": true,
+    "al.enableCodeCop": false
+  }
 }
