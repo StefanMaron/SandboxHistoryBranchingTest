@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Dynamics GP Intelligent Cloud - US" ControlGUID="{69e3f0d3-d95a-44b9-8abc-8c367fdd5092}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="41000" DepartmentCategory="Administration" RunObjectSrcTable="41102" ControlGUID="{a1ddc888-c81c-47e3-8206-f28c298eea9a}" Name="GP 1099 Migration Log" CaptionML="ENU=GP 1099 Migration Log" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1714006218 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1714006218 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Dynamics GP Intelligent Cloud - US" ControlGUID="{6b909b18-0ff6-4ed1-a8ea-d79088adc060}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="41000" DepartmentCategory="Administration" RunObjectSrcTable="41102" ControlGUID="{641d0ae9-45b2-40fe-89d7-1e0b58967440}" Name="GP 1099 Migration Log" CaptionML="ENU=GP 1099 Migration Log" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1714006218 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1714006218 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
