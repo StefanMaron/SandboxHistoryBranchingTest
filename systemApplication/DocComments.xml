@@ -4,7 +4,7 @@
         <id>63ca2fa4-4f03-4f2b-a480-172fef340d3f</id>
         <name>System Application</name>
         <publisher>Microsoft</publisher>
-        <version>26.2.34746.36039</version>
+        <version>26.0.30643.36084</version>
     </application>
     <members>
         <member name="M:Codeunit::System#Agents#Agent Message.GetText(Agent Task Message@):Text">
@@ -10322,44 +10322,6 @@
             If true, inserts line breaks after every 76 characters.</param>
             <returns>The string representation, in base-64, of the input string.</returns>
         </member>
-        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text):Text">
-            <summary>
-            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
-            </summary>
-            <param name="String">The string to convert.</param>
-            <returns>The string representation, in base64url, of the input string.</returns>
-        </member>
-        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(SecretText):SecretText">
-            <summary>
-            Converts the value of the input secret string to its equivalent secret string representation that is encoded with base64 URL-safe characters.
-            </summary>
-            <param name="SecretString">The secret string to convert.</param>
-            <returns>The secret string representation, in base64url, of the input secret string.</returns>
-        </member>
-        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text,TextEncoding):Text">
-            <summary>
-            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
-            </summary>
-            <param name="String">The string to convert.</param>
-            <param name="TextEncoding">The TextEncoding for the input string.</param>
-            <returns>The string representation, in base64url, of the input string.</returns>
-        </member>
-        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(Text,TextEncoding,Integer):Text">
-            <summary>
-            Converts the value of the input string to its equivalent string representation that is encoded with base64 URL-safe characters.
-            </summary>
-            <param name="String">The string to convert.</param>
-            <param name="TextEncoding">The TextEncoding for the input string.</param>
-            <param name="Codepage">The Codepage if TextEncoding is MsDos or Windows.</param>
-            <returns>The string representation, in base64url, of the input string.</returns>
-        </member>
-        <member name="M:Codeunit::System#Text#Base64 Convert.ToBase64Url(InStream):Text">
-            <summary>
-            Converts the value of the input stream to its equivalent string representation that is encoded with base64 URL-safe characters.
-            </summary>
-            <param name="InStream">The stream to read the input from.</param>
-            <returns>The string representation, in base64url, of the input string.</returns>
-        </member>
         <member name="M:Codeunit::System#Text#Base64 Convert.FromBase64(Text):Text">
             <summary>
             Converts the specified string, which encodes binary data as base-64 digits, to an equivalent regular string.
@@ -13498,15 +13460,6 @@
             <summary>
             This method is used to request the camera barcode scanner.
             </summary>
-            <param name="ShowFlipCameraButton">Indicates whether the flip camera button should be shown.</param>
-            <param name="ShowTorchButton">Indicates whether the torch button should be shown.</param>
-            <param name="ResultDisplayDuration">The duration in milliseconds for which the barcode result should be displayed.</param>
-        </member>
-        <member name="M:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn.RequestBarcodeAsync(Text,Boolean,Boolean,Integer)">
-            <summary>
-            This method is used to request the camera barcode scanner.
-            </summary>
-            <param name="BarcodeFormats">A list of comma-separated barcode formats that the scanner should recognize. The available formats are: QR_CODE,DATA_MATRIX,UPC_A,UPC_E,EAN_8,EAN_13,CODE_39,CODE_93,CODE_128,CODABAR,ITF,RSS14,PDF_417,RSS_EXPANDED,MSI,AZTEC</param>
             <param name="ShowFlipCameraButton">Indicates whether the flip camera button should be shown.</param>
             <param name="ShowTorchButton">Indicates whether the torch button should be shown.</param>
             <param name="ResultDisplayDuration">The duration in milliseconds for which the barcode result should be displayed.</param>
@@ -20415,7 +20368,7 @@
             </summary>
             <param name="EmailMessage">Email message codeunit which is linked to the current email.</param>
         </member>
-        <member name="M:Codeunit::System#Email#Email.OnBeforeGetEmailAttachmentsByEmailScenarios(Email Scenario Attachments@)">
+        <member name="M:Codeunit::System#Email#Email.OnBeforeGetEmailAttachmentsByEmailScenarios(Email Scenario Attachments)">
             <summary>
             Integration event that allows adding filters to the Email Scenario Attachments before they are retrieved.
             </summary>
@@ -21810,16 +21763,6 @@
             Opens a save to dialog.
             </summary>
             <param name="Path">Start path of the dialog.</param>
-            <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
-             <param name="DialogTitle">Title of the selection dialog.</param>
-            <returns>Returns the selected file path.</returns>
-        </member>
-        <member name="M:Codeunit::System#ExternalFileStorage#External File Storage.SaveFile(Text,Text,Text,Text):Text">
-            <summary>
-            Opens a save to dialog.
-            </summary>
-            <param name="Path">Start path of the dialog.</param>
-            <param name="FileNameSuggestion">Suggested file name for the dialog.</param>
             <param name="FileExtension">The file extension without dot (like pdf or txt).</param>
              <param name="DialogTitle">Title of the selection dialog.</param>
             <returns>Returns the selected file path.</returns>
@@ -24729,12 +24672,6 @@
             <param name="CopilotCapability">The Copilot Capability to log usage for.</param>
             <param name="Usage">The usage to log.</param>
             <param name="CopilotQuotaUsageType">The type of Copilot Quota to log.</param>
-        </member>
-        <member name="M:Codeunit::System#AI#Copilot Quota.CanConsume:Boolean">
-            <summary>
-            Checks if the tenant is allowed to consume Copilot quota.
-            </summary>
-            <returns>True if allowed, false otherwise.</returns>
         </member>
         <member name="O:Enum::System#AI#Copilot Quota Usage Type">
             <summary>
