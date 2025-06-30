@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="SE Core" ControlGUID="{095615ee-780a-4268-bf3e-316b32c06fbe}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11291" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{70f832e8-5ceb-4bf4-9e41-74e38353443a}" Name="SE Income statement" CaptionML="ENU=Income Statement - SE;SVE=Resultaträkning – SE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2666907860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2666907860 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11290" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{4ba73e74-72a4-4e49-a5c1-79823a4afc6e}" Name="SE Balance sheet" CaptionML="ENU=Balance Sheet - SE;SVE=Balansräkning – SE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3644963817 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3644963817 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="SE Core" ControlGUID="{c3263c07-816e-4298-ab42-5c23f88f3345}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11290" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{c9917f08-1799-43be-a935-e071f2fb9fe7}" Name="SE Balance sheet" CaptionML="ENU=Balance Sheet - SE;SVE=Balansräkning – SE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3644963817 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3644963817 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="11291" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{64eda41b-7cb8-4be4-89d3-6da64a3b9110}" Name="SE Income statement" CaptionML="ENU=Income Statement - SE;SVE=Resultaträkning – SE" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2666907860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2666907860 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="1" TargetType="Page" />
     <ActionChange TargetID="9020" TargetType="Page" />
-    <ActionChange TargetID="9001" TargetType="Page" />
     <ActionChange TargetID="532" TargetType="Page" />
     <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="9001" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
     <ActionChange TargetID="9019" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
