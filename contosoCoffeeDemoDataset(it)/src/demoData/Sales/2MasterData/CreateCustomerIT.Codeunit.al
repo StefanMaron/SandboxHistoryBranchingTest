@@ -32,7 +32,6 @@ codeunit 12210 "Create Customer IT"
         Customer.Validate("VAT Registration No.", VatRegNo);
         Customer.Validate("Post Code", PostCode);
         Customer.Validate("Territory Code", TerritoryCode);
-        Customer."Format Region" := ''; // Format Region will be automatically set basing on the Language Code
         Customer.Validate("Language Code", LanguageCode);
     end;
 
