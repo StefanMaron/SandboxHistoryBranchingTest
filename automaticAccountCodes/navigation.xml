@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Automatic Account Codes" ControlGUID="{4843cedb-775c-4379-ad81-79525e876aa9}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4852" DepartmentCategory="Lists" RunObjectSrcTable="4850" ControlGUID="{c4870cd3-6a3b-4cfe-b3d3-47fa8ff177cc}" Name="Automatic Account List" CaptionML="ENU=Automatic Account Groups;SVE=Automatiska redovisningsmallar" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466853842 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466853842 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Automatic Account Codes" ControlGUID="{34877bb9-8356-485f-ab9c-d28e8629762f}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4852" DepartmentCategory="Lists" RunObjectSrcTable="4850" ControlGUID="{b2f48ce8-fdde-4cf2-bcb0-c1d8f9d63769}" Name="Automatic Account List" CaptionML="ENU=Automatic Account Groups;SVE=Automatiska redovisningsmallar" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466853842 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466853842 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="135" TargetType="Page" />
-    <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="17" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="6641" TargetType="Page" />
     <ActionChange TargetID="141" TargetType="Page" />
     <ActionChange TargetID="139" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="133" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
     <ActionChange TargetID="96" TargetType="Page" />
-    <ActionChange TargetID="6641" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="17" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="135" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="98" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="133" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
