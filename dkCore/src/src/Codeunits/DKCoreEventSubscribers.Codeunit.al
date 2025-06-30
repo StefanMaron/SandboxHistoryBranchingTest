@@ -144,7 +144,7 @@ codeunit 13601 "DK Core Event Subscribers"
 
     local procedure GetBankAccNo(BankAccountNo: Text[30]; BankBranchNo: Text[20]; IBAN: Code[50]; var ResultAccountNo: Text)
     begin
-        if (BankAccountNo = '') or (BankBranchNo = '') or (IBAN <> '') then
+        if (BankBranchNo = '') or (BankAccountNo = '') then
             ResultAccountNo := DelChr(IBAN, '=<>')
         else
             ResultAccountNo := BankBranchNo + BankAccountNo;
