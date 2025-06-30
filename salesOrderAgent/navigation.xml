@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{e8037463-f322-48e0-813a-62a8eb298f85}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4410" DepartmentCategory="Lists" RunObjectSrcTable="27" ControlGUID="{0473c584-4e7b-406e-8294-d31c52aca394}" Name="SOA Multi Items Availability" CaptionML="ENA=Item Availability;ENC=Item Availability;ENG=Item Availability;ENU=Item Availability;ENZ=Item Availability;FRA=Disponibilité article;FRC=Disponibilité article" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 712503301 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 712503301 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Sales Order Agent" ControlGUID="{7682d41d-1225-45a0-bf4a-485884fd28ec}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4410" DepartmentCategory="Lists" RunObjectSrcTable="27" ControlGUID="{180641f0-b1d6-4083-90c0-26b94a473b37}" Name="SOA Multi Items Availability" CaptionML="ENA=Item Availability;ENC=Item Availability;ENG=Item Availability;ENU=Item Availability;ENZ=Item Availability;FRA=Disponibilité article;FRC=Disponibilité article" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 712503301 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 712503301 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="41" TargetType="Page" />
     <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
