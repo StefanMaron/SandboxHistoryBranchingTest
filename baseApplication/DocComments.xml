@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>26.1.33404.36094</version>
+        <version>26.2.34746.36089</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -12770,6 +12770,22 @@
             The purpose of the table is to setup access to UX and logic of the purchase price calculation.
             TableType is not set to Temporary only because the ReadPermission() method always returns true.
             </summary>
+        </member>
+        <member name="M:Table::Microsoft#Purchases#Setup#Purchases &amp; Payables Setup.OnAfterShouldDocumentTotalAmountsBeChecked(Purchase Header,Boolean@)">
+            <summary>
+            Event to customize whether the document total amounts should be checked or not. If the system is configured to check the document totals, it will be checked regardless of the code executed in this event.
+            When using this event, consider that it can have multiple subscribers: it's a good practice to check the value that ShouldDocumentTotalAmountsBeChecked has before changing it.
+            </summary>
+            <param name="PurchaseHeader">The Purchase Header that we want to know if we should check the totals of.</param>
+            <param name="ShouldDocumentTotalAmountsBeChecked">Out-parameter</param>
+        </member>
+        <member name="M:Table::Microsoft#Purchases#Setup#Purchases &amp; Payables Setup.OnCanDocumentTotalAmountsBeEditable(Purchase Header,Boolean@)">
+            <summary>
+            Event to customize whether the document total amounts can be edited or not. By default, if the amounts are shown in the document they can be edited, however we provide an event to allow extensions to change this behavior. 
+            When using this event, consider that it can have multiple subscribers: it's a good practice to check the value that CanDocumentTotalAmountsBeEdited has before changing it.
+            </summary>
+            <param name="PurchaseHeader">The Purchase Header that we want to know if it can be edited.</param>
+            <param name="CanDocumentTotalAmountsBeEdited">Out-parameter</param>
         </member>
         <member name="M:Codeunit::Microsoft#Sales#Posting#Sales-Post.RunWithCheck(Sales Header@)">
             <summary>
