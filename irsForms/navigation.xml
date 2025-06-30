@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="IRS Forms" ControlGUID="{f68b9031-4a46-4a23-8964-f6a56e7109e5}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10036" DepartmentCategory="Administration" RunObjectSrcTable="10035" ControlGUID="{b8c033b4-e053-4f5a-a192-e6fbcbc35b26}" Name="IRS 1099 Form Documents" CaptionML="ENU=IRS 1099 Form Documents" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3142319989 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3142319989 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10035" DepartmentCategory="Administration" RunObjectSrcTable="10034" ControlGUID="{59fcbeaa-a6a8-453e-b072-d470de5bc14a}" Name="IRS 1099 Vendor Form Box Setup" CaptionML="ENU=IRS 1099 Vendor Form Box Setup" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3952259971 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3952259971 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10054" DepartmentCategory="Administration" RunObjectSrcTable="10045" ControlGUID="{279392e7-78b6-423e-a55e-a9bbd77ffe1d}" Name="IRS 1099 Vend. Form Box Adjmts" CaptionML="ENU=IRS 1099 Vendor Form Box Adjustments" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1564920860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1564920860 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10031" DepartmentCategory="Administration" RunObjectSrcTable="10031" ControlGUID="{6644e5d5-13d9-4c93-90da-0be26460f55d}" Name="IRS Reporting Periods" CaptionML="ENU=IRS Reporting Periods" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3382975900 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3382975900 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10030" DepartmentCategory="Administration" RunObjectSrcTable="10030" ControlGUID="{90e58183-174d-4221-a98e-798401043c82}" Name="IRS Forms Setup" CaptionML="ENU=IRS Forms Setup" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3912846198 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3912846198 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="10039" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{89f252e9-4fca-4655-9070-baef24f3bf42}" Name="IRS 1099 FIRE" CaptionML="ENU=IRS 1099 FIRE" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2019321099 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2019321099 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="IRS Forms" ControlGUID="{e036fa46-910d-48f8-a1d4-450b6e78f466}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10030" DepartmentCategory="Administration" RunObjectSrcTable="10030" ControlGUID="{82bb637c-eeff-4008-b84b-8ec175c8e119}" Name="IRS Forms Setup" CaptionML="ENU=IRS Forms Setup" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3912846198 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3912846198 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10054" DepartmentCategory="Administration" RunObjectSrcTable="10045" ControlGUID="{48256a0d-347b-464c-ba31-b44fffcf5a3b}" Name="IRS 1099 Vend. Form Box Adjmts" CaptionML="ENU=IRS 1099 Vendor Form Box Adjustments" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1564920860 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1564920860 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10035" DepartmentCategory="Administration" RunObjectSrcTable="10034" ControlGUID="{7db9c912-1dd3-4ed7-81ba-e66505f3d7d7}" Name="IRS 1099 Vendor Form Box Setup" CaptionML="ENU=IRS 1099 Vendor Form Box Setup" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3952259971 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3952259971 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="10039" DepartmentCategory="Reports and Analysis" RunObjectSrcTable="0" ControlGUID="{384d0f45-facf-469d-9ffa-c119d695a37c}" Name="IRS 1099 FIRE" CaptionML="ENU=IRS 1099 FIRE" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 2019321099 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 2019321099 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10031" DepartmentCategory="Administration" RunObjectSrcTable="10031" ControlGUID="{bbbd796a-821e-4416-a6f2-d2cab17e0f0b}" Name="IRS Reporting Periods" CaptionML="ENU=IRS Reporting Periods" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3382975900 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3382975900 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="10036" DepartmentCategory="Administration" RunObjectSrcTable="10035" ControlGUID="{77eb10d4-e81e-4fae-b0e9-90885bab18f2}" Name="IRS 1099 Form Documents" CaptionML="ENU=IRS 1099 Form Documents" ApplicationArea="#BasicUS" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3142319989 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3142319989 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
     <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="139" TargetType="Page" />
+    <ActionChange TargetID="141" TargetType="Page" />
+    <ActionChange TargetID="27" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
     <ActionChange TargetID="6641" TargetType="Page" />
     <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
-    <ActionChange TargetID="29" TargetType="Page" />
-    <ActionChange TargetID="141" TargetType="Page" />
-    <ActionChange TargetID="140" TargetType="Page" />
-    <ActionChange TargetID="254" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="27" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
     <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="139" TargetType="Page" />
+    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
