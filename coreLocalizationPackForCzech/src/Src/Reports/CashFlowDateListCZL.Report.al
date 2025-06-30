@@ -164,6 +164,15 @@ report 31005 "Cash Flow Date List CZL"
                 }
             }
         }
+
+        actions
+        {
+        }
+
+        trigger OnOpenPage()
+        begin
+            UserInputDateFrom := WorkDate();
+        end;
     }
 
     labels
@@ -175,17 +184,17 @@ report 31005 "Cash Flow Date List CZL"
         PAGENOCaption = 'Page';
         CashFlowDateListCaption = 'Cash Flow Date List';
         ServiceOrdersCaption = 'Service Orders';
-        SumTotalCaption = 'CF Interference';
+        SumTotalCaption = 'Cash Flow Interference';
         PurchaseOrdersCaptionL = 'Purchase Orders';
         PayablesCaption = 'Payables';
         SalesOrdersCaption = 'Sales Orders';
         ReceivablesCaption = 'Receivables';
-        ManualRevenuesCaption = 'CF Manual Revenues';
-        ManualExpensesCaption = 'CF Manual Expenses';
-        DateFromCaption = 'Date From';
-        DateToCaption = 'Date To';
-        InvFixedAssetsCaption = 'FA Budget';
-        SaleFixedAssetsCaption = 'FA Disposal';
+        ManualRevenuesCaption = 'Cash Flow Manual Revenues';
+        ManualExpensesCaption = 'Cash Flow Manual Expenses';
+        DateFromCaption = 'From';
+        DateToCaption = 'To';
+        InvFixedAssetsCaption = 'Fixed Assets Budget';
+        SaleFixedAssetsCaption = 'Fixed Assets Disposal';
         beforeCaption = 'Before:';
         afterCaption = 'After:';
         JobsCaption = 'Jobs';

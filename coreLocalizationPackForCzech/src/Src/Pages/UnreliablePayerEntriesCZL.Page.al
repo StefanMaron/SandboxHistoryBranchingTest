@@ -106,7 +106,6 @@ page 11753 "Unreliable Payer Entries CZL"
         {
             group(Category_New)
             {
-                Caption = 'New';
                 actionref(CreateVendorBankAccountCZL_Promoted; CreateVendorBankAccountCZL)
                 {
                 }
