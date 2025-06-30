@@ -39,7 +39,6 @@ codeunit 4586 "SOA Dispatcher"
     procedure RunSOAgent(Setup: Record "SOA Setup")
     var
         SOATask: Record "SOA Task";
-        CopilotQuota: Codeunit "Copilot Quota";
         QuotaCanConsume: Boolean;
         RetrievalSuccess: Boolean;
         ReplySuccess: Boolean;
@@ -61,7 +60,7 @@ codeunit 4586 "SOA Dispatcher"
         if not SOAImpl.CheckSOASetupStillValid(Setup) then
             exit;
 
-        QuotaCanConsume := CopilotQuota.CanConsume();
+        QuotaCanConsume := SOAImpl.CheckQuotaCanConsume();
         if QuotaCanConsume then begin
             // Retrieve emails
             LastSync := CurrentDateTime();
