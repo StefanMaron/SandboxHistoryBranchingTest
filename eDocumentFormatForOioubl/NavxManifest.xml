@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="8228f99b-cce5-4b9c-b247-9ee1145b7470" Name="E-Document format for OIOUBL" Publisher="Microsoft" Brief="E-Document format for OIOUBL." Description=": OIOUBL is a customization for Danish business requirements of the international UBL standard. This app supports OIOUBL 3.0 format for working with E-documents app." Version="25.4.29661.36073" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2194213" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="8228f99b-cce5-4b9c-b247-9ee1145b7470" Name="E-Document format for OIOUBL" Publisher="Microsoft" Brief="E-Document format for OIOUBL." Description=": OIOUBL is a customization for Danish business requirements of the international UBL standard. This app supports OIOUBL 3.0 format for working with E-documents app." Version="25.5.30849.36072" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2194213" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="13910" MaxObjectId="13913" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="ac762be1-e90f-4a72-b519-612a5e3ddc2e" Name="OIOUBL" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="ac762be1-e90f-4a72-b519-612a5e3ddc2e" Name="OIOUBL" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-28T20:33:18.0908879Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-28T20:30:03.6897576Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
