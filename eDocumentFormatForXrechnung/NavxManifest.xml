@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="fdeb586e-beff-49d8-947d-1e73ce980b34" Name="E-Document format for XRechnung" Publisher="Microsoft" Brief="E-Document format for XRechnung." Description=": XRechnung is a customization for Germany business requirements. This app supports XRechnung 3.0.2 format for working with E-documents app." Version="26.1.33404.36094" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2305711" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="fdeb586e-beff-49d8-947d-1e73ce980b34" Name="E-Document format for XRechnung" Publisher="Microsoft" Brief="E-Document format for XRechnung." Description=": XRechnung is a customization for Germany business requirements. This app supports XRechnung 3.0.2 format for working with E-documents app." Version="26.2.34746.36089" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2305711" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.2.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="13914" MaxObjectId="13917" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="26.2.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -18,6 +18,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T16:53:40.6549831Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-29T08:09:26.7388223Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
