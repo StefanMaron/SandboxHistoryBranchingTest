@@ -20,8 +20,17 @@ codeunit 31361 "Doc. Attachment Handler CZB"
         InitDocumentAttachmentFields(DocumentAttachment, RecRef);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Document Attachment Mgmt", 'OnAfterGetRefTable', '', false, false)]
-    local procedure GetTableOnAfterGetRefTable(var RecRef: RecordRef; DocumentAttachment: Record "Document Attachment")
+# if not CLEAN25
+    [Obsolete('Page Document Attachment Factbox is replaced by the "Doc. Attachment List Factbox" which supports multiple file upload. The corresponding event subscriber is replaced with GetTableOnAfterGetRecRefFail.', '25.0')]
+    [EventSubscriber(ObjectType::Page, Page::"Document Attachment Factbox", 'OnBeforeDrillDown', '', false, false)]
+    local procedure GetTableOnBeforeDrillDown(DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef)
+    begin
+        GetDocumentAttachmentTable(DocumentAttachment, RecRef);
+    end;
+# endif
+
+    [EventSubscriber(ObjectType::Page, Page::"Doc. Attachment List Factbox", 'OnAfterGetRecRefFail', '', false, false)]
+    local procedure GetTableOnAfterGetRecRefFail(DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef)
     begin
         GetDocumentAttachmentTable(DocumentAttachment, RecRef);
     end;
@@ -139,25 +148,29 @@ codeunit 31361 "Doc. Attachment Handler CZB"
             Database::"Payment Order Header CZB":
                 begin
                     DocumentRecordRef.Open(Database::"Payment Order Header CZB");
-                    if PaymentOrderHeaderCZB.Get(DocumentAttachment."No.") then
+                    PaymentOrderHeaderCZB.SetRange("No.", DocumentAttachment."No.");
+                    if PaymentOrderHeaderCZB.FindFirst() then
                         DocumentRecordRef.GetTable(PaymentOrderHeaderCZB);
                 end;
             Database::"Iss. Payment Order Header CZB":
                 begin
                     DocumentRecordRef.Open(Database::"Iss. Payment Order Header CZB");
-                    if IssPaymentOrderHeaderCZB.Get(DocumentAttachment."No.") then
+                    IssPaymentOrderHeaderCZB.SetRange("No.", DocumentAttachment."No.");
+                    if IssPaymentOrderHeaderCZB.FindFirst() then
                         DocumentRecordRef.GetTable(IssPaymentOrderHeaderCZB);
                 end;
             Database::"Bank Statement Header CZB":
                 begin
                     DocumentRecordRef.Open(Database::"Bank Statement Header CZB");
-                    if BankStatementHeaderCZB.Get(DocumentAttachment."No.") then
+                    BankStatementHeaderCZB.SetRange("No.", DocumentAttachment."No.");
+                    if BankStatementHeaderCZB.FindFirst() then
                         DocumentRecordRef.GetTable(BankStatementHeaderCZB);
                 end;
             Database::"Iss. Bank Statement Header CZB":
                 begin
                     DocumentRecordRef.Open(Database::"Iss. Bank Statement Header CZB");
-                    if IssBankStatementHeaderCZB.Get(DocumentAttachment."No.") then
+                    IssBankStatementHeaderCZB.SetRange("No.", DocumentAttachment."No.");
+                    if IssBankStatementHeaderCZB.FindFirst() then
                         DocumentRecordRef.GetTable(IssBankStatementHeaderCZB);
                 end;
         end;

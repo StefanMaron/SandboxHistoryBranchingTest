@@ -384,7 +384,7 @@ report 11795 "Income Statement CZL"
                         field(AccSchedNameCZL; AccSchedName)
                         {
                             ApplicationArea = Basic, Suite;
-                            Caption = 'Row Definition';
+                            Caption = 'Acc. Schedule Name';
                             Lookup = true;
                             TableRelation = "Acc. Schedule Name";
                             ToolTip = 'Specifies the name of the account schedule to be shown in the report.';
@@ -406,7 +406,7 @@ report 11795 "Income Statement CZL"
                         field(ColumnLayoutNameCZL; ColumnLayoutName)
                         {
                             ApplicationArea = Basic, Suite;
-                            Caption = 'Column Definition';
+                            Caption = 'Column Layout Name';
                             Lookup = true;
                             TableRelation = "Column Layout Name".Name;
                             ToolTip = 'Specifies the name of the column layout that you want to use in the window.';
@@ -418,7 +418,6 @@ report 11795 "Income Statement CZL"
                                 EntrdColumnName := CopyStr(Text, 1, 10);
                                 if AccSchedManagement.LookupColumnName(ColumnLayoutName, EntrdColumnName) then
                                     ColumnLayoutName := EntrdColumnName;
-                                ColumnLayoutNameHidden := '';
                             end;
 
                             trigger OnValidate()
@@ -426,7 +425,6 @@ report 11795 "Income Statement CZL"
                                 if ColumnLayoutName = '' then
                                     Error(ColumnLayoutNameErr);
                                 AccSchedManagement.CheckColumnName(ColumnLayoutName);
-                                ColumnLayoutNameHidden := '';
                             end;
                         }
                     }
@@ -633,6 +631,8 @@ report 11795 "Income Statement CZL"
         begin
             FinancialReportMgt.Initialize();
             GeneralLedgerSetup.Get();
+            AccSchedName := '';
+            ColumnLayoutName := '';
             TransferValues();
             if AccSchedName <> '' then
                 if ColumnLayoutName = '' then

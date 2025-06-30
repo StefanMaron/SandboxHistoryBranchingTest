@@ -1263,8 +1263,7 @@ table 31008 "Purch. Adv. Letter Header CZZ"
             Modify();
 
         if OldDimSetID <> "Dimension Set ID" then
-            if not IsNullGuid(Rec.SystemId) then
-                Modify();
+            Modify();
 
         OnAfterValidateShortcutDimCode(Rec, xRec, FieldNumber, ShortcutDimCode);
     end;
