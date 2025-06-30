@@ -106,8 +106,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page SharePoint Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 88812994 - Control 2445482498 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specify the Microsoft 365 mailbox that should be monitored. This will import PDF attachments from unread mail messages that were received since the last import attempt. You must have read/write permission for the mailbox, and the mailbox must be in the same Entra tenant as the Business Central environment.</source>
-          <target>Specify the Microsoft 365 mailbox that should be monitored. This will import PDF attachments from unread mail messages that were received since the last import attempt. You must have read/write permission for the mailbox, and the mailbox must be in the same Entra tenant as the Business Central environment.</target>
+          <source>Specify the e-mail address of the Microsoft 365 mailbox in which you receive document attachments. You must have read and write access to the specified mailbox, and it must be in the same tenant in which your Businesss Central environment is hosted.</source>
+          <target>Specify the e-mail address of the Microsoft 365 mailbox in which you receive document attachments. You must have read and write access to the specified mailbox, and it must be in the same tenant in which your Businesss Central environment is hosted.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Outlook Setup - Control General - Property InstructionalText</note>
         </trans-unit>
@@ -136,8 +136,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Outlook Setup - Control LastSync - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 88812994 - Control 3799228880 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Microsoft 365 mailbox where you receive invoice attachments.</source>
-          <target>Specifies the Microsoft 365 mailbox where you receive invoice attachments.</target>
+          <source>Specifies the Microsoft 365 mailbox from which to download document attachments.</source>
+          <target>Specifies the Microsoft 365 mailbox from which to download document attachments.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Outlook Setup - Control Mailbox - Property ToolTip</note>
         </trans-unit>
@@ -225,12 +225,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Sharepoint Setup - Field SiteId - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 302847314 - Field 788887887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Documents Folder Name</source>
-          <target>Documents Folder Name</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Sharepoint Setup - Field Documents Folder Name - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 302847314 - Field 799005950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Folder</source>
           <target>Document Folder</target>
@@ -272,12 +266,6 @@
           <target>Site Id</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table OneDrive Setup - Field SiteId - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3624811921 - Field 788887887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Documents Folder Name</source>
-          <target>Documents Folder Name</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table OneDrive Setup - Field Documents Folder Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3624811921 - Field 799005950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Folder</source>
@@ -326,18 +314,6 @@
           <target>Enabled At</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Outlook Setup - Field Enabled At - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 88812994 - Field 3408267763 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the customer has given consent to the privacy notice.</source>
-          <target>Specifies whether the customer has given consent to the privacy notice.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Outlook Setup - Field Consent Received - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Table 88812994 - Field 3408267763 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Consent Received</source>
-          <target>Consent Received</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Outlook Setup - Field Consent Received - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 88812994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Outlook Document Import Setup</source>
