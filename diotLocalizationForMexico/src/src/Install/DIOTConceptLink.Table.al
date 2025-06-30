@@ -9,7 +9,6 @@ using Microsoft.Finance.VAT.Setup;
 table 27031 "DIOT Concept Link"
 {
     Caption = 'DIOT Concept Link';
-    DataClassification = CustomerContent;
 
     fields
     {

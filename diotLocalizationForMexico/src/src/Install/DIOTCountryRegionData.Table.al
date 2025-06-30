@@ -7,7 +7,6 @@ namespace Microsoft.Finance.VAT.Reporting;
 table 27039 "DIOT Country/Region Data"
 {
     Caption = 'DIOT Country/Region Data';
-    DataClassification = CustomerContent;
 
     fields
     {
@@ -22,10 +21,6 @@ table 27039 "DIOT Country/Region Data"
         field(3; "BC Country/Region Code"; Code[10])
         {
             Caption = 'BC Country/Region Code';
-        }
-        field(4; "ISO A-3 Country/Region Code"; Code[10])
-        {
-            Caption = 'ISO A-3 Country/Region Code';
         }
     }
 

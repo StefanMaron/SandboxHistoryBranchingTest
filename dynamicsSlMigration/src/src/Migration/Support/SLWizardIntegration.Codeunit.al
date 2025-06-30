@@ -73,28 +73,20 @@ codeunit 47005 "SL Wizard Integration"
         SLMigrationErrorHandler: Codeunit "SL Migration Error Handler";
         Flag: Boolean;
     begin
-        if not (DataMigrationStatus."Migration Type" = this.SLHelperFunctions.GetMigrationTypeTxt()) then
+        if not (DataMigrationStatus."Migration Type" = SLHelperFunctions.GetMigrationTypeTxt()) then
             exit;
 
         if SLMigrationErrorHandler.GetErrorOccurred() then
             exit;
 
-        if not this.SLHelperFunctions.CreatePostMigrationData() then begin
-            this.SLHelperFunctions.GetLastError();
-            this.SLHelperFunctions.CheckAndLogErrors();
-            this.SLHelperFunctions.SetProcessesRunning(false);
-            DataCreationFailed := true;
-            exit;
-        end;
-
         if DataMigrationStatus.Status = DataMigrationStatus.Status::Completed then
-            this.UnRegisterSLDataMigrator();
+            UnRegisterSLDataMigrator();
 
         Codeunit.Run(Codeunit::"Categ. Generate Acc. Schedules");
         if SLMigrationConfig.Get() then
             if SLMigrationConfig."Updated GL Setup" then begin
                 Flag := true;
-                this.SLHelperFunctions.ResetAdjustforPaymentInGLSetup(Flag);
+                SLHelperFunctions.ResetAdjustforPaymentInGLSetup(Flag);
             end;
     end;
 
