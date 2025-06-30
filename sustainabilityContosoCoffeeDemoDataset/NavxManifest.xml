@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="a0673989-48a4-48a0-9517-499c9f4037d3" Name="Sustainability Contoso Coffee Demo Dataset" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Sustainability extension, we are making demo data available for various sustainability scenarios." Description="Sustainability specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various sustainability reporting scenarios." Version="25.4.29661.36073" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/contoso-coffee/contoso-coffee-intro" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="a0673989-48a4-48a0-9517-499c9f4037d3" Name="Sustainability Contoso Coffee Demo Dataset" Publisher="Microsoft" Brief="To help partners demonstrate the capabilities of Sustainability extension, we are making demo data available for various sustainability scenarios." Description="Sustainability specialists can run the tool on top of Cronus or My Company and get the setup and demo data they'll need when they demonstrate various sustainability reporting scenarios." Version="25.5.30849.36072" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?linkid=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2187180" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/en-us/dynamics365/business-central/contoso-coffee/contoso-coffee-intro" Url="https://go.microsoft.com/fwlink/?linkid=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="5212" MaxObjectId="5222" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="5a0b41e9-7a42-4123-d521-2265186cfb31" Name="Contoso Coffee Demo Dataset" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="false" IncludeSourceInSymbolFile="false" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-28T20:26:23.7097485Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-28T20:24:11.7874234Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
