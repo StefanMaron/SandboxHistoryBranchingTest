@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c" Name="Subscription Billing" Publisher="Microsoft" Brief="Sell and manage recurring subscriptions" Description="The app enables the selling of recurring subscriptions and provides accurate billing for a wide range of pricing models." Version="26.1.33404.36094" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2179727" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c" Name="Subscription Billing" Publisher="Microsoft" Brief="Sell and manage recurring subscriptions" Description="The app enables the selling of recurring subscriptions and provides accurate billing for a wide range of pricing models." Version="26.2.34746.36089" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2179727" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.2.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="8000" MaxObjectId="8100" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e4e86220-cac0-4ec3-b853-7c2fa610399d" Name="PowerBI Reports" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e4e86220-cac0-4ec3-b853-7c2fa610399d" Name="PowerBI Reports" Publisher="Microsoft" MinVersion="26.2.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="2ac317ef-11a5-4753-92f4-31c84b520c7b" Name="Subscription Billing Test" Publisher="Microsoft" />
@@ -21,6 +21,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T16:57:16.7060867Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-29T08:17:43.4544613Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>

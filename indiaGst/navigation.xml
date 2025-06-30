@@ -1,200 +1,200 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="India GST" ControlGUID="{17567c71-d691-486f-98a9-80651e367bab}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18004" DepartmentCategory="Lists" RunObjectSrcTable="18008" ControlGUID="{d60d4464-c578-42a8-86d7-1e7c05907cb7}" Name="GST Registration Nos." CaptionML="ENU=GST Registration Nos." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2396374983 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2396374983 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18206" DepartmentCategory="Documents" RunObjectSrcTable="18203" ControlGUID="{6a58e710-73b2-44fa-a577-233d098bacdd}" Name="GST Distribution Reversal" CaptionML="ENU=GST Distribution Reversal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3142665102 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3142665102 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18320" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{4831fec5-d9b7-479b-b064-2753f1c1f403}" Name="GST Liability Adjustment" CaptionML="ENU=GST Liability Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1020923404 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1020923404 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18467" DepartmentCategory="Lists" RunObjectSrcTable="18469" ControlGUID="{61da7b33-25dd-4bb3-8cf4-04643bb0a2af}" Name="Create GST Liability" CaptionML="ENU=Create GST Liability" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3171368141 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3171368141 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18478" DepartmentCategory="Lists" RunObjectSrcTable="18471" ControlGUID="{e279fb3d-9301-485f-9a1e-f5771a040d07}" Name="Multiple Order Subcon Rcp List" CaptionML="ENU=Multiple Order Subcon Receipt List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1580414373 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1580414373 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18005" DepartmentCategory="Lists" RunObjectSrcTable="18009" ControlGUID="{318426c5-42bb-4c99-93c3-404d10dd3cb5}" Name="HSN/SAC" CaptionML="ENU=HSN/SAC" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1771311637 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1771311637 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18317" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{3130f92b-0002-42a2-9944-c085fdcb18ce}" Name="GST Credit Adjustment" CaptionML="ENU=GST Credit Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 263140958 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 263140958 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18468" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{ed2c5661-95c1-4abc-a245-dc6a4345c2e5}" Name="Stock Register for Job Work" CaptionML="ENU=Stock Register for Job Work" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3656446840 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3656446840 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18467" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{110b40a6-dfbe-4f13-ba9b-234c32344e2a}" Name="Delivery Challan" CaptionML="ENU=Delivery Challan" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1782639179 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1782639179 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18483" DepartmentCategory="Lists" RunObjectSrcTable="39" ControlGUID="{52473fb7-6e55-4d62-b338-00f0ee2df56d}" Name="Ord. Subcon Details Rcpt.List" CaptionML="ENU=Ord. Subcon Details Rcpt. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2680571302 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2680571302 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18391" DepartmentCategory="Lists" RunObjectSrcTable="18390" ControlGUID="{49125f63-c9c7-4951-bfaa-26631fee5568}" Name="GST Tracking Entry" CaptionML="ENU=GST Tracking Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 215112861 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 215112861 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18322" DepartmentCategory="Lists" RunObjectSrcTable="18205" ControlGUID="{8a41177c-fbb3-4a4a-a05b-ec164d8a98af}" Name="Pay GST" CaptionML="ENU=Pay GST" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1156042004 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1156042004 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18211" DepartmentCategory="Lists" RunObjectSrcTable="18207" ControlGUID="{3d45d7e1-c907-435c-af1d-63ebcaf129c9}" Name="Posted GST Dist.- Invoice List" CaptionML="ENU=Posted GST Dist.- Invoice List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3838370693 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3838370693 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18213" DepartmentCategory="Lists" RunObjectSrcTable="18200" ControlGUID="{d1c2ef36-f1aa-4c51-95a5-15675ceb8fc9}" Name="Detailed GST Dist. Entries" CaptionML="ENU=Detailed GST Dist. Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 16019962 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 16019962 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18484" DepartmentCategory="Lists" RunObjectSrcTable="18473" ControlGUID="{a6b1c74f-79d9-4213-9a31-95956d13159e}" Name="Posted GST Liability Line" CaptionML="ENU=Posted GST Liability Line" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 982327788 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 982327788 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18353" DepartmentCategory="Lists" RunObjectSrcTable="18352" ControlGUID="{ce82cd62-dd3a-4adc-8bc4-0e4400b0b010}" Name="Posted Serv. Trans. Receipts" CaptionML="ENU=Posted Serv. Trans. Receipts" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 659022754 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 659022754 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18207" DepartmentCategory="Lists" RunObjectSrcTable="18203" ControlGUID="{e4ce7b0f-6393-4d18-8ec7-512e2888f901}" Name="GST Distribution Reversal List" CaptionML="ENU=GST Distribution Reversal List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2691714508 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2691714508 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18432" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{4a1c4163-aa21-4324-a023-5afe6965482e}" Name="Posted Reference Invoice No" CaptionML="ENU=Posted Reference Invoice No." ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3996229350 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3996229350 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18286" DepartmentCategory="Lists" RunObjectSrcTable="18284" ControlGUID="{0e9f6604-2975-406c-a01b-210eca043e0d}" Name="Posted GST Reconciliation" CaptionML="ENU=Posted GST Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3385157522 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3385157522 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18250" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{42ff88de-80a8-4153-973e-a0da713abe40}" Name="Update GST TDS Certificate Dtl" CaptionML="ENU=Update GST TDS Certificate Details" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2298355141 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2298355141 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18431" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{e9b0c1b7-18cf-4215-878c-ebdbbf751830}" Name="Update Reference Inv. Journals" CaptionML="ENU=Update Reference Inv. Journals" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2006874281 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2006874281 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18202" DepartmentCategory="Lists" RunObjectSrcTable="18202" ControlGUID="{bca25e15-5e60-4963-aa6f-1b6c088b3f35}" Name="GST Component Dist. List" CaptionML="ENU=GST Component Dist. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 409009755 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 409009755 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18245" DepartmentCategory="Lists" RunObjectSrcTable="18245" ControlGUID="{31256872-e84d-487c-a493-da5d67e336d0}" Name="GST TDS/TCS Entry" CaptionML="ENU=GST TDS/TCS Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3909481096 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3909481096 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18477" DepartmentCategory="Lists" RunObjectSrcTable="18471" ControlGUID="{1de9f524-5179-4ff2-a540-29e6a88018c5}" Name="Multiple Order Subcon Det List" CaptionML="ENU=Multiple Order Subcon Dispatch List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3919751009 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3919751009 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18321" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{b795a33b-20fb-45ea-bbfc-edd1624514c5}" Name="GST Settlement" CaptionML="ENU=GST Settlement" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 410647079 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 410647079 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18210" DepartmentCategory="Documents" RunObjectSrcTable="18207" ControlGUID="{4f768095-7fce-4c26-bdad-2cc29ab44295}" Name="Posted GST Dist.- Invoice" CaptionML="ENU=Posted GST Dist.- Invoice" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1050849691 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1050849691 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18351" DepartmentCategory="Documents" RunObjectSrcTable="18354" ControlGUID="{c6046973-711e-431b-8b2c-0ae72353f88a}" Name="Posted Serv. Transfer Shipment" CaptionML="ENU=Posted Serv. Transfer Shipment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4114505002 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4114505002 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18244" DepartmentCategory="Lists" RunObjectSrcTable="18243" ControlGUID="{220b5f2a-6c65-479f-83ed-cbbe159ff3c7}" Name="Bank Charges" CaptionML="ENU=Bank Charge" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3409406505 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3409406505 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18469" DepartmentCategory="Lists" RunObjectSrcTable="18469" ControlGUID="{027a884a-8931-454c-a6f8-a7a433ca2950}" Name="Delivery Challan Line" CaptionML="ENU=Delivery Challan Line" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2246881217 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2246881217 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18325" DepartmentCategory="Documents" RunObjectSrcTable="18321" ControlGUID="{7783ce4e-ee82-430f-a8ff-55fc8e30ed56}" Name="Posted GST Liability Adj." CaptionML="ENU=Posted GST Liability Adj." AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1180060929 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1180060929 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18357" DepartmentCategory="Lists" RunObjectSrcTable="18350" ControlGUID="{dea49df8-139a-49d0-9120-f21518138bcd}" Name="Service Transfer List" CaptionML="ENU=Service Transfer List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1418656432 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1418656432 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18000" DepartmentCategory="Lists" RunObjectSrcTable="18001" ControlGUID="{d460cf97-45d4-4a1a-b1d6-2ddc3868d352}" Name="Detailed GST Ledger Entry" CaptionML="ENU=Detailed GST Ledger Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3664566763 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3664566763 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18205" DepartmentCategory="Lists" RunObjectSrcTable="18203" ControlGUID="{fb94faa4-e012-45d8-a4a7-e0560a80626d}" Name="GST Distribution List" CaptionML="ENU=GST Distribution List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3305818884 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3305818884 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18482" DepartmentCategory="Lists" RunObjectSrcTable="39" ControlGUID="{f0149a3d-46a0-4d76-89b9-e49416f37bc4}" Name="Ord. Subcon Details Delv. List" CaptionML="ENU=Ord. Subcon Details Delv. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4099887568 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4099887568 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18497" DepartmentCategory="Lists" RunObjectSrcTable="18468" ControlGUID="{1494e5ed-daf8-4fca-92a4-a995ff5737de}" Name="Multi. Delivery Challan List" CaptionML="ENU=Multi. Delivery Challan List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4218091040 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4218091040 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18356" DepartmentCategory="Documents" RunObjectSrcTable="18351" ControlGUID="{454a1bb6-8ea4-4e13-a571-e8c38dfa5aad}" Name="Service Transfer Lines" CaptionML="ENU=Service Transfer Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 777781589 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 777781589 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18323" DepartmentCategory="Lists" RunObjectSrcTable="18317" ControlGUID="{e2a0addb-8986-41a1-b671-d0ae442a834c}" Name="Detailed Cr. Adjstmnt. Entries" CaptionML="ENU=Detailed Cr. Adjstmnt. Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3508948800 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3508948800 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18007" DepartmentCategory="Administration" RunObjectSrcTable="18012" ControlGUID="{faf4874d-7504-44ff-85db-0cb5c5968d51}" Name="Return &amp; Reco Components" CaptionML="ENU=Return &amp; Reco Components" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3302743029 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3302743029 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18146" DepartmentCategory="Lists" RunObjectSrcTable="18017" ControlGUID="{2a0afa9a-aabe-41eb-83f8-52b190da4255}" Name="E-Comm. Merchant Id" CaptionML="ENU=E-Comm. Merchant" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4174357583 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4174357583 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18150" DepartmentCategory="Lists" RunObjectSrcTable="20251" ControlGUID="{98684b01-6909-4512-a335-21a149a68dec}" Name="GST Rates" CaptionML="ENU=GST Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1263833995 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1263833995 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18326" DepartmentCategory="Lists" RunObjectSrcTable="18323" ControlGUID="{41cd8123-8c63-4f69-8ebc-d108d1b63467}" Name="GST Journal Templates" CaptionML="ENU=GST Journal Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4267556350 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4267556350 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18329" DepartmentCategory="Tasks" RunObjectSrcTable="18325" ControlGUID="{306ea6ad-b410-49cc-ab12-daed844f06ba}" Name="GST Adjustment Journal" CaptionML="ENU=GST Adjustment Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2992432906 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2992432906 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18358" DepartmentCategory="Documents" RunObjectSrcTable="18350" ControlGUID="{7aaf8a09-f220-47ba-96aa-f7c30d59c6a2}" Name="Service Transfer Order" CaptionML="ENU=Service Transfer Order" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2935633412 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2935633412 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18284" DepartmentCategory="Lists" RunObjectSrcTable="2000000041" ControlGUID="{bca08d8b-90e5-447e-baaa-c5b1b993693e}" Name="GST Recon. Field Mapping" CaptionML="ENU=GST Recon. Field Mapping" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2942171735 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2942171735 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18243" DepartmentCategory="Lists" RunObjectSrcTable="18244" ControlGUID="{2c5e2e70-b831-4e23-8d30-4a0ec9a916bc}" Name="Bank Charge Deemed Value Setup" CaptionML="ENU=Bank Charge Deemed Value Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3168498084 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3168498084 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18010" DepartmentCategory="Lists" RunObjectSrcTable="18002" ControlGUID="{3f9ebe6a-b151-4966-ab26-8bd89c3289d3}" Name="GST Claim Setoff" CaptionML="ENU=GST Claim Setoff" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3912502529 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3912502529 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18280" DepartmentCategory="Lists" RunObjectSrcTable="18282" ControlGUID="{b9010500-c3e3-41fd-9605-71ace1713a3f}" Name="GST Component Mapping Recon." CaptionML="ENU=GST Component Mapping Recon." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2370238420 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2370238420 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18008" DepartmentCategory="Administration" RunObjectSrcTable="18013" ControlGUID="{ce6c1659-4b43-4154-9470-e49fe771b046}" Name="Tax Type Setup" CaptionML="ENU=GST Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3621093334 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3621093334 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18001" DepartmentCategory="Lists" RunObjectSrcTable="18004" ControlGUID="{e0cf8a0b-696b-438a-af4e-4f2f5a9e97ba}" Name="GST Group" CaptionML="ENU=GST Group" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1603922681 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1603922681 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18200" DepartmentCategory="Lists" RunObjectSrcTable="18001" ControlGUID="{a7cc6c1c-4ffe-4bb3-a2d9-ba36656ca7e7}" Name="Dist. Input GST Credit" CaptionML="ENU=Dist. Input GST Credit" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4102269153 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4102269153 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18494" DepartmentCategory="Tasks" RunObjectSrcTable="18469" ControlGUID="{ac6c9cb4-9f06-461b-b985-ffc31de00a41}" Name="Sub. Item Tracking" CaptionML="ENU=Sub. Item Tracking" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 422702532 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 422702532 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18248" DepartmentCategory="Lists" RunObjectSrcTable="18248" ControlGUID="{0063a1a3-5dba-4efa-a988-19f5f5a7be08}" Name="Posted Journal Bank Charges" CaptionML="ENU=Posted Journal Bank Charges" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2555893737 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2555893737 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18281" DepartmentCategory="Lists" RunObjectSrcTable="18280" ControlGUID="{bce86d63-19ab-438f-aa74-e5c0268db748}" Name="GST Reconcilation List" CaptionML="ENU=GST Reconcilation List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 199778424 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 199778424 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18492" DepartmentCategory="Lists" RunObjectSrcTable="38" ControlGUID="{3093bb2d-000e-4db2-b252-33d105499a60}" Name="Subcontracting Order List" CaptionML="ENU=Subcontracting Orders" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 533576398 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 533576398 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18009" DepartmentCategory="Lists" RunObjectSrcTable="18016" ControlGUID="{56ec3896-3406-477e-a8e7-13f4d85c2938}" Name="Detailed GST Ledger Entry Info" CaptionML="ENU=Detailed GST Ledger Entry Info" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466323673 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466323673 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18002" DepartmentCategory="Lists" RunObjectSrcTable="18005" ControlGUID="{4ec89b1e-df42-4714-a615-c6c018b9d3f8}" Name="GST Ledger Entry" CaptionML="ENU=GST Ledger Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2197485539 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2197485539 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18201" DepartmentCategory="Documents" RunObjectSrcTable="18202" ControlGUID="{d92f12e5-53e6-42d6-9a61-97988a7f78b0}" Name="GST Component Dist. Card" CaptionML="ENU=GST Component Dist. Card" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1353545353 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1353545353 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18209" DepartmentCategory="Lists" RunObjectSrcTable="18207" ControlGUID="{27015130-e8a8-4852-8aa9-6cb7973cd70d}" Name="Posted GST Dist.-Cr. Memo List" CaptionML="ENU=Posted GST Dist.-Cr. Memo List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 775613065 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 775613065 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18350" DepartmentCategory="Documents" RunObjectSrcTable="18352" ControlGUID="{00351cce-4e46-4938-ae5b-ae289a75fd01}" Name="Posted Serv. Transfer Reciept" CaptionML="ENU=Posted Serv. Transfer Reciept" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3004029462 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3004029462 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18430" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{66fb0948-3d69-45ca-9f7a-56f76bbe2eb5}" Name="Update Reference Invoice No" CaptionML="ENU=Update Reference Invoice No." ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2525622998 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2525622998 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18203" DepartmentCategory="Documents" RunObjectSrcTable="18203" ControlGUID="{207e928c-6001-4207-bfd9-3aec1f2c277d}" Name="GST Distribution" CaptionML="ENU=GST Distribution" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4218731206 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4218731206 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18354" DepartmentCategory="Lists" RunObjectSrcTable="18354" ControlGUID="{74da4b96-982e-4d8e-b5c9-287611b96327}" Name="Posted Serv. Trans. Shipments" CaptionML="ENU=Posted Serv. Trans. Shipments" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3211409606 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3211409606 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18003" DepartmentCategory="Lists" RunObjectSrcTable="18007" ControlGUID="{4d8f0b52-1b38-42ae-8e6f-ff3ee2030224}" Name="GST Posting Setup" CaptionML="ENU=GST Posting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2568193321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2568193321 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18247" DepartmentCategory="Lists" RunObjectSrcTable="18247" ControlGUID="{1efa8bad-5e82-4799-bf69-d05bef5745fc}" Name="Journal Bank Charges" CaptionML="ENU=Journal Bank Charges" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1568685946 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1568685946 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18208" DepartmentCategory="Documents" RunObjectSrcTable="18207" ControlGUID="{6e7fd062-9b38-4e18-8c4a-9d0fce7053eb}" Name="Posted GST Dist.- Cr. Memo" CaptionML="ENU=Posted GST Dist.- Cr. Memo" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 962284359 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 962284359 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="India GST" ControlGUID="{edc79c24-f9eb-4da6-ae03-1553ed0b81e0}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18325" DepartmentCategory="Documents" RunObjectSrcTable="18321" ControlGUID="{0a59b080-e77c-4314-8195-c69d43390f2f}" Name="Posted GST Liability Adj." CaptionML="ENU=Posted GST Liability Adj." AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1180060929 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1180060929 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18000" DepartmentCategory="Lists" RunObjectSrcTable="18001" ControlGUID="{0085d45a-fd7b-4947-8194-0c5e8855b904}" Name="Detailed GST Ledger Entry" CaptionML="ENU=Detailed GST Ledger Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3664566763 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3664566763 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18244" DepartmentCategory="Lists" RunObjectSrcTable="18243" ControlGUID="{335c157d-9861-45c6-b2fa-b3d5cd332615}" Name="Bank Charges" CaptionML="ENU=Bank Charge" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3409406505 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3409406505 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18468" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{4bf88129-658f-4013-a61b-783028b1066c}" Name="Stock Register for Job Work" CaptionML="ENU=Stock Register for Job Work" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 3656446840 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 3656446840 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18431" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{d16c0fce-b2af-4a17-981e-39c196a22ea2}" Name="Update Reference Inv. Journals" CaptionML="ENU=Update Reference Inv. Journals" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2006874281 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2006874281 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Report" TargetID="18467" DepartmentCategory="Administration" RunObjectSrcTable="0" ControlGUID="{a90434f9-2f97-4481-ae07-6f3af77b04dd}" Name="Delivery Challan" CaptionML="ENU=Delivery Challan" ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Report 1782639179 - Property 2879900210" AdditionalSearchTermsTranslationKey="Report 1782639179 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18432" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{4861540e-67a1-45ed-bb01-408f3f815f56}" Name="Posted Reference Invoice No" CaptionML="ENU=Posted Reference Invoice No." ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3996229350 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3996229350 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18280" DepartmentCategory="Lists" RunObjectSrcTable="18282" ControlGUID="{dd0a0114-4144-4f5a-95f1-64200ccf0fff}" Name="GST Component Mapping Recon." CaptionML="ENU=GST Component Mapping Recon." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2370238420 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2370238420 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18248" DepartmentCategory="Lists" RunObjectSrcTable="18248" ControlGUID="{db82e85d-cd03-477d-88ee-9eef3bdf20fd}" Name="Posted Journal Bank Charges" CaptionML="ENU=Posted Journal Bank Charges" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2555893737 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2555893737 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18497" DepartmentCategory="Lists" RunObjectSrcTable="18468" ControlGUID="{f152ecca-7c0b-4bb5-8753-02fce7aee5d0}" Name="Multi. Delivery Challan List" CaptionML="ENU=Multi. Delivery Challan List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4218091040 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4218091040 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18357" DepartmentCategory="Lists" RunObjectSrcTable="18350" ControlGUID="{17815e37-7b1b-43b2-a5a0-6b9a9d176313}" Name="Service Transfer List" CaptionML="ENU=Service Transfer List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1418656432 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1418656432 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18321" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{7655fb78-f529-42e6-b30e-883f0fe852af}" Name="GST Settlement" CaptionML="ENU=GST Settlement" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 410647079 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 410647079 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18467" DepartmentCategory="Lists" RunObjectSrcTable="18469" ControlGUID="{94536705-7b76-4b25-a0a9-35c777f5571f}" Name="Create GST Liability" CaptionML="ENU=Create GST Liability" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3171368141 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3171368141 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18005" DepartmentCategory="Lists" RunObjectSrcTable="18009" ControlGUID="{8e825beb-977a-48f2-a156-707070474dae}" Name="HSN/SAC" CaptionML="ENU=HSN/SAC" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1771311637 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1771311637 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18320" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{f715f555-2ce0-4506-a298-6ea2bd53db63}" Name="GST Liability Adjustment" CaptionML="ENU=GST Liability Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1020923404 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1020923404 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18146" DepartmentCategory="Lists" RunObjectSrcTable="18017" ControlGUID="{db8d4aaf-813c-4b9f-a67f-bb9577950c64}" Name="E-Comm. Merchant Id" CaptionML="ENU=E-Comm. Merchant" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4174357583 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4174357583 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18350" DepartmentCategory="Documents" RunObjectSrcTable="18352" ControlGUID="{51d7d6c5-89e3-4385-a9c7-fbb25d85dab7}" Name="Posted Serv. Transfer Reciept" CaptionML="ENU=Posted Serv. Transfer Reciept" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3004029462 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3004029462 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18002" DepartmentCategory="Lists" RunObjectSrcTable="18005" ControlGUID="{350bb70c-85db-428c-ac70-65dc382fa1b9}" Name="GST Ledger Entry" CaptionML="ENU=GST Ledger Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2197485539 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2197485539 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18483" DepartmentCategory="Lists" RunObjectSrcTable="39" ControlGUID="{22521917-d165-46b4-a374-39a68a2a7613}" Name="Ord. Subcon Details Rcpt.List" CaptionML="ENU=Ord. Subcon Details Rcpt. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2680571302 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2680571302 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18281" DepartmentCategory="Lists" RunObjectSrcTable="18280" ControlGUID="{d90306ba-1385-4e3b-897b-43ba35e2e7e8}" Name="GST Reconcilation List" CaptionML="ENU=GST Reconcilation List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 199778424 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 199778424 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18008" DepartmentCategory="Administration" RunObjectSrcTable="18013" ControlGUID="{ed47d678-2494-4a4c-a370-d7564e5162e9}" Name="Tax Type Setup" CaptionML="ENU=GST Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3621093334 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3621093334 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18391" DepartmentCategory="Lists" RunObjectSrcTable="18390" ControlGUID="{50492e6a-0307-4a99-a78a-5ce0386be98b}" Name="GST Tracking Entry" CaptionML="ENU=GST Tracking Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 215112861 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 215112861 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18250" DepartmentCategory="Tasks" RunObjectSrcTable="0" ControlGUID="{c1cac215-86b7-42fa-a9e4-c27de65a9815}" Name="Update GST TDS Certificate Dtl" CaptionML="ENU=Update GST TDS Certificate Details" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2298355141 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2298355141 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18203" DepartmentCategory="Documents" RunObjectSrcTable="18203" ControlGUID="{463b0676-09d6-4cf8-9c37-f75701a392c4}" Name="GST Distribution" CaptionML="ENU=GST Distribution" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4218731206 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4218731206 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18205" DepartmentCategory="Lists" RunObjectSrcTable="18203" ControlGUID="{77b2504c-5cad-4e41-bf13-e219ae38eced}" Name="GST Distribution List" CaptionML="ENU=GST Distribution List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3305818884 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3305818884 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18010" DepartmentCategory="Lists" RunObjectSrcTable="18002" ControlGUID="{23beabde-5830-44d4-a4bd-6c289d5bcce6}" Name="GST Claim Setoff" CaptionML="ENU=GST Claim Setoff" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3912502529 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3912502529 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18200" DepartmentCategory="Lists" RunObjectSrcTable="18001" ControlGUID="{6ed15b95-4214-4922-b6a8-f6033bcfc93a}" Name="Dist. Input GST Credit" CaptionML="ENU=Dist. Input GST Credit" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4102269153 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4102269153 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18351" DepartmentCategory="Documents" RunObjectSrcTable="18354" ControlGUID="{214961c2-ecf7-41f6-b8fe-8a5a9a047e7b}" Name="Posted Serv. Transfer Shipment" CaptionML="ENU=Posted Serv. Transfer Shipment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4114505002 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4114505002 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18477" DepartmentCategory="Lists" RunObjectSrcTable="18471" ControlGUID="{86931cab-dc56-47c9-bc2b-f0378fff0475}" Name="Multiple Order Subcon Det List" CaptionML="ENU=Multiple Order Subcon Dispatch List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3919751009 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3919751009 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18243" DepartmentCategory="Lists" RunObjectSrcTable="18244" ControlGUID="{ac40cb81-36f7-4af3-991a-38caa523417b}" Name="Bank Charge Deemed Value Setup" CaptionML="ENU=Bank Charge Deemed Value Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3168498084 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3168498084 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18247" DepartmentCategory="Lists" RunObjectSrcTable="18247" ControlGUID="{919174b2-1b96-4cbc-99cc-91b4a2642031}" Name="Journal Bank Charges" CaptionML="ENU=Journal Bank Charges" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1568685946 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1568685946 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18004" DepartmentCategory="Lists" RunObjectSrcTable="18008" ControlGUID="{3bf64396-a84a-4f2f-99e2-dc039d3d78a2}" Name="GST Registration Nos." CaptionML="ENU=GST Registration Nos." ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2396374983 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2396374983 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18358" DepartmentCategory="Documents" RunObjectSrcTable="18350" ControlGUID="{f663dba4-ae04-4152-8262-cf41a256c00e}" Name="Service Transfer Order" CaptionML="ENU=Service Transfer Order" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2935633412 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2935633412 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18202" DepartmentCategory="Lists" RunObjectSrcTable="18202" ControlGUID="{c149a289-d545-4e28-ba0d-e31499d9abc9}" Name="GST Component Dist. List" CaptionML="ENU=GST Component Dist. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 409009755 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 409009755 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18211" DepartmentCategory="Lists" RunObjectSrcTable="18207" ControlGUID="{a17d4750-52aa-44b3-93b9-5ba0db1448c2}" Name="Posted GST Dist.- Invoice List" CaptionML="ENU=Posted GST Dist.- Invoice List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3838370693 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3838370693 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18317" DepartmentCategory="Documents" RunObjectSrcTable="0" ControlGUID="{da0a787f-de7f-4457-89a6-49ecc24c6cf0}" Name="GST Credit Adjustment" CaptionML="ENU=GST Credit Adjustment" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 263140958 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 263140958 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18322" DepartmentCategory="Lists" RunObjectSrcTable="18205" ControlGUID="{9b629496-3ddb-40ff-b367-ee5718db51e8}" Name="Pay GST" CaptionML="ENU=Pay GST" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1156042004 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1156042004 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18356" DepartmentCategory="Documents" RunObjectSrcTable="18351" ControlGUID="{beefd7c8-f8fd-4172-9bb8-df236eb0221e}" Name="Service Transfer Lines" CaptionML="ENU=Service Transfer Lines" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 777781589 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 777781589 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18213" DepartmentCategory="Lists" RunObjectSrcTable="18200" ControlGUID="{1bf13282-8251-4e87-918c-9d4ecd01e97d}" Name="Detailed GST Dist. Entries" CaptionML="ENU=Detailed GST Dist. Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 16019962 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 16019962 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18245" DepartmentCategory="Lists" RunObjectSrcTable="18245" ControlGUID="{ca5f15b7-72b2-41c1-9315-25ae2e4d8ec9}" Name="GST TDS/TCS Entry" CaptionML="ENU=GST TDS/TCS Entry" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3909481096 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3909481096 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18150" DepartmentCategory="Lists" RunObjectSrcTable="20251" ControlGUID="{81d14215-b36f-4673-a2a4-203421b1b7ed}" Name="GST Rates" CaptionML="ENU=GST Rates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1263833995 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1263833995 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18206" DepartmentCategory="Documents" RunObjectSrcTable="18203" ControlGUID="{5fc2d108-7c7b-4906-b0b3-ca8898af9906}" Name="GST Distribution Reversal" CaptionML="ENU=GST Distribution Reversal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3142665102 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3142665102 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18494" DepartmentCategory="Tasks" RunObjectSrcTable="18469" ControlGUID="{fb97881b-fd5f-41c7-a52f-5402ba6937ca}" Name="Sub. Item Tracking" CaptionML="ENU=Sub. Item Tracking" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 422702532 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 422702532 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18001" DepartmentCategory="Lists" RunObjectSrcTable="18004" ControlGUID="{2e67e887-df2c-4bb8-9d16-94ccd27c7fc6}" Name="GST Group" CaptionML="ENU=GST Group" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1603922681 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1603922681 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18201" DepartmentCategory="Documents" RunObjectSrcTable="18202" ControlGUID="{fcfd5122-38d8-4e9f-bfd6-83f820d10a0e}" Name="GST Component Dist. Card" CaptionML="ENU=GST Component Dist. Card" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1353545353 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1353545353 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18003" DepartmentCategory="Lists" RunObjectSrcTable="18007" ControlGUID="{70dd7bf9-36ef-45ab-9abf-e8011e3bb4ea}" Name="GST Posting Setup" CaptionML="ENU=GST Posting Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2568193321 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2568193321 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18484" DepartmentCategory="Lists" RunObjectSrcTable="18473" ControlGUID="{837bbe9f-ca36-4e8a-bcfe-a651abe90a93}" Name="Posted GST Liability Line" CaptionML="ENU=Posted GST Liability Line" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 982327788 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 982327788 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18286" DepartmentCategory="Lists" RunObjectSrcTable="18284" ControlGUID="{e23e5608-1329-4296-8d90-cc3abd7144f6}" Name="Posted GST Reconciliation" CaptionML="ENU=Posted GST Reconciliation" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3385157522 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3385157522 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18209" DepartmentCategory="Lists" RunObjectSrcTable="18207" ControlGUID="{24b6f7c1-bab0-49d4-8b73-64f41885411e}" Name="Posted GST Dist.-Cr. Memo List" CaptionML="ENU=Posted GST Dist.-Cr. Memo List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 775613065 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 775613065 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18329" DepartmentCategory="Tasks" RunObjectSrcTable="18325" ControlGUID="{995abeff-58da-499f-8b9f-35e4f4b49c70}" Name="GST Adjustment Journal" CaptionML="ENU=GST Adjustment Journal" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2992432906 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2992432906 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18354" DepartmentCategory="Lists" RunObjectSrcTable="18354" ControlGUID="{7b0acfed-5ee4-417f-870a-9d5d97ac92de}" Name="Posted Serv. Trans. Shipments" CaptionML="ENU=Posted Serv. Trans. Shipments" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3211409606 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3211409606 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18492" DepartmentCategory="Lists" RunObjectSrcTable="38" ControlGUID="{70b4af25-1064-4246-a986-b990ab75992a}" Name="Subcontracting Order List" CaptionML="ENU=Subcontracting Orders" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 533576398 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 533576398 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18284" DepartmentCategory="Lists" RunObjectSrcTable="2000000041" ControlGUID="{28a54984-05b9-4b6f-ab4c-55fedf200088}" Name="GST Recon. Field Mapping" CaptionML="ENU=GST Recon. Field Mapping" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2942171735 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2942171735 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18323" DepartmentCategory="Lists" RunObjectSrcTable="18317" ControlGUID="{5a62f529-2b0f-4315-af0c-c19380e8c39e}" Name="Detailed Cr. Adjstmnt. Entries" CaptionML="ENU=Detailed Cr. Adjstmnt. Entries" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3508948800 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3508948800 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18353" DepartmentCategory="Lists" RunObjectSrcTable="18352" ControlGUID="{d5da91c8-815d-4bd4-958b-0f5ceca0983f}" Name="Posted Serv. Trans. Receipts" CaptionML="ENU=Posted Serv. Trans. Receipts" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 659022754 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 659022754 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18207" DepartmentCategory="Lists" RunObjectSrcTable="18203" ControlGUID="{7b270c0a-99bf-4826-968c-e2540bc8ba96}" Name="GST Distribution Reversal List" CaptionML="ENU=GST Distribution Reversal List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2691714508 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2691714508 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18430" DepartmentCategory="Administration" RunObjectSrcTable="18011" ControlGUID="{1fbdd4f0-c6a9-4d35-8a5d-bce0bf4ee15f}" Name="Update Reference Invoice No" CaptionML="ENU=Update Reference Invoice No." ApplicationArea="#All" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2525622998 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2525622998 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18469" DepartmentCategory="Lists" RunObjectSrcTable="18469" ControlGUID="{0c331f50-250e-474c-af51-d7a971e5b8c9}" Name="Delivery Challan Line" CaptionML="ENU=Delivery Challan Line" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2246881217 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2246881217 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18326" DepartmentCategory="Lists" RunObjectSrcTable="18323" ControlGUID="{d929db63-ca99-4a47-8953-b1ae4c952b31}" Name="GST Journal Templates" CaptionML="ENU=GST Journal Templates" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4267556350 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4267556350 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18482" DepartmentCategory="Lists" RunObjectSrcTable="39" ControlGUID="{7511eff5-c5e6-4069-b410-80020882540d}" Name="Ord. Subcon Details Delv. List" CaptionML="ENU=Ord. Subcon Details Delv. List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 4099887568 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 4099887568 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18007" DepartmentCategory="Administration" RunObjectSrcTable="18012" ControlGUID="{d3e60372-edc4-40ff-8aae-636a30a92619}" Name="Return &amp; Reco Components" CaptionML="ENU=Return &amp; Reco Components" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3302743029 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3302743029 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18210" DepartmentCategory="Documents" RunObjectSrcTable="18207" ControlGUID="{396ddee1-8d78-47bb-86d0-abe21fa63546}" Name="Posted GST Dist.- Invoice" CaptionML="ENU=Posted GST Dist.- Invoice" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1050849691 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1050849691 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18009" DepartmentCategory="Lists" RunObjectSrcTable="18016" ControlGUID="{334df004-0e21-4764-8b1f-0d7eb1ae5913}" Name="Detailed GST Ledger Entry Info" CaptionML="ENU=Detailed GST Ledger Entry Info" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466323673 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466323673 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18208" DepartmentCategory="Documents" RunObjectSrcTable="18207" ControlGUID="{58a9aea0-a239-4a06-a214-7b4396f8e3aa}" Name="Posted GST Dist.- Cr. Memo" CaptionML="ENU=Posted GST Dist.- Cr. Memo" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 962284359 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 962284359 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="18478" DepartmentCategory="Lists" RunObjectSrcTable="18471" ControlGUID="{8338e79a-33a6-4c61-a77f-aff8cd662070}" Name="Multiple Order Subcon Rcp List" CaptionML="ENU=Multiple Order Subcon Receipt List" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1580414373 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1580414373 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="510" TargetType="Page" />
-    <ActionChange TargetID="18549" TargetType="Page" />
-    <ActionChange TargetID="18557" TargetType="Page" />
-    <ActionChange TargetID="460" TargetType="Page" />
-    <ActionChange TargetID="18550" TargetType="Page" />
-    <ActionChange TargetID="5905" TargetType="Page" />
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="39" TargetType="Page" />
-    <ActionChange TargetID="446" TargetType="Page" />
-    <ActionChange TargetID="279" TargetType="Page" />
-    <ActionChange TargetID="9022" TargetType="Page" />
-    <ActionChange TargetID="99000832" TargetType="Page" />
-    <ActionChange TargetID="5600" TargetType="Page" />
-    <ActionChange TargetID="18547" TargetType="Page" />
-    <ActionChange TargetID="255" TargetType="Page" />
-    <ActionChange TargetID="1384" TargetType="Page" />
-    <ActionChange TargetID="5703" TargetType="Page" />
-    <ActionChange TargetID="5979" TargetType="Page" />
-    <ActionChange TargetID="138" TargetType="Page" />
-    <ActionChange TargetID="76" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="5919" TargetType="Page" />
-    <ActionChange TargetID="29" TargetType="Page" />
-    <ActionChange TargetID="254" TargetType="Page" />
-    <ActionChange TargetID="403" TargetType="Page" />
-    <ActionChange TargetID="5970" TargetType="Page" />
-    <ActionChange TargetID="160" TargetType="Page" />
-    <ActionChange TargetID="450" TargetType="Page" />
-    <ActionChange TargetID="232" TargetType="Page" />
-    <ActionChange TargetID="6050" TargetType="Page" />
-    <ActionChange TargetID="21" TargetType="Page" />
-    <ActionChange TargetID="400" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="96" TargetType="Page" />
-    <ActionChange TargetID="6644" TargetType="Page" />
-    <ActionChange TargetID="368" TargetType="Page" />
-    <ActionChange TargetID="26" TargetType="Page" />
-    <ActionChange TargetID="6268" TargetType="Page" />
-    <ActionChange TargetID="18558" TargetType="Page" />
-    <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="373" TargetType="Page" />
-    <ActionChange TargetID="5966" TargetType="Page" />
-    <ActionChange TargetID="5910" TargetType="Page" />
-    <ActionChange TargetID="140" TargetType="Page" />
-    <ActionChange TargetID="18555" TargetType="Page" />
-    <ActionChange TargetID="5741" TargetType="Page" />
-    <ActionChange TargetID="128" TargetType="Page" />
-    <ActionChange TargetID="6275" TargetType="Page" />
-    <ActionChange TargetID="5164" TargetType="Page" />
-    <ActionChange TargetID="118" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
-    <ActionChange TargetID="5933" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
-    <ActionChange TargetID="5743" TargetType="Page" />
-    <ActionChange TargetID="9007" TargetType="Page" />
-    <ActionChange TargetID="17" TargetType="Page" />
-    <ActionChange TargetID="18553" TargetType="Page" />
-    <ActionChange TargetID="6641" TargetType="Page" />
-    <ActionChange TargetID="1" TargetType="Page" />
-    <ActionChange TargetID="6271" TargetType="Page" />
-    <ActionChange TargetID="6640" TargetType="Page" />
-    <ActionChange TargetID="5936" TargetType="Page" />
-    <ActionChange TargetID="397" TargetType="Page" />
-    <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="5159" TargetType="Page" />
-    <ActionChange TargetID="233" TargetType="Page" />
-    <ActionChange TargetID="5744" TargetType="Page" />
-    <ActionChange TargetID="130" TargetType="Page" />
-    <ActionChange TargetID="49" TargetType="Page" />
-    <ActionChange TargetID="41" TargetType="Page" />
-    <ActionChange TargetID="134" TargetType="Page" />
-    <ActionChange TargetID="5900" TargetType="Page" />
-    <ActionChange TargetID="5826" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="5162" TargetType="Page" />
-    <ActionChange TargetID="461" TargetType="Page" />
-    <ActionChange TargetID="5934" TargetType="Page" />
-    <ActionChange TargetID="7001" TargetType="Page" />
-    <ActionChange TargetID="5800" TargetType="Page" />
-    <ActionChange TargetID="256" TargetType="Page" />
-    <ActionChange TargetID="447" TargetType="Page" />
-    <ActionChange TargetID="5745" TargetType="Page" />
-    <ActionChange TargetID="7002" TargetType="Page" />
-    <ActionChange TargetID="97" TargetType="Page" />
-    <ActionChange TargetID="5935" TargetType="Page" />
-    <ActionChange TargetID="6620" TargetType="Page" />
-    <ActionChange TargetID="253" TargetType="Page" />
-    <ActionChange TargetID="507" TargetType="Page" />
-    <ActionChange TargetID="9027" TargetType="Page" />
-    <ActionChange TargetID="428" TargetType="Page" />
-    <ActionChange TargetID="95" TargetType="Page" />
-    <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="6072" TargetType="Page" />
-    <ActionChange TargetID="5740" TargetType="Page" />
-    <ActionChange TargetID="5167" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="5975" TargetType="Page" />
-    <ActionChange TargetID="5978" TargetType="Page" />
-    <ActionChange TargetID="508" TargetType="Page" />
-    <ActionChange TargetID="398" TargetType="Page" />
-    <ActionChange TargetID="509" TargetType="Page" />
-    <ActionChange TargetID="5977" TargetType="Page" />
-    <ActionChange TargetID="401" TargetType="Page" />
-    <ActionChange TargetID="5964" TargetType="Page" />
-    <ActionChange TargetID="9006" TargetType="Page" />
-    <ActionChange TargetID="370" TargetType="Page" />
-    <ActionChange TargetID="5746" TargetType="Page" />
-    <ActionChange TargetID="126" TargetType="Page" />
-    <ActionChange TargetID="161" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="6627" TargetType="Page" />
-    <ActionChange TargetID="116" TargetType="Page" />
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="18554" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="402" TargetType="Page" />
-    <ActionChange TargetID="451" TargetType="Page" />
-    <ActionChange TargetID="5628" TargetType="Page" />
-    <ActionChange TargetID="30" TargetType="Page" />
-    <ActionChange TargetID="6623" TargetType="Page" />
-    <ActionChange TargetID="5971" TargetType="Page" />
-    <ActionChange TargetID="459" TargetType="Page" />
     <ActionChange TargetID="25" TargetType="Page" />
-    <ActionChange TargetID="5972" TargetType="Page" />
+    <ActionChange TargetID="126" TargetType="Page" />
+    <ActionChange TargetID="5964" TargetType="Page" />
+    <ActionChange TargetID="18550" TargetType="Page" />
+    <ActionChange TargetID="5966" TargetType="Page" />
+    <ActionChange TargetID="398" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
     <ActionChange TargetID="300" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="507" TargetType="Page" />
+    <ActionChange TargetID="5919" TargetType="Page" />
+    <ActionChange TargetID="5628" TargetType="Page" />
+    <ActionChange TargetID="6268" TargetType="Page" />
+    <ActionChange TargetID="254" TargetType="Page" />
+    <ActionChange TargetID="118" TargetType="Page" />
+    <ActionChange TargetID="18553" TargetType="Page" />
+    <ActionChange TargetID="233" TargetType="Page" />
+    <ActionChange TargetID="160" TargetType="Page" />
+    <ActionChange TargetID="5826" TargetType="Page" />
+    <ActionChange TargetID="5971" TargetType="Page" />
+    <ActionChange TargetID="400" TargetType="Page" />
+    <ActionChange TargetID="397" TargetType="Page" />
+    <ActionChange TargetID="18547" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="5741" TargetType="Page" />
+    <ActionChange TargetID="5743" TargetType="Page" />
+    <ActionChange TargetID="5934" TargetType="Page" />
+    <ActionChange TargetID="279" TargetType="Page" />
+    <ActionChange TargetID="368" TargetType="Page" />
+    <ActionChange TargetID="6640" TargetType="Page" />
+    <ActionChange TargetID="510" TargetType="Page" />
+    <ActionChange TargetID="30" TargetType="Page" />
+    <ActionChange TargetID="446" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="5740" TargetType="Page" />
+    <ActionChange TargetID="5745" TargetType="Page" />
+    <ActionChange TargetID="49" TargetType="Page" />
+    <ActionChange TargetID="459" TargetType="Page" />
+    <ActionChange TargetID="5905" TargetType="Page" />
+    <ActionChange TargetID="451" TargetType="Page" />
+    <ActionChange TargetID="255" TargetType="Page" />
+    <ActionChange TargetID="6620" TargetType="Page" />
+    <ActionChange TargetID="1" TargetType="Page" />
+    <ActionChange TargetID="97" TargetType="Page" />
+    <ActionChange TargetID="116" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="9007" TargetType="Page" />
+    <ActionChange TargetID="41" TargetType="Page" />
+    <ActionChange TargetID="401" TargetType="Page" />
+    <ActionChange TargetID="508" TargetType="Page" />
+    <ActionChange TargetID="428" TargetType="Page" />
+    <ActionChange TargetID="1384" TargetType="Page" />
+    <ActionChange TargetID="5979" TargetType="Page" />
+    <ActionChange TargetID="6271" TargetType="Page" />
+    <ActionChange TargetID="461" TargetType="Page" />
+    <ActionChange TargetID="46" TargetType="Page" />
+    <ActionChange TargetID="9006" TargetType="Page" />
+    <ActionChange TargetID="6275" TargetType="Page" />
+    <ActionChange TargetID="253" TargetType="Page" />
+    <ActionChange TargetID="18557" TargetType="Page" />
+    <ActionChange TargetID="370" TargetType="Page" />
+    <ActionChange TargetID="26" TargetType="Page" />
+    <ActionChange TargetID="98" TargetType="Page" />
+    <ActionChange TargetID="6641" TargetType="Page" />
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="6050" TargetType="Page" />
+    <ActionChange TargetID="5164" TargetType="Page" />
+    <ActionChange TargetID="232" TargetType="Page" />
+    <ActionChange TargetID="5900" TargetType="Page" />
+    <ActionChange TargetID="256" TargetType="Page" />
+    <ActionChange TargetID="17" TargetType="Page" />
+    <ActionChange TargetID="5800" TargetType="Page" />
+    <ActionChange TargetID="18555" TargetType="Page" />
+    <ActionChange TargetID="5167" TargetType="Page" />
+    <ActionChange TargetID="18554" TargetType="Page" />
+    <ActionChange TargetID="5935" TargetType="Page" />
+    <ActionChange TargetID="5936" TargetType="Page" />
+    <ActionChange TargetID="7001" TargetType="Page" />
+    <ActionChange TargetID="5162" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="5746" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="403" TargetType="Page" />
+    <ActionChange TargetID="21" TargetType="Page" />
+    <ActionChange TargetID="18549" TargetType="Page" />
+    <ActionChange TargetID="5933" TargetType="Page" />
+    <ActionChange TargetID="509" TargetType="Page" />
+    <ActionChange TargetID="450" TargetType="Page" />
+    <ActionChange TargetID="5977" TargetType="Page" />
+    <ActionChange TargetID="402" TargetType="Page" />
+    <ActionChange TargetID="9022" TargetType="Page" />
+    <ActionChange TargetID="5978" TargetType="Page" />
+    <ActionChange TargetID="9027" TargetType="Page" />
+    <ActionChange TargetID="99000832" TargetType="Page" />
+    <ActionChange TargetID="161" TargetType="Page" />
+    <ActionChange TargetID="460" TargetType="Page" />
+    <ActionChange TargetID="130" TargetType="Page" />
+    <ActionChange TargetID="5910" TargetType="Page" />
+    <ActionChange TargetID="95" TargetType="Page" />
+    <ActionChange TargetID="18558" TargetType="Page" />
+    <ActionChange TargetID="29" TargetType="Page" />
+    <ActionChange TargetID="138" TargetType="Page" />
+    <ActionChange TargetID="96" TargetType="Page" />
+    <ActionChange TargetID="6627" TargetType="Page" />
+    <ActionChange TargetID="373" TargetType="Page" />
+    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="39" TargetType="Page" />
+    <ActionChange TargetID="6623" TargetType="Page" />
+    <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="447" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="76" TargetType="Page" />
+    <ActionChange TargetID="128" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="5600" TargetType="Page" />
+    <ActionChange TargetID="5972" TargetType="Page" />
+    <ActionChange TargetID="6644" TargetType="Page" />
+    <ActionChange TargetID="5744" TargetType="Page" />
+    <ActionChange TargetID="7002" TargetType="Page" />
+    <ActionChange TargetID="6072" TargetType="Page" />
+    <ActionChange TargetID="5975" TargetType="Page" />
+    <ActionChange TargetID="5159" TargetType="Page" />
+    <ActionChange TargetID="5703" TargetType="Page" />
+    <ActionChange TargetID="5970" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
