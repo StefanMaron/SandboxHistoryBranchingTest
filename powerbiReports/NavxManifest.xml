@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="e4e86220-cac0-4ec3-b853-7c2fa610399d" Name="PowerBI Reports" Publisher="Microsoft" Brief="Analyse Business Central data in Power BI" Description="Core Connector for Power BI allows you to easily integrate Business Central data with Power BI." Version="26.0.30643.36084" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="e4e86220-cac0-4ec3-b853-7c2fa610399d" Name="PowerBI Reports" Publisher="Microsoft" Brief="Analyse Business Central data in Power BI" Description="Core Connector for Power BI allows you to easily integrate Business Central data with Power BI." Version="26.1.33404.36070" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="36950" MaxObjectId="37049" />
     <IdRange MinObjectId="37055" MaxObjectId="37083" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="b3780cd9-f8f8-4a83-a4d5-0c2ad87b28af" Name="Sustainability" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="b4e48c9c-0deb-49a4-ae70-662b33565b1b" Name="PowerBI Reports Test Library" Publisher="Microsoft" />
@@ -27,6 +27,6 @@
   <ResourceExposurePolicy />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T07:48:07.8525016Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-28T20:17:54.0233312Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
