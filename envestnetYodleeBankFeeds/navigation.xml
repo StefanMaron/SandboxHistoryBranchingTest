@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Envestnet Yodlee Bank Feeds" ControlGUID="{13c23579-2154-4105-bcfa-9bb6576872de}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1450" DepartmentCategory="Administration" RunObjectSrcTable="1450" ControlGUID="{4d64a5c2-da48-4d67-89e3-b94a95fbbea4}" Name="MS - Yodlee Bank Service Setup" CaptionML="ENC=Envestnet Yodlee Bank Feeds Service Setup;ENG=Envestnet Yodlee Bank Feeds Service Setup;ENU=Envestnet Yodlee Bank Feeds Service Setup;FRC=Configuration du service Envestnet Yodlee Bank Feeds;HUN=Envestnet Yodlee Bank Feeds Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1268761635 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1268761635 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Envestnet Yodlee Bank Feeds" ControlGUID="{50ae35b4-4229-46ae-9b3a-c42abf749407}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="1450" DepartmentCategory="Administration" RunObjectSrcTable="1450" ControlGUID="{366914bc-d5a6-417c-9748-838895f6eec2}" Name="MS - Yodlee Bank Service Setup" CaptionML="ENC=Envestnet Yodlee Bank Feeds Service Setup;ENG=Envestnet Yodlee Bank Feeds Service Setup;ENU=Envestnet Yodlee Bank Feeds Service Setup;FRC=Configuration du service Envestnet Yodlee Bank Feeds;HUN=Envestnet Yodlee Bank Feeds Service Setup" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1268761635 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1268761635 - Property 3863440606" />
     </Actions>
   </ActionContainers>
 </NavigationDefinition>
