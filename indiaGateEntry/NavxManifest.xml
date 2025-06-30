@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="2dc39818-e0f0-42b6-99eb-ba29dc5f4102" Name="India Gate Entry" Publisher="Microsoft" Brief="Contains Gate Entry Functionality" Description="This feature contains Gate Entry Functionality" Version="25.5.30849.36056" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink" HelpBaseUrl="" ContextSensitiveHelpUrl="https://INGateEntry.com/help/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="2dc39818-e0f0-42b6-99eb-ba29dc5f4102" Name="India Gate Entry" Publisher="Microsoft" Brief="Contains Gate Entry Functionality" Description="This feature contains Gate Entry Functionality" Version="25.1.25873.36085" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink" HelpBaseUrl="" ContextSensitiveHelpUrl="https://INGateEntry.com/help/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="18601" MaxObjectId="18626" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -19,6 +19,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-28T01:22:31.9747971Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-29T07:14:06.6097135Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>

@@ -341,16 +341,10 @@ codeunit 18433 "GST Application Library"
                         Clear(CreditMemoGstAmount);
                         Clear(CreditMemoGstBaseAmount);
                         GetPurchaseCreditmemoGSTAmount(AccountNo, DocumentNo, GSTApplicationBuffer."GST Component Code", CreditMemoGstAmount, CreditMemoGstBaseAmount);
-                        if (CreditMemoGstAmount <> 0) and (CreditMemoGstBaseAmount <> 0) then
-                            GSTApplicationBuffer."Applied Amount" := GSTApplicationRound(
-                                GSTRoudingType,
-                                GSTRoundingPrecision,
-                                (GSTApplicationBuffer."GST Amount" - Abs(CreditMemoGstAmount)) * AmountToApply / (TotalInvoiceAmount - Abs(CreditMemoGstBaseAmount)))
-                        else
-                            GSTApplicationBuffer."Applied Amount" := GSTApplicationRound(
-                             GSTRoudingType,
-                             GSTRoundingPrecision,
-                             ((AmountToApply + Abs(TDSTCS)) * GSTApplicationBuffer."GST %" / 100));
+                        GSTApplicationBuffer."Applied Amount" := GSTApplicationRound(
+                            GSTRoudingType,
+                            GSTRoundingPrecision,
+                            (GSTApplicationBuffer."GST Amount" - Abs(CreditMemoGstAmount)) * AmountToApply / (TotalInvoiceAmount - Abs(CreditMemoGstBaseAmount)));
                     end else begin
                         GSTApplicationBuffer."Applied Base Amount" := Round(GetInvoiceGSTComponentWise(GSTApplicationBuffer, OriginalDocumentType::Invoice, DocumentNo, true), 0.01);
                         GSTApplicationBuffer."Applied Amount" := GSTApplicationBuffer."GST Amount";
