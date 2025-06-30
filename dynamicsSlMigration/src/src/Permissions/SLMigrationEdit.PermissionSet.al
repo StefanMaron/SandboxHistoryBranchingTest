@@ -50,15 +50,6 @@ permissionset 47004 "SL Migration - Edit"
                   tabledata "SL Migration Errors" = IMD,
                   tabledata "SL Migration Warnings" = IMD,
                   tabledata "SL Payment Terms" = IMD,
-                  tabledata "SL Period List Work Table" = IMD,
-                  tabledata "SL PJAddr" = IMD,
-                  tabledata "SL PJCode" = IMD,
-                  tabledata "SL PJEmploy" = IMD,
-                  tabledata "SL PJEmpPjt" = IMD,
-                  tabledata "SL PJEQRate" = IMD,
-                  tabledata "SL PJEquip" = IMD,
-                  tabledata "SL PJPent" = IMD,
-                  tabledata "SL PJProj" = IMD,
                   tabledata "SL POAddress" = IMD,
                   tabledata "SL POReceipt" = IMD,
                   tabledata "SL POSetup" = IMD,
@@ -81,5 +72,6 @@ permissionset 47004 "SL Migration - Edit"
                   tabledata "SL Terms" = IMD,
                   tabledata "SL Upgrade Settings" = IMD,
                   tabledata "SL Vendor" = IMD,
-                  tabledata SLGLAcctBalByPeriod = IMD;
+                  tabledata SLGLAcctBalByPeriod = IMD,
+                  tabledata "SL Period List Work Table" = IMD;
 }

@@ -352,7 +352,8 @@ codeunit 1450 "MS - Yodlee Service Mgt."
     begin
         // don't use our client credentials if we are in demo company
         if EnvironmentInformation.IsSaaS() then
-            exit(not (CompanyInformationMgt.IsDemoCompany()));
+            if CompanyInformationMgt.IsDemoCompany() then
+                exit(false);
 
         exit(GetYodleeAdminLoginName(AdminLoginName));
     end;
