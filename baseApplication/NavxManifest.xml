@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="437dbf0e-84ff-417a-965d-ed2bb9650972" Name="Base Application" Publisher="Microsoft" Brief="Base Application (IT)" Description="Provides business processes that are typical for small and mid-sized companies, such as sales and purchasing, and customer and vendor management, plus complex processes, such as assembly, manufacturing, service, and directed warehouse management. https://go.microsoft.com/fwlink/?LinkId=2205496" Version="25.3.28755.36090" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" PropagateDependencies="True" />
+  <App Id="437dbf0e-84ff-417a-965d-ed2bb9650972" Name="Base Application" Publisher="Microsoft" Brief="Base Application (IT)" Description="Provides business processes that are typical for small and mid-sized companies, such as sales and purchasing, and customer and vendor management, plus complex processes, such as assembly, manufacturing, service, and directed warehouse management. https://go.microsoft.com/fwlink/?LinkId=2205496" Version="25.4.29661.36073" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2104024" HelpBaseUrl="" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" PropagateDependencies="True" />
   <IdRanges>
     <IdRange MinObjectId="1" MaxObjectId="49999" />
     <IdRange MinObjectId="104000" MaxObjectId="104999" />
@@ -15,8 +15,8 @@
     <IdRange MinObjectId="99000700" MaxObjectId="99009000" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="f3552374-a1f2-4356-848e-196002525837" Name="Business Foundation" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="63ca2fa4-4f03-4f2b-a480-172fef340d3f" Name="System Application" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="f3552374-a1f2-4356-848e-196002525837" Name="Business Foundation" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="6992416f-3f39-4d3c-8242-3fff61350bea" Name="Business Central Cloud Migration - Previous Release" Publisher="Microsoft" />
@@ -53,6 +53,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T07:57:52.6761010Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-28T20:23:37.7100412Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
