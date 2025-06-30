@@ -24,11 +24,6 @@ page 10687 "SAF-T Export Card"
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the mapping range code that represents the SAF-T reporting period.';
                 }
-                field(Version; Rec.Version)
-                {
-                    ApplicationArea = Basic, Suite;
-                    ToolTip = 'Specifies the version of the SAF-T file to be generated.';
-                }
                 field(StartingDate; "Starting Date")
                 {
                     ApplicationArea = Basic, Suite;
@@ -217,14 +212,6 @@ page 10687 "SAF-T Export Card"
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
         IsParallelProcessingEnabled := TaskScheduler.CanCreateTask();
-    end;
-
-    trigger OnNewRecord(BelowxRec: Boolean)
-    var
-        SAFTSetup: Record "SAF-T Setup";
-    begin
-        SAFTSetup.Get();
-        Rec.Version := SAFTSetup."Default Version";
     end;
 
     trigger OnAfterGetCurrRecord()
