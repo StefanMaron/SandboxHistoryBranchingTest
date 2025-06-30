@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="5095f467-0a01-4b99-99d1-9ff1237d286f" Name="Library Variable Storage" Publisher="Microsoft" Brief="Library used to store variables in a queue to pass values to handler functions" Description="In test code, Library - Variable Storage can be used to pass values to handler and other methods" Version="25.1.25873.36085" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="5095f467-0a01-4b99-99d1-9ff1237d286f" Name="Library Variable Storage" Publisher="Microsoft" Brief="Library used to store variables in a queue to pass values to handler functions" Description="In test code, Library - Variable Storage can be used to pass values to handler and other methods" Version="25.3.28755.36071" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2131960" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-testing-application/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="131004" MaxObjectId="131004" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="dd0be2ea-f733-4d65-bb34-a28f4624fb14" Name="Library Assert" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -17,7 +17,7 @@
   <SuppressWarnings />
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
-  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="9d3c7dc959258f8347ae459b2a5ac82f3b15cccc" />
-  <Build Timestamp="2025-06-29T07:17:31.8460945Z" CompilerVersion="14.3.23.59384" />
+  <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="01e8feb9dbe334e3cce9282f49d5b60b4616652e" />
+  <Build Timestamp="2025-06-28T19:54:15.1950423Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
