@@ -123,7 +123,7 @@ page 4400 "SOA Setup"
                     field(Mailbox; MailboxName)
                     {
                         Caption = 'Account';
-                        ToolTip = 'Specifies the mail box that the sales order agent should monitor.';
+                        ToolTip = 'Specifies the email account that the agent monitors. You need permission to the mailbox to activate the agent.';
                         Editable = false;
                         ShowMandatory = true;
 
@@ -228,16 +228,6 @@ page 4400 "SOA Setup"
             {
                 Caption = 'Create sales documents';
                 InstructionalText = 'Create sales quotes and make orders from quotes in response to the incoming requests.';
-
-                field(SalesDocConfiguration; TempSOASetup."Sales Doc. Configuration")
-                {
-                    ShowCaption = false;
-                    ToolTip = 'Specifies the steps that the sales order agent takes to create sales documents.';
-                    trigger OnValidate()
-                    begin
-                        ConfigUpdated();
-                    end;
-                }
 
                 group(QuoteSetup)
                 {
