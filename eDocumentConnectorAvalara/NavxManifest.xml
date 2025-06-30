@@ -1,11 +1,11 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="f35c56a6-7c5f-4dbe-89c4-fef5145d00f4" Name="E-Document Connector - Avalara" Publisher="Microsoft" Brief="E-Document Connector - Avalara" Description="E-Document Connector - Avalara" Version="25.5.30849.36056" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.5.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="f35c56a6-7c5f-4dbe-89c4-fef5145d00f4" Name="E-Document Connector - Avalara" Publisher="Microsoft" Brief="E-Document Connector - Avalara" Description="E-Document Connector - Avalara" Version="25.1.25873.36085" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2204541" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2206603" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="6370" MaxObjectId="6379" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="d852a468-263e-49e5-bfda-f09e33342b89" Name="E-Documents Connector with External Endpoints" Publisher="Microsoft" MinVersion="25.5.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="e1d97edc-c239-46b4-8d84-6368bdf67c8b" Name="E-Document Core" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="d852a468-263e-49e5-bfda-f09e33342b89" Name="E-Documents Connector with External Endpoints" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="e1d97edc-c239-46b4-8d84-6368bdf67c8e" Name="E-Document Connector - Avalara Tests" Publisher="Microsoft" />
@@ -21,6 +21,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-28T01:31:48.6336000Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-29T07:47:04.2671986Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
