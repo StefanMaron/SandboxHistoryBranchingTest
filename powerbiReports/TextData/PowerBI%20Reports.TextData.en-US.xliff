@@ -945,24 +945,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Period-Over-Period - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 218852062 - Control 3540080196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Purchase Overview</source>
-          <target>Purchase Overview</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Purchasing Scorecard - Control EmbeddedReport - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 218852062 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
-          <source>About purchasing scorecard.</source>
-          <target>About purchasing scorecard.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Purchasing Scorecard - Property AboutTitle</note>
-        </trans-unit>
-        <trans-unit id="Page 218852062 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Here, you can embed your Power BI scorecard you have created for purchasing, allow you to track your key business objectives in a single view.</source>
-          <target>Here, you can embed your Power BI scorecard you have created for purchasing, allow you to track your key business objectives in a single view.</target>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Purchasing Scorecard - Property AboutText</note>
-        </trans-unit>
         <trans-unit id="Page 218852062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchasing Scorecard</source>
           <target>Purchasing Scorecard</target>
@@ -1935,6 +1917,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Detailed Vendor Ledger Entries - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3848315945 - Action 372747525 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Restores the default G/L Account Category for each Power BI Account Category.</source>
+          <target>Restores the default G/L Account Category for each Power BI Account Category.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Account Categories - Action RestoreDefault - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3848315945 - Action 372747525 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Restore Default G/L Account Categories</source>
+          <target>Restore Default G/L Account Categories</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Account Categories - Action RestoreDefault - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3848315945 - Control 2080290433 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the G/L Account Category that is mapped to this category type.</source>
           <target>Specifies the G/L Account Category that is mapped to this category type.</target>
@@ -2362,14 +2356,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control CustomerLedgerFilters - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 41988335 - Control 1908511771 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Filters Job Ledger Entries</source>
-          <target>Filters Job Ledger Entries</target>
+          <source>Filters Project Ledger Entries</source>
+          <target>Filters Project Ledger Entries</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control JobLedgerFilters - Property InstructionalText</note>
         </trans-unit>
         <trans-unit id="Page 41988335 - Control 1908511771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Job Ledger Entry Filters</source>
-          <target>Job Ledger Entry Filters</target>
+          <source>Project Ledger Entry Filters</source>
+          <target>Project Ledger Entry Filters</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control JobLedgerFilters - Property Caption</note>
         </trans-unit>
@@ -2428,8 +2422,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control ItmPchRepDateFormula - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 41988335 - Control 2267814907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the end date for Job Ledger Entries Entries filter.</source>
-          <target>Specifies the end date for Job Ledger Entries Entries filter.</target>
+          <source>Specifies the end date for Project Ledger Entries Entries filter.</source>
+          <target>Specifies the end date for Project Ledger Entries Entries filter.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control JobLedgerEndDate - Property ToolTip</note>
         </trans-unit>
@@ -2518,8 +2512,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control UTCOffset - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 41988335 - Control 2588201939 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
-          <source>You have finished the Assisted Setup for Power BI Connector. Copy your Power BI Connection string below for use in connecting your Power BI Reports. Choose Finish to complete the setup.</source>
-          <target>You have finished the Assisted Setup for Power BI Connector. Copy your Power BI Connection string below for use in connecting your Power BI Reports. Choose Finish to complete the setup.</target>
+          <source>You have finished the Assisted Setup for Power BI Connector. Copy your Power BI Connection Details below for use when setting up your Power BI Reports. Choose Finish to complete the setup.</source>
+          <target>You have finished the Assisted Setup for Power BI Connector. Copy your Power BI Connection Details below for use when setting up your Power BI Reports. Choose Finish to complete the setup.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control Complete - Property InstructionalText</note>
         </trans-unit>
@@ -2812,8 +2806,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control Cust. Ledger Entry End Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 41988335 - Control 4262237018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the start date for Job Ledger Entries filter.</source>
-          <target>Specifies the start date for Job Ledger Entries filter.</target>
+          <source>Specifies the start date for Project Ledger Entries filter.</source>
+          <target>Specifies the start date for Project Ledger Entries filter.</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PowerBI Assisted Setup - Control JobLedgerStartDate - Property ToolTip</note>
         </trans-unit>
@@ -3554,6 +3548,36 @@
           <target>Item Availability</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Item Availability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4280128954 - Action 1544941569 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the Power BI element as full screen.</source>
+          <target>Shows the Power BI element as full screen.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales by Location - Action FullScreen - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4280128954 - Action 1544941569 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fullscreen</source>
+          <target>Fullscreen</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales by Location - Action FullScreen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4280128954 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About Sales by Location</source>
+          <target>About Sales by Location</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales by Location - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 4280128954 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Sales by Location report breaks down sales performance by location, highlighting metrics such as Sales Amount, Sales Quantity, Gross Profit and Gross Profit Margin.</source>
+          <target>The Sales by Location report breaks down sales performance by location, highlighting metrics such as Sales Amount, Sales Quantity, Gross Profit and Gross Profit Margin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales by Location - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Page 4280128954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales by Location</source>
+          <target>Sales by Location</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales by Location - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 510641354 - Action 1544941569 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the Power BI element as full screen.</source>
@@ -4394,6 +4418,18 @@
           <target>Sales Report</target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Order Processor Role Center - Action Sales Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2747922353 - Action 4280128954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2747922353">
+          <source>Open a Power BI Report that breaks down sales performance by location, highlighting metrics such as Sales Amount, Sales Quantity, Gross Profit and Gross Profit Margin.</source>
+          <target>Open a Power BI Report that breaks down sales performance by location, highlighting metrics such as Sales Amount, Sales Quantity, Gross Profit and Gross Profit Margin.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Order Processor Role Center - Action Sales by Location - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2747922353 - Action 4280128954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2747922353">
+          <source>Sales by Location</source>
+          <target>Sales by Location</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Order Processor Role Center - Action Sales by Location - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2747922353 - Action 682583993 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2747922353">
           <source>Open a Power BI Report that tracks the accumulation of sales amounts throughout the current month, providing insights into progress and performance up to the present date.</source>
