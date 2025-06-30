@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.1.25873.36085</version>
+        <version>25.3.28755.36071</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -248,6 +248,12 @@
             </summary>
             <param name="ReportSelectionUsage">The input report selection usage of the FromReportSelectionUsage function.</param>
             <param name="EmailScenario">The output email scenario of the FromReportSelectionUsage function.</param>
+        </member>
+        <member name="O:PermissionSet::System#Security#AccessControl#D365 Agent">
+            <summary>
+            Provides basic access to the agent functionality. 
+            TODO: Move permission set to the System app Agent module when it is introduced
+            </summary>
         </member>
         <member name="M:Codeunit::System#Security#AccessControl#Effective Permissions Mgt#.HasDirectRIMPermissionsOnTableData(Integer):Boolean">
             <summary>
@@ -9074,6 +9080,15 @@
             <returns>Currency symbol.</returns>
         </member>
         <member name="M:Table::Microsoft#Sales#Document#Sales Header.UpdateShipToSalespersonCode">
+            <summary>
+            Updates the salesperson code from either the ship-to addresses or bill-to customer's salesperson.
+            </summary>
+            <remarks>
+            If neither are set, it uses the default salesperson from the user setup.
+            If salesperson is blocked, it doesn't get assigned.
+            </remarks>
+        </member>
+        <member name="M:Table::Microsoft#Sales#Document#Sales Header.UpdateShipToSalespersonCode(Integer)">
             <summary>
             Updates the salesperson code from either the ship-to addresses or bill-to customer's salesperson.
             </summary>
