@@ -4,7 +4,7 @@
         <id>437dbf0e-84ff-417a-965d-ed2bb9650972</id>
         <name>Base Application</name>
         <publisher>Microsoft</publisher>
-        <version>25.4.29661.36073</version>
+        <version>25.5.30849.36072</version>
     </application>
     <members>
         <member name="M:Page::System#Environment#Configuration#Personalized Pages.PrivacyFilterUserPersonalizations">
@@ -725,6 +725,13 @@
             <param name="ComputeRangesUsingRecords">Specify if the computations should be performed on records, or in-memory structures.
             If the parameter is false, the database load is greatly reduced, but the memory footprint is bigger</param>
             <returns>The filter for the provided field ID. For example, '1..3|6'.</returns>
+        </member>
+        <member name="M:Codeunit::System#Threading#Job Queue Dispatcher.RunCleanupForCurrentJob(Job Queue Entry@)">
+            <summary>
+            This is used to run the cleanup tasks for the current job queue entry when the job queue fails but is retriable.
+            The prior Job Queue Log Entry would still be in the "In Process" state.
+            </summary>
+            <param name="JobQueueEntry">The Job Queue Entry that is running.</param>
         </member>
         <member name="M:Table::System#Threading#Job Queue Entry.GetRecLockedExtendedTimeout:Boolean">
              <summary>
