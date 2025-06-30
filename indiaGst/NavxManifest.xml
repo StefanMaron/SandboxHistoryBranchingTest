@@ -1,12 +1,12 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" Brief="Contains features for deducting Goods and Services Tax on purchase, transfer, and sales transactions." Description="The GST feature contains setups that are required for calculating Goods and Services Tax (GST). This lets you deduct GST on vendor and customer invoices through purchase orders, invoices, and journal vouchers, vendor and customer payments, and on service or stock transfers. It also allows adjustments, reconciliation, and settlement of GST amounts and deposit GST that has been deducted." Version="25.1.25873.36085" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139720" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139720" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.0.0.0" Application="25.1.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" Brief="Contains features for deducting Goods and Services Tax on purchase, transfer, and sales transactions." Description="The GST feature contains setups that are required for calculating Goods and Services Tax (GST). This lets you deduct GST on vendor and customer invoices through purchase orders, invoices, and journal vouchers, vendor and customer payments, and on service or stock transfers. It also allows adjustments, reconciliation, and settlement of GST amounts and deposit GST that has been deducted." Version="25.3.28755.36071" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139720" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139720" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.3.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="18000" MaxObjectId="18500" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="7106d701-c601-4a5f-97c2-b8b323ae2c18" Name="QR Generator" Publisher="Microsoft" MinVersion="25.1.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="7106d701-c601-4a5f-97c2-b8b323ae2c18" Name="QR Generator" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T07:13:19.3582440Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-28T19:51:44.3982619Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>

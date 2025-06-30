@@ -62,7 +62,7 @@ codeunit 18017 "GST Tax Configuration"
         UseCases.Add('{AFA9BC82-6757-44E3-B5E4-00029DACDA64}', 4);
         UseCases.Add('{8EECE1FD-4BDB-4A37-92ED-00380C170CFC}', 3);
         UseCases.Add('{38583B1E-682C-4B06-BB69-005849014E82}', 1);
-        UseCases.Add('{46054EB7-3CE7-421C-B047-00658AC5C150}', 2);
+        UseCases.Add('{46054EB7-3CE7-421C-B047-00658AC5C150}', 3);
         UseCases.Add('{D2457D2F-2B0E-4F56-BF93-007E245C4FF8}', 1);
         UseCases.Add('{E9E7486C-DBFB-432C-886F-017AD828CE5E}', 6);
         UseCases.Add('{6D031AA1-2009-4D4A-A8E7-01D9116EDC5C}', 3);
@@ -77,7 +77,7 @@ codeunit 18017 "GST Tax Configuration"
         UseCases.Add('{BBD37D0A-E328-4544-B5E1-03FCF65399D5}', 6);
         UseCases.Add('{1C2FBFBD-A18B-4A5D-819E-043993E5510C}', 6);
         UseCases.Add('{4684DF92-D578-4978-B4EC-04ACC07C8206}', 4);
-        UseCases.Add('{668C2032-DD90-4A23-8F30-04B69FE7C99E}', 2);
+        UseCases.Add('{668C2032-DD90-4A23-8F30-04B69FE7C99E}', 3);
         UseCases.Add('{C89845E0-C8B1-45B1-9C1B-04EC264B7AC7}', 5);
         UseCases.Add('{76F9EC4B-C6F3-4DBE-B1CA-04EFC5AD609E}', 5);
         UseCases.Add('{4AC1A712-CC9B-4CB7-91EA-05245C1D7211}', 4);
@@ -95,7 +95,7 @@ codeunit 18017 "GST Tax Configuration"
         UseCases.Add('{1B2046C2-4264-4272-A998-085B20832B87}', 2);
         UseCases.Add('{9B0FE6DB-6121-44B0-8BD0-08B8060D7A92}', 7);
         UseCases.Add('{D50E350F-963C-4C3C-9E78-08F12AB7D8F0}', 1);
-        UseCases.Add('{71EC1D59-01EC-4486-8CB4-0957D4ADF38B}', 5);
+        UseCases.Add('{71EC1D59-01EC-4486-8CB4-0957D4ADF38B}', 4);
         UseCases.Add('{B5A9628F-46F5-48C4-9CC0-09CBAE26D7EE}', 4);
         UseCases.Add('{C75CF1E3-CC01-4458-86FB-0A29BC40560B}', 3);
         UseCases.Add('{DA8B91D0-1B63-44EE-BA57-0A40B1403080}', 6);
@@ -825,7 +825,7 @@ codeunit 18017 "GST Tax Configuration"
         UseCases.Add('{7bdd3ee0-29ae-4c15-a879-1dbf13ada019}', 1);
         UseCases.Add('{fbedc063-63ea-4fed-a3dd-8b5e175031cd}', 1);
         UseCases.Add('{055aee33-1301-4b59-ba0d-e76d2d542b34}', 1);
-        UseCases.Add('{d279be29-1cb8-4f96-ba2c-0348368d0879}', 2);
+        UseCases.Add('{d279be29-1cb8-4f96-ba2c-0348368d0879}', 1);
         UseCases.Add('{f4f11b85-700b-4880-9a73-740ff36c4160}', 1);
         UseCases.Add('{ce65aeff-0248-437e-b8a6-87c60e49efd4}', 1);
         UseCases.Add('{0ebd8b25-3c27-46ae-8cd7-4e870db1315b}', 1);
