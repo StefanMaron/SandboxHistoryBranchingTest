@@ -1,5 +1,5 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="75f1590f-55c5-4501-ae63-bada5534e852" Name="Performance Toolkit" Publisher="Microsoft" Brief="Provides tools for performance regression testing." Description="The Performance Toolkit lets developers use test suites during development to analyze the performance of their code by simulating the work environments in which the code will run." Version="25.3.28755.36071" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2142241" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-performance-toolkit/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="75f1590f-55c5-4501-ae63-bada5534e852" Name="Performance Toolkit" Publisher="Microsoft" Brief="Provides tools for performance regression testing." Description="The Performance Toolkit lets developers use test suites during development to analyze the performance of their code by simulating the work environments in which the code will run." Version="25.3.28755.36090" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://go.microsoft.com/fwlink/?linkid=2142241" HelpBaseUrl="" ContextSensitiveHelpUrl="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-performance-toolkit/" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Runtime="14.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="149000" MaxObjectId="149010" />
     <IdRange MinObjectId="149020" MaxObjectId="149020" />
@@ -22,6 +22,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source RepositoryUrl="https://github.com/microsoft/BCApps" Commit="01e8feb9dbe334e3cce9282f49d5b60b4616652e" />
-  <Build Timestamp="2025-06-28T19:54:27.9637762Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-29T07:49:19.3078321Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
