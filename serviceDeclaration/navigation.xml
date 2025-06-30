@@ -1,52 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Service Declaration" ControlGUID="{5517f3c6-13ba-47d6-8d0f-33d3957b0a77}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5010" DepartmentCategory="Administration" RunObjectSrcTable="5010" ControlGUID="{c4721ff3-7d60-4900-a45e-5ee119b61838}" Name="Service Declaration Setup" CaptionML="CSY=Nastavení hlášení o službách;DAN=Opsætning af servicedeklaration;DEA=Servicemeldungseinrichtung;DES=Servicemeldungseinrichtung;DEU=Servicemeldungseinrichtung;ENA=Service Declaration Setup;ENC=Service Declaration Setup;ENG=Service Declaration Setup;ENU=Service Declaration Setup;ENZ=Service Declaration Setup;ESM=Configuración declaración servicio;ESN=Configuración declaración servicio;FIN=Palvelumäärityksen määritys;FRA=Configuration de la déclaration de service;FRB=Configuration de la déclaration de service;FRC=Configuration de la déclaration de service;FRS=Configuration de la déclaration de service;ISL=Uppsetning þjónustuyfirlýsingar;ITA=Setup dichiarazione di servizio;ITS=Setup dichiarazione di servizio;NLB=Servicedeclaratie instellen;NLD=Servicedeclaratie instellen;NOR=Oppsett av tjenesteerklæring;RUS=Настройка декларации услуг;SVE=Konfiguration av tjänstedeklaration" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3454677590 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3454677590 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5022" DepartmentCategory="Lists" RunObjectSrcTable="5023" ControlGUID="{b81a4d2a-e041-4ada-843b-7e2aecffa307}" Name="Service Declarations" CaptionML="CSY=Hlášení o službách;DAN=Servicedeklarationer;DEA=Servicemeldungen;DES=Servicemeldungen;DEU=Servicemeldungen;ENA=Service Declarations;ENC=Service Declarations;ENG=Service Declarations;ENU=Service Declarations;ENZ=Service Declarations;ESM=Declaraciones de servicio;ESN=Declaraciones de servicio;FIN=Palvelumääritykset;FRA=Déclarations de service;FRB=Déclarations de service;FRC=Déclarations de service;FRS=Déclarations de service;ISL=Þjónustuyfirlýsingar;ITA=Dichiarazioni di servizio;ITS=Dichiarazioni di servizio;NLB=Servicedeclaraties;NLD=Servicedeclaraties;NOR=Tjenesteerklæringer;RUS=Декларации услуг;SVE=Tjänstedeklarationer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1344714482 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1344714482 - Property 3863440606" />
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5011" DepartmentCategory="Administration" RunObjectSrcTable="5011" ControlGUID="{577fd972-6052-4627-a71a-b37496186d59}" Name="Service Transaction Types" CaptionML="CSY=Typy transakcí služby;DAN=Servicetransaktionstyper;DEA=Arten des Servicegeschäftes;DES=Arten des Servicegeschäftes;DEU=Arten des Servicegeschäftes;ENA=Service Transaction Types;ENC=Service Transaction Types;ENG=Service Transaction Nature Codes;ENU=Service Transaction Types;ENZ=Service Transaction Types;ESM=Tipos de transacción de servicio;ESN=Tipos de transacción de servicio;FIN=Palvelutapahtumatyypit;FRA=Types de transaction de service;FRB=Types de transaction de service;FRC=Types de transaction de service;FRS=Types de transaction de service;ISL=Gerðir þjónustufærslu;ITA=Tipi di transazione di servizio;ITS=Tipi di transazione di servizio;NLB=Servicetransactietypen;NLD=Servicetransactietypen;NOR=Tjenestetransaksjonstyper;RUS=Типы сервисных транзакций;SVE=Typer av tjänstetransaktioner" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2163598334 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2163598334 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Service Declaration" ControlGUID="{0f7e5623-84c7-4baf-9c61-f9e2a040b134}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5022" DepartmentCategory="Lists" RunObjectSrcTable="5023" ControlGUID="{c5261bbb-37d3-4a30-b1cc-e5568ec2ca9c}" Name="Service Declarations" CaptionML="CSY=Hlášení o službách;DAN=Servicedeklarationer;DEA=Servicemeldungen;DES=Servicemeldungen;DEU=Servicemeldungen;ENA=Service Declarations;ENC=Service Declarations;ENG=Service Declarations;ENU=Service Declarations;ENZ=Service Declarations;ESM=Declaraciones de servicio;ESN=Declaraciones de servicio;FIN=Palvelumääritykset;FRA=Déclarations de service;FRB=Déclarations de service;FRC=Déclarations de service;FRS=Déclarations de service;ISL=Þjónustuyfirlýsingar;ITA=Dichiarazioni di servizio;ITS=Dichiarazioni di servizio;NLB=Servicedeclaraties;NLD=Servicedeclaraties;NOR=Tjenesteerklæringer;RUS=Декларации услуг;SVE=Tjänstedeklarationer" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 1344714482 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 1344714482 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5011" DepartmentCategory="Administration" RunObjectSrcTable="5011" ControlGUID="{9796274a-cc9e-49b1-95e1-4527850080b5}" Name="Service Transaction Types" CaptionML="CSY=Typy transakcí služby;DAN=Servicetransaktionstyper;DEA=Arten des Servicegeschäftes;DES=Arten des Servicegeschäftes;DEU=Arten des Servicegeschäftes;ENA=Service Transaction Types;ENC=Service Transaction Types;ENG=Service Transaction Nature Codes;ENU=Service Transaction Types;ENZ=Service Transaction Types;ESM=Tipos de transacción de servicio;ESN=Tipos de transacción de servicio;FIN=Palvelutapahtumatyypit;FRA=Types de transaction de service;FRB=Types de transaction de service;FRC=Types de transaction de service;FRS=Types de transaction de service;ISL=Gerðir þjónustufærslu;ITA=Tipi di transazione di servizio;ITS=Tipi di transazione di servizio;NLB=Servicetransactietypen;NLD=Servicetransactietypen;NOR=Tjenestetransaksjonstyper;RUS=Типы сервисных транзакций;SVE=Typer av tjänstetransaktioner" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 2163598334 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 2163598334 - Property 3863440606" />
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="5010" DepartmentCategory="Administration" RunObjectSrcTable="5010" ControlGUID="{d1ba2ea1-a514-421d-9435-5c94bc576191}" Name="Service Declaration Setup" CaptionML="CSY=Nastavení hlášení o službách;DAN=Opsætning af servicedeklaration;DEA=Servicemeldungseinrichtung;DES=Servicemeldungseinrichtung;DEU=Servicemeldungseinrichtung;ENA=Service Declaration Setup;ENC=Service Declaration Setup;ENG=Service Declaration Setup;ENU=Service Declaration Setup;ENZ=Service Declaration Setup;ESM=Configuración declaración servicio;ESN=Configuración declaración servicio;FIN=Palvelumäärityksen määritys;FRA=Configuration de la déclaration de service;FRB=Configuration de la déclaration de service;FRC=Configuration de la déclaration de service;FRS=Configuration de la déclaration de service;ISL=Uppsetning þjónustuyfirlýsingar;ITA=Setup dichiarazione di servizio;ITS=Setup dichiarazione di servizio;NLB=Servicedeclaratie instellen;NLD=Servicedeclaratie instellen;NOR=Oppsett av tjenesteerklæring;RUS=Настройка декларации услуг;SVE=Konfiguration av tjänstedeklaration" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 3454677590 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 3454677590 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
-    <ActionChange TargetID="44" TargetType="Page" />
-    <ActionChange TargetID="30" TargetType="Page" />
-    <ActionChange TargetID="6271" TargetType="Page" />
-    <ActionChange TargetID="141" TargetType="Page" />
-    <ActionChange TargetID="5936" TargetType="Page" />
-    <ActionChange TargetID="6631" TargetType="Page" />
-    <ActionChange TargetID="96" TargetType="Page" />
-    <ActionChange TargetID="6640" TargetType="Page" />
-    <ActionChange TargetID="6641" TargetType="Page" />
-    <ActionChange TargetID="55" TargetType="Page" />
-    <ActionChange TargetID="5800" TargetType="Page" />
-    <ActionChange TargetID="52" TargetType="Page" />
-    <ActionChange TargetID="202" TargetType="Page" />
-    <ActionChange TargetID="5802" TargetType="Page" />
-    <ActionChange TargetID="5972" TargetType="Page" />
-    <ActionChange TargetID="5933" TargetType="Page" />
-    <ActionChange TargetID="42" TargetType="Page" />
-    <ActionChange TargetID="47" TargetType="Page" />
-    <ActionChange TargetID="5978" TargetType="Page" />
-    <ActionChange TargetID="50" TargetType="Page" />
-    <ActionChange TargetID="5905" TargetType="Page" />
-    <ActionChange TargetID="6630" TargetType="Page" />
-    <ActionChange TargetID="51" TargetType="Page" />
-    <ActionChange TargetID="5979" TargetType="Page" />
-    <ActionChange TargetID="54" TargetType="Page" />
-    <ActionChange TargetID="132" TargetType="Page" />
-    <ActionChange TargetID="138" TargetType="Page" />
     <ActionChange TargetID="133" TargetType="Page" />
+    <ActionChange TargetID="6271" TargetType="Page" />
     <ActionChange TargetID="5934" TargetType="Page" />
-    <ActionChange TargetID="139" TargetType="Page" />
+    <ActionChange TargetID="138" TargetType="Page" />
     <ActionChange TargetID="5973" TargetType="Page" />
+    <ActionChange TargetID="42" TargetType="Page" />
     <ActionChange TargetID="135" TargetType="Page" />
+    <ActionChange TargetID="55" TargetType="Page" />
+    <ActionChange TargetID="51" TargetType="Page" />
+    <ActionChange TargetID="98" TargetType="Page" />
+    <ActionChange TargetID="5802" TargetType="Page" />
+    <ActionChange TargetID="50" TargetType="Page" />
+    <ActionChange TargetID="30" TargetType="Page" />
     <ActionChange TargetID="5900" TargetType="Page" />
+    <ActionChange TargetID="5936" TargetType="Page" />
+    <ActionChange TargetID="43" TargetType="Page" />
+    <ActionChange TargetID="96" TargetType="Page" />
+    <ActionChange TargetID="6630" TargetType="Page" />
+    <ActionChange TargetID="139" TargetType="Page" />
     <ActionChange TargetID="5935" TargetType="Page" />
     <ActionChange TargetID="46" TargetType="Page" />
-    <ActionChange TargetID="43" TargetType="Page" />
-    <ActionChange TargetID="98" TargetType="Page" />
-    <ActionChange TargetID="134" TargetType="Page" />
-    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="52" TargetType="Page" />
+    <ActionChange TargetID="5972" TargetType="Page" />
+    <ActionChange TargetID="141" TargetType="Page" />
+    <ActionChange TargetID="6640" TargetType="Page" />
     <ActionChange TargetID="76" TargetType="Page" />
+    <ActionChange TargetID="134" TargetType="Page" />
+    <ActionChange TargetID="5905" TargetType="Page" />
+    <ActionChange TargetID="140" TargetType="Page" />
+    <ActionChange TargetID="5978" TargetType="Page" />
+    <ActionChange TargetID="132" TargetType="Page" />
+    <ActionChange TargetID="5933" TargetType="Page" />
+    <ActionChange TargetID="5979" TargetType="Page" />
+    <ActionChange TargetID="47" TargetType="Page" />
+    <ActionChange TargetID="44" TargetType="Page" />
+    <ActionChange TargetID="6631" TargetType="Page" />
+    <ActionChange TargetID="54" TargetType="Page" />
+    <ActionChange TargetID="6641" TargetType="Page" />
+    <ActionChange TargetID="202" TargetType="Page" />
+    <ActionChange TargetID="5800" TargetType="Page" />
   </NavigationChanges>
 </NavigationDefinition>
