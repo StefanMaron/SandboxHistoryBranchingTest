@@ -1,10 +1,10 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="b696b4c9-637c-49d1-a806-763ff8f0a20e" Name="IRS Forms" Publisher="Microsoft" Brief="Easily report IRS 1099 forms." Description="This app provides functionality that enables an easy overview and reporting of the 1099 forms to IRS." Version="26.0.30643.36084" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/localfunctionality/unitedstates/introduction-to-the-irs-forms" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.0.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
+  <App Id="b696b4c9-637c-49d1-a806-763ff8f0a20e" Name="IRS Forms" Publisher="Microsoft" Brief="Easily report IRS 1099 forms." Description="This app provides functionality that enables an easy overview and reporting of the 1099 forms to IRS." Version="26.1.33404.36070" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=2009120" Help="https://learn.microsoft.com/en-us/dynamics365/business-central/localfunctionality/unitedstates/introduction-to-the-irs-forms" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2204541" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="26.0.0.0" Application="26.1.0.0" Runtime="15.0" Target="Cloud" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="10030" MaxObjectId="10075" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="6f2c034f-5ebe-4eae-b34c-90a0d4e87687" Name="_Exclude_Business_Events_" Publisher="Microsoft" MinVersion="26.0.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="6f2c034f-5ebe-4eae-b34c-90a0d4e87687" Name="_Exclude_Business_Events_" Publisher="Microsoft" MinVersion="26.1.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo>
     <Module Id="dff12793-4e1c-4f3c-b7d3-331552c4cf5c" Name="IRS Forms Test Library" Publisher="Microsoft" />
@@ -20,6 +20,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T07:27:00.1868869Z" CompilerVersion="15.0.23.59383" />
+  <Build Timestamp="2025-06-28T19:57:49.9993131Z" CompilerVersion="15.0.23.59383" />
   <AlternateIds />
 </Package>
