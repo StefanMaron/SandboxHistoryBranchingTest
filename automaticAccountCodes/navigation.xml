@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <NavigationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dynamics:NAV:MetaObjects">
   <ActionContainers ActionContainerType="Departments">
-    <Actions xsi:type="ActionGroupDefinition" Caption="Automatic Account Codes" ControlGUID="{a4f93ecd-0093-4e1b-bfbf-420c7f69db5c}">
-      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4852" DepartmentCategory="Lists" RunObjectSrcTable="4850" ControlGUID="{7f2d8443-5844-4a65-9dcd-78acf1b4fbcb}" Name="Automatic Account List" CaptionML="ENU=Automatic Account Groups;SVE=Automatiska redovisningsmallar" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466853842 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466853842 - Property 3863440606" />
+    <Actions xsi:type="ActionGroupDefinition" Caption="Automatic Account Codes" ControlGUID="{b3f60751-8ed3-49a9-a04c-94667e3c412a}">
+      <Actions xsi:type="ActionDefinition" PushAction="RunObject" RunObjectType="Page" TargetID="4852" DepartmentCategory="Lists" RunObjectSrcTable="4850" ControlGUID="{5f9c90b2-c1d8-4b59-ab21-8180dd376b33}" Name="Automatic Account List" CaptionML="ENU=Automatic Account Groups;SVE=Automatiska redovisningsmallar" ApplicationArea="#Basic,#Suite" AdditionalSearchTermsML="ENU=" CaptionTranslationKey="Page 466853842 - Property 2879900210" AdditionalSearchTermsTranslationKey="Page 466853842 - Property 3863440606" />
     </Actions>
   </ActionContainers>
   <NavigationChanges>
