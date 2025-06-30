@@ -13,10 +13,10 @@ pageextension 41020 "Item List Ext." extends "Item List"
                 action("GP Inventory Trx.")
                 {
                     ApplicationArea = All;
-                    Caption = 'All Inventory Transactions';
-                    Image = ViewWorksheet;
+                    Caption = 'Inventory Transactions';
+                    Image = InventoryJournal;
                     RunObject = Page "Hist. Inventory Trx. Headers";
-                    ToolTip = 'View all GP inventory transactions.';
+                    ToolTip = 'View the GP inventory transactions.';
                     Visible = GPHistDataAvailable;
                 }
             }
