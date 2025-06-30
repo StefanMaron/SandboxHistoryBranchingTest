@@ -1,14 +1,14 @@
 <Package xmlns="http://schemas.microsoft.com/navx/2015/manifest">
-  <App Id="417e3995-43e5-46bd-ab72-1ca13df0658d" Name="India Data Migration" Publisher="Microsoft" Brief="Contains Logic to finalize Data Migration" Description="This feature contains Logic to finalize Data Migration for India Localization" Version="25.3.28755.36090" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139282" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139282" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.3.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
+  <App Id="417e3995-43e5-46bd-ab72-1ca13df0658d" Name="India Data Migration" Publisher="Microsoft" Brief="Contains Logic to finalize Data Migration" Description="This feature contains Logic to finalize Data Migration for India Localization" Version="25.4.29661.36073" CompatibilityId="0.0.0.0" PrivacyStatement="https://go.microsoft.com/fwlink/?LinkId=724009" EULA="https://go.microsoft.com/fwlink/?linkid=724013" Help="https://go.microsoft.com/fwlink/?linkid=2139282" HelpBaseUrl="" ContextSensitiveHelpUrl="https://go.microsoft.com/fwlink/?linkid=2139282" Url="https://go.microsoft.com/fwlink/?LinkId=724011" Logo="/logo/ExtensionLogo.png" Platform="25.2.0.0" Application="25.4.0.0" Runtime="14.0" Target="OnPrem" ShowMyCode="False" />
   <IdRanges>
     <IdRange MinObjectId="19001" MaxObjectId="19300" />
   </IdRanges>
   <Dependencies>
-    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="eddcf82e-482c-49d1-836b-ad0284f2c5b0" Name="India TCS" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="eae5779e-7797-4c4c-977e-7516652b7a65" Name="India TDS" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
-    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="25.3.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="db643212-b7fb-4dd4-b5a8-cb44ac714461" Name="India GST" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="d3c551dd-5903-4194-b153-04ced9d29a2c" Name="India Tax Base" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="eddcf82e-482c-49d1-836b-ad0284f2c5b0" Name="India TCS" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="eae5779e-7797-4c4c-977e-7516652b7a65" Name="India TDS" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
+    <Dependency Id="c1eafb3f-e397-468e-bdb4-ecc5c317ca00" Name="Tax Engine" Publisher="Microsoft" MinVersion="25.4.0.0" CompatibilityId="0.0.0.0" />
   </Dependencies>
   <InternalsVisibleTo />
   <ScreenShots />
@@ -22,6 +22,6 @@
   <ResourceExposurePolicy AllowDebugging="true" AllowDownloadingSource="true" IncludeSourceInSymbolFile="true" ApplyToDevExtension="false" />
   <KeyVaultUrls />
   <Source />
-  <Build Timestamp="2025-06-29T07:47:33.4295132Z" CompilerVersion="14.3.23.59384" />
+  <Build Timestamp="2025-06-28T20:07:04.0967776Z" CompilerVersion="14.3.23.59384" />
   <AlternateIds />
 </Package>
